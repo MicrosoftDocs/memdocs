@@ -4,6 +4,7 @@ description: View the timeline for Configuration Manager devices from the admin 
 ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
+ms.custom: sfi-image-nochange
 ---
 
 # <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center
@@ -30,7 +31,7 @@ The user account needs the following permissions:
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission under **Collection** in Configuration Manager.
 - The **Notify Resource** permission under **Collection** in Configuration Manager. <!--7984188-->
-- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../fundamentals/role-based-access-control/overview.md) assigned to the user <!--7980141-->
 
 ## Generate events
 
@@ -59,7 +60,7 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## View the timeline
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Timeline**. By default, you're shown events from the last 24 hours.
@@ -81,3 +82,7 @@ To work around the issue, reload the **Timeline** page.
 ## Next steps
 
 [Troubleshoot the device timeline](troubleshoot-timeline.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

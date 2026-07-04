@@ -16,7 +16,7 @@ Before installing clients on PCs, servers, and other devices in Configuration Ma
 
 -   [Client installation methods](../../../../core/clients/deploy/plan/client-installation-methods.md)
 
--   [Best practices for client deployment](../../../../core/clients/deploy/plan/best-practices-for-client-deployment.md)
+-   [Best practices for client deployment](/previous-versions/troubleshoot/configmgr/best-practices-for-client-deployment)
 
 -   [Determine whether to block clients](../../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)
 

@@ -20,7 +20,7 @@ This information applies to all versions of the Configuration Manager technical 
 For information about what's new in the *current branch* of Configuration Manager, see [What's new in Configuration Manager incremental versions](../plan-design/changes/whats-new-incremental-versions.md).
 
 > [!TIP]
-> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../use-docs.md#notifications).
+> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../fundamentals/use-docs.md#notifications).
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://learn.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us` -->
 
@@ -192,7 +192,7 @@ The following features were released with previous versions of the Configuration
 ### Technical preview version 2305
 
 - [OSD preferred MP option for PXE boot scenario](2023/technical-preview-2305.md) <!--2839966-->
-- [New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](2023/technical-preview-2305.md) <!-- 6167745 -->
+- [New Site Maintenance task "Delete Aged Task Execution Status Messages" is now available on primary servers to cleanup data older than 30 days or configured number of days](2023/technical-preview-2305.md) <!-- 6167745 -->
 - [CMG creation using 3rd PartyApp via Console](2023/technical-preview-2305.md) <!--15627214 -->
 - [CMG creation using 3rd Party ServerApp via PowerShell](2023/technical-preview-2305.md) <!--17186203 -->
 - [Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement](2023/technical-preview-2305.md) <!--9217349-->

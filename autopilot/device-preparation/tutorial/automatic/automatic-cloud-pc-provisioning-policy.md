@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 5 of 6 - Create a Cloud PC provisioning policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 5 of 6 - Create a Cloud PC provisioning policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 6 - Create a Cloud PC provisioning policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 6 - Create a Cloud PC provisioning policy.
 ms.date: 06/11/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Create a Cloud PC provisioning policy
+# Windows Autopilot device preparation in automatic mode for Windows 365: Create a Cloud PC provisioning policy
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
@@ -28,7 +28,7 @@ For an overview of the Windows Autopilot device preparation in automatic mode fo
 
 To create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -80,7 +80,7 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
       1. If unique names for Cloud PCs are desired, select **Apply device name template** under **Cloud PC naming**, and then follow the instructions to create a name template.
 
-      1. Under **Windows Autopilot (Preview)**:
+      1. Under **Windows Autopilot**:
 
          1. Next to **Autopilot Device preparation policy**, use the drop-down menu to select the automatic Windows Autopilot device preparation policy created in [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
 
@@ -96,7 +96,7 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
       > [!NOTE]
       >
-      > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
+      > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
    1. In the **Assignments** page:
    
@@ -128,3 +128,7 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
 > [!div class="nextstepaction"]
 > [Step 6: Monitor the deployment](automatic-monitor.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

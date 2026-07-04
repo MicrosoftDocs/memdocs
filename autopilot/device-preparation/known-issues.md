@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 02/05/2026
+ms.date: 04/10/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: troubleshooting
@@ -27,7 +27,7 @@ This article describes known issues that can often be resolved with:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
 
@@ -57,15 +57,17 @@ As a workaround, select the table header **Allowed Applications** or **Allowed S
 ### Win32, WinGet, and Enterprise App Catalog applications are skipped when Managed installer policy is enabled for the tenant
 
 Date added: *October 10, 2024*<br>
-Date updated: *June 20, 2025*
+Date updated: *April 10, 2026*
 
-When the [Managed installer policy](/mem/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+When the [Managed installer policy](/intune/device-configuration/endpoint-security/manage-app-control) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
 
 > [!NOTE]
 >
 > Managed installer policy is always enabled automatically for Education customers due to the requirements for [Windows 11 SE](/education/windows/tutorial-deploy-apps-winse/).
 
-For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
+For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).  
+
+**This issue was resolved in April 2026.**
 
 ### Security group membership update failures might lead to non-compliant devices
 
@@ -167,7 +169,7 @@ In some tenants, when trying to set the owner of the device group used in the Wi
 
 Date added: *June 3, 2024*
 
-There's a compatibility problem between the Windows Autopilot device preparation policy **User account type** setting and the Microsoft Entra ID **Local administrator settings**. Specifically, when the Windows Autopilot device preparation policy **User account type** setting is set to **Standard user** and the Microsoft Entra ID setting **Registering user is added as local administrator on the device during Microsoft Entra join (Preview)** under **Local administrator settings** is set to either **Selected** or **None**, provisioning gets skipped during a Windows Autopilot device preparation deployment. This settings conflict leads to a scenario where users could reach the desktop without having the expected applications installed. The Microsoft Entra ID **Local administrator settings** can be found by signing into the [Azure portal](https://portal.azure.com/) and navigating to **Microsoft Entra ID** > **Manage | Devices** > **Manage | Devices settings**.
+There's a compatibility problem between the Windows Autopilot device preparation policy **User account type** setting and the Microsoft Entra ID **Local administrator settings**. Specifically, when the Windows Autopilot device preparation policy **User account type** setting is set to **Standard user** and the Microsoft Entra ID setting **Registering user is added as local administrator on the device during Microsoft Entra join (Preview)** under **Local administrator settings** is set to either **Selected** or **None**, provisioning gets skipped during a Windows Autopilot device preparation deployment. This settings conflict leads to a scenario where users could reach the desktop without having the expected applications installed. The Microsoft Entra ID **Local administrator settings** can be found by signing in to the [Azure portal](https://portal.azure.com/) and navigating to **Microsoft Entra ID** > **Manage | Devices** > **Manage | Devices settings**.
 
 Until the issue is fixed, for users to be standard non-administrators on their device, make sure that the settings are set to one of the following three setting combinations:
 

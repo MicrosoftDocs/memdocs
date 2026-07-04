@@ -77,7 +77,7 @@ Follow the instructions to create a phased deployment where you manually configu
 
 ## Cloud distribution point support for Azure Resource Manager
 <!--1322209-->
-When creating an instance of the [cloud distribution point](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.
+When creating an instance of the [cloud distribution point](/previous-versions/troubleshoot/configmgr/install-cloud-based-distribution-points-in-microsoft-azure), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.
 
 The cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
 
@@ -90,7 +90,7 @@ Configuration Manager does not migrate existing classic cloud distribution point
 ### Prerequisites
 - Integration with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md). Microsoft Entra user discovery is not required.
 
-- The same [requirements for a cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_requirements), except for the Azure management certificate.
+- The same [requirements for a cloud distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point#bkmk_requirements), except for the Azure management certificate.
 
 
 ### Try it out!

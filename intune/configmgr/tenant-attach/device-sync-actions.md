@@ -5,6 +5,9 @@ ms.date: 12/16/2024
 ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-image-nochange
 ---
 
 # <a name="bkmk_attach"></a> Enable Microsoft Intune tenant attach: Device sync and device actions
@@ -81,9 +84,9 @@ When co-management isn't enabled, use the instructions below to enable device up
 
 ## Scope tags
 <!--IN12698965-->
-Tenant-attached devices receive the [default scope tag](../../intune-service/fundamentals/scope-tags.md#default-scope-tag) from Microsoft Intune. If you remove the default scope tag from a tenant-attached device, the device won't be displayed at all in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Currently, tenant-attached devices can't be assigned scope tags unlike [co-managed devices](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) can.
+Tenant-attached devices receive the [default scope tag](../../fundamentals/role-based-access-control/scope-tags.md#default-scope-tag) from Microsoft Intune. If you remove the default scope tag from a tenant-attached device, the device won't be displayed at all in the [Microsoft Intune admin center]. Currently, tenant-attached devices can't be assigned scope tags unlike [co-managed devices](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) can.
 
-However, sometimes you don't want certain [Intune roles](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) to see tenant-attached devices. For instance, you may not want someone with Intune's **Help Desk Operator** role to see tenant-attached devices because they're servers. In these cases, create or use a custom role in Intune that doesn't have **Default** listed for its **Scope tags**. When [creating custom Intune roles](../../intune-service/fundamentals/create-custom-role.md#to-create-a-custom-role), keep in mind that the default scope tag is automatically added to all untagged objects.
+However, sometimes you don't want certain [Intune roles](../../fundamentals/role-based-access-control/overview.md#built-in-roles) to see tenant-attached devices. For instance, you may not want someone with Intune's **Help Desk Operator** role to see tenant-attached devices because they're servers. In these cases, create or use a custom role in Intune that doesn't have **Default** listed for its **Scope tags**. When [creating custom Intune roles](../../fundamentals/role-based-access-control/create-custom-role.md#to-create-a-custom-role), keep in mind that the default scope tag is automatically added to all untagged objects.
 
 ## Perform device actions
 
@@ -135,7 +138,7 @@ When tenant attach is already enabled, edit the co-management properties to disa
 <!-- CMADO7043245 INADO9412904 -->
 If needed, you can offboard a Configuration Manager hierarchy from the Microsoft Intune admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Tenant administration** then **Connectors and tokens**.
 1. Select **Microsoft Endpoint Configuration Manager**.
 1. Choose the name of the site you would like to offboard, then select **Delete**.
@@ -144,7 +147,7 @@ If needed, you can offboard a Configuration Manager hierarchy from the Microsoft
 When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Intune admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 
 > [!NOTE]
-> If you are using custom [RBAC roles with Intune](../../intune-service/fundamentals/role-based-access-control.md#rbac-roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.
+> If you are using custom [RBAC roles with Intune](../../fundamentals/role-based-access-control/overview.md#rbac-roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.
 
 
 [!INCLUDE [Import a previously created Azure AD application](includes/import-azure-app.md)]
@@ -154,3 +157,7 @@ When you offboard a hierarchy from the admin center, it may take up to two hours
 
 - [Enroll Configuration Manager devices into Endpoint analytics](../../endpoint-analytics/index.md)
 - For information about the tenant attach log files, see [Troubleshoot tenant attach](troubleshoot.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

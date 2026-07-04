@@ -92,9 +92,9 @@ For more information about using Conditional Access, see the following articles:
 
 - [Conditional Access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview)
 
-- [Use compliance policies to set rules for devices you manage with Intune](../../intune-service/protect/device-compliance-get-started.md)
+- [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md)
 
-- [App-based Conditional Access with Intune](../../intune-service/protect/app-based-conditional-access-intune.md)
+- [App-based Conditional Access with Intune](../../device-security/conditional-access-integration/app-based-policies.md)
 
 > [!NOTE]
 > Conditional Access features become available immediately for Microsoft Entra hybrid joined devices. These features include multi-factor authentication and Microsoft Entra hybrid join access control. This behavior is because they're based on Microsoft Entra properties. To leverage configuration-based assessment from Intune and Configuration Manager, enable co-management. This configuration gives you access control directly from Intune for compliant devices. It also gives you Intune's compliance policies evaluation feature.

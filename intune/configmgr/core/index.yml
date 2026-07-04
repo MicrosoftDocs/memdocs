@@ -32,7 +32,7 @@ landingContent:
           - text: Use Software Center
             url: understand/software-center.md
           - text: Use the docs
-            url: ../../use-docs.md
+            url: ../../fundamentals/use-docs.md
           - text: Find help
             url: understand/find-help.md
 
@@ -65,6 +65,8 @@ landingContent:
             url: plan-design/security/enable-tls-1-2.md
           - text: CMPivot
             url: servers/manage/cmpivot.md
+          - text: Example management point deployment in an untrusted domain
+            url: servers/deploy/configure/example-management-point-deployment.md
           - text: Overview of cloud management gateway (CMG)
             url: clients/manage/cmg/overview.md
           - text: Enhanced HTTP

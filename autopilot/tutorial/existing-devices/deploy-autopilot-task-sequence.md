@@ -108,7 +108,7 @@ Once the Windows Autopilot for existing devices task sequence and the collection
 
 > [!NOTE]
 >
-> The instructions in this step don't fully go into detail all of the options available when running the **Deploy Software Wizard**. For full details on the options available, see [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
+> The instructions in this step don't fully go into detail all of the options available when running the **Deploy Software Wizard**. For full details on the options available, see [Deploy a task sequence](/intune/configmgr/osd/deploy-use/deploy-a-task-sequence).
 
 ## Next step: Speed up the deployment process (optional)
 
@@ -125,4 +125,4 @@ If the preference is to use an unmodified out-of-box Windows Autopilot task sequ
 For more information on deploying the Windows Autopilot task sequence, see the following articles:
 
 - [Deploy the Windows Autopilot task sequence](../../existing-devices.md#deploy-the-windows-autopilot-task-sequence).
-- [Deploy a task sequence](/mem/configmgr/osd/deploy-use/deploy-a-task-sequence).
+- [Deploy a task sequence](/intune/configmgr/osd/deploy-use/deploy-a-task-sequence).

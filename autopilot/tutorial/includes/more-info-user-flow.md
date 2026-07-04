@@ -12,4 +12,4 @@ Headings are driven by article context. -->
 
 For more information on the user flow of a Windows Autopilot for pre-provisioned deployment, see the following articles:
 
-- [User flow](/autopilot/pre-provision#user-flow).
+- [User flow](../../pre-provision.md#user-flow).

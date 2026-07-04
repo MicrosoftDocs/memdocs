@@ -105,7 +105,7 @@ On the device where the local Windows Autopilot reset is being performed:
     1. Confirm/verify that the end user has the right to trigger Local Windows Autopilot Reset.
     1. Notify the user in case a provisioning package, created using Windows Configuration Designer, is being used as part of the process.
 
-1. To trigger the local Windows Autopilot Reset, sign into the device with an account that has local admin credentials.
+1. To trigger the local Windows Autopilot Reset, sign in to the device with an account that has local admin credentials.
 
  Once the local Windows Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
@@ -117,7 +117,7 @@ On the device where the local Windows Autopilot reset is being performed:
 
 An MDM service such a Microsoft Intune can be used to start the remote Windows Autopilot reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
 
-To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Microsoft Entra ID. Additionally, for Intune, the Intune Service Administrator role is required for remote Windows Autopilot Reset. For more information, see [Add users and grant administrative permission to Intune](/mem/intune-service/fundamentals/users-add).
+To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Microsoft Entra ID. Additionally, for Intune, the Intune Service Administrator role is required for remote Windows Autopilot Reset. For more information, see [Add users and grant administrative permission to Intune](/intune/fundamentals/tenant-administration/add-users).
 
 ### Triggering a remote Windows Autopilot Reset
 

@@ -67,7 +67,7 @@ The following permissions are needed for CMPivot:
 - You can't customize entity properties, columns for results, or actions on devices.
 - Only one instance of CMPivot can run at the same time on a computer that is running the Configuration Manager console.
 - In CMPivot standalone, you're not able to access CMPivot queries stored in the Community hub. <!--9442715, 9310040, 9391017-->
-- When single sign on with multifactor authentication is used, you may not be able to sign into Community hub from CMPivot when using Configuration Manager 2103 and earlier. <!--10436429-->
+- When single sign on with multifactor authentication is used, you may not be able to sign in to Community hub from CMPivot when using Configuration Manager 2103 and earlier. <!--10436429-->
 
 ## Start CMPivot
 

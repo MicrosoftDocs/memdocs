@@ -19,7 +19,7 @@ appliesto:
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 Intune and Windows Autopilot can be used to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article. For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
@@ -85,7 +85,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 Multi-domain support section removed
 -->
 
-- The Intune Connector for Active Directory requires the [same endpoints as Intune](/mem/intune-service/fundamentals/intune-endpoints).
+- The Intune Connector for Active Directory requires the [same endpoints as Intune](/intune/fundamentals/endpoints).
 
 ---
 
@@ -113,7 +113,7 @@ If there's a web proxy in the networking environment, ensure that the Intune Con
 
 ## Create a device group
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. In the [Microsoft Intune admin center], select **Groups** > **New group**.
 
 1. In the **Group** pane, select the following options:
 
@@ -165,20 +165,20 @@ If purchasing new devices, some OEMs can register the devices on behalf of the o
 
 Before devices enroll in Intune, *registered* Windows Autopilot devices are displayed in three places (with names set to their serial numbers):
 
-- The **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows** > **Device onboarding | Enrollment**. Under **Windows Autopilot**, select **Devices**.
+- The **Windows Autopilot Devices** pane in the [Microsoft Intune admin center]. Select **Devices** > **By platform | Windows** > **Device onboarding | Enrollment**. Under **Windows Autopilot**, select **Devices**.
 - The **Devices | All devices** pane in the [Azure portal](https://portal.azure.com). Select **Devices** > **All Devices**.
 - The **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/). Select **Devices** > **Autopilot**.
 
 After the Windows Autopilot devices are *enrolled*, the devices are displayed in four places:
 
-- The **Devices | All Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **All devices**.
-- The **Windows | Windows devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **By platform | Windows**.
+- The **Devices | All Devices** pane in the [Microsoft Intune admin center]. Select **Devices** > **All devices**.
+- The **Windows | Windows devices** pane in the [Microsoft Intune admin center]. Select **Devices** > **By platform | Windows**.
 - The **Devices | All devices** pane in the [Azure portal](https://portal.azure.com). Select **Devices** > **All Devices**.
 - The **Active devices** pane in [Microsoft 365 admin center](https://admin.microsoft.com/). Select **Devices** > **Active devices**.
 
 > [!NOTE]
 >
-> After devices are enrolled, the devices are still displayed in the **Windows Autopilot Devices** pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and in the **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/), but those objects are the Windows Autopilot registered objects.
+> After devices are enrolled, the devices are still displayed in the **Windows Autopilot Devices** pane in the [Microsoft Intune admin center] and in the **Autopilot** pane in [Microsoft 365 admin center](https://admin.microsoft.com/), but those objects are the Windows Autopilot registered objects.
 
 A device object is pre-created in Microsoft Entra ID once a device is registered in Windows Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
@@ -219,7 +219,7 @@ In addition, any bring-your-own (BYO) VPN configurations are not supported for u
 
 Windows Autopilot deployment profiles are used to configure the Windows Autopilot devices.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -247,7 +247,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 1. Select **Next**.
 
-1. On the **Scope tags** page, select [scope tags](/mem/intune-service/fundamentals/scope-tags) for this profile.
+1. On the **Scope tags** page, select [scope tags](/intune/fundamentals/role-based-access-control/scope-tags) for this profile.
 
 1. Select **Next**.
 
@@ -261,7 +261,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 ## (Optional) Turn on the enrollment status page
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -281,7 +281,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 ## Create and assign a Domain Join profile
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices | Configuration** > **Policies** >**Create** > **New Policy**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices | Configuration** > **Policies** >**Create** > **New Policy**.
 
 1. In the **create a profile** window that opens, enter the following properties:
     - **Name**: Enter a descriptive name for the new profile.
@@ -313,7 +313,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 1. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-1. [Assign a device profile](/mem/intune-service/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+1. [Assign a device profile](/intune/device-configuration/assign-device-profile#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 >
@@ -327,7 +327,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2025**](#tab/windows-server-2025)
 
-1. Sign into the computer hosting the Intune Connector for Active Directory.
+1. Sign in to the computer hosting the Intune Connector for Active Directory.
 
 1. Right-click on the **Start** menu and then select **Settings** > **Apps** > **Installed apps**.
 
@@ -352,7 +352,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2019/2022**](#tab/windows-server-2019-2022)
 
-1. Sign into the computer hosting the Intune Connector for Active Directory.
+1. Sign in to the computer hosting the Intune Connector for Active Directory.
 
 1. Right-click the **Start** menu and then select **Settings** > **Apps**.
 
@@ -377,7 +377,7 @@ To uninstall the Intune Connector for Active Directory from the server, select t
 
 ### [:::image type="icon" source="images/icons/software-18.svg"::: **Windows Server 2016**](#tab/windows-server-2016)
 
-1. Sign into the computer hosting the Intune Connector for Active Directory.
+1. Sign in to the computer hosting the Intune Connector for Active Directory.
 
 1. Right-click the **Start** menu and then select **Settings** > **System** > **Apps & features**.
 
@@ -404,17 +404,21 @@ To uninstall the Intune Connector for Active Directory from the server, select t
 
 ## Next steps
 
-After Windows Autopilot is configured, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/mem/intune-service/remote-actions/device-management).
+After Windows Autopilot is configured, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/intune/intune-service/remote-actions/device-management).
 
 ## Related content
 
 <!-- Intune 12378279 -->
 
 - [What is a device identity?](/azure/active-directory/devices/overview).
-- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
-- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [Learn more about cloud-native endpoints](/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
 - [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 - [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -35,13 +35,13 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Requirements
 
-- [Intune subscription](/mem/intune-service/fundamentals/licenses).
-- [Windows automatic enrollment enabled](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Intune subscription](/intune/fundamentals/licensing).
+- [Windows automatic enrollment enabled](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Windows Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune-service/fundamentals/role-based-access-control). Windows Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Windows Autopilot device manager role can also be created by using [role-based access control (RBAC)](/intune/fundamentals/role-based-access-control/overview). Windows Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
 
 > [!NOTE]
 >
@@ -91,7 +91,7 @@ To use the `Get-WindowsAutopilotInfo.ps1` script, it needs to be downloaded and 
 
 Saving the hardware hash locally on a device as a CSV file is normally done on devices that already underwent Windows Setup and OOBE. To capture and save the hardware hash locally on a device:
 
-1. Sign into the device.
+1. Sign in to the device.
 
 1. On the device, open an elevated Windows PowerShell prompt.
 
@@ -136,7 +136,7 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
 
    - Already undergone Windows Setup and OOBE:
 
-     1. Sign into the device.
+     1. Sign in to the device.
 
      1. Open an elevated Windows PowerShell prompt.
 
@@ -171,7 +171,7 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
 
 To confirm the hardware hash for the device was uploaded into Intune and that the device shows as a Windows Autopilot device:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -212,7 +212,7 @@ During OOBE, enter the keystroke <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kb
 
 ### Desktop hash export
 
-Sign into the device where the hardware hash needs to be exported. Once signed into the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
+Sign in to the device where the hardware hash needs to be exported. Once signed in to the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
 
 > [!div class="nextstepaction"]
 > [Access work or school](ms-settings:workplace)
@@ -291,7 +291,7 @@ During upload of a CSV file, the only validation that Microsoft performs on the 
 
 Once the hardware hashes are captured in a CSV file, Windows Autopilot devices can be added by importing the file. To import the file by using Intune:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -319,7 +319,7 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
 After a Windows Autopilot device is uploaded, certain attributes of the device can be edited:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -347,7 +347,7 @@ After a Windows Autopilot device is uploaded, certain attributes of the device c
 
 Windows Autopilot devices that aren't enrolled in Intune can be deleted:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -380,3 +380,7 @@ Completely removing a device from a tenant requires the device records in Intune
 ## Related content
 
 - [Create device groups](enrollment-autopilot.md) to apply Windows Autopilot deployment profiles.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

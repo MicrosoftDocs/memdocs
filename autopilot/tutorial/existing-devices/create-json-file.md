@@ -39,7 +39,7 @@ Once the proper modules are installed to allow exporting of Windows Autopilot pr
 
 To export the Windows Autopilot profiles as JSON files, follow these steps:
 
-1. Sign into the Configuration Manager site server or other device where the required modules were installed in the [Install required modules to obtain Windows Autopilot profiles from Intune](install-modules.md) step.
+1. Sign in to the Configuration Manager site server or other device where the required modules were installed in the [Install required modules to obtain Windows Autopilot profiles from Intune](install-modules.md) step.
 
 1. On the device, open a PowerShell window as an administrator by right-clicking on the **Start** menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
 
@@ -55,9 +55,9 @@ To export the Windows Autopilot profiles as JSON files, follow these steps:
     }
     ```
 
-1. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. If the elevated PowerShell command window isn't already signed into Intune, a **Sign in to your account** window appears. Sign in with a Microsoft Entra account that has access to Intune and the Windows Autopilot profiles.
+1. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. If the elevated PowerShell command window isn't already signed in to Intune, a **Sign in to your account** window appears. Sign in with a Microsoft Entra account that has access to Intune and the Windows Autopilot profiles.
 
-1. Once signed into Intune, **Enter** might need to be selected a second time to run the last command in the code block.
+1. Once signed in to Intune, **Enter** might need to be selected a second time to run the last command in the code block.
 
 1. Once all the commands run successfully, the Windows Autopilot profiles appears in a subfolder under the folder specified by the `$targetDirectory` variable. By default, the `$targetDirectory` variable is `C:\AutoPilot`, but it can be changed to another location if desired. The subfolder has the name of the Windows Autopilot profile from Intune. If there are multiple Windows Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
 

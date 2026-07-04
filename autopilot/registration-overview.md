@@ -69,7 +69,7 @@ For more information about device IDs, see the following articles:
 
 ## Windows Autopilot devices
 
-Devices that are registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
+Devices that are registered with the Windows Autopilot service are displayed in the [Microsoft Intune admin center] under **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**:
 
 > [!NOTE]
 >
@@ -85,3 +85,7 @@ Devices that are registered with the Windows Autopilot service are displayed in 
 ## Related content
 
 - [Manually register devices with Windows Autopilot](add-devices.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -19,56 +19,20 @@ Verify this behavior [on a client](#verify-on-a-client) or [on the server](#veri
 
 ### Verify on a client
 
-1. On a client running a supported version of Windows 10 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Supported content types](../../../plan-design/hierarchy/microsoft-connected-cache.md#supported-content-types).
-
-1. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`.
-
-    For example:
-
-    ```PowerShell
-    PS C:\> Get-DeliveryOptimizationStatus
-
-    FileId                      : ec523d49c4f7c3c4444f0d9b952286ce40fdcee4
-    FileSize                    : 549064
-    TotalBytesDownloaded        : 549064
-    PercentPeerCaching          : 0
-    BytesFromPeers              : 0
-    BytesFromHttp               : 0
-    Status                      : Caching
-    Priority                    : Background
-    BytesFromCacheServer        : 549064
-    BytesFromLanPeers           : 0
-    BytesFromGroupPeers         : 0
-    BytesFromInternetPeers      : 0
-    BytesToLanPeers             : 0
-    BytesToGroupPeers           : 0
-    BytesToInternetPeers        : 0
-    DownloadDuration            : 00:00:00.0780000
-    HttpConnectionCount         : 2
-    LanConnectionCount          : 0
-    GroupConnectionCount        : 0
-    InternetConnectionCount     : 0
-    DownloadMode                : 99
-    SourceURL                   : http://au.download.windowsupdate.com/c/msdownload/update/software/defu/2019/09/am_delta_p
-                                atch_1.301.664.0_ec523d49c4f7c3c4444f0d9b952286ce40fdcee4.exe
-    NumPeers                    : 0
-    PredefinedCallerApplication : WU Client Download
-    ExpireOn                    : 9/6/2019 8:36:19 AM
-    IsPinned                    : False
-    ```
-
-Notice that the `BytesFromCacheServer` attribute isn't zero.
-
-If the client isn't configured correctly, or the cache server isn't installed correctly, the Delivery Optimization client falls back to the original cloud source. Then the `BytesFromCacheServer` attribute will be zero.
-
-### Verify on the server
-
-First, verify the registry properties are configured correctly: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. For example, the drive cache location is `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, where `PrimaryDrivesInput` can be multiple drives, such as `C,D,E`.
-
-Next, use the following method to simulate a client download request to the server with the mandatory headers.
+Use the following workflow to verify the Microsoft Connected Cache configuration:
 
 1. Open a 64-bit PowerShell window as an administrator.
-1. Run the following command, and replace the name or IP address of your server for `<DoincServer>`:
+1. Ensure the host is targeted by policy. If policy isn't set by Configuration Manager or Intune, set `DOCacheHost` to the distribution point FQDN or IP:
+
+    ```powershell
+    $parentKeyPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization"
+    if (!(Test-Path $parentKeyPath)) {
+        New-Item -Path $parentKeyPath -ItemType RegistryKey -Force -ErrorAction Stop | Out-Null
+    }
+    Set-ItemProperty -Path $parentKeyPath -Name "DOCacheHost" -Value "[DP IP Address or FQDN]" -ErrorAction Stop
+    ```
+
+1. Verify HTTP delivery by running the following command, and replace the name or IP address of your server for `<DoincServer>`:
 
     ```PowerShell
     Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
@@ -99,10 +63,60 @@ Next, use the following method to simulate a client download request to the serv
     - `StatusCode : 200`
     - `StatusDescription : OK`
 
+1. Verify MSIX download via HTTPS channel by requesting Microsoft Teams content from Connected Cache:
+
+    ```powershell
+    Add-AppxPackage "https://installer.teams.static.microsoft/production-windows-x64/25177.2002.3761.5185/MSTeams-x64.msix"
+    ```
+
+    Expected result: Download completes without error.
+
+1. Verify that bytes were served by cache:
+
+    ```powershell
+    Get-DeliveryOptimizationStatus | Select-Object DownloadMode, TotalBytesDownloaded, BytesFromCacheServer
+    ```
+
+    Expected result: `BytesFromCacheServer` is greater than `0`.
+
+1. (Optional) In environments using DOINC/CDN byte reporting, interpret results as follows:
+
+    - `CDN` bytes equals `DOINC` bytes: 100% of bytes came from cache.
+    - `DOINC` bytes is `0`: 100% of bytes came from CDN.
+    - `CDN` bytes greater than `DOINC` bytes: Partial bytes came from cache.
+
+> [!NOTE]
+> You may observe an issue where Intune content isn't cached until the third request from the cache server. This can occur when the Intune CDN returns a `VARY` header that instructs content not to be cached.
+
+### Verify on the server
+
+On the distribution point server, check the registry values at `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. Verify that `PrimaryDrivesInput` value reflects the actual cache location, like  `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`. Note that `PrimaryDrivesInput` can reference multiple drives (for example, `C,D,E`).
+
+Also, check the **DoincSetup.log** to confirm successful installation:
+
+1. On the distribution point server, navigate to `\SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` located at one of the logical drives.
+1. Open the file and scroll to the end.
+1. Verify that it contains entries similar to the following:
+
+```output
+Requesting content from the Delivery Optimization In-Network Cache (DOINC) instance... (Attempt #1)
+     Started download of test content from http://localhost/mscomtest/cedtest/r20.gif
+     Completed download of test content from http://localhost/mscomtest/cedtest/r20.gif
+     Download response
+          StatusCode:        OK
+          ContentLength:     43
+     Successful download of test content from http://localhost/mscomtest/cedtest/r20.gif
+     Verifying downloaded content is present in primary disk cache: E:\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294\download.windowsupdate.com\mscomtest\cedtest\r20.gif.full (
+Found
+)
+Completed VerifyCacheNodeSetup.ps1
+Delivery Optimization In-Network Cache (DOINC) Install succeeded
+```
+
 ## Log files
 
 - **Application Request Routing (ARR) setup log**: `%temp%\arr_setup.log`
-- **Connected Cache server setup log**: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point and `DistMgr.log` on the site server
+- **Connected Cache server setup log**: `\SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point and `DistMgr.log` on the site server
 - **Internet Information Services (IIS) operational logs**: By default, `%SystemDrive%\inetpub\logs\LogFiles`
 - **Connected Cache server operational log**: `C:\Doinc\Product\Install\Logs`
 
@@ -128,35 +142,32 @@ When Configuration Manager installs the Connected Cache component on the distrib
 | 0x00D00008 | Failure: The number of cache drives specified must match the number of cache drive size percentages specified |
 | 0x00D00009 | Failure: A valid cache node ID must be supplied |
 | 0x00D0000A | Failure: A valid cache drive set must be supplied |
-| 0x00D0000B | Failure: A valid cache drive size percent set must be supplied |
 | 0x00D0000C | Failure: A valid cache drive size percent set or cache drive size in GB must be supplied |
 | 0x00D0000D | Failure: A valid cache drive size percent set and cache drive size in GB cannot both be supplied |
-| 0x00D0000E | Failure: The number of cache drives specified must match the number of cache drives size in GB specified |
-| 0x00D0000F | Failure: Couldn't back up the applicationhost.config file from $AppHostConfig to $AppHostConfigDestinationName |
-| 0x00D00010 | Failure: Couldn't back up the Default Web Site web.config file from $WebsiteConfigFilePath to $WebConfigDestinationName |
-| 0x00D00011 | Failure: An exception occurred in SetupARRWebFarm.ps1 |
-| 0x00D00012 | Failure: An exception occurred in SetupARRWebFarmRewriteRules.ps1 |
-| 0x00D00013 | Failure: An exception occurred in SetupARRWebFarmProperties.ps1 |
+| 0x00D0000E | Failure: The number of cache drives specified must match the number of cache drive sizes in GB specified |
+| 0x00D0000F | Failure: Could not back up the applicationhost.config file from $AppHostConfig to $AppHostConfigDestinationName |
+| 0x00D00010 | Failure: Could not back up the Default Web Site web.config file from $WebsiteConfigFilePath to $WebConfigDestinationName |
+| 0x00D00011 | Failure: An exception occurred in Setup.ps1, method SetupFarmAndRewriteRules |
+| 0x00D00012 | Failure: An exception occurred in Setup.ps1, method SetupFarmAndRewriteRules (v15 or v20) |
 | 0x00D00014 | Failure: An exception occurred in SetupAllowableServerVariables.ps1 |
 | 0x00D00015 | Failure: An exception occurred in SetupFirewallRules.ps1 |
-| 0x00D00016 | Failure: An exception occurred in SetupAppPoolProperties.ps1 |
 | 0x00D00017 | Failure: An exception occurred in SetupARROutboundRules.ps1 |
 | 0x00D00018 | Failure: An exception occurred in SetupARRDiskCache.ps1 |
 | 0x00D00019 | Failure: An exception occurred in SetupARRProperties.ps1 |
 | 0x00D0001A | Failure: An exception occurred in SetupARRHealthProbes.ps1 |
-| 0x00D0001B | Failure: An exception occurred in VerifyIISSItesStarted.ps1 |
-| 0x00D0001C | Failure: An exception occurred in SetDrivesToHealthy.ps1 |
+| 0x00D0001B | Failure: An exception occurred in VerifyIISSitesStarted.ps1 |
 | 0x00D0001D | Failure: An exception occurred in VerifyCacheNodeSetup.ps1 |
 | 0x00D0001E | You can't install Connected Cache if the Default Web Site isn't on port 80 |
-| 0x00D0001F | Failure: The cache drive allocation in percentage can't exceed 100 |
+| 0x00D0001F | Failure: The cache drive allocation in percentage can't exceed 100, or another Install.ps1 instance is already running |
 | 0x00D00020 | Failure: The cache drive allocation in GB can't exceed the drive's free space |
 | 0x00D00021 | Failure: The cache drive allocation in percentage must be greater than 0 |
 | 0x00D00022 | Failure: The cache drive allocation in GB must be greater than 0 |
-| 0x00D00023 | Failure: An exception occurred in RegisterScheduledTask_CacheNodeKeepAlive |
+| 0x00D00023 | Failure: Connected Cache dependency installation failed |
 | 0x00D00024 | Failure: An exception occurred in RegisterScheduledTask_Maintenance |
 | 0x00D00025 | Failure: An exception occurred setting up the rewrite rules for HTTPS farm: $FarmName |
 | 0x00D00026 | Failure: An exception occurred setting up the rewrite rules for HTTP farm: $FarmName |
 | 0x00D00027 | You can't install Connected Cache because dependent software "Application Request Routing (ARR)" failed to install. See the log file located at %temp%\arr_setup.log |
+| 0x00D00029 | Connected Cache can't be installed because IIS is still running (iisreset /stop failed to stop IIS) |
 
 ## IIS configurations
 
@@ -182,20 +193,82 @@ The Connected Cache server adds the following rewrite rules:
 
 #### Inbound rewrite rules
 
-- `Doinc_ForwardToFarm_shswda01.download.manage-selfhost.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_swdc01.manage.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_swdc02.manage.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_dl.delivery.mp.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_officecdn.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_b1.download.windowsupdate.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_download.windowsupdate.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_officecdn.microsoft.com.edgesuite.net_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_au.b1.download.windowsupdate.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_assets1.xboxlive.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_au.download.windowsupdate.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_emdl.ws.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_tlu.dl.delivery.mp.microsoft.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
-- `Doinc_ForwardToFarm_assets2.xboxlive.com_E77D08D0-5FEA-4315-8C95-10D359D59294`
+Connected Cache creates inbound rules using this naming pattern:
+
+- `Doinc_ForwardToFarm_<origin>_E77D08D0-5FEA-4315-8C95-10D359D59294`
+- `Doinc_ForwardToFarm_v15_<origin>_E77D08D0-5FEA-4315-8C95-10D359D59294`
+- `Doinc_ForwardToFarm_v20_<origin>_E77D08D0-5FEA-4315-8C95-10D359D59294`
+
+Depending on origin and transport mapping, additional protocol-specific variants can exist with suffixes such as `_HTTP`, `_HTTPS`, or `_HTTP_HTTPS`.
+
+In [KB33247081: Connected Cache update for Microsoft Configuration Manager versions 2409, 2503, 2509 and 2603](../../../../hotfix/2509/33247081.md), inbound rewrite rules are created for these origins:
+
+- `assets.xbox.com`
+- `assets1.xboxlive.com`
+- `assets2.xboxlive.com`
+- `au.b1.download.windowsupdate.com`
+- `au.download.windowsupdate.com`
+- `b.c2r.ts.cdn.office.net`
+- `b1.download.windowsupdate.com`
+- `betaswda01-mscdn.download.manage-beta.microsoft.com`
+- `betaswda01.download.manage-beta.microsoft.com`
+- `betaswdb01-mscdn.download.manage-beta.microsoft.com`
+- `betaswdb01.download.manage-beta.microsoft.com`
+- `bg.tscdn.m365.static.microsoft`
+- `ctldl.windowsupdate.com`
+- `d1.xboxlive.com`
+- `d2.xboxlive.com`
+- `dl.delivery.mp.microsoft.com`
+- `dlassets.xboxlive.com`
+- `dlassets2.xboxlive.com`
+- `download.windowsupdate.com`
+- `emdl.ws.microsoft.com`
+- `f.c2r.ts.cdn.office.net`
+- `fg.tscdn.m365.static.microsoft`
+- `installer.teams.static.microsoft`
+- `officecdn.microsoft.com`
+- `officecdn.microsoft.com.edgesuite.net`
+- `onedfswd-mscdn.download.manage-dogfood.microsoft.com`
+- `onedfswd.blob.core.windows.net`
+- `onedfswd.download.manage-dogfood.microsoft.com`
+- `sb.dl.delivery.mp.microsoft.com`
+- `sb.teams.static.microsoft`
+- `sb.tlu.dl.delivery.mp.microsoft.com`
+- `sf.dl.delivery.mp.microsoft.com`
+- `sf.teams.static.microsoft`
+- `sf.tlu.dl.delivery.mp.microsoft.com`
+- `shswda01-mscdn.download.manage-selfhost.microsoft.com`
+- `shswda01.download.manage-selfhost.microsoft.com`
+- `statics.teams.cdn.office.net`
+- `swda01-mscdn.manage.microsoft.com`
+- `swda01.manage.microsoft.com`
+- `swda02-mscdn.manage.microsoft.com`
+- `swda02.manage.microsoft.com`
+- `swdb01-mscdn.manage.microsoft.com`
+- `swdb01.manage.microsoft.com`
+- `swdb02-mscdn.manage.microsoft.com`
+- `swdb02.manage.microsoft.com`
+- `swdc01-mscdn.manage.microsoft.com`
+- `swdc01.manage.microsoft.com`
+- `swdc02-mscdn.manage.microsoft.com`
+- `swdc02.manage.microsoft.com`
+- `swdd01-mscdn.manage.microsoft.com`
+- `swdd01.manage.microsoft.com`
+- `swdd02-mscdn.manage.microsoft.com`
+- `swdd02.manage.microsoft.com`
+- `swdin01-mscdn.manage.microsoft.com`
+- `swdin01.manage.microsoft.com`
+- `swdin02-mscdn.manage.microsoft.com`
+- `swdin02.manage.microsoft.com`
+- `swdsw01-mscdn.manage.microsoft.com`
+- `swdsw01.manage.microsoft.com`
+- `swdsw02-mscdn.manage.microsoft.com`
+- `swdsw02.manage.microsoft.com`
+- `tlu.dl.delivery.mp.microsoft.com`
+- `xvcb1.xboxlive.com`
+- `xvcb2.xboxlive.com`
+- `xvcf1.xboxlive.com`
+- `xvcf2.xboxlive.com`
 
 #### Outbound rewrite rules
 

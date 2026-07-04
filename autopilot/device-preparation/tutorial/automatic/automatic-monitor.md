@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 6 of 6 - Monitor the deployment
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 6 of 6 - Monitor the deployment.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 6 of 6 - Monitor the deployment
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 6 of 6 - Monitor the deployment.
 ms.date: 06/11/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Monitor the Windows Autopilot device preparation in automatic mode for Windows 365 deployment
+# Windows Autopilot device preparation in automatic mode for Windows 365: Monitor the Windows Autopilot device preparation in automatic mode for Windows 365 deployment
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
@@ -25,13 +25,13 @@ For an overview of the Windows Autopilot device preparation in automatic mode fo
 
 ## Monitor the deployment
 
-With other Windows Autopilot and Windows Autopilot device preparation scenarios, deployments can be "viewed" on actual devices to see the deployment progress and result. However, with Windows Autopilot device preparation in automatic mode for Windows 365, the setup and deployment of the Cloud PC takes place in the background where it can't be viewed. Deployments can instead be monitored through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) including [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+With other Windows Autopilot and Windows Autopilot device preparation scenarios, deployments can be "viewed" on actual devices to see the deployment progress and result. However, with Windows Autopilot device preparation in automatic mode for Windows 365, the setup and deployment of the Cloud PC takes place in the background where it can't be viewed. Deployments can instead be monitored through the [Microsoft Intune admin center] including [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
 ### View status of the deployment
 
 To view status of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -60,3 +60,7 @@ To view status of a Windows Autopilot device preparation in automatic mode for W
 To view granular status of the Windows Autopilot device preparation in automatic mode for Windows 365 deployment, including status of individual apps and scripts, use [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md):
 
 [!INCLUDE [Windows Autopilot device preparation reporting and monitoring](../../includes/reporting-monitoring.md)]
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

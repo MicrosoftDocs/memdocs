@@ -208,7 +208,7 @@ For more information, see the following articles:
 
 - [Co-management for Windows 10 devices](../../comanage/overview.md)
 
-- [What is Microsoft Intune app management?](/mem/intune-service/apps/app-management)
+- [What is Microsoft Intune app management?](../../../app-management/overview.md)
 
 
 

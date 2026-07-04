@@ -5,6 +5,7 @@ ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # How to exclude clients from upgrade in Configuration Manager

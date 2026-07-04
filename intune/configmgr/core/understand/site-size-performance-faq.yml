@@ -204,7 +204,7 @@ sections:
       - question: |
           Should I implement any additional SQL Server maintenance tasks?
         answer: |          
-          The built-in ["Rebuild Indexes" maintenance task](/intune/configmgr/core/servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes. The Query Optimizer then updates statistics on related objects as described in [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) section in SQL documentation. Therefore, if you rely solely on this built-in task, statistics may not be updated on some tables and views, leading to suboptimal query plans and poor performance.
+          The built-in ["Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks.md#rebuild-indexes) rebuilds only highly fragmented indexes. The Query Optimizer then updates statistics on related objects as described in [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) section in SQL documentation. Therefore, if you rely solely on this built-in task, statistics may not be updated on some tables and views, leading to suboptimal query plans and poor performance.
           
           You should perform [index maintenance](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes) as often as once a week and [update statistics](/sql/t-sql/statements/update-statistics-transact-sql) of tables and views as often as once a day to maintain SQL Server performance.
           

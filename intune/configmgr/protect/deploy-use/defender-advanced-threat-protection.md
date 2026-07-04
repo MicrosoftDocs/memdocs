@@ -5,6 +5,7 @@ ms.date: 12/16/2024
 ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 # Microsoft Defender for Endpoint
 

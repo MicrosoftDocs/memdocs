@@ -83,7 +83,7 @@ We have made the following improvements to operating system deployment, many of 
 ## Host software updates on cloud-based distribution points
 Beginning with this preview version, you can use a cloud-based distribution point to host a software update package. However, because you can configure clients to download software updates directly from Microsoft Update, consider the additional costs that deploying a software update package to a cloud-based distribution point can incur.
 
-For information about using cloud-based distribution points, see [Use a cloud-based distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) in the content for the Current Branch of Configuration Manager.
+For information about using cloud-based distribution points, see [Use a cloud-based distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point) in the content for the Current Branch of Configuration Manager.
 
 ## Validate device health attestation data via management points
 

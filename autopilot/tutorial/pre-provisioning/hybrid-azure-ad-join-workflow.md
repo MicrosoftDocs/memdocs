@@ -12,7 +12,7 @@ appliesto:
 
 > [!IMPORTANT]
 >
-> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 This step by step tutorial guides through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are also joined to an on-premises domain, also known as Microsoft Entra hybrid join.
 
@@ -37,8 +37,8 @@ Windows Autopilot for pre-provisioned deployment uses the existing Windows insta
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
 - Connecting to a wireless network if the device isn't connected to a wired network.
-- Signing into the device with the end-user's on-premises domain credentials.
-- In certain scenarios, signing into Microsoft Entra ID with the end-user's Microsoft Entra credentials.
+- Signing in to the device with the end-user's on-premises domain credentials.
+- In certain scenarios, signing in to Microsoft Entra ID with the end-user's Microsoft Entra credentials.
 
 Windows Autopilot for pre-provisioned deployment can perform the following tasks during the deployment:
 

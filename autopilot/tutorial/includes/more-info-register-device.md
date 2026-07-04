@@ -15,5 +15,5 @@ Headings are driven by article context. -->
 
 For more information on registering devices as Windows Autopilot devices, see the following articles:
 
-- [Manually register devices with Windows Autopilot](/autopilot/add-devices).
-- [Windows Autopilot customer consent](/autopilot/registration-auth).
+- [Manually register devices with Windows Autopilot](../../add-devices.md).
+- [Windows Autopilot customer consent](../../registration-auth.md).

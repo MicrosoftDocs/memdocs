@@ -1,5 +1,5 @@
 ---
-title: Technical Preview 1710 | Microsoft Docs
+title: Technical Preview 1710
 description: Learn about features available in the Technical Preview version 1710 for Configuration Manager.
 ms.date: 11/20/2017
 ms.subservice: core-infra

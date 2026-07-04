@@ -1,7 +1,7 @@
 ---
 title: Microsoft Connected Cache
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization.
-ms.date: 04/22/2025
+ms.date: 06/22/2026
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
@@ -45,7 +45,7 @@ When clients download cloud-managed content, they use Delivery Optimization from
 - For a complete list visit: [Types of download content supported by Delivery Optimization and Microsoft Connected Cache](/windows/deployment/do/waas-delivery-optimization#types-of-download-content-supported-by-delivery-optimization)
 
 > [!WARNING]
-> Connected Cache only provides content for Co-Managed devices with workloads shifted to Intune. It doesn't support content related any deployments that originate from Configuration Manager, like software updates with an integrated software update point.<!--10729675-->
+> Connected Cache only provides content for co-managed devices with workloads shifted to Intune. It doesn't support content related any deployments that originate from Configuration Manager, like software updates with an integrated software update point.<!--10729675-->
 
 ## How it works
 
@@ -97,7 +97,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
 
 - Don't preinstall the IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
-- The Connected Cache application can use an unauthenticated proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
+- The Connected Cache application can use a proxy server for internet access. For more information, see [Configure the proxy for a site system server](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server).<!-- 5856396 -->
 
 - It's not supported to use a distribution point that has other site roles, for example, a management point. Enable Connected Cache on a site system server that only has the distribution point role.<!-- 9580345 -->
 
@@ -107,7 +107,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
 
 - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
 
-- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../intune-service/fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
+- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../fundamentals/endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
 
 - Clients technically only need access to the distribution point with the Connected Cache. Although it's best to also give clients access to the internet endpoints for the content, in case they need to fall back to the original source.
 
@@ -128,7 +128,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
         > [!NOTE]
         > You can change this drive later. Any cached content is lost, unless you copy it to the new drive.
 
-   1. **Disk space**: Select the amount of disk space to reserve in GB or a percentage of the total disk space. By default, this value is 100 GB.
+    3. **Disk space**: Select the amount of disk space to reserve in GB or a percentage of the total disk space. By default, this value is 100 GB.
    
       > [!NOTE]
       > The default cache size should be sufficient for most customers. You can adjust the cache size later.
@@ -188,15 +188,32 @@ If the cache server returns any HTTP failure, the Delivery Optimization client f
 
 For more detailed information, see [Troubleshoot Microsoft Connected Cache with Configuration Manager](../../servers/deploy/configure/troubleshoot-microsoft-connected-cache.md).
 
+## Connected Cache version history
+
+The following table lists key Connected Cache KB updates, the ConfigMgr versions each hotfix applies to, and the corresponding `DoincInstall.exe` version.
+
+| KB | Applies to (ConfigMgr versions) | `DoincInstall.exe` version |
+|---|---|---|
+| [KB33247081](../../../hotfix/2509/33247081.md) | 2409, 2503, 2509, 2603 | 1.5.6.44280 |
+| [Configuration Manager version 2603](../../../hotfix/2603/37426535.md) | - | 1.5.6.43080 |
+| [KB14978429](../../../hotfix/2207/14978429.md) | 2103-2207 | 1.5.5.14088 |
+| [KB12819689](../../../hotfix/2111/12819689.md) | 2111 | 1.5.5.9002 |
+| [KB5001600](../../../hotfix/2010/5001600.md) | 1910-2010 | 1.5.4.1512 |
+
 ## Support for Intune Win32 apps
 
 <!--5032900-->
 
-When you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients.
+When you enable Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients. Starting June 16, 2026, Intune is rolling out [HTTPS for Win32 app content downloads](https://techcommunity.microsoft.com/blog/intunecustomersuccess/how-to-enable-https-support-for-microsoft-connected-cache-for-enterprise-and-edu/4496173) by region. During the rollout, some tenants might still use HTTP until HTTPS is available in their region.
+
+To support this change, you need:
+
+- The latest Connected Cache version: either [KB33247081](../../../hotfix/2509/33247081.md) for versions 2409, 2503, 2509, and 2603, or [Configuration Manager version 2603](../../../hotfix/2603/37426535.md).
+- On a Configuration Manager distribution point with Microsoft Connected Cache (MCC) enabled, if the IIS HTTPS binding is configured to use a self-signed certificate, replace it with a certificate issued by a trusted certification authority (CA). For examples, see the instructions to [request the certificate from internal PKI](../network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012) and [bind it to the IIS website](../network/example-deployment-of-pki-certificates.md#BKMK_webserver42008).
+- Ensure that all client devices that download content from MCC trust the issuing CA.
 
 > [!TIP]
->
-> All other content that Intune-managed devices download from Microsoft with Delivery Optimization can also be cached on Microsoft Connected Cache. This content includes software updates for Windows, Microsoft 365 apps, and Microsoft Edge.
+> You can cache other cloud-managed content without PKI certificates configured. This includes Windows updates, Microsoft 365 apps, and Microsoft Edge. Only Intune Win32 apps require the HTTPS PKI certificate configuration.
 
 ### Prerequisites
 
@@ -237,7 +254,7 @@ For Delivery Optimization peer-to-peer:
 
 - For apps managed in Intune, this feature only supports the Intune Win32 app type.
 
-  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune-service/apps/apps-win32-app-management.md).
+  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../app-management/deployment/win32.md).
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
@@ -255,7 +272,7 @@ When you install a Microsoft Connected Cache on a Configuration Manager distribu
 
 To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost).
 
-To use Intune to configure this policy, use the **DO Cache Host** setting in Intune Delivery Optimization profiles created *after* April 24, 2025. If your Intune profile was created *before* April 24, 2025, use the setting named **Cache server host names**. For more information, see [Delivery Optimization Windows devices in Intune](../../../..//intune-service/configuration/delivery-optimization-windows.md).
+To use Intune to configure this policy, use the **DO Cache Host** setting in Intune Delivery Optimization profiles created *after* April 24, 2025. If your Intune profile was created *before* April 24, 2025, use the setting named **Cache server host names**. For more information, see [Delivery Optimization Windows devices in Intune](../../../..//device-configuration/templates/configure-delivery-optimization-windows.md).
 
 When you enable this policy for cloud-managed devices, either type of device can request the server to cache content, and either can download the content. If multiple devices request the same content, no matter their management authority, they download supported and available content from the Microsoft Connected Cache.
 

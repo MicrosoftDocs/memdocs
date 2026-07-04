@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: article
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Intune tenant attach: Prerequisites
@@ -56,7 +57,7 @@ The user accounts performing device actions have the following prerequisites:
   - For Configuration Manager version 2103, and later: </br>
    Has been discovered with either [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
 - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Intune admin center.
-  - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md#rbac-roles).
+  - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md#rbac-roles).
 
 ## Internet endpoints
 

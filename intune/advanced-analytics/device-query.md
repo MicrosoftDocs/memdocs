@@ -1,13 +1,11 @@
 ---
-title: Device Query in Advanced Analytics
+title: Device Query
 description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
-ms.date: 12/01/2025
+ms.date: 03/24/2026
 ms.topic: how-to
 ---
 
 # Device query
-
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
 Device query allows you to quickly gain on-demand information about the state of your Windows devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
@@ -32,7 +30,7 @@ Additional prerequisites for device query:
 >
 > Device query runs in real time: when you query a device, Intune sends a request to the device and expects an immediate response.
 > WNS is the transport mechanism: Windows Push Notification Services is used to notify the device and return the query results.
->Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
+> Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
 
 :::column-end:::
 :::row-end:::
@@ -44,8 +42,8 @@ Additional prerequisites for device query:
 :::column-end:::
 :::column span="3":::
 > To use device query, use an account with at least one of the following roles:
-> - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Custom role] that includes:
 >   - The permission **Managed Devices/Query**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
@@ -53,7 +51,7 @@ Additional prerequisites for device query:
 
 ## Use device query
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**Windows**].
 1. Select a device, then select **Device Query** under the **Monitor** section.
 
 The supported properties you can query are listed in the [Supported properties](#supported-properties) section. To run a query, enter a Kusto Query Language (KQL) query, and select **Run**. Results are displayed in the **Results** tab area.
@@ -61,7 +59,7 @@ The supported properties you can query are listed in the [Supported properties](
 For more information on Kusto Query Language, see [Kusto Query Language Overview](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../copilot/index.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 Best practices:
 
@@ -74,9 +72,9 @@ Best practices:
 
 Use the Intune remote device actions in Single device query to help you manage your devices remotely. From the device query interface, you can now run device actions based on query results for faster and more efficient troubleshooting.
 
-The available device actions depend on the device platform and configuration. Not all actions are available for all devices. For a complete list of what can be done on your devices, see [Remote device actions in Microsoft Intune ](../intune-service/remote-actions/index.md).
+The available device actions depend on the device platform and configuration. Not all actions are available for all devices. For a complete list of what can be done on your devices, see [Remote device actions in Microsoft Intune ](../device-management/actions/index.md).
 
-## Supported Operators 
+## Supported operators 
 
 Device query supports only a subset of the operators supported in the Kusto Query Language (KQL). The following operators are currently supported:
 
@@ -166,9 +164,9 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |`substring()`|Extracts a substring from a source string starting from some index to the end of the string|
 |`tostring()`|Converts input to a string representation|
 
-## Supported Properties
+## Supported properties
 
-Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
+Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](ref-data-platform-schema.md).
 
 - `BiosInfo`
 - `Certificate`
@@ -213,8 +211,12 @@ Device query supports the following entities. To learn more about what propertie
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
 - If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
 
-<!--links-->
+<!--Role links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Device query**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/DeviceQuery
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**Windows**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesWindowsMenu/~/windowsDevices

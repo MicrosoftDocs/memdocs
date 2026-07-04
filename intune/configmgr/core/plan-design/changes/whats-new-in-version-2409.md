@@ -5,6 +5,7 @@ ms.date: 12/03/2024
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.custom: sfi-ga-nochange
 ---
 
 # What's new in version 2409 of Configuration Manager current branch

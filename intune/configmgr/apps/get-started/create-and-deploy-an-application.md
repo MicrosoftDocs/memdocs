@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 # Create and deploy an application with Configuration Manager
 
@@ -28,7 +29,7 @@ If you're already familiar with Configuration Manager applications, you can skip
 
 ## Before you start
 
-Make sure that you've reviewed the information in [Introduction to application management](../understand/introduction-to-application-management.md). That article helps you prepare your site to install applications and understand the terminology that's used here.
+Make sure that you've reviewed the information in [Introduction to application management](/previous-versions/troubleshoot/configmgr/introduction-to-application-management). That article helps you prepare your site to install applications and understand the terminology that's used here.
 
 Make sure that the installation files for the CMPivot standalone app are in an accessible location on your network. This example uses the following path: `\\cm01.contoso.com\SMS_XYZ\cd.latest\SMSSETUP\TOOLS\CMPivot\CMPivot.msi`
 

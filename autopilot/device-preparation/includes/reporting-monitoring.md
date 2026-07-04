@@ -10,7 +10,7 @@ device-preparation/tutorial/automatic/automatic-monitor.md
 
 Headings are driven by article context. -->
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -29,7 +29,7 @@ Headings are driven by article context. -->
       - **App installation** - Tracks Win32 and Microsoft Store apps.
     - **Serial number** - The hardware serial number of the device.
     - **Deployment time** - The amount of time that the deployment took during the out-of-box experience (OOBE) to complete. If the deployment isn't complete, it shows **In progress**.
-    - **UPN** - The user that signed into the device during OOBE and that the Windows Autopilot device preparation policy was assigned to.
+    - **UPN** - The user that signed in to the device during OOBE and that the Windows Autopilot device preparation policy was assigned to.
 
 1. Select an individual device under **Device name**. The **Device deployment details** pane opens. The **Device deployment details** pane contains three sections:
 
@@ -52,7 +52,7 @@ Headings are driven by article context. -->
       - **Failed** - The application failed to install. Check logs for further details.
       
       > [!Note]
-      > A [known issue](/autopilot/device-preparation/known-issues#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
+      > A [known issue](../known-issues.md#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
 
    1. **Scripts** - Contains information regarding the PowerShell scripts being run during the Windows Autopilot device preparation including the list of scripts being run. Statuses include:
 
@@ -62,4 +62,8 @@ Headings are driven by article context. -->
       - **Failed** - The PowerShell script failed to run. Check logs for further details.
 
 > [!Important]
-> Windows 365 devices that are reprovisioned after a failed deployment will not be deleted from Intune and will remain in the Autopilot device preparation report to allow for you to download the diagnostic logs when an error occurs. To clean up the stale records, use [Intune cleanup rules](/intune/intune-service/fundamentals/device-cleanup-rules) or delete manually.
+> Windows 365 devices that are reprovisioned after a failed deployment will not be deleted from Intune and will remain in the Autopilot device preparation report to allow for you to download the diagnostic logs when an error occurs. To clean up the stale records, use [Intune cleanup rules](/intune/governance/configure-cleanup-rules) or delete manually.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

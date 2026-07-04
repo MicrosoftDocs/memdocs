@@ -870,7 +870,7 @@ Use this setting to specify the period of time for the previous setting. You can
 
 Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
 
-- This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+- This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](/previous-versions/troubleshoot/configmgr/manage-express-installation-files-for-windows-10-updates).
 
 - When this option is set, delta download is used for all Windows update installation files, not just express installation files.
 

@@ -19,7 +19,7 @@ The work from anywhere report shows how ready your organization is for productiv
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Work from anywhere**.
 
-:::image type="content" source="images/work-from-anywhere/work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="images/work-from-anywhere/work-from-anywhere-score.png":::
+:::image type="content" source="media/work-from-anywhere/overall-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="media/work-from-anywhere/overall-score.png":::
 
 ### Work from anywhereâ€¯score
 
@@ -36,13 +36,13 @@ The following metrics are weighted and used to compute the **Work from anywhereâ
 - [Cloud provisioning](#cloud-provisioning)
 
 > [!NOTE]
-> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
+> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
 #### Windows
 
-Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../device-updates/windows/feature-updates.md). Your score is based on if these remediation actions have been completed or not.
+Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../device-updates/windows/manage-feature-updates.md). Your score is based on if these remediation actions have been completed or not.
 
-:::image type="content" source="images/work-from-anywhere/windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="images/work-from-anywhere/windows.png":::
+:::image type="content" source="media/work-from-anywhere/windows-score.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="media/work-from-anywhere/windows-score.png":::
 
 #### Cloud management
 
@@ -52,7 +52,7 @@ The **Cloud management** metric measures the percent of PCs that have attached t
 
 Benefits of each cloud management type:<!--IN7207657-->
 
-| Benefits | [**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md) | [**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md) | [**Co-management**](../configmgr/comanage/overview.md) | [**Intune**](../intune-service/fundamentals/what-is-intune.md) |
+| Benefits | [**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md) | [**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md) | [**Co-management**](../configmgr/comanage/overview.md) | [**Intune**](../fundamentals/what-is-intune.md) |
 |--|:--:|:--:|:--:|:--:|
 | Manage your clients anywhere |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
 | View and take action on all Windows PCs from Microsoft Intune admin center |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
@@ -69,7 +69,7 @@ Benefits of each cloud management type:<!--IN7207657-->
 
 Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Microsoft Entra ID or hybrid Microsoft Entra ID. Your Intune and co-managed devices are already enrolled in Microsoft Entra ID. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
-:::image type="content" source="images/work-from-anywhere/cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric" lightbox="images/work-from-anywhere/cloud-identity.png":::
+:::image type="content" source="media/work-from-anywhere/cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric" lightbox="media/work-from-anywhere/cloud-identity.png":::
 
 #### Cloud provisioning
 
@@ -84,19 +84,19 @@ The recommended remediation actions are to register and create deployment profil
 > [!NOTE]
 > Cloud provisioned devices that aren't enrolled into endpoint analytics won't be populated.
 
-:::image type="content" source="images/work-from-anywhere/cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="images/work-from-anywhere/cloud-provisioning.png":::
+:::image type="content" source="media/work-from-anywhere/cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="media/work-from-anywhere/cloud-provisioning.png":::
 
 ## Windows 11 hardware readiness
 <!--IN9740163-->
 The **Windows** metric provides Windows 11 hardware readiness insights for devices that are enrolled via Intune, co-management, or Configuration Manager version 2107 or newer with tenant attach enabled. To determine how many of your enrolled devices meet the [minimum system requirements](/windows/whats-new/windows-11-requirements#hardware-requirements) for Windows 11, select **Windows** to open the flyout on the **Overview** page in **Work from anywhere**. A chart is displayed showing which specific hardware requirements are the top blockers in your organization.
 
-:::image type="content" source="images/work-from-anywhere/windows-hardware.png" alt-text="Screenshot of the Windows tab that displays a chart showing top hardware blockers in your organization and OS versions." lightbox="images/work-from-anywhere/windows-hardware.png":::
+:::image type="content" source="media/work-from-anywhere/windows-hardware.png" alt-text="Screenshot of the Windows tab that displays a chart showing top hardware blockers in your organization and OS versions." lightbox="media/work-from-anywhere/windows-hardware.png":::
 
 In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness is displayed. The **Windows 11 readiness status** column indicates whether a device is **Capable** or **Not capable** of upgrading to Windows 11 based on the minimum system requirements. The column also lists if a device is already **Upgraded** or if the status is **Unknown** for a device. The **Windows 11 readiness reason** column outlines the specific hardware requirements that aren't met for devices that have a readiness status of **Not capable**.
 
 > [!NOTE]
 >
-> - In most cases, devices with a Windows 11 readiness status of **Unknown** are inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/fundamentals/device-cleanup-rules.md), or target only active devices with the [Intune data collection policy](configure.md) that controls endpoint analytics enrollment.
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../governance/configure-cleanup-rules.md), or target only active devices with the [Intune data collection policy](configure.md) that controls endpoint analytics enrollment.
 > - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## No commercial median

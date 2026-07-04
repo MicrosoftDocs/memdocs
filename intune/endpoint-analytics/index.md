@@ -20,47 +20,39 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 - View analytics in the Intune admin center.
 - Apply remediations or adjust policies based on insights.
 
-:::image type="content" source="images/ea-overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="images/ea-overview.png" border="false":::
+:::image type="content" source="media/shared/overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="media/shared/overview.png" border="false":::
 
 ## Available reports
 
 Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. These reports help IT teams identify trends, diagnose problems, and implement improvements to enhance the overall user experience. Endpoint analytics includes the following reports:
 
 :::row:::
-    :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Startup performance
+:::column:::
+> [!div class="nextstepaction"]
+> [Startup performance report](startup-performance.md)
 
 > Identifies devices with slow boot times and factors that delay startup.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](startup-performance.md)
     :::column-end:::
     :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Application reliability
+> [!div class="nextstepaction"]
+> [Application reliability report](app-reliability.md)
 
 > Monitors app crashes and stability trends to improve user experience.
->         
-> > [!div class="nextstepaction"]
-> > [Learn more](app-reliability.md)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Work from anywhere
+> [!div class="nextstepaction"]
+> [Work from anywhere report](work-from-anywhere.md)
 
 > Evaluates device readiness for secure and efficient remote work.
->
-> > [!div class="nextstepaction"]
-> > [Learn more](work-from-anywhere.md)
     :::column-end:::
     :::column:::
-#### :::image type="icon" source="../media/icons/24/query.svg" border="false"::: Advanced Analytics
+> [!div class="nextstepaction"]
+> [Advanced Analytics](../advanced-analytics/index.md)
 
 > Provides deeper insights and extended reporting capabilities (**requires additional licensing**).
->
-> > [!div class="nextstepaction"]
-> > [Learn more](../advanced-analytics/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -111,7 +103,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
-> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
+> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](ref-data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
 > For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
@@ -129,7 +121,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
-> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
+> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](ref-data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
 > For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
@@ -145,7 +137,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 :::column span="3":::
 ::: zone pivot="intune"
 
-> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
+> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../fundamentals/licensing.md).
 
 ::: zone-end
 
@@ -169,8 +161,8 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
 > 
-> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> - A [custom role][INT-RC] that includes:
+> - [School Administrator]: Grants read/write permissions to endpoint analytics.
+> - A [custom role] that includes:
 >   - **Endpoint Analytics/Read** — View scores and performance reports.
 >   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
 >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
@@ -180,16 +172,16 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
 > 
-> - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
-> - [Read Only Operator][INT-R4]: Grants read permissions to endpoint analytics.
-> - [Endpoint Security Manager][INT-R5]: Grants read permissions to endpoint analytics.
-> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]: Grants read permissions to endpoint analytics.
+> - [Read Only Operator]: Grants read permissions to endpoint analytics.
+> - [Endpoint Security Manager]: Grants read permissions to endpoint analytics.
+> - [School Administrator]: Grants read/write permissions to endpoint analytics.
+> - [Custom role] that includes:
 >   - **Endpoint Analytics/Read** — View scores and performance reports.
 >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
 >
 > You can also use an account that has the following Microsoft Entra built-in  roles:
-> - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
+> - [Reports Reader]: Grants read permissions to endpoint analytics.
 
 :::column-end:::
 :::row-end:::
@@ -211,26 +203,25 @@ Learn more about endpoint analytics:
 
 - [Configure endpoint analytics](configure.md)
 - [Scores, baselines, and insights](scores.md)
-- [Understand data collection](data-collection.md)
+- [Understand data collection](ref-data-collection.md)
 - [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)
 
-<!-- admin center -->
+<!--Intune roles-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-EA]: https://aka.ms/endpointanalytics
-[PORTAL-0]: https://aka.ms/uea
-[PORTAL]: https://aka.ms/uea_prereq
-[PORTAL_1]: https://aka.ms/uea_baselines
-[PORTAL_2]: https://aka.ms/uea_prereq_configmgr
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-<!-- role links -->
+[Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#application-manager
+[Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-manager
+[Endpoint Privilege Reader]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-reader
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Intune Role Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#intune-role-administrator
+[Policy and Profile manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#policy-and-profile-manager
+[Read Only Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#read-only-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
 
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
-[INT-R5]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+<!-- Entra roles -->
 
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
-[ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[ENT-R3]: /entra/identity/role-based-access-control/permissions-reference#reports-reader
+[Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[Global Administrator]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
+[Reports Reader]: /entra/identity/role-based-access-control/permissions-reference#reports-reader

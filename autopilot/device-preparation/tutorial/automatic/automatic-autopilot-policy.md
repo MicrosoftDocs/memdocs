@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 4 of 6 - Create a Windows Autopilot device preparation policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 4 of 6 - Create a Windows Autopilot device preparation policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 6 - Create a Windows Autopilot device preparation policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 6 - Create a Windows Autopilot device preparation policy.
 ms.date: 06/11/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Create a Windows Autopilot device preparation policy
+# Windows Autopilot device preparation in automatic mode for Windows 365: Create a Windows Autopilot device preparation policy
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
@@ -30,7 +30,7 @@ The Windows Autopilot policy specifies how the device is configured during Windo
 
 To create an automatic mode for Windows 365 Windows Autopilot device preparation policy, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -40,7 +40,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
-1. In the **Device preparation policies** screen, select **Create**, and then select **Automatic (Preview)**.
+1. In the **Device preparation policies** screen, select **Create**, and then select **Automatic**.
 
 1. The **Create profile** screen opens. In the **Introduction** page, select **Next**.
 
@@ -78,10 +78,10 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
       >
       > The following types of applications are supported for use with Windows Autopilot device preparation:
       >
-      > - [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
-      > - [Win32](/mem/intune-service/apps/apps-win32-prepare).
-      > - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-      > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
+      > - [Line-of-business (LOB)](/intune/app-management/deployment/add-lob-windows).
+      > - [Win32](/intune/app-management/deployment/create-win32-package).
+      > - [Microsoft Store](/intune/app-management/deployment/add-microsoft-store) - only Microsoft Store apps that support WinGet are supported.
+      > - [Microsoft 365](/intune/app-management/deployment/add-microsoft-365-windows).
       >
       > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
@@ -109,7 +109,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
 1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
 
@@ -121,3 +121,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
 > [!div class="nextstepaction"]
 > [Step 5: Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

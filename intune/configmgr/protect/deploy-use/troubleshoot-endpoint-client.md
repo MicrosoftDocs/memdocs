@@ -3,7 +3,7 @@ title: Troubleshoot Endpoint Protection
 description: Learn how to troubleshoot problems with Windows Defender and Endpoint Protection.
 ms.date: 09/10/2019
 ms.subservice: protect
-ms.topic: conceptual
+ms.topic: article
 ms.collection: tier3
 ms.topicc: troubleshooting-general
 ---

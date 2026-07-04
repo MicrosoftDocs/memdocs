@@ -53,13 +53,13 @@ Optionally, a [device-only subscription](https://techcommunity.microsoft.com/t5/
 > [!NOTE]
 > Intune doesn't automatically configure a primary user when using self-deploying mode in Windows Autopilot to provision a Windows device. Some Intune capabilities rely on a primary user being set on a device. These features include user self-service BitLocker recovery key retrieval and using the Company Portal to install software **assigned to users**. Using self-provisioning mode for Windows Autopilot doesn't preclude a licensed user from logging into the device and using features entitled to that user such as Conditional Access. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).
 >
-> If desired, a primary user can be manually set after device provisioning via the Intune admin center. For more information, see [Change a devices primary user](/mem/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
+> If desired, a primary user can be manually set after device provisioning via the Intune admin center. For more information, see [Change a devices primary user](/intune/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
 
 ## Requirements
 
 > [!IMPORTANT]
 >
-> A device can't automatically re-enroll through Windows Autopilot after an initial deployment with self-deploying mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the Microsoft Intune admin center, select **Devices** > **All devices** > select the devices to delete > **Delete**. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+> A device can't automatically re-enroll through Windows Autopilot after an initial deployment with self-deploying mode. Instead, delete the device record in the [Microsoft Intune admin center]. From the Microsoft Intune admin center, select **Devices** > **All devices** > select the devices to delete > **Delete**. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 Self-deploying mode uses a device's Trusted Platform Module (TPM) 2.0 hardware to authenticate the device into an organization's Microsoft Entra tenant. Therefore, devices without TPM 2.0 can't be used with this mode. Devices must also support TPM device attestation. All new Windows devices should meet these requirements. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Windows Autopilot self-Deploying mode and Windows Autopilot pre-provisioning in [Networking requirements](requirements.md?tabs=networking#windows-autopilot-self-deploying-mode-and-windows-autopilot-pre-provisioning). For Windows Autopilot software requirements, see [Windows Autopilot software requirements](./requirements.md?tabs=software).
 
@@ -117,3 +117,7 @@ When using Windows Autopilot to deploy in self-deploying mode, the following end
 > Deploying Exchange ActiveSync (EAS) policies using self-deploying mode for kiosk deployments causes autologon functionality to fail.
 
 In case the observed results don't match these expectations, consult the [Troubleshooting Windows Autopilot overview](troubleshooting-faq.yml#troubleshooting-windows-autopilot-overview) documentation.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

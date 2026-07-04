@@ -15,5 +15,5 @@ Headings are driven by article context. -->
 
 For more information on the Enrollment Status Page (ESP), see the following articles:
 
-- [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status).
-- [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
+- [Windows Autopilot Enrollment Status Page](../../enrollment-status.md).
+- [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).

@@ -16,4 +16,4 @@ Headings are driven by article context. -->
 
 For more information on configuring Windows Autopilot profiles, see the following articles:
 
-- [Configure Windows Autopilot profiles](/autopilot/profiles).
+- [Configure Windows Autopilot profiles](../../profiles.md).

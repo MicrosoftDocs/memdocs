@@ -29,13 +29,13 @@ For more information about the recommended encryption algorithms to use, see [Bi
 
 ## Full disk or used space-only encryption
 
-There are two types of encryption, full disk or used space-only. Configuration of [silent enablement](/mem/intune-service/protect/encrypt-devices#silently-enable-bitlocker-on-devices) and hardware support for modern standby automatically determines the type of encryption used. The type of encryption used can be enforced by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, BitLocker uses the encryption type when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/mem/intune-service/protect/encrypt-devices#full-disk-vs-used-space-only-encryption).
+There are two types of encryption, full disk or used space-only. Configuration of [silent enablement](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows#silently-enable-bitlocker-on-devices) and hardware support for modern standby automatically determines the type of encryption used. The type of encryption used can be enforced by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, BitLocker uses the encryption type when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows#full-disk-vs-used-space-only-encryption).
 
 ## Configure a BitLocker policy for Windows Autopilot devices
 
 To make sure both the desired BitLocker encryption algorithm and the encryption are set before automatic encryption occurs for Windows Autopilot devices, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Endpoint security** in the left hand pane.
 
@@ -77,9 +77,9 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
-1. In the **Assignments** page, use the **Search by group name...** search box to find and add the Windows Autopilot device group. Once the  Windows Autopilot device group is added and is listed under **Group**, make sure **Target type** is set to **Include**, and then select the **Next** button. For more information about assigning a policy, see [Assign policies in Microsoft Intune](/mem/intune-service/configuration/device-profile-assign).
+1. In the **Assignments** page, use the **Search by group name...** search box to find and add the Windows Autopilot device group. Once the  Windows Autopilot device group is added and is listed under **Group**, make sure **Target type** is set to **Include**, and then select the **Next** button. For more information about assigning a policy, see [Assign policies in Microsoft Intune](/intune/device-configuration/assign-device-profile).
 
     > [!IMPORTANT]
     >
@@ -99,4 +99,8 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 ## Related content
 
 - [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
-- [Manage BitLocker policy for Windows devices with Intune](/mem/intune-service/protect/encrypt-devices).
+- [Manage BitLocker policy for Windows devices with Intune](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

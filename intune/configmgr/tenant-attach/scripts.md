@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # <a name="bkmk_scripts"></a> Tenant attach: Run Scripts from the admin center
@@ -35,13 +36,13 @@ The user account needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - The **Read Resource** permission for the device's **Collection** in Configuration Manager.
-- An [Intune role](../../intune-service/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../fundamentals/role-based-access-control/overview.md) assigned to the user <!--7980141-->
 - To use scripts, you must be a member of the appropriate Configuration Manager security role. For more information, see [Security scopes for run scripts](../apps/deploy-use/create-deploy-scripts.md#bkmk_ScriptRoles).
 - To run scripts, the account must have **Run Script** permissions for **Collections**.
 
 ## Run a script
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Scripts**.
@@ -67,3 +68,7 @@ The user account needs the following permissions:
 [Install an application from the admin center](applications.md)
 
 [Learn more about PowerShell script security](../apps/deploy-use/learn-script-security.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -5,6 +5,7 @@ ms.date: 06/20/2022
 ms.subservice: other
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Community hub and GitHub
@@ -125,7 +126,7 @@ The Microsoft Edge WebView2 console extension enables the full functionality for
 
 > [!IMPORTANT]
 > - When you upgrade to Configuration Manager 2107, you will be prompted to install the WebView2 console extension again. <!--0247811, 10005418-->
-> - Configuration Manager versions 2006 and earlier can’t sign into GitHub but can still download items. Using Community hub on Windows Server requires the WebView2 console extension and Configuration Manager version 2010 or later. <!--9082812-->
+> - Configuration Manager versions 2006 and earlier can’t sign in to GitHub but can still download items. Using Community hub on Windows Server requires the WebView2 console extension and Configuration Manager version 2010 or later. <!--9082812-->
 
 Follow the instructions below to enable the full functionality of Community hub:
 

@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 3 of 6 - Assign applications and PowerShell scripts to device group
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 3 of 6 - Assign applications and PowerShell scripts to device group.
 ms.date: 01/20/2026
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Assign applications and PowerShell scripts to device group
+# Windows Autopilot device preparation in automatic mode for Windows 365: Assign applications and PowerShell scripts to device group
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
@@ -42,23 +42,23 @@ For applications to install and PowerShell scripts work successfully during a Wi
 
 > [!NOTE]
 >
-> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/mem/intune-service/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/mem/intune-service/apps/intune-management-extension).
+> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/intune/app-management/deployment/index) and [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
 
 ### Applications
 
 The following types of applications are supported for use with Windows Autopilot device preparation:
 
-- [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
-- [Win32](/mem/intune-service/apps/apps-win32-prepare).
-- [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-- [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
-- [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
+- [Line-of-business (LOB)](/intune/app-management/deployment/add-lob-windows).
+- [Win32](/intune/app-management/deployment/create-win32-package).
+- [Microsoft Store](/intune/app-management/deployment/add-microsoft-store) - only Microsoft Store apps that support WinGet are supported.
+- [Microsoft 365](/intune/app-management/deployment/add-microsoft-365-windows).
+- [Enterprise App Catalog](/intune/app-management/deployment/add-enterprise-catalog-app).
 
 In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
 To assign the desired applications to the device group created for Windows Autopilot device preparation:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Apps** in the left hand pane.
 
@@ -92,7 +92,7 @@ To assign the desired applications to the device group created for Windows Autop
 
 To assign the desired PowerShell scripts to the device group created for Windows Autopilot device preparation:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -131,8 +131,12 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 ## Related content
 
-- [Add apps to Microsoft Intune](/mem/intune-service/apps/apps-add).
-- [Use PowerShell scripts on Windows devices in Intune](/mem/intune-service/apps/intune-management-extension).
-- [Assign apps to groups with Microsoft Intune](/mem/intune-service/apps/apps-deploy).
-- [Win32 app management in Microsoft Intune](/mem/intune-service/apps/apps-win32-app-management).
-- [Add a Windows line-of-business app to Microsoft Intune](/mem/intune-service/apps/lob-apps-windows).
+- [Add apps to Microsoft Intune](/intune/app-management/deployment/index).
+- [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
+- [Assign apps to groups with Microsoft Intune](/intune/app-management/deployment/assign-groups).
+- [Win32 app management in Microsoft Intune](/intune/app-management/deployment/win32).
+- [Add a Windows line-of-business app to Microsoft Intune](/intune/app-management/deployment/add-lob-windows).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

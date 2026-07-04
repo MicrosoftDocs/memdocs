@@ -13,7 +13,7 @@ ms.collection: tier3
 
 Task sequences in Configuration Manager are used to automate different kinds of tasks within your environment. These tasks are primarily designed and tested for deploying operating systems. Configuration Manager has many other features that should be the primary technology that you use for the following scenarios:
 
-- [Application installation](../../apps/understand/introduction-to-application-management.md)
+- [Application installation](/previous-versions/troubleshoot/configmgr/introduction-to-application-management)
 
     > [!NOTE]
     > Starting in version 2002, install complex applications using task sequences via the application model. Add a deployment type to an app that's a task sequence, either to install or uninstall the app. For more information, see [Create Windows applications](../../apps/get-started/creating-windows-applications.md#bkmk_tsdt).<!-- 3555953 -->

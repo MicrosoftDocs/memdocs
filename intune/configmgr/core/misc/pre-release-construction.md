@@ -3,7 +3,7 @@ title: Pre-release content under construction
 description: Content under construction
 ms.date: 01/10/2020
 ms.subservice: other
-ms.topic: conceptual
+ms.topic: article
 robots: NOINDEX, NOFOLLOW
 ms.collection: tier3
 ---

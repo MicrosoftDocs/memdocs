@@ -12,4 +12,4 @@ Headings are driven by article context. -->
 
 For more information on the technician flow of a Windows Autopilot for pre-provisioned deployment, see the following articles:
 
-- [Technician flow](/autopilot/pre-provision#technician-flow).
+- [Technician flow](../../pre-provision.md#technician-flow).

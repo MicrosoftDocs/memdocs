@@ -21,7 +21,7 @@ appliesto:
 
 ## Create a Windows Autopilot device group using Intune
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. In the [Microsoft Intune admin center], select **Groups** > **New group**.
 
 1. In **New Group**, configure the following properties:
 
@@ -33,7 +33,7 @@ appliesto:
 
       For more information, see [Use cloud groups to manage role assignments in Microsoft Entra ID](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/mem/intune-service/fundamentals/groups-add).
+    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/intune/fundamentals/tenant-administration/add-groups).
 
     - **Owners**: Select users that own the group. Owners can also delete this group.
 
@@ -83,7 +83,7 @@ For more information including a list of supported OEMs, see [Return of key func
 >
 > Assigning a user to a specific Windows Autopilot device doesn't work if using Active Directory Federation Services (ADFS).
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -147,4 +147,8 @@ For a detailed tutorial on configuring and assigning a Windows Autopilot deploym
 - [Pre-provision Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Windows Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md).
 - [Self-deploying mode: Create and assign self-deploying Windows Autopilot profile](tutorial/self-deploying/self-deploying-autopilot-profile.md).
 
-For more information about managing Windows Autopilot devices, see [What is Microsoft Intune device management?](/mem/intune-service/remote-actions/device-management).
+For more information about managing Windows Autopilot devices, see [What is Microsoft Intune device management?](/intune/intune-service/remote-actions/device-management).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

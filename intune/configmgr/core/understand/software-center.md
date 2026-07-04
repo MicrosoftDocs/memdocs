@@ -5,6 +5,7 @@ ms.date: 10/18/2024
 ms.topic: end-user-help
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Software Center user guide

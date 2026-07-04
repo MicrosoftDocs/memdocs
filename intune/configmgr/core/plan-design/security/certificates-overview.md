@@ -45,7 +45,7 @@ For more information, see [CMG set up checklist](../../clients/manage/cmg/set-up
 > [!NOTE]
 > The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances.<!-- 10247883 --> To provide content to internet-based devices, enable the CMG to distribute content. For more information, see [Deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features).
 >
-> For more information about certificates for a CDP, see [Certificates for the cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md#bkmk_certs).
+> For more information about certificates for a CDP, see [Certificates for the cloud distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point#bkmk_certs).
 
 ## The site server signing certificate
 

@@ -12,7 +12,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/).
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/welcome-configuration-manager).
 
 Feature-specific documentation includes information about known issues that affect core scenarios.
 
@@ -20,15 +20,15 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2603](../../../plan-design/changes/whats-new-in-version-2603.md)
 - [What's new in version 2509](../../../plan-design/changes/whats-new-in-version-2509.md)
 - [What's new in version 2503](../../../plan-design/changes/whats-new-in-version-2503.md)
-- [What's new in version 2409](../../../plan-design/changes/whats-new-in-version-2409.md)
 
 
 
 
 > [!TIP]
-> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
+> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../fundamentals/use-docs.md#notifications).
 
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
 > `https://learn.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
@@ -66,7 +66,7 @@ Once the platform update is installed on affected clients, Endpoint Protection p
 
 - [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates#monthly-platform-and-engine-versions)
 - [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d).
-- [Sync devices to get the latest policies and actions with Intune](/mem/intune-service/remote-actions/device-sync#sync-a-device)
+- [Sync devices to get the latest policies and actions with Intune](../../../../../device-management/actions/sync.md)
 
 ## Set up and upgrade
 

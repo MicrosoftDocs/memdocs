@@ -1,13 +1,11 @@
 ---
-title: Device Scopes in endpoint analytics
-description: Learn how to use device scopes in Microsoft Intune endpoint analytics with scope tags for custom device reporting and targeted insights.
-ms.date: 12/01/2025
+title: Device Scopes
+description: Learn how to use device scopes in Microsoft Intune with scope tags for custom device reporting and targeted insights.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
 # Device scopes
-
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
 Device scopes use scope tags to filter endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of devices.
 
@@ -32,11 +30,11 @@ Additional prerequisites for custom device scopes:
 :::column-end:::
 :::column span="3":::
 > To create custom device scopes, use an account with at least one of the following roles:
-> - [Help Desk Operator][INT-R1]
-> - [Endpoint Security Manager][INT-R2]
-> - [Read Only Operator][INT-R3]
-> - [Intune Role Administrator][INT-R4]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Endpoint Security Manager]
+> - [Read Only Operator]
+> - [Intune Role Administrator]
+> - [Custom role] that includes:
 >   - The permission **Roles/Read**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 >
@@ -49,7 +47,7 @@ Additional prerequisites for custom device scopes:
 
 ## Create and manage custom device scopes
 
-1. In the [Microsoft Intune admin center][INT-AC], open one of the reports within endpoint analytics, for example startup performance. Select **Reports** > **Endpoint analytics** > **Startup performance**.
+1. In the [Microsoft Intune admin center], open one of the reports within endpoint analytics, for example startup performance. Select **Reports** > **Endpoint analytics** > **Startup performance**.
 1. Select **Device scope**.
 1. Select **Manage device scopes** to open the flyout where you can create and modify your custom device scopes.
 
@@ -93,11 +91,20 @@ To return to viewing all devices, navigate to the **Device scope** menu, select 
 - You can save up to 100 custom device scopes, and up to 20 can be active at a time.
 - Only one Scope tag can be used to create a custom device scope. To create a custom device scope that includes devices from multiple Scope tags, you must create a new Scope tag and assign it to the full set of devices that you require.
 
-<!--links-->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-R3]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#intune-role-administrator
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+<!-- Role links-->
+
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+[Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#application-manager
+[Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-manager
+[Endpoint Privilege Reader]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-reader
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Intune Role Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#intune-role-administrator
+[Policy and Profile manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#policy-and-profile-manager
+[Read Only Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#read-only-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator

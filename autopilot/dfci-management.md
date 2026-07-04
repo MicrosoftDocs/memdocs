@@ -63,9 +63,9 @@ There are four basic steps in managing DFCI profile with Windows Autopilot:
 1. Create a DFCI profile
 1. Assign the profiles
 
-See [Create the profiles](/mem/intune-service/configuration/device-firmware-configuration-interface-windows#create-the-profiles) and [Assign the profiles, and reboot](/mem/intune-service/configuration/device-firmware-configuration-interface-windows#assign-the-profiles-and-reboot) for details.
+See [Create the profiles](/intune/device-configuration/templates/configure-dfci-windows#create-the-profiles) and [Assign the profiles, and reboot](/intune/device-configuration/templates/configure-dfci-windows#assign-the-profiles-and-reboot) for details.
 
-The existing [DFCI settings](/mem/intune-service/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) can also be changed on devices that are in use. In the existing DFCI profile, change the settings and save the changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
+The existing [DFCI settings](/intune/device-configuration/templates/configure-dfci-windows#update-existing-dfci-settings) can also be changed on devices that are in use. In the existing DFCI profile, change the settings and save the changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
 
 To identify whether a device is DFCI ready, the following Intune Graph API call can be used:
 

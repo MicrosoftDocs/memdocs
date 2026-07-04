@@ -59,7 +59,7 @@ To create the Windows Autopilot for existing devices task sequence in Configurat
 
       1. Select the **Next >** button.
 
-   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule that includes the desired devices to run the Windows Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules are created that include the desired devices, select the **Next >** button.
+   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule that includes the desired devices to run the Windows Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/intune/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules are created that include the desired devices, select the **Next >** button.
 
    1. In the **Confirm the settings** page, verify that everything is configured as desired, and then select the **Next >** button.
 
@@ -81,4 +81,4 @@ To create the Windows Autopilot for existing devices task sequence in Configurat
 For more information on creating a collection in Configuration Manager, see the following articles:
 
 - [Deploy the Windows Autopilot task sequence](../../existing-devices.md#deploy-the-windows-autopilot-task-sequence).
-- [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
+- [How to create collections in Configuration Manager](/intune/configmgr/core/clients/manage/collections/create-collections).

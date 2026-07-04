@@ -1,0 +1,141 @@
+### YamlMime:Landing
+
+title: Device enrollment
+summary: Enroll devices in Microsoft Intune so they can receive the policies and profiles you configure. Learn about enrollment methods for each platform and how to configure enrollment settings.
+
+metadata:
+  title: Device enrollment
+  description: Enroll devices in Microsoft Intune to manage and secure them with policies, profiles, and compliance settings across all major platforms.
+  ms.topic: landing-page
+  ms.date: 05/04/2026
+  author: paolomatarazzo
+  ms.author: paoloma
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with device enrollment
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Device enrollment guide
+        url: guide.md
+    - linkListType: concept
+      links:
+      - text: Understand Intune and Microsoft Entra device limit restrictions
+        url: limits-intune-entra.md
+      - text: Overview of enrollment restrictions
+        url: restrictions.md
+    - linkListType: how-to-guide
+      links:
+      - text: Enroll devices in Intune
+        url: enroll-devices.md
+      - text: Enroll devices using a device enrollment manager account
+        url: setup-enrollment-manager.md
+      - text: Linux device enrollment guide
+        url: guide-linux.md
+
+  - title: Enroll iOS/iPadOS devices
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: iOS/iPadOS device enrollment guide
+        url: apple/guide-ios-ipados.md
+    - linkListType: concept
+      links:
+      - text: Overview of automated device enrollment for Apple devices
+        url: apple/overview-automated-enrollment-apple.md
+    - linkListType: how-to-guide
+      links:
+      - text: Get an Apple MDM Push certificate for Intune
+        url: apple/create-mdm-push-certificate.md
+      - text: Set up an Apple token for automated enrollment
+        url: apple/setup-apple-token.md
+      - text: Set up automated device enrollment (ADE) for iOS/iPadOS
+        url: apple/setup-automated-ios.md
+      - text: Set up account driven Apple User Enrollment
+        url: apple/setup-account-driven-user.md
+      - text: Set up Apple Configurator enrollment
+        url: apple/setup-configurator-ios.md
+      - text: Set up web-based device enrollment for iOS/iPadOS
+        url: apple/setup-web-based-ios.md
+
+  - title: Enroll macOS devices
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: macOS device enrollment guide
+        url: apple/guide-macos.md
+    - linkListType: concept
+      links:
+      - text: Choose a macOS enrollment method
+        url: apple/methods-macos.md
+      - text: Overview of automated device enrollment for macOS
+        url: apple/overview-automated-enrollment-macos.md
+    - linkListType: how-to-guide
+      links:
+      - text: Set up automated device enrollment (ADE) for macOS
+        url: apple/setup-automated-macos.md
+      - text: Set up a macOS token for automated enrollment
+        url: apple/setup-macos-token.md
+      - text: Manage Apple device enrollment tokens for macOS
+        url: apple/manage-devices-tokens-macos.md
+
+  - title: Enroll Android devices
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Android device enrollment guide
+        url: android/guide.md
+    - linkListType: how-to-guide
+      links:
+      - text: Connect Intune account to managed Google Play account
+        url: android/connect-managed-google-play.md
+      - text: Set up Android Enterprise dedicated devices
+        url: android/setup-dedicated.md
+      - text: Set up Android Enterprise corporate-owned work profile
+        url: android/setup-corporate-work-profile.md
+      - text: Set up Android Enterprise fully managed devices
+        url: android/setup-fully-managed.md
+      - text: Use device staging for Android
+        url: android/device-staging.md
+
+  - title: Enroll Windows devices
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Windows device enrollment guide
+        url: windows/guide.md
+    - linkListType: how-to-guide
+      links:
+      - text: Enable MDM automatic enrollment for Windows
+        url: windows/enable-automatic-mdm.md
+      - text: Set up the Windows Enrollment Status Page
+        url: windows/setup-status-page.md
+      - text: Set up automatic enrollment in Intune
+        url: windows/quickstart-automatic-mdm.md
+      - text: Enroll a Windows device
+        url: windows/quickstart-first-device.md
+      - text: Enable backup and restore for Windows enrollment
+        url: windows/enable-backup-restore.md
+      - text: Bulk enrollment for Windows devices
+        url: windows/create-bulk-package.md
+      - text: Enable autodiscovery of Intune enrollment server
+        url: windows/create-cname-autodiscovery.md
+
+  - title: Configure enrollment settings
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add corporate identifiers to Intune
+        url: add-corporate-identifiers.md
+      - text: Set up enrollment time grouping
+        url: setup-time-grouping.md
+      - text: Require multifactor authentication for device enrollment
+        url: configure-multifactor-authentication.md
+      - text: Create device platform restrictions
+        url: create-platform-restrictions.md
+      - text: Set terms and conditions
+        url: create-terms-and-conditions.md

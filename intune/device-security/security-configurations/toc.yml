@@ -1,0 +1,11 @@
+items:
+- name: Android fully managed compliance and security
+  href: android-fully-managed.md
+- name: Android personally-owned compliance and security
+  href: android-personally-owned.md
+- name: iOS/iPadOS device compliance
+  href: ios-ipados-compliance.md
+- name: iOS/iPadOS personal device security
+  href: ios-ipados-personal.md
+- name: iOS/iPadOS supervised device security
+  href: ios-ipados-supervised.md

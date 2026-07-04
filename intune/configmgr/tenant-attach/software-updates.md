@@ -4,6 +4,7 @@ description: Software updates for Configuration Manager devices from the admin c
 ms.date: 06/07/2022
 ms.subservice: core-infra
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Tenant attach: Software updates in the admin center
 <!--13035723-->
@@ -30,7 +31,7 @@ Each tenant attached device lists its applicable updates and the status of each 
 
 To display the **Software updates** page for a device, use the following steps:
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Software updates**.
@@ -67,3 +68,7 @@ The following **Status** values are used in the **Software updates** page:
 - **Conflict detected**: There's some sort of conflict with other software on the machine causing the update to fail.
 - **Error**: The update failed with an error.
 - **Partial compliance**: The update is installed and partially compliant. That is, part of the software update isn't compliant.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

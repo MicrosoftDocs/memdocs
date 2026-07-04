@@ -97,7 +97,7 @@ For Intune or co-managed devices configured with the Intune data collection poli
 
 1. Make sure you have the [Intune data collection](configure.md) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices.
 1. Look for devices that aren't successfully configured for data collection. You can also see this information in the profiles overview page.
-1. Devices that are successfully configured for data collection must be restarted after data collection is enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#data-flow)
+1. Devices that are successfully configured for data collection must be restarted after data collection is enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](ref-data-collection.md#data-flow)
 1. If your device is successfully configured for data collection, restarted, and after 25 hours you're still not seeing it, then the device might not be able communicate with the required endpoints. See [Proxy configuration](#proxy-server-authentication).
 
 For Configuration Manager-managed devices:
