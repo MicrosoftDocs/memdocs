@@ -29,8 +29,8 @@ Your device must be running macOS 11 or later.
 5. Select **Agree** to agree to the terms of the software license agreement.
 6. On the **Installation Type** page, select **Install**.
 7. Enter your device password or registered fingerprint. Then select **Install Software**.
-9. Wait for Company Portal to finish installing.
-11. Open the Company Portal app.
+8. Wait for Company Portal to finish installing.
+9. Open Company Portal from the Applications folder.
 
 > [!IMPORTANT]
 > Microsoft AutoUpdate might open after enrollment and update your Microsoft software. After all updates are installed, open the Company Portal app. For the best setup experience, install the latest versions of Microsoft AutoUpdate and Company Portal.
