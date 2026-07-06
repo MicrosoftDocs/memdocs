@@ -20,7 +20,7 @@ An *enrollment program token* (sometimes called an automated device enrollment t
 This article describes how to create, renew, and delete enrollment program tokens for macOS.  
 
 ## Create an enrollment program token 
-The steps in this section apply to both Apple Business Manager and Apple School Manager. Where the user interface differs, separate instructions are provided.  
+The steps in this section apply to both Apple Business and Apple School Manager. Where the user interface differs, separate instructions are provided.  
 
 ### Step 1: Download the Intune public key certificate
 
@@ -38,7 +38,7 @@ The public key certificate is needed to request a trust-relationship certificate
 
 ### Step 2: Create the connection and download the server token  
 
-Create a connection between Microsoft Intune and Apple Business Manager or Apple School Manager, and then download the server token. Apple Business Manager creates a device management service, while Apple School Manager creates an MDM server. Both processes result in a server token that you upload to Intune. 
+Create a connection between Microsoft Intune and Apple Business or Apple School Manager, and then download the server token. Apple Business creates a device management service, while Apple School Manager creates an MDM server. Both processes result in a server token that you upload to Intune. 
 
 1. In the admin center, select the link that corresponds with the Apple portal you use. Your options:  
    - **Create a token via Apple Business**
@@ -92,7 +92,7 @@ Renew your enrollment program token yearly. The Intune admin center shows the to
 - The Apple ID password changes for the user who set up the token in Apple Business or Apple School Manager. 
 - The user who set up the token leaves the organization.
 
-To renew the token, download a new token from the Apple connection associated with Intune. In Apple Business Manager, the connection is a device management service. In Apple School Manager, the connection is an MDM server. 
+To renew the token, download a new token from the Apple connection associated with Intune. In Apple Business, the connection is a device management service. In Apple School Manager, the connection is an MDM server. 
 
 1. Sign in to the Apple portal with an account that has the appropriate administrator permissions.
 1. Go to the management settings:
