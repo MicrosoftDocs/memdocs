@@ -183,6 +183,28 @@ For more information about OEMConfig, see [Use and manage Android Enterprise dev
 
 ### Device management
 
+#### Advanced Intune capabilities are being added to Microsoft 365 E3 and E5<!-- 37289179 -->
+
+Microsoft is adding several Intune Suite capabilities to Microsoft 365 E3 and Microsoft 365 E5 to enable more organizations to use advanced endpoint management and security without a separate add-on.
+
+The following capabilities are added to Microsoft Enterprise Mobility + Security E3 (EMS E3), which is included with Microsoft 365 E3:
+
+- Remote Help
+- Advanced Analytics
+- Intune Plan 2, which includes Microsoft Tunnel for mobile application management (MAM), specialty device management, and firmware over-the-air (FOTA) updates for supported devices
+
+Microsoft 365 E5 includes all Microsoft 365 E3 capabilities, plus:
+
+- Endpoint Privilege Management
+- Enterprise Application Management
+- Microsoft Cloud PKI
+
+These capabilities are gradually rolling out. Eligible tenants are automatically provisioned, and no action is required. Before the change takes effect in your tenant, Microsoft posts a notification in the Microsoft 365 admin center 30 days in advance.
+
+This update applies to commercial Microsoft 365 E3 and E5. There are no changes to the Education (EDU) or frontline worker (FLW) plans at this time. For Government plans, Intune Suite packaging is planned to align with the equivalent enterprise plans, subject to compliance and regulatory requirements. For the capabilities currently supported  in GCC High and DoD, see [Supported Intune features in GCC High and DoD](../fundamentals/government-service.md#supported-intune-features-in-gcc-high-and-dod).
+
+For more information, see [Microsoft Intune advanced capabilities](../fundamentals/advanced-capabilities.md) and the blog post [Microsoft 365 adds advanced Microsoft Intune solutions at scale](https://techcommunity.microsoft.com/blog/microsoftintuneblog/microsoft-365-adds-advanced-microsoft-intune-solutions-at-scale/4474272).
+
 #### Intune support for Trustd Mobile as a mobile threat defense partner<!-- 38433837 -->
 
 You can now use Trustd Mobile as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:
