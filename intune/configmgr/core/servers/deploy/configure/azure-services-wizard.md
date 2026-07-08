@@ -248,7 +248,7 @@ To mitigate both cases, renew the secret key.
 For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
 
 > [!NOTE]
-> You need to have at least the "Cloud Application Administrator" Microsoft Entra role assigned to be able to renew the secret key.
+> Starting in Configuration Manager 2409, Azure services use Microsoft Graph. Signing in to renew the secret key requires consent for the Microsoft Graph `Directory.Read.All` permission, which the **Cloud Application Administrator** role can't grant. You must sign in with an account that has the **Global Administrator** role (or a role that can grant admin consent for Microsoft Graph permissions, such as **Privileged Role Administrator**). For more information, see [Permissions differences between Azure AD Graph and Microsoft Graph](/graph/migrate-azure-ad-graph-permissions-differences).
 
 ### Renew key for created app
 
