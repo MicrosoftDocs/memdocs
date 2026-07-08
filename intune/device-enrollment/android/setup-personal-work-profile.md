@@ -83,7 +83,7 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
 Create an enrollment profile for personally owned work profile devices. The same profile supports both web-based and Company Portal app-based enrollment. Enabling web enrollment is just one additional step within it.
 
 > [!NOTE]
-> If passkeys are configured as the only accepted authentication method in your tenant, don't enable web enrollment until passkey support for web enrollment is announced. This limitation will be resolved in a future update.
+> If passkeys are configured as the only accepted authentication method in your tenant, don't enable web enrollment until passkey support for web enrollment is announced.
 
 1. Sign in to the [Microsoft Intune admin center].
 
@@ -192,8 +192,8 @@ Private space is a feature introduced with Android 15 that lets people create a 
 
 ### Web-based enrollment
 
-- If passkeys are configured as the only accepted authentication method in your tenant, users can't complete web enrollment. This limitation will be resolved in a future update. Don't enable web enrollment until passkey support is announced.
-- If MFA requires a phone call that the user must answer on the device they're enrolling, web enrollment might break. To work around this problem, have the user authenticate on a secondary device, or use SMS instead of a phone call. This limitation will be resolved in a future update.
+- If passkeys are configured as the only accepted authentication method in your tenant, users can't complete web enrollment. Don't enable web enrollment until passkey support is announced.
+- If MFA requires a phone call that the user must answer on the device they're enrolling, web enrollment might break. To work around this problem, have the user authenticate on a secondary device, or use SMS instead of a phone call.
 - Microsoft Teams and Outlook are the supported productivity app entry points for web enrollment. Other Microsoft 365 apps aren't currently supported as enrollment entry points.
 - Microsoft Entra Terms of Use (TOU) before work profile creation aren't supported for Android web enrollment without also requiring them across all Intune scenarios.
 - After web enrollment, both the Microsoft Intune app (for device management) and Company Portal (for app management) are installed in the work profile of the device. If Company Portal isn't visible, verify it was installed successfully.
