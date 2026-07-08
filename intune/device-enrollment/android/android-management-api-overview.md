@@ -70,19 +70,7 @@ Before you enable web-based enrollment:
 - Test in a test tenant before enabling it in production.
 - Walk through the enrollment experience and update your internal helpdesk documentation.
 
-To enable web-based enrollment:
-
-1. In the Microsoft Intune admin center, go to **Devices**.  
-
-1. Select the **Android** tab.  
-
-1. Expand **Device onboarding** and select **Enrollment**.  
-
-1. Under **Enrollment Profiles**, select **Personally owned devices with a work profile**.  
-
-1. Select **Use web enrollment for all users enrolling into Android personally owned work profile management**.  
-
-1. Select **Ok** to save your changes. This change can't be reversed.  
+For the steps to enable web-based enrollment, see [Create an enrollment profile](setup-personal-work-profile.md#create-an-enrollment-profile). Enabling web-based enrollment applies at the tenant level and can't be reversed.
 
 ## Create a device configuration profile for existing devices
 
