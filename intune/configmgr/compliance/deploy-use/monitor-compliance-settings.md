@@ -18,8 +18,6 @@ After you have deployed Configuration Manager configuration baselines to devices
 ##  View compliance results in the Configuration Manager console
  Use this procedure to view details about the compliance of deployed configuration baselines in the Configuration Manager console.
 
-### View compliance results in the Configuration Manager console
-
 1.  In the Configuration Manager console, click **Monitoring** > **Deployments**.
 
 3.  In the **Deployments** list, select the configuration baseline deployment for which you want to review compliance information.
@@ -62,6 +60,9 @@ After you have deployed Configuration Manager configuration baselines to devices
 
     > [!IMPORTANT]
     >  The evaluation results are cached on the client for 15 minutes. If you initiate a re-evaluation within the 15 minute period, the compliance results are returned from this cache rather than a new evaluation. Therefore, if you make a change on the client that might affect the compliance evaluation results, wait until the 15 minutes have elapsed before initiating a re-evaluation.
+
+    > [!TIP]
+    > If a scheduled evaluation didn't run when you expected, see [How the Configuration Manager client evaluates a deployed baseline](deploy-configuration-baselines.md#how-the-configuration-manager-client-evaluates-a-deployed-baseline) for the client-side launch conditions and how to check `Scheduler.log`.
 
     -   **Compliant**: The client computer is in compliance with the evaluated configuration baseline.
 
