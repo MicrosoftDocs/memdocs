@@ -48,7 +48,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->  
 
-## Week of July 13, 2026 
+## Week of July 13, 2026
 
 ### App management
 
