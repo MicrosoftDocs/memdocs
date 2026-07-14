@@ -2231,6 +2231,11 @@ Determine which PowerShell scripts (if any) you allow to run on the computer. Ch
 > [!IMPORTANT]
 > PowerShell 1.0 doesn't support Undefined and Bypass execution policies.
 
+> [!NOTE]
+> When you use the **AllSigned** execution policy, don't use the **Enter a PowerShell script** option to embed a signed script directly in the task sequence step. The script content isn't always preserved byte-for-byte through the task sequence XML, so the digital signature can become invalid on the client. When that happens, the client rejects the script and `smsts.log` records a "hash does not match" error.
+>
+> To use a signed script with **AllSigned**, place the signed `.ps1` file in a Configuration Manager package and reference it with the **Package** and **Script name** options above. This approach preserves the original file bytes and signature.
+
 #### Output to task sequence variable
 
 <!-- 3556028 -->
