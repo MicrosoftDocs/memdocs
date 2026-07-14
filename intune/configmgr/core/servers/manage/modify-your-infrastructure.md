@@ -1,7 +1,7 @@
 ---
 title: Modify infrastructure
 description: Make changes or take actions that affect your Configuration Manager infrastructure.
-ms.date: 04/01/2020
+ms.date: 07/14/2026
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
@@ -164,6 +164,9 @@ Run Configuration Manager setup on the site server, and select the option **Perf
 
 - SQL Server Service Broker port in use by Configuration Manager.
 
+> [!IMPORTANT]
+> The **Modify SQL Server configuration** maintenance path doesn't run the SQL Server collation prerequisite check that a new install or upgrade performs. Before you continue, verify that the target SQL Server instance *and* the site database both use the required collation, **SQL_Latin1_General_CP1_CI_AS**. Moving or pointing the site to an instance or database that uses a different collation can corrupt data and cause site failures that might not appear immediately. The only exceptions are the two China GB18030 collations. For more information, see [SQL Server instance and database collations](../../plan-design/configs/support-for-sql-server-versions.md#sql-instance-and-database-collations) and [International support](../../plan-design/hierarchy/international-support.md). To verify the configuration, run the [verification script](#verify-sql-server-configuration-before-you-move-the-site-database).
+
 ### Move the site database
 
 If you move the site database, also review the following configurations:
@@ -172,10 +175,86 @@ If you move the site database, also review the following configurations:
 
 - When you move the database to a new instance on SQL Server, or to a new SQL Server computer, enable common language runtime (CLR) integration. Use **SQL Server Management Studio** to connect to the instance of SQL Server that hosts the site database. Then run the following stored procedure as a query: `sp_configure 'clr enabled',1; reconfigure`
 
+- Confirm the target SQL Server instance and site database use the required collation before you move. This maintenance path doesn't enforce the collation prerequisite check, so verify it yourself by running the [verification script](#verify-sql-server-configuration-before-you-move-the-site-database). For details, see the collation requirement in the [Modify the database configuration](#modify-the-database-configuration) section.
+
 - Make sure the new SQL Server has access to the backup location. When you use a UNC for storing your site database backup, after moving the database to a new server, make sure the computer account of the new SQL Server has **write** permissions to the UNC location. This configuration includes when you move to a SQL Server Always On availability group or a failover cluster instance.
 
 > [!IMPORTANT]
 > Before you move a database that has one or more database replicas for management points, first remove the database replicas. After you complete the database move, you can reconfigure database replicas. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
+
+#### Verify SQL Server configuration before you move the site database
+
+Before you run **Modify SQL Server configuration**, use **SQL Server Management Studio** to connect to the target site database, and run the following verification script against the site database (`CM_<sitecode>`), not the `master` database. Resolve every `ERROR:` line before you continue. Both the SQL Server instance and the site database must use the `SQL_Latin1_General_CP1_CI_AS` collation. This script also confirms the other configurations that Configuration Manager requires for the site database.
+
+```SQL
+SET NOCOUNT ON
+
+DECLARE @dbname NVARCHAR(128)
+
+SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
+
+IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
+    RAISERROR(N'ERROR: Script is targeting a system database.  It should be targeting the site database instead.', 0, 1)
+    GOTO Branch_Exit;
+END ELSE
+    PRINT N'INFO: Targeted database is ' + @dbname + N'.'
+
+PRINT N'INFO: Running verifications....'
+
+IF CONVERT(NVARCHAR(128), SERVERPROPERTY('Collation')) <> N'SQL_Latin1_General_CP1_CI_AS'
+    PRINT N'ERROR: SQL Server instance collation is ' + CONVERT(NVARCHAR(128), SERVERPROPERTY('Collation')) + N' (must be SQL_Latin1_General_CP1_CI_AS)!'
+ELSE
+    PRINT N'PASS: SQL Server instance collation is SQL_Latin1_General_CP1_CI_AS.'
+
+IF CONVERT(NVARCHAR(128), DATABASEPROPERTYEX(@dbname, 'Collation')) <> N'SQL_Latin1_General_CP1_CI_AS'
+    PRINT N'ERROR: Database collation is ' + CONVERT(NVARCHAR(128), DATABASEPROPERTYEX(@dbname, 'Collation')) + N' (must be SQL_Latin1_General_CP1_CI_AS)!'
+ELSE
+    PRINT N'PASS: Database collation is SQL_Latin1_General_CP1_CI_AS.'
+
+IF NOT EXISTS (SELECT * FROM sys.configurations c WHERE c.name = 'clr enabled' AND c.value_in_use = 1)
+    PRINT N'ERROR: CLR is not enabled!'
+ELSE
+    PRINT N'PASS: CLR is enabled.'
+
+DECLARE @repltable TABLE (
+    name nvarchar(max),
+    minimum int,
+    maximum int,
+    config_value int,
+    run_value int )
+
+INSERT INTO @repltable
+EXEC sp_configure 'max text repl size (B)'
+
+IF NOT EXISTS(SELECT * from @repltable where config_value = 2147483647 and run_value = 2147483647 )
+    PRINT N'ERROR: Max text repl size is not correct!'
+ELSE
+    PRINT N'PASS: Max text repl size is correct.'
+
+IF NOT EXISTS (SELECT db.owner_sid FROM sys.databases db WHERE db.database_id = DB_ID() AND db.owner_sid = 0x01)
+    PRINT N'ERROR: Database owner is not sa account!'
+ELSE
+    PRINT N'PASS: Database owner is sa account.'
+
+IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_trustworthy_on = 1 )
+    PRINT N'ERROR: Trustworthy bit is not on!'
+ELSE
+    PRINT N'PASS: Trustworthy bit is on.'
+
+IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_broker_enabled = 1 )
+    PRINT N'ERROR: Service broker is not enabled!'
+ELSE
+    PRINT N'PASS: Service broker is enabled.'
+
+IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_honor_broker_priority_on = 1 )
+    PRINT N'ERROR: Service broker priority is not set!'
+ELSE
+    PRINT N'PASS: Service broker priority is set.'
+
+PRINT N'Done!'
+
+Branch_Exit:
+```
 
 ## <a name="bkmk_SPN"></a> Manage the SPN for the site database server
 
