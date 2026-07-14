@@ -214,8 +214,8 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
     For the steps to configure the OEM app schema, go to the OEM's documentation:
 
-    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.9.x.x and Up](https://supportcommunity.zebra.com/s/article/000027795) (opens Zebra's web site)
-    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://supportcommunity.zebra.com/s/article/000021297) (opens Zebra's web site)
+    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.9.x.x and Up](https://support.zebra.com/article/000027795) (opens Zebra's web site)
+    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://support.zebra.com/article/000021297) (opens Zebra's web site)
     - [Zebra Managed Configurations docs](https://techdocs.zebra.com/oemconfig/15-0/mc2/#pkgConfig.package.packagePermissions.packagePermission) (opens Zebra's web site)
 
     When you create the Intune policy, you enter the following info:
@@ -263,8 +263,8 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
 
     For the steps to configure the OEM app schema, go to the OEM's documentation:
 
-    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://supportcommunity.zebra.com/s/article/000021297)
-    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.5.x.x](https://supportcommunity.zebra.com/s/article/000026099)
+    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://support.zebra.com/article/000021297)
+    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.5.x.x](https://support.zebra.com/article/000027795)
 
     When you create the Intune policy, you enter the following info:
 
