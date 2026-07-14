@@ -1,0 +1,109 @@
+items:
+  - name: Microsoft Intune documentation
+    href: index.yml
+
+  - name: Get started
+    href: ./fundamentals/toc.yml
+    topicHref: ./fundamentals/index.yml
+
+  - name: What's new
+    href: ./whats-new/toc.yml
+
+  - name: Enroll devices
+    href: ./device-enrollment/toc.yml
+    topicHref: ./device-enrollment/index.yml
+
+  - name: Configure devices
+    href: ./device-configuration/toc.yml
+    topicHref: ./device-configuration/index.yml
+
+  - name: Manage apps
+    href: ./app-management/toc.yml
+    topicHref: ./app-management/index.yml
+
+  - name: Secure devices and data
+    href: ./device-security/toc.yml
+    topicHref: ./device-security/index.yml
+
+  - name: Keep devices updated
+    href: ./device-updates/toc.yml
+    topicHref: ./device-updates/index.yml
+
+  - name: Manage devices
+    href: ./device-management/toc.yml
+    topicHref: ./device-management/index.yml
+
+  - name: Copilot and agents
+    href: ./copilot/toc.yml
+    topicHref: ./copilot/index.md
+
+  - name: Govern and administer
+    topicHref: ./govern-administer.yml
+    displayName: RBAC, roles, scope tags, audit, privacy, GDPR, HIPAA, SOC, ISO
+    items:
+      - name: Role-based access control
+        href: ./fundamentals/role-based-access-control/toc.yml
+
+      - name: Tenant administration
+        items:
+          - name: Tenant status and health
+            href: ./governance/tenant-status.md
+          - name: Audit logs for Intune activities
+            href: ./governance/monitor-audit-logs.md
+          - name: Review logs with Azure Monitor
+            href: ./governance/integrate-azure-monitor.md
+          - name: Device cleanup rules
+            href: ./governance/configure-cleanup-rules.md
+
+      - name: Privacy and personal data
+        href: ./privacy/toc.yml
+
+  - name: Monitor and troubleshoot
+    topicHref: ./monitor-troubleshoot.yml
+    items:
+      - name: Endpoint analytics
+        href: ./endpoint-analytics/toc.yml
+
+      - name: Advanced Analytics
+        href: ./advanced-analytics/toc.yml
+
+      - name: Remote Help
+        href: ./remote-help/toc.yml
+
+      - name: Get help
+        items:
+          - name: Get support in the Intune admin center
+            href: ./fundamentals/it-pro-support/get-support-admin-center.md
+          - name: Help Desk operator role
+            href: ./fundamentals/it-pro-support/help-desk-operators.md
+          - name: Troubleshoot issues
+            href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
+          - name: User help documentation
+            href: /intune/user-help
+            displayName: company portal, device user
+
+  - name: Develop and automate
+    href: ./developer/toc.yml
+    topicHref: ./developer/index.yml
+
+  - name: Industry and scenario guides
+    items:
+      - name: Education
+        href: ./solutions/education/toc.yml
+
+      - name: Government
+        items:
+          - name: Intune US Government service description
+            href: ./fundamentals/government-service.md
+          - name: Intune US government endpoints
+            href: /intune/fundamentals/endpoints-us-government
+
+      - name: China
+        items:
+          - name: Intune operated by 21Vianet in China
+            href: ./fundamentals/china.md
+          - name: China endpoints
+            href: /intune/fundamentals/endpoints-china
+
+      - name: Scenario-based guidance
+        href: ./solutions/toc.yml

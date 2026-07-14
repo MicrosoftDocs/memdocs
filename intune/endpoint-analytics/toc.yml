@@ -1,0 +1,33 @@
+items:
+- name: Overview
+  href: index.md
+  displayName: endpoint analytics
+- name: Configure the service
+  href: configure.md
+  displayName: endpoint analytics, setup, prerequisites, enable, onboard
+- name: Scores, baselines, and insights
+  href: scores.md
+  displayName: endpoint analytics, scores, baselines, benchmarks, insights
+- name: Reports
+  items:
+  - name: Startup performance
+    href: startup-performance.md
+    displayName: endpoint analytics report, boot time, login, sign-in, slow startup
+  - name: Application reliability
+    href: app-reliability.md
+    displayName: endpoint analytics report, app crashes, hangs, freezes
+  - name: Work from anywhere
+    href: work-from-anywhere.md
+    displayName: endpoint analytics report, remote work, cloud identity, cloud management
+- name: Adoption Score integration
+  href: adoption-score.md
+  displayName: endpoint analytics, Microsoft Adoption Score, productivity score
+- name: Data collection
+  href: ref-data-collection.md
+  displayName: endpoint analytics, telemetry, data, privacy
+- name: Troubleshooting
+  href: troubleshoot.md
+  displayName: endpoint analytics, troubleshoot, errors, issues
+- name: Support options
+  href: support.md
+  displayName: endpoint analytics, support, contact, help

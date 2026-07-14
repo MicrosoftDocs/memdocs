@@ -1,0 +1,256 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "sccm/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/media/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "sccm/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/intune/breadcrumb/toc.json",
+      "uhfHeaderId": "MSDocsHeader-Intune",
+      "feedback_system": "Standard",
+      "brand": "Microsoft Intune",
+      "searchScope": ["Intune"],
+      "ms.service": "microsoft-intune",
+      "manager": "laurawi",
+      "titleSuffix": "Microsoft Intune",
+      "contributors_to_exclude": [
+        "PRMerger9",
+        "PRMerger17",
+        "PRMerger5",
+        "PRMerger4",
+        "PRMerger3",
+        "PRMerger-2",
+        "openpublishingbuild",
+        "PRmerger",
+        "GitHubber17",
+        "v-shils",
+        "Jak-MS",
+        "tfosmark",
+        "rjagiewich",
+        "rmca14",
+        "garycentric",
+        "dstrome",
+        "claydetels19",
+        "Stacyrch140",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
+      ]
+    },
+    "fileMetadata": {
+      "feedback_product_url": {
+        "configmgr/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
+        "configmgr/**/*.yml": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
+        "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
+      },
+      "searchScope": {
+        "configmgr/**/*": ["ConfigMgr"],
+        "configmgr/core/**/*": ["ConfigMgr"],
+        "endpoint-analytics/**/*": ["Intune","advanced-analytics","endpoint-analytics"],
+        "device-updates/**/*": ["Intune","device-updates"],
+        "user-help/**/*": ["User help"]
+      },
+      "featureFlags": {
+        "*.md" : [
+          "show_binary_rating"
+        ]
+      },
+      "feedback_system": {
+        "configmgr/core/misc/**/*": "None"
+      },
+      "author": {
+        "device-management/tools/**/*.md": "nicholasswhite",
+        "advanced-analytics/**/*": "paolomatarazzo",
+        "app-management/**/*": "nicholasswhite",
+        "cloud-pki/**/*": "paolomatarazzo",
+        "configmgr/**/*": "sccmavenger",
+        "copilot/**/*": "paolomatarazzo",
+        "copilot/agents/**/*": "lenewsad",
+        "developer/**/*": "nicholasswhite",
+        "device-configuration/**/*": "paolomatarazzo",
+        "device-configuration/endpoint-security/**/*": "lenewsad",
+        "device-enrollment/**/*": "lenewsad",
+        "device-management/**/*": "paolomatarazzo",
+        "device-management/reports/**/*": "nwhite",
+        "device-security/certificates/**/*": "paolomatarazzo",
+        "device-security/**/*": "lenewsad",
+        "device-updates/**/*": "paolomatarazzo",
+        "endpoint-analytics/**/*": "paolomatarazzo",
+        "epm/**/*": "lenewsad",
+        "fundamentals/**/*": "paolomatarazzo",
+        "fundamentals/role-based-access-control/**/*": "lenewsad",
+        "governance/**/*": "paolomatarazzo",
+        "privacy/**/*": "paolomatarazzo",
+        "remote-help/**/*": "lenewsad",
+        "solutions/**/*": "paolomatarazzo",
+        "solutions/edge-data-security/**/*": "nicholasswhite",
+        "solutions/education/tutorial-school-deployment/**/*": "scottbreenmsft",
+        "user-help/**/*": "lenewsad",
+        "whats-new/**/*": "lenewsad"
+      },
+      "ms.author": {
+        "device-management/tools/**/*.md": "nwhite",
+        "advanced-analytics/**/*": "paoloma",
+        "app-management/**/*": "nwhite",
+        "cloud-pki/**/*": "paoloma",
+        "configmgr/**/*": "dannygu",
+        "copilot/**/*": "paoloma",
+        "copilot/agents/**/*": "lanewsad",
+        "developer/**/*": "nwhite",
+        "device-configuration/**/*": "paoloma",
+        "device-configuration/endpoint-security/**/*": "lanewsad",
+        "device-enrollment/**/*": "lanewsad",
+        "device-management/**/*": "paoloma",
+        "device-management/reports/**/*": "nwhite",
+        "device-security/certificates/**/*": "paoloma",
+        "device-security/**/*": "lanewsad",
+        "device-updates/**/*": "paoloma",
+        "endpoint-analytics/**/*": "paoloma",
+        "epm/**/*": "lanewsad",
+        "fundamentals/**/*": "paoloma",
+        "fundamentals/role-based-access-control/**/*": "lanewsad",
+        "governance/**/*": "paoloma",
+        "privacy/**/*": "paoloma",
+        "remote-help/**/*": "lanewsad",
+        "solutions/**/*": "paoloma",
+        "solutions/edge-data-security/**/*": "nwhite",
+        "solutions/education/tutorial-school-deployment/**/*": "scbree",
+        "user-help/**/*": "lanewsad",
+        "whats-new/**/*": "lanewsad"
+      },
+      "ms.collection": {
+        "device-configuration/endpoint-security/**/*.md": ["M365-identity-device-management","sub-secure-endpoints"],
+        "device-security/compliance/**/*.md": ["M365-identity-device-management","compliance","sub-device-compliance"],
+        "device-security/conditional-access-integration/**/*.md": ["M365-identity-device-management","conditional-access","sub-device-compliance"],
+        "device-security/microsoft-tunnel/**/*.md": ["M365-identity-device-management","sub-infrastructure"],
+        "solutions/edge-data-security/**/*.md": ["FocusArea_Apps_AppManagement"],
+        "app-management/**/*.md": ["M365-identity-device-management"],
+        "developer/app-sdk/**/*.md": ["M365-identity-device-management"],
+        "device-configuration/**/*.md": ["M365-identity-device-management"],
+        "device-management/**/*.md": ["M365-identity-device-management"],
+        "device-security/laps/**/*.md": ["M365-identity-device-management"],
+        "device-security/security-configurations/**/*.md": ["M365-identity-device-management"],
+        "fundamentals/**/*.md": ["M365-identity-device-management"],
+        "governance/**/*.md": ["M365-identity-device-management"],
+        "remote-help/**/*.md": ["M365-identity-device-management"],
+        "solutions/education/*.md": ["M365-identity-device-management"],
+        "solutions/frontline-worker/**/*.md": ["M365-identity-device-management"],
+        "developer/data-warehouse/**/*": ["M365-identity-device-management"],
+        "device-configuration/certificates/**/*": ["M365-identity-device-management","certificates","sub-certificates"],
+        "device-configuration/templates/**/*": ["M365-identity-device-management"],
+        "device-enrollment/**/*": ["M365-identity-device-management"],
+        "device-security/microsoft-defender/**/*": ["M365-identity-device-management","sub-secure-endpoints"],
+        "device-security/mobile-threat-defense/**/*": ["M365-identity-device-management","sub-mtd-apps"],
+        "device-security/security-baselines/**/*": ["M365-identity-device-management","sub-secure-endpoints"],
+        "epm/**/*": ["M365-identity-device-management"],
+        "fundamentals/certificates/**/*": ["M365-identity-device-management","certificates","sub-certificates"],
+        "privacy/data-sharing/**/*": ["M365-identity-device-management","privacy","sub-data-privacy"],
+        "intune-service/device-updates/**/*": ["M365-identity-device-management","sub-updates"],
+        "device-management/actions/**/*": ["M365-identity-device-management"],
+        "cloud-pki/**/*": ["M365-identity-device-management","certificates"]
+      },
+      "ms.reviewer": {
+        "app-management/deployment/**/*.md": "bryanke",
+        "device-enrollment/apple/**/*.md": "annovich",
+        "device-security/conditional-access-integration/**/*.md": "ilwu",
+        "solutions/cloud-native-endpoints/**/*.md": "ahamil, jasandys, wicale",
+        "developer/app-sdk/**/*": "jamiesil",
+        "developer/data-warehouse/**/*": "jamiesil",
+        "device-enrollment/windows/**/*": "maholdaa",
+        "device-security/microsoft-defender/**/*": "laarrizz",
+        "device-security/microsoft-tunnel/**/*": "ochukwunyere",
+        "device-security/mobile-threat-defense/**/*": "ilwu",
+        "device-security/security-baselines/**/*": "aanavath",
+        "epm/**/*": "mikedano",
+        "solutions/edge-data-security/**/*": "samarti",
+        "cloud-pki/**/*": "wicale",
+        "configmgr/**/*": ["umaikhan", "brianhun", "payur", "hugowu", "qiani"],
+        "device-configuration/certificates/**/*": "wicale",
+        "device-management/actions/**/*": "mattcall",
+        "device-security/certificates/**/*": "wicale",
+        "fundamentals/certificates/**/*": "wicale"
+      },
+      "ms.update-cycle": {
+        "copilot/*.md": "180-days"
+      },
+      "ms.service": {
+        "configmgr/**/*": "configuration-manager"
+      },
+      "ms.subservice": {
+        "advanced-analytics/**/*": "suite",
+        "app-management/**/*": "apps",
+        "cloud-pki/**/*": "suite",
+        "developer/**/*": "developer",
+        "device-configuration/**/*": "configuration",
+        "device-enrollment/**/*": "enrollment",
+        "device-management/actions/**/*": "remote-actions",
+        "device-management/tools/**/*": "apps",
+        "device-security/**/*": "protect",
+        "device-updates/**/*": "protect",
+        "endpoint-analytics/**/*": "endpoint-analytics",
+        "epm/**/*": "suite",
+        "fundamentals/**/*": "fundamentals",
+        "remote-help/**/*": "suite",
+        "solutions/edge-data-security/**/*": "apps",
+        "solutions/education/**/*": "education",
+        "user-help/**/*": "end-user"
+      },
+      "ms.topic": {
+        "user-help/**/*": "end-user-help"
+      },
+      "titleSuffix": {
+        "configmgr/**/*": "Configuration Manager"
+      },
+      "zone_pivot_group_filename": {
+        "device-management/actions/**/*.md": "device-management/actions/zone-pivot-groups.json"
+      }
+    },
+    "template": [],
+    "dest": "memdocs",
+    "markdownEngineName": "markdig",
+    "rules": {
+      "docs-link-absolute": {
+        "exclude": [
+          "configmgr/core/misc/in-console-documentation.md"
+          ]
+      },
+      "sensitive-language-bl":{
+        "exclude": [
+          "device-configuration/templates/configure-per-app-vpn-android.md"
+          ]
+      },
+      "sensitive-language-wl":{
+        "exclude": [
+          "device-configuration/templates/configure-per-app-vpn-android.md"
+          ]
+      }
+    }
+  }
+}

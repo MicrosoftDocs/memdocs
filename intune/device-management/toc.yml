@@ -1,0 +1,58 @@
+items:
+- name: Device actions
+  href: ./actions/toc.yml
+
+- name: Device inventory and organization
+  items:
+  - name: View device details
+    href: inventory-and-status/device-details.md
+  - name: Find primary user
+    href: inventory-and-status/find-primary-user.md
+  - name: View ChromeOS device information
+    href: inventory-and-status/chrome-enterprise-details.md
+  - name: Categorize devices into groups
+    href: create-device-categories.md
+  - name: Manage devices with endpoint security
+    href: manage-endpoint-security-devices.md
+  - name: Manage specialty devices
+    href: specialty-devices.md
+  - name: Admin tasks
+    href: admin-tasks.md
+
+- name: Scripts and remediations
+  items:
+  - name: Intune Management Extension
+    href: tools/management-extension-windows.md
+    displayName: IME, PowerShell, Win32
+  - name: PowerShell scripts for Windows
+    href: tools/run-powershell-scripts-windows.md
+  - name: Shell scripts for macOS
+    href: tools/run-shell-scripts-macos.md
+  - name: Deploy remediations
+    href: tools/deploy-remediations.md
+    displayName: proactive remediations, scripts
+  - name: Remediation scripts reference
+    href: tools/ref-remediation-scripts.md
+
+- name: Reports
+  items:
+  - name: Reports overview
+    href: reports/overview.md
+  - name: Monitor device encryption
+    href: monitor-encryption.md
+    displayName: BitLocker, FileVault, encryption monitoring
+  - name: Export reports using Graph APIs
+    href: reports/export-graph-apis.md
+  - name: Graph API report properties
+    href: reports/ref-graph-available-reports.md
+
+- name: Integrations
+  items:
+  - name: Surface Management Portal
+    href: tools/surface-management-portal.md
+  - name: ServiceNow integration
+    href: tools/setup-servicenow.md
+  - name: TeamViewer integration
+    href: tools/setup-teamviewer.md
+  - name: TeamViewer connector (legacy)
+    href: tools/teamviewer-legacy.md

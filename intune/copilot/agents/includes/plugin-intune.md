@@ -1,0 +1,6 @@
+---
+ms-topic: include
+ms.date: 10/16/2025
+---
+
+:::image type="icon" source="../../../media/icons/16/intune.svg" border="false"::: [Microsoft Intune](../../security-copilot.md)

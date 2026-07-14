@@ -1,0 +1,25 @@
+### YamlMime:Landing
+
+title: Administration service documentation
+summary: Developer documentation for the Configuration Manager REST API
+ 
+metadata:
+  title: Administration service documentation
+  description: Upload your Configuration Manager devices to the cloud service and take actions on them.
+  ms.subservice: sdk
+  ms.topic: landing-page
+  ms.date: 09/23/2021
+
+landingContent:
+  - title: About administration service
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is the administration service?
+            url: overview.md
+      - linkListType: how-to-guide
+        links:
+          - text: How to set up
+            url: set-up.md
+          - text: How to use
+            url: usage.md

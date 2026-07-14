@@ -1,0 +1,169 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/intune/configmgr/core/misc/mms2019docathon.md",
+      "redirect_url": "/intune/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/misc/doc-test.md",
+      "redirect_url": "/intune/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/deploy-use/update-and-retire-applications.md",
+      "redirect_url": "/intune/configmgr/apps/deploy-use/management-tasks-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/cmg/certificates-for-cloud-management-gateway.md",
+      "redirect_url": "/intune/configmgr/core/clients/manage/cmg/server-auth-cert",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/monitor-windows-analytics.md",
+      "redirect_url": "/intune/configmgr/core/clients/manage/upgrade-readiness#bkmk_remove",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/deploy/linux-and-unix-clients-technical-reference.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/get-started/creating-linux-and-unix-server-applications.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/monitor-clients-for-linux-and-unix-servers.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/manage-clients-for-linux-and-unix-servers.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/hierarchy/state-messages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md",
+      "redirect_url": "/intune/configmgr/core/servers/deploy/configure/boundary-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/hierarchy/content-source-location-scenarios.md",
+      "redirect_url": "/intune/configmgr/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/understand/sqlviews/reports-supplied-with-configuration-manager.md",
+      "redirect_url": "/intune/configmgr/core/servers/manage/list-of-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/use-alerts-and-the-status-system.md",
+      "redirect_url": "/intune/configmgr/core/servers/manage/use-status-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/understand/microsoft-endpoint-manager-faq.yml",
+      "redirect_url": "/intune/configmgr/core/understand/configuration-manager-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/understand/what-happened-to-sccm.md",
+      "redirect_url": "/intune/configmgr/core/understand/introduction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md",
+      "redirect_url": "/intune/configmgr/develop/core/changes/whats-new-sdk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/understand/configuration-manager-sdk-samples.md",
+      "redirect_url": "/intune/configmgr/develop/core/changes/whats-new-sdk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/understand/securing-configuration-manager-applications.md",
+      "redirect_url": "/intune/configmgr/develop/core/servers/configure/role-based-administration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/reference/core/servers/configure/ccm_download_provider-wmi-class.md",
+      "redirect_url": "/intune/configmgr/develop/reference/core/servers/configure/ccm_downloadprovider-wmi-class",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/hotfix/2103/KB9210721.md",
+      "redirect_url": "/intune/configmgr/hotfix/2103/9210721",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/hotfix/2103/KB9603111.md",
+      "redirect_url": "/intune/configmgr/hotfix/2103/9603111",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/manage/collections/automatically-categorize-devices-into-collections.md",
+      "redirect_url": "/intune/configmgr/mdm/understand/what-happened-to-hybrid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection.md",
+      "redirect_url": "/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/protect/plan-design/planning-for-endpoint-protection.md",
+      "redirect_url": "/intune/configmgr/protect/deploy-use/endpoint-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/security/security-and-privacy.md",
+      "redirect_url": "/intune/configmgr/security/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/security/security-best-practices-and-privacy-information.md",
+      "redirect_url": "/intune/configmgr/security/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/sum/deploy-use/uup-preview.md",
+      "redirect_url": "/intune/configmgr/sum/",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/tenant-attach/technical-reference.md",
+      "redirect_url": "/intune/configmgr/tenant-attach/troubleshoot",
+      "redirect_document_id": false
+    }
+  ]
+}

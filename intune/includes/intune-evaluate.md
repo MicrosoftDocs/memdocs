@@ -1,0 +1,6 @@
+---
+ms.topic: include
+ms.date: 01/15/2026
+---
+
+This article is [part of an Evaluate and Try series](../fundamentals/try-overview.md) that helps you evaluate Microsoft Intune's capabilities.

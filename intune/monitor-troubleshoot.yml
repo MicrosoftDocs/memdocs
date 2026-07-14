@@ -1,0 +1,90 @@
+### YamlMime:Landing
+
+title: Monitor and troubleshoot
+summary: Monitor device health and compliance, query device data with Advanced Analytics, and get support when issues arise.
+
+metadata:
+  title: Monitor and troubleshoot
+  description: Monitor, analyze, and troubleshoot Microsoft Intune deployments with Endpoint Analytics, Advanced Analytics, Remote Help, and reports.
+  ms.topic: landing-page
+  ms.date: 4/27/2026
+  author: paolomatarazzo
+  ms.author: paoloma
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Reports and monitoring
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Microsoft Intune reports
+        url: device-management/reports/overview.md
+      - text: Export reports using Graph APIs
+        url: device-management/reports/export-graph-apis.md
+
+  - title: Remote Help
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Plan for Remote Help
+        url: remote-help/plan.md
+    - linkListType: deploy
+      links:
+      - text: Deploy Remote Help
+        url: remote-help/deploy.md
+    - linkListType: how-to-guide
+      links:
+      - text: Use Remote Help to assist users
+        url: remote-help/index.md
+      - text: Start a Remote Help session on Windows
+        url: remote-help/start-session.md
+      - text: Troubleshoot Remote Help
+        url: remote-help/troubleshoot.md
+
+  - title: Advanced Analytics
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Advanced Analytics overview
+        url: advanced-analytics/index.md
+    - linkListType: how-to-guide
+      links:
+      - text: Query a single device
+        url: advanced-analytics/device-query.md
+      - text: Query multiple devices
+        url: advanced-analytics/device-query-multiple-devices.md
+      - text: Resource performance report
+        url: advanced-analytics/resource-performance.md
+      - text: Battery health report
+        url: advanced-analytics/battery-health.md
+
+  - title: Endpoint Analytics
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Endpoint Analytics overview
+        url: endpoint-analytics/index.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure Endpoint Analytics
+        url: endpoint-analytics/configure.md
+      - text: Startup performance report
+        url: endpoint-analytics/startup-performance.md
+      - text: Scores, baselines, and insights
+        url: endpoint-analytics/scores.md
+      - text: Application reliability report
+        url: endpoint-analytics/app-reliability.md
+
+  - title: Get support
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Get support in the Intune admin center
+        url: fundamentals/it-pro-support/get-support-admin-center.md
+      - text: Help desk troubleshooting dashboard
+        url: fundamentals/it-pro-support/help-desk-operators.md
+      - text: Troubleshoot Endpoint Analytics
+        url: endpoint-analytics/troubleshoot.md

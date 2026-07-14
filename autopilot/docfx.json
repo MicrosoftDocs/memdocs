@@ -1,0 +1,86 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md",
+          "SECURITY.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/media/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "author": "lenewsad",
+      "ms.author": "lanewsad",
+      "ms.reviewer": "madakeva",
+      "manager": "laurawi",
+      "ms.service": "windows-client",
+      "ms.subservice": "autopilot",
+      "ms.suite": "ems",
+      "breadcrumb_path": "/autopilot/breadcrumb/toc.json",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
+      "feedback_system": "Standard",
+      "permissioned-type": "public",
+      "searchScope": ["Autopilot"],
+      "uhfHeaderId": "MSDocsHeader-Windows",
+      "contributors_to_exclude": [
+        "PRMerger9",
+        "PRMerger17",
+        "PRMerger5",
+        "PRMerger4",
+        "PRMerger3",
+        "PRMerger-2",
+        "openpublishingbuild",
+        "PRmerger",
+        "GitHubber17",
+        "v-shils",
+        "Jak-MS",
+        "tfosmark",
+        "rjagiewich",
+        "rmca14",
+        "garycentric",
+        "dstrome",
+        "claydetels19",
+        "padmagit77",
+        "aditisrivastava07",
+        "Ruchika-mittal01"
+      ]
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "autopilot"
+  }
+}
