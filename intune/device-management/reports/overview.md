@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Reports
 description: Intune provides specific report types with focused views that contain consistent and timely data.
-ms.date: 05/18/2026
+ms.date: 07/10/2026
 author: nicholasswhite
 ms.topic: how-to
 ai-usage: ai-assisted
@@ -786,6 +786,9 @@ You can view the **Device action** report using the following steps:
 
 > [!NOTE]
 > Device actions report contains data for past 180 days.
+
+> [!NOTE]
+> For **MDM devices**, deleting a device immediately hides it from the admin center and initiates a **Retire**. A status of **Completed** on a delete action means the process is complete on the server side; it doesn't confirm that the client device finished the **Retire**.
 
 ## Next steps
 

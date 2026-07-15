@@ -1,7 +1,7 @@
 ---
 title: "Device Action: Delete"
 description: Learn how to delete devices with Microsoft Intune.
-ms.date: 10/27/2025
+ms.date: 07/10/2026
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
@@ -99,6 +99,13 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ::: zone pivot="android"
 ::: zone-end
+
+## Delete action status
+
+After you issue a **Delete** action, the device is removed from Intune management and is immediately hidden from the admin center. In the [Device actions report](../reports/overview.md#device-actions-report), the Delete action is reported with an **Action Status** of **Completed**.
+
+> [!NOTE]
+> For **MDM devices**, deleting a device immediately hides it from the admin center and initiates a **Retire**. A status of **Completed** on a delete action means the process is complete on the server side; it doesn't confirm that the client device finished the **Retire**.
 
 ## Reference links
 
