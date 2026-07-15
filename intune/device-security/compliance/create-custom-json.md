@@ -24,6 +24,7 @@ Include the JSON file in a compliance policy when you configure a policy to asse
 > - Linux:
 >   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
 >   - RedHat Enterprise Linux 9 or 10
+>   - macOS
 > - Windows
 
 :::column-end:::
