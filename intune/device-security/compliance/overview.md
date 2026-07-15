@@ -92,8 +92,11 @@ The following topics link to dedicated articles for different aspects of device 
 - [**Custom compliance settings**](./custom-settings.md) - By using custom compliance settings, you can expand on Intune's built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
-  - Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
-  - Windows
+  - Linux 
+    - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+    - RedHat Enterprise Linux 9 or 10  
+  - macOS
+  - Windows  
 
 ## Monitor compliance status
 
