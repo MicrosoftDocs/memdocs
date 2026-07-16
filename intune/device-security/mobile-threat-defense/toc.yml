@@ -85,6 +85,11 @@ items:
         items:
           - name: Trend Micro Mobile Security as a Service and Intune integration
             href: ./setup-trend-micro.md
+      - name: Set up Trustd Mobile
+        href: ./trustd-mobile.md
+        items:
+          - name: Trustd Mobile and Intune integration
+            href: ./setup-trustd-mobile.md
       - name: Set up Zimperium
         href: ./zimperium.md
         items:

@@ -4,8 +4,6 @@ description: Configure your Windows 10/11 client devices as single-app and multi
 ms.date: 02/20/2025
 ms.topic: reference
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows device settings to run as a kiosk in Intune

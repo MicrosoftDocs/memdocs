@@ -1,13 +1,9 @@
 ---
 title: Configurations policy mapping from Basic Mobility and Security to Intune
 description: A detailed list of the policy map between Basic Mobility and Security configurations and Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 12/03/2025
 ms.topic: article
 ms.reviewer: dagerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configurations policy mapping from Basic Mobility and Security to Intune
@@ -24,7 +20,7 @@ To see these settings in the Microsoft Purview compliance portal, sign in to the
 
 ## Before you begin
 
-- To configure the settings in an Intune policy, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control/overview.md) lists and describes the built-in roles that can create policies.
+- To configure the settings in an Intune policy, sign in to the [Microsoft Intune admin center]. [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control/overview.md) lists and describes the built-in roles that can create policies.
 
 ## Require encrypted backup
 
@@ -147,3 +143,7 @@ Two Intune configuration profiles:
 ## Related article
 
 - [Move from Basic Mobility and Security to Intune](migrate-from-other-mdm.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

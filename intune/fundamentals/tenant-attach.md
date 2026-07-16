@@ -1,8 +1,7 @@
 ---
 title: Use Microsoft Intune policies with tenant attached Configuration Manager devices
 description: Use tenant attach to add Configuration Manager devices to Microsoft Intune and then deploy Intune policies to those devices.
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 10/10/2024
 ms.topic: how-to
 ms.collection:
@@ -161,7 +160,7 @@ The Configuration Manager connector provides details about your Configuration Ma
 
 To display the Configuration Manager connector status:
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
 
    :::image type="content" source="./media/tenant-attach/connector-status.png" alt-text="Display the Configuration Manager connector status" Lightbox="./media/tenant-attach/connector-status.png":::
@@ -180,7 +179,7 @@ You can view Configuration Manager client details including collections, boundar
 
 Use the following steps to view client details for a specific device:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, navigate to [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices**.
 
    Devices that have been uploaded using tenant attach display **ConfigMgr** in the **Managed by** column.
@@ -207,7 +206,7 @@ Use the following steps to view client details for a specific device:
 
 Use the following steps to view a list of devices that belong to a user:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, navigate to [Microsoft Intune admin center].
 2. Select **Troubleshooting + support** > **Troubleshoot** > **Select user**.
 
    If you already have a displayed user, you choose **Change user** to select a different user.
@@ -224,7 +223,7 @@ From the Microsoft Intune admin center, you can view hardware inventory for uplo
 
 To view device data from the resource explorer:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, navigate to [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.
 
@@ -255,7 +254,7 @@ From the Microsoft Intune admin center, you can initiate an application install 
 
 Use the following steps to install an application to an on-premises device:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, navigate to [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.
 
@@ -272,7 +271,7 @@ For more information about applications and tenant attach, see [Tenant attach: I
 
 You can run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. You can also allow other personas, like Helpdesk, to run PowerShell scripts. This gives all the benefits of PowerShell scripts that are defined by and approved by the Configuration Manager admin to use in this new environment.
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, navigate to [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.
 
@@ -297,7 +296,7 @@ Once a day Configuration Manager sends the on-premises device events to the Micr
 
 To view the device event timeline:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, navigate to [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.
 
@@ -317,3 +316,7 @@ For more information about viewing device events for tenant attached devices, se
 
 - [Configure Endpoint security policies](../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
 - Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

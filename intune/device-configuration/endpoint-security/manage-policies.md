@@ -3,9 +3,6 @@ title: Manage endpoint security policies in Microsoft Intune
 description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Intune.
 ms.date: 12/04/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -35,7 +32,7 @@ When conflicts occur, affected settings might fail to apply properly. Plan your 
 
 ## Available endpoint security policy types
 
-Access endpoint security policies from **Endpoint security** > **Manage** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Access endpoint security policies from **Endpoint security** > **Manage** in the [Microsoft Intune admin center].
 
 :::image type="content" source="./media/manage-policies/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
 
@@ -158,7 +155,7 @@ The following Intune built-in roles provide access to endpoint security workload
 Follow this general workflow for creating endpoint security policies:
 
 1. **Navigate to policy creation**:
-   - Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+   - Sign in to the [Microsoft Intune admin center].
    - Go to **Endpoint security** > select the desired policy type > **Create Policy**.
 
 2. **Configure policy basics**:
@@ -273,3 +270,7 @@ Many endpoint security policies have deep integration with Microsoft Defender fo
 - [Learn about reusable settings groups](../../device-security/reusable-settings-groups.md)
 - [Configure Microsoft Defender for Endpoint integration](../../device-security/microsoft-defender/configure-integration.md)
 - [Understand device protection strategies](../../device-security/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -84,7 +84,7 @@ If you're not familiar with creating app configuration policies, see [Add app co
 
 ## Use the Configuration Designer
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Configuration** > **Create** > **Managed devices**.
 3. In **Basics**, enter the following properties:
 
@@ -145,7 +145,7 @@ Use this option if you don't have, or don't know all the required VPN settings u
 
 In these steps, create a temporary policy. The policy won't be saved. The intent is to copy the certificate token. You'll use this token when creating the VPN policy using JSON (next section).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > Configuration** > **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center], select **Apps** > Configuration** > **Add** > **Managed devices**.
 2. In **Basics**, enter the following properties:
 
     - **Name**: Enter any name. This policy is temporary, and won't be saved.
@@ -175,7 +175,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 
 ### Create the VPN policy using JSON
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
+1. In the [Microsoft Intune admin center], select **Apps** > **Configuration** > **Create** > **Managed devices**.
 
 2. In **Basics**, enter the following properties:
 
@@ -285,3 +285,7 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 ## Next steps
 
 - [Create VPN profiles to connect to VPN servers in Intune](../../device-configuration/templates/configure-vpn.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

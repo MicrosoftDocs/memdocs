@@ -3,9 +3,6 @@ title: Get Data From the Data Warehouse API With a REST Client
 description: This topic describes how to retrieve data from the Microsoft Intune Data Warehouse using a RESTful API.
 ms.date: 04/23/2024
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Get Data From the Intune Data Warehouse API With a REST Client
@@ -73,7 +70,7 @@ You need the following information to make a REST call using Postman:
 
 You also need the endpoint. To get your Data Warehouse endpoint, you will need the custom feed URL. You can get the OData endpoint from the Data Warehouse pane.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 3. Open the **Data Warehouse** pane by selecting **Reports** > **Data warehouse**.
 4. Copy the custom feed url under **OData feed for reporting service**. It should look something like: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
@@ -224,3 +221,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
 You can find details on authorization, the API URL structure, and OData endpoints in [Use the Intune Data Warehouse API](ref-api-endpoints.md).
 
 You can also refer to the Intune Data Warehouse Data Model to find the data entities contained in the API. For more information, see [Intune Data Warehouse API Data Model](ref-data-model.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for Android Developer Integration and Testing Gu
 description: Understand App participation features when incorporating Intune mobile app management (MAM) into your Android app.
 ms.date: 03/27/2026
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - Android
@@ -1017,25 +1016,25 @@ Continue to refer to this guide and the [Appendix] as you continue to develop yo
 [Network security configuration]:https://developer.android.com/training/articles/security-config
 
 <!-- Class links -->
-[AppPolicy]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html
-[MAMBackupAgent]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgent.html
-[MAMBackupAgentHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupAgentHelper.html
-[MAMBackupDataInput]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMBackupDataInput.html
-[MAMDataProtectionManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
-[MAMDefaultBackupAgent]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMDefaultBackupAgent.html
-[MAMEnrollmentNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html
-[MAMFileBackupHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMFileBackupHelper.html
-[MAMFileProtectionManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
-[MAMNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotification.html
-[MAMNotificationType]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
-[MAMComplianceNotification]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMComplianceNotification.html
-[MAMNotificationReceiver]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiver.html
-[MAMNotificationReceiverRegistry]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/notification/MAMNotificationReceiverRegistry.html
-[MAMPolicyManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
-[MAMSharedPreferencesBackupHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
-[MAMUserNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMUserNotification.html
-[MAMTrustedRootCertsManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html
-[MAMCertTrustWebViewClient]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html
+[AppPolicy]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/AppPolicy.html
+[MAMBackupAgent]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/backup/MAMBackupAgent.html
+[MAMBackupAgentHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/backup/MAMBackupAgentHelper.html
+[MAMBackupDataInput]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/backup/MAMBackupDataInput.html
+[MAMDataProtectionManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/identity/MAMDataProtectionManager.html
+[MAMDefaultBackupAgent]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/backup/MAMDefaultBackupAgent.html
+[MAMEnrollmentNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/notification/MAMEnrollmentNotification.html
+[MAMFileBackupHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/backup/MAMFileBackupHelper.html
+[MAMFileProtectionManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/identity/MAMFileProtectionManager.html
+[MAMNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/notification/MAMNotification.html
+[MAMNotificationType]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/notification/MAMNotificationType.html
+[MAMComplianceNotification]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/notification/MAMComplianceNotification.html
+[MAMNotificationReceiver]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/notification/MAMNotificationReceiver.html
+[MAMNotificationReceiverRegistry]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/notification/MAMNotificationReceiverRegistry.html
+[MAMPolicyManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
+[MAMSharedPreferencesBackupHelper]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
+[MAMUserNotification]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/notification/MAMUserNotification.html
+[MAMTrustedRootCertsManager]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html
+[MAMCertTrustWebViewClient]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html
 
 <!-- Method links -->
-[unregisterAccountForMAM]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
+[unregisterAccountForMAM]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)

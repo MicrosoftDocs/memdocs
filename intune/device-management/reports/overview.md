@@ -1,14 +1,11 @@
 ---
 title: Microsoft Intune Reports
 description: Intune provides specific report types with focused views that contain consistent and timely data.
-ms.date: 05/18/2026
+ms.date: 07/10/2026
 author: nicholasswhite
-ms.author: nwhite
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: jlynn
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Reports
@@ -53,7 +50,7 @@ The **Home**, **Dashboard**, and **Apps Overview** panes provide updated tiles t
 This set of reports focuses on compliance settings in your policies. You can get a list of all the devices that are noncompliant, review device compliance trends, and see the device names and their individual noncompliant settings.
 
 > [!TIP]
-> You can view a list of all device monitoring reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane provides reports related to configuration, compliance, enrollment, and software updates. Additionally, there are other reports that you can view, such as **Device actions**.
+> You can view a list of all device monitoring reports in [Microsoft Intune admin center] by selecting **Devices** > **Monitor**. The **Monitor** pane provides reports related to configuration, compliance, enrollment, and software updates. Additionally, there are other reports that you can view, such as **Device actions**.
 
 ### Device compliance report (Organizational)
 
@@ -61,7 +58,7 @@ The device compliance report is meant to be broad in nature and provide a more t
 
 To see a generated report of device state, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance**.
 3. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
 4. Select **Generate report** (or **Generate again**) to retrieve current data.
@@ -81,7 +78,7 @@ A compliance trend report for device compliance can show the trend of device com
 
 You can view the **Device compliance trends** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 30 day trend.
 
     :::image type="content" source="./media/overview/intune-reports-03.png" alt-text="Screenshot of the Device compliance trends report in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-03.png":::
@@ -101,7 +98,7 @@ The benefit is you can see the noncompliant settings and settings in error state
 
 To generate the report, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Noncompliant devices and settings**.
 3. Select **Generate report**. In the report, look at the following information:
 
@@ -136,7 +133,7 @@ This report allows admins to:
 
 To generate the report, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Devices without compliance policy**.
 3. Select **Generate report**. In the report, look at the following information:
 
@@ -165,7 +162,7 @@ By selecting an entry, you can drill in for more detailed information about the 
 
 To generate a report that uses current data:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Settings compliance** tile.
 3. Use the drop-down to select which platforms the report includes.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
@@ -189,7 +186,7 @@ By selecting an entry, you can drill in for more detailed information about the 
 
 To generate a report that uses current data:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Policy compliance** tile.
 3. Use the drop-down to select which platforms the report includes.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
@@ -203,7 +200,7 @@ The **Policy noncompliance** report allows you to review policies with one or mo
 
 You can view the **Policy noncompliance** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Policies with noncompliant and error devices**.
 
 ### Noncompliant devices report (Operational)
@@ -212,7 +209,7 @@ The **Noncompliant devices** report provides data typically used by Helpdesk or 
 
 You can view the **Noncompliant devices** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Noncompliant devices**.
 
 ### Windows hardware attestation report (Organizational)
@@ -221,7 +218,7 @@ View the status of hardware-attested compliance settings assigned to Windows dev
 
 You can view the Windows hardware attestation report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Reports** > **Device Compliance**.
 1. Go to the **Reports** tab.
 1. Select **Windows hardware attestation report**.
@@ -241,7 +238,7 @@ You can review info about certificates, including thumbprints, issuance info, an
 
 You can view the **Certificates** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Certificates**.
 
 ### Encryption report (Operational)
@@ -253,7 +250,7 @@ You can view encryption details, including encryption readiness, encryption stat
 
 You can view the **Encryption** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Device encryption status**.
 
 ### Devices with restricted apps report (Operational)
@@ -262,7 +259,7 @@ You can view a list of devices on which users have installed one or more restric
 
 You can view the **Devices with restricted apps** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Devices with restricted apps**.
 
 ### Profile configuration status report (Organizational)
@@ -273,7 +270,7 @@ The **Profile configuration status** report allows you to generate a list of pro
 
 To view the Profile configuration status report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device configuration** > **Reports** > **Profile configuration status**.
 
 ## Device enrollment reports
@@ -286,7 +283,7 @@ You can view details about failed user enrollment attempts.
 
 You can view the **Enrollment failures** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Enrollment failures**.  
 
 ### Enrollment time grouping  
@@ -295,7 +292,7 @@ View the details of failed grouping attempts that happened with [enrollment time
 
 You can view the enrollment time grouping report using the following steps:  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Enrollment time grouping failures**.  
 
 ### Device attestation status report
@@ -304,7 +301,7 @@ This report provides a summary of devices that have either *Completed*, *Failed*
 
 You can view the **Device attestation status report** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device management** > **Device attestation status**.
 3. Use the drop-downs to filter by attestation status or device ownership.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
@@ -316,7 +313,7 @@ This report provides a summary of deployment details for Windows Autopilot enrol
 
 You can view the **Windows Autopilot deployments** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Windows Autopilot deployments**.
 
 ## Update reports
@@ -330,7 +327,7 @@ You can view the number of devices with successful or failed updates for each up
 
 You can view the **Per update ring deployment state report** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Deployment status per Windows update ring**.
 
 ### Windows Driver update failures report (Operational)
@@ -342,7 +339,7 @@ You can view the policies with one or more Windows devices with driver update al
 
 You can view the **Windows Driver update failures** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Driver update policies with alerts**.
 
 ### Windows Expedited update failures report (Operational)
@@ -354,7 +351,7 @@ You can view the policies with one or more Windows devices with expedited qualit
 
 You can view the **Windows Expedited update failures** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Expedited quality update policies with alerts**.
 
 ### Feature update failures report (Operational)
@@ -368,7 +365,7 @@ Before this report can show data, you must configure *data collection* for the W
 
 To view the **Feature update failures** report, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Feature update policies with alerts**.
 
 > [!IMPORTANT]
@@ -388,7 +385,7 @@ View update installation failures on iOS devices.
 
 You can view the **Installation failures for iOS devices** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **iOS update installation failures**.
 
 ### Installation status for macOS devices report (Operational)
@@ -400,7 +397,7 @@ View update installation failures on macOS devices.
 
 You can view the **Installation status for macOS devices** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **macOS update installation failures**.
 
 ### Windows feature update (Organizational)
@@ -411,7 +408,7 @@ For information about how to use this report to resolve update failures, see [Re
 
 You can view the **Windows 10 and later feature updates** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Windows updates** to view the summary report.
 3. Select the **Reports** tab and select the **Windows Feature Update Report** to see the **Windows 10 and later feature updates** report.
 4. Select the **Update aggregated status** and **Ownership** filters to refine your report.
@@ -432,7 +429,7 @@ The **Unhealthy endpoints** report surfaces data typically used by Helpdesk or a
 
 You can view the **Unhealthy endpoints** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Endpoint security** > **Antivirus** > **Unhealthy endpoints** tab.
 
 For information about the actions you can take with this report, see [Bulk actions for device reports](overview.md#bulk-actions-for-device-reports).
@@ -442,7 +439,7 @@ The **Active malware** report provides data to identify devices with malware pro
 
 You can view the **Active malware** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Endpoint security** > **Antivirus** > **Active malware** tab.
 
 For information about the actions you can take with this report, see [Bulk actions for device reports](overview.md#bulk-actions-for-device-reports).
@@ -476,7 +473,7 @@ For more information about Role-based access control permissions, see [Role-base
 
 You can view the **Assignment failures** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Configuration policy assignment failures**.
 
 > [!NOTE]
@@ -506,7 +503,7 @@ This report shows data visualizations as a pie chart for a breakdown of agent st
 
 You can view the **Antivirus agent status** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Microsoft Defender Antivirus** to open the default reports view, which is the **Summary** page. The Summary page displays aggregate details for the Antivirus reports, supports a *Refresh*, and reflects the data found in Antivirus agent status report.
 3. Select the **Reports** tab > **Antivirus agent status** to open the report.
 4. Select **Generate report** (or **Generate again**) to retrieve current data.
@@ -529,7 +526,7 @@ The **Detected malware** report provides the malware state of your organization'
 
 You can view the **Detected malware** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Microsoft Defender Antivirus** to open the default reports view, which is the Summary page. The Summary page displays aggregate details for the Antivirus reports, supports a *Refresh*, and reflects the data found in the [Antivirus agent status](#antivirus-agent-status-report-organizational) report.
 3. Select the **Reports** tab > **Detected malware** to open the report.
 4. Select **Generate report** (or **Generate again**) to retrieve current data.
@@ -545,7 +542,7 @@ Other reports for Microsoft Defender Antivirus include:
 
 *This report is also described in [Endpoint security firewall policy](../../device-configuration/endpoint-security/firewall.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
 
-The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
+The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center], and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
 :::image type="content" source="./media/overview/select-firewall-reports.png" alt-text="Screenshot showing how to select firewall reports in the Microsoft Intune admin center." lightbox="./media/overview/select-firewall-reports.png":::
 
@@ -569,7 +566,7 @@ The **App Install Status** report provides a list of apps with versions and inst
 
 To see a generated report, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Monitor** > **App Install Status** to view the current data.
 
 ### Device Install Status report for apps (Operational)
@@ -578,7 +575,7 @@ Based on a selected app, the **Device Install Status** report provides a list of
 
 To see a generated report of device state, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > *Select an app* > **Device Install status**.
 
 > [!NOTE]
@@ -590,7 +587,7 @@ Based on a selected app, the **User Install Status** report provides a list of u
 
 To see a generated report, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > *Select an app* > **User Install status**.
 
 ## Overview lists
@@ -606,7 +603,7 @@ You can view details of all the devices you manage in this single report. By sel
 
 To view the **All devices** details:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices**.
 
 ## Single policy reports
@@ -617,7 +614,7 @@ The **Device and user check-in status** report combines information that was pre
 
 To view the **Device and user check-in status** report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Device configuration profiles (preview)** > *select a configuration profile* > **Device and user check-in status**.
 
 ### Device assignment status report (Operational)
@@ -628,7 +625,7 @@ Like the **Device and user check-in status** report, the **Device assignment sta
 
 To view the **Device assignment status** report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Device configuration profiles (preview)** > *select a configuration profile* > **Device assignment status**.
 
 ### Per setting status report (Operational)
@@ -637,7 +634,7 @@ The **Per setting status** report surfaces the summary of device and user check-
 
 To view the **Per setting status** report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Device configuration profiles (preview)** > *Select a configuration profile* > **Per setting status**.
 
 ## Single device reports
@@ -658,7 +655,7 @@ When you select an app in the report, you can view the **Installation details** 
 
 To see the report for a device, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices** > *select a device* > **Managed Apps**.
 3. To see the managed apps for a specific user, select a user from the dropdown box near the top of the report.
 
@@ -677,7 +674,7 @@ When you select a group, you can see the Microsoft Entra pane for the group. You
 
 To see the report for a device, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices** > *select a device* > **Group Membership**.
 
 ### Device configuration (Operational)
@@ -688,7 +685,7 @@ You can view all the policies applied to your device in the new single report th
 
 To view the **Device configuration** details:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices** > *select a device* > **Device configuration**.
 
 ## Cloud attached devices reports
@@ -699,7 +696,7 @@ The **Co-management eligibility** report provides an eligibility evaluation for 
 
 To see a generated report of device state, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Cloud attached devices (preview)** > **Reports** tab > **Co-Management Eligibility**.
 3. Select **Generate report** (or **Generate again**) to retrieve current data.
 
@@ -714,7 +711,7 @@ The **Co-Manage Workloads** report provides a report of devices that are current
 
 To see a generated report of device state, you can use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Cloud attached devices (preview)** > **Reports** tab >  **Co-Managed Workloads**.
 3. Select **Generate report** (or **Generate again**) to retrieve current data.
 
@@ -735,7 +732,7 @@ An example specialist report could correlate a set of device details, including 
 
 You can create and view custom reports using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](overview.md#diagnostic-settings).
 
     :::image type="content" source="./media/overview/intune-reports-04.png" alt-text="Screenshot showing how to add a diagnostic setting in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-04.png":::
@@ -784,11 +781,14 @@ Use the **Device Action** report to view a list of requested device actions and 
 
 You can view the **Device action** report using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Monitor** > **Device actions**.
 
 > [!NOTE]
 > Device actions report contains data for past 180 days.
+
+> [!NOTE]
+> For **MDM devices**, deleting a device immediately hides it from the admin center and initiates a **Retire**. A status of **Completed** on a delete action means the process is complete on the server side; it doesn't confirm that the client device finished the **Retire**.
 
 ## Next steps
 
@@ -800,3 +800,7 @@ Learn more about the following technologies:
 - [Get started with Log Analytics in Azure Monitor](/azure/azure-monitor/log-query/get-started-portal)
 - [Azure Monitor workbooks](/azure/azure-monitor/app/usage-workbooks)
 - [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

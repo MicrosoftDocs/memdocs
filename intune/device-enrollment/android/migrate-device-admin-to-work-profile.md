@@ -4,8 +4,6 @@ description: Move Android devices from device administrator to personally owned 
 ms.date: 06/18/2024
 ms.topic: how-to
 ms.reviewer: esalter
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Move Android devices from device administrator to personally owned work profile management
@@ -31,7 +29,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Create device compliance policy
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In the [Microsoft Intune admin center], go to **Devices**.
 1. Select **Compliance** > **Create Policy**.
 
     ![Create policy](./media/migrate-device-admin-to-work-profile/create-policy.png)
@@ -98,3 +96,7 @@ Users might see an error page in the browser when they tap the URL to the **Upda
 [See the end user flow](../../user-help/enrollment/migrate-device-management-android.md)
 
 [Manage Android work profile devices with Intune](enterprise-work-profile.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

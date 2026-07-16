@@ -4,8 +4,6 @@ description: Create exceptions to the Intune App Protection Policy (APP) data tr
 ms.date: 12/02/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # How to Create Exceptions to the Intune App Protection Policy (APP) Data Transfer Policy

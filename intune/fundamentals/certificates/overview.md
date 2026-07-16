@@ -3,10 +3,6 @@ title: Types of certificate that are supported by Microsoft Intune
 description: Learn about Microsoft Intune's support for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS) certificates.
 ms.date: 10/04/2024
 ms.topic: overview
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Use certificates for authentication in Microsoft Intune
@@ -59,7 +55,7 @@ The following comparisons aren't comprehensive but intended to help distinguish 
 |----------------------------|---------------|
 | Trusted certificate        | Use to deploy the public key (certificate) from a root CA or intermediary CA to users and devices to establish a trust back to the source CA. Other certificate profiles require the trusted certificate profile and its root certificate.    |
 | SCEP certificate           | Deploys a template for a certificate request to users and devices. Each certificate that's provisioned using SCEP is unique and tied to the user or device that requests the certificate. </br></br>With SCEP, you can deploy certificates to devices that lack a user affinity, including use of SCEP to provision a certificate on KIOSK or user-less device.   |
-| PKCS certificate           | Deploys a template for a certificate request that specifies a certificate type of either user or device. </br></br> - Requests for a certificate type of user always require user affinity.  When deployed to a user, each of the user's devices receives a unique certificate. When deployed to a device with a user, that user is associated with the certificate for that device. When deployed to a userless device, no certificate is provisioned. </br> - Templates with a certificate type of device don't require user affinity to provision a certificate. Deployment to a device provisions the device. Deployment to a user provisions the device the user is signed into with a certificate.   |
+| PKCS certificate           | Deploys a template for a certificate request that specifies a certificate type of either user or device. </br></br> - Requests for a certificate type of user always require user affinity.  When deployed to a user, each of the user's devices receives a unique certificate. When deployed to a device with a user, that user is associated with the certificate for that device. When deployed to a userless device, no certificate is provisioned. </br> - Templates with a certificate type of device don't require user affinity to provision a certificate. Deployment to a device provisions the device. Deployment to a user provisions the device the user is signed in to with a certificate.   |
 | PKCS imported certificate  | Deploys a single certificate to multiple devices and users, which supports scenarios like S/MIME signing and encryption. For example, by deploying the same certificate to each device, each device can decrypt email received from that same email server. </br></br>Other certificate deployment methods are insufficient for this scenario, as SCEP creates a unique certificate for each request, and PKCS associates a different certificate for each user, with different users receiving different certificates.    |
 
 ## Intune supported certificates and usage

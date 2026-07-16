@@ -7,14 +7,12 @@ ms.date: 02/27/2025
 ms.topic: troubleshooting
 ms.reviewer: Dave Randall
 ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
 ---
 # ServiceNow Integration with Microsoft Intune
 
 Remote Help provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
 
-Support organizations need all the tools at their disposal to resolve workers' technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Support organizations need all the tools at their disposal to resolve workers' technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the [Microsoft Intune admin center].
 
 ## About ServiceNow connector Integration
 
@@ -40,7 +38,7 @@ To get started, review the following steps:
 
 ## Configure the ServiceNow integration with Microsoft Intune
 
-1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant Administration > Connectors and Tokens > ServiceNow connector**.
+1. Sign in to [Microsoft Intune admin center] and go to **Tenant Administration > Connectors and Tokens > ServiceNow connector**.
 2. You can see the **Connection Status** and the **Last Connection** date time stamp.
 3. Use the toggle to either turn on or off the ability to **Exchange data with the ServiceNow instance**.
 4. Next, define the following properties for how you're going to connect with ServiceNow.
@@ -102,7 +100,7 @@ To create a new CORS rule,
 
 With the ServiceNow connector verified and enabled, you can view a real time list of ServiceNow incidents for a worker from the Troubleshooting pane. The incident view with details helps you understand if there are other issues previously submitted by employees that might be related or have recurred.
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 2. Select **Troubleshooting + support** > **Troubleshoot**. The **Troubleshooting** pane provides specific details for each Intune end-user.
 3. Find and select a **User** by entering a display name or email.
 4. In the **Summary** tab, scroll down and select **Authenticate ServiceNow**. Enter the credentials to authenticate you as a help-desk operator with ServiceNow. :::image type="content" source="./media/setup-servicenow/troubleshoot-pane.png" alt-text="Screenshot that shows the Intune troubleshooting dashboard with the Summary tab and selected user details":::
@@ -125,3 +123,7 @@ CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASS
 - [Get support in Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md)
 
 - [Use Remote Help](../../remote-help/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

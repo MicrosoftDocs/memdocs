@@ -1,12 +1,8 @@
 ---
 title: Prerequisites the Microsoft Tunnel VPN for Microsoft Intune
 description: Review the prerequisites for installation and use of the Microsoft Tunnel Gateway. These include Linux servers, network, and firewall configurations.
-ms.date: 03/27/2026
+ms.date: 06/24/2026
 ms.topic: how-to
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Prerequisites for the Microsoft Tunnel in Intune
@@ -66,6 +62,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
    | Red Hat (RHEL) 9.4  | Podman 4.9.4-rhel *(default)*   | Support ends November 2025. This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 9.5  | Podman 5.2.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
    | Red Hat (RHEL) 9.6  | Podman 5.4.0 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
+  | Red Hat (RHEL) 9.7  | Podman 5.8.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
    | Red Hat (RHEL) 10.0  | Podman 5.4.0 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
   | Ubuntu 22.04           | Docker CE               |                    |
   | Ubuntu 24.04           | Docker CE               |                    |
@@ -461,7 +458,7 @@ To use the readiness tool:
 1. Get the most recent version of the readiness tool by using one of the following methods:
 
    - Download the tool directly by using a web browser. Go to [https://aka.ms/microsofttunnelready](https://aka.ms/microsofttunnelready) to download a file named **mst-readiness**.
-   - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.
+   - Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link [https://aka.ms/microsofttunnelready](https://aka.ms/microsofttunnelready).
 
      For example, to use **wget** and log details to *mst-readiness* during the download, run `wget --output-document=mst-readiness https://aka.ms/microsofttunnelready`
@@ -544,3 +541,7 @@ In the context of sudo, run the following command on your Linux server to create
 ## Next steps
 
 [Configure Microsoft Tunnel](./install.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

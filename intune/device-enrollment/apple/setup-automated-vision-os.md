@@ -3,10 +3,7 @@ title: Set up automated device enrollment (ADE) for visionOS
 description: Learn how to enroll corporate-owned Apple Vision Pro devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
 ms.date: 04/29/2026
 ms.topic: how-to
-ms.reviewer: annovich
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up automated device enrollment for visionOS
@@ -72,7 +69,7 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 > [!IMPORTANT]
 > This article reflects the updated policy creation experience (**Enrollment program tokens** > **Enrollment policies**) for devices going through automated device enrollment. The older experience (**Enrollment program tokens** > **Profiles**) differs and will eventually be retired. The older experience won't receive new features, so be sure to create new policies under **Enrollment policies**. For more information, see [New iOS/iPadOS, visionOS, tvOS and macOS ADE enrollment policies experience](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531).
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
@@ -140,7 +137,7 @@ Before devices can be enrolled, you need to assign an enrollment policy to them.
 >[!NOTE]
 >You can also assign serial numbers to policies in the **Apple Serial Numbers** pane.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
@@ -177,3 +174,7 @@ You can also set a policy as default from your list of enrollment policies.
 - Devices can receive custom configuration profiles uploaded as .plist files. For more information, see [Create a custom configuration policy](../../device-configuration/templates/configure-custom-settings.md).  
  
 - Available remote device actions are the same as those available to iOS/iPadOS ADE devices. For more information, see [Remote device actions](../../device-management/actions/index.md).  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

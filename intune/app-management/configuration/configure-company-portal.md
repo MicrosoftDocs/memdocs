@@ -20,7 +20,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you help provide a familiar and helpful experience for your end users. To configure these customizations, sign in as an [Intune administrator](../../fundamentals/role-based-access-control/ref-built-in-roles.md) with sufficient permissions. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization**. Here you edit the default policy or create up to 25 user group targeted policies. Targeting policies to device groups isn't supported. These settings apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you help provide a familiar and helpful experience for your end users. To configure these customizations, sign in as an [Intune administrator](../../fundamentals/role-based-access-control/ref-built-in-roles.md) with sufficient permissions. Navigate to the [Microsoft Intune admin center] and select **Tenant Administration** > **Customization**. Here you edit the default policy or create up to 25 user group targeted policies. Targeting policies to device groups isn't supported. These settings apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
@@ -146,7 +146,7 @@ This table provides app source specific configuration details:
 > [!NOTE]
 > The display of apps from the **Configuration Manager Applications** app source is only displayed in the Windows Company Portal. The display of apps from either the **Microsoft Entra Enterprise Applications** app source or the **Office Online Applications** app source is displayed in the Windows Company Portal and the Company Portal website.
 
-Hide or show **Microsoft Entra Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** causes the Company Portal to display the entire applications catalog from the chosen Microsoft services assigned to the user. Register and assign **Microsoft Entra Enterprise applications** via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Assign **Office Online applications** via the [Microsoft 365 Apps admin center](https://config.office.com/). Register and assign **Configuration Manager applications** via Configuration Manager.
+Hide or show **Microsoft Entra Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** causes the Company Portal to display the entire applications catalog from the chosen Microsoft services assigned to the user. Register and assign **Microsoft Entra Enterprise applications** via the [Microsoft Intune admin center]. Assign **Office Online applications** via the [Microsoft 365 Apps admin center](https://config.office.com/). Register and assign **Configuration Manager applications** via Configuration Manager.
 
 ### Customizing Remove and Reset device actions
 
@@ -328,3 +328,7 @@ To configure feedback policy settings:
 
 - [Configure your organization's logo and brand color for new tab pages in Microsoft Edge for iOS and Android](./configure-edge-ios-android.md#organization-logo-and-brand-color)
 - [Add apps](../deployment/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

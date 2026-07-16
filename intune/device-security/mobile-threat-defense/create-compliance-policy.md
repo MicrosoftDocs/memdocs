@@ -1,14 +1,8 @@
 ---
 title: Create Mobile Threat Defense compliance policies in Intune
 description: Create an Intune device compliance policy that uses your MTD partner threat levels to determine if a mobile device can access company resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/30/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 
 ---
 
@@ -30,7 +24,7 @@ With integration complete and the partner policy in place, you can then create I
 
 ## To create an MTD device compliance policy in Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Device compliance** > **Create policy**.
 
@@ -77,3 +71,7 @@ Your Mobile Threat Defense partner can send a risk score for each device for whi
 ## Related content
 
 [Enable a Mobile Threat Defense connector](./enable-connector.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

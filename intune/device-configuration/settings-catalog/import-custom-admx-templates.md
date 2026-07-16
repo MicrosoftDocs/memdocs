@@ -4,8 +4,6 @@ description: You can add, upload, or import custom and third-party partner ADMX 
 ms.date: 09/04/2025
 ms.topic: how-to
 ms.reviewer: mikedano, kabalu
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)
@@ -88,7 +86,7 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 
 ## Add the ADMX and ADML files
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Import ADMX** tab > **Import**:
 
     :::image type="content" source="./media/import-custom-admx-templates/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in the Microsoft Intune admin center.":::
@@ -114,7 +112,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 
 ## Create a profile using your imported files
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -171,3 +169,7 @@ To update existing ADMX files that are imported, you have the following options:
 ## Related articles
 
 [Use the settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

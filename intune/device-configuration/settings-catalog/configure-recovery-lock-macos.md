@@ -4,8 +4,6 @@ description: Add or create settings using the settings catalog to configure Reco
 ms.date: 06/01/2026
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure Recovery Lock on macOS devices in Microsoft Intune
@@ -54,7 +52,7 @@ This article applies to:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 >
-> To run the device actions, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account with one of the following roles:
+> To run the device actions, sign in to the [Microsoft Intune admin center] with an account with one of the following roles:
 >
 > - [Intune administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
 > - An Intune [custom role](../../fundamentals/role-based-access-control/create-custom-role.md) with the following permissions:
@@ -68,7 +66,7 @@ This article applies to:
 
 Use the following steps to create a Recovery Lock policy in the settings catalog.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -121,7 +119,7 @@ If Recovery Lock is enabled, you can view the password in the report at **Passwo
 
 You can use the rotate Recovery Lock passcode device action to reset the Recovery Lock password on demand. This action is helpful if a user forgets their password, or if you want to proactively rotate the password outside of the rotation schedule you set in the policy.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** > select the macOS device.
+1. In the [Intune admin center], select **Devices** > **All devices** > select the macOS device.
 2. Select **Rotate recovery lock passcode**.
 3. Confirm the action.
 
@@ -138,3 +136,8 @@ To remove the Recovery Lock password from a device, you have the following optio
 
 - [Use the Intune settings catalog to configure settings](index.md)
 - [Common tasks you can complete using the settings catalog](common-tasks.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

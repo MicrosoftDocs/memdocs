@@ -3,10 +3,6 @@ title: Remove SCEP or PKCS certificates in Microsoft Intune
 description: Learn about the actions that can remove, revoke, or leave untouched the certificates on a device that were provisioned by Intune certificate profiles. Actions include tasks to wipe or retire a managed device, to unenroll a device, manage the certificate profile assignment, and more.
 ms.date: 04/08/2024
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Remove SCEP and PKCS certificates in Microsoft Intune

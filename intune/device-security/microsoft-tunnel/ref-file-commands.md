@@ -3,10 +3,6 @@ title: File and command reference for Microsoft Tunnel Gateway, a VPN solution f
 description: Find file and command-line references for tools you use to install or manage the Microsoft Tunnel Gateway, a VPN server that runs on Linux.
 ms.date: 03/27/2025
 ms.topic: reference
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Command-line Reference for Microsoft Tunnel Gateway

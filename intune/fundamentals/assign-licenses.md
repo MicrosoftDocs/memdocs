@@ -2,12 +2,8 @@
 
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 01/24/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Assign licenses to users
@@ -71,7 +67,7 @@ Using the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId
 
 ### Microsoft Intune admin center
 
-Using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the **Total licensed users** and the **Total Intune licenses**. To find these details, sign-in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status** and select the **Tenant details** tab. Additionally, you can view the assigned licenses available for a user in Intune by selecting **Users** > *select a user* > **Licenses**.
+Using the [Microsoft Intune admin center], you can view the **Total licensed users** and the **Total Intune licenses**. To find these details, sign-in to the [Microsoft Intune admin center], select **Tenant administration** > **Tenant status** and select the **Tenant details** tab. Additionally, you can view the assigned licenses available for a user in Intune by selecting **Users** > *select a user* > **Licenses**.
 
 ### Microsoft Entra admin center
 
@@ -161,3 +157,6 @@ Verify with:
 - [Assign Microsoft Intune roles to groups of users for role-based access control](./role-based-access-control/assign-role.md)
 - [Set the MDM authority](./setup-mdm-authority.md)
 
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

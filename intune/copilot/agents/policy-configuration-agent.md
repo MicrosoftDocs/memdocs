@@ -3,8 +3,6 @@ title: Learn about Policy Configuration Agent and set it up
 description: Learn about the Policy Configuration Agent in Microsoft Intune, its prerequisites, how it works, and how to set it up. The agent is a generative AI feature that helps create Intune policies based on uploaded documents or benchmarks. The Policy Configuration Agent is a feature of Security Copilot in Intune.
 ms.date: 11/18/2025
 ms.topic: overview
-author: mandiohlinger
-ms.author: mandia
 ms.reviewer: aanavath, jubaptis
 ---
 
@@ -176,13 +174,13 @@ We recommend you sign in with the **Security Copilot Owner** role to set up the 
 **Before you enable the agent**:
 
 - An admin must manually start the agent. Once started, there's no option to stop or pause the agent.
-- The agent can only be started from the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- The agent can only be started from the [Microsoft Intune admin center].
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
 - Only one agent instance is supported per tenant.
 
 **Use the following steps to set up the agent**:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+1. In the [Microsoft Intune admin center], select **Agents** > **Policy Configuration Agent**.
 1. In **Overview**, select **Set up agent**.
 
     The **Set up Policy Configuration Agent** pane lists the required permissions to set up the agent, and provides more information about the setup requirements.
@@ -204,3 +202,7 @@ When it completes, the agent is ready to use. To learn more about using the agen
 - [Use the Policy Configuration Agent](manage-policy-configuration-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
 - [Security Copilot in Intune - An overview](../index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

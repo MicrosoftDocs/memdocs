@@ -4,9 +4,6 @@ description: Use Microsoft Intune endpoint security policies to configure and de
 ms.date: 05/18/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -136,7 +133,7 @@ When the connection is enabled:
 
 **To configure the connection:**
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Microsoft Defender for Endpoint**.
+1. In the [Microsoft Intune admin center], go to **Tenant administration** > **Connectors and tokens** > **Microsoft Defender for Endpoint**.
 2. Select **Connect Microsoft Defender for Endpoint to Intune**.
 3. Enable the connection and configure data sharing preferences.
 4. Verify the connection status shows **Connected**.
@@ -276,7 +273,7 @@ The **EDR Onboarding Status** report provides administrators with a comprehensiv
 
 ### Accessing the EDR Onboarding Status report
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Endpoint detection and response**.
+1. In the [Microsoft Intune admin center], go to **Endpoint security** > **Endpoint detection and response**.
 2. Select the **EDR Onboarding Status** tab.
 
 ### Understanding the report
@@ -456,3 +453,7 @@ After onboarding devices with EDR policies, consider deploying additional endpoi
 - [Anti-malware policies](./antivirus.md)
 - [Firewall policies](./firewall.md)
 - [Device compliance policies](../../device-security/compliance/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

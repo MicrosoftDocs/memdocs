@@ -2,8 +2,6 @@
 title: View reports for Windows LAPS policies in Microsoft Intune
 description: Use the Microsoft Intune admin center to view reports and details for Windows Local Administrator Policy Solution (LAPS)  policies.
 
-author: brenduns
-ms.author: brenduns
 ms.date: 07/31/2024
 ms.topic: how-to
 ms.reviewer: laarrizz
@@ -22,7 +20,7 @@ Reports for Windows LAPS policies are found in the Endpoint security node for Ac
 
 You can use the LAPS policy report to view the configuration and assignments for a LAPS policy, and to drill in and identify the source of conflicts that prevent devices from applying your policies.
 
-To use the report, sign into the Intune admin center and navigate to the Account protection policy node. (**Endpoint security** > **Account protection**). Here you can view a list of all Account protection policies, including the policies for LAPS that use the *Local admin password solution (Windows LAPS)* profile. You can identify the profile by the *Policy type* column:
+To use the report, sign in to the Intune admin center and navigate to the Account protection policy node. (**Endpoint security** > **Account protection**). Here you can view a list of all Account protection policies, including the policies for LAPS that use the *Local admin password solution (Windows LAPS)* profile. You can identify the profile by the *Policy type* column:
 
 :::image type="content" source="./media/monitor/laps-policy-list.png" alt-text="Screen shot of the policy list for Account protection policies." lightbox="./media/monitor/laps-policy-list.png":::
 

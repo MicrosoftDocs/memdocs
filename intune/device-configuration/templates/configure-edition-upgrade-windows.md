@@ -4,8 +4,6 @@ description: Use Microsoft Intune to upgrade Windows 10/11 client devices to a d
 ms.date: 04/22/2024
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Upgrade Windows editions or switch out of S mode on devices using Microsoft Intune
@@ -56,7 +54,7 @@ The following table lists the supported upgrade paths for the Windows edition up
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -94,3 +92,7 @@ The next time each device checks in with Intune, the policy applies.
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
 - See the upgrade and S mode settings for [Windows](./ref-edition-upgrade-settings-windows.md) and [Windows Holographic for Business](./ref-holographic-upgrade-settings.md) devices.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

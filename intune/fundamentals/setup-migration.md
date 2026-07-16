@@ -1,13 +1,9 @@
 ---
 title: Migration guide to Microsoft Intune
 description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 12/15/2025
 ms.topic: upgrade-and-migration-article
 ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Migration guide: Set up or move to Microsoft Intune
@@ -143,7 +139,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1 - Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a **tenant**. After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a **tenant**. After you attach your devices, you use the [Microsoft Intune admin center] to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
@@ -297,7 +293,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
 
-3. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+3. Sign in to the [Microsoft Intune admin center]. The policies you imported are shown.
 
 ### What you can't do
 
@@ -306,25 +302,29 @@ There are some policy types that can't be exported. There are some policy types 
 | Policy or profile type | Information |
 | --- | --- |
 | **Applications** | &nbsp; |
-| Android line-of-business apps | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.apk` application source files.|
-| Apple – Volume Purchase Program (VPP) | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
-| iOS/iPadOS line-of-business apps | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.ipa` application source files.|
-| Managed Google Play | ❌ Export <br/>❌ Import<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
-| Microsoft Store for Business | ❌ Export <br/>❌ Import<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
-| Windows app (Win32) | ❌ Export <br/>❌ Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.intunewin` application source files.|
+| Android line-of-business apps | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.apk` application source files.|
+| Apple – Volume Purchase Program (VPP) | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import<br/><br/>These apps are synced with the Apple VPP. In the new tenant, you add your VPP token, which shows your available apps. |
+| iOS/iPadOS line-of-business apps | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.ipa` application source files.|
+| Managed Google Play | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import<br/><br/>These apps and weblinks are synced with Managed Google Play. In the new tenant, you add your Managed Google Play account, which shows your available apps. |
+| Microsoft Store for Business | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import<br/><br/>These apps are synced with the Microsoft Store for Business. In the new tenant, you add your Microsoft Store for Business account, which shows your available apps.|
+| Windows app (Win32) | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import <br/><br/>To add your LOB app to a new tenant, you also need the original `.intunewin` application source files.|
 | **Compliance policies** | &nbsp; |
-| Actions for Non-Compliance | ❌ Export <br/>❌ Import<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
-| Assignments | ✅ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| Actions for Non-Compliance | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import<br/><br/>It's possible there could be a link to an e-mail template. When you import a policy that has non-compliance actions, the default actions for non-compliance are added instead. |
+| Assignments | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: Export<br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
 | **Configuration profiles** | &nbsp; |
-| Email |  ✅ Export <br/> <br/>✅ If an email profile doesn't use certificates, then the import should work. <br/>❌ If an email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
-| SCEP certificate | ✅ Export<br/><br/>❌ Import <br/><br/>SCEP certificate profiles use a root certificate. The root certificate ID is different in a new tenant. |
-| VPN |  ✅ Export<br/><br/> ✅ If a VPN profile doesn't use certificates, then the import should work.<br/> ❌ If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
-| Wi-Fi |  ✅ Export<br/><br/> ✅ If a Wi-Fi profile doesn't use certificates, then the import should work. <br/>❌ If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
-| Assignments | ✅ Export<br/>❌ Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
+| Email |  :::image type="icon" source="../media/icons/16/check.svg" border="false"::: Export <br/> <br/>:::image type="icon" source="../media/icons/16/check.svg" border="false"::: If an email profile doesn't use certificates, then the import should work. <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: If an email profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| SCEP certificate | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: Export<br/><br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import <br/><br/>SCEP certificate profiles use a root certificate. The root certificate ID is different in a new tenant. |
+| VPN |  :::image type="icon" source="../media/icons/16/check.svg" border="false"::: Export<br/><br/> :::image type="icon" source="../media/icons/16/check.svg" border="false"::: If a VPN profile doesn't use certificates, then the import should work.<br/> :::image type="icon" source="../media/icons/16/error.svg" border="false"::: If a VPN profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| Wi-Fi |  :::image type="icon" source="../media/icons/16/check.svg" border="false"::: Export<br/><br/> :::image type="icon" source="../media/icons/16/check.svg" border="false"::: If a Wi-Fi profile doesn't use certificates, then the import should work. <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: If a Wi-Fi profile uses a root certificate, then the profile can't be imported to a new tenant. The root certificate ID is different in a new tenant. |
+| Assignments | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: Export<br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import<br/><br/>Assignments are targeted to a group ID. In a new tenant, the group ID is different. |
 | **Endpoint Security** | &nbsp; |
-| Endpoint detection and response | ❌ Export <br/>❌ Import <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
+| Endpoint detection and response | :::image type="icon" source="../media/icons/16/error.svg" border="false"::: Export <br/>:::image type="icon" source="../media/icons/16/error.svg" border="false"::: Import <br/><br/>This policy is linked to Microsoft Defender for Endpoint. In the new tenant, you configure Microsoft Defender for Endpoint, which automatically includes the **Endpoint detection and response** policy. |
 
 ## Related articles
 
 - [Get started with Intune](get-started.md)
 - [Enrollment deployment guides](../device-enrollment/guide.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

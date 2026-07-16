@@ -3,8 +3,6 @@ title: Shared or multi-user Windows device settings in Microsoft Intune
 description: Add and use Windows 10/11 and Windows Holographic for Business devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft HoloLens. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
 ms.date: 04/22/2024
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Control access, accounts, and power features on shared PC or multi-user Windows devices using Intune
@@ -46,7 +44,7 @@ This feature applies to:
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -86,3 +84,7 @@ The next time each device checks in, the policy is applied.
 
 - See all the settings for [Windows](./ref-shared-device-settings-windows.md) and [Windows Holographic for Business](./ref-shared-device-settings-windows-holographic.md).
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

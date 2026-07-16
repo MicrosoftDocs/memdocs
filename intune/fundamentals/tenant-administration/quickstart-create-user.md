@@ -2,13 +2,9 @@
 title: Create a user in Intune and assign a license
 description: Learn how to create a user in Microsoft Intune and assign an Intune license to this user.
 services: microsoft-intune
-author: paolomatarazzo
-ms.author: paoloma
 ms.topic: how-to
 ms.date: 01/20/2026
 ms.reviewer: jlynn
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 2 - Create a user in Intune and assign the user a license
@@ -33,7 +29,7 @@ In this article, you create a user and then assign the user an Intune license. W
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the following role:
+> Sign in to the [Microsoft Intune admin center] and the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the following role:
 > - Built-in **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
@@ -44,7 +40,7 @@ A user needs a user account to enroll in Intune device management. You use this 
 
 To create a new user:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All users** > **New user**:
+1. In the [Microsoft Intune admin center], select **Users** > **All users** > **New user**:
 
    :::image type="content" alt-text="Screenshot that shows how to add a new user in Microsoft Intune." source="./media/quickstart-create-user/create-user.png" lightbox="./media/quickstart-create-user/create-user.png":::
 
@@ -116,3 +112,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 3 - Create a group to manage users](quickstart-create-group.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

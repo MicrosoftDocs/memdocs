@@ -4,8 +4,6 @@ description: Export Wi-Fi settings from a Windows device as an XML file using th
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Import Wi-Fi settings for Windows devices in Intune
@@ -28,7 +26,7 @@ This article shows you how to export Wi-Fi settings from a Windows device, and t
 
 ## Before you begin
 
-- To configure the Intune policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+- To configure the Intune policy, at a minimum, sign in to the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Export Wi-Fi settings from a Windows device
 
@@ -57,7 +55,7 @@ netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi
 
 When the XML file is ready, you can import it into Intune to create a Wi-Fi profile.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -96,3 +94,7 @@ When the XML file is ready, you can import it into Intune to create a Wi-Fi prof
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
 - See the [Wi-Fi settings overview](./configure-wifi.md), including other available platforms.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

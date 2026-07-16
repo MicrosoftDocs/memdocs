@@ -4,8 +4,6 @@ description: Set up enrollment in Intune for devices using the Android Enterpris
 ms.date: 05/19/2026
 ms.topic: how-to
 ms.reviewer: grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up enrollment for Android Enterprise fully managed devices
@@ -78,7 +76,7 @@ Intune automatically generates a default enrollment profile and enrollment token
 
 To create a new enrollment profile:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Android** tab.
 1. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned, fully managed user devices**.
@@ -184,7 +182,7 @@ When you create the enrollment profile in the admin center, you have to select a
 
 The default token, *corporate-owned, fully managed*, enrolls devices into Microsoft Intune as standard Android Enterprise corporate fully managed devices. This token requires you to complete pre-provisioning steps before you distribute the devices. End users complete the remaining steps on the device when they sign in with their work or school account.
 
-The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 10 or later.
+The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing in to the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 10 or later.
 
 For more information, see [Device staging overview](device-staging.md).
 
@@ -203,5 +201,6 @@ Select a token in the admin center to access these management options:
 
 When applied, these actions don't have any effect on devices that are already enrolled.
 
+<!--links-->
 
-
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

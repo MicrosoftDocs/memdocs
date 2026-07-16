@@ -4,8 +4,6 @@ description: Add, configure, or create settings on macOS devices to use system e
 ms.date: 09/23/2024
 ms.topic: reference
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # macOS device settings to configure and use kernel and system extensions in Intune

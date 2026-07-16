@@ -3,8 +3,6 @@ title: Get Started with the Device Offboarding Agent
 description: Learn about the Device Offboarding Agent in Microsoft Intune, its prerequisites, how it works, and how to configure it.
 ms.date: 10/15/2025
 ms.topic: overview
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 

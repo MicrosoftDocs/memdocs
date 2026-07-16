@@ -1,13 +1,9 @@
 ---
 title: iOS/iPadOS device enrollment guide for  Microsoft Intune
 description: Enroll iOS and iPadOS devices using user and device enrollment, automated device enrollment (DEP), and Apple Configurator in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/09/2025
 ms.topic: article
 ms.reviewer: auherrin, dregan, annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enrollment guide: Enroll Apple mobile devices in Microsoft Intune
@@ -43,7 +39,7 @@ For all Intune-specific prerequisites and configurations needed to prepare your 
 
 ## Automated Device Enrollment (ADE) (supervised)
 
-Use on devices owned by your organization. This option configures settings using Apple Business or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment policy in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this policy to the devices.
+Use on devices owned by your organization. This option configures settings using Apple Business or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment policy in the [Microsoft Intune admin center], and push this policy to the devices.
 
 For more specific information on this enrollment type, go to:
 
@@ -120,7 +116,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
   Don't install the Company Portal app from the app store directly on ADE-enrolled devices. Instead, install the Company Portal app using the following options:
 
-  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment policy in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**, make it a required app, and enable automatic app updates.
+  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment policy in the [Microsoft Intune admin center], select **Install Company Portal with VPP**, make it a required app, and enable automatic app updates.
 
     This option:
 
@@ -134,7 +130,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
   - **Already enrolled devices**: If devices are already enrolled, if you have VPP or not, then use an app configuration policy:
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
+    1. In the [Microsoft Intune admin center], add the Company Portal app as a required app, and as a device licensed app.
     2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, go to [Configure the Company Portal app to support iOS and iPadOS DEP devices](../../app-management/configuration/configure-managed-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     3. Deploy the app configuration policy to the same device group as the enrollment policy.
     4. When devices check in with the Intune service, it receives your policy, and the Company Portal app installs.
@@ -145,7 +141,7 @@ This task list provides an overview. For more specific information, go to [Apple
     - Requires you to create an enrollment policy, and create an app configuration policy. In your app configuration policy, make it a required app so you know the app deploys to all your devices.
     - The Company Portal app can be automatically updated by changing your existing app configuration policy.
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment policy:
+- In the [Microsoft Intune admin center], create an enrollment policy:
 
   - Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
   - Choose where users authenticate: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended).
@@ -154,7 +150,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
 ### ADE end user tasks
 
-When you create an enrollment policy in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment policy. With Shared iPad, after activation, all Setup Assistant panes are automatically skipped.
+When you create an enrollment policy in the [Microsoft Intune admin center], you choose to associate a user to the device (**Enroll with user affinity**), or have shared devices (**Enroll without user affinity**). The specific steps depend on how you configure the enrollment policy. With Shared iPad, after activation, all Setup Assistant panes are automatically skipped.
 
 - **Enroll with user affinity + Company Portal app**:
 
@@ -271,7 +267,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
   - **Already enrolled devices**: If devices are already enrolled, then use an app configuration policy:
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal app as a required app, and as a device licensed app.
+    1. In the [Microsoft Intune admin center], add the Company Portal app as a required app, and as a device licensed app.
     2. Create an app configuration policy that includes the Company Portal app as a device licensed app. For more specific information, go to [Configure the Company Portal app to support iOS and iPadOS DEP devices](../../app-management/configuration/configure-managed-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     3. Deploy the app configuration policy to the same device group as the enrollment policy.
     4. When devices check in with the Intune service, it receives your policy, and the Company Portal app installs.
@@ -282,7 +278,7 @@ This task list provides an overview. For more specific information, go to [Apple
     - Requires you to create an enrollment policy, and create an app configuration policy. In your app configuration policy, make it a required app so you know the app deploys to all your devices.
     - The Company Portal app can be automatically updated by changing your existing app configuration policy.
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment policy:
+- In the [Microsoft Intune admin center], create an enrollment policy:
 
   - Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
 
@@ -359,7 +355,7 @@ This list provides an overview of the tasks required of administrators.
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment policy. When you create the enrollment policy, you have the following options:
+- In the [Microsoft Intune admin center], create the enrollment policy. When you create the enrollment policy, you have the following options:
 
   - **Device enrollment with Company Portal**: This option is a typical enrollment in the Company Portal app for personal devices. The device is managed, not just specific apps or features. With this option, consider the following information:
 
@@ -407,7 +403,7 @@ Your users must do the following steps.
 
     Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-ios.md).
 
-Users with enabled app notifications receive a prompt to return to the Company Portal app to complete the required device registration. Users with disabled app notifications aren't alerted to this requirement. If you're utilizing dynamic groups, which rely on device registration to work, it's important that users complete device registration. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration.
+Users with enabled app notifications receive a prompt to return to the Company Portal app to complete the required device registration. Users with disabled app notifications aren't alerted to this requirement. If you're utilizing dynamic groups, which rely on device registration to work, it's important that users complete device registration. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign in to will prompt them to return to Company Portal to complete device registration.
 
 When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check in with Intune and receive policy updates.
 
@@ -438,3 +434,7 @@ For more information about the user experience, go to [Prepare employees for enr
 - [Linux enrollment guide](../guide-linux.md)
 - [macOS enrollment guide](guide-macos.md)
 - [Windows enrollment guide](../windows/guide.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

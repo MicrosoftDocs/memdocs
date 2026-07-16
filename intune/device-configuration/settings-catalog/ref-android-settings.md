@@ -1,15 +1,11 @@
 ---
 title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 05/26/2026
 ms.topic: reference
 params:
   siblings_only: true
 ms.reviewer: cchristenson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Intune settings catalog settings list
@@ -98,6 +94,118 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   Applies to:
 
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block apps from exposing app functions**: This setting controls whether managed apps can expose app functions — programmatic actions that other apps and on-device assistants or AI agents can invoke inside the app. This gives admins additional control over how managed apps interact with on-device agents. If **True**, apps on fully managed devices and apps in the work profile on corporate-owned devices are blocked from exposing app functions. If **False** (default OS behavior), apps are allowed to expose app functions.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block widgets from work profile apps**: If **True**, allows users to access widgets exposed by apps in the work profile on the device's home screen. If **False**, prevents access to these widgets. By default, the OS might allow widget access.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+
+#### Connectivity
+
+- **Allow selection of a preferential network service**: If **True**, the device gives priority to the specified network service over other available options, such as an enterprise slice on 5G networks. If **False**, the device connects using its default network selection process.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block airplane mode**: If **True**, the device is prevented from enabling airplane mode. If **False**, the device follows the default airplane mode behavior of the OS.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block cellular 2G**: If **True**, the device prevents cellular 2G functionality, restricting user access to the setting. If **False** (default), the device follows the default cellular 2G behavior of the OS. Supported on Android 14 and above.
+
+  Applies to:
+
+  - Android 14 and newer
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block configuring cell broadcasts**: If **True**, the device is prevented from receiving cell broadcast messages, such as emergency alerts. If **False** (default), Intune doesn't change or update this setting, and the OS might allow the reception of cell broadcast messages.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block configuring mobile networks**: **True** prevents users from configuring or modifying mobile network settings on the device. If **False** (default), Intune doesn't change or update this setting and the OS might allow users to adjust mobile network settings.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block configuring VPN**: If **True**, users can't add, edit, or remove VPN configurations on the device. If **False** or not configured, the device follows the default VPN configuration behavior of the OS.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block network reset**: If **True**, the device won't reset network settings even if a reset is attempted. If **False** (default), the device follows the default network reset behavior of the OS.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block outgoing calls**: If **True**, users are prevented from making outgoing calls on the device. If **False** (default), Intune doesn't change or update this setting, and the OS might allow outgoing calls.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block SMS**: If **True**, users are prevented from sending or receiving SMS messages on the device, restricting text communication. If **False** (default), Intune doesn't change or update this setting, and the OS might allow SMS messaging.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block ultra wideband**: If **True**, the device prevents ultra wideband functionality, restricting user access to the setting. If **False** (default), Intune doesn't change or update this setting, and the device follows the default ultra wideband behavior of the OS.
+
+  Applies to:
+
+  - Android 14 and newer
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Select minimum Wi-Fi security level**: Select the minimum Wi-Fi security level required for the device to connect to Wi-Fi networks. Your options:
+
+  - **Open network security** (default) - The device can connect to all types of Wi-Fi networks, including open networks that don't have any security.
+  - **Personal network security** - Requires personal networks, such as WEP or WPA2-PSK, as the minimum required security level.
+  - **Enterprise network security** - Requires enterprise EAP networks as the minimum required security level.
+  - **Enterprise 192-bit network security** - Requires 192-bit networks as the minimum required security level.
+
+  Applies to:
+
+  - Android 13 and newer
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
@@ -341,7 +449,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Location**: Contols the location services on the device. Your options:
+- **Location**: Controls the location services on the device. Your options:
 
   - **Device default** - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
   - **Location enabled** - Requires location services to be on and prevents end users from turning them off.
@@ -376,6 +484,14 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **Block printing**: If **True**, the device is prevented from printing documents. If **False** (default), the device follows the default printing behavior of the OS.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
 - **Block private space**: If **True**, users are prevented from creating or using private spaces on the device. All existing private spaces are deleted. If **False**, Intune doesn't change or update this setting. By default, the OS might allow private spaces.
 
   Applies to:
@@ -404,7 +520,31 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
 
+- **Block setting user icon**: If **True**, users are prevented from changing their user icon or profile image on the device. If **False** (default), Intune doesn't change or update this setting, and the OS might allow users to modify their user icon.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block setting wallpaper**: If **True**, users are prevented from changing the wallpaper on the device. If **False** (default), Intune doesn't change or update this setting, and the OS might allow users to change the wallpaper.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
 - **Block tethering and access to hotspots**: If **True**, prevents tethering and access to portable hotspots. If **False**, Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block users from adding eSIM profiles**: If **True**, users can't add eSIM profiles to the device. If **False** (default), users can add eSIM profiles based on the default behavior of the OS.
 
   Applies to:
 
@@ -474,6 +614,18 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   This feature applies to:
 
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Location**: Contols the location services on the device. Your options:
+
+  - **Device default** - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
+  - **Location enabled** - Requires location services to be on and prevents end users from turning them off.
+  - **Location disabled** - Requires location services to be off and prevents end users from turning them on. When this setting is disabled, any other setting that depends on the device location is affected, including the [Locate device](../../device-management/actions/locate.md) action that admins use.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 

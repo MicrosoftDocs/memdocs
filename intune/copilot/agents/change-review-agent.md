@@ -3,8 +3,6 @@ title: Change Review Agent Overview
 description: Learn about the Change Review Agent in Microsoft Intune, its prerequisites, and how it works.
 ms.date: 11/10/2025
 ms.topic: overview
-author: brenduns
-ms.author: brenduns
 ms.reviewer: zinebtakafi
 ---
 
@@ -184,7 +182,7 @@ The agent operates under the identity and permissions of the Intune admin accoun
 
 **To set up the Change Review Agent:**
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
+1. In the [Microsoft Intune admin center], go to **Agents** > **Change Review Agent**.
 
 2. In **Overview**, select **Set up Agent** to open the *Set up Change review agent* pane.
 
@@ -204,3 +202,7 @@ To learn more about using the agent, see [Use the Change Review Agent](manage-ch
 ## Related content
 
 - [Use the Change Review Agent](manage-change-review-agent.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

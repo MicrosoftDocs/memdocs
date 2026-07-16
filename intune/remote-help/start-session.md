@@ -1,12 +1,9 @@
 ---
 title: Using Remote Help on Windows to Assist Authenticated Users 
 description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
-ms.date: 10/16/2025
+ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer: Karawang
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Using Remote Help with Microsoft Intune
@@ -127,7 +124,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 1. Launch a session on the remote device from within the Microsoft Intune admin center:
  
-   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
+   1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
    2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
 
@@ -158,16 +155,19 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 1. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
 
-#### Provide help on an AVD
+#### Provide help in Azure Virtual Desktop desktop and RemoteApp sessions  
 
-If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple users on the device, you must follow the process described in this section to give help:
+In an Azure Virtual Desktop (AVD) desktop session, helpers can access and control a user's entire remote desktop. In an AVD RemoteApp session, helpers can only view and interact with the published app the user is running, not the full desktop.  
 
-1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you need to sign in to authenticate your organization.
+Although helpers can initiate Remote Help from the Intune admin center for AVD desktop sessions, the request is broadcast to all active users on the host. AVD RemoteApp sessions can't be directly targeted from the Intune admin center. In both scenarios, use the security code method to connect to the correct user session.  
 
-1. After signing into the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.
+1. Open the Remote Help app on your device and sign in with your organizational account.
 
->[!NOTE]
-> If you initiate the Remote Help request from Intune, then the notification is delivered to all active users on the Azure Virtual Desktop.
+1. Under **Give help**, select **Get a security code**. Give the generated security code to the sharer requesting assistance.
+
+1. The sharer enters the security code to establish the connection:  
+   - AVD desktop session: Open Remote Help in the active AVD session and enter the security code.  
+   - AVD RemoteApp session: Launch Remote Help within the RemoteApp session and enter the security code. After the connection is established, helpers can view and interact only with the published app available in that session.  
 
 >[!NOTE]
 > The restart option isn't available for helpdesk agents remotely helping AVD.
@@ -176,7 +176,7 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
-   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices**. Select the macOS device on which assistance is needed.
+   1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices**. Select the macOS device on which assistance is needed.
 
    1. From the remote action bar across the top of the device view, select **New remote assistance session** and select **Remote Help**. 
 
@@ -188,11 +188,11 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 1. After the sharer navigates to the Remote Help session, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
 
-1. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. The sharer can choose to **Allow** or to **Decline** the request.
+1. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. The sharer can choose to **Allow** or to **Decline** the request.  
 
 ### Enrolled macOS device
 
-1. The helper navigates to the device to connect to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. The helper navigates to the device to connect to the [Microsoft Intune admin center].  
 
   1. Sign in to the Microsoft Intune admin center and go to **Devices** > **All devices** and select the macOS device on which assistance is needed.
 
@@ -240,7 +240,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
-   a. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices**. Select the Android device on which assistance is needed.
+   a. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices**. Select the Android device on which assistance is needed.
 
    b. From the remote action bar across the top of the device view, select **New remote assistance session**. Select **Remote Help**, and then select **Continue**.
 
@@ -260,8 +260,8 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
     c. During an unattended control session, the screen of the device you're connected to is blocked due to security and privacy reasons, and the user is notified if they interact with it. If the user interacts with the blocked screen, they'll receive a notification letting them know that you're currently accessing the device. When the notification is shown, you and the end user won't be able to take any action for 30 seconds when this screen will close.
 
-      > [!TIP]
-      > We recommend limiting your activities to nonsensitive operations during an unattended control session, even with the screen of the device you're connected to blocked to the end user.  
+      > [!IMPORTANT]
+      > Do not perform sensitive operations during an unattended control session. On devices that use unattended access, do not install  or allowlist any apps that can record or mirror the screen. 
 
 1. At the end of the session, select **Leave** to end the session from the admin console.
 
@@ -289,3 +289,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 ## Next steps
 
 [Get support in the Microsoft Intune admin center.](../fundamentals/it-pro-support/get-support-admin-center.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

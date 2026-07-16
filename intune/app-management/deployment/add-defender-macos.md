@@ -24,7 +24,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 You can add Microsoft Defender for Endpoint to Intune using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **App type** list under the **Microsoft Defender for Endpoint**, select **macOS**.
 
@@ -70,3 +70,7 @@ The app you've created is displayed in the apps list, where you can assign it to
 - To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../../device-configuration/endpoint-security/antivirus.md)
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-scope.md).
 - To learn how to assign apps to groups in Intune, see [Assign apps to groups](./assign-groups.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

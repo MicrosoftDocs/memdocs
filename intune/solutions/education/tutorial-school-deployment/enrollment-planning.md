@@ -2,8 +2,6 @@
 
 title: Plan Education device enrollment
 description: Plan enrollment for Education devices in Intune.
-author: scottbreenmsft
-ms.author: scbree
 ms.date: 5/2/2024
 ms.topic: tutorial
 searchScope:
@@ -58,7 +56,7 @@ Devices continue to sync in the background after provisioning. Track provisionin
 
 Windows Autopilot is a collection of technologies you can use to simplify the setup and configuration of new school devices. With this method, there's no need for imaging. To set up your devices with Windows Autopilot:
 
-- Register the device with Windows Autopilot in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Partner center](https://partner.microsoft.com/dashboard/home).
+- Register the device with Windows Autopilot in the [Microsoft Intune admin center] or [Partner center](https://partner.microsoft.com/dashboard/home).
 - Create and assign a Windows Autopilot deployment profile, Enrollment Status Page (ESP) profile, apps, and policies.
 
 #### [Intune](#tab/intune)
@@ -98,19 +96,19 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 
 **Windows Autopilot** and **provisioning packages** are usually the most efficient Windows enrollment methods for school environments.
 
-The following table provides more information about the features supported by each Windows provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.
+The following table provides more information about the features supported by each Windows provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::) means that the provisioning method supports the feature or capability. An **X** (:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::) means that the provisioning method doesn't support it.
 
 | Configuration need | Provisioning package | Windows Autopilot  |
 |---------|---------|---------|
-|Apply custom OS images.| ✔️ | ✔️ <br/><br/> Devices must remain in OOBE mode after you apply the images.|
-|Bulk enroll devices.| ✔️ | ✔️ |
-|Allow IT department or staff to provision devices.  | ✔️ <br/><br/> This method requires you or your IT staff to unbox the device, turn on the device, and configure the device. | ✔️ <br/><br/> This method is optimized for limited engagement from IT staff, so students and teachers can unbox the device, turn on the device, and complete the initial configuration.
-|An OEM can enroll devices on your behalf.| ❌ | ✔️ <br/><br/>The OEM provider must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can [pre-provision devices](/autopilot/pre-provision).|
-|Microsoft Partner or Cloud Service Provider (CSP) partner can enroll devices on your behalf.| ✔️ | ✔️ <br/><br/> Partners must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can pre-provision devices.|
-|Set up a shared device. | ✔️  | ✔️ <br/><br/> We recommend using [Windows Autopilot self-deploying mode](/autopilot/self-deploying) for shared device scenarios. To set up devices for individual users, use [Windows Autopilot user-driven mode](/autopilot/user-driven).  |
-|Set up a device for a single user.|✔️ <br/><br/> A [primary user](../../../device-management/inventory-and-status/find-primary-user.md) isn't assigned.|✔️ <br/><br/> Supported with [Windows Autopilot user-driven mode](/autopilot/user-driven). To set up shared devices, use [Windows Autopilot self-deploying mode](/autopilot/self-deploying).|
-|Add apps. | ✔️ <br/><br/> You can add Win32 apps to the provisioning package to reduce deployment time and network load during deployment. Silent installation is required for Win32 apps. | ✔️ <br/><br/> Works well with all [app types](../../../app-management/deployment/index.md). Silent installation is required for Win32 apps. To further reduce deployment time and network load during deployment, you can pre-provision devices. |
-|Devices are ready for sign-in and use on first day of class.| ✔️ | ❌ <br/><br/> Students must connect the device to Wi-Fi and complete the remaining setup steps. To further reduce end-user provisioning time, you can pre-provision devices. |
+|Apply custom OS images.| :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> Devices must remain in OOBE mode after you apply the images.|
+|Bulk enroll devices.| :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: |
+|Allow IT department or staff to provision devices.  | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> This method requires you or your IT staff to unbox the device, turn on the device, and configure the device. | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> This method is optimized for limited engagement from IT staff, so students and teachers can unbox the device, turn on the device, and complete the initial configuration.
+|An OEM can enroll devices on your behalf.| :::image type="icon" source="../../../media/icons/16/error.svg" border="false"::: | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/>The OEM provider must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can [pre-provision devices](/autopilot/pre-provision).|
+|Microsoft Partner or Cloud Service Provider (CSP) partner can enroll devices on your behalf.| :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> Partners must first register device IDs in the Windows Autopilot service. To further reduce IT engagement and end-user provisioning time, they can pre-provision devices.|
+|Set up a shared device. | :::image type="icon" source="../../../media/icons/16/check.svg" border="false":::  | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> We recommend using [Windows Autopilot self-deploying mode](/autopilot/self-deploying) for shared device scenarios. To set up devices for individual users, use [Windows Autopilot user-driven mode](/autopilot/user-driven).  |
+|Set up a device for a single user.|:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> A [primary user](../../../device-management/inventory-and-status/find-primary-user.md) isn't assigned.|:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> Supported with [Windows Autopilot user-driven mode](/autopilot/user-driven). To set up shared devices, use [Windows Autopilot self-deploying mode](/autopilot/self-deploying).|
+|Add apps. | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> You can add Win32 apps to the provisioning package to reduce deployment time and network load during deployment. Silent installation is required for Win32 apps. | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: <br/><br/> Works well with all [app types](../../../app-management/deployment/index.md). Silent installation is required for Win32 apps. To further reduce deployment time and network load during deployment, you can pre-provision devices. |
+|Devices are ready for sign-in and use on first day of class.| :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../../media/icons/16/error.svg" border="false"::: <br/><br/> Students must connect the device to Wi-Fi and complete the remaining setup steps. To further reduce end-user provisioning time, you can pre-provision devices. |
 
 ::: zone-end
 
@@ -119,16 +117,16 @@ The following table provides more information about the features supported by ea
 **Automated Device Enrollment** is usually the most efficient iOS enrollment method
 for school environments.
 
-The following table provides more information about the features supported by each iOS provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (✔️) means that the provisioning method supports the feature or capability. An **X** (❌) means that the provisioning method doesn't support it.
+The following table provides more information about the features supported by each iOS provisioning method. Use the **Features** column to identify your school's environment and setup needs. A **checkmark** (:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::) means that the provisioning method supports the feature or capability. An **X** (:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::) means that the provisioning method doesn't support it.
 
 |Configuration need | Company Portal | Automated Device Enrollment | Apple Configurator |
 |---------|---------|---------|---------|
-|Bulk enroll devices.|❌|✔️|✔️|
-|Allow IT department or staff to provision devices.|✔️|✔️|❌|
-|Devices are user-less or shared.|❌|✔️|✔️|
-|A Partner can enroll devices on your behalf.|❌|✔️|✔️|
-|Enroll without Apple School Manager.|✔️|❌|✔️|
-|Devices are ready for sign-in and use on first day of class.|❌|✔️|✔️|
+|Bulk enroll devices.|:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|
+|Allow IT department or staff to provision devices.|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::|
+|Devices are user-less or shared.|:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|
+|A Partner can enroll devices on your behalf.|:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|
+|Enroll without Apple School Manager.|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|
+|Devices are ready for sign-in and use on first day of class.|:::image type="icon" source="../../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../../media/icons/16/check.svg" border="false":::|
 
 ::: zone-end
 
@@ -136,3 +134,7 @@ ________________________________________________________
 
 > [!div class="nextstepaction"]
 > [Next: Plan grouping >](grouping-and-targeting.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

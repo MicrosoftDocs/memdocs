@@ -4,8 +4,6 @@ description: Create an email device configuration profile in Microsoft Intune, a
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add email settings to devices using Intune
@@ -262,7 +260,7 @@ After the app is deployed and installed:
 
 After the email app is assigned to the device, this next step creates the device configuration policy that configures the email connection. If your email app uses an app configuration policy to configure the app, then skip this step.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -342,3 +340,7 @@ If you make changes to an email profile you previously assigned, end users might
 ## Related articles
 
 Once the profile is created, it might not be doing anything yet. Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

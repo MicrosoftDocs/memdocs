@@ -1,12 +1,8 @@
 ---
 title: Microsoft Intune core concepts
 description: Learn how Microsoft Intune works across identities, devices, and apps, and how the three pillars come together to drive access decisions.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/14/2026
 ms.topic: concept-article
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Microsoft Intune core concepts

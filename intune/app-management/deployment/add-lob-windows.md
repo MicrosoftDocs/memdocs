@@ -4,7 +4,6 @@ description: Learn how to add a Windows line-of-business (LOB) app using Microso
 ms.date: 04/14/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows
@@ -23,7 +22,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **Windows** platform, and then select **Line-of-business app**.
 4. Choose **Select**. The **Add app** steps are displayed.
@@ -108,3 +107,7 @@ You can add and deploy store-signed LOB apps (single file *.appx*, *.msix*, *.ap
 - Learn more about the context of your app in Intune. See [Overview of the app lifecycle in Microsoft Intune](../lifecycle.md).
 
 - Learn more about Win32 apps. See [Win32 app management](./win32.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

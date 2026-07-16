@@ -1,12 +1,8 @@
 ---
 title: Configure security, email, VPN, and Wi-Fi device configuration profiles
 description: Step 4 to deploy device configuration profiles as part of the minimum set of policies for your devices using Microsoft Intune. The starting point is to enable the firewall, install AV, scan for malware, install software updates, create a strong PIN policy, and create email, VPN, and Wi-Fi device configuration profiles.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/18/2026
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 4 - Configure device features and settings to secure devices and access resources
@@ -45,7 +41,7 @@ When you create device configuration profiles, you can choose from different lev
 
 This article lists the different levels of device configuration policies that organizations should use. Most of these policies focus on access to organization resources and security.
 
-Configure these features in device configuration profiles in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the Intune profiles are ready, assign them to your users and devices.
+Configure these features in device configuration profiles in the [Microsoft Intune admin center]. When the Intune profiles are ready, assign them to your users and devices.
 
 > [!TIP]
 > [Take a tour of Intune and the Microsoft Intune admin center](tutorial-admin-center-walkthrough.md).
@@ -570,3 +566,7 @@ This article is part of a five-step series that describes how to deploy Microsof
 3. [Plan for compliance policies](deploy-compliance-step-3.md)
 4. 🡺 **Configure device features** (this article)
 5. [Enroll devices](../device-enrollment/enroll-devices.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

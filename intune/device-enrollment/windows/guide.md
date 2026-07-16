@@ -1,13 +1,8 @@
 ---
 title: Windows device enrollment guide for Microsoft Intune
 description: Enroll Windows devices using Automatic enrollment, Windows Autopilot, group policy, and co-management enrollment options in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/28/2024
 ms.topic: article
-ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enrollment guide: Enroll Windows client devices in Microsoft Intune
@@ -40,7 +35,7 @@ Use for personal and corporate-owned devices running Windows. Microsoft Entra ID
 Automatic enrollment:
 
 - Uses the **Access school or work** feature on the devices (**Settings** app > **Accounts**).
-- Uses the enrollment options you configure in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Uses the enrollment options you configure in the [Microsoft Intune admin center].
 
 You can use this enrollment option to:
 
@@ -70,8 +65,8 @@ You can use this enrollment option to:
 
 - Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../fundamentals/ref-supported-platforms.md).
 
-- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
+- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Microsoft Intune admin center], test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
+- In the [Microsoft Intune admin center], select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
 
   - **MDM user scope**: When set to **Some** or **All**, devices are joined to Microsoft Entra ID, and devices are managed by Intune. It doesn't matter who's signed in to the device, or if devices are personal or BYOD. When set to **None**, devices aren't joined to Microsoft Entra ID, and aren't managed by Intune.
 
@@ -159,7 +154,7 @@ When users turn on the device, the next steps determine how they're enrolled. Cl
 
 Use on organization-owned devices running Windows.
 
-Windows Autopilot uses the Windows client OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. Windows Autopilot also requires Automatic enrollment, and uses the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile. When users sign in with their organization account, they're automatically enrolled.
+Windows Autopilot uses the Windows client OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. Windows Autopilot also requires Automatic enrollment, and uses the [Microsoft Intune admin center] to create an enrollment profile. When users sign in with their organization account, they're automatically enrolled.
 
 For more information about Windows Autopilot, go to [Windows Autopilot overview](/autopilot/overview) or [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios).
 
@@ -186,7 +181,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 
 - Be sure your devices are running a currently supported version of Windows. For a complete list, go to [software requirements](/autopilot/requirements?tabs=software#software-requirements).
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Microsoft Entra ID. For more specific information, go to [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
+- In the [Microsoft Intune admin center], register the devices in to Windows Autopilot. This step joins the devices to Microsoft Entra ID. For more specific information, go to [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
 
 - Create a Windows Autopilot deployment profile. For more specific information, go to [Create a Windows Autopilot deployment profile](/autopilot/profiles#create-a-windows-autopilot-deployment-profile).
 
@@ -202,7 +197,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 
   For more specific information, go to [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
-After the profile is assigned, the devices start showing in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **By platform** > **Windows**).
+After the profile is assigned, the devices start showing in the [Microsoft Intune admin center] (**Devices** > **By platform** > **Windows**).
 
 ### Windows Autopilot end user tasks
 
@@ -267,7 +262,7 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 - Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../fundamentals/ref-supported-platforms.md).
 
-- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
+- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Microsoft Intune admin center], test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
 
 - Decide if users can do organization work on personal devices. On personal devices, users are typically administrators, and used a personal email account (`user@outlook.com`) to configure the device. To register these devices in Microsoft Entra ID, use the Settings app. As an admin, tell users the options they should choose. Be specific.
 
@@ -323,7 +318,7 @@ Co-management manages Windows devices using Configuration Manager and Microsoft 
 For more specific information on co-management, go to [What is co-management?](../../configmgr/comanage/overview.md).
 
 > [!NOTE]
-> Tenant attach is also an option when using Configuration Manager. You don't enroll devices, but you can upload your Configuration Manager devices to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Use the admin center to run some remote actions, go to your on-premises servers, and get OS information. For more information, go to [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+> Tenant attach is also an option when using Configuration Manager. You don't enroll devices, but you can upload your Configuration Manager devices to the [Microsoft Intune admin center]. Use the admin center to run some remote actions, go to your on-premises servers, and get OS information. For more information, go to [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
 ---
 | Feature | Use this enrollment option when |
@@ -370,3 +365,7 @@ Configuration Manager can randomize the enrollment, so enrollment might not occu
 - [iOS/iPadOS enrollment guide](../apple/guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)
 - [macOS enrollment guide](../apple/guide-macos.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

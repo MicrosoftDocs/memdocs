@@ -1,39 +1,58 @@
 ---
 title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune
 description: See a list of all the email settings you can configure and add to iOS and iPadOS devices in Microsoft Intune, including using Exchange servers, and getting attributes from Microsoft Entra ID. You can also enable SSL, authenticate users with certificates or username/password, and synchronize email on iOS/iPadOS devices using device configuration profiles in Microsoft Intune.
-ms.date: 04/15/2024
+ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: beflamm, sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
-# Add e-mail settings for iOS and iPadOS devices in Microsoft Intune
+# Add email settings for iOS and iPadOS devices in Microsoft Intune
 
-In Microsoft Intune, you can create and configure email to connect to an Exchange email server, choose how users authenticate, use S/MIME for encryption, and more. The email profile uses the native or built-in email app on the device, and allows users to connect to their organization email.
-
-This feature applies to:
-
-- iOS/iPadOS
+In Microsoft Intune, you can create and configure an email profile to connect to an Exchange email server, choose how users authenticate, use S/MIME for encryption, and more. The email profile uses the native or built-in email app on the device, and users can connect to their organization email.
 
 This article describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
 
-## Before you begin
+## Prerequisites
 
-- Deploy your email app. For more information, go to [Configure email apps](./configure-email.md).
-- Create an [iOS/iPadOS e-mail device configuration profile](./configure-email.md).
-- These settings:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platform:
+> - iOS/iPadOS, all enrollment types. For more information about the enrollment types, see [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
+:::column-end:::
+:::row-end:::
 
-  - Are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
-  - Use the [Apple ExchangeActiveSync payload](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (opens Apple's web site).
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
+> - Deploy your [email app](./configure-email.md).
+> - Create an [iOS/iPadOS e-mail device configuration profile](./configure-email.md).
+>
+> These settings use the [Apple ExchangeActiveSync payload](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (opens Apple's web site).
+:::column-end:::
+:::row-end:::
 
 ## Exchange ActiveSync account settings
 
 - **Email server**: Enter the host name of your Exchange server.
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
 - **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that this profile uses. Your options:
-  - **User Principal Name**: Gets the name, like `user1` or `user1@contoso.com`
-  - **Primary SMTP address**: Gets the Simple Mail Transfer Protocol (SMTP) name in email address format, like `user1@contoso.com`
+  - **User Principal Name**: Gets the name, like `user1` or `user1@contoso.com`.
+  - **Primary SMTP address**: Gets the Simple Mail Transfer Protocol (SMTP) name in email address format, like `user1@contoso.com`.
   - **sAM Account Name**: Requires the domain, like `domain\user1`. Also enter:
     - **User domain name source**: Select **Microsoft Entra ID** or **Custom**:
       - **Microsoft Entra ID**: Get the attributes from Microsoft Entra ID. Also enter:
@@ -75,7 +94,7 @@ This article describes all the email settings available for devices running iOS/
 
 ## Exchange ActiveSync profile configuration
 
-Configuring these settings deploys a new profile to the device, even when an existing email profile is updated to include these settings. Users are prompted to enter their Exchange ActiveSync account password. These settings take effect when the password is entered.
+When you configure these settings, you deploy a new profile to the device, even if you're updating an existing email profile to include these settings. Users are prompted to enter their Exchange ActiveSync account password. These settings take effect when the password is entered.
 
 - **Exchange data to sync**: When using Exchange ActiveSync, choose the Exchange services that are synced on the device: Calendar, Contacts, Reminders, Notes, and Email. Your options:
   - **All data** (default): Sync is enabled for all services.
@@ -94,7 +113,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
   - **No**: Users can't change the sync settings of all the services. Choosing **No** blocks changes to *all* services.
 
   > [!TIP]
-  > If you configured the **Exchange data to sync** setting to sync only some services, we recommend selecting **No** for this setting. Choosing **No** prevents users from changing the Exchange service that's synced.
+  > If you configured the **Exchange data to sync** setting to sync only some services, select **No** for this setting. Choosing **No** prevents users from changing the Exchange service that's synced.
 
   This feature applies to:
   - iOS 13.0 and newer
@@ -131,7 +150,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
 
     - **Force per-message encryption**: Per-message encryption allows users to choose which emails are encrypted before being sent.
 
-      **Enable** shows the per-message encryption option when creating a new email. Users can then choose to opt in or opt-out of per-message encryption. If the **Encrypt by default** setting is also enabled, enabling per-message encryption allows users to opt out of encryption per message.
+      **Enable** shows the per-message encryption option when creating a new email. Users can then choose to opt in or opt out of per-message encryption. If the **Encrypt by default** setting is also enabled, enabling per-message encryption allows users to opt out of encryption per message.
 
       **Disable** (default) prevents the per-message encryption option from showing. If the **Encrypt by default** setting is also disabled, enabling per-message encryption allows users to opt in to encryption per message.
 
@@ -140,7 +159,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
         - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
         - **Certificates**: Select an existing [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PKCS](../../device-configuration/certificates/pkcs-profiles.md) certificate profile that signs email messages.
-      - **Allow user to change setting**: **Enable** allow users to change the encryption certificate. **Disable** (default) prevents users from changing the encryption certificate, and forces users to use the certificate you configured.
+      - **Allow user to change setting**: **Enable** allows users to change the encryption certificate. **Disable** (default) prevents users from changing the encryption certificate, and forces users to use the certificate you configured.
 
         This feature applies to:
         - iOS 12 and newer
@@ -161,5 +180,4 @@ Configuring these settings deploys a new profile to the device, even when an exi
 ## Related articles
 
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
-
-- Configure email settings on [Android](./ref-email-settings-android.md), [Android Enterprise](./ref-email-settings-android-enterprise.md), and [Windows](./ref-email-settings-windows.md) devices.
+- Configure email settings on [Android Enterprise](./ref-email-settings-android-enterprise.md) and [Windows](./ref-email-settings-windows.md) devices.

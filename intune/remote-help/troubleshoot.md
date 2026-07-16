@@ -4,9 +4,6 @@ description: Use the troubleshooting and monitoring information for Remote Help 
 ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: Karawang
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Troubleshoot and Monitor Remote Help
@@ -15,7 +12,7 @@ ms.collection:
 
 You can monitor the use of Remote Help from within the Microsoft Intune admin center. For unenrolled devices, reporting on Remote Help sessions is limited.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote Help**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Tenant admin** > **Remote Help**.
 
 2. On the Monitor tab, you can see a count of active sessions and historical data about past sessions.
 
@@ -153,3 +150,7 @@ For Windows devices, the following are known issues with Remote Help when using 
 ## Next steps
 
 [Get support in Microsoft Intune admin center.](../fundamentals/it-pro-support/get-support-admin-center.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

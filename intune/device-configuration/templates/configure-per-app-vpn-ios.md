@@ -4,8 +4,6 @@ description: See the prerequisites, create a group for the virtual private netwo
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune
@@ -31,7 +29,7 @@ Some VPNs allow username and password authentication with per-app VPN. Meaning, 
 
 Microsoft Tunnel and Zscaler Private Access (ZPA) integrate with Microsoft Entra ID for authentication. When using Tunnel or ZPA, you don't need the [trusted certificate](#step-2---create-a-trusted-certificate-profile) or [SCEP or PKCS certificate](#step-3---create-a-scep-or-pkcs-certificate-profile) profiles (described in this article).
 
-If you have a per-app VPN profile set up for Zscaler, then opening one of the associated apps doesn't automatically connect to ZPA. Instead, the user needs to sign into the Zscaler app. Then, remote access is limited to the associated apps.
+If you have a per-app VPN profile set up for Zscaler, then opening one of the associated apps doesn't automatically connect to ZPA. Instead, the user needs to sign in to the Zscaler app. Then, remote access is limited to the associated apps.
 
 ## Prerequisites
 
@@ -65,7 +63,7 @@ For the steps to create a new group, go to [Add groups to organize users and dev
 
 Import the VPN server's root certificate issued by the CA into an Intune profile. This root certificate is the `.cer` file you exported in [Prerequisites](#prerequisites) (in this article). The trusted certificate profile instructs the iOS/iPadOS device to automatically trust the CA that the VPN server presents.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -107,7 +105,7 @@ When you're ready to assign the profile, assign this profile to the group you cr
 
 This VPN profile includes the SCEP or PKCS certificate that has the client credentials, the VPN connection information, and the per-app VPN flag that enables the per-app VPN used by the iOS/iPadOS application.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties and select **Create**:
 
     - **Platform**: Select **iOS/iPadOS**.
@@ -143,7 +141,7 @@ When you're ready to assign the profile, assign this profile to the group you cr
 
 After adding your VPN profile, associate the app and Microsoft Entra group to the profile.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps**.
+1. In the [Microsoft Intune admin center], select **Apps** > **All Apps**.
 2. Select an app from the list > **Properties** > **Assignments** > **Edit**.
 3. Go to the **Required** or **Available for enrolled devices** section.
 4. Select **Add group** > Select the group you created in [Step 1 - Create a group for your VPN users](#step-1---create-a-group-for-your-vpn-users) (in this article) > **Select**.
@@ -192,3 +190,7 @@ Verify the zero-touch experience by connecting without having to select the VPN 
 
 - To review iOS/iPadOS settings, go to [VPN settings for iOS/iPadOS devices in Microsoft Intune](./ref-vpn-settings-apple.md).
 - To learn more about VPN setting and Intune, go to [configure VPN settings in Microsoft Intune](./configure-vpn.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -4,15 +4,13 @@ description: After you assign an app to users or devices, use this information t
 ms.date: 03/19/2026
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Monitor app information and assignments with Microsoft Intune
 
 Intune provides several ways to monitor the properties of apps that you manage and to manage app assignment status.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps**.
 3. In the list of apps, select an app to monitor. You see the app pane, which includes an overview of the device status and the user status.
 
@@ -136,3 +134,7 @@ The following table provides additional installation error code details for LOB 
 
 - To learn more about working with your Intune data, see [Use the Intune Data Warehouse](../developer/data-warehouse/create-reports.md).
 - To learn about app configuration policies, see [App configuration policies for Intune](./configuration/overview.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -3,8 +3,6 @@ title: Step 5 – Enroll devices in Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and Windows devices in Intune.
 ms.date: 4/29/2026
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 5 – Enroll devices in Microsoft Intune
@@ -156,7 +154,7 @@ Enroll new or wiped devices purchased from Apple Business or Apple School Manage
 
 # [User owned](#tab/user-owned-apple)
 
-* [BYOD enrollment for Macs](../device-enrollment/apple/methods-macos.md): Enable enrollment in Intune for personally owned Macs in bring-your-own-device (BYOD) scenarios. Intune-licensed device users initialize enrollment by signing into the Company Portal app on their device.
+* [BYOD enrollment for Macs](../device-enrollment/apple/methods-macos.md): Enable enrollment in Intune for personally owned Macs in bring-your-own-device (BYOD) scenarios. Intune-licensed device users initialize enrollment by signing in to the Company Portal app on their device.
 
 * [Apple User Enrollment](../device-enrollment/apple/setup-user-company-portal.md): Enable Apple User Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This option gives device owners the option to secure the entire device or just work-related apps and data, and keeps managed data and apps on a separate volume away from the user's personal data. Enrollment takes place in the Company Portal app.
 
@@ -192,7 +190,7 @@ Make enrollment in Intune easier for employees and students by enabling automati
 These options can be used by users in BYOD scenarios who want to enroll their personal devices without joining them to a domain.
 * [Connect a work or school account](../device-enrollment/windows/guide.md#automatic-enrollment-end-user-tasks): Users go to the Settings app on their device and add their work or school account. They add their work email address without selecting a domain joining option.
 * [Enrollment using the Intune Company Portal app](../user-help/enrollment/enroll-windows.md): Users sign in to the Intune Company Portal app with their work account to enroll their devices. They can install Company Portal from Microsoft Store.
-* Enrollment via a Microsoft 365 app sign-in: Users sign into a Microsoft 365 app or service, such as Exchange Online, from an unmanaged and unregistered device with their work account. On the sign-in prompt, they select **Allow my organization to manage my device**.
+* Enrollment via a Microsoft 365 app sign-in: Users sign in to a Microsoft 365 app or service, such as Exchange Online, from an unmanaged and unregistered device with their work account. On the sign-in prompt, they select **Allow my organization to manage my device**.
 
 In all of these BYOD scenarios, the devices are Microsoft Entra registered and managed by Intune. If both the MDM and MAM user scopes are enabled for a user in the [Intune automatic enrollment configuration](../device-enrollment/windows/enable-automatic-mdm.md), then the MAM user scope will take precedence and the device will not be enrolled and managed by Intune.
 

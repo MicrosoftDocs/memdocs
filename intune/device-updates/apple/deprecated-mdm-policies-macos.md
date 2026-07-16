@@ -30,7 +30,7 @@ This feature applies to:
 
 ## Configure the policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
     > [!TIP]
     > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
@@ -195,3 +195,7 @@ For each device on the list, the Installation Status displays the error that
 ## Next steps
 
 [Monitor device profiles](../../device-configuration/monitor-device-profile.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

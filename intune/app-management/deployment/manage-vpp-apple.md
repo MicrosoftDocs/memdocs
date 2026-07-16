@@ -3,7 +3,6 @@ title: Manage Apple Volume-Purchased Apps
 description: Learn how to sync apps you bought in volume through Apple Business Manager with Microsoft Intune. Then manage and track these apps on iOS/iPadOS and macOS devices.
 ms.date: 01/13/2026
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
@@ -86,7 +85,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 
 ## Upload an Apple VPP or Apple Business Manager location token
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, select **Create**. The **Create VPP token** process is displayed. There are four pages used when creating a VPP token. The first is **Basics**.
 4. On the **Basics** page, specify the following information:
@@ -212,7 +211,7 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
 2. Within Apple Business (or School) Manager, select **Preferences** > **Payments and Billing** > **Apps and Books** > **Content  Tokens**.
 3. Select **Download** and save the token file.
-4. Update the token in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
+4. Update the token in [Microsoft Intune admin center] by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 5. Select the VPP token you're renewing, select **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 
 > [!NOTE]
@@ -222,17 +221,17 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 
 ## Configure updates for VPP apps
 
-You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. The **Prevent automatic updates** setting is dependent on the token-level **Allow automatic updates** setting. To use the **Prevent automatic updates**, the **Allow automatic updates** setting must be set to **Yes**. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments**.
+You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. The **Prevent automatic updates** setting is dependent on the token-level **Allow automatic updates** setting. To use the **Prevent automatic updates**, the **Allow automatic updates** setting must be set to **Yes**. This setting is available in [Microsoft Intune admin center] by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments**.
 
 ## Deleting a VPP app
 You can delete purchased apps that don't have any available or used licenses associated with them. Deleting the apps might be necessary to clean up apps that are no longer assigned.
 
 To delete a VPP app, use the following steps:
 1. Create a new location in [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
-2. Revoke all licenses for the app that use the associated location token. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
+2. Revoke all licenses for the app that use the associated location token. In [Microsoft Intune admin center], select **Apps** > **All Apps** > *select the app to delete* > **App licenses** > **Revoke licenses**.
 3. In Apple Business Manager or Apple School Manager, transfer all licenses for the app from the original location to the new location.
-4. Sync the location token in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-5. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All Apps** > *right-click on the app to delete* > **Delete**.
+4. Sync the location token in [Microsoft Intune admin center].
+5. Delete the app in [Microsoft Intune admin center] by selecting **Apps** > **All Apps** > *right-click on the app to delete* > **Delete**.
 
 Deleting a VPP app causes the following results:
 - The associated app assignments are removed.
@@ -279,3 +278,7 @@ Yes. The Intune admin can oversubscribe an app. For example, if the admin purcha
 See [How to monitor apps](../monitor-assignments.md) for information to help you monitor app assignments.
 
 See [How to troubleshoot apps](/troubleshoot/mem/intune/troubleshoot-app-install) for information on troubleshooting app-related issues.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

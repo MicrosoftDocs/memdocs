@@ -2,13 +2,8 @@
 title: Step 7. Troubleshoot Microsoft Edge for Business Data Security
 description: Step 7. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
 ms.date: 01/23/2026
-author: nicholasswhite
-ms.author: nwhite
 ms.topic: troubleshooting
-ms.reviewer: samarti
 ms.custom:
-ms.collection:
-- FocusArea_Apps_AppManagement
 ---
 
 # Step 7. Troubleshoot Microsoft Edge for Business Data Security
@@ -56,9 +51,9 @@ Use this list when users report issues with Microsoft Edge for Business:
 
 ### App protection policies not enforcing
 
-- **Likely cause:** User is signed into Edge with a personal profile  
+- **Likely cause:** User is signed in to Edge with a personal profile  
 - **How to fix:**
-  - Confirm user signed into Edge with Entra ID account
+  - Confirm user signed in to Edge with Entra ID account
 
 ### App configuration policies showing as failed
 

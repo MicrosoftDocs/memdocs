@@ -3,9 +3,6 @@ title: User Device Association - Intune Data Warehouse
 description: The UserDeviceAssociation entity contains user device associations in your organization.
 ms.date: 10/30/2024
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 # Reference for User Device Association entity
 

@@ -4,8 +4,6 @@ description: Reference guide for device and app properties, operators, and rule 
 ms.date: 02/24/2026
 ms.topic: reference
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune
@@ -142,7 +140,7 @@ You can use the following device properties in your managed device filter rules:
   > [!NOTE]
   > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune assignment filters article apply to Intune. They don't apply to Microsoft Entra ID.
 
-- **`enrollmentProfileName` (Enrollment profile name)**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
+- **`enrollmentProfileName` (Enrollment profile name)**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Microsoft Intune admin center], and go to **Devices** > **Enroll devices**.
 
   Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -265,7 +263,7 @@ You can use the following device properties in your managed device filter rules:
   - `(device.operatingSystemSKU -in ["Enterprise", "EnterpriseS", "EnterpriseN", "EnterpriseEval"])`
   - `(device.operatingSystemSKU -startsWith "Enterprise")`
 
-  You can use the following supported values for the **Operating System SKU** property. The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) doesn't show the SKU names. So, be sure to use the supported values in the following table:
+  You can use the following supported values for the **Operating System SKU** property. The [Microsoft Intune admin center] doesn't show the SKU names. So, be sure to use the supported values in the following table:
 
   | Supported value | OS SKU definition |
   | ---- | --- |
@@ -542,3 +540,7 @@ When you use the `operatingSystemVersion (Operating System Version)` property, y
 - [Supported workloads when creating assignment filters](ref-supported-workloads.md)
 - [Filter performance recommendations](performance-recommendations.md)
 - [Filter reports and troubleshooting](troubleshoot.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

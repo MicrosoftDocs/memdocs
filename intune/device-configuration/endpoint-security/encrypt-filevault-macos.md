@@ -4,9 +4,6 @@ description: Use Microsoft Intune policy to configure and manage FileVault disk 
 ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: beflamm 
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Encrypt macOS devices with FileVault using Intune
@@ -107,7 +104,7 @@ The *Device configuration > Endpoint protection* template includes FileVault as 
 
 ### Standard FileVault deployment
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
@@ -163,7 +160,7 @@ Settings Catalog provides the most comprehensive FileVault configuration options
 
 ### Standard Settings Catalog deployment
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > *By platform* > **macOS** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 
@@ -336,7 +333,7 @@ Configure automatic key rotation in FileVault policies:
 
 Administrators can manually rotate recovery keys:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 2. Select **Devices** > **All devices**
 3. Select the encrypted device
 4. Under **Monitor**, select **Recovery keys**
@@ -469,3 +466,7 @@ FileVault encryption integrates with Intune compliance policies:
 - [FileVault settings reference for endpoint security policies](./ref-disk-encryption-settings.md#filevault)
 - [Apple FileVault deployment guide](https://support.apple.com/guide/deployment/dep32bf53500/web) *(opens Apple's website)*
 - [End-user guidance for FileVault recovery keys](../../user-help/security/import-recovery-key-macos.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

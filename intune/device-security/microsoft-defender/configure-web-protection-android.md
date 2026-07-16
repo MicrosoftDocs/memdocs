@@ -4,10 +4,6 @@ description: Use Intune policy to manage Microsoft Defender for Endpoint web pro
 ms.date: 05/22/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint web protection on Android devices managed by Intune
@@ -52,7 +48,7 @@ To configure web protection on devices, use the following procedures to create a
 >
 > You can't disable web protection for the Android Enterprise personally owned work profile if you've configured the [Auto Setup of Always-on VPN](./deploy-android.md#set-up-always-on-vpn) device configuration policy on the enrolled devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Select **Apps** > **Managed apps** > **Configuration** > **Create**, and then select **Managed devices**.
 
@@ -110,7 +106,7 @@ To configure web protection on devices, use the following procedures to create a
 
 [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 
@@ -159,4 +155,8 @@ To configure web protection on devices, use the following procedures to create a
 
   - [Microsoft Defender for Endpoint Conditional Access](/defender-endpoint/conditional-access)
 
-  - [Microsoft Defender for Endpoint risk dashboard](/defender-endpoint/security-operations-dashboard)
+  - [Security Operations Guide for Defender for Endpoint](/defender-endpoint/mde-sec-ops-guide)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

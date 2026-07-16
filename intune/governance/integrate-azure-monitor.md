@@ -1,13 +1,9 @@
 ---
 title: Route logs to Azure Monitor using Microsoft Intune
 description: Use Diagnostics Settings to send audit logs and operational logs in Microsoft Intune to Azure Storage account, Event Hubs, or Log Analytics. Choose how long you want to keep the data, and see some estimated costs for different size tenants.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 05/28/2026
 ms.topic: how-to
 ms.reviewer: chnatar, daviales
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Send Intune log data to Azure Storage, Event Hubs, or Log Analytics
@@ -50,7 +46,7 @@ Depending on where you want to route the audit log data, you need one of the fol
 
 ## Send logs to Azure monitor
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Diagnostics settings**. The first time you open it, turn it on. Otherwise, add a setting.
 
     :::image type="content" source="./media/integrate-azure-monitor/diagnostics-settings-turn-on.png" alt-text="Screenshot that shows how to turn on Diagnostics settings in Microsoft Intune to send logs to Azure Monitor.":::
@@ -196,7 +192,7 @@ After the action:
 > [!NOTE]
 > Intune doesn't guarantee that Device Compliance Organizational Logs or Intune Devices report data will be exported or available at a specific time of day. These exports can occur anytime within each 24-hour export period and remain subject to the documented delivery window. As Microsoft improves the export pipeline, the observed completion time might change.
 >
-> If you depend on exported Intune data for reports, dashboards, or automation, use a consumption schedule in your software solution that accounts for variable export timing. Don’t rely on a fixed or previously observed completion time.
+> If you depend on exported Intune data for reports, dashboards, or automation, use a consumption schedule in your software solution that accounts for variable export timing. Don't rely on a fixed or previously observed completion time.
 
 When Azure Monitor services receive the data, it typically shows in the Azure Monitor service within 30 minutes.
 
@@ -244,3 +240,7 @@ The export pipeline might duplicate up to 100% of the data published in a 24-hou
 - [Archive activity logs to a storage account](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
 - [Route activity logs to Azure Event Hubs](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
 - [Integrate activity logs with Log Analytics](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

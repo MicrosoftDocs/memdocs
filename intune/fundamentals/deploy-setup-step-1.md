@@ -1,8 +1,6 @@
 ---
 title : Set up Intune
 description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions, and set the MDM authority.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 03/18/2026
 ms.topic: install-set-up-deploy
 ms.collection:
@@ -52,7 +50,7 @@ For guidance and need-to-know information, see [Supported configurations](ref-su
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with sign up, or sign in to Intune**
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Sign in to the [Microsoft Intune admin center].
 
 Before you sign up for Intune, determine whether you already have a Microsoft Online Services account, Enterprise Agreement, or equivalent volume licensing agreement. A Microsoft volume licensing agreement or other Microsoft cloud services subscription, such as Microsoft 365, usually includes a work or school account.
 
@@ -188,3 +186,7 @@ This article is part of a five-step series that describes how to deploy Microsof
 3. [Create compliance policies](deploy-compliance-step-3.md)
 4. [Configure device features and settings](deploy-configuration-step-4.md)
 5. [Enroll devices](../device-enrollment/enroll-devices.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

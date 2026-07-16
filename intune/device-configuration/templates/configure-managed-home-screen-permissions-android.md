@@ -4,8 +4,6 @@ description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX,
 ms.date: 03/03/2026
 ms.topic: how-to
 ms.reviewer: abigailstein
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune
@@ -47,10 +45,10 @@ The following table lists the permissions that you can configure for the MHS app
 
 | Permission | Samsung | Zebra | Legacy Zebra | Honeywell |
 |---|---|---|---|---|
-| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ | ✅ |
-| **Notification Permission** is required by:<br/><br/>- Notification badge | ✅ | ✅ | ✅ | n/a |
-| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ✅ | ✅ | n/a | ✅ |
-| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a | ✅ |
+| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ![check-icon] | ![check-icon] | ![check-icon] | ![check-icon] |
+| **Notification Permission** is required by:<br/><br/>- Notification badge | ![check-icon] | ![check-icon] | ![check-icon] | n/a |
+| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ![check-icon] | ![check-icon] | n/a | ![check-icon] |
+| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ![check-icon] | ![check-icon] | n/a | ![check-icon] |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](./deploy-oemconfig-zebra-android.md#oemconfig-apps-for-zebra-devices).
 
@@ -58,7 +56,7 @@ For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for
 
 - This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](./configure-oemconfig-android.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
 - Devices must be MDM enrolled in Intune as dedicated devices or fully managed devices. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
-- To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+- To configure this policy, at a minimum, sign in to the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Step 1 - Get the app from the Managed Google Play Store
 
@@ -81,7 +79,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Samsung](#tab/samsung-app)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Knox Service Plugin** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -92,7 +90,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Zebra](#tab/zebra-mx-app)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Zebra OEMConfig Powered by MX** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -103,7 +101,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Zebra Legacy](#tab/zebra-legacy-app)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Legacy Zebra OEMConfig** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -114,7 +112,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Honeywell](#tab/honeywell)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Honeywell UEMConnect** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -140,7 +138,7 @@ When you use the schema settings in the **Knox Service Plugin** app, the Intune 
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -195,7 +193,7 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -216,8 +214,8 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
     For the steps to configure the OEM app schema, go to the OEM's documentation:
 
-    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.9.x.x and Up](https://supportcommunity.zebra.com/s/article/000027795) (opens Zebra's web site)
-    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://supportcommunity.zebra.com/s/article/000021297) (opens Zebra's web site)
+    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.9.x.x and Up](https://support.zebra.com/article/000027795) (opens Zebra's web site)
+    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://support.zebra.com/article/000021297) (opens Zebra's web site)
     - [Zebra Managed Configurations docs](https://techdocs.zebra.com/oemconfig/15-0/mc2/#pkgConfig.package.packagePermissions.packagePermission) (opens Zebra's web site)
 
     When you create the Intune policy, you enter the following info:
@@ -244,7 +242,7 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -265,8 +263,8 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
 
     For the steps to configure the OEM app schema, go to the OEM's documentation:
 
-    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://supportcommunity.zebra.com/s/article/000021297)
-    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.5.x.x](https://supportcommunity.zebra.com/s/article/000026099)
+    - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://support.zebra.com/article/000021297)
+    - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.5.x.x](https://support.zebra.com/article/000027795)
 
     When you create the Intune policy, you enter the following info:
 
@@ -293,7 +291,7 @@ When you use the schema settings in the **Honeywell UEMConnect** app, the Intune
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -335,3 +333,13 @@ The next time the device checks for configuration updates, the settings you conf
 ## Related articles
 
 - [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](./configure-oemconfig-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+<!-- icons -->
+
+[check-icon]: ../../media/icons/16/check.svg
+[error-icon]: ../../media/icons/16/error.svg
+[info-icon]: ../../media/icons/16/info-gray.svg

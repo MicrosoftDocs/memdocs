@@ -39,7 +39,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 ### Create an iOS/iPadOS or Android app protection policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Protection**. This selection opens the **Protection** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
@@ -206,3 +206,7 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 ## See also
 - [Where to find work or school apps for Android (user help)](../../user-help/apps/managed-apps-android.md)
 - [Where to find work or school apps for iOS/iPadOS (user help)](../../user-help/apps/managed-apps-ios.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

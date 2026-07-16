@@ -3,12 +3,6 @@ title: Use Endpoint Privilege Management to transition users from administrator 
 description: Understand the steps and phases for using Endpoint Privilege Management to transition users from administrators to standard users.
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Use Endpoint Privilege Management to transition users from administrator to standard user
@@ -24,7 +18,7 @@ Regardless of whether you're migrating from another endpoint privilege managemen
 
 **Steps to create the policy:**
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Endpoint Security** > **Endpoint Privilege Management** > **Policies**
 3. Select **Create Policy**. Enter the following details:
    - **Platform:** Windows
@@ -54,7 +48,7 @@ Regardless of whether you're migrating from another endpoint privilege managemen
 
 **After 24 hrs or more have passed:**
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Endpoint Security** > **Endpoint Privilege Management** > **Reports**
 3. Select **Elevation report**
 4. Review the details of the elevation report
@@ -99,7 +93,7 @@ For more security recommendations, see [Security Recommendations](./deployment-p
 
 ### Steps to create a rule using elevation report data
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Endpoint Security** > **Endpoint Privilege Management** > **Policies**
 3. Select **Elevation report**
 4. Select an application or process (for example. `C:\Program Files\Notepad++\`)
@@ -128,7 +122,7 @@ For more details on creating a rule, see [Create elevation rules](./create-eleva
 
 ## Phase 4: Remove local admin rights
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Endpoint Security** > **Account protection**
 3. Select Create Policy:
    - **Platform:** Windows
@@ -164,3 +158,7 @@ For more information on the Local Users and Groups profiles, see [Account protec
 
 > [!div class="nextstepaction"]
 > [Next: Support approved requests >](./manage-support-approvals.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,13 +1,9 @@
 ---
 title: Set the mobile device management authority
 description: Learn about how to set the mobile device management authority in Microsoft Intune and some key considerations.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/24/2024
 ms.topic: how-to
 ms.reviewer: dagerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set the mobile device management authority
@@ -30,7 +26,7 @@ Possible configurations are:
 
 ## Set MDM authority to Intune
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. If the orange banner is not visible, you can navigate directly to the MDM Authority settings to configure the [MDM authority](https://intune.microsoft.com/#view/Microsoft_Intune_Enrollment/ChooseMDMAuthorityBlade).
+1. In the [Microsoft Intune admin center], select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. If the orange banner is not visible, you can navigate directly to the MDM Authority settings to configure the [MDM authority](https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Enrollment/ChooseMDMAuthorityBlade).
 
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:
 
@@ -87,7 +83,7 @@ Before enabling coexistence with Basic Mobility and Security, consider the follo
 
 To enable coexistence, you must add Intune as the MDM authority for your environment:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Microsoft Entra Global or Intune service administrator rights.
+1. Sign in to the [Microsoft Intune admin center] with Microsoft Entra Global or Intune service administrator rights.
 2. Navigate to **Devices**.
 3. The **Add MDM Authority blade** banner is displayed.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
@@ -139,9 +135,13 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
 
 To confirm that your MDM authority is set to Intune, use the following steps:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status**.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Tenant status**.
 2. Under the **Tenant details** tab, find **MDM authority**.
 
 ## Next steps
 
 With the MDM authority set, you can start [enrolling devices](../device-enrollment/guide.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

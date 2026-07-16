@@ -3,9 +3,6 @@ title: Intune endpoint security Account protection (Preview) policy settings
 description: Endpoint security Account protection policy settings in Microsoft Intune
 ms.date: 07/23/2024
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: juidaewo
 
 ---
@@ -49,7 +46,7 @@ Supported platforms and profiles:
 
 - **Block Windows Hello for Business**
 
-  Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.
+  Windows Hello for Business is an alternative method for signing in to Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.
   - **Not configured** (*default*) - Devices provision Windows Hello for Business.
   - **Disabled** - Devices provision Windows Hello for Business. With this configuration, more settings are available that support configurations for PIN, Trusted Platform Module (TPM), and more.
   - **Enabled** - Devices don't provision Windows Hello for Business for any user

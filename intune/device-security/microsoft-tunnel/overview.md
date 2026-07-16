@@ -4,10 +4,6 @@ description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune t
 ms.date: 05/26/2026
 ms.topic: article
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Microsoft Tunnel for Microsoft Intune

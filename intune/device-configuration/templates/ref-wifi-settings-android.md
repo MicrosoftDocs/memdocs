@@ -4,8 +4,6 @@ description: Create or add a WiFi device configuration profile for Android devic
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android device administrator settings that configure Wi-Fi in Intune

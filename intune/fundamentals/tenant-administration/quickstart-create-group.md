@@ -1,13 +1,9 @@
 ---
 title: Create a Group to Manage Users
 description: Learn how to create a group in Microsoft Intune and add users to the groups. Use groups to manage user access to company resources and assign policies.
-author: nicholasswhite
-ms.author: nwhite
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 3 - Create a group to manage users
@@ -32,7 +28,7 @@ In this article, you use Intune to create a group based on an existing user. Use
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
@@ -54,7 +50,7 @@ In this step, you create a group. You use this group later in another task in th
 
 To create a group:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. In the [Microsoft Intune admin center], select **Groups** > **New group**.
 2. In the **Group type** dropdown box, select **Security**.
 3. In the **Group name** field, enter the name for the new group (for example, **Contoso Testers**).
 4. Add a **Group description** for the group.
@@ -78,3 +74,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 4 - Set up automatic enrollment for Windows devices](../../device-enrollment/windows/quickstart-automatic-mdm.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

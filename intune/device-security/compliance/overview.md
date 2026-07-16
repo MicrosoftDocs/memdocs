@@ -4,10 +4,6 @@ description: Overview of Microsoft Intune device compliance, including tenant-wi
 ms.date: 05/14/2024
 ms.topic: concept-article
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
@@ -26,7 +22,7 @@ Intune compliance policies are divided into two areas:
 
 *Compliance policy settings* are tenant-wide settings that determine how Intune’s compliance service interacts with your devices. These settings are distinct from the settings you configure in a device compliance policy.
 
-To manage the compliance policy settings, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
+To manage the compliance policy settings, sign in to [Microsoft Intune admin center] and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
 Compliance policy settings include:
 
@@ -47,7 +43,7 @@ Compliance policy settings include:
 
   By default, the period is set to 30 days. You can configure a period from 1 to 120 days.
 
-  You can view details about a device's compliance with the validity period setting. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column. For more information about this setting and related compliance status views, see [Monitor device compliance](./monitor-policy.md).
+  You can view details about a device's compliance with the validity period setting. Sign in to [Microsoft Intune admin center] and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column. For more information about this setting and related compliance status views, see [Monitor device compliance](./monitor-policy.md).
 
 ## Device compliance policies
 
@@ -96,8 +92,11 @@ The following topics link to dedicated articles for different aspects of device 
 - [**Custom compliance settings**](./custom-settings.md) - By using custom compliance settings, you can expand on Intune's built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
-  - Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
-  - Windows
+  - Linux 
+    - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+    - RedHat Enterprise Linux 9 or 10  
+  - macOS
+  - Windows  
 
 ## Monitor compliance status
 
@@ -155,3 +154,7 @@ The following table describes how noncompliant settings are managed when you use
 - [Third-party device compliance partners](./third-party-partners.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md)
 - [Reference for policy entities](../../developer/data-warehouse/ref-policy.md) has information about the Intune Data Warehouse policy entities
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

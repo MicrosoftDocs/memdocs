@@ -1,14 +1,8 @@
 ---
 title: Set up Jamf Mobile Threat Protection integration with Microsoft Intune
 description: How to set up the Jamf Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 06/30/2025
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Integrate Jamf Mobile Threat Protection with Intune
@@ -44,7 +38,7 @@ Setting up integration between Jamf and Intune doesn't require any support from 
 
 ### Enable support for Jamf in Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Create**.
 
@@ -149,3 +143,7 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 
 - With Jamf Activation Profiles loaded in the Jamf Security Cloud portal, create client apps in Intune to deploy the Jamf Trust app to Android and iOS/iPadOS devices. The Jamf app config provides essential functionality to complement device configuration profiles that are pushed to devices, and is recommended for all deployments. See [Add MTD apps](./assign-apps.md) for the procedures and custom details specific to the Jamf apps.
 - With Jamf integrated with Intune, you can tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Jamf Security Cloud Portal Setup Guide](https://learn.jamf.com/bundle/jamf-security-cloud-setup-guide/page/RADAR_Portal.html) from Jamf.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

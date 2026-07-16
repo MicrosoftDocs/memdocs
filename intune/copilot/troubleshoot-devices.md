@@ -2,7 +2,6 @@
 title: Copilot in Intune shows device information and helps troubleshoot
 description: Microsoft Security Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
 ms.date: 05/26/2026
-ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: ankurgoyal, zadvor, rashok
 ms.collection:
@@ -51,7 +50,7 @@ As you type your question in Copilot Chat, an intelligent search matches your re
 
 This section guides you through some Copilot prompts that you can use.
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices**.
 3. Select **Copilot**:
 
@@ -103,3 +102,7 @@ This prompt shows all the policies that are assigned to the device. Use this pro
 
 - [Copilot in Intune](index.md)
 - [Copilot in Intune FAQ](faq.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -3,13 +3,7 @@ title: Deploy and configure Microsoft Defender for Endpoint on Android
 description: Learn how to deploy and configure Microsoft Defender for Endpoint on Android devices using Microsoft Intune, including app configuration policies, always-on VPN, and low-touch onboarding.
 ms.date: 04/06/2026
 ms.topic: how-to
-ms.author: brenduns
-author: brenduns
-ms.reviewer: aanavath
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Deploy and configure Microsoft Defender for Endpoint on Android
@@ -42,7 +36,7 @@ Use Microsoft Intune to deploy and configure Defender for Endpoint on Android de
 
 To add the Defender for Endpoint app to your Managed Google Play store and make it available in Intune:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** (1) and then select the Android tile to open the **Android apps** page (2). Select **Create** (3) and for App type, select **Managed Google Play app** (4), and then select **Select**.
+1. In the [Microsoft Intune admin center], go to **Apps** (1) and then select the Android tile to open the **Android apps** page (2). Select **Create** (3) and for App type, select **Managed Google Play app** (4), and then select **Select**.
 
    :::image type="content" source="./media/deploy-android/managed-google-play-app.png" alt-text="Screenshot that shows where in the Microsoft Intune admin center portal to create a Managed Google Play app." lightbox="./media/deploy-android/managed-google-play-app.png":::
 
@@ -96,7 +90,7 @@ After deploying the app, use Intune policies to configure Defender for Endpoint 
 
 Create an app configuration policy to grant Defender the permissions it needs on the device and, optionally, enable low-touch onboarding to reduce the steps users complete during first launch.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, expand *Managed apps*, and select **Configuration** > **Create** > **Managed devices**.
+1. In the [Microsoft Intune admin center], go to **Apps**, expand *Managed apps*, and select **Configuration** > **Create** > **Managed devices**.
 
 1. On the **Basics** page, specify the following details:
 
@@ -152,7 +146,7 @@ Create an app configuration policy to grant Defender the permissions it needs on
 
 Use a device configuration profile to deliver Defender's web protection tunnel to enrolled devices through Intune policy, so users don't need to manually configure a VPN during onboarding.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** (1), expand *Manage devices*, and select **Configuration** (2). On the *Policies* tab (3), select **Create** (4) \> **New Policy**. On the *Create a profile* pane, set *Platform* to **Android Enterprise** and *Profile type* to **Templates** (5), and then select **Device restrictions** (6) for one of the following template types, based on your device enrollment type:
+1. In the [Microsoft Intune admin center], go to **Devices** (1), expand *Manage devices*, and select **Configuration** (2). On the *Policies* tab (3), select **Create** (4) \> **New Policy**. On the *Create a profile* pane, set *Platform* to **Android Enterprise** and *Profile type* to **Templates** (5), and then select **Device restrictions** (6) for one of the following template types, based on your device enrollment type:
 
    - **Fully Managed, Dedicated, and Corporate-Owned Work Profile**
    - **Personally-Owned Work Profile**
@@ -223,3 +217,7 @@ If devices don't appear as expected, check for the following conditions:
 
 - [Configure Microsoft Defender for Endpoint web protection settings for Android](./configure-web-protection-android.md): Manage web protection settings from Intune by enrollment type.
 - [Configure Microsoft Defender for Endpoint on Android features](/defender-endpoint/android-configure): Configure privacy controls and other Android-specific Defender features.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

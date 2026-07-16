@@ -5,8 +5,6 @@ services: microsoft-intune
 ms.topic: how-to
 ms.date: 01/20/2026
 
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 10 - Create and assign a custom RBAC role in Microsoft Intune
@@ -33,7 +31,7 @@ Intune includes several built-in RBAC roles that you can use. Microsoft recommen
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Intune Role Administrator](../role-based-access-control/ref-built-in-roles.md#intune-role-administrator)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
@@ -55,7 +53,7 @@ To complete this evaluation step, you must have a group with at least one user.
 
 When you create a custom role, you can set permissions for a wide range of actions. For the security operations role, enable *Read* permissions for a few categories so that the operator can review a device's configurations and policies.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administrator** > **Roles**. Select **Create**. From the drop-down box, select **Intune role**. The *Add Custom Role* workflow opens.
+1. Sign in to the [Microsoft Intune admin center] and go to **Tenant administrator** > **Roles**. Select **Create**. From the drop-down box, select **Intune role**. The *Add Custom Role* workflow opens.
 
    :::image type="content" source="./media/quickstart-custom-role/add-custom-role.png" alt-text="Screenshot of Microsoft Intune admin center showing Tenant administration, All roles selected, and Create Intune role menu open." lightbox="./media/quickstart-custom-role/add-custom-role.png":::
 
@@ -85,7 +83,7 @@ When you create a custom role, you can set permissions for a wide range of actio
 
 ## Assign the role to a group
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Roles** > **All roles**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Tenant administration** > **Roles** > **All roles**.
 
 1. On **Intune roles - All roles**, select the custom **Security operations** role you created. In the role's *Overview*, select **Assignments**, and then select **Assign**.
 
@@ -109,7 +107,7 @@ Now, everyone in the group is a member of the *Security operations* role and can
 
 ## Clean up resources
 
-If you no longer want to use the custom role, you can delete it. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Roles** > **All roles**. Locate the role, select the ellipses (...) to the left of the role description, and then select **Delete**.
+If you no longer want to use the custom role, you can delete it. In the [Microsoft Intune admin center], go to **Tenant administration** > **Roles** > **All roles**. Locate the role, select the ellipses (...) to the left of the role description, and then select **Delete**.
 
 ## Next steps
 
@@ -119,3 +117,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 11 - Create an email device profile for iOS/iPadOS](../../device-configuration/templates/quickstart-email-profile.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,7 +1,7 @@
 ---
 title: Add an Enterprise App Catalog App to Microsoft Intune
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
-ms.date: 04/14/2026
+ms.date: 06/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: dguilory
@@ -13,7 +13,7 @@ ms.collection:
 
 # Add an Enterprise App Catalog App to Microsoft Intune
 
-The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility.
 
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM), which is part of Microsoft Intune Suite and available for trial and purchase. For more information, see [Microsoft Intune advanced capabilities](../../fundamentals/advanced-capabilities.md).
@@ -36,7 +36,7 @@ Microsoft established Service Level Objectives (SLOs) to provide predictable tim
 
 The following steps help you add a Windows App Catalog app to Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **Windows** platform, and then select **Enterprise App Catalog app**.
 4. Choose **Select** to add the app type.
@@ -66,7 +66,7 @@ The **App information** step provides the fields:
 - **Show this as a featured app in the Company Portal**: Featured apps are prominently placed in the Company Portal so that users can quickly get to them.
 - **Information URL**: Link end-users to a website or documentation that has more information about the app. The information URL is visible to users in the Company Portal.
 - **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL is visible to users in the Company Portal.
-- **Developer**: The name of the company or individual that developed the app. This information is visible to people signed into the Intune admin center.
+- **Developer**: The name of the company or individual that developed the app. This information is visible to people signed in to the Intune admin center.
 - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name is visible to people signed in to the Intune admin center.​
 - **Notes**: Add more notes about the app. Notes are visible to people signed in to the admin center.
 - **Logo**: Upload a logo associated with the app. This logo appears next to the app throughout the Company Portal.​
@@ -232,7 +232,7 @@ The **Rules format** provides the following options:
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
+When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center], select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Scope tags** step.
 
@@ -249,7 +249,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
 > For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app fails to install.
 
 1. For the specific app, select an assignment type:
-    - **Required**: The app is installed on devices in the selected groups.
+    - **Required**: The app is installed on devices in the selected groups. You can enable **auto-update** for required assignments so Intune automatically updates the app on targeted devices when a newer version is available in the Enterprise App Catalog. For more information, see [Auto-update for Enterprise App Catalog apps](./enterprise-app-management.md#auto-update-for-enterprise-app-catalog-apps).
     - **Available for enrolled devices**: Users install the app from the company portal app or the company portal website.
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Select **Add group** and assign the groups that use this app.
@@ -312,3 +312,7 @@ When Multi-Admin Approval (MAA) is enabled for your tenant, there are some limit
 - [App relationship viewer](./win32.md#app-relationship-viewer)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

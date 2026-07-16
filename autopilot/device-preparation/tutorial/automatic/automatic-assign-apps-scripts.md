@@ -58,7 +58,7 @@ In addition, Windows Autopilot device preparation supports deploying both Win32 
 
 To assign the desired applications to the device group created for Windows Autopilot device preparation:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Apps** in the left hand pane.
 
@@ -92,7 +92,7 @@ To assign the desired applications to the device group created for Windows Autop
 
 To assign the desired PowerShell scripts to the device group created for Windows Autopilot device preparation:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -136,3 +136,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 - [Assign apps to groups with Microsoft Intune](/intune/app-management/deployment/assign-groups).
 - [Win32 app management in Microsoft Intune](/intune/app-management/deployment/win32).
 - [Add a Windows line-of-business app to Microsoft Intune](/intune/app-management/deployment/add-lob-windows).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

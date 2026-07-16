@@ -1,15 +1,9 @@
 ---
 title: Enable Mobile Threat Defense connector in Microsoft Intune
 description: Enable the connector between your Mobile Threat Defense (MTD) partner and Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 05/26/2026
 ai-usage: ai-assisted
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Microsoft Intune
@@ -28,7 +22,7 @@ To successfully enable the Mobile Threat Defense connector, use an account that'
 
 ## To enable the Mobile Threat Defense connector
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
 
@@ -146,3 +140,7 @@ For more information about using Mobile Threat Defense connectors for Intune App
 ## Next steps
 
 - [Create Mobile Threat Defense (MTD) device compliance policy with Intune](./create-compliance-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

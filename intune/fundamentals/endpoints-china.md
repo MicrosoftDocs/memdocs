@@ -1,18 +1,14 @@
 ---
 title: Network endpoints for China deployments - Microsoft Intune
 description: Review China endpoints for Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: srink
-ms.collection:
-- M365-identity-device-management
 ---
 
 # China endpoints for Microsoft Intune
 
-This page lists the China endpoints needed for proxy settings in your Intune deployments.
+This page lists the China endpoints that are needed for proxy settings in your Intune deployments.
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 

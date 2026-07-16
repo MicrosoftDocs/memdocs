@@ -4,9 +4,6 @@ description: Enable Intune automatic enrollment of Windows devices that join or 
 services: microsoft-intune
 ms.topic: how-to
 ms.date: 01/27/2026
-ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 4 - Set up automatic enrollment for Windows devices
@@ -32,7 +29,7 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
@@ -52,7 +49,7 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 
 In this example, you configure Microsoft Intune mobile device management (MDM) enrollment settings so that corporate-owned and personal devices automatically enroll in Microsoft Intune. *MDM user scope* enables automatic enrollment for Microsoft Intune device management.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 2. Go to the **Windows** tab. Then select **Automatic Enrollment**.
 
     > [!IMPORTANT]
@@ -83,3 +80,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 5 - Enroll your Windows device](quickstart-first-device.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

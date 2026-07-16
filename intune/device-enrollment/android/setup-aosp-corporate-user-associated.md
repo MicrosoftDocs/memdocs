@@ -4,8 +4,6 @@ description: Set up Intune for corporate-owned user-associated devices built on 
 ms.date: 05/15/2025
 ms.topic: how-to
 ms.reviewer: jieyan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices
@@ -65,7 +63,7 @@ This article describes how to set up Android (AOSP) device management and enroll
 ## Create an enrollment profile
 Create an enrollment profile to enable enrollment on devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Android** tab.
 4. Under **Android Open Source Project (AOSP)**, choose **Corporate-owned, user-associated devices**.
@@ -122,7 +120,7 @@ You can also export the enrollment profile JSON file. To create a JSON file, sel
 ### Replace a token
 You can generate a new token to replace one that's nearing its expiration date. The replacement token doesn't affect devices that are already enrolled.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 2. Select the **Android** tab.
 3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, user-associated devices**.
 3. Choose the profile that you want to work with.
@@ -138,7 +136,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
  Revoking a token has no effect on devices that are already enrolled.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 2. Select the **Android** tab.
 3. In the **Android Open Source Project (AOSP)** section, choose **Corporate-owned, user-associated devices**.
 4.    Choose the profile that you want to work with.
@@ -151,7 +149,7 @@ Dynamic device groups are configured to automatically add and remove devices bas
 
 Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Android (AOSP) corporate-owned, user-associated enrollment profile.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. Sign in to the [Microsoft Intune admin center] and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)
@@ -244,3 +242,7 @@ The following are known limitations when working with AOSP devices in Intune:
 * Create a policy that requires users to accept your [terms and conditions](../create-terms-and-conditions.md) before enrollment.
 
 * For more information about how to get started with AOSP, see [Android source requirements](https://source.android.com/setup/build/requirements)(opens Android source documentation).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

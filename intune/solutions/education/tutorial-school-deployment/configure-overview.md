@@ -3,8 +3,6 @@ title: Configure devices with Microsoft Intune
 description: Learn how to configure policies and applications in preparation for device deployment.
 ms.date: 5/2/2024
 ms.topic: tutorial
-author: scottbreenmsft
-ms.author: scbree
 ---
 
 # Configure settings and applications with Microsoft Intune

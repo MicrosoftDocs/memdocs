@@ -3,10 +3,6 @@ title: Create trusted certificate profiles in Microsoft Intune
 description: Create and deploy trusted certificate profiles to deploy a trusted root certificate to managed devices in Intune. Trusted certificate profiles support use of Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles with Microsoft Intune.
 ms.date: 09/23/2024
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Trusted root certificate profiles for Microsoft Intune
@@ -86,7 +82,7 @@ After you name the certificate, it can be saved.
 
 ### To create a trusted certificate profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -135,3 +131,7 @@ Create certificate profiles:
 - [Configure infrastructure to support SCEP certificates with Intune](../../fundamentals/certificates/scep-infrastructure.md)
 - [Configure and manage PKCS certificates with Intune](./pkcs-profiles.md)
 - [Create a PKCS imported certificate profile](./imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

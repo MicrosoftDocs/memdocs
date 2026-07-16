@@ -5,7 +5,7 @@ ms.date: 02/03/2026
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
-- Microsoft 365-identity-device-management
+- M365-identity-device-management
 - Android
 - FocusArea_Apps_SpecificApp
 ---
@@ -117,7 +117,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Microsoft Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is offered when Microsoft Edge for iOS and Android has a managed apps App Configuration Policy applied to the work or school account that is signed into the app.
+Microsoft Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is offered when Microsoft Edge for iOS and Android has a managed apps App Configuration Policy applied to the work or school account that is signed in to the app.
 
 Microsoft Edge supports the following settings for configuration:
 
@@ -480,7 +480,7 @@ Note: even aforementioned behaviors are enabled by default, every Edge mobile us
 
 ## Data protection app configuration scenarios
 
-Microsoft Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Intune with a managed apps App Configuration Policy applied to the work or school account that is signed into the app:
+Microsoft Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Intune with a managed apps App Configuration Policy applied to the work or school account that is signed in to the app:
 
 - Manage account synchronization
 - Manage restricted web sites
@@ -719,7 +719,7 @@ This policy determines the default view mode for websites. Organizations can spe
 
 ## Other app configuration for managed devices
 
-The following policies, originally configurable through app configuration policy for managed apps, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users aren't required to sign into Microsoft Edge to apply the policies.
+The following policies, originally configurable through app configuration policy for managed apps, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign in to Microsoft Edge. When using policies for managed devices, users aren't required to sign in to Microsoft Edge to apply the policies.
 
 As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies).
 
@@ -753,7 +753,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 
 If you're using Microsoft Intune as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. On **App Configuration policies**, select **Add**, and then select **Managed apps**.
 
@@ -852,3 +852,7 @@ There are specific deeplinks that are designed for Edge mobile.
 
 - [What are app protection policies?](../protection/overview.md)
 - [App configuration policies for Microsoft Intune](./overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

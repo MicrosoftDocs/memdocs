@@ -22,7 +22,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Troubleshooting portal lists a user's devices based on usage
 <!--6974300-->
-The troubleshooting portal in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
+The troubleshooting portal in the [Microsoft Intune admin center] allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
 
 For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../../tenant-attach/client-details.md#bkmk_list).
 
@@ -463,3 +463,7 @@ When you're ready to install this version, see [Installing updates for Configura
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
 After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2010.md#post-update-checklist).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

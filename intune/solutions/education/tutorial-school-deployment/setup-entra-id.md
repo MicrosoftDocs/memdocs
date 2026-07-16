@@ -3,8 +3,6 @@ title: Set up Microsoft Entra ID
 description: Learn how to create and prepare your Microsoft Entra tenant for an education environment.
 ms.date: 5/2/2024
 ms.topic: tutorial
-author: scottbreenmsft
-ms.author: scbree
 ---
 
 # Set up Microsoft Entra ID
@@ -48,7 +46,7 @@ With the Microsoft 365 tenant in place, it's time to add users, create groups, a
 
 ### School Data Sync
 
-✅ Provision users and groups using your SIS data
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Provision users and groups using your SIS data
 
 School Data Sync (SDS) imports and synchronizes SIS data to create classes in Microsoft 365, such as Microsoft 365 groups and class teams in Microsoft Teams. SDS can be used to create new, cloud-only, identities or to evolve existing identities. Users evolve into *students* or *teachers* and are associated with a *grade*, *school*, and other education-specific attributes.
 
@@ -64,7 +62,7 @@ For more information, see [Overview of School Data Sync][SDS-1].
 
 ### Microsoft Entra Connect Sync
 
-✅ Configure sync between Active Directory and Microsoft Entra ID
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure sync between Active Directory and Microsoft Entra ID
 
 To integrate an on-premises directory with Microsoft Entra ID, you can use **Microsoft Entra Connect** to synchronize users, groups, and other objects. Microsoft Entra Connect lets you configure the authentication method appropriate for your school, including:
 
@@ -76,7 +74,7 @@ For more information, see [Set up directory synchronization for Microsoft 365][O
 
 ### Create users manually
 
-✅ Create users one by one
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Create users one by one
 
 In addition to the above methods, you can manually add users and groups, and assign licenses through the Microsoft 365 admin center.
 
@@ -94,7 +92,7 @@ For more information, see [Add multiple users in the Microsoft 365 admin center]
 
 ### Create groups
 
-✅ Organize your users and devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Organize your users and devices
 
 Creating groups is important to simplify multiple tasks, like assigning licenses, delegating administration, deploy settings, applications or to distribute assignments to students. To create groups:
 
@@ -108,7 +106,7 @@ For more information, see [Create a group in the Microsoft 365 admin center][M36
 
 ### Assign licenses
 
-✅ Assign licenses to users
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assign licenses to users
 
 The recommended way to assign licenses is through group-based licensing. With this method, Microsoft Entra ID ensures that licenses are assigned to all members of the group. Any new members who join the group are assigned the appropriate licenses, and when members leave, their licenses are removed.
 
@@ -124,7 +122,7 @@ For more information, see [Group-based licensing using Microsoft Entra admin cen
 
 ## Configure school branding
 
-✅ Customize your tenant branding
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Customize your tenant branding
 
 Configuring your school branding enables a more familiar Windows Autopilot experience to students and teachers. With a custom school branding, you can define a custom logo and a welcome message, which is visible during the Windows out-of-box experience (OOBE).
 
@@ -146,7 +144,7 @@ In this section, you configure Microsoft Entra device settings.
 
 ### Enable Microsoft Entra join
 
-✅ Enable Microsoft Entra join and device limits
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Enable Microsoft Entra join and device limits
 
 To allow Microsoft Entra join:
 
@@ -170,7 +168,7 @@ To allow Microsoft Entra join:
 
 ### Enable storage of local administrator passwords (optional)
 
-✅ Enable Microsoft Entra to store local administrator passwords
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Enable Microsoft Entra to store local administrator passwords
 
 Microsoft Entra can store the local administrator passwords for devices. Devices must be configured through Intune to store the password in Entra, this allows Entra to accept the password from devices.
 
@@ -185,7 +183,7 @@ For more information, see [Windows Local Administrator Password Solution in Micr
 
 ### Configure Enterprise State Roaming (optional)
 
-✅ Disable Enterprise State Roaming
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Disable Enterprise State Roaming
 
 | Blade | Configuration group | Setting | Value |
 | --- | --- | --- | --- |
@@ -195,7 +193,7 @@ For more information, see [Enable Enterprise State Roaming in Microsoft Entra ID
 
 ## Restrict access to administrative actions (optional)
 
-✅ Configure your tenant to reduce user access
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure your tenant to reduce user access
 
 Microsoft Entra has several controls that allow you to limit administrative functionality for users with no administrative role in Microsoft Entra.
 
@@ -219,7 +217,7 @@ You can apply additional controls to manage access to your directory with these 
 
 ## Restrict access to Groups (optional)
 
-✅ Configure your tenant to reduce group management capabilities
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure your tenant to reduce group management capabilities
 
 Microsoft Entra has several controls that allow you to limit group functionality for users.
 

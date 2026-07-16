@@ -1,16 +1,8 @@
 ---
 title: Use EPM support approvals for file elevation requests with Intune
 description: Manage support approvals for elevation requests when you use Endpoint Privilege Management for Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 04/27/2026
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Support approved file elevations for Endpoint Privilege Management
@@ -90,7 +82,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
 [!INCLUDE [manage--admin-tasks](../includes/manage-admin-tasks.md)]
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
 1. The elevation requests tab shows **pending requests** and **requests from the last 30 days**. Selecting a row opens that entries elevation request properties, where you can review the request in detail.
 1. The elevation request details include the following information:
 
@@ -153,7 +145,7 @@ If your Tenant is already licensed for EPM and for Security Copilot, no addition
 
 You can have Microsoft Security Copilot analyze the properties of a file while you're reviewing a file elevation request:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Endpoint Privilege Management** and select the **Elevation requests** tab*.
+1. In the [Microsoft Intune admin center], go to **Endpoint security** > **Endpoint Privilege Management** and select the **Elevation requests** tab*.
 
 2. On *Elevation requests*, select the name of an elevation request to open the *Elevation request properties* pane where you can then review that files details.
 
@@ -178,3 +170,7 @@ The preceding image shows a screen capture of the Copilot report on the reputati
 
 > [!div class="nextstepaction"]
 > [Next: Reports >](./monitor-reports.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

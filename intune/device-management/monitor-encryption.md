@@ -3,8 +3,7 @@ title: View report details for encryption status of devices managed with Microso
 description: Use the Microsoft Intune admin center to view reports for device encryption status across macOS FileVault and Windows BitLocker encrypted devices that you manage with Microsoft Intune.
 ms.date: 10/14/2024
 ms.topic: how-to
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
@@ -22,7 +21,7 @@ The Microsoft Intune encryption report is a centralized location to view details
 > - [Manage BitLocker policy](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md)
 > - [Manage FileVault policy](../device-configuration/endpoint-security/encrypt-filevault-macos.md)
 
-To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Manage devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
+To find the report, Sign in to the [Microsoft Intune admin center]. Select **Devices** > **Manage devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
 
 ## View encryption details
 
@@ -203,3 +202,7 @@ Windows BitLocker:
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Manage FileVault policy](../device-configuration/endpoint-security/encrypt-filevault-macos.md)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

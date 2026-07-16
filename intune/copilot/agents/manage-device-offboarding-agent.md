@@ -3,8 +3,6 @@ title: Use the Device Offboarding Agent
 description: Learn how to use the Device Offboarding Agent in Microsoft Intune to identify and offboard devices that are no longer in use.
 ms.date: 10/15/2025
 ms.topic: how-to
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 

@@ -3,10 +3,7 @@ title: Use the Intune Data Warehouse
 description: Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment.
 ms.date: 03/31/2026
 ms.topic: reference
-ms.reviewer: jamiesil
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use the Microsoft Intune Data Warehouse
@@ -21,7 +18,7 @@ Use the Intune Data Warehouse to build reports that provide insight into your en
 
 ## Data Warehouse benefits
 
-The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With the Intune Data Warehouse you can access:
+The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Intune admin center]. With the Intune Data Warehouse you can access:
 
 - Historical Intune data
 - Data refreshed on a daily cadence
@@ -39,3 +36,7 @@ The Data Warehouse provides you access to more information about your mobile env
 - Get a link and use Power BI to get insight. For instructions, see [Connect to the Intune Data Warehouse with Power BI](connect-power-bi.md).
 - With your link, create a custom report with Power BI. For instructions, see [Create a report from the OData feed with Power BI](create-report-odata.md).
 - Get more information about the Intune Data Warehouse API, the data model, and relationships between entities<!-- , and an example of creating a custom client to retrieve data,--> see [Intune Data Warehouse API](index.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

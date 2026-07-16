@@ -4,8 +4,6 @@ description: Add or create an iOS, iPadOS, or macOS device profile. Configure se
 ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: beflamm, arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add iOS, iPadOS, or macOS device feature settings in Intune
@@ -30,7 +28,7 @@ This article describes the different features you can configure, and shows you h
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -166,7 +164,7 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
 
   - macOS 13.0 and newer
 
-  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID. It enables single sign-on (SSO) using passwordless authentication, Microsoft Entra user accounts, and smart cards. Users can also manually sign into their macOS devices using their Microsoft Entra account, instead of a local account.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID. It enables single sign-on (SSO) using passwordless authentication, Microsoft Entra user accounts, and smart cards. Users can also manually sign in to their macOS devices using their Microsoft Entra account, instead of a local account.
 
   In Intune, you create an Intune settings catalog policy and configure the Platform SSO settings.
 
@@ -183,7 +181,7 @@ Microsoft Intune has different types of single sign-on (SSO) options for iOS/iPa
   - iPadOS 13.0 and newer
   - macOS 10.15 and newer
 
-  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID. It allows iOS/iPadOS and macOS users to sign into apps and websites using Microsoft Entra ID.
+  This feature is part of the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID. It allows iOS/iPadOS and macOS users to sign in to apps and websites using Microsoft Entra ID.
 
   In Intune, you create an Intune device features configuration policy and configure the SSO app extension settings.
 
@@ -237,3 +235,7 @@ Applies to:
 
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 - View all the device feature settings for [iOS/iPadOS and macOS](./ref-device-features-apple.md) devices.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

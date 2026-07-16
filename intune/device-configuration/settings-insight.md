@@ -1,13 +1,10 @@
 ---
 title: Settings insight
 description: Settings insight provides peer benchmarking information during security baseline configuration, showing when organizations similar to yours use Microsoft's recommended default values.
-author: BrenDuns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 02/10/2026
 ms.topic: overview
 ms.reviewer: Lavanya.lakshman
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Settings insight
@@ -43,7 +40,7 @@ Settings insight is informational. You remain responsible for evaluating each se
 
 ## View insights during baseline configuration
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
@@ -128,3 +125,7 @@ Settings insight provides supplemental peer benchmarking information during base
 
 - [Security baselines overview](../device-security/security-baselines/overview.md)
 - [Create and manage security baseline profiles in Microsoft Intune](../device-security/security-baselines/configure-baselines.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,12 +1,9 @@
 ---
 title: Zero Trust with Microsoft Intune
 description: Microsoft Intune contributes to a strong Zero Trust strategy and architecture by managing and securing endpoints that access organizational resources.
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 02/24/2026
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.collection:
 - M365-identity-device-management
 - zerotrust-services

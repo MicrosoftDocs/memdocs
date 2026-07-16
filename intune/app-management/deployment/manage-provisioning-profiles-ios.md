@@ -3,7 +3,6 @@ title: iOS/iPadOS App Provisioning Profiles in Microsoft Intune
 description: Intune gives you the tools to proactively assign a new provisioning profile to devices that have apps that are nearing expiry.
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
@@ -26,7 +25,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
 ## How to create an iOS mobile app provisioning profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **iOS app provisioning profiles** > **Create profile**.
 3. On the **Basics** page, add the following values:
     - **Name** - Provide a name for this mobile provisioning profile.
@@ -47,3 +46,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 ## Next steps
 
 Assign the profile to the required iOS/iPadOS devices. For more information, use the steps in [How to assign device profiles](../../device-configuration/assign-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

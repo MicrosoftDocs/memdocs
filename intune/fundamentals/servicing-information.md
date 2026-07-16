@@ -1,13 +1,9 @@
 ---
 title: Microsoft Intune servicing information and details
 description: Learn more about the frequency of the Microsoft Intune service updates, the release cadence, and how to check your tenant release version.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 04/10/2025
 ms.topic: overview
 ms.reviewer: acabello
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Service information for Microsoft Intune release updates
@@ -30,7 +26,7 @@ For Company Portal app, Microsoft is subject to the release requirements and pro
 
 To check the release version of your tenant, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Tenant status**. Your tenant's name, location, MDM authority, account status, and service release number are shown.
 
 In the following example, the tenant has the 2311 (November 2023) service release:
@@ -51,7 +47,7 @@ Microsoft updates Intune frequently to keep up with operating system updates and
 
   To see the hub, use the following steps:
 
-  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Intune admin center].
   2. Go to **Tenant administration** > **Tenant status** > **Service health and message center**.
   3. Under **Message center**, select any message to read it.
 
@@ -97,3 +93,7 @@ The following resources can help you understand privacy and personal data in Int
 - [Planning guide to move to Microsoft Intune](planning-guide.md)
 - [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/Intune/ServiceChangeBlog) *- Blog*
 - [Service information for Microsoft Intune release updates](servicing-information.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

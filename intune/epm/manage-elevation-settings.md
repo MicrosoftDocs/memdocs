@@ -3,12 +3,6 @@ title: Managing Elevation Settings for Endpoint Privilege Management
 description: View guidance on how to manage the Endpoint Privilege Management client, including reporting level and default elevation response.
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Managing elevation settings with Endpoint Privilege Management
@@ -69,7 +63,7 @@ Use *Windows elevation settings policy* when you want to:
 
 ## Create a Windows elevation settings policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows**, *Profile* to **Windows elevation settings policy**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
@@ -116,3 +110,7 @@ Use *Windows elevation settings policy* when you want to:
 
 > [!div class="nextstepaction"]
 > [Next: Create an elevation rules policy >](./create-elevation-rules.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

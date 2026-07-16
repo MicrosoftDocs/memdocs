@@ -4,13 +4,11 @@ description: Set up account driven Apple User Enrollment for personal devices en
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: rishitasarin
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up account driven Apple User Enrollment
 
-Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](setup-user-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment policy silently installs and Intune policies are applied. Intune uses just-in-time (JIT) registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.
+Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](setup-user-company-portal.md). The device user initiates enrollment by signing in to their work account in the Settings app. After the user approves device management, the enrollment policy silently installs and Intune policies are applied. Intune uses just-in-time (JIT) registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.
 
 This article describes how to set up account driven Apple User Enrollment in Microsoft Intune. You will:
 
@@ -50,7 +48,7 @@ This article describes how to set up account driven Apple User Enrollment in Mic
 :::column-end:::
 :::row-end:::
 
-You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To complete this prerequisite, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `"https://contoso.com/.well-known/com.apple.remotemanagement"`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.
+You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To complete this prerequisite, set up and publish an HTTP well-known resource file on the same domain that employees sign in to. Apple retrieves the file via an HTTP GET request to `"https://contoso.com/.well-known/com.apple.remotemanagement"`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.
 
 
 > [!NOTE]
@@ -141,7 +139,7 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 1. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.
 
 ## Step 3: Prepare employees for enrollment
-To initiate device enrollment on a personal device, the device owner must go to the Settings app and sign in with their work or school account. If they attempt to sign into an app with their work or school account, the app alerts them to the enrollment requirement and tells them how to proceed.
+To initiate device enrollment on a personal device, the device owner must go to the Settings app and sign in with their work or school account. If they attempt to sign in to an app with their work or school account, the app alerts them to the enrollment requirement and tells them how to proceed.
 
 This section describes the enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support.
 

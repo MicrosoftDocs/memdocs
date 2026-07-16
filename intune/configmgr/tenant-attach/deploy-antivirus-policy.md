@@ -20,7 +20,7 @@ Create Microsoft Defender antivirus policies in the Microsoft Intune admin cente
 
 ## <a name="bkmk_av"></a> Assign Microsoft Defender Antivirus policy to a collection
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
@@ -31,7 +31,7 @@ Create Microsoft Defender antivirus policies in the Microsoft Intune admin cente
 
 ## <a name="bkmk_security"></a> Assign Windows Security experience policy to a collection
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
@@ -47,7 +47,7 @@ Create Microsoft Defender antivirus policies in the Microsoft Intune admin cente
 
 Starting in Configuration Manager 2103, When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions. For earlier versions of Configuration Manager, Antivirus exclusions from a single policy are applied. With this behavior, the last policy applied determines the effective exclusions. <!--9397015-->
 
-To use this functionality, create an antivirus policy from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) that includes some [antivirus exclusions](../../device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#microsoft-defender-antivirus-exclusions). Create a second antivirus policy including only antivirus exclusions that are different from the first policy. Apply both antivirus policies to the same collection. Antivirus exclusions from both policies are applied on clients in the targeted collection.
+To use this functionality, create an antivirus policy from the [Microsoft Intune admin center] that includes some [antivirus exclusions](../../device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#microsoft-defender-antivirus-exclusions). Create a second antivirus policy including only antivirus exclusions that are different from the first policy. Apply both antivirus policies to the same collection. Antivirus exclusions from both policies are applied on clients in the targeted collection.
 
 [!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
 
@@ -100,3 +100,7 @@ Both the reports can be filtered based on **Managed by** column and the data wit
 - [Create and deploy endpoint security Attack surface reduction policy to tenant attached devices](deploy-asr-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)
 - [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

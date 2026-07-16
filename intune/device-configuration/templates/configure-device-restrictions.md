@@ -4,8 +4,6 @@ description: Add a device configuration profile to restrict features on Android 
 ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure device restriction settings in Microsoft Intune
@@ -35,7 +33,7 @@ This article shows you how to create a device restrictions profile. You can also
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -80,3 +78,7 @@ This article shows you how to create a device restrictions profile. You can also
 
 - [Assign the profile](../assign-device-profile.md).
 - [Monitor the profile status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

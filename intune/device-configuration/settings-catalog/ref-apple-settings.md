@@ -5,9 +5,7 @@ author: beflamm
 ms.author: beflamm
 ms.topic: reference
 ms.date: 11/13/2024
-ms.reviewer: beflamm, mandia
-ms.collection:
-- M365-identity-device-management
+ms.reviewer: paoloma
 ---
 
 # Apple device configuration list in the Intune settings catalog
@@ -21,7 +19,7 @@ This article applies to:
 
 ## Before you begin
 
-- At a minimum, sign into the Intune admin center as a member of the **Policy and Profile Manager** role. For more information on the built-in Intune roles, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+- At a minimum, sign in to the Intune admin center as a member of the **Policy and Profile Manager** role. For more information on the built-in Intune roles, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 - Create a [settings catalog policy](index.md).
 
 ### How to use this article

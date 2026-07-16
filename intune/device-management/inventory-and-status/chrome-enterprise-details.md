@@ -1,13 +1,9 @@
 ---
 title: View ChromeOS device information | Microsoft Intune
 description: View ChromeOS devices and details synced with the Chrome Enterprise connector in the Microsoft Intune admin center.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 11/06/2023
 ms.topic: how-to
 ms.reviewer: shsivak
-ms.collection:
-- M365-identity-device-management
 ---
 
 # View ChromeOS device information in Intune
@@ -27,7 +23,7 @@ To view ChromeOS devices and device details, you must be assigned a role with *r
 Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices in Google Admin console](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
 ## View ChromeOS devices
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running ChromeOS. The following information is shown for ChromeOS devices:
+Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running ChromeOS. The following information is shown for ChromeOS devices:
 
 * **Device name**: Device names for ChromeOS devices appear as `Chrome- {serialNumber}`.
 * **Managed by**: ChromeOS devices are managed by **Intune**.
@@ -73,3 +69,7 @@ You can create dynamic device groups based on a [Google Admin organizational uni
 
 ## Next steps
 Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for ChromeOS](/intune/device-management/actions).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

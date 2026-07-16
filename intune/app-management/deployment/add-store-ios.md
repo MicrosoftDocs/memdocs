@@ -3,7 +3,6 @@ title: Add iOS Store Apps to Microsoft Intune
 description: Learn about adding iOS store apps to Microsoft Intune. You can assign apps using this method if the apps are free of charge in the App Store.
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
@@ -24,7 +23,7 @@ You can assign apps by using this method only if they are free of charge in the 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **iOS store app**.
 4. Click **Select**.<br>
@@ -64,3 +63,7 @@ The **Overview** blade of the app you've created is displayed.
 ## Next steps
 
 - [Assign apps to groups](./assign-groups.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

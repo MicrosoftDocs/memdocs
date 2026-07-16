@@ -4,8 +4,6 @@ description: Get the app bundle ID in Microsoft Intune for Android, iOS/iPadOS, 
 ms.date: 04/30/2024
 ms.topic: how-to
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Get the App Bundle ID for Your Policies in Microsoft Intune
@@ -25,7 +23,7 @@ This article lists the steps to get the app bundle IDs using the Intune admin ce
 
 ## Get the app bundle ID
 
-1. Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps** > **All Apps**.
 1. Select **Columns**.
 
@@ -42,3 +40,7 @@ This article lists the steps to get the app bundle IDs using the Intune admin ce
 - [Add apps to Microsoft Intune](./deployment/index.md)
 - [Bundle IDs for built-in iOS and iPadOS apps you can use in Intune](../device-configuration/templates/ref-bundle-ids-ios.md)
 - [Add built-in apps to Microsoft Intune](./deployment/add-built-in.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -3,8 +3,6 @@ title: Use the Policy Configuration Agent to create policies
 description: Learn how to use the Policy Configuration Agent in Microsoft Intune to create policies. You can create policies on files you uploaded, natural language prompts, or industry baselines. The Policy Configuration Agent is a feature of Security Copilot in Intune.
 ms.date: 11/17/2025
 ms.topic: how-to
-author: mandiohlinger
-ms.author: mandia
 ms.reviewer: aanavath
 ---
 
@@ -35,7 +33,7 @@ This feature applies to:
 
 ## Use the agent
 
-To use the agent, open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+To use the agent, open the [Microsoft Intune admin center], select **Agents** > **Policy Configuration Agent**.
 
 The following tabs are available:
 
@@ -91,7 +89,7 @@ You can save the agent suggestions so you can create device configuration polici
 
 **To add a knowledge source, use the following steps**:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+1. In the [Microsoft Intune admin center], select **Agents** > **Policy Configuration Agent**.
 2. Select **Create new** > **Knowledge source**.
 3. Configure the following settings:
 
@@ -133,7 +131,7 @@ You can save the agent suggestions so you can create device configuration polici
 
 When you upload a knowledge source, it's available in the **Knowledge** tab. To view your existing knowledge sources, use the following steps:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+1. In the [Microsoft Intune admin center], select **Agents** > **Policy Configuration Agent**.
 2. In the **Knowledge** tab, there's a list of your existing knowledge sources. Select a knowledge source to view its settings and their configured values.
 3. You can **Delete** a knowledge source and **Export** its settings.
 
@@ -143,7 +141,7 @@ The agent can create a settings catalog device configuration policy based on a k
 
 To create a policy using the agent, use the following steps:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+1. In the [Microsoft Intune admin center], select **Agents** > **Policy Configuration Agent**.
 2. Select **Create new** > **Policy draft**.
 3. Configure the following settings:
 
@@ -178,7 +176,7 @@ To create a policy using the agent, use the following steps:
 
 You can view your existing policy drafts. Use the following steps:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+1. In the [Microsoft Intune admin center], select **Agents** > **Policy Configuration Agent**.
 1. In the **Overview** and **Suggestions** tabs, your policy drafts are shown as suggested next steps. Select a policy draft to view its settings and their configured values.
 
 To update any settings and their values in the policy draft, you must create a device configuration policy from the draft. After you create the policy, you can edit it like any other Intune device configuration policy.
@@ -190,3 +188,7 @@ To update any settings and their values in the policy draft, you must create a d
 - [Policy Configuration Agent in Intune - Overview and set up](policy-configuration-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
 - [Security Copilot in Intune - An overview](../index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

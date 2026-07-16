@@ -1,13 +1,9 @@
 ---
 title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/28/2026
 ms.topic: upgrade-and-migration-article
 ms.reviewer: davguy
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Microsoft Intune planning guide
@@ -46,7 +42,7 @@ Users expect to work on devices using organization apps, including reading and r
 - Built-in apps
 - Store apps
 
-✅ **Task: Make a list of the apps your users regularly use**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Make a list of the apps your users regularly use**
 
 These apps are the apps you want on their devices. Some considerations:
 
@@ -67,7 +63,7 @@ These apps are the apps you want on their devices. Some considerations:
 
 When data is stored on mobile devices, it must be protected from malicious activity.
 
-✅ **Task: Determine how you want to secure your devices**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Determine how you want to secure your devices**
 
 Antivirus, malware scanning, responding to threats, and keep devices up-to-date are all important considerations. You also want to minimize the impact of malicious activity.
 
@@ -129,7 +125,7 @@ In Intune, distributed IT benefits from the following features:
 
 - **[Endpoint Privilege Management](../epm/overview.md)** allows standard non-admin user complete tasks that require elevated privileges, like  installing apps and updating device drivers. Endpoint Privilege Management is part of the [Intune Suite](advanced-capabilities.md).
 
-✅ **Task: Determine how you want to distribute your rules and settings**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Determine how you want to distribute your rules and settings**
 
 Rules and settings are deployed using different policies. Some considerations:
 
@@ -158,7 +154,7 @@ Rules and settings are deployed using different policies. Some considerations:
 
 When data is stored on mobile devices, the data should be protected from accidental loss or sharing. This objective also includes wiping organization data from personal and organization-owned devices.
 
-✅ **Task: Create a plan to cover different scenarios that impact your organization**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Create a plan to cover different scenarios that impact your organization**
 
 Some sample scenarios:
 
@@ -182,7 +178,7 @@ This section includes device information you should consider.
 
 Intune supports the common and popular device platforms. For the specific versions, go to [supported platforms](ref-supported-platforms.md).
 
-✅ **Task: Upgrade or replace older devices**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Upgrade or replace older devices**
 
 If your devices use unsupported versions, which are primarily older operating systems, then it's time to upgrade the OS or replace the devices. These older OS' and devices might have limited support, and are a potential security risk. This task includes desktop computers running Windows 7, iPhone 7 devices running the original v10.0 OS, and so on.
 
@@ -210,7 +206,7 @@ Organization-owned devices are part of a mobile device management (MDM) strategy
 
 As an organization and as an admin, you decide if personal devices are allowed. If you do allow personal devices, then you need to make important decisions, including how to protect your organization data.
 
-✅ **Task: Determine how you want to handle personal devices**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Determine how you want to handle personal devices**
 
 If being mobile or supporting remote workers is important to your organization, consider the following approaches:
 
@@ -260,7 +256,7 @@ For more information, go to:
 - [Paths to co-management](../configmgr/comanage/quickstart-paths.md)
 - [Configuration Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md)
 
-✅ **Task: Look at what you currently use for mobile device management**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Look at what you currently use for mobile device management**
 
 Your adoption of a mobile device management can depend on what your organization currently uses, including if that solution uses on-premises features or programs.
 
@@ -285,7 +281,7 @@ Shared tablets and devices are common for frontline workers (FLW). They're used 
 
 There are options available for the different platforms, including Android (AOSP) virtual reality devices, iPad devices, and Windows 365 Cloud PCs.
 
-✅ **Task: Determine your FLW scenarios**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Determine your FLW scenarios**
 
 FLW devices are organization-owned, enrolled into device management, and are used by one user (user assigned) or many users (shared devices). These devices are critical to frontline workers to do their job, and are often used in a limited-use mode. For example, it can be a device that scans items, a kiosk that displays information, or a tablet that checks in patients at a hospital or medical facility.
 
@@ -327,7 +323,7 @@ For more information, go to:
 - [Microsoft 365 enterprise licensing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
 - [Microsoft Intune advanced capabilities](advanced-capabilities.md)
 
-✅ **Task: Determine the licensed services your organization needs**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Determine the licensed services your organization needs**
 
 Some considerations:
 
@@ -375,7 +371,7 @@ Many organizations have existing policies and device management infrastructure t
 
 With these goals in mind, create a baseline of your policies. If you have multiple device management solutions, now might be the time to use a single mobile device management service.
 
-✅ **Task: Look at tasks you run on-premises**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Look at tasks you run on-premises**
 
 This task includes looking at services that could move to the cloud. Remember, instead of looking at what you've always done, determine the goal.
 
@@ -431,7 +427,7 @@ Some considerations:
 
   When you create groups in the cloud, like Intune or Microsoft 365, the groups are created in Microsoft Entra ID. You might not see the Microsoft Entra ID branding, but that's what you're using.
 
-  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](tenant-administration/add-groups.md).
+  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center]. For more information, go to [add groups to organize users and devices](tenant-administration/add-groups.md).
 
   - Moving existing distribution lists (DL) to Microsoft Entra ID might be more challenging. Once they DLs are in Microsoft Entra ID, these groups are available to Intune and Microsoft 365. For more information, go to:
 
@@ -455,7 +451,7 @@ The next task is to plan how and when your users and devices receive your polici
 - Define your goals and success metrics. Use these data points to create other rollout phases. Make sure goals are SMART (Specific, Measurable, Attainable, Realistic, and Timely). Plan to measure against your goals at each phase so your rollout project stays on track.
 - Have clearly-defined goals and objectives. Include these objectives in all awareness and training activities so users understand why your organization chose Intune.
 
-✅ **Task: Create a plan to roll out your policies**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Create a plan to roll out your policies**
 
 And, choose how users enroll their devices in Intune. Some considerations:
 
@@ -514,7 +510,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
 
 Change management relies on clear and helpful communications about upcoming changes. The idea is to have a smooth Intune deployment, and make users aware of changes & any disruption.
 
-✅ **Task: Your rollout communication plan should include important information**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Your rollout communication plan should include important information**
 
 This information should include how to notify users, and when to communicate. Some considerations:
 
@@ -564,7 +560,7 @@ This information should include how to notify users, and when to communicate. So
 
 Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable help desk and support teams also help users adopt these changes.
 
-✅ **Task: Train your support teams**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Task: Train your support teams**
 
 Validate the end-user experience with success metrics in your deployment plan. Some considerations:
 
@@ -613,3 +609,7 @@ The community-based [Intune forum](https://social.technet.microsoft.com/Forums/h
 - [Protection and configuration levels](protection-configuration-levels.md)
 - [Zero Trust deployment approach](zero-trust-deployment.md)
 - [Frontline worker device management in Microsoft Intune](../solutions/frontline-worker/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

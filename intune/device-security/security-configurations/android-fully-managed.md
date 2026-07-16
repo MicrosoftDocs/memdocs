@@ -1,13 +1,9 @@
 ---
 title: Android Enterprise security configurations for corporate-owned fully managed profiles
 description: Review example configurations of basic, enhanced, and high security for devices with Android Enterprise corporate-owned fully managed profiles.
-author: brenduns
-ms.author: brenduns
 ms.date: 03/26/2025
 ms.topic: reference
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Enterprise fully managed device security configuration examples

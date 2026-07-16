@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 02/20/2025
 ms.topic: overview
 ms.reviewer: nicolezhao
-ms.collection:
-- M365-identity-device-management
 ---
 
 # What is Intune for Education?

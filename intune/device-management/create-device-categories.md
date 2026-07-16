@@ -3,11 +3,7 @@ title: Categorize devices into groups in Intune
 description: Categorize Intune-managed devices into groups for easier management in the admin center.
 ms.date: 05/19/2026
 ms.topic: how-to
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Categorize devices into groups  
@@ -34,7 +30,7 @@ If Multi Admin Approval access policies are enabled for device actions, creating
 
 ## Step 1: Create device category in Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Manage devices**, and then select **Device categories**.
 1. Choose **Create** to add a new category.
@@ -76,3 +72,7 @@ If you edit a category, be sure to update any Microsoft Entra security groups th
 Device categories are supported on devices running Android, iOS/iPadOS, macOS, and Windows. People with Windows devices must use the Company Portal website to select their category. The category prompt appears for all other platforms when the user signs in to the Company Portal app. Regardless of platform, any device user can sign in to portal.manage.microsoft.com at anytime and go to **My devices** to select a category.
 
 If an iOS/iPadOS or Android device is already enrolled before you configure categories, the user will receive a notification about the device the user owns on the Company Portal website. The notification informs them that they need to select a category the next time they're in the Company Portal app.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

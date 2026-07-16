@@ -3,8 +3,6 @@ title: Set terms and conditions in Microsoft Intune
 description: Set terms and conditions that users see in the Company Portal for Intune.
 ms.date: 01/27/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Terms and conditions for user access
@@ -16,7 +14,7 @@ This article describes how to get started with terms and conditions in Intune.
 ## Create terms and conditions
 Complete these steps to create an Intune terms and conditions policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Tenant administration**.
 1. Expand **End user experiences**, and then select **Terms and conditions**.
 1. Choose **Create**.
@@ -112,3 +110,7 @@ You can use the [Microsoft Entra terms of use](/azure/active-directory/condition
 * Provide terms for non-enrollment scenarios
 
 These terms are shown to users when they sign in to targeted apps and resources. If you configure both Microsoft Entra terms of use and Intune terms and conditions, users will be required to accept both. For a comparison of both solutions, see [Choosing the right Terms solution for your organization](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

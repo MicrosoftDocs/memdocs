@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for iOS Developer Guide - Plan the Integration
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Plan the integration.
 ms.date: 06/12/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
@@ -83,7 +82,7 @@ If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.
 
 ### Does my application have or need App Configuration settings?
 
-Intune supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Intune supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in the [Microsoft Intune admin center].
 
 The Intune App SDK supports both types of application configuration and provides a single API for accessing configurations from both channels. If your application has or will support either of these types of application configuration, you'll need to follow [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications].
 
@@ -184,3 +183,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Create and assign app protection policies]:../../app-management/protection/create-policy.md
 [app configuration policy]:../../app-management/configuration/overview.md
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

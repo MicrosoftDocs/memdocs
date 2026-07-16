@@ -3,10 +3,6 @@ title: Management functionalities for Surface devices
 description: Learn about the management capabilities offered to Surface devices, including firmware management and the Surface Management Portal.
 ms.date: 5/2/2024
 ms.topic: tutorial
-author: scottbreenmsft
-ms.author: scbree
-appliesto:
-  - ✅ <b>Surface devices</b>
 ---
 
 # Management functionalities for Surface devices
@@ -29,7 +25,7 @@ When Surface devices are enrolled in cloud management and users sign in for the 
 
 To access and use the Surface Management Portal:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **Partner Portals** > **Surface Management Portal**.
     :::image type="content" source="./media/manage-surface/surface-management-portal.png" alt-text="Surface Management Portal within Microsoft Intune" lightbox="./media/manage-surface/surface-management-portal.png" border="true":::
 1. See an **Overview** of your Surface devices.
@@ -44,3 +40,7 @@ To access and use the Surface Management Portal:
 [INT-1]: ../../../device-configuration/templates/ref-dfci-settings-windows.md
 [MEM-1]: /autopilot/dfci-management
 [SURF-1]: /surface/surface-manage-dfci-guide
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

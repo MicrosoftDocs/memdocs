@@ -109,7 +109,7 @@ You must enroll devices separately with the Zebra LG OTA service before devices 
 
 In the Microsoft Intune admin center, you can link Intune and Zebra.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Connectors and tokens** > **Firmware over-the-air update**.
 3. Select **Zebra**. A context panel appears and guides you through the process of setting up your tenant for LG OTA.
 4. Select **Connect** and consent to data sharing with Zebra. The context panel is refreshed, and a temporary authorization link becomes enabled in the context panel.
@@ -199,7 +199,7 @@ After synchronization is complete, the devices that support LG OTA will contact 
 > [!NOTE]
 > LG OTA deployments are fire and forget actions and are not persistent policies that enforce compliance. Therefore, Microsoft refers to them as deployments rather than policy. For example, if an upgrade fails initially but later the issue is remediated, LG OTA will not try to update the device even after the issue is remediated.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **By platform** > **Android** > **Manage updates** > **Android FOTA deployments** to create and manage FOTA deployments.
 3. Select **Create deployment**.
 4. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
@@ -320,3 +320,7 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
 
 1. Go to **Tenant admin** > **Connectors and tokens** > **Firmware over-the-air**.
 2. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

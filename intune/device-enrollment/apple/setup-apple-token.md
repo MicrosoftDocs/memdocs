@@ -3,10 +3,7 @@ title: Set up an iOS/iPadOS ADE token in Intune
 description: Create, renew, and delete Apple enrollment program tokens in Microsoft Intune for automated device enrollment on iOS/iPadOS.
 ms.date: 04/15/2026
 ms.topic: how-to
-ms.reviewer: annovich
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up automated device enrollment token for Apple mobile  
@@ -39,7 +36,7 @@ For tvOS and visionOS devices, ADE enrollment policies inherit the scope tag ass
 
 The public key certificate is needed to request a trust-relationship certificate from Apple Business.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select **Add**.
@@ -107,3 +104,7 @@ Renew your enrollment program token yearly. The Intune admin center shows the to
 > Changing the Apple ID used to create the token doesn't affect currently enrolled devices until they re-enroll. This is unlike the Apple MDM Push Notification Service (APNS) certificate, which requires all devices to re-enroll if changed. 
 
 For renewal steps, see [Manage ADE tokens and devices](manage-devices-tokens-apple.md).  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

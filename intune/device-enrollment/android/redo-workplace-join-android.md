@@ -4,8 +4,6 @@ description: Learn how to redo Workplace Join (re-WPJ) on an Android Enterprise 
 ms.date: 06/18/2026
 ms.topic: how-to
 ms.reviewer: grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Redo Workplace Join for Android Enterprise devices
@@ -30,7 +28,7 @@ This edge case can affect devices enrolled in any of the following Android Enter
 - Fully managed
 - Dedicated
 
-Before starting, confirm that the device is already enrolled in Intune (visible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **All devices**), the user has their work account credentials available, and Microsoft Authenticator is installed on the device.
+Before starting, confirm that the device is already enrolled in Intune (visible in the [Microsoft Intune admin center] under **Devices** > **All devices**), the user has their work account credentials available, and Microsoft Authenticator is installed on the device.
 
 ## Redo Workplace Join  
 If a user's device registration becomes out of sync with enrollment, have the user complete the following steps to redo Workplace Join and restore access to work resources.  
@@ -47,3 +45,7 @@ If the user can access work resources again, Workplace Join completed successful
 - [Set up enrollment of Android Enterprise personally owned work profile devices](setup-personal-work-profile.md)
 - [Android Management API for personally owned work profiles](android-management-api-overview.md)
 - [Troubleshoot Android Enterprise device enrollment](/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-enrollment)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

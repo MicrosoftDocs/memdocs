@@ -4,10 +4,6 @@ description: See a list of all the settings you can use when setting compliance 
 ms.date: 11/19/2024
 ms.topic: reference
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Device compliance settings for Windows in Intune

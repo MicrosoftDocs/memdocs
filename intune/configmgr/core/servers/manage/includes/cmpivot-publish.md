@@ -24,7 +24,7 @@ You'll need the following requirements for CMPivot and for contributing to the C
 
     :::image type="content" source="../media/7137169-hub-icon.png" alt-text="Community hub icon":::
 
-1. Select **Sign in**, then sign into GitHub.
+1. Select **Sign in**, then sign in to GitHub.
 1. Create a CMPivot query, then select **Run Query** to verify it functions as expected.
    - Optionally, select the folder icon to access your favorites list to use a query you've already created.
 1. Select the **Publish** link at top of CMPivot's Community hub window when you're ready to submit your query.

@@ -1,7 +1,7 @@
 ---
 title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
-ms.date: 04/27/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
@@ -85,7 +85,7 @@ To submit change requests and complete approved changes for protected resources,
 When an admin edits or creates a new object for an area that's protected by an access policy, they see an option on the *Save + Review* surface where they can enter a description of the change as a *business justification*.
 
 - The *business justification* becomes part of the approval request for the change.
-- An admin who submitted a change can view the status of their requests in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My requests** page.
+- An admin who submitted a change can view the status of their requests in the [Microsoft Intune admin center] by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My requests** page.
 
 After a change is submitted, an *approver* can navigate to the **All requests** page of the **Multi Admin Approval** node, or go to **Tenant administration** > **Admin Tasks** to manage the requests. Both locations provide the list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
 
@@ -105,7 +105,7 @@ If a request isn't processed further within 3 days, it becomes **Expired**, and 
 
 ## Create an access policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Approval** > **Access policies** > select **Create**.
+1. Sign in to the [Microsoft Intune admin center], go to **Tenant administration** > **Multi Admin Approval** > **Access policies** > select **Create**.
 
 1. On *Basics*, enter a *Name*, and optional *Description*. For *Profile type*, select from available options. Each policy supports a single profile type.
 
@@ -125,13 +125,13 @@ On the final page before you can save your changes, add details to the *Business
 
 When a request for the same object is already pending approval, you can't submit your request. Intune displays a message to alert you to this situation.
 
-To monitor the status of your requests, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
+To monitor the status of your requests, in the [Microsoft Intune admin center] go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
 
 You can cancel a request before it's approved by selecting it from the **My requests** page, and then selecting **Cancel request**.
 
 ## Approve requests
 
-1. To find requests to approve, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Approval** > **Received requests**.
+1. To find requests to approve, in the [Microsoft Intune admin center] go to **Tenant administration** > **Multi Admin Approval** > **Received requests**.
 
 1. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection.
 
@@ -181,3 +181,7 @@ You can cancel a request before it's approved by selecting it from the **My requ
 ## Related content
 
 - Manage [role-based access control](../role-based-access-control/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

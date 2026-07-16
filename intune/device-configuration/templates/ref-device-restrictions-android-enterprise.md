@@ -6,8 +6,6 @@ ms.topic: reference
 params:
   siblings_only: true
 ms.reviewer: cchristenson, arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android template device settings list to restrict features using Intune
@@ -27,7 +25,7 @@ This article applies to:
 
 ## Before you begin
 
-- Create a [device restrictions profile](./configure-device-restrictions.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
+- Create a [device restrictions profile](./configure-device-restrictions.md) in the [Intune admin center]. When you create the profile, select the following options:
 
   - **Platform**: Select **Android Enterprise** or **Android (AOSP)**.
   - **Profile type**: Select **Templates**.
@@ -57,7 +55,7 @@ These settings apply to the following Android Enterprise enrollment types where 
 - Dedicated devices
 - Corporate-owned devices with a work profile
 
-Some settings aren't supported by all enrollment types. The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) shows the enrollment types that the settings apply to.
+Some settings aren't supported by all enrollment types. The [Intune admin center] shows the enrollment types that the settings apply to.
 
 :::image type="content" source="./media/ref-device-restrictions-android-enterprise/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
@@ -108,9 +106,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../../device-management/actions/wipe.md) |
   | --- | --- | --- | --- |
-  | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
-  | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
-  | **Dedicate** (COSU) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+  | **Corporate-owned devices with work profile** (COPE) | ![check-icon] factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
+  | **Fully managed** (COBO) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
+  | **Dedicate** (COSU) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
 
   For background and guidance, see **[Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)**.
 
@@ -799,7 +797,7 @@ By default, the Intune default message is in **English (United States)**.
 
 For example, you deploy a custom message for English and French. The user changes the device's default language to Spanish. Since you didn't deploy a custom message to the Spanish language, then the Intune default message is shown.
 
-The Intune default message is translated for all languages in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, the langue is set to **English**.
+The Intune default message is translated for all languages in the [Intune admin center] (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, the langue is set to **English**.
 
 You can configure the following settings:
 
@@ -1005,7 +1003,7 @@ These password settings apply to the work profile password on personally owned d
   - The device password that unlocks the device
   - The work profile password that allows users to access the work profile
 
-  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign in to the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
 
   > [!IMPORTANT]
   >
@@ -1077,7 +1075,7 @@ These password settings apply to the device password on personally owned devices
   - The device password that unlocks the device
   - The work profile password that allows users to access the work profile
 
-  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign in to the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
 
   > [!IMPORTANT]
   >
@@ -1215,3 +1213,13 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 - You can also create dedicated device kiosk profiles for [Android](./ref-device-restrictions-android.md#kiosk) and [Windows](./configure-kiosk.md) devices.
 - [Configure and troubleshoot Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974).
+
+<!--links-->
+
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+<!-- icons -->
+
+[check-icon]: ../../media/icons/16/check.svg
+[error-icon]: ../../media/icons/16/error.svg
+[info-icon]: ../../media/icons/16/info-gray.svg

@@ -86,7 +86,7 @@ For information about popular features you can configure using the settings cata
 
 You create the policy by using the settings catalog profile type.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has at least the **Policy and Profile Manager** built-in role.
+1. Sign in to the [Microsoft Intune admin center] with an account that has at least the **Policy and Profile Manager** built-in role.
 
     For more information about the built-in roles, see [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
@@ -246,7 +246,7 @@ If you use Copilot, you can use built-in prompts to get more information about e
 
 In the Intune admin center, use the built-in reporting features to help find and resolve conflicts.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the list, select the policy you created using the settings catalog. The **Profile type** column shows **Settings Catalog**:
+1. In the [Intune admin center], select **Devices** > **Manage devices** > **Configuration**. In the list, select the policy you created using the settings catalog. The **Profile type** column shows **Settings Catalog**:
 
     :::image type="content" source="./media/index/profile-type-shows-settings-catalog.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/index/profile-type-shows-settings-catalog.png":::
 
@@ -282,7 +282,7 @@ For more information about conflict resolution, see:
 
 Copilot can help you find the status of your existing policies, find the status of a specific setting in your policy, and show any potential conflicts.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the policy list, select the policy you want to evaluate by using Copilot.
+1. In the [Intune admin center], select **Devices** > **Manage devices** > **Configuration**. In the policy list, select the policy you want to evaluate by using Copilot.
 
 2. When you select the policy, the device status is displayed. Select **Summarize with Copilot**:
 
@@ -337,3 +337,8 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 - [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md)
 - [Assign the profile](../../device-configuration/assign-device-profile.md), and [monitor its status](../../device-configuration/monitor-device-profile.md).
 - [Overview of Microsoft Copilot for Intune](../../copilot/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

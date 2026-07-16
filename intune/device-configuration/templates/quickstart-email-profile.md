@@ -4,8 +4,6 @@ description: Learn how to create an email device profile in Microsoft Intune for
 ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 11 - Create an email device profile for iOS/iPadOS in Microsoft Intune
@@ -32,7 +30,7 @@ To help safeguard your email, you can create a compliance policy that sets rules
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Policy and Profile Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
@@ -41,7 +39,7 @@ To help safeguard your email, you can create a compliance policy that sets rules
 
 The profile includes the required settings that allow a device to connect to your organization's email.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**:
 
@@ -83,7 +81,7 @@ The profile includes the required settings that allow a device to connect to you
 
 If you don't use this profile for other tutorials or testing, delete it:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Configuration**.
 2. Select the **iOS/iPadOS require work email** profile you created, and then select **Delete**.
 
 ## Next steps
@@ -102,3 +100,7 @@ When you're ready to deploy Intune in your organization, the following resources
 
 > [!div class="nextstepaction"]
 > [Migration guide: Set up or move to Microsoft Intune](../../fundamentals/setup-migration.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

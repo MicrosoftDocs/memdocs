@@ -7,8 +7,6 @@ ms.topic: how-to
 
 ROBOTS:
 ms.reviewer: damionw
-ms.collection:
-- M365-identity-device-management
 ---
 # Require multifactor authentication for Intune device enrollments  
 
@@ -62,7 +60,7 @@ Complete these steps to enable multifactor authentication during Microsoft Intun
 > [!IMPORTANT]
 > Don't configure **Device based access rules** for Microsoft Intune enrollment.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Manage devices**, and then select **Conditional Access**. This Conditional Access area is the same as the Conditional Access area available in the Microsoft Entra admin center. For more information about the available settings, see [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
 1. Choose **Create new policy**.
@@ -113,3 +111,7 @@ After you apply and deploy this policy, device users enrolling their devices see
 > - macOS devices enrolled via Apple automated device enrollment
 >
 > The second device is required because the primary device can't receive calls or text messages during the provisioning process.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

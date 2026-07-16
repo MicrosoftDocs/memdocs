@@ -21,7 +21,7 @@ First, ensure that your devices are supported. Intune supports the enrollment of
 
 Typically, if settings are available to you through device configuration profiles (**Devices** > **Manage devices** > **Configuration**), configure the settings there. Doing so saves you time, minimizes errors, and gives you a better Intune-support experience. However, some of the Managed Home Screen settings are currently only available via the **Configuration** pane in the Intune admin center. Use this document to learn how to configure the different settings either using the configuration designer or a JSON script. Additionally, use this document to learn what Managed Home Screen settings are available using [Android Enterprise device restrictions profile](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) > **Corporate-owned** > **Device experience**.
 
-If using App configuration, navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Configuration**. Add a configuration policy for **Managed devices** running **Android** and choose **Managed Home Screen** as the associated app. Select **Configuration settings** to configure the different available Managed Home Screen settings.
+If using App configuration, navigate to the [Microsoft Intune admin center] and select **Apps** > **Configuration**. Add a configuration policy for **Managed devices** running **Android** and choose **Managed Home Screen** as the associated app. Select **Configuration settings** to configure the different available Managed Home Screen settings.
 
 In many environments, the Managed Home Screen app configuration policy and a device configuration restrictions policy work together. The Managed Home Screen app provides a controlled user experience but doesn't block access to all Android system features. The security and integrity of a kiosk configuration depends on the Managed Home Screen settings described in this article and the [device configuration restrictions](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) applied to the device.
 
@@ -782,3 +782,7 @@ You can access the Managed Home Screen's debug screen by selecting the **back** 
 ## Next steps
 
 - For more information about Android Enterprise dedicated devices, see [Set up Intune enrollment of Android Enterprise dedicated devices](../../device-enrollment/android/setup-dedicated.md). For more information about Android Enterprise fully managed devices, see [Set up enrollment for Android Enterprise fully managed devices](../../device-enrollment/android/setup-fully-managed.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

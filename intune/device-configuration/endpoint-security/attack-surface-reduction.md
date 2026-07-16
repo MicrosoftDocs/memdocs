@@ -3,9 +3,6 @@ title: Manage attack surface reduction settings with Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune.
 ms.date: 03/06/2026
 ms.topic: article
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---
@@ -22,7 +19,7 @@ You can use attack surface reduction (ASR) policies to reduce the attack surface
 
 For more information, see [Overview of attack surface reduction](/ /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
- Attack surface reduction policies are found in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+ Attack surface reduction policies are found in the **Endpoint security** node of the [Microsoft Intune admin center].
 
 Applies to:
 
@@ -235,3 +232,7 @@ Policy merge doesn't compare or merge the configurations from different settings
 [Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies).
 
 View details for the settings in profiles for [Attack surface reduction profiles](./ref-attack-surface-reduction-settings.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

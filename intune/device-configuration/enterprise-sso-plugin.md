@@ -4,8 +4,6 @@ description: Overview of Microsoft Enterprise SSO plug-in in Microsoft Intune, J
 ms.date: 02/10/2026
 ms.topic: overview
 ms.reviewer: beflamm, arnab
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: apple-enterprise-sso
 ---
 
@@ -41,7 +39,7 @@ This feature applies to:
 
 The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) includes two SSO features - **Platform SSO** and the [**SSO app extension**](#sso-app-extension). This section focuses on **Platform SSO**.
 
-On macOS devices, users normally sign in with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
+On macOS devices, users normally sign in with a local account. Then, they sign in to apps and websites with their Microsoft Entra ID.
 
 With Platform SSO:
 
@@ -50,7 +48,7 @@ With Platform SSO:
   - Choose the authentication method that meets your business need. Your options are Secure Enclave passwordless passkey authentication, Microsoft Entra user account & password, or smart card authentication.
   - Use the SSO app extension, as the SSO app extension is part of Platform SSO. Specifically, you:
 
-    - Use the SSO app extension to sign into apps and websites with Microsoft Entra ID.
+    - Use the SSO app extension to sign in to apps and websites with Microsoft Entra ID.
     - Use Platform SSO to enhance your SSO configuration. You can configure different authentication methods, create new organizational users at sign in, and assign authorization modes for users.
 
 - End users:
@@ -67,12 +65,12 @@ The following table summarizes the Platform SSO features in Intune. Use this inf
 
 | Feature | Details |
 | --- | --- |
-| **Platform support** | ❌ iOS/iPadOS <br/>✅ macOS 13.0 and newer|
-| **Supported enrollment types** | ✅ Device enrollment<br/>✅ Automated Device Enrollment (supervised) <br/>❌ User enrollment <br/>✅ Direct enrollment (Apple Configurator) |
-| **Supported authentication types** | ✅ Secure Enclave (UserSecureEnclaveKey) <br/> ✅ Password (Microsoft Entra ID) <br/> ✅ Smartcard |
-| **Supported app types** | ✅ Microsoft 365 apps<br/>✅ Apps, websites or services integrated with Microsoft Entra ID <br/>✅ Apps, websites or services that support Apple Enterprise SSO and are integrated with on-premises Active Directory |
+| **Platform support** | ![error-icon] iOS/iPadOS <br/>![check-icon] macOS 13.0 and newer|
+| **Supported enrollment types** | ![check-icon] Device enrollment<br/>![check-icon] Automated Device Enrollment (supervised) <br/>![error-icon] User enrollment <br/>![check-icon] Direct enrollment (Apple Configurator) |
+| **Supported authentication types** | ![check-icon] Secure Enclave (UserSecureEnclaveKey) <br/> ![check-icon] Password (Microsoft Entra ID) <br/> ![check-icon] Smartcard |
+| **Supported app types** | ![check-icon] Microsoft 365 apps<br/>![check-icon] Apps, websites or services integrated with Microsoft Entra ID <br/>![check-icon] Apps, websites or services that support Apple Enterprise SSO and are integrated with on-premises Active Directory |
 | **Intune admin center policy type** | **Settings catalog** policy at:<br/><br/>**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **macOS** for platform > **Settings catalog** for profile type > **Authentication** > **Extensible Single Sign On (SSO)** |
-| **Recommendation** | ✅ Recommended. <br/><br/> Use Platform SSO, as it also includes the SSO app extension. You can use the SSO app extension on its own, but it's not preferred. <br/><br/> To use Platform SSO, you must use only Platform SSO. Don't create a separate SSO app extension policy. |
+| **Recommendation** | ![check-icon] Recommended. <br/><br/> Use Platform SSO, as it also includes the SSO app extension. You can use the SSO app extension on its own, but it's not preferred. <br/><br/> To use Platform SSO, you must use only Platform SSO. Don't create a separate SSO app extension policy. |
 
 ::: zone-end
 
@@ -92,9 +90,9 @@ The SSO app extension provides SSO to apps, websites, and accounts that use Micr
 - Apps that are developed to look for the user credential store in single sign-on on the device
 - On-premises Active Directory accounts across all apps that support Apple's Enterprise SSO feature
 
-✅ **For iOS/iPadOS devices**, the SSO app extension is available by itself. So, you can configure and use the SSO app extension for your apps & websites.
+![check-icon] **For iOS/iPadOS devices**, the SSO app extension is available by itself. So, you can configure and use the SSO app extension for your apps & websites.
 
-✅ **For macOS devices**, the SSO app extension is available by itself and is also included in Platform SSO. So, you can configure and use only the SSO app extension if you don't want to use Platform SSO. If you use Platform SSO, then you only configure Platform SSO, as it includes the SSO app extension.
+![check-icon] **For macOS devices**, the SSO app extension is available by itself and is also included in Platform SSO. So, you can configure and use only the SSO app extension if you don't want to use Platform SSO. If you use Platform SSO, then you only configure Platform SSO, as it includes the SSO app extension.
 
 The SSO app extension is a redirect-type SSO app extension. It's available for Intune, Jamf Pro, and other MDM solutions. In Intune, the SSO app extension uses a device configuration policy with Microsoft Entra ID as the SSO app extension type.
 
@@ -123,13 +121,13 @@ For more information on the SSO app extension, go to:
 The following table summarizes the SSO app extension features in Intune. Use this information to determine if this SSO option is right for your organization.
 
 | Feature | Details |
-| --- | --- |
-| **Platform support** | ✅ iOS/iPadOS 13.0 and newer <br/>✅ macOS 10.15 and newer|
-| **Supported enrollment types** | iOS/iPadOS:<br/>✅ Device enrollment<br/>✅ Automated Device Enrollment (supervised) <br/>✅ User enrollment <br/>✅ Direct enrollment (Apple Configurator) <br/><br/>macOS: <br/>✅ User approved device enrollment <br/>✅ Automated Device Enrollment (supervised)<br/>✅ Direct enrollment (Apple Configurator)|
-| **Supported authentication types** | ✅ Redirect-type SSO app extension, including Microsoft Entra ID <br/> ✅ Credential app extension <br/> ✅ Apple's built-in Kerberos extension |
-| **Supported app types** | ✅ Microsoft 365 apps<br/>✅ Apps, websites or services integrated with Microsoft Entra ID <br/>✅ Apps, websites or services that support Apple's Enterprise SSO and are integrated with on-premises Active Directory |
+|--|--|
+| **Platform support** | ![check-icon] iOS/iPadOS 13.0 and newer <br/>![check-icon] macOS 10.15 and newer |
+| **Supported enrollment types** | iOS/iPadOS:<br/>![check-icon] Device enrollment<br/>![check-icon] Automated Device Enrollment (supervised) <br/>![check-icon] User enrollment <br/>![check-icon] Direct enrollment (Apple Configurator) <br/><br/>macOS: <br/>![check-icon] User approved device enrollment <br/>![check-icon] Automated Device Enrollment (supervised)<br/>![check-icon] Direct enrollment (Apple Configurator) |
+| **Supported authentication types** | ![check-icon] Redirect-type SSO app extension, including Microsoft Entra ID <br/> ![check-icon] Credential app extension <br/> ![check-icon] Apple's built-in Kerberos extension |
+| **Supported app types** | ![check-icon] Microsoft 365 apps<br/>![check-icon] Apps, websites or services integrated with Microsoft Entra ID <br/>![check-icon] Apps, websites or services that support Apple's Enterprise SSO and are integrated with on-premises Active Directory |
 | **Intune admin center policy type** | **Device Features** template at: <br/><br/>**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Templates** > **Device features** for profile type > **Single sign-on app extension** |
-| **Recommendation** | ✅ Recommended on iOS/iPadOS. <br/><br/> ❌ Not preferred on macOS devices. <br/><br/> On macOS devices, you can use the SSO app extension by itself. But, we recommend you use Platform SSO instead. If you're also using Platform SSO for macOS, then don't create a separate SSO app extension policy. The SSO app extension is included in the Platform SSO configuration. |
+| **Recommendation** | ![check-icon] Recommended on iOS/iPadOS. <br/><br/> ![error-icon] Not preferred on macOS devices. <br/><br/> On macOS devices, you can use the SSO app extension by itself. But, we recommend you use Platform SSO instead. If you're also using Platform SSO for macOS, then don't create a separate SSO app extension policy. The SSO app extension is included in the Platform SSO configuration. |
 
 ::: zone-end
 
@@ -159,12 +157,12 @@ The following table summarizes the Single sign-on features in Intune. Use this i
 
 | Feature | Details |
 | --- | --- |
-| **Platform support** | ✅ iOS 7.0 and newer<br/>✅ iPadOS 13.0 and newer <br/> ❌ macOS|
-| **Supported enrollment types** | ✅ Device enrollment<br/>✅ Automated Device Enrollment (supervised) <br/>❌ User enrollment <br/>❌ Direct enrollment (Apple Configurator)|
+| **Platform support** | ![check-icon] iOS 7.0 and newer<br/>![check-icon] iPadOS 13.0 and newer <br/> ![error-icon] macOS|
+| **Supported enrollment types** | ![check-icon] Device enrollment<br/>![check-icon] Automated Device Enrollment (supervised) <br/>![error-icon] User enrollment <br/>![error-icon] Direct enrollment (Apple Configurator)|
 | **Supported authentication types** | Can only use Kerberos SSO authentication. <br/> - Enter Kerberos account information for when users access servers or apps. <br/>- Isn't an Apple implementation of Kerberos. <br/>- Handles Kerberos challenges for web pages and apps|
 | **Supported app types** | Website and native apps that support Kerberos authentication. App must be coded to look for the user credential store in single sign-on on the device. |
 | **Intune admin center policy type** | **Device Features** template at: <br/><br/>**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Templates** > **Device features** for profile type > **Single sign-on** |
-| **Recommendation** | ❌ Not recommended. Instead, Microsoft recommends using the [SSO app extension](#sso-app-extension) (in this article). |
+| **Recommendation** | ![error-icon] Not recommended. Instead, Microsoft recommends using the [SSO app extension](#sso-app-extension) (in this article). |
 
 ::: zone-end
 
@@ -174,7 +172,7 @@ The **Single sign-on app extension** feature is different than the **Single sign
 
 | | Single sign-on app extension | Single sign-on |
 | --- | --- | --- |
-| **Supported platforms** | ✅ iOS/iPadOS 13.0 and newer <br/>✅ macOS 10.15 and newer | ✅ iOS 7.0 and newer <br/>✅ iPadOS 13.0 and newer <br/>❌ macOS |
+| **Supported platforms** | ![check-icon] iOS/iPadOS 13.0 and newer <br/>![check-icon] macOS 10.15 and newer | ![check-icon] iOS 7.0 and newer <br/>![check-icon] iPadOS 13.0 and newer <br/>![error-icon] macOS |
 | **Description** | Define extensions for use by identity providers or organizations to deliver a seamless enterprise sign-on experience. It uses the Apple operating system to authenticate. | Define Kerberos account information for when users access servers or apps. |
 | **Authentication** | From an app development perspective, can use any type of redirect SSO or credential SSO authentication. | From an app development perspective, can only use Kerberos SSO authentication. |
 | **Apple implementation** | Developed by Apple and built into the iOS/iPadOS 13.0+ and macOS 10.15+ platforms. The built-in Kerberos extension can be used to sign users into native apps and websites that support Kerberos authentication. | Not an Apple implementation of Kerberos. |
@@ -187,3 +185,10 @@ The **Single sign-on app extension** feature is different than the **Single sign
 - For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web) (opens Apple's web site).
 
 - For information on troubleshooting the Microsoft Enterprise SSO Extension, go to [Troubleshooting the Microsoft Enterprise SSO Extension plugin on Apple devices](/entra/identity/devices/troubleshoot-mac-sso-extension-plugin).
+
+
+<!-- icons -->
+
+[check-icon]: ../media/icons/16/check.svg
+[error-icon]: ../media/icons/16/error.svg
+[info-icon]: ../media/icons/16/info-gray.svg

@@ -4,8 +4,6 @@ description: Use a custom profile to create a Wi-Fi profile with a preshared key
 ms.date: 05/28/2025
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use a custom device profile to create a Wi-Fi profile with a preshared key using Intune
@@ -45,7 +43,7 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
 ## Create a custom profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -277,3 +275,7 @@ After you have the XML file, copy and paste the XML syntax into OMA-URI settings
 
 - Be sure to [assign the profile](../assign-device-profile.md), and [monitor](../monitor-device-profile.md) its status.
 - For more information on EAP in general, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

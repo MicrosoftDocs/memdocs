@@ -4,8 +4,6 @@ description: Learn how to manage frontline worker devices using Android devices 
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: cbernier
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Frontline worker for Android devices in Microsoft Intune
@@ -56,9 +54,9 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). These devices are also used in countries/regions that allow GMS.
 
-✅ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
 
-❌ If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, use Android (AOSP) enrollment.
+:::image type="icon" source="../../media/icons/16/error.svg" border="false"::: If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, use Android (AOSP) enrollment.
 
 # [Android (AOSP)](#tab/aosp)
 
@@ -68,9 +66,9 @@ For example, devices that are used for augmented or virtual reality typically do
 - Don't support GMS.
 - Are used in countries/regions that block GMS.
 
-✅ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](../../fundamentals/aosp-supported-devices.md).
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](../../fundamentals/aosp-supported-devices.md).
 
-❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
+:::image type="icon" source="../../media/icons/16/error.svg" border="false"::: If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
 
 To learn more about Android (AOSP), go to [About the Android Open Source Project](https://source.android.com/) (opens Android's web site).
 
@@ -85,7 +83,7 @@ The next decision is to decide if the devices are shared with many users or assi
 
 - **Shared device with no user association (userless)**
 
-  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. Typically, these users manually sign into apps; they don't sign into the device.
+  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. Typically, these users manually sign in to apps; they don't sign in to the device.
 
   When using shared devices:
 
@@ -155,7 +153,7 @@ The following scenarios are common for FLW:
 
   3. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
-      In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode**. Set it to **Not configured**:
+      In the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode**. Set it to **Not configured**:
 
       :::image type="content" source="./media/android/kiosk-not-configured.png" alt-text="Dedicated device is the enrollment profile type and kiosk mode isn't configured in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android/kiosk-not-configured.png":::
 
@@ -179,7 +177,7 @@ The following scenarios are common for FLW:
 
   2. Use a [device restrictions configuration profile](../../device-configuration/templates/configure-device-restrictions.md) to set the kiosk mode to multi-app, and select your apps. This step locks the device to only the apps you select:
 
-      In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** > **Multi-app** > **Add**. Add the apps you want in multi-app kiosk mode:
+      In the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** > **Multi-app** > **Add**. Add the apps you want in multi-app kiosk mode:
 
       :::image type="content" source="./media/android/kiosk-multi-app.png" alt-text="Enrollment profile type is set to dedicated device, and kiosk mode is set to multi app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android/kiosk-multi-app.png":::
 
@@ -212,7 +210,7 @@ The following scenarios are common for FLW:
   1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md). When the app is added, you create an app policy that deploys the app to the devices.
   2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md):
 
-      In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and select **Single app**:
+      In the [Microsoft Intune admin center], go to **Devices** > **Manage devices** **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and select **Single app**:
 
       :::image type="content" source="./media/android/kiosk-single-app.png" alt-text="Enrollment profile type is set to dedicated device, and the kiosk mode is set to single app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android/kiosk-single-app.png":::
 
@@ -241,3 +239,7 @@ For more information on Microsoft Entra shared device mode (SDM), go to [Microso
 - [Frontline worker device management overview in Microsoft Intune](index.md)
 - [FLW for iOS/iPadOS devices](ios-ipados.md)
 - [FLW for Windows devices](windows.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

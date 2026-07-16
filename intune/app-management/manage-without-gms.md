@@ -4,8 +4,6 @@ description: Learn how to use Intune in environments without Google Mobile Servi
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.reviewer: priyar
-ms.collection:
-- M365-identity-device-management
 ---
 
 # How to Use Intune in Environments Without Google Mobile Services
@@ -31,7 +29,7 @@ Because the Google Play Store is currently not available in People's Republic of
 
 ### Unavailable Intune features
 
-Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) might be unavailable.
+Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center] might be unavailable.
 
 | Scenario  | Features  |
 |---|---|
@@ -88,3 +86,7 @@ If the device recently enrolled, the compliance, non-compliance, and configurati
 ## Next steps
 
 - [Assign apps to groups with Microsoft Intune](./deployment/assign-groups.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

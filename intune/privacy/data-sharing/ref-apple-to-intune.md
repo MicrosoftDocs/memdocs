@@ -4,10 +4,6 @@ description: List of data that Apple sends to Intune.
 ms.date: 04/08/2022
 ms.topic: reference
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
-- privacy
-- sub-data-privacy
 ---
 
 # Data Apple sends to Intune

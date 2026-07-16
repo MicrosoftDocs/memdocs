@@ -79,7 +79,7 @@ The least privileged built-in Intune role that supports managing security baseli
 
 The following guidance can be used anytime you create a new security baseline profile.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
@@ -160,7 +160,7 @@ When a new version for a baseline becomes available, plan to update your existin
 ### Update a baseline to the latest version
 *Applies to updating a baseline profile that was created in May 2023 or later.*
 
-1. Sign in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **Security baselines** > *select the baseline type* with the profile you want to update. On the baselines Profiles page, select the checkbox for the baseline instance that you want to update and then select **Update Version**. Intune displays the *Update Version* pane.
+1. Sign in the [Microsoft Intune admin center], and go to **Endpoint security** > **Security baselines** > *select the baseline type* with the profile you want to update. On the baselines Profiles page, select the checkbox for the baseline instance that you want to update and then select **Update Version**. Intune displays the *Update Version* pane.
 
 2. On the *Update Version* pane, select the update method to use:
    - **Accept baseline changes but keep my existing setting customizations** - Creates a new instance of the baseline profile using the latest version. Your current custom settings are preserved and applied to the new profile.
@@ -224,7 +224,7 @@ To update a baseline that was created before May 2023 to the new format, you mus
 
 With the information from an export, you can rapidly reconfigure the new baseline to use the same values as the older baseline instance.
 
-1. Sign in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **Security baselines** > *select the baseline type*, and then select the checkbox for the baseline profile (instance) that you want to replicate in the new baseline format, and then select **Change Version**. Intune displays the *Change Version* pane.
+1. Sign in the [Microsoft Intune admin center], and go to **Endpoint security** > **Security baselines** > *select the baseline type*, and then select the checkbox for the baseline profile (instance) that you want to replicate in the new baseline format, and then select **Change Version**. Intune displays the *Change Version* pane.
 
    The following screenshot displays a view of the *Security Baseline for Microsoft Edge*. We have two profiles at this time. One is a new profile for Microsoft Edge v112, and the other is an older profile from September 2020. The older profile also displays an arrow icon to indicate that there's a newer version to replace it.
 
@@ -302,7 +302,7 @@ Before you update a baseline profile to a new version, create a copy of it so yo
 
 Before you update the version of a profile that has assigned groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
@@ -342,7 +342,7 @@ After you duplicate a baseline, review and edit the new instance to make changes
 
 ### To duplicate a baseline
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Endpoint security** > **Security baselines**, select the type of baseline you want to duplicate, and then select **Profiles**.
 3. Right-click on the profile you want to duplicate and select **Duplicate**, or select the ellipsis (**…**) to the right of the baseline and select **Duplicate**.
 4. Provide a **New name** for the baseline, and then select **Save**.
@@ -388,3 +388,7 @@ When using co-managed devices, you must switch the **Device configuration** work
   - [Microsoft 365 Apps for Enterprise (Office baseline)](./ref-v2-office-settings.md)
   - [Microsoft Edge (Version 112 and later)](./ref-v2-edge-settings.md)
   - [Windows 365 Security Baseline](./ref-windows-365-settings.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

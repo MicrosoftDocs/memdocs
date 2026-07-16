@@ -25,7 +25,7 @@ The **Windows feature update device readiness report**  provides a device-level 
 
 To use this report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. In the admin center, go to **Reports** > **Device management** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
    - Select **Select Target OS** and choose the version of Windows you plan to deploy.
@@ -78,7 +78,7 @@ The **Windows feature update compatibility risks report**  provides a summary vi
 
 To use this report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. In the admin center, go to **Reports** > **Device management** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
@@ -276,3 +276,7 @@ The FastTrack Center Benefit for Windows provides access to **Desktop App Assure
 
 - Configure [Update rings for Windows](manage-update-rings.md)
 - Configure [Feature updates for Windows](manage-feature-updates.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

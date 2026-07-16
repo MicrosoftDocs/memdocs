@@ -1,8 +1,6 @@
 ---
 title: About the Microsoft Intune tenant status page
 description: The Intune tenant status page displays details about your tenant and the status of connectors you've configured, and messages intended for tenants and about the Intune service health.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 02/24/2025
 ms.topic: concept-article
 ms.reviewer: crisk
@@ -32,7 +30,7 @@ You can create a custom role that contains those permissions (recommended for le
 
 ## Access the tenant status page
 
-To view the dashboard, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Go to **Tenant administration** > **Tenant Status**.
+To view the dashboard, sign in to the [Microsoft Intune admin center]. Go to **Tenant administration** > **Tenant Status**.
 
 The page is divided into three tabs.
 
@@ -108,3 +106,7 @@ To view information for Intune News, your account must have the **Service suppor
 
 - [Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-admin-center-walkthrough.md)
 - [Get support for Intune](../fundamentals/it-pro-support/get-support-admin-center.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

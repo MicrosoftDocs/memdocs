@@ -1,8 +1,6 @@
 ---
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/21/2025
 ms.topic: article
 ms.collection:
@@ -59,7 +57,7 @@ Microsoft offers an Intune Onboarding benefit for eligible services. The benefit
 
 ## Sign in to Microsoft Intune
 
-After signing up for Intune, use any device with a [supported browser](./ref-supported-platforms.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service. Administration of Intune requires your account to have sufficient RBAC permissions within Intune for the tasks you want to manage. Initially, you might use an account that is assigned the Microsoft Entra ID built-in role of [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+After signing up for Intune, use any device with a [supported browser](./ref-supported-platforms.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center] to administer the service. Administration of Intune requires your account to have sufficient RBAC permissions within Intune for the tasks you want to manage. Initially, you might use an account that is assigned the Microsoft Entra ID built-in role of [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 The Intune Administrator is a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions) with global permissions within Microsoft Intune. With this role a user can configure Intune, add users, create groups of users, and assign the members of those groups Intune RBAC roles that provide them less privileged administrative access for daily use.
 
@@ -94,3 +92,7 @@ For information on assigning licenses, see [Assign Microsoft Intune licenses](as
 - [Configure domains](./configure-custom-domain.md)
 - [Add users](./tenant-administration/add-users.md)
 - [Add groups](./tenant-administration/add-groups.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

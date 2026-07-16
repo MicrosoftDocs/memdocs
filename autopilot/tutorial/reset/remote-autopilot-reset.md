@@ -33,7 +33,7 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 
 1. Make sure the Intune admin initiating the remote Windows Autopilot Reset is a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](/intune/fundamentals/tenant-administration/add-users).
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -59,7 +59,7 @@ A Windows Autopilot Reset can be forced to start sooner on a device by forcing t
 
 To force the device to obtain the latest Intune policy remotely, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -75,7 +75,7 @@ These steps should force the device to obtain the latest Intune policy. The Wind
 
 ### Locally force a device to start the remote Windows Autopilot Reset
 
-To force the device to obtain the latest Intune policy locally on the device, sign into the device where the remote Windows Autopilot Reset was initiated. Once signed into the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
+To force the device to obtain the latest Intune policy locally on the device, sign in to the device where the remote Windows Autopilot Reset was initiated. Once signed in to the device, open the **Accounts** > **Access work or school** pane in the **Settings** app by selecting the following link:
 
 > [!div class="nextstepaction"]
 > [Access work or school](ms-settings:workplace)
@@ -127,3 +127,7 @@ For more information on local Windows Autopilot Reset, see the following article
 - [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options).
 - [Add users and grant administrative permission to Intune](/intune/fundamentals/tenant-administration/add-users).
 - [Policy refresh intervals](/intune/device-configuration/troubleshoot-device-profiles#policy-refresh-intervals).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,6 +1,4 @@
 ---
-author: brenduns
-ms.author: brenduns
 ms-topic: include
 ms.date: 11/14/2025
 ---

@@ -19,7 +19,7 @@ Remote lock is supported on devices running:
 ## Remote lock device
 Complete the following steps to lock a missing device from the Company Portal app.
 
-1. Sign into the Intune Company Portal app for Windows.
+1. Sign in to the Intune Company Portal app for Windows.
 1. Go to **Devices**.
 1. Select the device that you want to lock.
 1. Choose **Actions**, and then select **Remote lock**.

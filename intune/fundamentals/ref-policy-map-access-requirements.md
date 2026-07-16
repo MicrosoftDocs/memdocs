@@ -1,13 +1,9 @@
 ---
 title: Access requirements policy mapping from Basic Mobility and Security to Intune
 description: A detailed list of the policy map between Basic Mobility and Security access requirements and Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 12/03/2025
 ms.topic: reference
 ms.reviewer: dagerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Access requirements policy mapping from Basic Mobility and Security to Intune
@@ -18,7 +14,7 @@ To see these settings in the Microsoft Purview compliance portal, sign in to the
 
 ## Before you begin
 
-To configure the settings in an Intune policy, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control/overview.md) lists and describes the built-in roles that can create policies.
+To configure the settings in an Intune policy, sign in to the [Microsoft Intune admin center]. [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control/overview.md) lists and describes the built-in roles that can create policies.
 
 ## If a device doesn't meet the requirements above, then...
 
@@ -304,3 +300,7 @@ The following settings aren't deployed by device security policies. But when dep
 ## Related article
 
 - [Move from Basic Mobility and Security to Intune](migrate-from-other-mdm.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

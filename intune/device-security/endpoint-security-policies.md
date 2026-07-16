@@ -2,8 +2,6 @@
 title: Endpoint security in Microsoft Intune
 description: Learn how to manage endpoint security in Microsoft Intune. Configure security policies, deploy baselines, and integrate with Defender for Endpoint to protect devices.
 keywords: Intune security policies, endpoint protection Intune, configure endpoint security, device security Intune, Microsoft Defender Intune, security baselines, zero trust Intune, ransomware protection, endpoint security node, device compliance Intune, Endpoint Security Manager, attack surface reduction Intune
-author: brenduns
-ms.author: brenduns
 ms.date: 05/26/2026
 ms.topic: overview
 ms.collection:
@@ -36,7 +34,7 @@ Use the Endpoint security node to address common security challenges:
 
 The Endpoint security dashboard provides a consolidated view of your security posture.
 
-To access the dashboard, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Overview**.
+To access the dashboard, sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Overview**.
 
 The dashboard helps you quickly assess device security status and identify areas requiring attention. It displays information from multiple endpoint security areas including *Antivirus*, *Endpoint detection and response*, and *Defender for Endpoint*:
 
@@ -269,3 +267,7 @@ Configure:
 - [Compliance policies](./compliance/overview.md)
 - [Conditional Access integration](./conditional-access-integration/overview.md)
 - [Integration with Microsoft Defender for Endpoint](./microsoft-defender/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

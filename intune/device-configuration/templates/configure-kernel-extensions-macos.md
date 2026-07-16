@@ -4,8 +4,6 @@ description: Learn more about system extensions and kernel extensions for macOS 
 ms.date: 09/11/2024
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add macOS system and kernel extensions in Intune
@@ -100,7 +98,7 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 >
 > Instead, use the settings catalog to create new policies that configure the System Extension payload. To learn more about the settings catalog, go to [settings catalog](../../device-configuration/settings-catalog/index.md).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -133,3 +131,7 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 ## Resources
 
 Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

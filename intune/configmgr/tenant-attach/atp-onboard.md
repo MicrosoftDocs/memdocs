@@ -22,7 +22,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 ## Create Defender for Endpoint policies
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 
@@ -55,3 +55,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 - [Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
 - [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -4,10 +4,6 @@ description: Understand how Microsoft Tunnel Gateway upgrades to new versions of
 ms.date: 06/11/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
@@ -75,7 +71,7 @@ You can view information about the status of Microsoft Tunnel servers, including
 
 For sites that don't support automatic upgrade, you can also view when upgrades to a new version are available.
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**. Select a server and then open the **Health check** tab to view the following information about it:
+Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**. Select a server and then open the **Health check** tab to view the following information about it:
 
 - **Server version** - The status of the Tunnel Gateway Server software, in the context of the most recent version available.
 
@@ -93,7 +89,7 @@ To understand when an upgrade is available for servers, use the [Health check](#
 
 ### To approve an upgrade
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+1. Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
 2. Select the site with an **Upgrade type** of **Manual**.
 
@@ -819,3 +815,7 @@ Changes in this release:
 The initial public preview release of Microsoft Tunnel.
 
 End of archive -->
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

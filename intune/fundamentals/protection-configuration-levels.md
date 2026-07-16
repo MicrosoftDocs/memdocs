@@ -1,12 +1,8 @@
 ---
 title: Protection and configuration levels overview in Microsoft Intune
 description: Learn about the different levels of protection and configuration in Microsoft Intune, including minimum, enhanced, and high levels. Understand the recommended policies for apps, compliance, and device configuration at each level to secure your organization's resources effectively.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/17/2026
 ms.topic: concept-article
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Levels of protection and configuration in Microsoft Intune

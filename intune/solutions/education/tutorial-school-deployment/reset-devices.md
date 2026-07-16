@@ -4,8 +4,6 @@ description: Learn about the reset and wipe options for Windows devices using In
 ms.date: 5/2/2024
 ms.topic: tutorial
 zone_pivot_groups: platforms-windows-ios
-author: scottbreenmsft
-ms.author: scbree
 ---
 
 # Reset and wipe devices
@@ -38,7 +36,7 @@ Intune provides reset functionalities that enable IT administrators to remotely 
 
 ### Factory reset (wipe)
 
-✅ Return a device to original settings
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Return a device to original settings
 
 A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications, and data installed on the device after purchase are removed. By default, the device is also removed from Intune management.
 
@@ -48,7 +46,7 @@ Once the wipe is completed, the device is in out-of-box experience.
 
 Here are the steps to perform a factory reset from Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **All devices**.
 1. Select the device you want to reset.
 1. Select **Wipe** and follow the instructions.
@@ -83,7 +81,7 @@ Consider using factory reset in the following example scenarios:
 
 ### Windows Autopilot Reset
 
-✅ Return a device to original settings but maintain enrollment
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Return a device to original settings but maintain enrollment
 
 Windows Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
 
@@ -93,7 +91,7 @@ Once the Windows Autopilot reset action is completed, the device asks to chose r
 
 Here are the steps to perform a  Windows Autopilot reset from Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **All devices**.
 1. Select the device you want to reset.
 1. Select **Autopilot Reset** and follow the instructions.
@@ -125,7 +123,7 @@ Consider using Windows Autopilot reset in the following example scenarios:
 
 ## Wiping and deleting a device
 
-✅ Wipe and remove a device from management
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Wipe and remove a device from management
 
 There are scenarios that require a device to be deleted from your tenant, for example:
 
@@ -163,3 +161,7 @@ ________________________________________________________
 [MEM-1]: ../../../device-management/actions/wipe.md
 [MEM-2]: ../../../device-management/actions/delete.md
 [MEM-3]: /entra/identity/devices/manage-stale-devices
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

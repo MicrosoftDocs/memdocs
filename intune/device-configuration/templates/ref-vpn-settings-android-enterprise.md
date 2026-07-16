@@ -6,8 +6,6 @@ ms.topic: reference
 ms.reviewer: abalwan
 params:
   siblings_only: true
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Enterprise device settings to configure VPN in Intune
@@ -60,7 +58,7 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
 
   - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../../fundamentals/certificates/overview.md) lists the steps to create a certificate profile.
-  - **Username and password**: When end users sign into the VPN server, users are prompted to enter their user name and password.
+  - **Username and password**: When end users sign in to the VPN server, users are prompted to enter their user name and password.
   - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
     For more information, see [Use derived credentials in Intune](../../device-security/certificates/derived-credentials.md).
@@ -114,7 +112,7 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
 
   - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../../fundamentals/certificates/overview.md) lists the steps to create a certificate profile.
-  - **Username and password**: When end users sign into the VPN server, users are prompted to enter their user name and password.
+  - **Username and password**: When end users sign in to the VPN server, users are prompted to enter their user name and password.
   - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
     For more information, see [Use derived credentials in Intune](../../device-security/certificates/derived-credentials.md).

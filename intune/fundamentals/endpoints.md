@@ -1,13 +1,10 @@
 ---
 title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 03/24/2026
 ms.topic: reference
 ms.reviewer: angrobe
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Network endpoints for Microsoft Intune
@@ -67,7 +64,7 @@ The data columns shown in the tables are:
 |----|------|----------|----|-----------|-------|
 | 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`*.dm.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25`<br><br>`Azure Front Door Endpoints:`<br>` 13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/23, 150.171.97.0/24, 2620:1ec:40::/48, 2620:1ec:49::/48, 2620:1ec:4a::/47` | **TCP:** 80, 443 |
 | 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
-| 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 80, 443 |
+| 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft<.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<br>`swdin02-mscdn.manage.microsoft.com`<br>`aam-content-cdn.manage.microsoft.com`(this endpoint is only for Enterprise App Catalog apps) | **TCP:** 80, 443 |
 | 97 | Consumer Outlook.com, OneDrive, Device authentication, and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> | **TCP:** 443 |
 | 190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443 |
 | 189 | Dependency - Feature Deployment | Default<BR>Required | False |`config.edge.skype.com`<BR>`ecs.office.com`<BR> | **TCP:** 443 |
@@ -102,7 +99,7 @@ In this section, the following tables list the Intune dependencies and the ports
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 |-----|------|----------|-------|-----------|-------|
-| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>`intunecdnpeasd.manage.microsoft.com`<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
+| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.manage.microsoft.com` | **TCP:** 443 |
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../app-management/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
@@ -304,28 +301,28 @@ To find your tenant location navigate to the Intune admin center > **Tenant admi
 
 If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides.
 
-Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
+Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center], choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
 |Region | CDN | Port |
 |-------|-----|------|
-|North America | `macsidecar.manage.microsoft.com`<br>`macsidecarprod.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Europe | `macsidecareu.manage.microsoft.com`<br>`macsidecarprodeu.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Asia Pacific| `macsidecarap.manage.microsoft.com`<br>`macsidecarprodap.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |**TCP:** 443 |
+|North America | `macsidecar.manage.microsoft.com` | **TCP:** 443 |
+|Europe | `macsidecareu.manage.microsoft.com` | **TCP:** 443 |
+|Asia Pacific| `macsidecarap.manage.microsoft.com` |**TCP:** 443 |
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
 If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../app-management/deployment/win32.md), [PowerShell scripts](../device-management/tools/run-powershell-scripts-windows.md), [remediations](../device-management/tools/deploy-remediations.md), [endpoint analytics](../endpoint-analytics/index.md), [custom compliance policies](../device-security/compliance/custom-settings.md) or [BIOS configuration profiles](../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
 
-Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
+Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center], choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Region | CDN | Port |
 |-----|--------------|-----|
-| North America | `naprodimedatapri.azureedge.net`<br>`naprodimedatasec.azureedge.net`<br>`naprodimedatahotfix.azureedge.net`<br>`imeswda-afd-primary.manage.microsoft.com`<br>`imeswda-afd-secondary.manage.microsoft.com`<br>`imeswda-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Europe | `euprodimedatapri.azureedge.net`<br>`euprodimedatasec.azureedge.net`<br>`euprodimedatahotfix.azureedge.net`<br>`imeswdb-afd-primary.manage.microsoft.com`<br>`imeswdb-afd-secondary.manage.microsoft.com`<br>`imeswdb-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-| Asia Pacific | `approdimedatapri.azureedge.net`<br>`approdimedatasec.azureedge.net`<br>`approdimedatahotfix.azureedge.net`<br>`imeswdc-afd-primary.manage.microsoft.com`<br>`imeswdc-afd-secondary.manage.microsoft.com`<br>`imeswdc-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+| North America | `imeswda-afd-primary.manage.microsoft.com`<br>`imeswda-afd-secondary.manage.microsoft.com`<br>`imeswda-afd-hotfix.manage.microsoft.com` | **TCP:** 443 |
+|Europe | `imeswdb-afd-primary.manage.microsoft.com`<br>`imeswdb-afd-secondary.manage.microsoft.com`<br>`imeswdb-afd-hotfix.manage.microsoft.com` | **TCP:** 443 |
+| Asia Pacific | `imeswdc-afd-primary.manage.microsoft.com`<br>`imeswdc-afd-secondary.manage.microsoft.com`<br>`imeswdc-afd-hotfix.manage.microsoft.com` | **TCP:** 443 |
 
 For diagnostic data used to monitor the health of the client side components:
 
@@ -404,7 +401,7 @@ If the script reports a failure (Exit Code 1):
 
 - **If the Azure Front Door IP Address tests show failed IPs or IP ranges:** Your firewall, proxy, or VPN may be blocking outbound connections on ports **443** or **80** to those Azure Front Door IPs.
 
-- **If the Service Endpoint test shows “HTTPS endpoint unreachable”:** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN.
+- **If the Service Endpoint test shows "HTTPS endpoint unreachable":** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN.
 
 - **Review the network endpoints for Microsoft Intune** (as detailed in this article) and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports.
 
@@ -418,60 +415,54 @@ These lists include only those endpoints that that are used by Intune managed de
 
 FQDNs
 ```
-*.manage.microsoft.com
-manage.microsoft.com
+*.delivery.mp.microsoft.com
 *.dl.delivery.mp.microsoft.com
 *.dm.microsoft.com
 *.do.dsp.mp.microsoft.com
-*.update.microsoft.com
-*.windowsupdate.com
-adl.windows.com
-dl.delivery.mp.microsoft.com
-tsfe.trafficshaping.dsp.mp.microsoft.com
-time.windows.com
-*.s-microsoft.com
-clientconfig.passport.net
-windowsphone.com
-approdimedatahotfix.azureedge.net
-approdimedatapri.azureedge.net
-approdimedatasec.azureedge.net
-euprodimedatahotfix.azureedge.net
-euprodimedatapri.azureedge.net
-euprodimedatasec.azureedge.net
-naprodimedatahotfix.azureedge.net
-naprodimedatapri.azureedge.net
-naprodimedatasec.azureedge.net
-*.notify.windows.com
-*.wns.windows.com
-ekcert.spserv.microsoft.com
-ekop.intel.com
-ftpm.amd.com
-intunecdnpeasd.azureedge.net
+*.events.data.microsoft.com
+*.gov.teams.microsoft.us
+*.manage.microsoft.com
 *.monitor.azure.com
+*.notify.windows.com
+*.powershellgallery.com
+*.s-microsoft.com
 *.support.services.microsoft.com
 *.trouter.communication.microsoft.com
 *.trouter.communications.svc.cloud.microsoft
+*.trouter.teams.microsoft.com
+*.update.microsoft.com
+*.webpubsub.azure.com
+*.windowsupdate.com
+*.wns.windows.com
+aadcdn.msauth.net
+aadcdn.msftauth.net
+aam-content-cdn.manage.microsoft.com
+adl.windows.com
+aka.ms
+api.flightproxy.skype.com
+browser.pipe.aria.microsoft.com
+cdn.oneget.org
+certauth.enterpriseregistration.windows.net
+clientconfig.passport.net
+config.edge.skype.com
+config.office.com
+displaycatalog.mp.microsoft.com
+dl.delivery.mp.microsoft.com
+ecs.communication.microsoft.com
+ecs.office.com
+edge.microsoft.com
+edge.skype.com
+ekcert.spserv.microsoft.com
+ekop.intel.com
+enterpriseregistration.windows.net
+fd.api.orgmsg.microsoft.com
+ftpm.amd.com
 go-amer.trouter.communications.svc.cloud.microsoft
 go-apac.trouter.communications.svc.cloud.microsoft
 go-eu.trouter.communications.svc.cloud.microsoft
-*.trouter.teams.microsoft.com
-api.flightproxy.skype.com
-ecs.communication.microsoft.com
-edge.microsoft.com
-edge.skype.com
-remoteassistanceprodacs.communication.azure.com
-remoteassistanceprodacseu.communication.azure.com
-remotehelp.microsoft.com
-wcpstatic.microsoft.com
-lgmsapeweu.blob.core.windows.net
+go.microsoft.com
+graph.windows.net
 intunemaape1.eus.attest.azure.net
-intunemaape10.weu.attest.azure.net
-intunemaape11.weu.attest.azure.net
-intunemaape12.weu.attest.azure.net
-intunemaape13.jpe.attest.azure.net
-intunemaape17.jpe.attest.azure.net
-intunemaape18.jpe.attest.azure.net
-intunemaape19.jpe.attest.azure.net
 intunemaape2.eus2.attest.azure.net
 intunemaape3.cus.attest.azure.net
 intunemaape4.wus.attest.azure.net
@@ -479,40 +470,36 @@ intunemaape5.scus.attest.azure.net
 intunemaape7.neu.attest.azure.net
 intunemaape8.neu.attest.azure.net
 intunemaape9.neu.attest.azure.net
-*.webpubsub.azure.com
-*.gov.teams.microsoft.us
-remoteassistanceweb.usgov.communication.azure.us
-config.edge.skype.com
-fd.api.orgmsg.microsoft.com
-ris.prod.api.personalization.ideas.microsoft.com
-*.powershellgallery.com
-cdn.oneget.org
-go.microsoft.com
-aka.ms
-displaycatalog.mp.microsoft.com
-purchase.md.mp.microsoft.com
-licensing.mp.microsoft.com
-storeedgefd.dsx.mp.microsoft.com
-*.events.data.microsoft.com
-*.delivery.mp.microsoft.com
-enterpriseregistration.windows.net
-certauth.enterpriseregistration.windows.net
-login.microsoftonline.com
-graph.windows.net
-config.office.com
-ecs.office.com
-aadcdn.msauth.net
-aadcdn.msftauth.net
-browser.pipe.aria.microsoft.com
-teams.microsoft.com
-login.live.com
-lgmsapeweu.blob.core.windows.net
-lgmsapewus2.blob.core.windows.net
-lgmsapesea.blob.core.windows.net
+intunemaape10.weu.attest.azure.net
+intunemaape11.weu.attest.azure.net
+intunemaape12.weu.attest.azure.net
+intunemaape13.jpe.attest.azure.net
+intunemaape17.jpe.attest.azure.net
+intunemaape18.jpe.attest.azure.net
+intunemaape19.jpe.attest.azure.net
 lgmsapeaus.blob.core.windows.net
 lgmsapeind.blob.core.windows.net
+lgmsapesea.blob.core.windows.net
 lgmsapeswiss.blob.core.windows.net
-
+lgmsapeweu.blob.core.windows.net
+lgmsapeweu.blob.core.windows.net
+lgmsapewus2.blob.core.windows.net
+licensing.mp.microsoft.com
+login.live.com
+login.microsoftonline.com
+manage.microsoft.com
+purchase.md.mp.microsoft.com
+remoteassistanceprodacs.communication.azure.com
+remoteassistanceprodacseu.communication.azure.com
+remoteassistanceweb.usgov.communication.azure.us
+remotehelp.microsoft.com
+ris.prod.api.personalization.ideas.microsoft.com
+storeedgefd.dsx.mp.microsoft.com
+teams.microsoft.com
+time.windows.com
+tsfe.trafficshaping.dsp.mp.microsoft.com
+wcpstatic.microsoft.com
+windowsphone.com
 ```
 
 IP Subnets
@@ -620,83 +607,7 @@ IP Subnets
 
 [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints)
 
-<!-- Older table. Will be removed soon after all the other new tables are finalized. This table is for reference only
-You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to. When you run the script, the URL list in the script output can be different then the URLs in the following table. At a minimum, make sure you include the URLs in the following table.
 
-|FQDN    |Associated Service      |
-|-----------|----------------|
-|*.manage.microsoft.com| Intune Service |
-|manage.microsoft.com| Intune Service |
-|*.prod.do.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
-|*.windowsupdate.com| Windows Update and Delivery Optimization |
-|*.dl.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
-|*.update.microsoft.com| Windows Update and Delivery Optimization |
-|*.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
-|tsfe.trafficshaping.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
-|*.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.notify.windows.com| Push Notifications |
-|*.wns.windows.com| Push Notifications |
-|devicelistenerprod.microsoft.com| Windows Autopatch |
-|devicelistenerprod.eudb.microsoft.com| Windows Autopatch |
-|login.windows.net| Windows Autopatch |
-|payloadprod*.blob.core.windows.net| Windows Autopatch |
-|time.windows.com| NTP Sync |
-|www.msftconnecttest.com| NTP Sync |
-|www.msftncsi.com| NTP Sync |
-|*.s-microsoft.com| Windows Notifications & Store |
-|clientconfig.passport.net| Windows Notifications & Store |
-|windowsphone.com| Windows Notifications & Store |
-|approdimedatahotfix.azureedge.net| Scripts & Win32 Apps |
-|approdimedatapri.azureedge.net| Scripts & Win32 Apps |
-|approdimedatasec.azureedge.net| Scripts & Win32 Apps |
-|euprodimedatahotfix.azureedge.net| Scripts & Win32 Apps |
-|euprodimedatapri.azureedge.net| Scripts & Win32 Apps |
-|euprodimedatasec.azureedge.net| Scripts & Win32 Apps |
-|naprodimedatahotfix.azureedge.net| Scripts & Win32 Apps |
-|naprodimedatapri.azureedge.net| Scripts & Win32 Apps |
-|swda01-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swda02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdb01-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdb02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdc01-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdc02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdd01-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdd02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdin01-mscdn.azureedge.net| Scripts & Win32 Apps |
-|swdin02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|ekcert.spserv.microsoft.com| Windows Autopilot Self-deploy |
-|ekop.intel.com| Windows Autopilot Self-deploy |
-|ftpm.amd.com| Windows Autopilot Self-deploy |
-|*.itunes.apple.com| Apple Device Management |
-|*.mzstatic.com| Apple Device Management |
-|*.phobos.apple.com| Apple Device Management |
-|5-courier.push.apple.com| Apple Device Management |
-|ax.itunes.apple.com.edgesuite.net| Apple Device Management |
-|itunes.apple.com| Apple Device Management |
-|ocsp.apple.com| Apple Device Management |
-|phobos.apple.com| Apple Device Management |
-|phobos.itunes-apple.com.akadns.net| Apple Device Management |
-|intunecdnpeasd.azureedge.net|  |
-|*.channelservices.microsoft.com| Remote Help |
-|*.go-mpulse.net| Remote Help |
-|*.infra.lync.com| Remote Help |
-|*.resources.lync.com| Remote Help |
-|*.support.services.microsoft.com| Remote Help |
-|*.trouter.skype.com| Remote Help |
-|*.vortex.data.microsoft.com| Remote Help |
-|edge.skype.com| Remote Help |
-|remoteassistanceprodacs.communication.azure.com| Remote Help |
-|lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
-|fd.api.orgmsg.microsoft.com | Organizational messages |
-|ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
-|config.edge.skype.com | Feature Deployment |
-|go.microsoft.com | Endpoint discovery |
+<!--links-->
 
-
-The following tables list the ports and services that the Intune client accesses:
-
-|Domains    |IP address      |
-|-----------|----------------|
-| login.microsoftonline.com <br> *.officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net <br> enterpriseregistration.windows.net | More information [Office 365 URLs and IP address ranges](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
-|*.manage.microsoft.com <br> manage.microsoft.com <br>|104.46.162.96/27<br>13.67.13.176/28<br>13.67.15.128/27<br>13.69.231.128/28<br>13.69.67.224/28<br>13.70.78.128/28<br>13.70.79.128/27<br>13.74.111.192/27<br>13.77.53.176/28<br>13.86.221.176/28<br>13.89.174.240/28<br>13.89.175.192/28<br>20.189.172.160/27<br>20.189.229.0/25<br>20.191.167.0/25<br>20.37.153.0/24<br>20.37.192.128/25<br>20.38.81.0/24<br>20.41.1.0/24<br>20.42.1.0/24<br>20.42.130.0/24<br>20.42.224.128/25<br>20.43.129.0/24<br>20.44.19.224/27<br>20.192.174.216/29<br>20.192.159.40/29<br>20.204.193.12/30<br>20.204.193.10/31<br>40.119.8.128/25<br>40.67.121.224/27<br>40.70.151.32/28<br>40.71.14.96/28<br>40.74.25.0/24<br>40.78.245.240/28<br>40.78.247.128/27<br>40.79.197.64/27<br>40.79.197.96/28<br>40.80.180.208/28<br>40.80.180.224/27<br>40.80.184.128/25<br>40.82.248.224/28<br>40.82.249.128/25<br>52.150.137.0/25<br>52.162.111.96/28<br>52.168.116.128/27<br>52.182.141.192/27<br>52.236.189.96/27<br>52.240.244.160/27|
--->
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -7,8 +7,7 @@ ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ---
 
 # Manage devices with endpoint security in Microsoft Intune
@@ -22,7 +21,7 @@ As a security administrator, use the *All devices* view in the Microsoft Intune 
 
 Devices can be in the cloud and from your on-premises infrastructure when integrated with your Microsoft Entra ID.
 
- To find the view, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
+ To find the view, open the [Microsoft Intune admin center] and select **Endpoint security** > **All devices**.
 
 The initial *All devices* view displays your devices and includes key information about each:
 
@@ -145,3 +144,7 @@ Options you manage for devices don't take effect until the device checks in with
 ## Next steps
 
 [Manage endpoint security in Intune](../device-security/endpoint-security-policies.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

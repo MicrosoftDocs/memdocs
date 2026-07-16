@@ -4,8 +4,6 @@ description: Set up a greeting page for users signing in and enrolling Windows d
 ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: madakeva, davguy
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up the Enrollment Status Page
@@ -32,7 +30,7 @@ This article describes the information that the enrollment status page tracks an
 
 Use the following steps to create an Intune profile that configures the enrollment status page.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > expand **Device onboarding** > ***Enrollment**.
+1. In the [Microsoft Intune admin center], select **Devices** > expand **Device onboarding** > ***Enrollment**.
 1. In the **Windows** tab, under **Windows Autopilot**, select **Enrollment Status Page**.
 1. Select **Create**.
 1. In **Basics**, enter the following properties:
@@ -57,7 +55,7 @@ Use the following steps to create an Intune profile that configures the enrollme
 
     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Use this setting to stop the enrollment status page from reappearing to every new user who signs into the device. Your options:
       - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.
-      - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
+      - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign in to the device.
 
     - **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates for the available quality updates, also known as monthly security update releases. Your options:
       - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page shows the update progress.
@@ -149,7 +147,7 @@ On Windows 11 versions with the `2025-06 D` quality update, the control that ena
 
     To install the quality updates during OOBE, edit the existing ESP profile and set the **Install Windows quality updates** setting to **Yes**.
 
-- Installing the quality updates during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
+- Installing the quality updates during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed in to Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
 
 - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
 
@@ -366,3 +364,7 @@ enrolled via the *Add work and school account* option. The ESP waits for Microso
 ## Troubleshooting
 
 For help with errors or messages related to the ESP, including how to disable an already-enabled ESP, see [Troubleshoot the Windows Enrollment Status page](/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

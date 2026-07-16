@@ -24,7 +24,7 @@ A device that is registered as a Windows Autopilot device can also be assigned t
 
 To assign a Windows Autopilot device to a user, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -47,3 +47,7 @@ To assign a Windows Autopilot device to a user, follow these steps:
 1. In the Windows Autopilot device's property window that automatically opens on the right hand side, under **User friendly name**, verify the default value. If the value is empty or a different friendly name is desired, enter the desired friendly name for the user under **User friendly name**, and then select **Save** to close the property window.
 
 1. The user assignment can be verified by selecting the Windows Autopilot device in the **Windows Autopilot devices** screen. Once the Windows Autopilot device is selected, it highlights and the Windows Autopilot device's property window automatically opens on the right hand side. The assigned user is listed under **User** and **User friendly name**.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

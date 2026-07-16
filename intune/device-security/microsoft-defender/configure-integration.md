@@ -3,11 +3,7 @@ title: Configure Microsoft Defender for Endpoint with Intune and onboard devices
 description: Connect Microsoft Defender for Endpoint to Intune, onboard devices by platform, and configure compliance and Conditional Access policies that use device risk levels to control access to corporate resources.
 ms.date: 05/26/2026
 ms.topic: how-to
-ms.reviewer: aanavath
 ai.usage: ai-assisted 
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint with Intune and onboard devices
@@ -45,12 +41,12 @@ After completing this guide, you'll have completed the following integration wor
 Complete this one-time setup per tenant to create the service-to-service connection that enables integration features.
 
 **Prerequisites:**  
-- Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings. Custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission. For more information, see [Create a custom role](../../fundamentals/role-based-access-control/create-custom-role.md).
+- Admin access to the [Microsoft Intune admin center] with the **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings. Custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission. For more information, see [Create a custom role](../../fundamentals/role-based-access-control/create-custom-role.md).
 - Admin access to the [Microsoft Defender portal](https://security.microsoft.com) with the [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) role in Microsoft Entra ID, or **Manage security settings in Windows Security Center** permission in Defender for Endpoint.
 
 ### Enable Intune and Defender for Endpoint integration
 
-1. **Check connection status first:** Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **Defender for Endpoint**.
+1. **Check connection status first:** Sign in to the [Microsoft Intune admin center] and select **Endpoint security** > **Defender for Endpoint**.
 
    - If **Connection status** shows **Enabled**, the services are already connected. Skip to [Onboard devices](#onboard-devices).
    - If **Connection status** shows **Unavailable**, continue with the next step.
@@ -80,7 +76,7 @@ The service-to-service connection is now established. Continue to configure whic
 
 After you create the service connection, configure which platforms connect to Defender for Endpoint for compliance and app protection policy evaluation.
 
-**Prerequisites:** Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings. Custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission. For more information, see [Create a custom role](../../fundamentals/role-based-access-control/create-custom-role.md).
+**Prerequisites:** Admin access to the [Microsoft Intune admin center] with the **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings. Custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission. For more information, see [Create a custom role](../../fundamentals/role-based-access-control/create-custom-role.md).
 
 ### Configure compliance and app protection settings
 
@@ -120,7 +116,7 @@ The platforms you enabled connect devices to Defender for Endpoint for threat as
 
 Device onboarding configures your managed devices to communicate with Defender for Endpoint, enabling threat detection and risk assessment.
 
-**Prerequisites:** Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Endpoint detection and response* policies (custom roles require *Assign*, *Create*, *Delete*, *Read*, *Update*, and *View Reports* rights for the *Endpoint Detection and Response* permission).
+**Prerequisites:** Admin access to the [Microsoft Intune admin center] with **Endpoint Security Manager** role or equivalent permissions for *Endpoint detection and response* policies (custom roles require *Assign*, *Create*, *Delete*, *Read*, *Update*, and *View Reports* rights for the *Endpoint Detection and Response* permission).
 
 > [!TIP]
 > **Version requirement:** Always use the latest Defender for Endpoint version for each platform to ensure optimal protection and compatibility.
@@ -159,7 +155,7 @@ Use this option for fast, broad deployment to all Windows devices with no extra 
 
 ##### Quick setup steps
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Endpoint detection and response** > **EDR Onboarding Status** tab.
+1. In the [Microsoft Intune admin center], go to **Endpoint security** > **Endpoint detection and response** > **EDR Onboarding Status** tab.
 
 1. Select **Deploy preconfigured policy**.
 
@@ -181,7 +177,7 @@ Use this option for granular control, specific device groups, or custom scope ta
 
 ##### Custom setup steps
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Endpoint detection and response** > **Summary** tab > **Create Policy**.
+1. In the [Microsoft Intune admin center], select **Endpoint security** > **Endpoint detection and response** > **Summary** tab > **Create Policy**.
 
 1. **Platform and profile:**
    - **Platform**: **Windows**
@@ -272,7 +268,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### Configuration steps for supervised devices
 
-1. **Create app configuration policy:** In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. **Create app configuration policy:** In the [Microsoft Intune admin center], select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 
 1. **Configure basics:**
    - **Name**: Enter a descriptive name, such as "MDE Supervision Detection - iOS".
@@ -312,14 +308,14 @@ Devices that exceed the configured risk threshold are automatically marked as no
 **Supported platforms:** Android, iOS/iPadOS, and Windows devices.
 
 **Prerequisites:**  
-- Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Device compliance policies* (custom roles require *Assign*, *Create*, *Delete*, *Read*, and *Update* rights for the *Device compliance policies* permission).
+- Admin access to the [Microsoft Intune admin center] with **Endpoint Security Manager** role or equivalent permissions for *Device compliance policies* (custom roles require *Assign*, *Create*, *Delete*, *Read*, and *Update* rights for the *Device compliance policies* permission).
 
 > [!TIP]
 > New to compliance policies? See the [Create a policy](../compliance/create-policy.md#create-the-policy) guide for general instructions. The following steps focus specifically on Defender for Endpoint integration.
 
 ### Steps to create the policy
 
-1. **Go to compliance policies:** In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > expand *Manage devices* and select **Compliance** > **Policies** tab > **Create policy**.
+1. **Go to compliance policies:** In the [Microsoft Intune admin center], select **Devices** > expand *Manage devices* and select **Compliance** > **Policies** tab > **Create policy**.
 
 1. **Select platform:** Choose your target platform:
    - **Android device administrator** (limited support)
@@ -379,7 +375,7 @@ App protection policies work independently of device enrollment, providing an ex
 **Platforms:** iOS/iPadOS and Android only
 
 **Prerequisites:**  
-- Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for security-related *Mobile apps* policies. Custom roles require *Assign*, *Create*, *Delete*, *Read*, *Update*, and *Wipe* rights for the *Managed apps* permission.
+- Admin access to the [Microsoft Intune admin center] with **Endpoint Security Manager** role or equivalent permissions for security-related *Mobile apps* policies. Custom roles require *Assign*, *Create*, *Delete*, *Read*, *Update*, and *Wipe* rights for the *Managed apps* permission.
 
 Follow the [application protection policy creation guide](../../app-management/protection/create-policy.md#app-protection-policies-for-iosipados-and-android-apps) and configure these Defender for Endpoint-specific settings:
 
@@ -407,7 +403,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 > Conditional Access is a Microsoft Entra technologies. The Intune admin center provides direct access to the same Conditional Access configuration available in the Azure portal.
 
 **Prerequisites:**
-- Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Admin access to the [Microsoft Intune admin center].
 - Permissions equal to the [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) role in Entra ID for managing Conditional Access policies.
 
 > [!IMPORTANT]
@@ -415,7 +411,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 ### Steps to create the policy
 
-1. **Go to Conditional Access:** In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional Access** > **Create new policy**.
+1. **Go to Conditional Access:** In the [Microsoft Intune admin center], select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
 1. **Basic configuration:**
    - **Name**: Enter a descriptive name, such as "Block Noncompliant Devices - MDE Integration".
@@ -481,3 +477,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 - **Integration issues**: Check [troubleshooting guide](./monitor.md).
 - **Policy conflicts**: See [policy conflict resolution](../../device-configuration/endpoint-security/manage-policies.md#manage-policy-conflicts).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

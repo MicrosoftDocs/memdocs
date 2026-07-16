@@ -3,10 +3,6 @@ title: Use Microsoft Tunnel VPN gateway with Conditional Access policies
 description: Configure your Azure tenant to support using Conditional Access policies to grant access to the Intune Microsoft Tunnel VPN gateway solution.
 ms.date: 06/03/2025
 ms.topic: how-to
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Use Conditional Access with Microsoft Tunnel in Intune
@@ -41,7 +37,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 If you'll use Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional Access** > **Create new policy**. The admin center presents the Microsoft Entra interface for creating Conditional Access policies.
+1. Sign in to [Microsoft Intune admin center] > **Endpoint Security** > **Conditional Access** > **Create new policy**. The admin center presents the Microsoft Entra interface for creating Conditional Access policies.
 
 2. Specify a name for this policy.
 
@@ -63,3 +59,7 @@ For more information about creating policies for Conditional Access, see [Create
 ## Related content
 
 [Monitor Microsoft Tunnel](./monitor.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

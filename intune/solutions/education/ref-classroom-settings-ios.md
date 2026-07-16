@@ -7,8 +7,6 @@ ms.date: 11/14/2019
 ms.topic: archived
 
 ms.reviewer: derriw
-ms.collection:
-- M365-identity-device-management
 ---
 
 # How to configure Intune settings for the iOS/iPadOS Classroom app
@@ -64,7 +62,7 @@ You can import information into SDS by using one of the following methods:
 
 ### Configure general settings
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -152,3 +150,7 @@ Now when teachers use the Classroom app, they'll have full control over student 
 For more information about the Classroom app, see [Classroom help](https://help.apple.com/classroom/ipad/2.0/), on the Apple web site.
 
 If you want to configure shared iPad devices for students, see [How to configure Intune education settings for shared iPad devices](ref-classroom-settings-ios-shared.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -4,8 +4,6 @@ description: Learn about the transition to Android Management API for personally
 ms.date: 06/18/2026
 ms.topic: overview
 ms.reviewer: priyar, grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use Android Management API for personally owned devices with work profiles
@@ -72,19 +70,7 @@ Before you enable web-based enrollment:
 - Test in a test tenant before enabling it in production.
 - Walk through the enrollment experience and update your internal helpdesk documentation.
 
-To enable web-based enrollment:
-
-1. In the Microsoft Intune admin center, go to **Devices**.  
-
-1. Select the **Android** tab.  
-
-1. Expand **Device onboarding** and select **Enrollment**.  
-
-1. Under **Enrollment Profiles**, select **Personally owned devices with a work profile**.  
-
-1. Select **Use web enrollment for all users enrolling into Android personally owned work profile management**.  
-
-1. Select **Ok** to save your changes. This change can't be reversed.  
+For the steps to enable web-based enrollment, see [Create an enrollment profile](setup-personal-work-profile.md#create-an-enrollment-profile). Enabling web-based enrollment applies at the tenant level and can't be reversed.
 
 ## Create a device configuration profile for existing devices
 
@@ -104,7 +90,7 @@ For devices already enrolled in Intune, use the Android Management API device co
 
 ### Create the device configuration profile
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -160,7 +146,7 @@ Take these actions before the migration to Android Management API to ensure a sm
 
 ### Replace custom configuration policies
 
-[Intune ended support for custom configuration policies for personally owned work profile devices](../../whats-new/archive/index.md#intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devices). Custom policies don't work with Android Management API. Replace all custom policies with equivalent built-in policies.
+[Intune ended support for custom configuration policies for personally owned work profile devices](../../whats-new/archive.md#intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devices). Custom policies don't work with Android Management API. Replace all custom policies with equivalent built-in policies.
 
 For help with the replacement settings, see [Replace custom policies with built-in settings](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414). If the setting is available in the [settings catalog](../../device-configuration/settings-catalog/index.md), then create a settings catalog policy. If the setting isn't available in the settings catalog, then use the [device restrictions template](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
@@ -214,3 +200,7 @@ For the latest updates on rollout timeline and enforcement changes, see [New pol
 - [Android Enterprise work profile management overview](enterprise-work-profile.md)
 - [Set up enrollment of Android Enterprise personally owned work profile devices](setup-personal-work-profile.md)
 - [Redo Workplace Join for Android Enterprise devices](redo-workplace-join-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,13 +1,9 @@
 ---
 title: View device details with Microsoft Intune
 description: View your device details, including operating systems, storage space, manufacturer, and model. Get a list of installed apps, check compliance policies, and set up TeamViewer with Microsoft Intune in Azure. Similar to viewing inventory of the devices you manage.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 01/14/2025
 ms.topic: how-to
 ms.reviewer: davguy
-ms.collection:
-- M365-identity-device-management
 ---
 
 # See device details in Intune
@@ -18,7 +14,7 @@ This article shows you how to view all your devices, and their properties in the
 
 ## View the device details
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
    - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. Depending on the device platform, you can perform different actions. For more information, see [Use remote actions to manage devices using Intune](../../device-management/actions/index.md).
@@ -97,3 +93,7 @@ Depending on the carrier used by the devices, not all details might be collected
    > - CT Subscription Slot One
      > - CT Subscription Slot Two
        >  - Top-level ICCID, IMEI, MEID, and Phone number properties (deprecated)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

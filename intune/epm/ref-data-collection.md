@@ -3,12 +3,6 @@ title: Review the type of data that Microsoft Intune Endpoint Privilege Manageme
 description: View details about the type of data Endpoint Privilege Management can collect and store when used with Microsoft Intune.
 ms.date: 09/10/2025
 ms.topic: reference
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Data collection and privacy for Endpoint Privilege Management

@@ -1,8 +1,6 @@
 ---
 title: Use Windows Holographic devices with Microsoft Intune
 description: Use Microsoft Intune to manage and complete different tasks on devices running Windows Holographic for Business and HoloLens. You can configure the Company Portal app, create a compliance policy, customize OMA-URI settings, deploy apps, categorize devices in groups, create profiles, restrict devices, enable software updates, set terms and conditions, configure VPN and Wi-Fi settings, and use Hello for Business.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/17/2025
 ms.topic: how-to
 ms.collection:

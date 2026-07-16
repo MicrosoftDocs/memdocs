@@ -4,10 +4,6 @@ description: Set up macOS account configuration with LAPS through automatic devi
 ms.date: 04/01/2026
 ms.topic: how-to
 ms.reviewer: annovich
-author: lenewsad
-ms.author: lanewsad
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune
@@ -130,7 +126,7 @@ To view the local Administrator password of a device, your own account must be a
 
 ### To view the admin account password
 
-1.    In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
+1.    In the [Microsoft Intune admin center], go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
 
 On the **Passwords and keys** pane, you can retrieve the admin password for the macOS device under the **Local administrator account password** section. Here you can also see the last time the password was rotated, manually or automatically.
 
@@ -148,7 +144,7 @@ To use this device action, your account must be assigned the [Intune RBAC permis
 
 ### To rotate the admin password
 
-1. In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a macOS device with the account you want to rotate.
+1. In the [Microsoft Intune admin center], go to **Devices** > **macOS devices** > select a macOS device with the account you want to rotate.
 
 2. On the devices *Overview* pane, from the list of options at the top of the pane select **Rotate local admin password**.
 
@@ -163,7 +159,7 @@ To use this device action, your account must be assigned the [Intune RBAC permis
 
 Password viewing and rotation both create Intune Audit events that you can view from within the Intune admin center.
 
-In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Audit logs**.
+In the [Microsoft Intune admin center], go to **Tenant administration** > **Audit logs**.
 
 Look for the following entries:
 - **Get AdminAccountDto** - Identifies when someone viewed the admin password.
@@ -172,3 +168,7 @@ Look for the following entries:
 ## Related content
 
 - Get started with the [macOS enrollment guide](../../device-enrollment/apple/guide-macos.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

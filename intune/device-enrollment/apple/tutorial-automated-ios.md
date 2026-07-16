@@ -4,9 +4,6 @@ description: In this tutorial, you'll set up Apple corporate device enrollment f
 ms.date: 03/05/2025
 ms.topic: tutorial
 Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business.
-ms.reviewer: annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business
@@ -32,7 +29,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 ## Step 1: Add MDM server
 Create an MDM server profile for Microsoft Intune in Apple Business. The token you download in this step will enable the connection between Microsoft Intune and Apple Business in a later step.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select **Apple mobile**.  
@@ -124,3 +121,7 @@ You've set up management and syncing between Apple and Intune, and assigned a po
 ## Related configurations   
 
 In addition to assigning devices to your MDM server and creating an enrollment policy, you can optionally use Apple access management settings in Apple Business (or Apple School Manager) to configure service access for Apple accounts on organization-owned devices. Microsoft Intune enforces these settings after enrollment. For more information, see [Configure service access for Apple accounts](setup-account-service-access.md).  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

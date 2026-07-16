@@ -3,7 +3,6 @@ title: Add Web Apps to Microsoft Intune
 description: Learn about adding web apps (client-server applications) to Microsoft Intune.
 ms.date: 11/18/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Web
@@ -27,7 +26,7 @@ Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS de
 ## Add a web app to Intune
 To add an app to Intune as a shortcut to an app on the web, do the following:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the **Other** types, select **Web link**. Other options include **iOS/iPadOS web clip**, **macOS web clip**, and **Windows web link**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -56,7 +55,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Link people to a website or documentation that has more information about the app. The information URL will be visible to users in Company Portal.
     - **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL will be visible to users in Company Portal.
-    - **Developer**: The name of the company or Individual that developed the app. This information will be visible to people signed into the admin center.
+    - **Developer**: The name of the company or Individual that developed the app. This information will be visible to people signed in to the admin center.
     - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.
     - **Notes**: Add additional notes about the app. Notes will be visible to people signed in to the admin center.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
@@ -78,3 +77,7 @@ End-users can launch web apps directly from the Windows Company Portal app by se
 ## Next steps
 
 The app that you've created is displayed in the apps list, where you can assign it to the groups that you select. For help, see [Assign apps to groups](./assign-groups.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

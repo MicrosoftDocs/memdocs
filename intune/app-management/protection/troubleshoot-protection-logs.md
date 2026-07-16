@@ -4,8 +4,6 @@ description: This topic describes how to configure Intune app protection policy 
 ms.date: 10/23/2025
 ms.topic: troubleshooting
 ms.reviewer: demerson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Review Client App Protection Logs

@@ -4,8 +4,6 @@ description: Create a domain join device configuration profile for Microsoft Ent
 ms.date: 10/22/2025
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configuration Domain Join settings for Microsoft Entra hybrid joined devices in Microsoft Intune
@@ -28,7 +26,7 @@ This article shows you how to create a domain join profile for a hybrid Windows 
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -74,3 +72,7 @@ It's now ready for you to [deploy Microsoft Entra hybrid joined devices by using
 
 - After the profile is [assigned](../assign-device-profile.md), [monitor its status](../monitor-device-profile.md).
 - [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

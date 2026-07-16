@@ -3,8 +3,6 @@ title: Configure and secure devices with Microsoft Intune
 description: Learn how to configure policies with Microsoft Intune in preparation for device deployment.
 zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
-author: scottbreenmsft
-ms.author: scbree
 ms.date: 5/2/2024
 ---
 
@@ -20,7 +18,7 @@ Settings can be assigned to groups:
 
 ## Introduction
 
-✅ Learn about the different types of settings
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Learn about the different types of settings
 
 ::: zone pivot="windows"
 
@@ -87,7 +85,7 @@ With Express Configuration, you can get Intune for Education up and running in j
 
 ## Device settings
 
-✅ Configure settings and assign them to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure settings and assign them to devices
 
 ::: zone pivot="windows"
 
@@ -95,7 +93,7 @@ With Express Configuration, you can get Intune for Education up and running in j
 
 To create a device configuration profile in Microsoft Intune, you need to follow these steps:
 
-- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Sign in to the [Microsoft Intune admin center].
 - Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
@@ -162,7 +160,7 @@ For more information, see [iOS device settings in Intune for Education](/intune-
 
 ## Update policies
 
-✅ Configure update policies and assign to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure update policies and assign to devices
 
 ::: zone pivot="windows"
 
@@ -231,7 +229,7 @@ For more information about the other update options in the Intune console, see [
 
 ## Security policies
 
-✅ Configure security policies and assign them to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure security policies and assign them to devices
 
 ::: zone pivot="windows"
 
@@ -291,7 +289,7 @@ In Intune, you can configure iOS security settings using Settings Catalog.
 
 To create a settings catalog device configuration profile in Microsoft Intune, you need to follow these steps:
 
-- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Sign in to the [Microsoft Intune admin center].
 - Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **iOS/iPadOS**.
 - Select **Profile type**.
@@ -323,7 +321,7 @@ Common areas for security include:
 
 ## Storage policies
 
-✅ Configure storage policies and assign them to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure storage policies and assign them to devices
 
 In the educational sector, devices with limited storage capacity are sometimes deployed due to cost and portability considerations. It is essential to manage storage effectively to ensure that Windows devices remain up to date at all times. Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files. For more information about Storage Sense, see [Configure Storage Sense](/windows/configuration/storage/storage-sense).
 
@@ -355,3 +353,7 @@ Now that you've configured your device settings, you can configure applications 
 [MEM-5]: ../../../device-configuration/endpoint-security/deploy-edr.md
 [MEM-6]: ../../../device-configuration/endpoint-security/attack-surface-reduction.md
 [MEM-7]: ../../../device-configuration/endpoint-security/account-protection.md
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

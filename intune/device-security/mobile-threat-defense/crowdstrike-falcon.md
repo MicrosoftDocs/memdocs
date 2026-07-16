@@ -1,14 +1,8 @@
 ---
 title: Use CrowdStrike Falcon for Mobile with Microsoft Intune
 description: How to set up CrowdStrike Falcon Threat Defense with Microsoft Intune control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 02/12/2025
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # CrowdStrike Falcon for Mobile connector with Microsoft Intune

@@ -1,9 +1,6 @@
 ---
 title: Microsoft Intune Licensing Plans and Options
 description: Microsoft Intune licensing options, plans, and the capabilities included with each Intune plan and Microsoft 365 license tier.
-author: paolomatarazzo
-ms.author: paoloma
-ms.reviewer: paoloma
 ms.date: 05/13/2026
 ms.topic: overview
 ms.collection: M365-identity-device-management
@@ -87,7 +84,7 @@ Tenants created after July 2021 already have unlicensed admin access enabled by 
 
 To enable this setting, use an account assigned the [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role. Because this role is privileged, use it only when necessary.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Roles** > **Administrator Licensing**.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Roles** > **Administrator Licensing**.
 1. Select **Allow access to unlicensed admins**.
 1. Select **Yes** to allow access to unlicensed admins.
 
@@ -113,7 +110,7 @@ A Microsoft Intune license is created for you when you sign up for the Intune fr
 
 To confirm your Microsoft Intune license or trial:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Tenant administration** > **Tenant status**. Under the **Tenant details** tab, you can see the **MDM authority**, the **Total licensed users**, and the **Total Intune licenses**.
 1. Select **Tenant administration** > **Roles** > **My permissions**.
 1. Confirm that you're an **administrator** with **full** permissions to **all** Intune resources.
@@ -133,3 +130,7 @@ If you don't have a license for Microsoft Entra ID P1 or P2, see [Sign up for Mi
 - [Microsoft Intune advanced capabilities](./advanced-capabilities.md)
 - [Set up Microsoft Intune (training module)](/training/modules/set-up-microsoft-intune?azure-portal=true)
 - [Microsoft Licensing portal](https://www.microsoft.com/licensing/default): latest information about product editions, licensing updates, and volume licensing plans.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

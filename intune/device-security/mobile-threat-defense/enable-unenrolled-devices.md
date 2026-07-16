@@ -1,14 +1,8 @@
 ---
 title: Enable the Mobile Threat Defense connector for unenrolled devices
 description: Enable the Mobile Threat Defense connector in Microsoft Intune for unenrolled devices.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices
@@ -39,7 +33,7 @@ To view classic Conditional Access policies, in [Azure](https://portal.azure.com
 
 ## To enable the Mobile Threat Defense connector
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, your account must be assigned the *Endpoint Security Manager* built-in admin role for Intune, or be assigned a custom role that includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
 
@@ -74,3 +68,7 @@ You can decide which MTD toggle options you need to enable according to your org
 ## Next Steps
 
 - [Create Mobile Threat Defense (MTD) app protection policy with Intune](./create-app-protection-policy.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

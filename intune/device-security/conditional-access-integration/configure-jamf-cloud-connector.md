@@ -3,11 +3,6 @@ title: Configure the Jamf Pro Cloud Connector to integrate Jamf Pro with Microso
 description: Use the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune.
 ms.date: 08/30/2023
 ms.topic: integration
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Configure the Jamf Cloud Connector to integrate with Microsoft Intune
@@ -106,7 +101,7 @@ If you have not previously set up a connection between Jamf Pro and Intune, or i
 
    When you deselect this setting, you disable the connection but save your configuration.
 
-5. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go **Tenant administration** > **Partner device management**.
+5. Sign in to the [Microsoft Intune admin center] and go **Tenant administration** > **Partner device management**.
 
    On the **Partner device management** node, delete the **Application ID** in the **Specify the Microsoft Entra App ID for Jamf** field, and then select **Save**.
 
@@ -203,7 +198,7 @@ To remove integration of Jamf Pro with Intune, use the following steps to remove
 
 ### Deprovision Jamf Pro from within the Microsoft Intune admin center
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
+1. In the [Microsoft Intune admin center], go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
 2. Select the option **Terminate**. Intune displays a message about the action. Review the message and when ready, select **OK**. The option to *Terminate* the integration only appears when the Jamf connection exists.
 
@@ -218,7 +213,7 @@ Use the following steps to remove the connection from within the Jamf Pro consol
 
 3. Select **Save**. Jamf Pro sends your configuration to Intune and the integration will be terminated.
 
-4. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. Sign in to the [Microsoft Intune admin center].
 
 5. Select **Tenant administration** > **Connectors and tokens** > **Partner device management** to verify that the status is now **Terminated**.
 
@@ -302,3 +297,7 @@ Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Ch
 - [Apply compliance policies to Jamf-managed devices](./assign-jamf-policies.md)
 - [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)
 - [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../compliance/jamf-entra-id.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

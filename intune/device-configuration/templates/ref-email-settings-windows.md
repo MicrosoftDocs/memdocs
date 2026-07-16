@@ -1,11 +1,9 @@
 ---
 title: Email settings for Windows devices in Microsoft Intune
 description: Create a device configuration email profile that that uses Exchange servers, and retrieves attributes from Microsoft Entra ID. You can also enable SSL, and synchronize email and schedules on Windows 10/11 client devices using Microsoft Intune.
-ms.date: 04/15/2024
+ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Email profile settings for Windows devices in Microsoft Intune
@@ -13,18 +11,41 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-In Microsoft Intune, you can create and configure email to connect to an Exchange email server, choose how users authenticate, use S/MIME for encryption, and more. The email profile uses the native or built-in email app on the device, and allows users to connect to their organization email.
-
-This feature applies to:
-
-- Windows
+In Microsoft Intune, you can create and configure an email profile to connect to an Exchange email server, choose how users authenticate, use S/MIME for encryption, and more. The email profile uses the native or built-in email app on the device, and users can connect to their organization email.
 
 This article describes some of the settings you can configure. You can create a device configuration profile to assign or deploy these email settings to your iOS/iPadOS devices.
 
-## Before you begin
+## Prerequisites
 
-- Deploy your email app. For more information, go to [Configure email apps](./configure-email.md).
-- Create a [Windows Email device configuration profile](./configure-email.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platform:
+> - Windows
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
+> - Deploy your [email app](./configure-email.md).
+> - Create a [Windows e-mail device configuration profile](./configure-email.md).
+:::column-end:::
+:::row-end:::
 
 ## Email settings
 
@@ -67,8 +88,6 @@ Select the content types that you want to synchronize to devices. Your options:
 
 ## Related articles
 
-- Configure the email settings on [Android](./ref-email-settings-android.md), [Android Enterprise](./ref-email-settings-android-enterprise.md), and [iOS/iPadOS](./ref-email-settings-ios.md).
-
+- Configure the email settings on [Android Enterprise](./ref-email-settings-android-enterprise.md) and [iOS/iPadOS](./ref-email-settings-ios.md).
 - [Learn more about the email settings in Intune](./configure-email.md).
-
 - [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).

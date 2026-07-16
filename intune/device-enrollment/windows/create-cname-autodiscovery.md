@@ -3,9 +3,6 @@ title: Enable autodiscovery of Intune enrollment server
 description: Simplify enrollment for users by enabling automatic discovery of the Intune enrollment server.
 ms.date: 11/21/2025
 ms.topic: how-to
-ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enable auto-discovery of Intune enrollment server  
@@ -50,7 +47,7 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ## Step 2: Verify CNAME
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Device onboarding** and select **Enrollment**.
 1. Select the **Windows** tab.
@@ -93,3 +90,7 @@ For Intune operated in China and by 21Vianet, use the following details.
 
 
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](enable-automatic-mdm.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

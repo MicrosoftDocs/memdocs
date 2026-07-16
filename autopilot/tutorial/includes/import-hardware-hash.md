@@ -14,7 +14,7 @@ Several of the methods in the previous section on obtaining the hardware hash wh
 
 After the CSV file is created, it can be imported into Intune via the following steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -43,3 +43,7 @@ After the CSV file is created, it can be imported into Intune via the following 
       > If another sync is attempted within 10 minutes after initiating a sync, an error will be displayed. Syncs can only occur once every 10 minutes. To attempt a sync again, wait at least 10 minutes before trying again.
 
    1. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes, and then select **Refresh** again.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -4,10 +4,6 @@ description: Evaluate WSL attributes on a host device for compliance.
 ms.date: 11/19/2024
 ms.topic: how-to
 ms.reviewer: arnab
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Evaluate compliance for Windows Subsystem for Linux  
@@ -71,7 +67,7 @@ Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microso
 
 1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to convert the Intune WSL plugin to the *.intunewin* format. For more information, see [Convert the Win32 app content](../../app-management/deployment/create-win32-package.md#convert-the-win32-app-content).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Go to **Apps** > **All Apps** > **Add**.
 
@@ -137,3 +133,7 @@ This section describes the known limitations when using the Intune WSL plugin fo
 - [Monitor your compliance policies](./monitor-policy.md).
 
 - For troubleshooting help, see [Troubleshooting Windows Subsystem for Linux](/windows/wsl/troubleshooting).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

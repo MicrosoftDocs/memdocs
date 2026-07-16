@@ -4,8 +4,6 @@ description: Learn how to manage frontline worker devices using iOS and iPadOS d
 ms.date: 03/28/2024
 ms.topic: how-to
 ms.reviewer: cbernier
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Frontline worker for iOS/iPadOS devices in Microsoft Intune
@@ -49,9 +47,9 @@ When using iPad devices for FLW, use the following information to help you decid
 
 Shared iPads are a feature in Intune, and are the recommended and preferred device type for frontline worker devices. These devices are shared among many users, such as in a hospital or school. Each user has their own profile and data, and they can sign in and out of the device.
 
-✅ If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../../device-enrollment/apple/shared-ipad.md).
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../../device-enrollment/apple/shared-ipad.md).
 
-❌ If the device is an iOS device, then use Entra shared device mode. For more information, go to [Microsoft Entra shared device mode for FLW](index.md#microsoft-entra-shared-device-mode-for-flw) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
+:::image type="icon" source="../../media/icons/16/error.svg" border="false"::: If the device is an iOS device, then use Entra shared device mode. For more information, go to [Microsoft Entra shared device mode for FLW](index.md#microsoft-entra-shared-device-mode-for-flw) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
 
 > [!NOTE]
 > For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../../device-enrollment/apple/shared-device-solutions-ios.md).
@@ -64,11 +62,11 @@ For more information on Entra shared device mode (SDM), go to [Microsoft Entra s
 
 When to use Entra SDM:
 
-✅ If the device is an iOS device, then use Entra shared device mode.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If the device is an iOS device, then use Entra shared device mode.
 
-✅ If the device is an iPad, then you can use Entra shared device mode **OR** Shared iPad in Intune.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If the device is an iPad, then you can use Entra shared device mode **OR** Shared iPad in Intune.
 
-❌ If you configured an iPad to be a Shared iPad in Intune, then don't use Entra shared device mode. It's not supported.
+:::image type="icon" source="../../media/icons/16/error.svg" border="false"::: If you configured an iPad to be a Shared iPad in Intune, then don't use Entra shared device mode. It's not supported.
 
 For end users to have the full sign in/sign out experience, apps must support Entra SDM. For more information on Entra SDM and iOS/iPadOS devices, go to:
 

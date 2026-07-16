@@ -5,8 +5,6 @@ ms.date: 05/16/2024
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Policies for Microsoft 365 Apps
@@ -33,7 +31,7 @@ You must meet the requirements to use policies for Microsoft 365 apps. For more 
 
 After you set up Intune for your organization, you can create an Office app policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Policies for Microsoft 365** > **Create**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
@@ -48,7 +46,7 @@ After you set up Intune for your organization, you can create an Office app poli
 
 ## Quiet time notification policies
 
-The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user work-related notifications received after work hours. You can find these settings in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
+The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user work-related notifications received after work hours. You can find these settings in [Microsoft Intune admin center] by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Additional information
 
@@ -61,3 +59,7 @@ The global quiet time settings allow you to create policies to schedule quiet ti
 ## Next steps
 
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

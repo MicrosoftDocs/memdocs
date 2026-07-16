@@ -4,8 +4,6 @@ description: Learn how to use assignment filter reports to troubleshoot policies
 ms.date: 11/19/2025
 ms.topic: how-to
 ms.reviewer: mattcall, abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Assignment filter reports and troubleshooting in Microsoft Intune
@@ -22,7 +20,7 @@ Use this article to learn more about the reporting features, and to help trouble
 
 ## Reports for managed devices
 
-The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) has per-device and per-app reporting information. Use this information to help troubleshoot assignment filter evaluation, and determine why a policy applied or didn't apply.
+The [Microsoft Intune admin center] has per-device and per-app reporting information. Use this information to help troubleshoot assignment filter evaluation, and determine why a policy applied or didn't apply.
 
 You can use the following reports to get more information on your assignment filters:
 
@@ -35,7 +33,7 @@ This report shows every app or policy with an assignment filter that's been appl
 
 To see this report, use the following steps:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices** > select a device > **Filter evaluation**. The following information is shown:
 
     - The assignment filters that were evaluated.
@@ -61,7 +59,7 @@ These reports show filter information for each device that's evaluated in an app
 
 To see these reports, use the following steps:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > select an app > **Device install status**.
 3. Select the **Filter** column > **Filters evaluated**. The following information is shown:
 
@@ -221,3 +219,7 @@ The following matrix explains the effect, depending on the conflict scenario:
 - [Supported device properties when creating filters](ref-device-properties.md)
 - [Supported workloads when creating filters](ref-supported-workloads.md)
 - [Filter performance recommendations](performance-recommendations.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

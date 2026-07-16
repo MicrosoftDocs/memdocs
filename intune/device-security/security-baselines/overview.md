@@ -1,16 +1,11 @@
 ---
 title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 06/09/2026
 ms.topic: overview
 ai-usage: ai-assisted
 ms.reviewer: aanavath
   - intune-azure
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Use security baselines to help secure Windows devices you manage with Microsoft Intune
@@ -94,7 +89,8 @@ The following security baseline instances are available for use with Intune. Use
   > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**:
-  - [Version 2306 (Office baseline)](./ref-v2-office-settings.md?pivots=v2023) *Released in November 2023*
+  - [Version 2512 (Office baseline)](./ref-v2-office-settings.md?pivots=v2512) *Released in June 2026*
+  - [Version 2306 (Office baseline)](./ref-v2-office-settings.md?pivots=v2306) *Released in November 2023*
   - [May 2023 (Office baseline)](./ref-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:
@@ -135,7 +131,7 @@ When you're ready to use the more recent baseline version, you can create new pr
 
 Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
 
-You can view the list of available baselines in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines**. The list includes:
+You can view the list of available baselines in the [Microsoft Intune admin center], under **Endpoint security** > **Security baselines**. The list includes:
 
 - The name of each security baseline template.
 - How many profiles you have that use that type of baseline.
@@ -202,3 +198,7 @@ Within the Intune security baseline policy UI, Intune provides information text 
   - [Windows 365 Security Baseline](./ref-windows-365-settings.md)
 
 - [STIG audit baseline](./stig-audit-baseline.md) - Audit Windows devices against STIG recommendations (GCC High only)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

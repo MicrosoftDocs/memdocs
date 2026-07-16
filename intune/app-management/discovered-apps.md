@@ -5,8 +5,6 @@ ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Discovered Apps
@@ -20,7 +18,7 @@ Intune **discovered apps** is a list of detected apps on the Intune enrolled dev
 
 Intune provides an aggregated list of detected apps on the Intune enrolled devices in your tenant.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
@@ -36,7 +34,7 @@ The **Discovered apps** report provides the following details:
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All Devices**.
 3. Select a device.
 4. To view detected apps for this device, select **Discovered Apps** in the **Monitor** section.
@@ -78,3 +76,6 @@ The number of discovered apps might not match the app install status count. Poss
 - [App types in Microsoft Intune](./deployment/index.md#app-types-in-microsoft-intune)
 - [Monitor app information and assignments with Microsoft Intune](./monitor-assignments.md)
 
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

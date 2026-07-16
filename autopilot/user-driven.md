@@ -62,7 +62,7 @@ The steps of the user-driven process are as follows:
 
 1. If configured, it displays the [enrollment status page](enrollment-status.md) (ESP).
 
-1. After the device configuration tasks complete, the user is signed into Windows using the credentials they previously provided. If the device restarts during the device ESP process, the user must reenter their credentials. These details don't persist after restart.
+1. After the device configuration tasks complete, the user is signed in to Windows using the credentials they previously provided. If the device restarts during the device ESP process, the user must reenter their credentials. These details don't persist after restart.
 
 1. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
@@ -204,7 +204,7 @@ Next, confirm Intune can be used to deploy the VPN configuration and its require
 
 1. Sign out of Windows. Verify that the **VPN connection** icon appears on the Windows sign-in page.
 
-1. Move the device off the internal network and try to establish the connection using the icon on the Windows sign-in page. Sign into an account that doesn't have cached credentials.
+1. Move the device off the internal network and try to establish the connection using the icon on the Windows sign-in page. Sign in to an account that doesn't have cached credentials.
 
 For VPN configurations that automatically connect, the validation steps might be different.
 

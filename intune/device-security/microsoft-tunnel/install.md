@@ -4,10 +4,6 @@ description: Install and configure Microsoft Tunnel Gateway on a Linux server to
 ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Configure Microsoft Tunnel for Intune
@@ -27,7 +23,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
 
 ### To create a Server configuration
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Server configurations** *tab* > **Create new**.
+1. Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Server configurations** *tab* > **Create new**.
 
 2. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
@@ -70,7 +66,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You assign a Ser
 
 ### To create a Site configuration
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Sites** *tab* > **Create**.
+1. Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Sites** *tab* > **Create**.
 
 2. On the **Create a site** pane, specify the following properties:
 
@@ -114,7 +110,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
    - Download the tool directly by using a web browser. Go to <https://aka.ms/microsofttunneldownload> to download the file **mstunnel-setup**.
 
-   - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
+   - Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
 
      ![Screen capture for download of installation script](./media/install/download-installation-script.png)
 
@@ -321,7 +317,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
 ### Android
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** > on the *Policies* tab, select **Create**.
+1. Sign in to [Microsoft Intune admin center] > **Devices** > **Manage devices** > **Configuration** > on the *Policies* tab, select **Create**.
 
 2. For *Platform*, select **Android Enterprise**. For *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Profile**, and then select **Create**.
 
@@ -376,7 +372,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
 ### iOS
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** > **Create**.
+1. Sign in to [Microsoft Intune admin center] > **Devices** > **Manage devices** > **Configuration** > **Create**.
 
 2. For *Platform*, select **iOS/iPadOS**, and then for *Profile* select **VPN**, and then **Create**.
 
@@ -631,3 +627,7 @@ To uninstall the product, run **mst-cli uninstall** from the Linux server as roo
 
 [Use Conditional Access with the Microsoft Tunnel](./conditional-access.md)
 [Monitor Microsoft Tunnel](./monitor.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -3,8 +3,6 @@ title: Set up device management
 description: Learn how to configure the Intune service and set up the environment for education.
 ms.date: 5/2/2024
 ms.topic: tutorial
-ms.author: scbree
-author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
 ---
 
@@ -34,7 +32,7 @@ The Microsoft Intune service can be managed in different ways.
 
 ## Prerequisites
 
-✅ Check out the requirements for device management
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Check out the requirements for device management
 
 Before configuring settings with Intune, consider the following prerequisites:
 
@@ -54,13 +52,13 @@ The Intune service can be configured in different ways, depending on the needs o
 
 ### Configure enrollment restrictions
 
-✅ Restrict which devices can be managed
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Restrict which devices can be managed
 
 With enrollment restrictions, you control which devices can enroll and be managed by Intune. For example, you can prevent the enrollment of personal devices.
 
 To block personally owned devices from enrolling:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **Enroll devices** > **Device platform restrictions**.
 1. Select the tab for the platform you want to restrict.
 1. Select **Create restriction**.
@@ -75,7 +73,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ### Optional configuration
 
-✅ Configure optional tenant configuration
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure optional tenant configuration
 
 - Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../../../app-management/configuration/configure-company-portal.md).
 - Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](../../../device-enrollment/create-terms-and-conditions.md).
@@ -84,9 +82,9 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ### Configure Windows enrollment
 
-✅ Configure which users can enroll Windows devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure which users can enroll Windows devices
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **Enroll devices** > **Automatic Enrollment**.
 1. Set the **MDM user scope** to **All** or **Some** and select a group if you want to restrict enrollment to certain users.
     > [!IMPORTANT]
@@ -99,7 +97,7 @@ For more information, see [Enable Windows automatic enrollment](../../../device-
 
 ### Disable Windows Hello for Business
 
-✅ Disable functionality typically inaccessible to students
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Disable functionality typically inaccessible to students
 
 Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multifactor authentication (MFA). As a result, this feature might not be ideal for students, who don't have MFA enabled.
 
@@ -112,7 +110,7 @@ It's common for Windows Hello for Business to be disabled at the tenant level. T
 
 To disable Windows Hello for Business at the tenant level:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment**.
 1. Select **Windows Hello for Business**.
 1. Ensure that **Configure Windows Hello for Business** is set to **disabled**.
@@ -124,13 +122,13 @@ For more information how to enable Windows Hello for Business on specific device
 
 ### Configure Intune data collection policy
 
-✅ Configure Endpoint analytics
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure Endpoint analytics
 
 Intune needs permission to collect data for Endpoint analytics on Windows devices.
 
 To enable data collection:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Reports** > **Endpoint analytics** > **Settings**.
 1. Under **Intune data collection policy**, select **Intune data collection policy**.
     :::image type="content" source="./media/setup-intune/intune-data-collection-policy.png" alt-text="Selecting the Intune data collection policy." lightbox="./media/setup-intune/intune-data-collection-policy.png":::
@@ -146,11 +144,11 @@ For more information on data collection, see [Endpoint analytics data collection
 
 ### Configure Windows data
 
-✅ Configure tenant Windows data settings
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure tenant Windows data settings
 
 Intune needs permission to collect certain data for Windows update reports on Windows devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Tenant administration** > **Connectors and tokens** > **Windows data**
 1. Under **Windows data** select **On**.
 1. Review the **Windows license verification** section and configure as per your licensing.
@@ -161,9 +159,9 @@ For more information, see [Enable use of Windows diagnostic data by Intune](../.
 
 ### Configure Windows device diagnostics
 
-✅ Allow remote retrieval of diagnostic information
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Allow remote retrieval of diagnostic information
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Tenant administration** > **Device diagnostics**.
 1. Configure settings as per your requirements.
 
@@ -191,12 +189,12 @@ This table provides the settings most commonly set by customers, but can be cust
 
 | **Blade** | **Configuration group** | **Setting** | **Value** |
 | --- | --- | --- | --- |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show app and profile configuration progress | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show an error when installation takes longer than specified number of minutes | 120 |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Show custom message when time limit or error occurs | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Turn on log collection and diagnostics page for end users | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Default\\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
-| [Windows enrollment](https://intune.microsoft.com/#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment) | General\\Enrollment Status Page | Enrollment Status Page\\Default\\Block device use until required apps are installed if they're assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering software |
+| [Windows enrollment] | General\Enrollment Status Page | Default\Show app and profile configuration progress | Yes |
+| [Windows enrollment] | General\Enrollment Status Page | Default\Show an error when installation takes longer than specified number of minutes | 120 |
+| [Windows enrollment] | General\Enrollment Status Page | Default\Show custom message when time limit or error occurs | Yes |
+| [Windows enrollment] | General\Enrollment Status Page | Default\Turn on log collection and diagnostics page for end users | Yes |
+| [Windows enrollment] | General\Enrollment Status Page | Default\Only show page to devices provisioned by out-of-box experience (OOBE) | Yes |
+| [Windows enrollment] | General\Enrollment Status Page | Enrollment Status Page\Default\Block device use until required apps are installed if they're assigned to the user/device | *All* or *Selected* with the minimum apps required. <br><br>For example, Microsoft 365 apps or web content filtering software |
 
 ::: zone-end
 
@@ -270,3 +268,8 @@ When the Intune service configured, you can configure policies and applications 
 [MSFT-1]: https://www.microsoft.com/microsoft-365/microsoft-365-enterprise
 [MSFT-2]: https://www.microsoft.com/licensing/product-licensing/microsoft-365-education
 [MSFT-3]: https://aka.ms/EDU-Plan-Comparison
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Windows enrollment]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesEnrollmentMenu/~/windowsEnrollment

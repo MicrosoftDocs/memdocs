@@ -3,11 +3,6 @@ title: Use Intune compliance and Microsoft Entra Conditional Access policies wit
 description: Create Intune compliance policies and Microsoft Entra Conditional Access to help secure Jamf-managed devices.
 ms.date: 08/30/2023
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Enforce compliance on Macs managed with Jamf Pro
@@ -42,7 +37,7 @@ After integration is configured, device users learn about Jamf Pro and Intune in
 
 ## Set up device compliance policies in Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Go to **Devices** > **Compliance**. If you're using a previously created policy, select that policy, and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
@@ -128,3 +123,7 @@ Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](ht
 
 - [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [Get started with Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

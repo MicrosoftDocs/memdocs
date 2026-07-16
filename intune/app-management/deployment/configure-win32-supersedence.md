@@ -3,7 +3,6 @@ title: Add Win32 app supersedence
 description: Learn how to create supersedence relationships between Win32 apps in Microsoft Intune to update or replace existing apps with newer versions.
 ms.date: 04/06/2026
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.custom:
 ms.collection:
 - M365-identity-device-management
@@ -25,7 +24,7 @@ Supersedence relationships can be created when adding or modifying a Win32 app w
 
 App supersedence can only be applied to Win32 apps. For more information, see [Add a Win32 app](./add-win32.md) to Intune.
 
-A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune administrators need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://intune.microsoft.com), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
+A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune administrators need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center], choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
 This Win32 app supersedence permission is added to the following built-in roles:
 
@@ -39,7 +38,7 @@ This Win32 app supersedence permission is added to the following built-in roles:
 
 The following steps help you create a supersedence relationship between apps:
 
-1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps**, and then select a Win32 app from the list. To add a Win32 app, see [add a Win32 app to Intune](./add-win32.md).
 3. After you select the existing Win32 app, select **Properties**.
 4. In the **Supersedence** section, select **Edit** > **Add** to choose apps that should be superseded.
@@ -189,11 +188,11 @@ A Win32 app can have a maximum of 10 superseding apps. The user must be signed i
 
 When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device-based assignment to track both user consent and internal targeting to process the app during check-in. This device-based assignment is used to install the app on the devices. However, in situations where targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions after the app is already installed on the device, Intune removes user consent, and the app is no longer targeted with available intent:
 
-1.	You remove the user from the group membership of the targeted group in the Microsoft Entra admin center.
-2.	You remove the assignment to the targeted group.
-3.	You change the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**.
+1.    You remove the user from the group membership of the targeted group in the Microsoft Entra admin center.
+2.    You remove the assignment to the targeted group.
+3.    You change the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**.
 
-It’s important to note that even if you retarget the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed.
+It's important to note that even if you retarget the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed.
 
 > [!NOTE]
 > The **Uninstall** intent takes precedence over **Available** intent.
@@ -226,3 +225,7 @@ Other limitations:
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Win32 app management in Microsoft Intune](./win32.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

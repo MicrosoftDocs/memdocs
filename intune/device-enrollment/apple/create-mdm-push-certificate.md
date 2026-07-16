@@ -4,8 +4,6 @@ description: Get an Apple MDM Push certificate to manage iOS/iPadOS devices with
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Get an Apple MDM push certificate
@@ -23,7 +21,7 @@ Use an [Intune-supported web browser](../../fundamentals/ref-supported-platforms
 ## Steps to get your certificate
 Access your Apple MDM push certificate settings in Microsoft Intune.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices**.
 3. Expand **Device onboarding**, and then select **Enrollment**.
 4. Select the **Apple** tab.
@@ -67,7 +65,7 @@ The Apple MDM push certificate is valid for 365 days. You must renew it annually
 
 Renew the MDM push certificate with the same Apple account you used to create it.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices**.
 3. Go to **Device onboarding** > **Enrollment**.
 4. Select the **Apple** tab.
@@ -88,3 +86,7 @@ Renewal is complete when your Apple MDM push certificate status appears active i
 ## Next steps
 
 For more information about enrollment options, see [Choose how to enroll iOS/iPadOS devices](guide-ios-ipados.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

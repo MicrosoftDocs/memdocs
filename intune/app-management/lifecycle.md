@@ -5,8 +5,6 @@ ms.date: 11/18/2025
 ms.topic: concept-article
 ms.reviewer: bryanke
 ms.custom: apps; get-started
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Overview of the App Lifecycle in Microsoft Intune

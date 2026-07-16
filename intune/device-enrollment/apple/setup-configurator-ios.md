@@ -3,9 +3,6 @@ title: iOS/iPadOS direct enrollment - Apple Configurator-Setup Assistant
 description: Use Apple Configurator to enroll corporate-owned iOS/iPadOS devices with Setup Assistant.
 ms.date: 02/27/2025
 ms.topic: how-to
-ms.reviewer: annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up iOS/iPadOS device enrollment with Apple Configurator
@@ -69,7 +66,7 @@ You also need the following to complete enrollment:
 
 A device enrollment policy defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment policy to enroll iOS/iPadOS devices with Apple Configurator.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
@@ -118,7 +115,7 @@ Enrollment with Apple Configuration has the following limitations:
    `F7TLWCLBX196,iPad Air (5th generation) - Blue`
 
    The current maximum for the list is 5,000 rows. For information about how to find an iOS/iPadOS device serial number, see [Find the serial number or IMEI on your iPhone, iPad, or iPod touch](https://support.apple.com/HT204073) (opens Apple Support website).
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
@@ -134,7 +131,7 @@ You can assign an enrollment policy when you import iOS/iPadOS serial numbers fo
 
 #### Assign from Apple Configurator devices
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Select **Devices**. Then select a serial number.
@@ -142,7 +139,7 @@ You can assign an enrollment policy when you import iOS/iPadOS serial numbers fo
 1. Under **Assign Profile**, select the **New profile** you want to assign, and then choose **Assign**.
 
 #### Assign from profiles
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
@@ -153,7 +150,7 @@ You can assign an enrollment policy when you import iOS/iPadOS serial numbers fo
 ### Export the profile
 After you create the profile and assign serial numbers, you must export the profile from Intune as a URL. You then import it into Apple Configurator on a Mac for deployment to devices.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Go to **Profiles**. Choose a profile to export.
@@ -192,7 +189,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ### Export the profile as .mobileconfig to iOS/iPadOS devices
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Go to **Profiles**. Choose a profile to export.
@@ -225,3 +222,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 * Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md)
 
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](setup-direct-macos.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

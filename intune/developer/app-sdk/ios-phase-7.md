@@ -5,7 +5,6 @@ title: Microsoft Intune App SDK for iOS Developer Guide - Web-View Features
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Web-view features
 ms.date: 11/18/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
@@ -19,7 +18,7 @@ In iOS, web views can be used to surface a wide variety of web content without h
 
 Because web views exist within the app, they expose it to potential data leaks. If a user is able to navigate to arbitrary external web pages within an app (either through intentional app design or by clever maneuvering through exposed links in the rendered web page's html content), then the user may be able to leak managed data from the app.
 
-The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content are surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed into the app.** Please see the table below as a quick guide on which API applies to which scenario.
+The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content are surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed in to the app.** Please see the table below as a quick guide on which API applies to which scenario.
 
 | Scenario | APIs |
 | - | - |

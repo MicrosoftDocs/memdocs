@@ -4,7 +4,6 @@ description: Add support for Mobile Application Management (MAM) for Android to 
 ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
@@ -48,7 +47,7 @@ Users of devices that aren't enrolled with Intune must install the following app
 
 2. **Microsoft Edge** – Get it from [Microsoft Edge: Web Browser - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&gl=US).
 
-3. **Company Portal** – Get it at [Intune Company Portal - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en_US&gl=US). Devices must install the Company Portal app, even though users won't need to sign into the app or enroll their device with Intune.
+3. **Company Portal** – Get it at [Intune Company Portal - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en_US&gl=US). Devices must install the Company Portal app, even though users won't need to sign in to the app or enroll their device with Intune.
 
 **Line of Business apps**:
 
@@ -93,7 +92,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 > [!NOTE]
 > Ensure only a single Defender app configuration policy targets the unenrolled device. Targeting more than 1 app configuration policy with different tunnel settings for Defender for Endpoint will create tunnel connection issues on the device.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -145,7 +144,7 @@ The new policy appears in the list of App configuration policies.
 
 Create an App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, providing the ability to automatically connect the VPN Tunnel when signing-in or switching to a Microsoft "Work or school" account, and automatically disconnect the VPN tunnel when switching to a Microsoft personal account.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -160,7 +159,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
     | Name | Description |
     | --- | --- |
-    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`<br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign into Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. <br/><br/> When the VPN reconnects, internet browsing is available again. |
+    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`<br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign in to Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. <br/><br/> When the VPN reconnects, internet browsing is available again. |
     | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly` <br/><br/> **Value**: `True` | When set to `True`, it provides **Identity switch** support to Edge. <br/><br/> When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
 
     > [!NOTE]
@@ -188,7 +187,7 @@ Create an app protection policy to automatically start the Microsoft Tunnel VPN 
 > [!NOTE]
 > When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway. If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **Create** > **Android**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Apps** > **Protection** > **Create** > **Android**.
 
 2. On the *Basics* tab, enter a *Name* for this policy, and a *Description (optional)*, and then select **Next**.
 
@@ -340,3 +339,7 @@ Also see:
 
 - [Configure Microsoft Tunnel](./install.md)
 - [Monitor Microsoft Tunnel](./monitor.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

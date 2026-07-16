@@ -42,7 +42,7 @@ The containing app files can be listed under the **Included apps** section in th
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **macOS** platform, and then select **macOS app (PKG)**.
 4. Choose **Select**. The **Add app** steps are displayed.
@@ -129,7 +129,7 @@ You can select either the **Required** or **Available** group assignments for th
 2. Select **Next** to display the **Review + create** page.
 
 > [!NOTE]
-> When you upload a new version of an available app to Intune, users must select **Install** or **Reinstall** in Company Portal to update the app on their device.
+> When you upload a new version of an available app to Intune, users do not need to take any action. It installs automatically.
 
 ## Step 7 – Review + create
 
@@ -160,3 +160,7 @@ Note that post-install script failure isn't reported. A successful app installat
 
 - The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

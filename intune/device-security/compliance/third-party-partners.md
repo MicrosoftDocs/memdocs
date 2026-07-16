@@ -1,13 +1,9 @@
 ---
 title: Third-party device compliance partners support in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune.
-ms.date: 02/27/2026
+ms.date: 06/24/2026
 ms.topic: overview
 ms.reviewer: ilwu-microsoft
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Support third-party device compliance partners in Intune
@@ -39,7 +35,8 @@ The following compliance partners are supported as generally available:
 - Fleet
 - IBM MaaS360
 - Jamf Pro
-- Kandji
+- Iru
+
 - Ivanti Neurons for MDM
 - Ivanti EPMM
 - mobiconnect
@@ -52,6 +49,13 @@ The following compliance partners are supported as generally available:
 > [!NOTE]
 > If you offer an MDM product and want to onboard as a device compliance partner, fill out the form: [Intune partner compliance onboarding](https://aka.ms/IntunePartnerComplianceOnboarding).
 
+## Self-service onboarding for compliance partners
+
+Microsoft Intune supports self-service onboarding for compliance partners. Partners can onboard and publish their own compliance connectors for use with Intune. After a partner makes a connector available, you can configure it from within the Intune admin center when adding a compliance partner, as described later in this article.    
+
+> [!NOTE]
+> The availability of specific partners depends on whether the partner has completed the onboarding process and published their connector for use with Intune.  
+
 ## Requirements
 
 :::row:::
@@ -61,7 +65,7 @@ The following compliance partners are supported as generally available:
 :::column-end:::
 :::column span="3":::
 
-> - Microsoft Intune subscription with access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> - Microsoft Intune subscription with access to the [Microsoft Intune admin center].
 > - Intune licenses assigned to device users.
 
 :::column-end:::
@@ -88,13 +92,15 @@ You also need:
 - A subscription to the device compliance partner.
 - Check your compliance partner's documentation for prerequisites.  
 
+For self-service onboarded compliance partners, obtain the Microsoft Entra application ID from the compliance partner before you begin configuration.  
+
 ## Configure Intune to work with a device compliance partner
 
 Enable support for a device compliance partner to use compliance state data from that partner with your Conditional Access policies.
 
 ### Add a compliance partner to Intune
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 
 1. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** > **Add Compliance Partner**.
 
@@ -102,7 +108,8 @@ Enable support for a device compliance partner to use compliance state data from
 
 1. On **Basics**, expand the **Compliance partner** dropdown and select the partner you want to add.
 
-   - To use Omnissa Workspace ONE UEM as the compliance partner for iOS or Android platforms, select **Omnissa Workspace ONE UEM**.
+   - To use Omnissa Workspace ONE UEM as the compliance partner for iOS or Android platforms, select **Omnissa Workspace ONE UEM**.  
+   - To configure a self-service onboarded partner, select **Custom MDM Compliance Partner**. Then enter the **Custom MDM Compliance Partner Entra Application ID** provided by your compliance partner. If the application ID isn't associated with a valid onboarded compliance partner, the configuration can't be completed.  
 
    Next, select the dropdown for **Platform**, and select the platform.
 
@@ -116,7 +123,7 @@ Your configuration now appears on the **Partner compliance management** page.
 
 ### Modify the configuration for a compliance partner
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 
 1. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations appear by platform type.
 
@@ -145,7 +152,8 @@ To enable a device compliance partner to work with Intune, you must complete con
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [CLOMO MDM](https://support.clomo.com/?page_id=61477)
 - [Fleet](https://fleetdm.com/guides/entra-conditional-access-integration)
-- [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
+- [Iru](https://docs.iru.com/en/endpoint/integrations/microsoft-device-compliance/getting-started-with-microsoft-device-compliance#getting-started-with-microsoft-device-compliance)  
+
 - [mobiconnect](https://help.mobi-connect.net/function/function_category/c0119/?func_os=ios-ipados)
 - [Omnissa Workspace ONE UEM](https://docs.omnissa.com/bundle/WorkspaceONE-UEM-Managing-DevicesVSaaS/page/ConditionalAccessMicrosoftEntraID.html)
 - [Scalefusion](https://help.scalefusion.com/docs/microsoft-intune-partner-compliance)
@@ -187,3 +195,7 @@ Use your partner's documentation to create compliance policies for devices.
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_10/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Microsoft Entra Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 - [Ivanti Neurons for MDM](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

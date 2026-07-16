@@ -4,10 +4,6 @@ description: Create the JSON file that defines custom settings and values for us
 ms.date: 08/15/2025
 ms.topic: concept-article
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Custom compliance JSON files for Microsoft Intune
@@ -28,6 +24,7 @@ Include the JSON file in a compliance policy when you configure a policy to asse
 > - Linux:
 >   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
 >   - RedHat Enterprise Linux 9 or 10
+>   - macOS
 > - Windows
 
 :::column-end:::

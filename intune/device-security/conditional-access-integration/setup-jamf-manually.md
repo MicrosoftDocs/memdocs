@@ -3,11 +3,6 @@ title: Manually configure Jamf Pro integration with Microsoft Intune
 description: Manually configure Jamf Pro integration with Intune when you can't use the Jamf Cloud Connector.
 ms.date: 09/20/2023
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Manually Integrate Jamf Pro with Intune for compliance
@@ -127,7 +122,7 @@ The app registration process in Microsoft Entra ID is complete.
 
 ### Enable Intune to integrate with Jamf Pro
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
@@ -176,7 +171,7 @@ Should you need to remove integration of Jamf Pro with Intune, use one of the fo
 
 ### Deprovision Jamf Pro from within the Microsoft Intune admin center
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
+1. In the [Microsoft Intune admin center], go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
 2. Select the option **Terminate**. Intune displays a message about the action. Review the message and when ready, select **OK**. The option to *Terminate* the integration only appears when the Jamf connection exists.
 
@@ -192,7 +187,7 @@ Use the following steps to remove the connection from within the Jamf Pro consol
 
 3. Select **Save**. Jamf Pro sends your configuration to Intune and the integration will be terminated.
 
-4. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. Sign in to the [Microsoft Intune admin center].
 
 5. Select **Tenant administration** > **Connectors and tokens** > **Partner device management** to verify that the status is now **Terminated**.
 
@@ -202,3 +197,7 @@ After you terminate the integration, your organization's macOS devices will be r
 
 - [Apply compliance policies to Jamf-managed devices](./assign-jamf-policies.md)
 - [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

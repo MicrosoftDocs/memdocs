@@ -4,8 +4,6 @@ description: Learn how to configure a Universal Print policy using the settings 
 ms.date: 05/13/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create a Universal Print policy in Microsoft Intune
@@ -73,7 +71,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
 This policy includes your printer information. When you assign the policy, the printers are automatically installed. Then, on their devices, users select a printer that you added.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -159,3 +157,7 @@ For more information and specific steps, see [Universal Print troubleshooting gu
 
 - [What is Universal Print](/universal-print/fundamentals/universal-print-whatis)
 - [Use the settings catalog to configure settings on Windows and macOS devices](index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

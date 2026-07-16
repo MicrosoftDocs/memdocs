@@ -4,8 +4,6 @@ description: Set up Android Enterprise work profile for corporate-owned devices 
 ms.date: 05/08/2025
 ms.topic: how-to
 ms.reviewer: grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile
@@ -84,7 +82,7 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 
 You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Go to **Devices** > **Enrollment**.
 
@@ -188,7 +186,7 @@ Revoking or exporting a token/QR code doesn't have any effect on devices that ar
 
 You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Microsoft Entra device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Groups** > **All groups** > **New group**.
 2. Fill out the required fields as follows:
     - **Group type**: Security
@@ -216,7 +214,7 @@ When you create the enrollment profile in the admin center, you have to select a
 
 The default token, *corporate-owned work profile*, enrolls devices into Microsoft Intune as standard Android Enterprise corporate-owned devices with work profiles. This token requires you to complete pre-provisioning steps before you distribute the devices. End users complete the remaining steps on the device when they sign in with their work or school account.
 
-The device staging token, *Corporate-owned work profile, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a partner vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.
+The device staging token, *Corporate-owned work profile, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a partner vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing in to the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.
 
 For more information, see [Device staging overview](device-staging.md).
 
@@ -241,3 +239,7 @@ Private space is a feature introduced with Android 15 that lets people create a 
 ## Next steps
 - [Deploy Android apps](../../app-management/deployment/assign-groups.md)
 - [Add Android configuration policies](../../device-configuration/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

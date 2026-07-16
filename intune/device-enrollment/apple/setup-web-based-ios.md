@@ -4,8 +4,6 @@ description: Set up web-based device enrollment to manage user-owned iOS/iPadOS 
 ms.date: 09/23/2024
 ms.topic: install-set-up-deploy
 ms.reviewer: rishitasarin
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up web based device enrollment for iOS
@@ -78,7 +76,7 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 Return to **Enrollment types** to see a list of your enrollment profiles. Intune applies enrollment profiles in the order you prioritize them. If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority. Drag and drop the profiles in the list to reposition them and change the order in which they're applied.
 
 ## Step 3: Prepare employees for enrollment
-When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.
+When an employee attempts to sign in to a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.
 
 Alternatively, you can provide employees and students with a URL that opens the Company Portal website. If you aren't utilizing Conditional Access, it's important to share the enrollment link with device users so that they know how to initiate enrollment. The link to share is:
 
@@ -92,9 +90,9 @@ This section provides the high-level enrollment steps for device users. We recom
 1. Open Safari and go to [https://portal.manage.microsoft.com/enrollment/webenrollment/ios](https://portal.manage.microsoft.com/enrollment/webenrollment/ios). Sign in with your work or school account.
 2. When prompted to, download the management profile. Wait in Safari while Company Portal downloads the management profile.
 3. Go to your device settings app to view and install the management profile.
-4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **General** > **VPN & Device Management** > **Management Profile** > **More Details**. Authenticator should be listed as the SSO extension.
+4. Wait until Microsoft Authenticator is installed on the device before signing in to a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **General** > **VPN & Device Management** > **Management Profile** > **More Details**. Authenticator should be listed as the SSO extension.
 5. Sign in to a work app, such as Microsoft Teams, with your work account.
-6. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, select **Recheck**.
+6. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed in to for pending action items. When you're done making changes, select **Recheck**.
 
 After compliance checks are complete, users can access apps configured with the SSO app extension policy for the rest of their session without needing to sign in again.
 

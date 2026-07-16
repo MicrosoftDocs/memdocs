@@ -4,8 +4,6 @@ description: Use a custom profile for per-app VPN profiles on Android device adm
 ms.date: 05/06/2026
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create a per-app VPN profile for Android DA devices in Microsoft Intune
@@ -32,7 +30,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 
 ## Step 1 - Create a VPN profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -56,7 +54,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 
 ## Step 2 - Create a custom configuration policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -106,3 +104,7 @@ Use the following steps to enter the list apps that are allowed or blocked from 
 
 - For a list of all the Android device administrator VPN settings, go to [Android device settings to configure VPN](./ref-vpn-settings-android.md).
 - To learn more about VPN settings and Intune, go to [configure VPN settings in Microsoft Intune](./configure-vpn.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

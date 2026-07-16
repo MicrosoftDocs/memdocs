@@ -4,8 +4,6 @@ description: Add, configure, or create settings on iOS, iPadOS, and macOS device
 ms.date: 05/14/2026
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: platforms-apple
 ---
 
@@ -1090,7 +1088,7 @@ This feature applies to:
 > [!IMPORTANT]
 > Device profiles that use the restricted app settings must be assigned to user groups, not device groups.
 
-The restricted apps settings don't prevent users from installing and opening specific apps. Instead, devices with restricted apps installed populate the **Devices with restricted apps** report in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Monitor**).
+The restricted apps settings don't prevent users from installing and opening specific apps. Instead, devices with restricted apps installed populate the **Devices with restricted apps** report in the [Intune admin center] (**Devices** > **Monitor**).
 
 ::: zone pivot="ios-ipados"
 
@@ -1307,3 +1305,7 @@ You can also:
 
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 - Learn more about the [device restrictions profile](./configure-device-restrictions.md).
+
+<!--links-->
+
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/19/2026
+ms.date: 06/29/2026
 ms.topic: whats-new
 ms.collection:
 - M365-identity-device-management
@@ -14,7 +14,7 @@ Learn what's new each week in Microsoft Intune.
 You can also read:
 
 - [**Important notices**](#notices)
-- [Past releases](archive/index.md) in the What's new archive
+- [Past releases](archive.md) in the What's new archive
 - Information about [how Intune service updates are released](../fundamentals/servicing-information.md)
 
 > [!NOTE]
@@ -46,7 +46,274 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 
--->
+-->  
+
+## Week of June 29, 2026 (Service release 2606)  
+
+### App management  
+
+#### Available macOS PKG apps update automatically when you upload a new version <!--37712529 -->
+
+For available macOS PKG apps, updates now deploy to devices automatically when the same app policy was updated with a new app version, so users no longer need to select **Install** or **Reinstall** in Company Portal to get the latest version. When you edit an existing available app policy with a newer version of the app that uses the same bundle ID, Intune deploys the update to the device automatically.
+
+Automatic updates apply when both of the following are true:
+
+- You upload an updated version of the app to Intune.
+- The user already installed the app on the device.
+
+This behavior requires the Microsoft Intune management agent for macOS version `2606.013` or later.
+
+For more information, see [Add an unmanaged macOS PKG app to Microsoft Intune](../app-management/deployment/add-unmanaged-pkg-macos.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS 
+
+#### Newly available protected app for Intune <!-- 37813202 -->
+
+ChatGPT is now available as a protected app for Microsoft Intune.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../app-management/ref-protected-apps.md).  
+
+#### Enterprise App Management support for GCC High and DoD<!-- 24875296 -->
+
+Microsoft Intune now extends Enterprise App Management (EAM) to the GCC High (GCCH) and DoD cloud environments. Government organizations can use the EAM enterprise catalog to discover, deploy, and keep prepackaged Microsoft and third-party apps up to date without manual repackaging. A secure cross-cloud integration model maintains the compliance boundaries and authentication requirements expected for government tenants.
+
+For more information, see [Microsoft Intune Enterprise Application Management](../app-management/deployment/enterprise-app-management.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows  
+
+#### Auto-update for Enterprise App Management applications<!-- 33727305 -->
+
+Microsoft Intune now supports automatic updates for Enterprise App Management (EAM) applications. When you enable auto-update for an EAM app with a required assignment, Intune detects when a newer version is available in the EAM catalog and automatically updates the app on targeted devices. This eliminates manual packaging and supersedence workflows, reduces update maintenance at scale, and helps keep devices secure with timely updates.
+
+For more information, see [Microsoft Intune Enterprise Application Management](../app-management/deployment/enterprise-app-management.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows  
+
+### Device configuration  
+
+#### New Android Enterprise settings in the Intune settings catalog<!-- 35028596, 32195504, 30798336, 33982129, 33982131, 24964827, 24964848, 33982123, 33982122, 24964861, 24964854, 33982130, 33982127, 33982120, 24964888, 24964874, 37087237 -->
+
+The settings catalog lists all the settings you can configure in a device policy, and all in one place. The following new Android Enterprise settings are available in the Microsoft Intune settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type).
+
+##### Applications
+
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 35028596 --> **Block apps from exposing app functions** | This setting controls whether managed apps can expose app functions — programmatic actions that other apps and on-device assistants or AI agents can invoke inside the app. If **True**, apps on fully managed devices and apps in the work profile on corporate-owned devices are blocked from exposing app functions. If **False** (default OS behavior), apps are allowed to expose app functions. | COBO, COSU, COPE |
+| <!-- 32195504 --> **Block widgets from work profile apps** | If **True**, allows users to access widgets exposed by apps in the work profile on the device's home screen. If **False**, prevents access to these widgets. By default, the OS might allow widget access. | COPE |
+
+##### Connectivity
+
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 30798336 --> **Allow selection of a preferential network service** | If **True**, the device gives priority to the specified network service over other available options, such as an enterprise slice on 5G networks. If **False**, the device connects using its default network selection process. | COBO, COSU, COPE |
+| <!-- 33982129 --> **Block airplane mode** | If **True**, the device is prevented from enabling airplane mode. If **False**, the device follows the default airplane mode behavior of the OS. | COBO, COSU, COPE |
+| <!-- 33982131 --> **Block cellular 2G** | If **True**, the device prevents cellular 2G functionality, restricting user access to the setting. If **False** (default), the device follows the default cellular 2G behavior of the OS. Supported on Android 14 and later. | COBO, COSU, COPE |
+| <!-- 24964827 --> **Block configuring cell broadcasts** | If **True**, the device is prevented from receiving cell broadcast messages, such as emergency alerts. If **False** (default), Intune doesn't change or update this setting, and the OS might allow the reception of cell broadcast messages. | COBO, COSU, COPE |
+| <!-- 24964848 --> **Block configuring mobile networks** | **True** prevents users from configuring or modifying mobile network settings on the device. If **False** (default), Intune doesn't change or update this setting and the OS might allow users to adjust mobile network settings. | COBO, COSU, COPE |
+| <!-- 33982123 --> **Block configuring VPN** | If **True**, users can't add, edit, or remove VPN configurations on the device. If **False** or not configured, the device follows the default VPN configuration behavior of the OS. | COBO, COSU, COPE |
+| <!-- 33982122 --> **Block network reset** | If **True**, the device won't reset network settings even if a reset is attempted. If **False** (default), the device follows the default network reset behavior of the OS. | COBO, COSU, COPE |
+| <!-- 24964861 --> **Block outgoing calls** | If **True**, users are prevented from making outgoing calls on the device. If **False** (default), Intune doesn't change or update this setting, and the OS might allow outgoing calls. | COBO, COSU, COPE |
+| <!-- 24964854 --> **Block SMS** | If **True**, the device is prevented from sending or receiving SMS messages, restricting text communication. If **False** (default), the device follows the default SMS behavior of the OS. | COBO, COSU, COPE |
+| <!-- 33982130 --> **Block ultra wideband** | If **True**, the device prevents ultra wideband functionality, restricting user access to the setting. If **False** (default), the device follows the default ultra wideband behavior of the OS. Supported on Android 14 and later. | COBO, COSU, COPE |
+| <!-- 33982127 --> **Select minimum Wi-Fi security level** | Select the minimum Wi-Fi security level required for the device to connect to Wi-Fi networks. Options are **Open network security**, **Personal network security**, **Enterprise network security**, and **Enterprise 192-bit network security**. The default is **Open network security**, which allows the device to connect to all types of Wi-Fi networks. Supported on Android 13 and later. | COBO, COSU, COPE |
+
+##### General
+
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 33982120 --> **Block printing** | If **True**, the device is prevented from printing documents. If **False** (default), the device follows the default printing behavior of the OS. | COBO, COSU, COPE |
+| <!-- 24964888 --> **Block setting user icon** | If **True**, users are prevented from changing their user icon or profile image on the device. If **False** (default), Intune doesn't change or update this setting, and the OS might allow users to modify their user icon. | COBO, COSU, COPE |
+| <!-- 24964874 --> **Block setting wallpaper** | If **True**, users are prevented from changing the wallpaper on the device. If **False** (default), Intune doesn't change or update this setting, and the OS might allow users to change the wallpaper. | COBO, COSU, COPE |
+| <!-- 37087237 --> **Block users from adding eSIM profiles** | If **True**, users can't add eSIM profiles to the device. If **False** (default), users can add eSIM profiles based on the default behavior of the OS. | COBO, COSU, COPE |
+
+**Platform key:**
+
+- **COBO** — Android Enterprise corporate-owned fully managed
+- **COSU** — Android Enterprise corporate-owned dedicated devices
+- **COPE** — Android Enterprise corporate-owned devices with a work profile (at work profile level)
+
+For a list of all settings you can currently configure, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise  
+
+#### Support for WPA3-Personal in iOS/iPadOS Wi-Fi profiles<!-- 36602689 -->
+
+Intune supports **WPA3-Personal** as a security-type option when configuring Wi-Fi device configuration profiles for iOS/iPadOS. Admins can now select WPA3-Personal alongside existing options such as WPA2-Personal.
+
+This feature:
+
+- Allows managed iOS/iPadOS devices to connect to networks that require the stronger WPA3 protocol.
+- Brings iOS/iPadOS in line with the latest Wi-Fi Alliance security standards and helps organizations meet evolving network-security requirements.
+
+Support for WPA3 on Windows, Android, and macOS platforms and for WPA3-Enterprise will be available in a future release (no ETA).
+
+To learn more about the settings you can currently configure, see [Add Wi-Fi settings to Apple devices in Microsoft Intune](../device-configuration/templates/ref-wifi-settings-apple.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS  
+
+#### New supported OEMConfig apps for Android Enterprise<!-- 37834706 -->
+
+The following OEMConfig apps are available in Intune for Android Enterprise:
+
+- FCNT | com.fcnt.arrowsconfig
+- FCNT | com.fcnt.arrowsconfig_test
+
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../device-configuration/templates/configure-oemconfig-android.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise  
+
+### Device management
+
+#### Advanced Intune capabilities are being added to Microsoft 365 E3 and E5<!-- 37289179 -->
+
+Microsoft is adding several Intune Suite capabilities to Microsoft 365 E3 and Microsoft 365 E5 to enable more organizations to use advanced endpoint management and security without a separate add-on.
+
+The following capabilities are added to Microsoft Enterprise Mobility + Security E3 (EMS E3), which is included with Microsoft 365 E3:
+
+- Remote Help
+- Advanced Analytics
+- Intune Plan 2, which includes Microsoft Tunnel for mobile application management (MAM), specialty device management, and firmware over-the-air (FOTA) updates for supported devices
+
+Microsoft 365 E5 includes all Microsoft 365 E3 capabilities, plus:
+
+- Endpoint Privilege Management
+- Enterprise Application Management
+- Microsoft Cloud PKI
+
+These capabilities are gradually rolling out. Eligible tenants are automatically provisioned, and no action is required. Before the change takes effect in your tenant, Microsoft posts a notification in the Microsoft 365 admin center 30 days in advance.
+
+This update applies to commercial Microsoft 365 E3 and E5. There are no changes to the Education (EDU) or frontline worker (FLW) plans at this time. For Government plans, Intune Suite packaging is planned to align with the equivalent enterprise plans, subject to compliance and regulatory requirements. For the capabilities currently supported  in GCC High and DoD, see [Supported Intune features in GCC High and DoD](../fundamentals/government-service.md#supported-intune-features-in-gcc-high-and-dod).
+
+For more information, see [Microsoft Intune advanced capabilities](../fundamentals/advanced-capabilities.md) and the blog post [Microsoft 365 adds advanced Microsoft Intune solutions at scale](https://techcommunity.microsoft.com/blog/microsoftintuneblog/microsoft-365-adds-advanced-microsoft-intune-solutions-at-scale/4474272).
+
+#### Intune support for Trustd Mobile as a mobile threat defense partner<!-- 38433837 -->
+
+You can now use Trustd Mobile as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:
+
+- Android 9.0 and later
+- iOS/iPadOS 15.0 and later
+
+To learn more about this support, see [Use Trustd Mobile with Microsoft Intune](../device-security/mobile-threat-defense/trustd-mobile.md).  
+
+#### Remote Help support for RemoteApp in Azure Virtual Desktop<!-- 33047374 -->  
+
+Remote Help supports RemoteApp in Azure Virtual Desktop (AVD), enabling help desk agents to securely view and control apps running within RemoteApp sessions. For more information, see [Launch Remote Help](../remote-help/start-session.md?tabs=windows%2Cwindowsnative#provide-help-in-azure-virtual-desktop-desktop-and-remoteapp-sessions).  
+
+### Device security  
+
+#### Microsoft Tunnel adds support for Red Hat Enterprise Linux 9.7<!-- 15021673 -->
+
+Microsoft Tunnel Gateway now supports Red Hat Enterprise Linux (RHEL) 9.7 as a Linux server distribution.
+
+- This support requires the use of Podman 5.8.2 as its default container engine. Customers upgrading from environments using Podman v3 containers should recreate containers and reinstall Microsoft Tunnel, as those containers aren't compatible with newer Podman versions.
+- Like other RHEL 9.x versions, RHEL 9.7 doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to manually load *ip_tables* before you install Tunnel.
+
+For the full list of supported distributions and their container requirements, see [Prerequisites for the Microsoft Tunnel in Intune](../device-security/microsoft-tunnel/prerequisites.md#linux-server).
+
+#### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 35894711 -->
+
+An updated security baseline for **Microsoft 365 Apps for Enterprise** is now available in Microsoft Intune. This baseline aligns with the most recent Microsoft 365 Apps security guidance and includes updated policy recommendations to help protect against evolving threats.
+
+This release is version **v2512**, which skips the previously published version found in the Security Compliance Toolkit (v2412). Review the new baseline carefully before you adopt it.
+
+The following three settings aren't available in this baseline release and are expected to be added in a future update. The parent setting to these three, (**VBA Macro Notification Settings** set to *Disable all except digitally signed macros*) is still included in the v2512 release:
+
+- **Require macros to be signed by a trusted publisher**: Pending availability in the Settings Catalog.
+- **Block certificates originating from the current user store only**: Pending availability in the Settings Catalog.
+- **Require Extended Key Usage (EKU) for code signing**: Pending availability in the Settings Catalog.
+
+Existing profiles don't automatically upgrade. To use the latest version, [create a new baseline profile](../device-security/security-baselines/configure-baselines.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../device-security/security-baselines/configure-baselines.md#update-a-baseline-profile-to-the-latest-version).
+
+To view the full list of settings and their default values, see [Microsoft 365 Apps for Enterprise security baseline version 2512](../device-security/security-baselines/ref-v2-office-settings.md?pivots=v2512). For a detailed breakdown of setting changes, see the blog post [Security baseline for M365 Apps for enterprise v2512](https://techcommunity.microsoft.com/blog/Microsoft-Security-Baselines/security-baseline-for-m365-apps-for-enterprise-v2512/4487213).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### New Microsoft Defender Antivirus settings for Linux Server devices <!-- 26835712 -->
+ 
+The existing endpoint security [Antivirus](../device-configuration/endpoint-security/antivirus.md) policy for the **Microsoft Defender Antivirus** profile on Linux Server now includes new settings you can configure and deploy to your managed Linux devices:
+ 
+- **Offline security intelligence update** - Manage how Microsoft Defender Antivirus keeps its security intelligence current on Linux Server devices, including updates while the device is offline.
+- **Scheduled scan** - Manage when Microsoft Defender Antivirus runs scheduled scans on Linux devices.
+ 
+These settings:
+ 
+- Are added to the existing endpoint security **Antivirus** policy for the **Microsoft Defender Antivirus** profile on Linux. No new profile is required. By default, they're set to *Not configured*.
+- Are supported for Linux Server devices enrolled with Intune, and for Linux devices managed through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) scenario, which supports devices that are managed by Defender for Endpoint but not enrolled with Intune.
+ 
+For details about the available Defender settings, see [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences) in the Microsoft Defender for Endpoint documentation.
+ 
+> [!div class="checklist"]
+> Applies to:
+> 
+> - Linux
+
+#### New setting added to the Windows security baseline version 25H2<!-- 37402270  -->
+
+The Intune security baseline for Windows, version 25H2, is updated to include one new setting, **Disable Internet Explorer 11 Launch Via COM Automation**, with a baseline default of **Enabled**.
+
+This setting was excluded from the version 25H2 baseline at its initial release due to a known issue, which is now resolved. When enabled, the setting prevents Internet Explorer 11 from being launched through COM automation, which reduces the attack surface on managed devices.
+ 
+This change is an update to an existing baseline version, not a new baseline version. The new setting isn't visible in a baseline profile's properties until you edit and save the profile:
+ 
+- **Pre-existing baseline profiles**: To add the new setting to a profile you created before this update, select and then **Edit** the profile, and then **Save** it. When you open the profile for editing, the new setting appears with its baseline default configuration. You can reconfigure the setting before you save, or save with no changes to apply the baseline default. After you save, Intune deploys the setting to the assigned groups at the next device check-in. If you don't edit and save the profile, the setting doesn't take effect.
+
+- **New baseline profiles**: When you create a profile that uses the Windows security baseline version 25H2, or update an existing profile to version 25H2, that profile includes the new setting along with all the previously available settings.
+
+To view the setting and its baseline default, see [Windows MDM baseline settings](../device-security/security-baselines/ref-windows-mdm-settings.md?pivots=mdm-25h2).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 11
+
+## Week of June 22, 2026
+
+### App management
+
+#### Microsoft Intune app for Android requires version 2025.11.01 or later<!-- 30154210 -->
+
+The minimum supported version of the Microsoft Intune app for Android is now version `2025.11.01`. This change took effect on May 1, 2026. Users running an older version might experience sign-in failures.
+
+Most users have app updates set to automatic and receive the updated app without taking any action. Users not running a supported version should update the Microsoft Intune app to the latest version to resolve any sign-in issues.
+
+To check which devices are affected, go to **Apps** > **Monitor** > **Discovered apps** and find the Microsoft Intune app to identify devices running older versions.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
+
+## Tenant administration
+
+#### Multi Admin Approval now enforces on API calls made by automation<!-- 37629074 -->
+
+Multi Admin Approval (MAA) now applies to API calls made by automation through the Microsoft Graph API, not just interactive admin actions. If your tenant has MAA access policies configured and you use service principals, automation scripts, or third-party applications to modify protected Intune resources, those calls are now subject to the same approval workflow as interactive operations.
+
+Calls that don't include the required approval headers return an HTTP 403 error. To maintain your automation, update your scripts to follow the MAA approval workflow. If an immediate code change isn't feasible for applications that use app-auth tokens, you can exclude specific applications from enforcement using the new Exclusions tab in the access policy wizard.
+
+For more information, see [Use Multi Admin Approval with the Microsoft Graph API](../fundamentals/role-based-access-control/multi-admin-approval-graph-api.md).
 
 ## Week of June 15, 2026
 
@@ -194,22 +461,6 @@ You have the option to display custom text in the top bar of the Managed Home Sc
 >
 > - Android Enterprise dedicated devices (COSU)
 > - Android Enterprise fully managed devices (COBO)
-
-#### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
-
-On macOS devices, the **Disable MAC address randomization** setting is now available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices.
-
-When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
-
-For more information, see:
-
-- [Wi-Fi profile settings for Apple devices](../device-configuration/templates/ref-wifi-settings-apple.md)
-- [Add and use Wi-Fi settings on your devices in Microsoft Intune](../device-configuration/templates/configure-wifi.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS 15 and later
 
 #### Managed Home Screen exit lock task mode password now requires a device configuration profile<!-- 31846021 -->
 
@@ -796,7 +1047,7 @@ In the Intune admin center, when you go to **Devices** > **All Devices** and sel
 
 This page is redesigned and is available for you to preview. To enable the new experience:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All Devices**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **All Devices**.
 2. Move the **Preview new device view** toggle to **On**.
 
 The new experience is only available when you go to **Devices** > **All Devices** and select a device. If you open a device page from a different part of the Intune admin center, like from a report, the original page view is shown, even with the toggle enabled.
@@ -1042,7 +1293,7 @@ To learn more about the settings catalog, see [Use the Intune settings catalog t
 
 The [Settings Catalog](/intune/device-configuration/settings-catalog) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](/intune/device-configuration/settings-catalog).
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type. 
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type. 
 
 ##### iOS/iPadOS
 
@@ -1340,11 +1591,11 @@ The new policies include:
 
 - **Allow precise geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are allowed to access the user's high-accuracy geolocation without prompting for permission. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal setting is used.
 
-  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards (*) are supported.
 
 - **Block geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are blocked from requesting or accessing the user's geolocation. These sites can't prompt the user for location permissions. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal browser setting is used.
 
-  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards (*) are supported.
 
 **Windows Backup and Restore**:
 
@@ -1376,7 +1627,7 @@ To learn more about the settings catalog, see [Use the Intune settings catalog t
 
 The [Settings Catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 ##### iOS/iPadOS
 
@@ -1582,7 +1833,7 @@ To learn more about the settings catalog, see:
 
 The [Settings Catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
 
-There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
+There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
 
 ##### iOS/iPadOS
 
@@ -1791,10 +2042,14 @@ For more information about available Setup Assistant skipkeys, see:
 - [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)  
 - [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
-For previous months, see the [What's new archive](archive/index.md).
+For previous months, see the [What's new archive](archive.md).
 
 <!-- Past announcements that are older than six months will be moved to the archive -->
 
 ## Notices
 
 [!INCLUDE [Intune notices](./includes/intune-notices.md)]
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

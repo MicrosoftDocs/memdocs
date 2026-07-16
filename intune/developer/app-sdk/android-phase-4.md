@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for Android Developer Integration and Testing Gu
 description: Understand MAM integration essentials to incorporate Intune mobile app management (MAM) into your Android app.
 ms.date: 11/18/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - Android
@@ -307,7 +306,7 @@ The SDK may attempt to enroll the app for the given account in the MAM service; 
 The retry period will typically be 12-24 hours.
 The SDK provides the status of enrollment attempts asynchronously via notifications.
 
-2. The best time to call `registerAccountForMAM` is after the user has signed into the app and is successfully authenticated using MSAL.
+2. The best time to call `registerAccountForMAM` is after the user has signed in to the app and is successfully authenticated using MSAL.
 The account's Microsoft Entra user ID, tenant ID and authority are returned from the MSAL authentication call as part of the [`IAccount`] related to the [`IAuthenticationResult`].
     - The account comes from the `IAuthenticationResult.getAccount()` method and contains the pertinent account information.
     - The AAD ID (also known as Microsoft Entra ID or OID) comes from the `IAccount.getId()` method.
@@ -685,21 +684,21 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 <!-- Class links -->
 [`IAccount`]:https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAccount.java
 [`IAuthenticationResult`]:https://github.com/AzureAD/microsoft-authentication-library-for-android/blob/dev/msal/src/main/java/com/microsoft/identity/client/IAuthenticationResult.java
-[MAMEnrollmentManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html
-[MAMEnrollmentManager.Result]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
-[MAMLogHandlerWrapper]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
-[MAMServiceAuthenticationCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
-[MAMServiceAuthenticationCallbackExtended]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html
-[MAMStrictViolationHandler]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
-[MAMStrictCheck]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
+[MAMEnrollmentManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html
+[MAMEnrollmentManager.Result]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
+[MAMLogHandlerWrapper]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
+[MAMServiceAuthenticationCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
+[MAMServiceAuthenticationCallbackExtended]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html
+[MAMStrictViolationHandler]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
+[MAMStrictCheck]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
 
 <!-- Method links -->
-[acquireToken]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
-[getRegisteredAccountStatus]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String,%20java.lang.String)
-[registerAccountForMAM]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
-[registerAuthenticationCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)
-[unregisterAccountForMAM]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
-[updateToken]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#updateToken(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
+[acquireToken]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html#acquireToken(java.lang.String,%20java.lang.String,%20java.lang.String)
+[getRegisteredAccountStatus]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#getRegisteredAccountStatus(java.lang.String,%20java.lang.String)
+[registerAccountForMAM]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAccountForMAM(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
+[registerAuthenticationCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#registerAuthenticationCallback(com.microsoft.intune.mam.policy.MAMServiceAuthenticationCallback)
+[unregisterAccountForMAM]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
+[updateToken]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#updateToken(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String)
 
 
 <!-- Other Microsoft links -->

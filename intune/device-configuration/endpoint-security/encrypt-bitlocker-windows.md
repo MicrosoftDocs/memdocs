@@ -4,9 +4,6 @@ description: Use Microsoft Intune policy to manage BitLocker encryption on Windo
 ms.date: 11/26/2025
 ms.topic: how-to
 ms.reviewer: annovich; aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Encrypt Windows devices with BitLocker using Intune
@@ -73,7 +70,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 
 ### Create endpoint security policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
@@ -108,7 +105,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 > [!TIP]
 > The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../settings-catalog/index.md) and the *PDE* category.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **Create**.
 
@@ -312,7 +309,7 @@ To configure PDE, use either:
 
 ### View encryption status
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Encryption report**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Monitor** > **Encryption report**.
 
 2. Review the encryption status of devices that received BitLocker policies.
 
@@ -326,7 +323,7 @@ Intune provides access to the Microsoft Entra node for BitLocker so you can view
 
 To view recovery keys:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices**.
 3. Select a device from the list, and then under *Monitor*, select **Recovery keys**.
 4. Select **Show Recovery Key**. This generates an audit log entry under 'KeyManagement' activity.
@@ -383,7 +380,7 @@ You can use an Intune device action to remotely rotate the BitLocker recovery ke
 
 **To rotate the BitLocker recovery key**:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices**.
 3. Select a device from the list.
 4. Select the **BitLocker key rotation** remote action. If not visible, select the ellipsis (...) and then select *BitLocker key rotation*.
@@ -458,3 +455,7 @@ For silent BitLocker enablement, recovery keys are automatically backed up to Mi
 - [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises) in the Windows security documentation
 - [Personal Data Encryption overview](/windows/security/operating-system-security/data-protection/personal-data-encryption)
 - [Self-service scenarios for end users through Company Portal app](../../user-help/security/collect-recovery-key-windows.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

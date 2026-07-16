@@ -4,8 +4,6 @@ description: Configure the Windows Defender Application Control (WDAC) CSP to al
 ms.date: 06/06/2024
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use WDAC and Windows PowerShell to allow or blocks apps on HoloLens 2 devices with Microsoft Intune
@@ -34,7 +32,7 @@ Use the steps in this article as a template to allow or deny specific apps from 
 ## Prerequisites
 
 - Be familiar with Windows PowerShell. For information on the execution policy options, go to [Windows PowerShell about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-- To configure the Intune policy, at a minimum, sign into the Intune admin center as a member of the **Policy and Profile Manager** built-in Intune role.
+- To configure the Intune policy, at a minimum, sign in to the Intune admin center as a member of the **Policy and Profile Manager** built-in Intune role.
 
   For information on the Intune built-in roles, and what they can do, go to:
 
@@ -168,7 +166,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
 In this step, you create a custom device configuration profile in Intune. In the custom policy, you add the **compiledPolicy.bin** binary file you created in [Step 1 - Create the WDAC policy using Windows PowerShell](#step-1---create-the-wdac-policy-using-windows-powershell). Then, use Intune to deploy the policy to HoloLens 2 devices.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows custom device configuration profile.
+1. In the [Microsoft Intune admin center], create a Windows custom device configuration profile.
 
     For the specific steps, go to [Create a custom profile using OMA-URI in Intune](./configure-custom-settings.md).
 
@@ -195,3 +193,7 @@ In this step, you create a custom device configuration profile in Intune. In the
 
 - [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 - [Learn more about custom profiles in Intune](./configure-custom-settings.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

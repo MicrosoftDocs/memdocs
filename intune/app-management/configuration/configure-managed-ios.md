@@ -32,7 +32,7 @@ Once you have selected the included groups for your application configuration po
 
 ## Create an app configuration policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Choose the **Apps** > **Configuration** > **Create** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information, see [Apps that support app configuration](./overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
     - **Name** - The name of the profile that appears in the Microsoft Intune admin center.
@@ -97,8 +97,8 @@ As the Microsoft Intune administrator, you can control which work or school acco
 | Key | Values |
 |----|----|
 | IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: The only account allowed is the managed user account defined by the [IntuneMAMUPN](../protection/manage-data-transfer-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key.</li><li>**Disabled** (or any value that isn't a case insensitive match to **Enabled**): Any account is allowed.</li></ul> |
-| IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
-| IntuneMAMOID | <ul><li>User Object ID of the account allowed to sign into the app. </li><li>For Intune enrolled devices, the {{userid}} token may be used to represent the enrolled user account. </li></ul>  |
+| IntuneMAMUPN | <ul><li>UPN of the account allowed to sign in to the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
+| IntuneMAMOID | <ul><li>User Object ID of the account allowed to sign in to the app. </li><li>For Intune enrolled devices, the {{userid}} token may be used to represent the enrolled user account. </li></ul>  |
 
 > [!NOTE]
 > The **IntuneMAMUPN** and **IntuneMAMOID** configuration keys are automatically configured for some MAM enabled apps, see [Device Management types](../protection/create-policy.md#device-management-types) for more information.
@@ -115,14 +115,14 @@ As the Microsoft Intune administrator, you can control which work or school acco
 
 ### Require configured organization accounts in apps
 
-On enrolled devices, organizations can require that the work or school account is signed into managed Microsoft apps in order to receive Org data from other managed apps. For example, consider the scenario where the user has attachments included in email messages contained within the managed email profile located in the native iOS mail client. If the user attempts to transfer the attachments to a Microsoft app, like Office, that is managed on the device and has these keys applied, then this configuration will treat the transferred attachment as Org data, requiring the work or school account to be signed in and enforcing the app protection policy settings.
+On enrolled devices, organizations can require that the work or school account is signed in to managed Microsoft apps in order to receive Org data from other managed apps. For example, consider the scenario where the user has attachments included in email messages contained within the managed email profile located in the native iOS mail client. If the user attempts to transfer the attachments to a Microsoft app, like Office, that is managed on the device and has these keys applied, then this configuration will treat the transferred attachment as Org data, requiring the work or school account to be signed in and enforcing the app protection policy settings.
 
 For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy for each Microsoft app:
 
 | Key | Values |
 |----|----|
 | IntuneMAMRequireAccounts | <ul><li>Enabled: The app requires the user to sign-in to the managed user account defined by the [IntuneMAMUPN](../protection/manage-data-transfer-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key to receive Org data.</li><li>Disabled (or any value that isn't a case insensitive match to Enabled): No account sign-in is required</li></ul>  |
-| IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
+| IntuneMAMUPN | <ul><li>UPN of the account allowed to sign in to the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
 
 > [!NOTE]
 > Apps must have Intune APP SDK for iOS version 12.3.3 or later and be targeted with an [Intune app protection policy](../protection/overview.md) when requiring sign-in to work or school account. Within the app protection policy, the "Receive data from other apps" must be set to "All apps with incoming Org data".
@@ -203,7 +203,7 @@ Additionally, Intune supports the following token types in the property list:
 
 Apple's Automated Device Enrollments aren't compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS ADE devices even when users have downloaded the Company Portal from the App Store by using the following steps.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it hasn't been added yet, by going to **Apps** > **All Apps** > **Create** > **iOS Store App**.
+1. In [Microsoft Intune admin center], add the Intune Company Portal app if it hasn't been added yet, by going to **Apps** > **All Apps** > **Create** > **iOS Store App**.
 2. Go to **Apps** > **Configuration**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](./configure-managed-ios.md).
 
@@ -236,13 +236,13 @@ Apple's Automated Device Enrollments aren't compatible with the app store versio
         ```
 
 4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already ADE enrolled.
-5. Tell end users to sign into the Company Portal app when it's automatically installed.
+5. Tell end users to sign in to the Company Portal app when it's automatically installed.
 
 > [!NOTE]
 > When you add an app configuration to allow the Company Portal app on ADE devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation doesn't apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
 
 ## Monitor iOS/iPadOS  app configuration status per device
-Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.
+Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Intune admin center], select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.
 
 ## Additional information
 
@@ -251,3 +251,7 @@ Once a configuration policy has been assigned, you can monitor iOS/iPadOS app co
 ## Next steps
 
 Continue to [assign](../deployment/assign-groups.md) and [monitor](../monitor-assignments.md) the app.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

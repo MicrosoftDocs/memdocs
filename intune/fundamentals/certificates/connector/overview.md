@@ -1,14 +1,8 @@
 ---
 title: Overview of Certificate Connector for Microsoft Intune
 description: Learn about the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 02/23/2026
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Certificate Connector for Microsoft Intune
@@ -124,7 +118,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 In the Microsoft Intune admin center, you can select a certificate connector to view information about its status:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 
 2. Go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 
@@ -502,3 +496,7 @@ This connector is a unified connector in that it includes the capabilities of bo
 ## Next steps
 
 [Review prerequisites for the Certificate Connector for Microsoft Intune](prerequisites.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

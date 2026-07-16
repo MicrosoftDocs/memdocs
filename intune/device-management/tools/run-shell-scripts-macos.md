@@ -3,8 +3,6 @@ title: Use Shell Scripts on macOS Devices in Microsoft Intune
 description: Create, assign, monitor, and troubleshoot shell scripts for macOS devices in Microsoft Intune.
 ms.date: 08/08/2024
 ms.topic: how-to
-author: nicholasswhite
-ms.author: nwhite
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
@@ -40,7 +38,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 
 ## Create and assign a shell script policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **By platform** > **macOS** > **Manage devices** > **Scripts** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the shell script.
@@ -92,7 +90,7 @@ The following items are required to collect logs on a macOS device:
 
 #### Collect device logs
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Navigate to **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** and select a macOS shell script.
 3. In **Device status** or **User status** report, select a device.
 4. Select **Collect logs**, provide folder paths of log files separated only by a semicolon (;) without spaces or newlines in between paths.<br>For example, multiple paths should be written as `/Path/to/logfile1.zip;/Path/to/logfile2.log`.
@@ -129,7 +127,7 @@ You can create custom attribute profiles which enable you to collect custom prop
 
 ### Create and assign a custom attribute for macOS devices
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **By platform** > **macOS** > **Organize devices** > **Custom attributes for macOS** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the script.
@@ -218,3 +216,7 @@ When you deploy shell scripts or custom attributes for macOS devices from Micros
 ## Next steps
 
 - [Create a compliance policy in Microsoft Intune](../../device-security/compliance/create-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
-ms.date: 04/16/2024
-ms.author: mandia
+ms.date: 06/23/2026
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs. -->
@@ -11,13 +9,13 @@ ms.author: mandia
 
 :::image type="content" source="../../device-configuration/media/enterprise-sso-plugin/flow-chart-end-user-macos.png" alt-text="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune.":::
 
-- If you're not deploying the Company Portal app using an app policy, then users must install it manually. Users don't need to use the Company Portal app, it just needs to be installed on the device.
+- If you don't deploy the Company Portal app by using an app policy, users must install it manually. Users don't need to use the Company Portal app, it just needs to be installed on the device.
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
-You can test single sign-on by opening [Safari in private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac)  (opens Apple's web site) and opening the `https://portal.office.com` site. No username and password will be required.
+You can test single sign-on by opening [Safari in private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac)  (opens Apple's web site) and opening the `https://portal.office.com` site. No username and password are required.
 
 :::image type="content" source="../../device-configuration/media/enterprise-sso-plugin/macos-sso-animated.gif" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
 
