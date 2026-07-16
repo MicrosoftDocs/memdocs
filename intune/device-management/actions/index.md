@@ -1,7 +1,7 @@
 ---
 title: Device Actions - Wipe, Lock, Locate, and More
 description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, tvOS, visionOS, macOS, Windows, and ChromeOS devices. Learn about available device actions, prerequisites, and bulk actions for IT admins.
-ms.date: 04/30/2026
+ms.date: 07/10/2026
 ms.topic: overview
 ---
 
@@ -152,6 +152,9 @@ Every device action has its own steps, which the respective documentation detail
 ## Check the status of the action
 
 To check the status of the action, select **Devices** > [**Device actions**].
+
+> [!NOTE]
+> For **MDM devices**, deleting a device immediately hides it from the admin center and initiates a **Retire**. A status of **Completed** on a delete action means the process is complete on the server side; it doesn't confirm that the client device finished the **Retire**.
 
 ## Bulk device actions
 
