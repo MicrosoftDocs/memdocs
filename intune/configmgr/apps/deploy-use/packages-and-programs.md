@@ -113,6 +113,9 @@ When clients receive the deployment policy, they'll display the icon in Software
 
         If it can't find the file, the program fails.
 
+        > [!IMPORTANT]
+        > On a 64-bit client, the command line always runs as a 32-bit process in the WOW64 (Windows 32-bit On Windows 64-bit) subsystem. As a result, WOW64 redirects the process's file system and registry access. For example, a script that writes files to `%ProgramFiles%` is redirected to `%ProgramFiles(x86)%`, and registry writes to `HKEY_LOCAL_MACHINE\Software` are redirected to `HKEY_LOCAL_MACHINE\Software\WOW6432Node`. To bypass file system redirection and run a 64-bit process, WOW64 recognizes `%windir%\Sysnative` as a special alias for `%windir%\System32`. For example, to run the 64-bit version of `cmd.exe`, use the following command line: `%windir%\Sysnative\cmd.exe`. For more information, see [File System Redirector](/windows/win32/winprog64/file-system-redirector) and [Registry Redirector](/windows/win32/winprog64/registry-redirector).
+
     - **Startup folder** (optional): Specify the folder from which the program runs, up to 127 characters. This folder can be an absolute path on the client. It can also be a path that's relative to the distribution point folder that contains the package.
 
     - **Run**: Specify the mode in which the program runs on client computers. Select one of the following options:
@@ -189,7 +192,7 @@ When clients receive the deployment policy, they'll display the icon in Software
         - **Required**: The package and program is deployed automatically, according to the configured schedule. In Software Center, you can track its deployment status and install it before the deadline.
 
         > [!NOTE]
-        > If multiple users are signed in to the device, package and task sequence deployments may not appear in Software Center.
+        > If multiple users are signed in to the device, package and task sequence deployments appear in Software Center for the user in the active console session. If no user is in the active console session, the deployments appear for the user with the lowest connected interactive session ID. To view the session ID and type for each signed-in user, open Task Manager, select the **Users** tab, right-click a column header, and enable **ID** and **Session**. The **Session** column shows the **Console** for a local sign-in or an **RDP** session name for a remote connection. For more information, see [Remote Desktop Sessions](/windows/win32/termserv/terminal-services-sessions).
 
     - **Send wake-up packets**: If you set the deployment purpose to **Required** and select this option, the site first sends a wake-up packet to computers at the installation deadline time. Before you can use this option, configure computers for Wake On LAN. For more information, see [How to configure Wake on LAN](../../core/clients/deploy/configure-wake-on-lan.md).
 
