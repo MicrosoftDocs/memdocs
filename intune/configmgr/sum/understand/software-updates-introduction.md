@@ -136,7 +136,37 @@ For an example scenario that shows how you might deploy software updates in your
  The software updates metadata that is required for the scan for software updates compliance is stored on the local client computer, and by default, is relevant for up to 24 hours. This value is known as the Time to Live (TTL).
 
 #### Scan for software updates compliance types
- The client scans for software updates compliance by using an online or offline scan and a forced or non-forced scan, depending on the way the scan for software updates compliance is started. The following describes which methods for starting the scan are online or offline and whether the scan is forced or non-forced.
+ The client scans for software updates compliance by using an online or offline scan and a forced or non-forced scan, depending on the way the scan for software updates compliance is started. Whether the client actually connects to WSUS is the result of two independent decisions:
+
+- **Forced or non-forced** determines whether the client reuses its cached scan results. A non-forced scan reuses the results of the last scan when they're still current and within the TTL, and it only runs a new scan when the cache is stale. A forced scan always runs a new scan and ignores the cache.
+
+- **Online or offline** determines where a scan that does run gets its metadata. An online scan connects to WSUS on the software update point to refresh the metadata before it evaluates the client. An offline scan evaluates the client by using metadata already stored locally, without connecting to WSUS.
+
+> [!NOTE]
+>  *Online* describes what a scan is allowed to do, not what it always does. A non-forced online scan connects to WSUS only when the cached results are outside the TTL. When the last scan is still within the TTL, the client answers from its local cache and doesn't connect to WSUS, even though the scan type is *online*. This is also why *forced offline* isn't a contradiction: *forced* means the cache isn't reused, and *offline* means the resulting scan uses local metadata instead of WSUS. A non-forced offline scan doesn't exist.
+
+ The following diagram shows how the two decisions combine:
+
+```mermaid
+flowchart TD
+    A[Scan requested] --> B{Forced?}
+    B -- No --> C{Cached results current and within TTL?}
+    C -- Yes --> D[Use cached results. Do not contact WSUS.]
+    C -- No --> E{Online or offline?}
+    B -- Yes --> E
+    E -- Online --> F[Contact WSUS, refresh metadata, then scan.]
+    E -- Offline --> G[Scan using local metadata. Do not contact WSUS.]
+```
+
+ The following table summarizes the combinations:
+
+|Scan behavior|What it means|Contacts WSUS?|
+|---|---|---|
+|Non-forced online|Reuse the cached results if they're still current and within the TTL; otherwise refresh the metadata from WSUS.|Only when the last scan is outside the TTL.|
+|Forced online|Always refresh the metadata from WSUS, regardless of the TTL.|Always.|
+|Forced offline|Always run a scan, but evaluate by using local metadata.|Never.|
+
+ The following describes which methods for starting the scan are online or offline and whether the scan is forced or non-forced.
 
 -   **Software updates scan schedule** (non-forced online scan)
 
@@ -165,6 +195,18 @@ For an example scenario that shows how you might deploy software updates in your
 -   **After system restart** (forced offline scan)
 
      After a software update is installed and the computer is restarted, the Software Updates Client Agent starts a scan by using the local metadata. The client never connects to WSUS running on the software update point to retrieve software updates metadata.
+
+#### A scan evaluates the whole catalog, not a single deployment
+ A scan evaluates the client against all update metadata that's synchronized on the software update point, not against a single deployment. One scan produces compliance for updates in new deployments, updates in existing deployments, and updates that aren't deployed at all, in a single pass.
+
+ As a result, the number of deployments doesn't change the number of scans. Whether a client is targeted by 1 deployment or 10, a single scan against the software update point evaluates the client for all of them at once.
+
+#### A scan updates compliance, but installation still requires deployment policy
+ Running a **Software Updates Scan Cycle** refreshes compliance for all updates that the software update point knows about. However, the client can only install a newly added update after it also receives the deployment (machine) policy for that update. Refreshing compliance and acting on a deployment are separate steps:
+
+- To refresh compliance across all updates, use the **Software Updates Scan Cycle**.
+
+- To make the client act on a new or changed deployment, use the **Machine Policy Retrieval & Evaluation Cycle**, followed by the **Software Updates Deployment Evaluation Cycle**.
 
 ##  <a name="BKMK_DeploymentPackages"></a> Software update deployment packages
  A software update deployment package is the vehicle used to download software updates to a network shared folder, and copy the software update source files to the content library on site servers and on distribution points that are defined in the deployment. By using the Download Updates Wizard, you can download software updates and add them to deployment packages before you deploy them. This wizard lets you provision software updates on distribution points and verify that this part of the deployment process is successful before you deploy the software updates to clients.
