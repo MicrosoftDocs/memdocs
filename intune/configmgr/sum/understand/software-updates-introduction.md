@@ -145,6 +145,19 @@ For an example scenario that shows how you might deploy software updates in your
 > [!NOTE]
 >  *Online* describes what a scan is allowed to do, not what it always does. A non-forced online scan connects to WSUS only when the cached results are outside the TTL. When the last scan is still within the TTL, the client answers from its local cache and doesn't connect to WSUS, even though the scan type is *online*. This is also why *forced offline* isn't a contradiction: *forced* means the cache isn't reused, and *offline* means the resulting scan uses local metadata instead of WSUS. A non-forced offline scan doesn't exist.
 
+ The following diagram shows how the two decisions combine:
+
+```mermaid
+flowchart TD
+    A[Scan requested] --> B{Forced?}
+    B -- No --> C{Cached results current and within TTL?}
+    C -- Yes --> D[Use cached results. Do not contact WSUS.]
+    C -- No --> E{Online or offline?}
+    B -- Yes --> E
+    E -- Online --> F[Contact WSUS, refresh metadata, then scan.]
+    E -- Offline --> G[Scan using local metadata. Do not contact WSUS.]
+```
+
  The following table summarizes the combinations:
 
 |Scan behavior|What it means|Contacts WSUS?|
