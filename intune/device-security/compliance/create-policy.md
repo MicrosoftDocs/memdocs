@@ -1,9 +1,10 @@
 ---
 title: Create device compliance policies in Microsoft Intune
 description: Create device compliance policies for Microsoft Intune.
-ms.date: 12/13/2024
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: ilwu
+ai-usage: ai-assisted
 ---
 
 # Create a compliance policy in Microsoft Intune
@@ -172,6 +173,12 @@ For more information about using custom compliance settings, including supported
 Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals) lists the estimated refresh times.
 
 At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
+
+### Client-driven compliance evaluation (preview)
+
+For supported Windows devices, Intune supports client-driven compliance evaluation. With this capability, a device can detect certain local state changes and proactively request a compliance re-evaluation, rather than waiting for the next scheduled check-in cycle.
+
+State changes that can trigger a client-driven compliance evaluation include changes to device configuration, security posture, and other settings that affect a device's compliance state.
 
 ### Assign an InGracePeriod status
 
