@@ -67,9 +67,9 @@ Each elevation rule instructs EPM on how to:
 
     - **Deny all** – All child processes launch without elevated context.
 
-    - **Allow child processes to run elevated** – Any child process launched by the elevated parent will automatically run elevated. When this option is selected, rule evaluation for the child process is skipped, including deny rules. This means a child process may run elevated even when an explicit deny rule exists for that process.
+    - **Allow all child processes to run elevated** – Any child process launched by the elevated parent will automatically run elevated. When this option is selected, rule evaluation for the child process is skipped, including deny rules. This means a child process may run elevated even when an explicit deny rule exists for that process.
 
-    - **Not configured** – No child process behavior is specified. The elevated parent falls back to the default Windows behavior, where any child process launched by the elevated parent automatically runs elevated. Rule evaluation for the child process is skipped, including deny rules, which makes this behavior equivalent to **Allow child processes to run elevated**.
+    - **Not configured** – No child process behavior is specified in the policy. Child processes inherit the parent's elevated context (default Windows behavior), and rule evaluation for the child process is skipped, including deny rules. This behavior is equivalent to **Allow all child processes to run elevated**. Note that the default selection when creating a rule is **Require rule to elevate**.
 
     **Best practice:** Avoid creating overly broad elevation rules for applications that can start other processes (for example, command shells or script engines) to prevent unintended elevation.
 
