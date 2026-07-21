@@ -147,16 +147,7 @@ For an example scenario that shows how you might deploy software updates in your
 
  The following diagram shows how the two decisions combine:
 
-```mermaid
-flowchart TD
-    A[Scan requested] --> B{Forced?}
-    B -- No --> C{Cached results current and within TTL?}
-    C -- Yes --> D[Use cached results. Do not contact WSUS.]
-    C -- No --> E{Online or offline?}
-    B -- Yes --> E
-    E -- Online --> F[Contact WSUS, refresh metadata, then scan.]
-    E -- Offline --> G[Scan using local metadata. Do not contact WSUS.]
-```
+![Flowchart showing how the Forced and Online decisions combine to determine whether the client contacts WSUS during a scan.](../media/scan-compliance-decisions.png)
 
  The following table summarizes the combinations:
 
