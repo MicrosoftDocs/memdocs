@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: protect
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About the BitLocker recovery service

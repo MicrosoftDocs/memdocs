@@ -5,6 +5,7 @@ ms.date: 02/14/2017
 ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use the Microsoft Malware Protection Center to download definitions

@@ -5,6 +5,7 @@ ms.date: 11/29/2019
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create PFX certificate profiles using a certificate authority

@@ -6,6 +6,7 @@ ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Microsoft Defender for Endpoint
 

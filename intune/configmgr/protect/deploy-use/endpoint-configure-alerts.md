@@ -5,6 +5,7 @@ ms.date: 03/23/2017
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 #  Configure Alerts for Endpoint Protection in Configuration Manager

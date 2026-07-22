@@ -5,6 +5,7 @@ ms.date: 09/21/2021
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # BitLocker administration and monitoring website

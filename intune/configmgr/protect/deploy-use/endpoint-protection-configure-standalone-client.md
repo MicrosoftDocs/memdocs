@@ -5,6 +5,7 @@ ms.date: 07/22/2020
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure Endpoint Protection on a standalone client

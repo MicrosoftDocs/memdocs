@@ -5,6 +5,7 @@ ms.date: 12/05/2022
 ms.subservice: protect
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create and deploy Microsoft Defender Application Guard policy
