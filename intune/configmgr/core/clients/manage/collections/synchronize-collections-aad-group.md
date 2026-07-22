@@ -2,9 +2,10 @@
 title: Synchronize collection members to Microsoft Entra groups
 description: Synchronize collection members to Microsoft Entra groups.
 ms.date: 03/28/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to synchronize device collection members to Microsoft Entra groups

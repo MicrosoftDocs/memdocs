@@ -2,9 +2,10 @@
 title: Configure role-based administration
 description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user.
 ms.date: 07/17/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure role-based administration for Configuration Manager

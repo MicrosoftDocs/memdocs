@@ -2,9 +2,10 @@
 title: Deployment Monitoring Tool
 description: Use the Deployment Monitoring Tool to troubleshoot software deployments on a Configuration Manager client.
 ms.date: 09/24/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Deployment Monitoring Tool

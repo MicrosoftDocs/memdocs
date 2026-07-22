@@ -2,9 +2,10 @@
 title: Incremental versions
 description: Learn about what's new in the latest update for Configuration Manager.
 ms.date: 03/31/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in Configuration Manager incremental versions

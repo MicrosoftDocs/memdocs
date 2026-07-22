@@ -2,9 +2,10 @@
 title: Client installation methods
 description: Learn about the methods of installing the Configuration Manager client.
 ms.date: 10/18/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Client installation methods in Configuration Manager

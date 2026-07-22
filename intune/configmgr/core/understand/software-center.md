@@ -3,9 +3,10 @@ title: Software Center user guide
 description: Learn about the features and functionality of Software Center
 ms.date: 10/18/2024
 ms.topic: end-user-help
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Software Center user guide

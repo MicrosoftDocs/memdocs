@@ -2,9 +2,10 @@
 title: Mobile device client prerequisites
 description: Learn about the prerequisites for deploying the Configuration Manager client to mobile devices.
 ms.date: 01/05/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Prerequisites for deploying clients to mobile devices in Configuration Manager

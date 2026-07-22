@@ -1,7 +1,8 @@
 ---
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: include
 ms.date: 02/03/2020
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 ### <a name="ki_coll"></a> Can't create or edit some collections

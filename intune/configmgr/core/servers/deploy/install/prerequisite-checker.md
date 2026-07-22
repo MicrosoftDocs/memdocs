@@ -2,9 +2,10 @@
 title: Prerequisite checker
 description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Prerequisite Checker for Configuration Manager
 

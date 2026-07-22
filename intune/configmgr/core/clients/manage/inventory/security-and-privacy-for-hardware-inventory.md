@@ -2,9 +2,10 @@
 title: Hardware inventory security privacy
 description: Get security and privacy information for hardware inventory in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Security and privacy for hardware inventory in Configuration Manager
 

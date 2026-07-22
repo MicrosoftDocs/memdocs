@@ -2,9 +2,10 @@
 title: Add site system roles
 description: Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site.
 ms.date: 07/15/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Add site system roles for Configuration Manager

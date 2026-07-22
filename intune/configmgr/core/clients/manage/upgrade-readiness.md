@@ -3,8 +3,9 @@ title: Upgrade Readiness
 description: Integrate Upgrade Readiness with Configuration Manager to access Windows upgrade compatibility data and target devices for upgrade or remediation.
 ms.date: 01/31/2020
 ms.topic: integration
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager

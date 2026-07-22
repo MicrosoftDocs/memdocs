@@ -2,10 +2,11 @@
 title: Antivirus exclusions
 description: Learn about recommended antivirus exclusions for use when troubleshooting possible issues.
 ms.date: 10/31/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Recommended antivirus exclusions for Configuration Manager

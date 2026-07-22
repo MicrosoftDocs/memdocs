@@ -2,9 +2,10 @@
 title: Configure remote control
 description: Set up remote control in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuring remote control in Configuration Manager
 

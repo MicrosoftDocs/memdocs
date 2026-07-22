@@ -2,9 +2,10 @@
 title: Plan for reporting
 description: From installation details to security and network bandwidth, it's important to plan for reporting in Configuration Manager.
 ms.date: 04/01/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for reporting in Configuration Manager

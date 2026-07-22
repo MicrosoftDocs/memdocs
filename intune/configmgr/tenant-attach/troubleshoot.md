@@ -3,8 +3,9 @@ title: Troubleshoot tenant attach and device actions
 description: Troubleshoot tenant attach and device actions for Configuration Manager.
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshooting tenant attach and device actions

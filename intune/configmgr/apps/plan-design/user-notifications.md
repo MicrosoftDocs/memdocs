@@ -2,10 +2,11 @@
 title: User notifications
 description: Learn about the configurations to manage notifications to users about application deployments.
 ms.date: 10/05/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # User notifications

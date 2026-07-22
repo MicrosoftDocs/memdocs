@@ -2,9 +2,10 @@
 title: Supported configurations
 description: Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment.
 ms.date: 10/05/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Supported configurations for Configuration Manager

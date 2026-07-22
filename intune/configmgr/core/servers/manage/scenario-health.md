@@ -2,10 +2,11 @@
 title: Monitor scenario health
 description: Use Configuration Manager to monitor the health of end-to-end scenarios.
 ms.date: 09/09/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Monitor scenario health in Configuration Manager

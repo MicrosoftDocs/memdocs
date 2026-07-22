@@ -2,9 +2,10 @@
 title: Security and privacy for queries
 description: Understand best practices for security and privacy when you query for information from the site database.
 ms.date: 05/08/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Security and privacy for queries in Configuration Manager
 

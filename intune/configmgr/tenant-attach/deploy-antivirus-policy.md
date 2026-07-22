@@ -3,9 +3,10 @@ title: Tenant attach - Create and deploy Antivirus policies from the admin cente
 description: Create and deploy Antivirus policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/28/2023
 ms.topic: install-set-up-deploy
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Antivirus policies from the admin center

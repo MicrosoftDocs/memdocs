@@ -2,9 +2,10 @@
 title: Troubleshoot software updates for devices uploaded to the admin center
 description: Troubleshooting software updates for Intune tenant attach
 ms.date: 07/11/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot software updates in the admin center

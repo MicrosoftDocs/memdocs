@@ -2,9 +2,10 @@
 title: Plan for application management
 description: Implement and configure the necessary dependencies for deploying applications in Configuration Manager.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for and configure application management in Configuration Manager

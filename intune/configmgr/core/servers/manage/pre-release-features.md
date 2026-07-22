@@ -2,9 +2,10 @@
 title: Pre-release features
 description: Pre-release features are features that are in the current branch for early testing in a production environment.
 ms.date: 12/05/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Pre-release features in Configuration Manager

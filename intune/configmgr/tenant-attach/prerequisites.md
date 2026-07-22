@@ -3,9 +3,10 @@ title: Microsoft Intune tenant attach prerequisites
 description: Prerequisites for Microsoft Intune tenant attach.
 ms.date: 07/11/2022
 ms.topic: article
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Microsoft Intune tenant attach: Prerequisites

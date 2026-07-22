@@ -2,9 +2,10 @@
 title: Example Asset Intelligence general license import file
 description: Use a sample Asset Intelligence general license file to help import software licenses in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Example Asset Intelligence general license import file in Configuration Manager
 

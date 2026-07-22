@@ -2,9 +2,10 @@
 title: Asset Intelligence Prerequisites
 description: Get the prerequisites for Asset Intelligence in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Prerequisites for Asset Intelligence in Configuration Manager
 

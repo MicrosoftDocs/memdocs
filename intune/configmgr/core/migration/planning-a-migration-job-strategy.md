@@ -2,9 +2,10 @@
 title: Migration job planning
 description: Use migration jobs to configure data that you want to migrate to your Configuration Manager current branch environment.
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Plan a migration job strategy in Configuration Manager
 

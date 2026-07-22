@@ -2,9 +2,10 @@
 title: Supported SQL Server versions
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
 ms.date: 05/21/2026
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Supported SQL Server versions for Configuration Manager

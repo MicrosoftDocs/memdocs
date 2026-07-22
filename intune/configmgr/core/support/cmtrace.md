@@ -2,9 +2,10 @@
 title: CMTrace
 description: Learn about how to use the CMTrace tool to view log files for Configuration Manager.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CMTrace

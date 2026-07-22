@@ -2,9 +2,10 @@
 title: Setup reference
 description: Review this reference to help you prepare to install a Configuration Manager site or hierarchy.
 ms.date: 01/04/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Reference for Configuration Manager Setup
 

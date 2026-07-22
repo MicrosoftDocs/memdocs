@@ -2,9 +2,10 @@
 title: Custom database file locations
 description: Learn how to specify custom locations for SQL Server database files.
 ms.date: 10/08/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Custom locations for Configuration Manager site database files

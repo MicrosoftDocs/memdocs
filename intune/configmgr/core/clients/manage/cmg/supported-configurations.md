@@ -2,9 +2,10 @@
 title: Supported configurations for CMG
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
 ms.date: 07/12/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Supported configurations for cloud management gateway

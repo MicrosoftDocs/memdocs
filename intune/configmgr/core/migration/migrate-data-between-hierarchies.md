@@ -2,9 +2,10 @@
 title: Migrate data
 description: Learn how to transfer data from a source hierarchy to a Configuration Manager destination hierarchy.
 ms.date: 11/05/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Migrate data between hierarchies in Configuration Manager

@@ -2,9 +2,10 @@
 title: Support Center OneTrace
 description: OneTrace is a new log viewer with Support Center that has improvements over CMTrace.
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Support Center OneTrace

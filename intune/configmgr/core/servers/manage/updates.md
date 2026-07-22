@@ -2,9 +2,10 @@
 title: Updates and servicing
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Updates and servicing for Configuration Manager

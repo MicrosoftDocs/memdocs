@@ -2,9 +2,10 @@
 title: Get ready for deployment
 description: Find topics that will help you plan a Configuration Manager deployment.
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Get ready for Configuration Manager
 

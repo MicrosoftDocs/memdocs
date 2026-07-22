@@ -2,9 +2,10 @@
 title: Install the client with Microsoft Entra ID
 description: Install and assign the Configuration Manager client on Windows devices using Microsoft Entra ID for authentication
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Install and assign Configuration Manager clients using Microsoft Entra ID for authentication

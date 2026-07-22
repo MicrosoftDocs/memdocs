@@ -2,10 +2,11 @@
 title: Monitor applications from the console
 description: Monitor deployment applications with the Monitoring workspace in Configuration Manager.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Monitor applications from the Configuration Manager console

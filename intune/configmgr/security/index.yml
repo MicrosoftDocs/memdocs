@@ -6,10 +6,11 @@ summary: Configuration Manager is secure by default. Learn more about how to con
 metadata:
   title: Security documentation
   description: Configuration Manager is secure by default. Learn more about how to configure and use features to help keep your environment secure.
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: landing-page
   ms.date: 09/23/2021
   ms.collection: tier3
+  ms.service: microsoft-endpoint-configuration-manager
 
 landingContent:
   - title: Fundamentals

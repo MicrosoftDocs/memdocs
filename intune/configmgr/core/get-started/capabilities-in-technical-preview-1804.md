@@ -2,10 +2,11 @@
 title: Technical Preview 1804
 description: Learn about new features available in the Configuration Manager Technical Preview version 1804.
 ms.date: 05/21/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Capabilities in Technical Preview 1804 for Configuration Manager

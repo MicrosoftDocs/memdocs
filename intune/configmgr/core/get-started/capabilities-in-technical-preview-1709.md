@@ -2,10 +2,11 @@
 title: Technical Preview 1709
 description: Learn about features available in the Technical Preview version 1709 for Configuration Manager.
 ms.date: 09/28/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Capabilities in Technical Preview 1709 for Configuration Manager
 

@@ -3,8 +3,9 @@ title: Set up CMG
 description: Use this step-by-step process for setting up a cloud management gateway (CMG).
 ms.date: 09/18/2022
 ms.topic: how-to
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Set up CMG for Configuration Manager

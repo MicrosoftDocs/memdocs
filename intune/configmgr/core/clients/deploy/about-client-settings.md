@@ -2,9 +2,10 @@
 title: Client settings
 description: Learn about the default and custom settings for controlling client behaviors
 ms.date: 12/08/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About client settings in Configuration Manager

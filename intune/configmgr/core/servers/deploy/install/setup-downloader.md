@@ -2,9 +2,10 @@
 title: Setup downloader tool
 description: Use the standalone tool to download current versions of key installation files for setup.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Setup Downloader for Configuration Manager

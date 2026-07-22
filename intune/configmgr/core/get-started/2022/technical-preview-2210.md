@@ -2,8 +2,9 @@
 title: Technical preview 2210
 description: Learn about new features available in the Configuration Manager technical preview branch version 2210.
 ms.date: 10/12/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 2210

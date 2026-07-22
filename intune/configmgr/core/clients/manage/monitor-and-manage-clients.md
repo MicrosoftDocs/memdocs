@@ -2,9 +2,10 @@
 title: Monitor and manage clients
 description: Learn how to monitor and manage clients in Configuration Manager.
 ms.date: 10/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Monitor and manage clients in Configuration Manager

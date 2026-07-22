@@ -2,10 +2,11 @@
 title: Configure discovery
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Microsoft Entra ID.
 ms.date: 04/25/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure discovery methods for Configuration Manager

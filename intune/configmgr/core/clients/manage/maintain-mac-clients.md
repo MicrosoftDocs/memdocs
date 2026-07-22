@@ -2,9 +2,10 @@
 title: Maintain Mac clients
 description: Maintenance tasks for Configuration Manager Mac clients.
 ms.date: 01/05/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Maintain Mac clients

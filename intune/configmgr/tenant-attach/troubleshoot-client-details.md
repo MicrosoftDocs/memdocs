@@ -3,8 +3,9 @@ title: Troubleshoot client details
 description: Troubleshoot client details for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot ConfigMgr client details in the admin center

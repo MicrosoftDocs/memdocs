@@ -2,9 +2,10 @@
 title: Boundaries and boundary groups
 description: Use boundaries and boundary groups to define network locations for clients and site systems in your environment.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Overview of boundaries and boundary groups
