@@ -5,6 +5,7 @@ ms.date: 08/29/2025
 ms.subservice: co-management
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to enable co-management in Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Set up hybrid Microsoft Entra ID for co-management
