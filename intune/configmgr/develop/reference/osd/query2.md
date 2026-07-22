@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Query2
 `Query2` specifies a query, in Configuration Manager, that is used to identify the platform that a client computer is running.

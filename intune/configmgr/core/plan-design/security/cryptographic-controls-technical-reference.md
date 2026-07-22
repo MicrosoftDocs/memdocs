@@ -2,9 +2,10 @@
 title: Cryptographic controls technical reference
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
 ms.date: 10/15/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Cryptographic controls technical reference

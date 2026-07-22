@@ -2,9 +2,10 @@
 title: Example validation state transitions
 description: See examples of validation state transitions for Asset Intelligence in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Example validation state transitions for Asset Intelligence

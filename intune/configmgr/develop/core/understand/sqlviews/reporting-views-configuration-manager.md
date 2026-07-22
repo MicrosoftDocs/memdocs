@@ -5,6 +5,7 @@ ms.date: 11/22/2021
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Reporting views in Configuration Manager

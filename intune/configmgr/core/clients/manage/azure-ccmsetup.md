@@ -2,9 +2,10 @@
 title: Microsoft Entra authentication workflow
 description: Details of the Configuration Manager client installation process on a Windows device with Microsoft Entra authentication.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Microsoft Entra authentication workflow

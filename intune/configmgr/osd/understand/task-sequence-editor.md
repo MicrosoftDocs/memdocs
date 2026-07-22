@@ -2,9 +2,10 @@
 title: Use the task sequence editor
 description: Understand how to use the task sequence editor in the Configuration Manager console
 ms.date: 11/29/2019
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use the task sequence editor

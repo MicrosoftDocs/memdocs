@@ -5,6 +5,7 @@ ms.date: 11/18/2019
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Enable Endpoint Protection malware definitions to download from a network share

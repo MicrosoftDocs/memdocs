@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Define the AppSynclet MOF File
 To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class. The new class instance identifies the custom client-side handler.  Also, create instances of the CCM_HandlerSynclet class to store, detect, install and uninstall property values.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RemoveContent Method in Class SMS_ContentPackage
 The `RemoveContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes the content for the given content ID from the package.

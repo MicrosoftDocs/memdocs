@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GetAssignedSite Method in Class SMS_Client
 In Configuration Manager, the `GetAssignedSite` method gets the current assigned site of the client.

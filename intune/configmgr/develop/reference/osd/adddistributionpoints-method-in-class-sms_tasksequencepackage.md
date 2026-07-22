@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 description: Learn how the AddDistributionPoints Method adds the distribution points for the task sequence package.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddDistributionPoints Method in Class SMS_TaskSequencePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the task sequence package.

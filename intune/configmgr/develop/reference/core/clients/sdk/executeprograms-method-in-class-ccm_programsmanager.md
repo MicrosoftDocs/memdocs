@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ExecutePrograms Method in Class CCM_ProgramsManager
 The `ExecutePrograms` WMI class method, in Configuration Manager, manages downloads of legacy software distribution programs.

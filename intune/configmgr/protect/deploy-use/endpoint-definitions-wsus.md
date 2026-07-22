@@ -5,6 +5,7 @@ ms.subservice: protect
 ms.topic: how-to
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Enable Endpoint Protection malware definitions to download from WSUS for Configuration Manager

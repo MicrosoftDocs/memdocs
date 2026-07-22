@@ -49,6 +49,9 @@ Settings in this article are organized by the sections that appear in the admin 
 
 ### Password
 
+> [!WARNING]
+> Requiring a password in a compliance policy will automatically expire the existing password for all accounts on the device, including those created by LAPS and Platform SSO. We recommend managing device passwords using a settings catalog policy with Change At Next Auth configured to False. 
+
 - **Require a password to unlock devices**
   - **Not configured** (*default*)
   - **Require** Users must enter a password before they can access their device.

@@ -2,10 +2,11 @@
 title: Plug-in configuration XML
 description: Technical reference for the XML elements of the Package Conversion Manager plug-in.
 ms.date: 08/24/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Technical reference for the Package Conversion Manager plug-in configuration XML

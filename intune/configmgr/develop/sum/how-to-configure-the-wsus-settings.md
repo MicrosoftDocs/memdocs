@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Windows Server Update Services (WSUS) component settings are configured in Configuration Manager by modifying the site control file.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Configure the WSUS Settings
 You configure the Windows Server Update Services (WSUS) component settings, in Configuration Manager, by modifying the site control file. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).

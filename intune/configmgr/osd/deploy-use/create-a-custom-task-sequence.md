@@ -2,9 +2,10 @@
 title: Create a custom task sequence
 description: Edit a custom task sequence in Configuration Manager to add steps to the task sequence.
 ms.date: 04/01/2020
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create a custom task sequence with Configuration Manager

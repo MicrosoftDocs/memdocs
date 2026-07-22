@@ -130,6 +130,29 @@ Before device setup, make sure the enrolling user is a member of a Microsoft Ent
 
 If you assign dynamic groups to enrollment policies, there might be a delay in delivering applications and policies to devices after the enrollment.  
 
+### Setup Assistant screen reference
+The following table describes the Setup Assistant screens shown during automated device enrollment for visionOS. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see these Apple resources:
+
+- [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web)
+- [Apple Developer documentation: SkipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)
+
+| Setup Assistant screen | What happens when visible | 
+|------------------------------------------|------------------------------------------|
+| **Apple ID** | Shows the Apple ID setup pane, which gives users the option to sign in with their Apple ID and use iCloud. For visionOS 26 and later. | 
+| **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For visionOS 26 and later. | 
+| **Diagnostics Data** | Shows the diagnostics pane where users can opt in to send diagnostic data to Apple. For visionOS 26 and later. | 
+| **Intelligence** | Shows the Intelligence pane. For visionOS 26 and later. | 
+| **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For visionOS 26 and later. | 
+| **Passcode** | Shows the passcode pane. For visionOS 26 and later. | 
+| **Apple Pay** | Shows the Apple Pay setup pane. For visionOS 26 and later. | 
+| **Privacy** | Shows the privacy setup pane. For visionOS 26 and later. | 
+| **Screen time** | Shows the Screen Time pane. For visionOS 26 and later. | 
+| **Siri** | Shows the Siri setup pane. For visionOS 26 and later. | 
+| **Software update** | Shows the software update screen. For visionOS 26 and later. | 
+| **Tips** | Shows the Tips pane. For visionOS 26 and later. | 
+| **Terms and Conditions** | Shows the Apple terms and conditions pane and requires users to accept them. For visionOS 26 and later. | 
+| **Welcome** | Shows the Get Started pane to users. For visionOS 26 and later. | 
+
 ## Assign an enrollment policy to devices
 
 Before devices can be enrolled, you need to assign an enrollment policy to them.

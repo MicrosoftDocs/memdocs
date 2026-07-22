@@ -2,9 +2,10 @@
 title: Publish site data
 description: Learn how to publish Configuration Manager sites to Active Directory Domain Services.
 ms.date: 02/7/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Publish site data for Configuration Manager
 

@@ -2,9 +2,10 @@
 title: Install applications for a device
 description: Use Configuration Manager to immediately install an application to a device without a collection.
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Install applications for a device

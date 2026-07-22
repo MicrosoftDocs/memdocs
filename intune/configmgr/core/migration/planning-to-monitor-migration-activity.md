@@ -2,9 +2,10 @@
 title: Monitor migration
 description: Learn how to use the Configuration Manager console to monitor the progress and success of migration jobs.
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Planning to monitor migration activity in Configuration Manager
 

@@ -3,8 +3,9 @@ title: Get started - Create and deploy endpoint security policies from the admin
 description: Create and deploy endpoint security policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/21/2022
 ms.topic: get-started
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # <a name="bkmk_atp"></a> Get started: Create and deploy endpoint security policies from the admin center

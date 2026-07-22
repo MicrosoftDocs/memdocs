@@ -2,9 +2,10 @@
 title: Upgrade clients
 description: Get information about how to upgrade clients in Configuration Manager.
 ms.date: 07/23/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Upgrade clients in Configuration Manager

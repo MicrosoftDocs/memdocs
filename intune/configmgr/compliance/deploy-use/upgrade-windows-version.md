@@ -5,6 +5,7 @@ ms.date: 09/15/2023
 ms.subservice: compliance
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Upgrade Windows devices to a new edition with Configuration Manager

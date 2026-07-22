@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Enable Hardware Inventory
 You enable or disable the Hardware Inventory Client Agent, in Configuration Manager, by modifying the site control file settings.  

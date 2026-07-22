@@ -2,9 +2,10 @@
 title: Send Schedule Tool
 description: Use the Send Schedule Tool to trigger a schedule on a Configuration Manager client.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Send Schedule Tool

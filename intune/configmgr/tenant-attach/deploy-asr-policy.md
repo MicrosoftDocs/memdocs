@@ -3,8 +3,9 @@ title: Tenant attach - Create and deploy Attack surface reduction policies from 
 description: Create and deploy Attack surface reduction policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 05/31/2022
 ms.topic: install-set-up-deploy
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Attack surface reduction policies from the admin center

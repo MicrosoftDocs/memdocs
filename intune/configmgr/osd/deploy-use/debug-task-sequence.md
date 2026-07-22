@@ -2,9 +2,10 @@
 title: Debug a task sequence
 description: Use the task sequence debugging tool to troubleshoot a task sequence.
 ms.date: 05/04/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Debug a task sequence

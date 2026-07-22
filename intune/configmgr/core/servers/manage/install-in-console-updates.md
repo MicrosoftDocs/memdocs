@@ -2,9 +2,10 @@
 title: In-console updates
 description: Install updates to Configuration Manager from the Microsoft cloud.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Install in-console updates for Configuration Manager

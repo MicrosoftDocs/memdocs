@@ -2,9 +2,10 @@
 title: Unattended recovery
 description: Use a script to recover your sites in Configuration Manager.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Unattended site recovery for Configuration Manager

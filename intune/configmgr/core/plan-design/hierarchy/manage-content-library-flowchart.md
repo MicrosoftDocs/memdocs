@@ -2,9 +2,10 @@
 title: Flowchart - Manage content library
 description: Understand the process when the site moves the content library to a remote location.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Flowchart - Manage content library

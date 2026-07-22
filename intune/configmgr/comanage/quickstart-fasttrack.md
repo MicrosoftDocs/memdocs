@@ -5,6 +5,7 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Get help from FastTrack for co-management

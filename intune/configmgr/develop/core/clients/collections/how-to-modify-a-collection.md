@@ -8,6 +8,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Modify a Collection
 ### To Modify a Collection  

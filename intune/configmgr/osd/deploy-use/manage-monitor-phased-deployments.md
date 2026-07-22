@@ -2,9 +2,10 @@
 title: Manage & monitor phased deployments
 description: Understand how to manage and monitor phased deployments for software in Configuration Manager.
 ms.date: 08/21/2020
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Manage and monitor phased deployments

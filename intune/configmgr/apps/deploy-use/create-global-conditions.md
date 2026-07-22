@@ -2,9 +2,10 @@
 title: Create global conditions
 description: Create global conditions to specify how an application is provided and deployed to client devices.
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to create global conditions in Configuration Manager
 

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # PlatformApplicabilityConditions
 `PlatformApplicabilityConditions` contains a list of supported platforms for an operating system deployment driver in Configuration Manager.

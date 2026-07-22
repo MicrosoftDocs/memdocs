@@ -2,9 +2,10 @@
 title: Deploy clients to Windows
 description: Learn how to deploy the Configuration Manager client to Windows computers.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to deploy clients to Windows computers in Configuration Manager

@@ -2,11 +2,12 @@
 title: Accessibility
 description: Learn about the features that make Configuration Manager accessible for everyone.
 ms.date: 07/21/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection:
     - tier3
     - essentials-accessibility
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Accessibility features in Configuration Manager

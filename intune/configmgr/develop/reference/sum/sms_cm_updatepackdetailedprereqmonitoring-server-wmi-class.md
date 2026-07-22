@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_CM_UpdatePackDetailedPrereqMonitoring Server WMI Class
 The  `SMS_CM_UpdatePackDetailedPrereqMonitoring` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to get detailed update package prerequisite status per site.  

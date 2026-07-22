@@ -5,6 +5,7 @@ ms.date: 04/12/2022
 ms.subservice: protect
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # BitLocker settings reference

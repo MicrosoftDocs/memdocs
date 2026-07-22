@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AppDeploymentTypeItem Structure
 In Configuration Manager, the `AppDeploymentTypeItem` structure contains detection results for an individual deployment type.

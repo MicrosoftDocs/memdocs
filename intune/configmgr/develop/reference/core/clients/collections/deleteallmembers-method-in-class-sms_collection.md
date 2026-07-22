@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # DeleteAllMembers Method in Class SMS_Collection
 The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.

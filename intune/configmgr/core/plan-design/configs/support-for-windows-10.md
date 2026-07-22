@@ -2,9 +2,10 @@
 title: Support for Windows 10
 description: Learn about the Windows 10 versions that are supported as clients with Configuration Manager.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Support for Windows 10 in Configuration Manager

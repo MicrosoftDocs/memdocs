@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Modify a Configuration Manager Object by Using WMI
 You modify a Configuration Manager object, in Configuration Manager, by using the object's [SWbemObject](/windows/win32/wmisdk/swbemobject) object to change its properties.

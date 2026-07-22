@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Resuscitate Method in Class SMS_MigrationSiteMapping
 The `Resuscitate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, resuscitates site mapping.

@@ -2,11 +2,12 @@
 title: What's new in version 1810
 description: Get details about changes and new capabilities introduced in version 1810 of Configuration Manager current branch.
 ms.date: 07/06/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in version 1810 of Configuration Manager current branch

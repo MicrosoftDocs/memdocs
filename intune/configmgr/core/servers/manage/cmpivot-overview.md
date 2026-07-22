@@ -2,9 +2,10 @@
 title: CMPivot overview
 description: Overview of CMPivot in Configuration Manager.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CMPivot overview

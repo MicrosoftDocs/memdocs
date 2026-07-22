@@ -2,9 +2,10 @@
 title: Flowchart - Update replication
 description: See the process by which an in-console update you select to install replicates to additional sites.
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Flowchart - Update replication for Configuration Manager
 

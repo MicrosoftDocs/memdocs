@@ -5,6 +5,7 @@ ms.date: 05/18/2022
 ms.subservice: co-management
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to enroll with Windows Autopilot

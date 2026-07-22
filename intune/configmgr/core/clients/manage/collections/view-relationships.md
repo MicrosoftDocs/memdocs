@@ -2,9 +2,10 @@
 title: View collection relationships
 description: You can view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # View collection relationships

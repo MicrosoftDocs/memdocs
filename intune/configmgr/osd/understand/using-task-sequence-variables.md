@@ -2,9 +2,10 @@
 title: How to use task sequence variables
 description: Learn about how to use the variables in a Configuration Manager task sequence.
 ms.date: 04/05/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to use task sequence variables in Configuration Manager

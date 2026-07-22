@@ -2,9 +2,10 @@
 title: Support for Active Directory domains
 description: Learn about the requirements for a Configuration Manager site system in an Active Directory domain.
 ms.date: 10/22/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Support for Active Directory domains in Configuration Manager

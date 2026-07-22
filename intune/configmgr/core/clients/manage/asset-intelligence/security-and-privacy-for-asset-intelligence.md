@@ -2,9 +2,10 @@
 title: Asset Intelligence security & privacy
 description: Security guidance and privacy information for Asset Intelligence in Configuration Manager.
 ms.date: 05/05/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Security and privacy for Asset Intelligence in Configuration Manager

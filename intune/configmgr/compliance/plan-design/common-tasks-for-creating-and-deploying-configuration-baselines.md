@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: compliance
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Common tasks for creating and deploying configuration baselines with Configuration Manager
 

@@ -2,10 +2,11 @@
 title: Checklist for 1902
 description: Learn about actions to take before updating to Configuration Manager version 1902.
 ms.date: 04/11/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Checklist for installing update 1902 for Configuration Manager

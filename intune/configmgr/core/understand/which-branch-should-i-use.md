@@ -2,9 +2,10 @@
 title: Which branch should I use
 description: Learn the differences between available branches of Configuration Manager.
 ms.date: 11/29/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Which branch of Configuration Manager should I use?

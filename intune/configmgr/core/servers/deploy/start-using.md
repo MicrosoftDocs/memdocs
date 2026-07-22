@@ -1,12 +1,13 @@
 ---
 title: Deploy servers and roles
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 description: Links to articles to install Configuration Manager site servers and roles.
 ms.collection:
     - tier3
     - essentials-get-started
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Deploy servers and roles

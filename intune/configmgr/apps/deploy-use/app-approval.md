@@ -2,12 +2,13 @@
 title: Approve applications
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
 ms.date: 08/12/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom:
   - sfi-ga-nochange
   - sfi-ropc-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Approve applications in Configuration Manager

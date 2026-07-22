@@ -6,9 +6,10 @@ summary: Cloud attach your Configuration Manager environment to extend its capab
 metadata:
   title: Cloud attach documentation
   description: Cloud attach your Configuration Manager environment to extend its capabilities.
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: landing-page
   ms.date: 09/23/2021
+  ms.service: microsoft-endpoint-configuration-manager
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

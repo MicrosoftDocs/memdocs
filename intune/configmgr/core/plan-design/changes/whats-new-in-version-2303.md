@@ -2,9 +2,10 @@
 title: What's new in version 2303
 description: Get details about changes and new capabilities introduced in version 2303 of Configuration Manager current branch.
 ms.date: 03/31/2023
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in version 2303 of Configuration Manager current branch

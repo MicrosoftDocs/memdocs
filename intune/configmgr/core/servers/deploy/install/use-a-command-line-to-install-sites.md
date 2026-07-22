@@ -2,9 +2,10 @@
 title: Command-line overview
 description: Learn how to run Configuration Manager setup at a command prompt for different kinds of site installations.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use a command line to install Configuration Manager sites

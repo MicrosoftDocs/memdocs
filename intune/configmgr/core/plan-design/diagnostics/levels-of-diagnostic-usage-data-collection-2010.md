@@ -2,10 +2,11 @@
 title: Diagnostic and usage data for 2010
 description: Learn about the specific data that Configuration Manager collects at each level in version 2010.
 ms.date: 11/30/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Diagnostic and usage data for version 2010

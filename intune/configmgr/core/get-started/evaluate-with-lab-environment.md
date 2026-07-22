@@ -2,9 +2,10 @@
 title: Evaluate in a lab environment
 description: Create a lab environment to evaluate Configuration Manager for use in your organization.
 ms.date: 02/28/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Evaluate Configuration Manager by building your own lab environment
 

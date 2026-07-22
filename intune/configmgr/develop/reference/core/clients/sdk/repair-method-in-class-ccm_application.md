@@ -5,6 +5,7 @@ ms.date: 04/14/2026
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Repair Method in Class CCM_Application
 

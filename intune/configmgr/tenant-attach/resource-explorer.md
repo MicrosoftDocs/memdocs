@@ -3,9 +3,10 @@ title: Tenant attach - Resource explorer the admin center
 description: View hardware inventory for uploaded Configuration Manager devices using resource explorer in the admin center.
 ms.date: 07/11/2022
 ms.topic: how-to
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # <a name="bkmk_hinv"></a> Tenant attach: Resource explorer in the admin center

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Operating System Deployment Client COM Automation Classes
 This section provides reference content for the operating system deployment task client COM automation classes in Configuration Manager.

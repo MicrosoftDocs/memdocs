@@ -2,9 +2,10 @@
 title: Discover device and user resources
 description: Read an overview of the discovery process and discovery data records.
 ms.date: 02/8/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Run discovery for Configuration Manager
 

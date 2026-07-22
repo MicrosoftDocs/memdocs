@@ -2,9 +2,10 @@
 title: Enroll devices for on-premises MDM
 description: Learn about methods to enroll devices for on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/13/2020
-ms.subservice: mdm
+ms.subservice: mobile-device-management
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Enroll devices for on-premises MDM in Configuration Manager

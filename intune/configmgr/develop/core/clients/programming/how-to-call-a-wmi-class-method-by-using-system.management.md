@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Call a WMI Class Method by Using System.Management
 To call a client Windows Management Instrumentation (WMI) class method, in Configuration Manager, you call the `InvokeMethod` of the WMI class's `ManagementClass`.  

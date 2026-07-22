@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Set Software Updates Branding Information
 You set the Software Updates client branding information, in Configuration Manager, by modifying the necessary site control file settings.

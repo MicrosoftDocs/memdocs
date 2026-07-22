@@ -3,8 +3,9 @@ title: Troubleshooting application installation
 description: Troubleshooting application installation for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot application installation for devices uploaded to the admin center

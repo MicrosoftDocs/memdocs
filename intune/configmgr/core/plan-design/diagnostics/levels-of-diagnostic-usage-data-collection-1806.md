@@ -2,10 +2,11 @@
 title: Diagnostic and usage data for 1806
 description: Learn about the specific data that Configuration Manager collects at each level in version 1806.
 ms.date: 05/13/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Diagnostic and usage data for 1806

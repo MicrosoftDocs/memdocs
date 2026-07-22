@@ -2,11 +2,12 @@
 title: Troubleshooting dashboard
 description: Use a dashboard in the console to view information about the software update health status of clients in your environment.
 ms.date: 04/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
 ms.topicc: troubleshooting-general
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshooting dashboard

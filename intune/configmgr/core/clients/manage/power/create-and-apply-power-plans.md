@@ -2,9 +2,10 @@
 title: Create and apply power plans
 description: Create and apply power plans in Configuration Manager.
 ms.date: 10/12/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to create and apply power plans in Configuration Manager

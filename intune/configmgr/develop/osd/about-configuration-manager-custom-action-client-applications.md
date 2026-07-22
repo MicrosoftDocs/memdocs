@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About Configuration Manager custom action client applications

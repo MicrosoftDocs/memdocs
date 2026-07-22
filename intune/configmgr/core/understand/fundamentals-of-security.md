@@ -2,11 +2,12 @@
 title: Fundamentals of security
 description: Learn about the layers of security in Configuration Manager.
 ms.date: 04/15/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection:
 - essentials-security
 - tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Fundamentals of security for Configuration Manager

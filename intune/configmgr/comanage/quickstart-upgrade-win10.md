@@ -5,6 +5,7 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Upgrade Windows for co-management

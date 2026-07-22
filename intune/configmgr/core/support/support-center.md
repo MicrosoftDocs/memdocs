@@ -2,9 +2,10 @@
 title: Support Center
 description: Troubleshoot Configuration Manager clients with the Support Center.
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Support Center for Configuration Manager

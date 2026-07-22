@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICIINFO::GetEvalState Method
 The `ICIINFO::GetEvalState` method, in Configuration Manager, gets the current evaluation state of the configuration item.

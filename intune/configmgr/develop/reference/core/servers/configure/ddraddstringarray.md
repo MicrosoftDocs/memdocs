@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 description: Learn how the DDRAddStringArray function, in Configuration Manager, adds a string array property to the data discovery record.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # DDRAddStringArray
 The `DDRAddStringArray` function, in Configuration Manager, adds a string array property to the data discovery record (DDR).

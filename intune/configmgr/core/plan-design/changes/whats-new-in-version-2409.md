@@ -2,10 +2,11 @@
 title: What's new in version 2409
 description: Get details about changes and new capabilities introduced in version 2409 of Configuration Manager current branch.
 ms.date: 12/03/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in version 2409 of Configuration Manager current branch

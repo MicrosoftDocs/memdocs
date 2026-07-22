@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Manager Console Extension
 The Configuration Manager console has an XML-based architecture that can be easily extended. The Configuration Manager console supports the following extensions:

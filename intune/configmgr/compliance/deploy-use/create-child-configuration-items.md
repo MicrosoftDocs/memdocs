@@ -5,6 +5,7 @@ ms.date: 05/07/2019
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to create child configuration items in Configuration Manager
 

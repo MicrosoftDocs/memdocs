@@ -2,9 +2,10 @@
 title: State messages
 description: Descriptions of state messages in Configuration Manager.
 ms.date: 01/11/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # State messages in Configuration Manager

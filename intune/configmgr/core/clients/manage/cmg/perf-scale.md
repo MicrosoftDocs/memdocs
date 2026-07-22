@@ -2,9 +2,10 @@
 title: CMG performance and scale
 description: Plan how the design the cloud management gateway (CMG) for the best performance at the appropriate scale.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CMG performance and scale

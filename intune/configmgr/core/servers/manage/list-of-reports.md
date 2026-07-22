@@ -2,9 +2,10 @@
 title: List of reports
 description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
 ms.date: 10/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # List of reports in Configuration Manager

@@ -2,9 +2,10 @@
 title: Console support
 description: Learn about which OS versions you can install the Configuration Manager console.
 ms.date: 12/19/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Supported OS versions for Configuration Manager consoles

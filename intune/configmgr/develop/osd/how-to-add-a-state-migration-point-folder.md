@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Add a State Migration Point Folder
 In Configuration Manager, you add an operating system deployment state migration point folder by adding the folder description to the `Directories` embedded property list.

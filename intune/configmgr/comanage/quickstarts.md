@@ -5,6 +5,7 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Cloud connecting with co-management

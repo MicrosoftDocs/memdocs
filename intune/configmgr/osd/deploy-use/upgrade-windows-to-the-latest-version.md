@@ -2,9 +2,10 @@
 title: Windows in-place upgrade
 description: Learn how to use Configuration Manager to upgrade Windows to a later version.
 ms.date: 12/19/2024
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Upgrade Windows to the latest version with Configuration Manager

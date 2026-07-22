@@ -2,9 +2,10 @@
 title: Prepare for unknown computer deployments
 description: Learn how to deploy operating systems to computers that aren't managed by Configuration Manager in your Configuration Manager environment.
 ms.date: 10/06/2016
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Prepare for unknown computer deployments in Configuration Manager
 

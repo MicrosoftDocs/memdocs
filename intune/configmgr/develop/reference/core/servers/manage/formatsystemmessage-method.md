@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # FormatSystemMessage Method
 The `FormatSystemMessage` method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.

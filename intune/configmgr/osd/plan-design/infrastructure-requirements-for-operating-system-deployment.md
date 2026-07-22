@@ -2,9 +2,10 @@
 title: OSD infrastructure requirements
 description: Learn the external and product dependencies and requirements for OS deployment in Configuration Manager
 ms.date: 09/08/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager

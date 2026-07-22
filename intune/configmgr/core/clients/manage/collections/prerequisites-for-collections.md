@@ -2,9 +2,10 @@
 title: Collections prerequisites
 description: Get prerequisites for using collections in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Prerequisites for collections in Configuration Manager
 

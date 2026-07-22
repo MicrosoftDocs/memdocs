@@ -2,9 +2,10 @@
 title: Collections best practices
 description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
 ms.date: 04/13/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: best-practice
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Best practices for collections in Configuration Manager

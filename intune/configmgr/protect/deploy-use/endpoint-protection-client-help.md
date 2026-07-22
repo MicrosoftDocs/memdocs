@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Endpoint Protection Client Help
 

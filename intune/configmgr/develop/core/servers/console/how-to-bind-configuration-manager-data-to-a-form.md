@@ -5,6 +5,7 @@ description: In Configuration Manager, to bind console data to a property sheet,
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Bind Configuration Manager Data to a Form
 In Configuration Manager, to bind Configuration Manager console data to a property sheet, you use the `DataBindings` property of the property sheet's control class.

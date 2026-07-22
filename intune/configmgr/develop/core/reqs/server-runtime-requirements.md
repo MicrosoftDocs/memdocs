@@ -5,6 +5,7 @@ ms.date: 03/14/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuration Manager Server Runtime Requirements
 Microsoft Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.

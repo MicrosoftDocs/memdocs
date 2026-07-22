@@ -2,9 +2,10 @@
 title: Use of diagnostics data
 description: Learn about how Microsoft uses the diagnostics and usage data that Configuration Manager collects.
 ms.date: 08/10/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How Microsoft uses Configuration Manager diagnostics and usage data

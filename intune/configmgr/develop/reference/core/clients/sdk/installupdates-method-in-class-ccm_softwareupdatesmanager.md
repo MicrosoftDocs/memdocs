@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # InstallUpdates Method in Class CCM_SoftwareUpdatesManager
 The `InstallUpdates` WMI class method, in Configuration Manager, installs software updates that have been deployed to the client computer.

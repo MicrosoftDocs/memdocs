@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Collection Variable in Configuration Manager
 You create a collection variable for a Configuration Manager collection by adding instances of [SMS_CollectionVariable Server WMI Class](../../develop/reference/osd/sms_collectionvariable-server-wmi-class.md) to the `CollectionVariables` property of [SMS_CollectionSettings Server WMI Class](../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md).

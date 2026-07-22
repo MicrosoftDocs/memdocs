@@ -2,9 +2,10 @@
 title: Deprecated for site servers
 description: Learn about the products and operating systems that Configuration Manager no longer supports for site servers and database servers.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Removed and deprecated for Configuration Manager site servers

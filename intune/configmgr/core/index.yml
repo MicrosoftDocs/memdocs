@@ -6,9 +6,10 @@ summary: Fundamental information about the Configuration Manager product, includ
 metadata:
   title: Core infrastructure documentation
   description: Fundamental information about the Configuration Manager product, including site servers and clients.
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: landing-page
   ms.date: 10/05/2021
+  ms.service: microsoft-endpoint-configuration-manager
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 

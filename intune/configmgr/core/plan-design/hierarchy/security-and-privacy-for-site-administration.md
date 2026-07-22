@@ -2,9 +2,10 @@
 title: Site administration security and privacy
 description: Optimize security and privacy for site administration in Configuration Manager
 ms.date: 04/05/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Security and privacy for site administration in Configuration Manager

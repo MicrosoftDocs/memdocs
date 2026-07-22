@@ -2,9 +2,10 @@
 title: Fundamentals
 description: Learn about basic concepts for Configuration Manager.
 ms.date: 11/29/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Fundamentals of Configuration Manager

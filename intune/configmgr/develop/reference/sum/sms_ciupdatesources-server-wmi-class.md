@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_CIUpdateSources Server WMI Class
 The `SMS_CIUpdateSources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information on all the update sources associated with an [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) object.

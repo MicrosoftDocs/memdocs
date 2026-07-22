@@ -2,9 +2,10 @@
 title: Configure sites and hierarchies
 description: Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure sites and hierarchies for Configuration Manager

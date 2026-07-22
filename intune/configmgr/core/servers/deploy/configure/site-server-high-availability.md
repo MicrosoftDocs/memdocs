@@ -2,9 +2,10 @@
 title: Site server high availability
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
 ms.date: 04/11/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Site server high availability in Configuration Manager

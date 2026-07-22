@@ -2,10 +2,11 @@
 title: What's new in version 1806
 description: Get details about changes and new capabilities introduced in version 1806 of Configuration Manager current branch.
 ms.date: 10/26/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in version 1806 of Configuration Manager current branch

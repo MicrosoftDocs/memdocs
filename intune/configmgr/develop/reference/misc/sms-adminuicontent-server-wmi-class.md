@@ -6,6 +6,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 descriptions: Learn about the simplified syntax, methods, properties, and requirements of the SMS_AdminUIContent server class.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_AdminUIContent Server WMI Class
 For internal use only.

@@ -2,10 +2,11 @@
 title: New version 1702
 description: Get details about changes and new capabilities introduced in version 1702 of Configuration Manager.
 ms.date: 05/02/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # What&#39;s new in version 1702 of Configuration Manager
 

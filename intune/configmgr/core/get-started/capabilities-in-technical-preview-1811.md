@@ -2,10 +2,11 @@
 title: Technical preview 1811
 description: Learn about new features available in the Configuration Manager technical preview branch version 1811.
 ms.date: 12/03/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Capabilities in Configuration Manager technical preview version 1811

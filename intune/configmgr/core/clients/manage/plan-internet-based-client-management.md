@@ -2,9 +2,10 @@
 title: Internet-based client management
 description: Create a plan to manage internet-based clients in Configuration Manager.
 ms.date: 03/29/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for internet-based client management in Configuration Manager

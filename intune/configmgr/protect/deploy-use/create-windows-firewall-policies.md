@@ -5,6 +5,7 @@ ms.date: 03/19/2026
 ms.subservice: protect
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Create and deploy Windows Firewall policies for Endpoint Protection in Configuration Manager
 

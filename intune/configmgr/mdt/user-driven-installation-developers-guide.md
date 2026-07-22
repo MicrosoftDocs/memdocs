@@ -2,9 +2,10 @@
 title: User driven installation (UDI)
 description: Developers guide for user driven installation (UDI) of Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
-ms.subservice: mdt
+ms.subservice: microsoft-deployment-toolkit
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # User Driven Installation - Developers Guide

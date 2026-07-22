@@ -2,9 +2,10 @@
 title: Install site system roles
 description: Add site system roles to an existing or new site system server in the site.
 ms.date: 04/01/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Install site system roles for Configuration Manager

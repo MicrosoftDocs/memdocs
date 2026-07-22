@@ -2,9 +2,10 @@
 title: Migration source hierarchies
 description: Configure a source hierarchy and source sites so you can migrate data to your Configuration Manager current branch environment.
 ms.date: 12/29/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configure source hierarchies and source sites for migration to Configuration Manager current branch
 

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Enable or Disable the Software Updates Client Agent
 You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.

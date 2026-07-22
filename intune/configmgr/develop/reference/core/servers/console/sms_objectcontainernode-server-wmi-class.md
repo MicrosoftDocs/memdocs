@@ -5,6 +5,7 @@ ms.date: 02/12/2021
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_ObjectContainerNode Server WMI Class
 The `SMS_ObjectContainerNode` WMI class is an SMS Provider server class, in Configuration Manager, that contains information for a given Configuration Manager console folder.

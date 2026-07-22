@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_DTS_FLAG Enumeration
 The **CCM_DTS_FLAG** enumeration indicates special options on download jobs.

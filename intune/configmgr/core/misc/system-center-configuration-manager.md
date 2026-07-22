@@ -6,6 +6,7 @@ ms.subservice: other
 ROBOTS: NOINDEX
 description: Placeholder file for Configuration Manager documentation
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuration Manager
 

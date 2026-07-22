@@ -2,9 +2,10 @@
 title: Prestart commands for task sequence media
 description: Create a script to use for the prestart command, distribute the content associated with the prestart command, and configure the prestart command in media.
 ms.date: 10/06/2016
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Prestart commands for task sequence media in Configuration Manager

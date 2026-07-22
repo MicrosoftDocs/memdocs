@@ -3,9 +3,10 @@ metadata:
   title: Product and licensing FAQ
   description: Find answers for common product and license questions for Configuration Manager.
   ms.date: 12/16/2024
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: faq
   ms.collection: highpri
+  ms.service: microsoft-endpoint-configuration-manager
 
 title: Frequently asked questions for Configuration Manager branches and licensing
 summary: |

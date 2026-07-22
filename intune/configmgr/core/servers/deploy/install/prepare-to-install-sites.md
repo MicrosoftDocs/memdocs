@@ -2,9 +2,10 @@
 title: Prepare to install sites
 description: If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors.
 ms.date: 09/18/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Prepare to install Configuration Manager sites
 

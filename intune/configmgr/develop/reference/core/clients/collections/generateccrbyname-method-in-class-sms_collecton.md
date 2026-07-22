@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GenerateCCRByName Method in Class SMS_Collecton
 The `GenerateCCRByName` Windows Management Instrumentation (WMI) class method generates a client configuration request by computer name.

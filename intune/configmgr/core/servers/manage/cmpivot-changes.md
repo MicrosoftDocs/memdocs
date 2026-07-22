@@ -2,10 +2,11 @@
 title: Changes to CMPivot
 description: Learn about changes made to CMPivot between Configuration Manager versions.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Changes to CMPivot

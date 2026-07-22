@@ -2,9 +2,10 @@
 title: Power Viewer Tool
 description: Use the Power Viewer Tool to view the status of the power management feature on a Configuration Manager client.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Power Viewer Tool

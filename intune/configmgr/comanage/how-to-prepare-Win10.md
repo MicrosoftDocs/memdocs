@@ -5,6 +5,7 @@ ms.date: 12/16/2024
 ms.topic: how-to
 ms.subservice: co-management
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to prepare internet-based devices for co-management

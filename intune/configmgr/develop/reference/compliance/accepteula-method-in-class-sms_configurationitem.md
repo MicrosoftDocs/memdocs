@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AcceptEULA Method in Class SMS_ConfigurationItem
 In Configuration Manager, the `AcceptEULA` Windows Management Instrumentation (WMI) class method accepts or declines the Microsoft Software License Terms of a configuration item.

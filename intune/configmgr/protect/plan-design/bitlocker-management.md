@@ -5,6 +5,7 @@ ms.date: 12/04/2024
 ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for BitLocker management

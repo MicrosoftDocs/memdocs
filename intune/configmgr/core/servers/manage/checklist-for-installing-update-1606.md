@@ -2,10 +2,11 @@
 title: Checklist for 1606
 description: Learn about actions to take before updating from Configuration Manager version 1511 or 1602 to version 1606.
 ms.date: 06/6/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Checklist for installing update 1606 for Configuration Manager
 

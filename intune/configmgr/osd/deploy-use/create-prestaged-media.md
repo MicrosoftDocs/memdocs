@@ -2,9 +2,10 @@
 title: Create prestaged media
 description: Use prestaged media in Configuration Manager to simplify deployment of Windows in several scenarios.
 ms.date: 07/17/2025
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create prestaged media

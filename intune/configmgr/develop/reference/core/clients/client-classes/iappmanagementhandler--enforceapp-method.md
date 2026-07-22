@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # IAppManagementHandler::EnforceApp Method
 The `IAppManagementHandler::EnforceApp` method, in Configuration Manager, starts the installation of a specific application.

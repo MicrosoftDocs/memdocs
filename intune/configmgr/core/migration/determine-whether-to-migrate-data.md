@@ -2,9 +2,10 @@
 title: Choose what to migrate
 description: Learn which data you can migrate and which data you can't migrate to Configuration Manager current branch.
 ms.date: 12/29/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Determine whether to migrate data to Configuration Manager current branch
 

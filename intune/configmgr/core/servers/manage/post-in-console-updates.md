@@ -2,11 +2,12 @@
 title: After the site updates
 description: Learn what to do after the Configuration Manager site installs an in-console update.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # After the site updates

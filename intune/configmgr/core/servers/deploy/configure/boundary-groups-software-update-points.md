@@ -2,9 +2,10 @@
 title: Boundary groups and software update points
 description: Understand how clients and software update points behave with boundary groups.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Boundary groups and software update points

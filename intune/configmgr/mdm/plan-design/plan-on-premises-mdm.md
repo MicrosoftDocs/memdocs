@@ -2,9 +2,10 @@
 title: Plan on-premises MDM
 description: Plan for on-premises mobile device management to manage mobile devices in Configuration Manager
 ms.date: 01/09/2020
-ms.subservice: mdm
+ms.subservice: mobile-device-management
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for on-premises MDM in Configuration Manager
