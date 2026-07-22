@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: compliance
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Common tasks for managing compliance on devices with the Configuration Manager client
