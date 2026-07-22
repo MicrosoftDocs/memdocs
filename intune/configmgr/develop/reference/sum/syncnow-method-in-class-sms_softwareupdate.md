@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SyncNow Method in Class SMS_SoftwareUpdate
 The `SyncNow` Windows Management Instrumentation (WMI) class method, in Configuration Manager, performs a manual synchronization of the Software Update Point.  

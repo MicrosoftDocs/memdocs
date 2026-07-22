@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICcmContentTransferManager4 Interface
 The **ICcmContentTransferManager4** interface is used by clients to invoke the Content Transfer Manager.

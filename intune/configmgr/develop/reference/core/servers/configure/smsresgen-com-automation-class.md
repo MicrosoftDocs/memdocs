@@ -5,6 +5,7 @@ ms.date: 04/12/2018
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMSResGen COM Automation Class
 The `SMSResGen` COM class in Configuration Manager is used to create data discovery records (DDRs).

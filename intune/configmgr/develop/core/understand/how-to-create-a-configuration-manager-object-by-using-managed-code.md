@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Learn how to create a configuration manager object by using managed code, with included examples and links.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Object by Using Managed Code
 

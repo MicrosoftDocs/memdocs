@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create Form XML for a Configuration Manager Property Sheet
 In Configuration Manager, to create the form XML for a Configuration Manager property sheet, you create an XML file that describes an `SmsFormData`.

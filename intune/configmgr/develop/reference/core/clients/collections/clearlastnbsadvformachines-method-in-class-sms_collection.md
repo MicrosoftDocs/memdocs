@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ClearLastNBSAdvForMachines Method in Class SMS_Collection
 The `ClearLastNBSAdvForMachines` Windows Management Instrumentation (WMI) class method, in Configuration Manager, clears the last Network Boot advertisement for selected client computers.

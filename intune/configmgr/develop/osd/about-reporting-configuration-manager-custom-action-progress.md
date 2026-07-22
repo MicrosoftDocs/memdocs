@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Reporting Configuration Manager Custom Action Progress
 While a custom action is running on a Configuration Manager client, it can report progress information that is used to display a progress indicator.

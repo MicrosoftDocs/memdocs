@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: You can export a configuration baseline or configuration item by using Configuration Manager SDK and reading the relevant SMS_ConfigurationItem instance and writing the SDMPackageXML property (string) to a file.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Export Configuration Baselines and Configuration Items
 In Configuration Manager, to export a configuration baseline or configuration item using the Configuration Manager SDK, read the relevant `SMS_ConfigurationItem` instance and write the `SDMPackageXML` property (string) to a file.

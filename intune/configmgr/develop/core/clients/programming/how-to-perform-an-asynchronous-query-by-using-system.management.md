@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Perform an Asynchronous Query by Using System.Management
 To perform an asynchronous query on a Configuration Manager client Windows Instrumentation (WMI) namespace, create a `ManagementObjectSearcher` object that specifies a WQL query. You then create a `ManagementOperationObserver` that specifies an event handler for each query result and also for the end of the query.  

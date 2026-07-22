@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Remove a Step from an Operating System Deployment Group
 In Configuration Manager, you delete a step (an action or a group) from an operating system deployment task sequence group by deleting the step from the group's list of task sequence steps.

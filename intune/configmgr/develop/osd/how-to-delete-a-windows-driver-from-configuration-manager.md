@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Delete a Windows Driver from Configuration Manager
 You delete a Windows driver from the operating system deployment driver catalog, in Configuration Manager, by deleting its [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. When you delete a driver, its definition is deleted, and it is no longer matched by the apply driver action task sequences. However, if the content associated with the driver was added to a driver package, or if the driver was added to a boot image package, the content remains there until the packages are updated.

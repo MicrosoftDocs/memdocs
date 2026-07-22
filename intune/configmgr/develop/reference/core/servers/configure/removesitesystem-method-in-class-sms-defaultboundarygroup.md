@@ -5,6 +5,7 @@ ms.date: 03/13/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RemoveSiteSystem Method in Class SMS_DefaultBoundaryGroup
  The `RemoveSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes one or more site system servers from a default boundary group.

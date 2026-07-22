@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuration Manager AssemblyType Action
 The `AssemblyType` action defines the type and assembly for a method that is called by the Configuration Manager console.

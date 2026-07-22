@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_TaskSequence_ReleaseStateStoreAction Server WMI Class
 The `SMS_TaskSequence_ReleaseStateStoreAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that notifies the state migration point of completion of a capture or restore action.

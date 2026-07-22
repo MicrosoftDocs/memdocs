@@ -5,6 +5,7 @@ ms.date: 04/30/2019
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Sample queries for compliance settings in Configuration Manager

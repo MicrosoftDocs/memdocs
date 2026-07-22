@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Initiate a Synchronization
 The Asset Intelligence catalog can be refreshed manually, outside the normal synchronization schedule. A manual refresh is accomplished by using the [RequestCatalogUpdate](../../../../develop/reference/core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md) method on the [SMS_AIProxy Server WMI Class](../../../../develop/reference/core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md).  

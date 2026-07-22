@@ -6,6 +6,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms: "assetid: 5741ada8-449c-45af-85e1-2e68abf96440"
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Creating custom reports by using SQL Server views in Configuration Manager

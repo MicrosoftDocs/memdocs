@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Synchronizing the Software Update Point
 In Configuration Manager, software updates must be synchronized before the update information is available in the Configuration Manager console. Synchronization is initiated at the highest level site in the hierarchy that has a software update point.

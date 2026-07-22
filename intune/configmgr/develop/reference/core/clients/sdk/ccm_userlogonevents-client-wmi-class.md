@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_UserLogonEvents Client WMI Class
 The `CCM_UserLogonEvents` Client WMI class is a client class, in Configuration Manager, that represents a user logon event.

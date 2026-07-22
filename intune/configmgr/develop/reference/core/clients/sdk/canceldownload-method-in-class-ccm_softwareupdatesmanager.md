@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CancelDownload Method in Class CCM_SoftwareUpdatesManager
 The `CancelDownload` WMI class method, in Configuration Manager, cancels an in-progress download of software updates during a deployment.

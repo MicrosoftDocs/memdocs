@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # UnPackNALPath Method in Class SMS_NAL_Methods
 The `UnPackNALPath` method, in Configuration Manager, decodes a network abstraction layer (NAL) path into its components.

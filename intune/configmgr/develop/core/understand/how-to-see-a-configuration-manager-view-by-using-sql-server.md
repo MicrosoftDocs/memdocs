@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to See a Configuration Manager View by Using SQL Server
 The following examples demonstrate various Microsoft Configuration Manager SQL view queries.

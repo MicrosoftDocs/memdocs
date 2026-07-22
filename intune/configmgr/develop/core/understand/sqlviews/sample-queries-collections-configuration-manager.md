@@ -7,6 +7,7 @@ ms.topic: how-to
 
 
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Sample queries for collections in Configuration Manager

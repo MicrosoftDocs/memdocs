@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Smscstat.dll Status Message Functions
 In Configuration Manager, the functions that are defined by the Smscstat.dll dynamic-link library, report status messages that can be called by using a C interface.

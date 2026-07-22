@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuration Manager Console RootNodes Element
 `RootNodes` elements are the topmost nodes for a feature. For example, software distribution.

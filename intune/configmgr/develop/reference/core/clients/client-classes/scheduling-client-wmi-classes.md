@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Scheduling Client WMI Classes
 The scheduling client Windows Management Instrumentation (WMI) classes, in Microsoft Configuration Manager, are used by client applications to manage scheduling on the client computer. They concern client-side behavior only.

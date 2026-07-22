@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMSEvent Class
 The `SmsEvent` class represents a Configuration Manager event on the client. The class implements the `ICcmEvent` interface.

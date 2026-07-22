@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Read a Configuration Manager Object by Using Managed Code
 To read a Configuration Manager object instance by using the managed SMS Provider, use *WqlConnectionManager.GetInstance*. The [GetInstance](/previous-versions/system-center/developer/cc146190(v=msdn.10)) method takes a string that identifies a specific object instance and returns an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object that is used to access the object.

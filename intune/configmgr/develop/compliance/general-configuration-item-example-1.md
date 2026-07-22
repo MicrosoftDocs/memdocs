@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # General Configuration Item Example 1
 The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.

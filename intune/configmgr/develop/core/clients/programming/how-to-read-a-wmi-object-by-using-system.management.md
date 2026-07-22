@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Read a WMI Object by Using System.Management
 To read a Configuration Manager client Windows Management Instrumentation (WMI) object, in Configuration Manager, you use a `ManagementObject` object to read the WMI object.  

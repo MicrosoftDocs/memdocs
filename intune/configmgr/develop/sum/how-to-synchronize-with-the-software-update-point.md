@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Synchronize with the Software Update Point
 You synchronize the software update point, in Configuration Manager SP1, by calling the `SyncNow` method.

@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 description: Learn how enumerating the CCM_SoftwareUpdate Client WMI Class gives all the updates that are applicable and need to be installed.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_SoftwareUpdate Client WMI Class
 The `CCM_SoftwareUpdate` WMI class is a client class, in Configuration Manager, that represents a software update.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Inventory Agent Client WMI Classes
 In Configuration Manager, the inventory client agent classes can be broken into three categories:

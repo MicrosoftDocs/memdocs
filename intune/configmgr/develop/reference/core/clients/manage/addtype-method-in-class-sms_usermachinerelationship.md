@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddType Method in Class SMS_UserMachineRelationship
 The `AddType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a type of the relationship between a user and a device.

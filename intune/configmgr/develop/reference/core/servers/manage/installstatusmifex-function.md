@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # InstallStatusMIFEx Function
 The `InstallStatusMIFEx` function, in Configuration Manager, enhances the functionality of [InstallStatusMIF](../../../../../develop/reference/core/servers/manage/installstatusmif-function.md).

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RunAuthListStatusSummarization Method in Class SMS_AuthorizationList
 The `RunAuthListStatusSummarization` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates summarized results for a particular update group.

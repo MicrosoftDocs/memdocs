@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Define the Client-side Handler
 The custom client-side handler needs to implement a public COM interface and methods. The below methods will be called by the Configuration Manager client framework.

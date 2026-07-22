@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Managed SMS Provider Fundamentals in Configuration Manager
 The managed SMS Provider library is a .NET Framework library that wraps the System.Management classes and provides a Configuration Manager-centric object model. It also provides a wrapper for accessing the Configuration Manager site control file.

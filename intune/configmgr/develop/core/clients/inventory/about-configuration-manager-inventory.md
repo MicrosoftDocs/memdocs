@@ -7,6 +7,7 @@ ms.topic: concept-article
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Manager Inventory
 You can use Configuration Manager to collect hardware and software inventory from Configuration Manager clients by enabling the client agents on a site-by-site basis.  

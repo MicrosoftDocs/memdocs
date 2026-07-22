@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Deployment Type Extension Versioning
 Configuration Manager supports in-place versioning for minor upgrades and out-of-place versioning for major upgrades.

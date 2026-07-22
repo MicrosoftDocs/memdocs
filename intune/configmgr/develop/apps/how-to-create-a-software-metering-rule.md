@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: You can create a software metering rule in Configuration Manager by creating an instance of the SMS_MeteredProductRule class and populating the properties.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Software Metering Rule
 You create a software metering rule, in Configuration Manager, by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.

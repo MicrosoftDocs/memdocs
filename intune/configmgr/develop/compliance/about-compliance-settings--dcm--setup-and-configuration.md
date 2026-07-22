@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
 description: Learn about how to configure compliance settings and the custom configuration requirements using the Configuration Manager site.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Compliance Settings (DCM) Setup and Configuration
 To use desired configuration management on your Configuration Manager site, the following needs to be in place:

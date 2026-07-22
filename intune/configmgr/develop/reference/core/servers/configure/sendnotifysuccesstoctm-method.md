@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SendNotifySuccessToCTM Method
 The **SendNotifySuccessToCTM** method notifies Content Transfer Manager of the success of a job.

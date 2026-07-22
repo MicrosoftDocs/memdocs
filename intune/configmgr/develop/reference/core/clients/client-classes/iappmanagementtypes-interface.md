@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # IAppManagementTypes Interface
 The `IAppManagementTypes` interface, in Configuration Manager, is a container for Application Management related type definitions.

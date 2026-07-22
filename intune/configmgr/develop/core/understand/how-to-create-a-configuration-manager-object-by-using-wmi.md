@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Object by Using WMI
 You create a Configuration Manager object, in Configuration Manager, by calling the [SWbemObject](/windows/win32/wmisdk/swbemobject) object [SpawnInstance_](/windows/win32/wmisdk/swbemobject-spawninstance-) method.

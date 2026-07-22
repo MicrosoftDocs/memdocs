@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Manager Custom Action MOF Files
 In Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.

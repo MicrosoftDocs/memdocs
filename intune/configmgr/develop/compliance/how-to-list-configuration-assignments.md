@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to List Configuration Assignments
 The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.

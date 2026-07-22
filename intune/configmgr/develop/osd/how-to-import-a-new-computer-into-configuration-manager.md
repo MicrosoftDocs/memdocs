@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Import a New Computer into Configuration Manager
 You add a new computer directly to the Configuration Manager database by calling the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md). This can be used to deploy operating systems to computers that have not yet been discovered automatically by Configuration Manager.

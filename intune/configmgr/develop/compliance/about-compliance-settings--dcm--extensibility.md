@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Compliance Settings (DCM) Extensibility
 The content in this section provides information about extending the functionality of desired configuration management configuration items in Configuration Manager.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GetClientConfigPolicies Method in Class SMS_TaskSequencePackage
 The `GetClientConfigPolicies` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets all site-wide client configuration policies and their corresponding policy assignments.

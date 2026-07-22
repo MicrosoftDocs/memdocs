@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICIINFO::GetId Method
 The `ICIINFO::GetId` method, in Configuration Manager, gets the ID of the configuration item.

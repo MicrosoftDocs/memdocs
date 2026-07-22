@@ -6,6 +6,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms:assetid: a1924bed-b5fc-49a8-80ee-30b4e96defaa
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SQL Server views in Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RestoreQuarantinedItem Method in Class SMS_ClientOperation
 The `RestoreQuarantinedItem` Windows Management Instrumentation (WMI) class method in Configuration Manager that restores quarantined items to all members in a collection infected by specified threat.

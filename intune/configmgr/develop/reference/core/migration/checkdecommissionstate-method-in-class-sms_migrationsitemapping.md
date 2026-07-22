@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CheckDecommissionState Method in Class SMS_MigrationSiteMapping
 The `CheckDecommissionState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks to see if site mapping can be decommissioned.  

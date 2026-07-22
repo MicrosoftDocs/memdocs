@@ -6,6 +6,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # OS deployment CreateMedia.exe

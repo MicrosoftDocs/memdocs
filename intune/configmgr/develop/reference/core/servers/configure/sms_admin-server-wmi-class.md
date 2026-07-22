@@ -5,6 +5,7 @@ ms.date: 09/11/2020
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SMS_Admin server WMI class

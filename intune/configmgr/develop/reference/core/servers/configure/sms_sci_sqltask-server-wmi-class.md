@@ -5,6 +5,7 @@ ms.date: 04/07/2020
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SMS_SCI_SQLTask Server WMI Class

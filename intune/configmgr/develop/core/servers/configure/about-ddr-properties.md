@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About DDR Properties
 In Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record (DDR). If the architecture isn't defined in the database, the definition is created from the setting in the DDR.
