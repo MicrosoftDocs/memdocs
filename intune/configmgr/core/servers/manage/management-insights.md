@@ -2,12 +2,13 @@
 title: Management insights
 description: Learn about the management insights functionality available in the Configuration Manager console.
 ms.date: 06/20/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection:
     - tier3
     - essentials-manage
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Management insights in Configuration Manager

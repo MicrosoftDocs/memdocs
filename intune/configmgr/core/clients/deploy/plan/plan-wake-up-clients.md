@@ -2,9 +2,10 @@
 title: Waking up clients
 description: Plan how to wake up clients in Configuration Manager using Wake On LAN (WOL).
 ms.date: 04/23/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Plan how to wake up clients in Configuration Manager
 

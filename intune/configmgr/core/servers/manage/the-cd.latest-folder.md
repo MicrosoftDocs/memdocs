@@ -2,9 +2,10 @@
 title: The `CD.Latest` folder
 description: Learn about the process that delivers updates to the product from within the Configuration Manager console.
 ms.date: 03/24/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # The `CD.Latest` folder for Configuration Manager

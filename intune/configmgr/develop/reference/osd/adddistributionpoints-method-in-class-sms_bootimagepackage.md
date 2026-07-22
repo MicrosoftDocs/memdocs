@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 description: Learn about the simplified syntax, parameters, return values, and requirements of the AddDistributionPoints method.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddDistributionPoints Method in Class SMS_BootImagePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the boot image package.

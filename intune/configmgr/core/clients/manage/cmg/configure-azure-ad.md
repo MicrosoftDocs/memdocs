@@ -2,10 +2,11 @@
 title: Configure Microsoft Entra ID for CMG
 description: Integrate the Configuration Manager site with Microsoft Entra ID to support the cloud management gateway.
 ms.date: 09/26/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure Microsoft Entra ID for CMG

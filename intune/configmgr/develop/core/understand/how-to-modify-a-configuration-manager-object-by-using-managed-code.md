@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Learn how to modify a configuration manager object by using managed code with the provided examples and links.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Modify a Configuration Manager Object by Using Managed Code
 To modify a Configuration Manager object instance by using the managed SMS Provider, use the object's [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) interface to make modifications. You then call the [IResultObject.Put](/previous-versions/system-center/developer/cc146500(v=msdn.10)) method to submit the changes.

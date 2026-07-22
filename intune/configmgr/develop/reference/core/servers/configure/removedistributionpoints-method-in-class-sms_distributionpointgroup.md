@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RemoveDistributionPoints Method in Class SMS_DistributionPointGroup
 The `RemoveDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes distribution points from this distribution point group.

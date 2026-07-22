@@ -2,9 +2,10 @@
 title: Accounts used
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
 ms.date: 09/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Accounts used in Configuration Manager

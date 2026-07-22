@@ -2,9 +2,10 @@
 title: External notifications
 description: Enable the site to send notifications to an external system or application.
 ms.date: 09/18/2023
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # External notifications

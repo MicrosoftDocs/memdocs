@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How To Define the Installer Technology
 To define the application management installer technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology.InstallerTechnology` class. The new class instance will define the installer technology used to install a specific application to devices.

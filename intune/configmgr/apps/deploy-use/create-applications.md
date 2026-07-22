@@ -2,9 +2,10 @@
 title: Create applications
 description: Create applications with deployment types, detection methods, and requirements to install software.
 ms.date: 10/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create applications in Configuration Manager

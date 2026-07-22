@@ -2,9 +2,10 @@
 title: Certificates for on-premises MDM
 description: Set up certificates for trusted communications with on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/09/2020
-ms.subservice: mdm
+ms.subservice: mobile-device-management
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Set up certificates for trusted communications with on-premises MDM

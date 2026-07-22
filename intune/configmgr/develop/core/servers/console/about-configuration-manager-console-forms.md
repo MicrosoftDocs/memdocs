@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Manager Console Forms
 You can extend the Configuration Manager console with new Windows forms. Specifically, you can add form-based dialog boxes and property sheets. A user accesses these forms from Configuration Manager actions that you define.

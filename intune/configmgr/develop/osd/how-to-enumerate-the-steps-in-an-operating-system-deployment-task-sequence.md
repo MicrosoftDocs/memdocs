@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Enumerate the Steps in an Operating System Deployment Task Sequence
 You enumerate an operating system deployment task sequence, in Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.

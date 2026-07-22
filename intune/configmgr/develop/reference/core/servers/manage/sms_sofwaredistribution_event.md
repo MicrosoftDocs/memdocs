@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_SofwareDistribution_Event
 The `SMS_SofwareDistribution_Event` class is the base class for all software-distribution advertisement status-message classes, in Configuration Manager. All advertisement status messages have the insertion strings of this class. Also, each derived class must set the properties of its base `SMS_SofwareDistribution_Event` class.

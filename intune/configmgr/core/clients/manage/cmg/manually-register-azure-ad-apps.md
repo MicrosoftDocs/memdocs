@@ -2,10 +2,11 @@
 title: Manually register Microsoft Entra apps
 description: Manually create the required apps in Microsoft Entra ID to integrate the Configuration Manager site to support the cloud management gateway (CMG).
 ms.date: 03/11/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Manually register Microsoft Entra apps for the CMG

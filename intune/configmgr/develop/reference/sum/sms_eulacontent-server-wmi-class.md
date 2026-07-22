@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_EULAContent Server WMI Class
 The `SMS_EULAContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information about optional configuration item content associated with Microsoft Software License Terms.  

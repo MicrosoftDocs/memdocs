@@ -2,9 +2,10 @@
 title: Checklist for 2207
 description: Learn about actions to take before updating to Configuration Manager version 2207.
 ms.date: 08/12/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: checklist
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Checklist for installing update 2207 for Configuration Manager

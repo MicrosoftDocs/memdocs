@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GetSDMDefinition Method in Class SMS_ConfigurationItem
 The `GetSDMDefinition` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the System Definition Model (SDM) definition of the configuration item in XML format.

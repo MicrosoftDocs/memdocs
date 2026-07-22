@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Manager Status Summarizers
 Summarizers are summary classes that help you determine the health, or status, of different aspects of your Configuration Manager site. The summaries, which are produced from status messages, states, and counts, give you a real-time view of the health of Configuration Manager sites, components, packages, and advertisements.

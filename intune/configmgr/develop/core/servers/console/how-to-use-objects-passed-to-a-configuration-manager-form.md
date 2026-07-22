@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Use Objects Passed to a Configuration Manager Form
 In Configuration Manager, you use the [SmsPageControl.PropertyManager](/previous-versions/system-center/developer/cc146982(v=msdn.10)) object to access objects that are selected in the Configuration Manager console.

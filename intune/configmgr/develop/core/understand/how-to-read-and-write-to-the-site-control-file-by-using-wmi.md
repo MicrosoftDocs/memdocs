@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Read and Write to the Configuration Manager Site Control File by Using WMI
 In Configuration Manager, you write to the site control file using Windows Management Instrumentation (WMI) by using the `SMS_SiteControlFile` class methods.

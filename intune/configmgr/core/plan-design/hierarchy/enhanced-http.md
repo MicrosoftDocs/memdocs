@@ -2,9 +2,10 @@
 title: Enhanced HTTP
 description: Use modern authentication to secure client communication without the need for PKI certificates.
 ms.date: 12/20/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Enhanced HTTP

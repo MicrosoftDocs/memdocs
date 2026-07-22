@@ -7,6 +7,7 @@ ms.topic: reference
 
 
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Wake On LAN views in Configuration Manager

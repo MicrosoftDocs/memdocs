@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Define the Deployment Type Property Sheet XML File
 To define the custom deployment type property page XML file, create an XML file based on the `https://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the deployment type property sheet should be named \<*TechnologyID*>DeploymentTypePropertySheet.xml.

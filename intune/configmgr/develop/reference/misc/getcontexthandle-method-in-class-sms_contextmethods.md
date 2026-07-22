@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GetContextHandle Method in Class SMS_ContextMethods
 The `GetContextHandle` method, in Configuration Manager, stores context objects on the server.

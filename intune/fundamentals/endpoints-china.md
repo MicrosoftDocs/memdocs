@@ -54,11 +54,12 @@ If you're using Intune to deploy apps or scripts on macOS, you also need to gran
 
 Intune operated by 21Vianet depends on the following partner service endpoints:
 
-- Azure AD Sync service: https:\//syncservice.partner.microsoftonline.cn/DirectoryService.svc
-- Evo STS: https:\//login.chinacloudapi.cn/
-- Azure AD Graph: https:\//graph.chinacloudapi.us
-- MS Graph: https:\//microsoftgraph.chinacloudapi.cn
-- ADRS: https:\//enterpriseregistration.partner.microsoftonline.cn
+- Azure AD Sync service: `https://syncservice.partner.microsoftonline.cn/DirectoryService.svc`
+- Evo STS: `https://login.chinacloudapi.cn/`
+- Azure AD `Graph: https://graph.chinacloudapi.us`
+- MS Graph: `https://microsoftgraph.chinacloudapi.cn`
+- ADRS: `https://enterpriseregistration.partner.microsoftonline.cn`
+- Experimentation and Configuration Service (ECS): `*.ecs.gov.teams.microsoft.us`
 
 [!INCLUDE [Intune notices](./includes/windows-push-notification-services.md)]
 

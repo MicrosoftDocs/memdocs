@@ -2,9 +2,10 @@
 title: Upgrade the LTSB to current branch
 description: Learn how to convert a long-term servicing branch (LTSB) site to a current branch site.
 ms.date: 02/8/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Upgrade the long-term servicing branch to the current branch

@@ -7,6 +7,7 @@ ms.topic: how-to
 
 
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Exercise 1: Run an existing Configuration Manager report

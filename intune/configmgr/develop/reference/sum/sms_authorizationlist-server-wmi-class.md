@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_AuthorizationList Server WMI Class
 The `SMS_AuthorizationList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a collection of `SMS_SoftwareUpdate` objects for the software updates available on the site and authorized for deployment. Use of an authorization list is optional in a software update deployment.

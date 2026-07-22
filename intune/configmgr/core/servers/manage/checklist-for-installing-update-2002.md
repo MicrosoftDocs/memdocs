@@ -2,10 +2,11 @@
 title: Checklist for 2002
 description: Learn about actions to take before updating to Configuration Manager version 2002.
 ms.date: 05/11/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Checklist for installing update 2002 for Configuration Manager

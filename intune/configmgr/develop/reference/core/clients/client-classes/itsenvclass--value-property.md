@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ITSEnvClass::Value Property
 In Configuration Manager, the `Value` property contains the value of an operating system deployment task sequence environment variable.

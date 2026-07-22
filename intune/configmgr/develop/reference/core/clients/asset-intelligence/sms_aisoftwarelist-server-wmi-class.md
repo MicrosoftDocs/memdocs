@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_AISoftwareList Server WMI Class
 The `SMS_AISoftwareList` Windows Management Instrumentation (WMI) class, in Configuration Manager, contains all the known software titles in the Asset Intelligence catalog.

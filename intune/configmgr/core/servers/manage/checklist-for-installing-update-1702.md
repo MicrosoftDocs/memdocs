@@ -2,10 +2,11 @@
 title: Checklist for 1702
 description: Learn about actions to take before updating to Configuration Manager version 1702.
 ms.date: 06/06/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Checklist for installing update 1702 for Configuration Manager
 

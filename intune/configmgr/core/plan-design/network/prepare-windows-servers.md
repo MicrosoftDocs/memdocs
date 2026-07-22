@@ -2,9 +2,10 @@
 title: Prepare Windows Servers
 description: Make sure that a computer meets prerequisites for use as a site server or a site system server for Configuration Manager.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Prepare Windows Servers to support Configuration Manager

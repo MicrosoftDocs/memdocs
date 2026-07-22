@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CreateCCRs Method in Class SMS_Collection
 The `CreateCCRs` WMI class method, in Configuration Manager, generates client configuration requests (CCRs) for the computers in the collection.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddDistributionPoints Method in Class SMS_SoftwareUpdatesPackage
 In Configuration Manager, the `AddDistributionPoints` Windows Management Instrumentation (WMI) class method adds the distribution points for the software updates package.

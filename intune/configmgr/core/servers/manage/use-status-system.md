@@ -2,10 +2,11 @@
 title: The status system
 description: Use the status system to understand the state of your Configuration Manager environment.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use the status system in Configuration Manager

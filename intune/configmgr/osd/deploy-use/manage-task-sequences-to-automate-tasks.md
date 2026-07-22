@@ -2,9 +2,10 @@
 title: Manage task sequences
 description: Configure the settings of task sequences.
 ms.date: 04/08/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Manage task sequences

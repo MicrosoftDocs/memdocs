@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Define the UI Extension Assembly
 The custom wizard assembly is responsible for collecting any data passed in from the Configuration Manager console, and passing it on to the wizard.  The assembly should be named, AdminUI.DeploymentType.\< *AssemblySuffix*>.dll.

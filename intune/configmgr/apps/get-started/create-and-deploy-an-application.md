@@ -2,10 +2,11 @@
 title: Create and deploy an application
 description: Create and deploy an application containing a line-of-business app and learn how to manage apps effectively.
 ms.date: 10/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Create and deploy an application with Configuration Manager
 

@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Get the Properties of a Collection
 ### To get the properties of a collection  

@@ -5,6 +5,7 @@ ms.date: 03/13/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RemoveBoundary Method in Class SMS_DefaultBoundaryGroup
  The `RemoveBoundary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes one or more boundaries from a default boundary group.

@@ -5,6 +5,7 @@ ms.date: 06/12/2025
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Encrypt recovery data in the database

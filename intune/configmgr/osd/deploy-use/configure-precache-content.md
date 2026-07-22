@@ -2,9 +2,10 @@
 title: Configure pre-cache content
 description: Learn how clients can download OS deployment content before a user installs the task sequence.
 ms.date: 04/13/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure pre-cache content for task sequences
@@ -103,7 +104,7 @@ For example, the following **Upgrade OS** step uses the English version:
 - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content isn't pre-cached before a user starts the installation, the client uses these settings.
 
     > [!IMPORTANT]
-    > For a task sequence that installs an OS image, don't use the deployment option to **Download content locally when needed by the running task sequence**. When the task sequence wipes the disk before it applies the OS image, it removes the client cache. Since the content is gone, the task sequence fails.<!-- SCCMDocs-PR #1338 --> These deployment options are dynamic based on other options you select for the deployment. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
+    > For a task sequence that installs an OS image, don't use the deployment option to **Download all content locally before starting task sequence**. When the task sequence wipes the disk before it applies the OS image, it removes the client cache. Since the content is gone, the task sequence fails.<!-- SCCMDocs-PR #1338 --> These deployment options are dynamic based on other options you select for the deployment. For more information, see [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options).<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## User experience
 

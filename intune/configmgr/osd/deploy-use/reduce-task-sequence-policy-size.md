@@ -2,9 +2,10 @@
 title: Reduce task sequence policy size
 description: When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment. Manage the size of task sequence policy to reduce deployment failures.
 ms.date: 04/08/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Reduce the size of task sequence policy

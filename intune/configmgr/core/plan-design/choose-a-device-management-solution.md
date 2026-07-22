@@ -2,9 +2,10 @@
 title: Choose a device management solution
 description: Learn about the solutions that Microsoft offers for managing PCs, servers, and devices.
 ms.date: 03/30/2023
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Choose a device management solution

@@ -2,9 +2,10 @@
 title: Prepare to use an availability group
 description: Plan to use a SQL Server Always On availability group for the Configuration Manager site database.
 ms.date: 06/12/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Prepare to use a SQL Server Always On availability group with Configuration Manager

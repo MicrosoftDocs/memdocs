@@ -2,9 +2,10 @@
 title: Convert BIOS to UEFI
 description: Learn how to customize an OS deployment task sequence to prepare a FAT32 partition for transition to UEFI.
 ms.date: 02/16/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Task sequence steps to manage BIOS to UEFI conversion

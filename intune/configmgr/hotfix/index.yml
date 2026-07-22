@@ -6,9 +6,10 @@ summary: Knowledge Base articles for Microsoft Configuration Manager hotfixes, u
 metadata:
   title: Configuration Manager hotfixes
   description: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and summary articles for new releases.
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: landing-page
   ms.date: 12/09/2021
+  ms.service: microsoft-endpoint-configuration-manager
 
 landingContent:
   - title: Configuration Manager 2603

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_CollectionMember Server WMI Class
 The `SMS_CollectionMember` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for the member classes for each collection. [SMS_CM_RES_COLL_CollectionID Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md) derives from `SMS_CollectionMember` class.

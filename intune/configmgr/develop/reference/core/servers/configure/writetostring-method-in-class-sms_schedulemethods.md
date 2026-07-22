@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # WriteToString Method in Class SMS_ScheduleMethods
 The `WriteToString` Windows Management Instrumentation (WMI) class method, in Configuration Manager, writes an interval string from [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects.

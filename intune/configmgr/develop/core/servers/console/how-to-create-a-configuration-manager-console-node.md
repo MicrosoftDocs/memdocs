@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Learn how to create and start a configuration manager console node that displays available collections.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Console Node
 In Configuration Manager, to create a Configuration Manager console node, you create an XML description of the node and add it to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\Extensions\Nodes\\<GUID\> folder. GUID is the GUID namespace for the parent node.

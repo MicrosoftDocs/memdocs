@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Unlock Method in Class SMS_SoftwareUpdatesPackage
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the software updates package.  

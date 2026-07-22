@@ -2,9 +2,10 @@
 title: Migration operations
 description: Create and run jobs to migrate data and clients to Configuration Manager current branch.
 ms.date: 12/30/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Operations for migrating to Configuration Manager current branch
 

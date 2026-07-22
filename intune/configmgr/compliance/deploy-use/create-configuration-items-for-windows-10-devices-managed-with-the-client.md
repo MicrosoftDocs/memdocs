@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create configuration items for Windows 10 or later devices

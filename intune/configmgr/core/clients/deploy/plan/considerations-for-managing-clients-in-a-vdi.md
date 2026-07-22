@@ -2,9 +2,10 @@
 title: Manage VDI clients
 description: Manage Configuration Manager clients in a virtual desktop infrastructure (VDI).
 ms.date: 08/11/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)

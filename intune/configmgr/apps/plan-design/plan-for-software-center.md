@@ -2,10 +2,11 @@
 title: Plan for Software Center
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for Software Center

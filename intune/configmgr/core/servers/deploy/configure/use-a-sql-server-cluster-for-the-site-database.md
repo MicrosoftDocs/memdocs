@@ -2,9 +2,10 @@
 title: Failover cluster instance
 description: Use a SQL Server Always On failover cluster instance to host the Configuration Manager site database
 ms.date: 10/08/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use a SQL Server Always On failover cluster instance for the site database

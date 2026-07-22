@@ -2,10 +2,11 @@
 title: What's new in version 2002
 description: Get details about changes and new capabilities introduced in version 2002 of Configuration Manager current branch.
 ms.date: 07/27/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in version 2002 of Configuration Manager current branch

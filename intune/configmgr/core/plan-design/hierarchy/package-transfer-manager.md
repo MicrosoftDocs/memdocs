@@ -2,9 +2,10 @@
 title: Package Transfer Manager
 description: Understand how Package Transfer Manager in Configuration Manager transfers content from a site server to remote distribution points.
 ms.date: 02/8/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Package Transfer Manager in Configuration Manager
 

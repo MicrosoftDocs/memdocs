@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_SoftwareUpdatesPackage Server WMI Class
 The `SMS_SoftwareUpdatesPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the package that is the unit of distribution of program binaries with which the software update is associated.  

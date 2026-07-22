@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuration Manager Date and Time Formats
 Actions, in Configuration Manager, that include date and time values are common, such as get current date and time, 50 days from today is what date?, or find out what day of the week falls on a certain date. When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format. An example is any expression that has a SQL Server `datetime` data type or that can be converted implicitly, such as an appropriately formatted character string (for example, "1998.10.31").

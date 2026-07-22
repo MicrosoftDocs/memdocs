@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICIINFO::GetCategory Method
 The `ICIINFO::GetCategory` method, in Configuration Manager, gets a localized category name by index and the group name of the category.

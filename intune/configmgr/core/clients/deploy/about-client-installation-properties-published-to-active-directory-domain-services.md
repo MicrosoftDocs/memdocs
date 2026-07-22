@@ -2,9 +2,10 @@
 title: Client installation properties in Active Directory
 description: Publish Configuration Manager client installation properties to Active Directory Domain Services.
 ms.date: 10/06/2016
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About client installation properties published to Active Directory Domain Services

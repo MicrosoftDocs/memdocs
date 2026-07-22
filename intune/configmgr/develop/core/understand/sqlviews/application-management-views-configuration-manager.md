@@ -6,6 +6,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms: "assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db"
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Application management views in Configuration Manager

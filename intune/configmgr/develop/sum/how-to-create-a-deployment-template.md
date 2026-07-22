@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Deployment Template
 You create a software updates deployment template, in Configuration Manager, by creating an instance of the `SMS_Template` class and populating the properties.

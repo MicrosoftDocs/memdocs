@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddSiteSystem Method in Class SMS_BoundaryGroup
 The `AddSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a site system to this boundary group.

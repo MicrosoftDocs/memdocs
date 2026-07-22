@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using Managed Code
 To handle a Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](/previous-versions/t1yswz5k(v=vs.90)) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](/previous-versions/system-center/developer/cc143778(v=msdn.10)) event handler. If [Error](/previous-versions/t1yswz5k(v=vs.90)) is not `null`, an exception has occurred and you use [Error](/previous-versions/t1yswz5k(v=vs.90)) to discover the cause.

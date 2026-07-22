@@ -1,8 +1,9 @@
 ---
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: include
 ms.date: 07/11/2022
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 

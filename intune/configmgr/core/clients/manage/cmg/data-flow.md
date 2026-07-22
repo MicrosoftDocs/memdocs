@@ -2,9 +2,10 @@
 title: Data flow for CMG
 description: Understand how data flows between components of the cloud management gateway (CMG), including network ports and internet endpoints.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Data flow for CMG

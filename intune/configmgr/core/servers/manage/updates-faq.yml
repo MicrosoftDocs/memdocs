@@ -3,8 +3,9 @@ metadata:
   title: In-console updates FAQ
   description: Frequently asked questions for Configuration Manager in-console updates.
   ms.date: 08/02/2021
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: faq
+  ms.service: microsoft-endpoint-configuration-manager
 
 title: In-console updates FAQ
 summary: |

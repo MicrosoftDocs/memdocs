@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Read the Tally Intervals for a Configuration Manager Site
 In Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file `SMS_COMPONENT_STATUS_SUMMARIZER` object `Summary_Intervals` embedded property list.

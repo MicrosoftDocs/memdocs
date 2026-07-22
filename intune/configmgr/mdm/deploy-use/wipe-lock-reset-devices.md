@@ -2,9 +2,10 @@
 title: Manage devices with on-premises MDM
 description: Protect device data with full wipe, selective wipe, remote lock, or passcode reset by using Configuration Manager on-premises mobile device management (MDM).
 ms.date: 08/14/2018
-ms.subservice: mdm
+ms.subservice: mobile-device-management
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Manage devices and protect data with on-premises MDM in Configuration Manager

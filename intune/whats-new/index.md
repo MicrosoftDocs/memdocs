@@ -48,6 +48,24 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->  
 
+## Week of July 13, 2026
+
+### App management
+
+#### APP Multiple Managed Accounts <!-- 3182632 -->
+
+Microsoft Intune mobile application management now extends support for Multiple Managed Accounts to Microsoft Outlook on iOS/iPadOS (v5.2626.0 or later), letting users add and manage more than one managed account within the same app.
+
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant.
+
+To learn more, see [Multiple managed accounts for app protection policies](../app-management/protection/multiple-managed-accounts.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+
 ## Week of June 29, 2026 (Service release 2606)  
 
 ### App management  

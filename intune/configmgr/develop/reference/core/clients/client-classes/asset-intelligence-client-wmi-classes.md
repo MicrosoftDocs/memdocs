@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Asset Intelligence Client WMI Classes
 In Configuration Manager, the Asset Intelligence client Windows Management Instrumentation (WMI) classes query client computers for usage, software, and licensing data. These classes are in the root/cimv2/sms namespace.

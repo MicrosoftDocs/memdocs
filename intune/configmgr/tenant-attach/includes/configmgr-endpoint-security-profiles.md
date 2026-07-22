@@ -1,8 +1,9 @@
 ---
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: include
 ms.date: 07/11/2022
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
 

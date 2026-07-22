@@ -2,9 +2,10 @@
 title: Troubleshoot Package Conversion Manager
 description: Learn how to troubleshoot problems with the Package Conversion Manager in Configuration Manager.
 ms.date: 08/24/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot Package Conversion Manager

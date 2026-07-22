@@ -2,10 +2,11 @@
 title: Quickstart - UDI
 description: A quickstart guide for using Microsoft Deployment Toolkit (MDT) for user-driven installations (UDI)
 ms.date: 09/09/2016
-ms.subservice: mdt
+ms.subservice: microsoft-deployment-toolkit
 ms.topic: quickstart
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Quick Start Guide for User-Driven Installation

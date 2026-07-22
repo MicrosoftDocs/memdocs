@@ -2,9 +2,10 @@
 title: Package definition files
 description: Learn about using package definition files to create packages and programs in Configuration Manager
 ms.date: 07/26/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Package definition files

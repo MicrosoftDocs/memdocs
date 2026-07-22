@@ -3,9 +3,10 @@ title: Tenant attach - Run Scripts from the admin center
 description: Run scripts for Configuration Manager devices from the admin center.
 ms.date: 07/11/2022
 ms.topic: how-to
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # <a name="bkmk_scripts"></a> Tenant attach: Run Scripts from the admin center

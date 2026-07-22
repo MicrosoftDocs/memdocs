@@ -2,9 +2,10 @@
 title: Client health checks
 description: The checks that the Configuration Manager client runs regularly to keep healthy.
 ms.date: 04/01/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Client health checks

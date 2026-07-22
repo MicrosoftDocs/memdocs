@@ -2,9 +2,10 @@
 title: Internet access requirements
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
 ms.date: 06/08/2026
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Internet access requirements

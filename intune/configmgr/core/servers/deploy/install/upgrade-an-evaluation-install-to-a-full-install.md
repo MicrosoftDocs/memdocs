@@ -2,9 +2,10 @@
 title: Upgrade evaluation installs
 description: Learn how to upgrade an evaluation installation to a full installation of Configuration Manager.
 ms.date: 04/05/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Upgrade an evaluation installation of Configuration Manager to a full installation

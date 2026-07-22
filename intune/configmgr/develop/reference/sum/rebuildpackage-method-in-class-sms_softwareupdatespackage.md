@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # RebuildPackage Method in Class SMS_SoftwareUpdatesPackage
 The `RebuildPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, brings the software updates package to its expected state if files are found to be corrupt or have been deleted.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Data Discovery Record
 The data discovery record (DDR), in Configuration Manager, specifies the resource type, the discovery process, the site that discovered the resource, and the resource properties. Configuration Manager provides six library functions that you use to create your own DDRs. For more information. see [About Creating a Data Discovery Record](../../../../develop/core/servers/configure/about-creating-a-data-discovery-record.md).

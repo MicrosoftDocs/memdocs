@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Set an Operating System Deployment Task Sequence Variable
 In Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the [SMS_TaskSequence_SetVariableAction](../../develop/reference/osd/sms_tasksequence_setvariableaction-server-wmi-class.md) class, adding to a task sequence. You can also create task sequence variables while the task sequence is running on the client. For more information, see [How to Use Task Sequence Variables in a Running Configuration Manager Task Sequence](../../develop/osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md).

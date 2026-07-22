@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ReportSMSStatusMessage Function
 The `ReportSMSStatusMessage` function, in Configuration Manager, submits a status message object to the Configuration Manager status system and then deallocates the object.

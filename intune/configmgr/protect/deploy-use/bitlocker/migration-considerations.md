@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: protect
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Migrate from MBAM

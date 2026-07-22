@@ -5,6 +5,7 @@ description: In Configuration Manager, the CCM_Policy_AuthorityData class is a c
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_Policy_AuthorityData Client WMI Class
 In Configuration Manager, the `CCM_Policy_AuthorityData` class is a client Windows Management Instrumentation (WMI) class that stores information about policy from a particular authority.

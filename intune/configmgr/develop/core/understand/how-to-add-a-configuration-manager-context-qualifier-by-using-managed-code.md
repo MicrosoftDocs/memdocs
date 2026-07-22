@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Add a Configuration Manager Context Qualifier by Using Managed Code
 In Configuration Manager, to add a context qualifier by using the managed SMS Provider, use the [Context](/previous-versions/system-center/developer/cc147087(v=msdn.10)) property which is a `Dictionary` object that holds context qualifiers.

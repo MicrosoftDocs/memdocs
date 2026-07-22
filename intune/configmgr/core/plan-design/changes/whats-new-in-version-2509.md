@@ -2,9 +2,10 @@
 title: What's new in version 2509
 description: Get details about changes and new capabilities introduced in version 2509 of Configuration Manager current branch.
 ms.date: 11/11/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # What's new in version 2509 of Configuration Manager current branch

@@ -2,9 +2,10 @@
 title: Monitor app usage with software metering
 description: Learn about operations that are available in Configuration Manager software metering.
 ms.date: 09/20/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Software metering in Configuration Manager

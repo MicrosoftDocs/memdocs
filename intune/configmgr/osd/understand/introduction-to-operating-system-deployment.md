@@ -2,9 +2,10 @@
 title: Introduction to operating system deployment
 description: Understand the concepts before you deploy operating systems in your Configuration Manager environment.
 ms.date: 10/06/2016
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Introduction to operating system deployment in Configuration Manager
 

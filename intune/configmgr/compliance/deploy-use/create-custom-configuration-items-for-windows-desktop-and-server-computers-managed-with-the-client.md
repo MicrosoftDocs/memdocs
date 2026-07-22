@@ -5,6 +5,7 @@ ms.date: 08/12/2022
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client

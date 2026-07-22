@@ -2,9 +2,10 @@
 title: Reference for maintenance tasks
 description: Details for each of the Configuration Manager site maintenance tasks
 ms.date: 04/27/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Reference for maintenance tasks in Configuration Manager

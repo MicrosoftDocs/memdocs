@@ -2,9 +2,10 @@
 title: Common issues when enabling TLS 1.2
 description: Describes common issues when enabling Transport Layer Security (TLS) 1.2
 ms.date: 05/04/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Common issues when enabling TLS 1.2

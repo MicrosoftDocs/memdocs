@@ -2,9 +2,10 @@
 title: Create a task sequence to capture an OS
 description: A build-and-capture task sequence builds a reference computer that can include specific drivers and software updates along with the OS.
 ms.date: 11/29/2019
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create a task sequence to capture an OS

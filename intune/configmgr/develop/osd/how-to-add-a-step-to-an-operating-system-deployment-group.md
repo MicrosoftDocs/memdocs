@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Add a Step to an Operating System Deployment Group
 You add a step (an action or a group) to an operating system deployment task sequence group, in Configuration Manager, by adding the step to the `SMS_TaskSequenceGroup.Steps` array property.

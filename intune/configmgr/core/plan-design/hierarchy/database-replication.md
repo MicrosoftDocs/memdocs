@@ -2,9 +2,10 @@
 title: Database replication
 description: Learn how Configuration Manager database replication uses SQL Server to transfer data in the hierarchy.
 ms.date: 04/11/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Database replication

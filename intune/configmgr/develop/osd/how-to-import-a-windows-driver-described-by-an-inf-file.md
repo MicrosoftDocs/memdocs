@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Import a Windows Driver Described by an INF File into Configuration Manager
 You can import a Windows driver that is described by an information (.inf) file, in Configuration Manager, by using the [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md).

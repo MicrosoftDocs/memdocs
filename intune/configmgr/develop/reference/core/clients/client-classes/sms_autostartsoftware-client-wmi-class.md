@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_AutoStartSoftware Client WMI Class
 The `SMS_AutoStartSoftware` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that enumerates software that starts automatically with, or immediately after, the operating system.

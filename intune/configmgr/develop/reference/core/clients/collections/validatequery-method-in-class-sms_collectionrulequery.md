@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ValidateQuery Method in Class SMS_CollectionRuleQuery
 The `ValidateQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies that the query collection rule is a valid WQL or Extended WQL statement.

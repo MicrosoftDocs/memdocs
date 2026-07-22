@@ -2,9 +2,10 @@
 title: Tenant attach data collection
 description: Learn about the diagnostics data that Configuration Manager collects for tenant attach features.
 ms.date: 03/24/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Tenant attach data collection

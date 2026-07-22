@@ -2,9 +2,10 @@
 title: Configure CMG client authentication
 description: Configure authentication methods for clients to use a cloud management gateway (CMG).
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure client authentication for cloud management gateway

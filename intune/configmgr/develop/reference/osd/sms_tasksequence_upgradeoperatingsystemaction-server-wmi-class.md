@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SMS_TaskSequence_UpgradeOperatingSystemAction server WMI class

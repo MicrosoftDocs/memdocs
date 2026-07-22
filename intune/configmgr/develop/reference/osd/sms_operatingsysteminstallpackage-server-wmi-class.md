@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_OperatingSystemInstallPackage Server WMI Class
 The `SMS_OperatingSystemInstallPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for source files that are used in a scripted installation of a valid operating system, for example, Windows Vista, on a client computer.

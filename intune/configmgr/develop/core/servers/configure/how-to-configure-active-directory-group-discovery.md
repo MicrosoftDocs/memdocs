@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Configure Active Directory Group Discovery
 You configure the Active Directory Group Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.

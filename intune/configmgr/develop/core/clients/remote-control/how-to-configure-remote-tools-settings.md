@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Configure Remote Tools Settings
 In Configuration Manager, you set the Remote Tools Client Agent settings by modifying the necessary site control file settings.  

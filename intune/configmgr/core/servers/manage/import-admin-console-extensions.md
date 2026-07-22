@@ -2,9 +2,10 @@
 title: Import admin console extensions for Configuration Manager
 description: Learn about importing Configuration Manager console extensions
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Import Configuration Manager console extensions

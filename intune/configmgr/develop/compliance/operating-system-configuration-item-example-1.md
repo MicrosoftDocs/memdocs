@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Operating System Configuration Item Example 1
 In Configuration Manager, the following Operating System Configuration Item Schema example checks for Windows XP SP2.

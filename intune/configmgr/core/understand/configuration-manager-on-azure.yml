@@ -3,8 +3,9 @@ metadata:
   title: Configuration Manager on Azure FAQ
   description: Frequently asked questions about using Configuration Manager on an Azure environment.
   ms.date: 07/23/2021
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: faq
+  ms.service: microsoft-endpoint-configuration-manager
 title: Configuration Manager on Azure FAQ
 summary: |
   *Applies to: Configuration Manager (current branch)*

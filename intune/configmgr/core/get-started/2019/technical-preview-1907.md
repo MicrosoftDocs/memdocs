@@ -2,10 +2,11 @@
 title: Technical preview 1907
 description: Learn about new features available in the Configuration Manager technical preview branch version 1907.
 ms.date: 07/11/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 1907

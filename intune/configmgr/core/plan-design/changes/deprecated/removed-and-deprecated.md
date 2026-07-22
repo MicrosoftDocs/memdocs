@@ -2,9 +2,10 @@
 title: Deprecated items
 description: Learn about the features, products, and operating systems that Configuration Manager no longer supports.
 ms.date: 12/04/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Removed and deprecated items for Configuration Manager

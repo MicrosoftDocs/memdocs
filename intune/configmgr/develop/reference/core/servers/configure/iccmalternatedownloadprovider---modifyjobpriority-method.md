@@ -5,6 +5,7 @@ ms.date: 07/25/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICcmAlternateDownloadProvider : ModifyJobPriority Method
 The **ICcmAlternateDownloadProvider::ModifyJobPriority** method, in Configuration Manager, instructs the provider to modify the priority for a given job.

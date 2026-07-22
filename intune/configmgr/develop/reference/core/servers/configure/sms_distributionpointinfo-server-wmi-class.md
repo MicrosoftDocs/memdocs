@@ -5,6 +5,7 @@ ms.date: 05/24/2019
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SMS_DistributionPointInfo server WMI class

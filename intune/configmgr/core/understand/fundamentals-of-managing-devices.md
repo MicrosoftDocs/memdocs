@@ -2,9 +2,10 @@
 title: Fundamentals of managing devices
 description: Learn how to use Configuration Manager to manage devices.
 ms.date: 07/26/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Fundamentals of managing devices with Configuration Manager

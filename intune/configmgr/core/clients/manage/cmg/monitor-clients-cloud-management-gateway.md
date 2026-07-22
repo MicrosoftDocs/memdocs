@@ -2,9 +2,10 @@
 title: Monitor the CMG
 description: Monitor clients and network traffic through the cloud management gateway (CMG).
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Monitor the CMG

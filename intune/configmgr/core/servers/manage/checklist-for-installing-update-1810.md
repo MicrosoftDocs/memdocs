@@ -2,10 +2,11 @@
 title: Checklist for 1810
 description: Learn about actions to take before updating to Configuration Manager version 1810.
 ms.date: 02/28/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Checklist for installing update 1810 for Configuration Manager

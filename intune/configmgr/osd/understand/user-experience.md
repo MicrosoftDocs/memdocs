@@ -2,10 +2,11 @@
 title: User experiences for OS deployment
 description: Learn about user experiences like the task sequence progress and media wizard for operating system deployment in Configuration Manager.
 ms.date: 04/08/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # User experiences for OS deployment

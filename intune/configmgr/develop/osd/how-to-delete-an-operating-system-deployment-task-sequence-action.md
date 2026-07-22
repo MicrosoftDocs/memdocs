@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Learn about how to remove an action from an operating system deployment task sequence to delete the action from the sequence.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Delete an Operating System Deployment Task Sequence Action
 You delete an operating system deployment task sequence action, in Configuration Manager, by removing the action from the task sequence steps.

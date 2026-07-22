@@ -3,8 +3,9 @@ title: Application installation error codes reference
 description: Reference Application installation errors for tenant attach
 ms.date: 07/11/2022
 ms.topic: reference
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Application installation common error codes reference

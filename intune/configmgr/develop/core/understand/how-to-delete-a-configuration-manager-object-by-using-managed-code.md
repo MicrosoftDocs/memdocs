@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Delete a Configuration Manager Object by Using Managed Code
 To delete a Configuration Manager object by using the managed SMS Provider, use the [IResultObject.Delete](/previous-versions/system-center/developer/cc146496(v=msdn.10)) method. You can get a [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object for a Configuration Manager object in numerous ways. For more information, see [How to Read a Configuration Manager Object by Using Managed Code](../../../develop/core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md)

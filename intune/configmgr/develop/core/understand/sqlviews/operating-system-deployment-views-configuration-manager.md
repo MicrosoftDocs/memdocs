@@ -7,6 +7,7 @@ ms.topic: reference
 
 
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Operating system deployment views in Configuration Manager

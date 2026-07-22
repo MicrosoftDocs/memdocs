@@ -2,9 +2,10 @@
 title: Diagnostics data collection
 description: Learn about how Configuration Manager collects diagnostics and usage data about itself.
 ms.date: 08/10/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How Configuration Manager collects diagnostics and usage data

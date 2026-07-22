@@ -2,9 +2,10 @@
 title: Supported site system servers
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
 ms.date: 12/19/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Supported operating systems for Configuration Manager site system servers

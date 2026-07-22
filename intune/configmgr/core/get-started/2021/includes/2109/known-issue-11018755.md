@@ -1,7 +1,8 @@
 ---
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: include
 ms.date: 09/27/2021
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 ### Configuration Manager console won't automatically update

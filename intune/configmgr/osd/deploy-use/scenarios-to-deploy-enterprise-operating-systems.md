@@ -2,9 +2,10 @@
 title: Scenarios to deploy enterprise operating systems
 description: Learn about several scenarios to deploy enterprise operating systems with Configuration Manager.
 ms.date: 10/01/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Scenarios to deploy enterprise operating systems with Configuration Manager

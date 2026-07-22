@@ -2,9 +2,10 @@
 title: Troubleshoot Connected Cache
 description: Technical details for Microsoft Connected Cache to help you troubleshoot issues.
 ms.date: 11/23/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Troubleshoot Microsoft Connected Cache with Configuration Manager

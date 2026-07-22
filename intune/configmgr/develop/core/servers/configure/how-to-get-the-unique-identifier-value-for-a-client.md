@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Get the Unique Identifier Value for a Client
 When you discover system resource data for a client, in Configuration Manager, you must specify the client's unique identifier value in the data discovery record (DDR), such as:

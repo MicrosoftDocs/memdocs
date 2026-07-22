@@ -2,9 +2,10 @@
 title: Manage distribution points
 description: Use distribution points to host the content that you deploy to devices and users.
 ms.date: 07/17/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Install and configure distribution points in Configuration Manager

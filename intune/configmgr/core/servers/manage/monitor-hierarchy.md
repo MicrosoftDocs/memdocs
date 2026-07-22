@@ -2,9 +2,10 @@
 title: Monitor the hierarchy
 description: Learn how to monitor your infrastructure in Configuration Manager by using the Monitoring workspace in the console.
 ms.date: 06/06/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Monitor the hierarchy

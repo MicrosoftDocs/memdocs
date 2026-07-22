@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Track Operating System Deployment Migrations in Configuration Manager
 You track Configuration Manager operating system migrations by inspecting the [SMS_StateMigration](../../develop/reference/osd/sms_statemigration-server-wmi-class.md) class.

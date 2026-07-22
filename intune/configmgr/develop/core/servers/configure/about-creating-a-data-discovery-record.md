@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Creating a Data Discovery Record
 To create data discovery records (DDRs), you must use the SMSRsGenCtl.dll and the functions that are described in the following table. These functions create a single DDR that can be process by Data Discovery Manager (DDM). The order in which you call the functions is important; you must call `DDRNew` before calling any of the functions that add properties. The order in which you add properties to your class is arbitrary. However, the last function you call must be `DDRWrite` to create the DDR. The DDR must then be manually copied to the SMS\Inboxes\Auth\Ddm.box directory.

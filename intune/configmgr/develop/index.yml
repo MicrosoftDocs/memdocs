@@ -9,6 +9,7 @@ metadata:
   ms.subservice: sdk
   ms.topic: landing-page
   ms.date: 09/23/2021
+  ms.service: microsoft-endpoint-configuration-manager
 
 landingContent:
   - title: About Configuration Manager SDK

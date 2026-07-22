@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Set the Restore-Only Mode for a State Migration Point
 In Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the **SMPQuiesceState** embedded property.

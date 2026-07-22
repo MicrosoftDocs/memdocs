@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Custom Action Control
 In Configuration Manager, to create a custom action control, you create a Windows control by using the following two classes:

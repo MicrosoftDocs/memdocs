@@ -2,9 +2,10 @@
 title: Create Mac computer applications
 description: See which considerations you must take into account when you create and deploy applications for Mac computers.
 ms.date: 01/05/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Create Mac computer applications with Configuration Manager
 

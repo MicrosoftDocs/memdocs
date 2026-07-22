@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Enumerate the Members of a Collection
 In Configuration Manager, the preferred method to enumerate through a collection is to use `SMS_FullCollectionMembership Server WMI Class`.  

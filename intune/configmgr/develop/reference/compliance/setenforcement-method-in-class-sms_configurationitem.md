@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SetEnforcement Method in Class SMS_ConfigurationItem
 The `SetEnforcement` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the enforcement and the enforcement date for a configuration item.

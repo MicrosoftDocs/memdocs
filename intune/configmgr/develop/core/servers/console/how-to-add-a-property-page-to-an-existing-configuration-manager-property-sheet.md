@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Add a Property Page to an Existing Configuration Manager Property Sheet
 To add a property page to an existing property sheet, in Configuration Manager, you add the property page XML to the property sheet's XML file. For existing Configuration Manager property sheets, you copy the existing property XML file to the XmlStorage\Extensions\Forms folder from XmlStorage\Forms. When the Configuration Manager console loads, it will use the XML it finds in the XmlStorage\Extensions\Forms folder in preference to existing forms in XmlStorage\Forms.

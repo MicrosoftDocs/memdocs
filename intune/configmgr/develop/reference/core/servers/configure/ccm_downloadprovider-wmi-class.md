@@ -5,6 +5,7 @@ ms.date: 04/14/2026
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_DownloadProvider WMI Class
 The **CCM_DownloadProvider** class, in Configuration Manager, defines and registers an Alternate Content Provider (ACP). It's a non-Microsoft download plug-in that  the Configuration Manager client can use to download content. The provider must be registered on the client by using this class before it can be used.

@@ -2,9 +2,10 @@
 title: Intune role-based access control for tenant-attached devices
 description: Enable Intune role-based access control for Configuration Manager tenant-attached clients
 ms.date: 08/24/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Intune role-based access control for tenant-attached clients

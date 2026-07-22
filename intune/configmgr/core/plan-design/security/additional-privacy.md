@@ -2,11 +2,12 @@
 title: Additional privacy information
 description: Learn about how Microsoft collects and uses data from Configuration Manager.
 ms.date: 09/04/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection:
     - tier3
     - essentials-privacy
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Additional information about privacy for Configuration Manager

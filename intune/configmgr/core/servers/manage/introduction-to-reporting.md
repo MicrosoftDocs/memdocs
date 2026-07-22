@@ -2,9 +2,10 @@
 title: Introduction to reporting
 description: Learn about the set of tools and resources available to you for managing reporting in Configuration Manager.
 ms.date: 04/05/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Introduction to reporting in Configuration Manager

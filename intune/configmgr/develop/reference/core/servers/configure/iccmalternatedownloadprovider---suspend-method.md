@@ -5,6 +5,7 @@ ms.date: 07/25/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICcmAlternateDownloadProvider : Suspend Method
 The **ICcmAlternateDownloadProvider::Suspend** method, in Configuration Manager, instructs the provider to suspend a given job.

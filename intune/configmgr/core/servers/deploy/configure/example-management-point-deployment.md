@@ -2,9 +2,10 @@
 title: Example management point deployment in an untrusted domain
 description: Follow a step-by-step example to learn how to install a Configuration Manager management point on a server in an untrusted Active Directory domain.
 ms.date: 05/13/2026
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Step-by-step example deployment of a management point in an untrusted Active Directory domain

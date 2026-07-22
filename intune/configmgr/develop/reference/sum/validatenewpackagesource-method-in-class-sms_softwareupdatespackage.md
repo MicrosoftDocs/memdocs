@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ValidateNewPackageSource Method in Class SMS_SoftwareUpdatesPackage
 The `ValidateNewPackageSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, validates a new package source location for a software update.  

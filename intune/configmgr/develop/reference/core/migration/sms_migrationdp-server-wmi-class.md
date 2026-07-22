@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_MigrationDP Server WMI Class
 The `SMS_MigrationDP` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the shared distribution points between the current active Configuration Manager 2007 hierarchy and the System Center 2012 Configuration Manager hierarchy.

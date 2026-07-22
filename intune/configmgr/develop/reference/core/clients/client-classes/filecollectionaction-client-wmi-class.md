@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # FileCollectionAction Client WMI Class
 In Configuration Manager, the **FileCollectionAction** class is a client Windows Management Instrumentation (WMI) class that associates a set of file collection rules with reporting details, tying together files to collect with the destination of the report.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # DeleteStatistics Method in Class SMS_ComponentSummarizer
 The `DeleteStatistics` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes status message counts for Configuration Manager components.

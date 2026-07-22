@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_CollectionRuleIncludeCollection Server WMI Class
 The `SMS_CollectionRuleIncludeCollection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an inclusion rule that's added as a rule to the `SMS_Collection` instance. Any members of a collection defined by this rule will be included in the collection.
