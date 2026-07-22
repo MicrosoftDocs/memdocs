@@ -2,9 +2,10 @@
 title: Toolkit reference - Microsoft Deployment Toolkit (MDT) Task Sequence Steps
 description: Reference details for Microsoft Deployment Toolkit (MDT) Task Sequence Steps
 ms.date: 09/09/2016
-ms.subservice: mdt
+ms.subservice: microsoft-deployment-toolkit
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Task Sequence Steps
