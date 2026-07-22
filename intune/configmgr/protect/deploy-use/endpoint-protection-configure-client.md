@@ -5,6 +5,7 @@ ms.date: 07/30/2018
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure custom client settings for Endpoint Protection

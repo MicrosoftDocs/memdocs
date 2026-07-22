@@ -2,9 +2,10 @@
 title: CMPivot sample scripts
 description: Script samples for CMPivot in Configuration Manager.
 ms.date: 07/12/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: sample
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CMPivot sample scripts

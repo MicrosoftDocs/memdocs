@@ -5,6 +5,7 @@ description: In Configuration Manager, the following example shows how to create
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Program
 The following example shows how to create a program, in Configuration Manager, by using the `SMS_Program` class and class properties.

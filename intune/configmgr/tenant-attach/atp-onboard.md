@@ -4,8 +4,9 @@ description: Deploy Microsoft Defender for Endpoint Detection and Response (EDR)
 ms.date: 05/13/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Tenant attach: Onboard Microsoft Configuration Manager clients to Microsoft Defender for Endpoint from the admin center

@@ -2,9 +2,10 @@
 title: Service connection point
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
 ms.date: 10/12/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About the service connection point in Configuration Manager

@@ -2,9 +2,10 @@
 title: Plan for PKI certificates
 description: Plan for the use of PKI digital certificates in Configuration Manager.
 ms.date: 03/23/2023
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for PKI certificates in Configuration Manager

@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Initiate a One-time Membership Evaluation for a Collection
 ### To Initiate a One-time Membership Evaluation  

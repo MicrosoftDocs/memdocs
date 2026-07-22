@@ -5,6 +5,7 @@ ms.date: 04/30/2019
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Advanced exercise 1: Create a new report for compliance settings in Configuration Manager

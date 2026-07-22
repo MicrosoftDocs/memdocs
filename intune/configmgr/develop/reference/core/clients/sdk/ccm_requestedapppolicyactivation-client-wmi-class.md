@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 description: Learn how the CCM_RequestedAppPolicy Activation class represents a requested application policy activation.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_RequestedAppPolicyActivation Client WMI Class
 The `CCM_RequestedAppPolicyActivation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a requested application policy activation.

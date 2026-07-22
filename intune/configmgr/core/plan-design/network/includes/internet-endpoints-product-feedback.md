@@ -1,7 +1,8 @@
 ---
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: include
 ms.date: 11/30/2020
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 On the computer where you run the console, allow it to access the following internet endpoints to send diagnostic data to Microsoft:

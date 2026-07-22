@@ -2,9 +2,10 @@
 title: Collections introduction
 description: Get an introduction to using collections in Configuration Manager.
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Introduction to collections in Configuration Manager
 

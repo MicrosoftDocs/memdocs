@@ -2,9 +2,10 @@
 title: Refresh an existing computer's OS
 description: You can use several methods in Configuration Manager to partition and format an existing computer and install a new OS on the computer.
 ms.date: 08/27/2019
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Refresh an existing computer with a new version of Windows

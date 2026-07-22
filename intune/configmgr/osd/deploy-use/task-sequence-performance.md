@@ -2,9 +2,10 @@
 title: Task sequence performance
 description: To improve the overall speed of the task sequence, run it with the Windows high-performance power plan.
 ms.date: 04/08/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Task sequence performance

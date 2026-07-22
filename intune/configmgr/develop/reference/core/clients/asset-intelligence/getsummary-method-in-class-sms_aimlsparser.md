@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GetSummary Method in Class SMS_AIMLSParser
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the counts of imported Microsoft License count and non-Microsoft license count.

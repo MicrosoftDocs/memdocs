@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Enable or Disable the Compliance Settings (DCM) Agent
 In Configuration Manager, you enable or disable the Desired Configuration Management Client Agent by modifying the site control file settings.

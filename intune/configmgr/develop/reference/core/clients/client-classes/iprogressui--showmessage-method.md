@@ -5,6 +5,7 @@ ms.date: 04/03/2019
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # IProgressUI::ShowMessage method

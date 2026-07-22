@@ -5,6 +5,7 @@ ms.date: 11/29/2019
 ms.subservice: protect
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # BitLocker event logs

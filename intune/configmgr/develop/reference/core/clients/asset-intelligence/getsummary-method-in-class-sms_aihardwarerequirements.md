@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # GetSummary Method in Class SMS_AIHardwareRequirements
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, provides a summary count of validated and user-defined state items in the `SMS_AIHardwareRequirements` class.

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Delete a Configuration Manager Object by Using WMI
 To delete a Configuration Manager object, in Configuration Manager, call the [SWbemObject](/windows/win32/wmisdk/swbemobject) object [Delete_](/windows/win32/wmisdk/swbemobject-delete-) method.

@@ -3,9 +3,10 @@ metadata:
   title: Microsoft Configuration Manager FAQ
   description: Frequently asked questions about Microsoft Configuration Manager
   ms.date: 04/16/2021
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: faq
   ms.collection: highpri
+  ms.service: microsoft-endpoint-configuration-manager
 
 title: Microsoft Configuration Manager FAQ
 summary: |

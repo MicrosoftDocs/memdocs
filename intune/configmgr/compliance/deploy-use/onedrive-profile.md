@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: compliance
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # OneDrive for Business Profiles

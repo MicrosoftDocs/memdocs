@@ -5,6 +5,7 @@ ms.date: 05/05/2021
 ms.subservice: compliance
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Security and privacy for compliance settings in Configuration Manager

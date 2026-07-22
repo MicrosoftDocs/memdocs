@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Simple Example of List, Create, Modify, and Delete
 The following example shows set of very basic methods using the `SMS_Package` class to demonstrate List, Create, Modify and Delete operations using the SMS Provider. This is a look at the structure of a basic Configuration Manager program – there are more useful method snippets in other areas of the SDK that accomplish specific tasks.

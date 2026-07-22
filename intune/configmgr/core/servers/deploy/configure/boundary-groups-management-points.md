@@ -2,9 +2,10 @@
 title: Boundary groups and management points
 description: Understand how clients and management points behave with boundary groups.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Boundary groups and management points

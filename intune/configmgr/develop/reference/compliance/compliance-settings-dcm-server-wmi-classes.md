@@ -5,6 +5,7 @@ ms.date: 08/02/2019
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About compliance settings server WMI classes

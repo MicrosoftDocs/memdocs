@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Configuration Manager Server Development Requirements
 In Configuration Manager, the SMS Provider and associated technologies can be programmed by using the following programming languages.

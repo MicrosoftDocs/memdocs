@@ -5,6 +5,7 @@ description: Configuration Manager uses XML to define management classes whose i
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Manager Console Management Classes
 Configuration Manager uses XML to define management classes whose instances contain data that can be viewed from within the Configuration Manager console. Custom management classes can be created and added within the console architecture.

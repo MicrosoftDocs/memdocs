@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Import a MOF File to Extend Inventory
 You import a MOF file to extend inventory, in Configuration Manager, by using the `ImportInventoryReport` method.  

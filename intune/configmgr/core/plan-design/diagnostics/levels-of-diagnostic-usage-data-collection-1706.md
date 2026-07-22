@@ -2,10 +2,11 @@
 title: Diagnostic data for 1706
 description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1706 collects.
 ms.date: 07/31/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Levels of diagnostic usage data collection for version 1706 of Configuration Manager

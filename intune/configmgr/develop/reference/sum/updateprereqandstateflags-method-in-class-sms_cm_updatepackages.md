@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # UpdatePrereqAndStateFlags Method in Class SMS_CM_UpdatePackages
 The `UpdatePrereqAndStateFlags` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the installation state of update packages.  

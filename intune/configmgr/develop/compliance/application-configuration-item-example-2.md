@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Application Configuration Item Example 2
 In Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.

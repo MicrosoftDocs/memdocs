@@ -5,6 +5,7 @@ ms.topic: article
 ms.subservice: other
 description: Additional links for Configuration Manager help documentation
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Online documentation for Configuration Manager

@@ -3,8 +3,9 @@ metadata:
   title: Diagnostic and usage data FAQ
   description: Frequently asked questions about diagnostic and usage data for Configuration Manager
   ms.date: 12/01/2021
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.topic: faq
+  ms.service: microsoft-endpoint-configuration-manager
 
 title: Frequently asked questions about diagnostics and usage data
 summary: |

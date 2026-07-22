@@ -2,9 +2,10 @@
 title: Install Software Updates
 description: Recommendations for using the task sequence step Install Software Updates in Configuration Manager.
 ms.date: 03/05/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Install Software Updates

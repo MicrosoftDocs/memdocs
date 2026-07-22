@@ -2,9 +2,10 @@
 title: Create an image for an OEM in factory or a local depot
 description: Use prestaged media deployments to reduce network traffic while you deploy an OS to a computer that isn't fully provisioned.
 ms.date: 08/11/2020
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create an image for an OEM in factory or a local depot with Configuration Manager

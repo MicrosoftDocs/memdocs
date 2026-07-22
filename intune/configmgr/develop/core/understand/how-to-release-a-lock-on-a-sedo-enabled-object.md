@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Learn about how to release a locked SEDO-enabled object using its object path by creating a ReleaseLock method.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Release a Lock on a SEDO-Enabled Object
 ### To Release an Explicit Lock on a SEDO-enabled Object

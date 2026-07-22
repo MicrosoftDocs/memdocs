@@ -2,9 +2,10 @@
 title: Test database update
 description: Test upgrade the site database when installing updates for Configuration Manager.
 ms.date: 02/16/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Test the database upgrade when installing an update

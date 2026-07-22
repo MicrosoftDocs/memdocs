@@ -2,9 +2,10 @@
 title: Content Library Transfer tool
 description: Use the Content Library Transfer tool to transfer content from one disk drive to another on a Configuration Manager distribution point.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Content Library Transfer tool

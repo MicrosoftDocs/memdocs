@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Enable Method in Class SMS_SupportedPlatforms
 The `Enable` Windows Management Instrumentation (WMI) class method, in Configuration Manager, enables or disables the platforms.

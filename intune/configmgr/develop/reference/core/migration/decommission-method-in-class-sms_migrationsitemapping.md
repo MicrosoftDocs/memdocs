@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Decommission Method in Class SMS_MigrationSiteMapping
 The `Decommission` Windows Management Instrumentation (WMI) class method, in Configuration Manager, decommissions site mapping.  

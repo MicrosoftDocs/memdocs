@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using WMI
 In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecQuery](/windows/win32/wmisdk/swbemservices-execquery) method and passing a WQL query.

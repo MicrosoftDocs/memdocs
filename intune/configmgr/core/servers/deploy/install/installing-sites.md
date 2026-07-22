@@ -2,9 +2,10 @@
 title: Site installation resources
 description: Review a list of articles that help you install Configuration Manager or add sites to your hierarchy.
 ms.date: 04/30/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Resources for installing Configuration Manager sites

@@ -5,6 +5,7 @@ ms.date: 03/02/2021
 ms.topic: how-to
 ms.subservice: compliance
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager

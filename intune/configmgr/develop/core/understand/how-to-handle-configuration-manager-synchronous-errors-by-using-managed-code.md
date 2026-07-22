@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using Managed Code
 To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exception in the same catch block.

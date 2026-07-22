@@ -5,6 +5,7 @@ ms.date: 02/14/2017
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create an Endpoint Protection point site system role

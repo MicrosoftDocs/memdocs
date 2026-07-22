@@ -3,12 +3,13 @@ title: Microsoft Configuration Manager documentation
 summary: "Official product documentation for Configuration Manager"
 metadata:
    ms.topic: hub-page
-   ms.subservice: core-infra
+   ms.subservice: core-infrastructure
    ms.date: 06/10/2024
    ms.collection:
     - highpri
     - essentials-navigation
    ms.custom: intro-overview
+   ms.service: microsoft-endpoint-configuration-manager
 
 highlightedContent:
   items:

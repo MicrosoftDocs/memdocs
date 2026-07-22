@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Call a Configuration Manager Object Class Method by Using WMI
 To call a SMS Provider class method, in Configuration Manager, you use the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecMethod](/windows/win32/wmisdk/swbemservices-execmethod) method to call methods that are defined by the class.

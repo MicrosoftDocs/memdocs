@@ -6,9 +6,10 @@ summary: Use Configuration Manager to deploy Windows via different methods and a
 metadata:
   title: OS deployment documentation
   description: Use Configuration Manager to deploy Windows via different methods and automate tasks.
-  ms.subservice: osd
+  ms.subservice: operating-system-deployment
   ms.topic: landing-page
   ms.date: 09/23/2021
+  ms.service: microsoft-endpoint-configuration-manager
 
 landingContent:
   - title: About OS deployment

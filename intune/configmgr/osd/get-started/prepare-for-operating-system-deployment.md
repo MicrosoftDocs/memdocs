@@ -2,9 +2,10 @@
 title: Prepare for OS deployment
 description: Learn about how to prepare for operating system deployments in Configuration Manager
 ms.date: 02/22/2019
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Prepare for OS deployment in Configuration Manager

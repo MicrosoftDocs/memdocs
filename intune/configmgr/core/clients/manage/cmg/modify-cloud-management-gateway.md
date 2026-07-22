@@ -2,10 +2,11 @@
 title: Modify a CMG
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Modify a CMG

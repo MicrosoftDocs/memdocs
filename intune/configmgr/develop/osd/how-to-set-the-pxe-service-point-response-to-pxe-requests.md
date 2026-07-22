@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Set the PXE Service Point Response to PXE Requests
 In Configuration Manager, you set the distribution point response to incoming PXE requests by setting the **IsActive** embedded property.

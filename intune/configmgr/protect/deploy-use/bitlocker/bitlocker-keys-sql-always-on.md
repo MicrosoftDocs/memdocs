@@ -5,6 +5,7 @@ ms.date: 06/12/2025
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SQL Always On when BitLocker recovery data is encrypted in the database

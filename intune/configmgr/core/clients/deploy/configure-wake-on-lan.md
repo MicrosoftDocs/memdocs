@@ -2,9 +2,10 @@
 title: Configure Wake on LAN
 description: Select Wake On LAN settings in Configuration Manager.
 ms.date: 11/30/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to configure Wake on LAN in Configuration Manager
 

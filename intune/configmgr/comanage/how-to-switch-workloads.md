@@ -5,6 +5,7 @@ ms.subservice: co-management
 ms.date: 10/05/2021
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to switch Configuration Manager workloads to Intune

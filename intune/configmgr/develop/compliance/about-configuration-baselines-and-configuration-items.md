@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # About Configuration Baselines and Configuration Items
 In Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time. Configuration baselines in Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.

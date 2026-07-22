@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Enable the Partner Notification API
 The Partner Notification API allows third-party partners to use the Wake on LAN feature of Configuration Manager to receive a list of computers that need to be woken up based on advertisements for software distribution.

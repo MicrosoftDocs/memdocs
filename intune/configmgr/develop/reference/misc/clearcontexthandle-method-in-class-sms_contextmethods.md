@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ClearContextHandle Method in Class SMS_ContextMethods
 The `ClearContextHandle` method, in Configuration Manager, clears cached context data that is associated with the specified context handle.

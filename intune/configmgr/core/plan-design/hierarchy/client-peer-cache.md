@@ -2,9 +2,10 @@
 title: Client Peer Cache
 description: Use client peer cache for source locations when deploying content with Configuration Manager.
 ms.date: 03/28/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Peer cache for Configuration Manager clients

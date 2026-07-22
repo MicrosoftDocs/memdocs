@@ -2,9 +2,10 @@
 title: Console extensions from Community hub
 description: Learn about managing Community hub console extensions for Configuration Manager
 ms.date: 10/31/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Console extensions from Community hub

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Query
 In Configuration Manager, you create an `SMS_Query`-based query by creating an instance of `SMS_Query`. The `SMS_Query` class `Expression` object defines a WQL query. If you want to limit the query results to a specific collection, specify the collection identifier in the `LimitToCollectionID` property.

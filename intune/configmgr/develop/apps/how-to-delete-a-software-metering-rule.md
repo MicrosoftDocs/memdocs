@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Delete a Software Metering Rule
 You delete a software metering rule, in Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and calling the delete method.

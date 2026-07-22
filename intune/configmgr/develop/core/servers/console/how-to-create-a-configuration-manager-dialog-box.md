@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Dialog Box
 These procedures show you how to create a modeless dialog box assembly, in Configuration Manager, by using Visual Studio.

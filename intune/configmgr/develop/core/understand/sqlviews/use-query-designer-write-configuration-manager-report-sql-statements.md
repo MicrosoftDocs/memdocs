@@ -7,6 +7,7 @@ ms.topic: article
 
 
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Using query designer to write report SQL statements for Configuration Manager reports

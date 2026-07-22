@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create Node XML for a Configuration Manager Console Grid View
 To create the node XML for the Configuration Manager console default grid view you create an XML file describing a [RootNodeDescription](/previous-versions/system-center/developer/cc147277(v=msdn.10)) element.

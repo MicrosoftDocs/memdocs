@@ -5,6 +5,7 @@ ms.date: 12/14/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_PackageBaseclass Server WMI Class
 The `SMS_PackageBaseclass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the abstract base class for all packages, for example, [SMS_BootImagePackage Server WMI Class](../../../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md), [SMS_DriverPackage Server WMI Class](../../../../../develop/reference/osd/sms_driverpackage-server-wmi-class.md), and [SMS_SoftwareUpdatesPackage Server WMI Class](../../../../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md).

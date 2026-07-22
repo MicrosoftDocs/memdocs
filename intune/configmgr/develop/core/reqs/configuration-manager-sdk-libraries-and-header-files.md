@@ -5,6 +5,7 @@ ms.date: 11/18/2021
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configuration Manager SDK libraries

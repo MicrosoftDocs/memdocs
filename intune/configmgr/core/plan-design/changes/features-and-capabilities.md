@@ -2,9 +2,10 @@
 title: Features and capabilities
 description: Learn about the primary management capabilities of Configuration Manager.
 ms.date: 07/15/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: overview
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Features and capabilities of Configuration Manager

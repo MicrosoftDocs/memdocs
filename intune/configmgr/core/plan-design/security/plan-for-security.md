@@ -2,11 +2,12 @@
 title: Plan for security
 description: Get best practices and other information about security in Configuration Manager.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection:
     - tier3
     - essentials-security
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for security in Configuration Manager

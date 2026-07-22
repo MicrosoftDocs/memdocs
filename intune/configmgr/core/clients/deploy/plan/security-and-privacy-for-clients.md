@@ -2,9 +2,10 @@
 title: Client security and privacy
 description: Learn about security and privacy for Configuration Manager clients.
 ms.date: 05/05/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Security and privacy for Configuration Manager clients

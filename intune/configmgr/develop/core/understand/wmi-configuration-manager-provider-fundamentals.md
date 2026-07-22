@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # WMI Configuration Manager Provider Fundamentals
 Windows Script Host-based applications and scripts work in Windows Management Instrumentation (WMI) through the WMI Object Model, which defines the programming interface to WMI. A number of WMI object types are used when manipulating Configuration Manager objects. For more information about the WMI Object Model, see [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page).

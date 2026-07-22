@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: co-management
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to monitor co-management in Configuration Manager

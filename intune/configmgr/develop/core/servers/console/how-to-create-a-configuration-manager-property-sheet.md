@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a Configuration Manager Property Sheet
 To create a Configuration Manager console property sheet, in Configuration Manager, you create a .NET Framework assembly that inherits from the following class:

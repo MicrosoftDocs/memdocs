@@ -5,6 +5,7 @@ ms.date: 08/02/2021
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CCM_NetworkSettings Client WMI Class

@@ -2,9 +2,10 @@
 title: Set up enrollment for on-premises MDM
 description: Grant users permission to enroll their devices for on-premises mobile device management (MDM) in Configuration Manager.
 ms.date: 01/09/2020
-ms.subservice: mdm
+ms.subservice: mobile-device-management
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Set up device enrollment for on-premises MDM in Configuration Manager

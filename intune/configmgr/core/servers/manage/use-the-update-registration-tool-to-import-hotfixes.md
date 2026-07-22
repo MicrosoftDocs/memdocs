@@ -2,9 +2,10 @@
 title: Update registration tool
 description: Find out when and how to use the update registration tool to manually import an update to the Configuration Manager console.
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use the update registration tool to import hotfixes

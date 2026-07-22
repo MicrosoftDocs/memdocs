@@ -2,9 +2,10 @@
 title: Use Software Center to deploy Windows over the network
 description: Deploy an OS from Software Center to refresh an existing computer with a new version of Windows or to upgrade Windows to the latest version.
 ms.date: 08/11/2020
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use Software Center to deploy Windows over the network with Configuration Manager

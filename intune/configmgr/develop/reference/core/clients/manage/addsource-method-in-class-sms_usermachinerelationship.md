@@ -5,6 +5,7 @@ description: In Configuration Manager, the AddSource Windows Management Instrume
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddSource Method in Class SMS_UserMachineRelationship
 The `AddSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a source for the relationship between the user and the device.

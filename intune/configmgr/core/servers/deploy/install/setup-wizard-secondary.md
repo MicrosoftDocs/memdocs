@@ -2,9 +2,10 @@
 title: Install a secondary site
 description: Use the Configuration Manager setup wizard to install a new secondary site.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use the setup wizard to install a secondary site

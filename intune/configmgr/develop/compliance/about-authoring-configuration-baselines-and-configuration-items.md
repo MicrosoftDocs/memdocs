@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
 description: Learn about how to configure data through the Configuration Manager console or directly editing the DCM Digest XML file.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # About authoring configuration baselines and configuration items

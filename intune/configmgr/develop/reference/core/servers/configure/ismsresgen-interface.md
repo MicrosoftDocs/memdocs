@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ISMSResGen Interface
 The `ISMSResGen` automation interface, in Configuration Manager, enables the creation of Data Discovery Records (DDR). This interface inherits from `IDispatch`.

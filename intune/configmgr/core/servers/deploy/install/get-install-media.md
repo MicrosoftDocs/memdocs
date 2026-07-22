@@ -2,9 +2,10 @@
 title: Get installation media
 description: Where to find installation media for new Configuration Manager installations.
 ms.date: 01/11/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Where to get installation media for Configuration Manager
 

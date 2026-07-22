@@ -5,6 +5,7 @@ ms.date: 01/04/2022
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create configuration items for macOS X devices

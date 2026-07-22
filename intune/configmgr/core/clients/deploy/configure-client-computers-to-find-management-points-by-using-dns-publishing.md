@@ -2,9 +2,10 @@
 title: Configure clients to use DNS publishing
 description: Configure Configuration Manager client computers to find management points by using DNS publishing.
 ms.date: 04/23/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure client computers to find management points by using DNS publishing

@@ -5,6 +5,7 @@ ms.date: 03/29/2022
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Find a package family name (PFN) for per-app VPN
 

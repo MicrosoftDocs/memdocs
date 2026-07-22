@@ -5,6 +5,7 @@ ms.date: 03/13/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # AddBoundary Method in Class SMS_DefaultBoundaryGroup
  The `AddBoundary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds one or more boundaries to a default boundary group.

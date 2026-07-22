@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Reset the Software Inventory Cache
 In Configuration Manager, you reset the software inventory cache by connecting to the inventory agent namespace and deleting the inventory action status instance for software inventory.  

@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_SUMDeploymentStatus Server WMI Class
 The `SMS_SUMDeploymentStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents per-deployment-state summary for SUM deployments in-console monitoring.  

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_Processor Client WMI Class
 The `SMS_Processor` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents a device that can interpret a sequence of instructions on a computer that is running a Windows operating system. On a multiprocessor computer, one `SMS_Processor` object exists for each processor.

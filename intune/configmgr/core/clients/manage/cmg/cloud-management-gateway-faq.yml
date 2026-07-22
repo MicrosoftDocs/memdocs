@@ -4,9 +4,10 @@ metadata:
   description: Use this article to answer frequently asked questions about the cloud management gateway (CMG).
   ms.date: 12/04/2024
   ms.topic: faq
-  ms.subservice: core-infra
+  ms.subservice: core-infrastructure
   ms.collection: highpri
   ms.custom: sfi-ga-nochange
+  ms.service: microsoft-endpoint-configuration-manager
 
 title: Frequently asked questions about the CMG
 summary: |

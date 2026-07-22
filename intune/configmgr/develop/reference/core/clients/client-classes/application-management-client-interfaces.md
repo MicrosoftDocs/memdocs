@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Application Management Client Interfaces
 In Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client.

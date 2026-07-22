@@ -2,9 +2,10 @@
 title: Site failure impacts
 description: Understand the effects of various failures in a Configuration Manager site.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Site failure impacts in Configuration Manager

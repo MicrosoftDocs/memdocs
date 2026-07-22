@@ -2,9 +2,10 @@
 title: Log file reference
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
 ms.date: 08/11/2025
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Log file reference

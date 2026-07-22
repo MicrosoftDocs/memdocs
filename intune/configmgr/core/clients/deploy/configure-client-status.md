@@ -2,9 +2,10 @@
 title: Configure client status
 description: Select client status settings in Configuration Manager.
 ms.date: 07/13/2020
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to configure client status in Configuration Manager

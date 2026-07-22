@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 description: Learn how to set the PXE service point response to all network interfaces by setting the BindPolicy embedded property.
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Set the PXE Service Point Response to All Network Interfaces
 In Configuration Manager, you set the operating system deployment PXE service point response to network interfaces by setting the `BindPolicy` embedded property.

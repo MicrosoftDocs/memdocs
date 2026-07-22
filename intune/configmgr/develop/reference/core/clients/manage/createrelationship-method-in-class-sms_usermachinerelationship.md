@@ -5,6 +5,7 @@ ms.date: 08/26/2020
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CreateRelationship method in class SMS_UserMachineRelationship

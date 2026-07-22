@@ -2,9 +2,10 @@
 title: Find help
 description: Find resources for additional information about Configuration Manager.
 ms.date: 11/10/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Find help for using Configuration Manager

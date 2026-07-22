@@ -2,9 +2,10 @@
 title: Flowchart - unplanned promotion
 description: A flowchart diagram for how the Configuration Manager site server in passive mode is promoted to active when the current site server in active mode is offline.
 ms.date: 07/30/2018
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Flowchart - Promote site server (unplanned)

@@ -5,6 +5,7 @@ ms.date: 10/31/2022
 ms.subservice: other
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Contribute to the Community hub

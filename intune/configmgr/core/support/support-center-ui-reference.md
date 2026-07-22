@@ -2,9 +2,10 @@
 title: Support Center UI reference
 description: Learn how to use the Support Center tools.
 ms.date: 12/01/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Support Center user interface reference

@@ -2,9 +2,10 @@
 title: Technical preview 2205
 description: Learn about new features available in the Configuration Manager technical preview branch version 2205.
 ms.date: 05/23/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 2205

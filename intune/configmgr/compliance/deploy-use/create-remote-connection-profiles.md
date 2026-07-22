@@ -5,6 +5,7 @@ ms.date: 01/06/2020
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Remote connection profiles in Configuration Manager

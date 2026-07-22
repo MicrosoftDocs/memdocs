@@ -1,7 +1,8 @@
 ---
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: include
 ms.date: 05/04/2021
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 <!--1357013-->

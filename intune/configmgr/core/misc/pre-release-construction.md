@@ -6,6 +6,7 @@ ms.subservice: other
 ms.topic: article
 robots: NOINDEX, NOFOLLOW
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Content under construction

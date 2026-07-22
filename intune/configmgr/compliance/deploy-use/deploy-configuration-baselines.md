@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: compliance
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to deploy configuration baselines in Configuration Manager
 

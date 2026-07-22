@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: co-management
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Paths to co-management

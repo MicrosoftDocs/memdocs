@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # CCM_Policy_EmbeddedObject Client WMI Class
 In Configuration Manager, the `CCM_Policy_EmbeddedObject` class is a client Windows Management Instrumentation (WMI) class that represents a policy setting embedded object. Use of embedded objects ensures that the class definition is correctly replicated throughout the policy tree.

@@ -2,9 +2,10 @@
 title: Monitor content
 description: Understand how to monitor distributed content by using the Configuration Manager console.
 ms.date: 04/08/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Monitor content you distribute with Configuration Manager

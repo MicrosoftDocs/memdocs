@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # How to Create a New Security Scope
 Creating a security scope in Configuration Manager is simple. All security scopes are defined by the `SMS_SecuredCategory` Windows Management Instrumentation (WMI) class. Only two properties are required when you are creating a new security scope, the name and description.

@@ -5,6 +5,7 @@ ms.date: 07/25/2017
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # ICcmAlternateDownloadProvider : CancelJob Method
 The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.

@@ -5,6 +5,7 @@ ms.date: 01/04/2022
 ms.subservice: compliance
 ms.topic: get-started
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Get started with compliance settings in Configuration Manager

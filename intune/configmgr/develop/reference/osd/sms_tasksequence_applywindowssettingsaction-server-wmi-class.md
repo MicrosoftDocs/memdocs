@@ -5,6 +5,7 @@ ms.date: 08/11/2020
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # SMS_TaskSequence_ApplyWindowsSettingsAction server WMI class

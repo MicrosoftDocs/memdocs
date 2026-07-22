@@ -2,9 +2,10 @@
 title: Tenant attached CMPivot usage overview
 description: CMPivot usage overview for Microsoft Intune tenant attached devices.
 ms.date: 01/25/2022
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Tenant attach: CMPivot usage overview

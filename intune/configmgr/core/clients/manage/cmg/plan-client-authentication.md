@@ -2,9 +2,10 @@
 title: CMG client authentication
 description: Plan for how clients authenticate to the cloud management gateway (CMG).
 ms.date: 08/02/2021
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # CMG client authentication

@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Plan for and configure compliance settings in Configuration Manager
 

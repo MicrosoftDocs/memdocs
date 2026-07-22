@@ -5,6 +5,7 @@ ms.date: 12/07/2021
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # How to set up the administration service in Configuration Manager

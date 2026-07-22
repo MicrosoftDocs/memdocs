@@ -3,8 +3,9 @@ title: Tenant attach - BitLocker recovery keys
 description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Intune admin center.
 ms.date: 01/25/2022
 ms.topic: how-to
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Tenant attach: BitLocker recovery keys

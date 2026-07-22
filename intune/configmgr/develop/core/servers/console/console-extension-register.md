@@ -5,6 +5,7 @@ ms.date: 11/19/2021
 ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Console extension registration though community hub

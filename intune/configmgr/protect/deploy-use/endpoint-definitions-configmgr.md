@@ -5,6 +5,7 @@ ms.date: 04/23/2020
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Use Configuration Manager to deliver definition updates

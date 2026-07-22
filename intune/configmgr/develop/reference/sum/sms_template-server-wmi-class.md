@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 
 
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # SMS_Template Server WMI Class
 The `SMS_Template` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a deployment template available on the site that you can use instead of the Configuration Manager console deployment wizard to deploy a software update.  

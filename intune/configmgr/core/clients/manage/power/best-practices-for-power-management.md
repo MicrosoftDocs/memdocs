@@ -2,9 +2,10 @@
 title: Recommendations for power management
 description: Learn Microsoft recommendations for power management in Configuration Manager.
 ms.date: 09/10/2019
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Recommendations for power management in Configuration Manager

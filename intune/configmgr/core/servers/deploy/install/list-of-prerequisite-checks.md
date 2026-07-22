@@ -2,9 +2,10 @@
 title: Prerequisite checks
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
 ms.date: 03/28/2024
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: reference
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # List of prerequisite checks for Configuration Manager

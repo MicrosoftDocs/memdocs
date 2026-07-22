@@ -2,9 +2,10 @@
 title: Source hierarchy strategy
 description: Configure a source hierarchy and gather data from a source site before you configure a Configuration Manager migration job.
 ms.date: 01/3/2017
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Plan a source hierarchy strategy in Configuration Manager
 

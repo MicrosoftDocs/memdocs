@@ -2,9 +2,10 @@
 title: Create a task sequence for non-OS deployments
 description: Create task sequences that aren't for deploying an OS, such as distributing software or automating tasks
 ms.date: 11/30/2020
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create a task sequence for non-OS deployments

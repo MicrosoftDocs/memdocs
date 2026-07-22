@@ -3,8 +3,9 @@ title: Troubleshooting the device timeline
 description: Troubleshooting the device timeline for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
-ms.subservice: core-infra
+ms.subservice: core-infrastructure
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # <a name="bkmk_timeline"></a> Troubleshoot the timeline for devices uploaded to the admin center

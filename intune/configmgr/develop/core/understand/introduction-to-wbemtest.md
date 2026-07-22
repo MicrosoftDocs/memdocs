@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 # Introduction to WBEMTEST
 If you spend much time around Configuration Manager, you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft's implementation of an Internet standard called Web Based Enterprise Management (WBEM).
