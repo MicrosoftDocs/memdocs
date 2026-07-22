@@ -2,9 +2,10 @@
 title: Security and privacy for OS deployment
 description: Learn about security and privacy best practices for OS deployment in Configuration Manager.
 ms.date: 10/06/2016
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Security and privacy for OS deployment in Configuration Manager

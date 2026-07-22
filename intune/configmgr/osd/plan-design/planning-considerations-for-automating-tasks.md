@@ -2,9 +2,10 @@
 title: Plan for automating tasks
 description: Plan before you create task sequences to automate tasks with Configuration Manager.
 ms.date: 03/10/2022
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Plan for automating tasks in Configuration Manager

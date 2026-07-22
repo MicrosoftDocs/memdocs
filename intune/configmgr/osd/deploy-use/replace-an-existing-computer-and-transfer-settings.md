@@ -2,9 +2,10 @@
 title: Replace an existing computer and transfer settings
 description: In Configuration Manager, choose from deployment methods, such as bootable media, multicast, or Software Center, to replace an existing computer with a new computer.
 ms.date: 10/06/2016
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Replace an existing computer and transfer settings with Configuration Manager

@@ -2,9 +2,10 @@
 title: Deploy a task sequence over the internet
 description: Use this information to deploy a task sequence to remote computers.
 ms.date: 07/15/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Deploy a task sequence over the internet

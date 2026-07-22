@@ -2,9 +2,10 @@
 title: Configure pre-cache content
 description: Learn how clients can download OS deployment content before a user installs the task sequence.
 ms.date: 04/13/2021
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: how-to
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Configure pre-cache content for task sequences

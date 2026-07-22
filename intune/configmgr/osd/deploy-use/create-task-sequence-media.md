@@ -2,9 +2,10 @@
 title: Create task sequence media
 description: Create task sequence media to deploy an OS to a destination computer in your Configuration Manager environment.
 ms.date: 12/14/2023
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Create task sequence media

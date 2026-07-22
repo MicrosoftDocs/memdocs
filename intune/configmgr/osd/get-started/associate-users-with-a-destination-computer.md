@@ -2,9 +2,10 @@
 title: Associate users with a computer
 description: Configure Configuration Manager to associate users with destination computers when deploying operating systems.
 ms.date: 07/17/2025
-ms.subservice: osd
+ms.subservice: operating-system-deployment
 ms.topic: article
 ms.collection: tier3
+ms.service: microsoft-endpoint-configuration-manager
 ---
 
 # Associate users with a destination computer in Configuration Manager
