@@ -204,6 +204,9 @@ Default values for the setting are prepopulated for new assignments as follows:
 
 To learn more about monitoring app assignments, see [How to monitor apps](../monitor-assignments.md).
 
+## Related content
+
+- [Choose the right targeting method in Microsoft Intune](../../fundamentals/choose-targeting-method.md)
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
