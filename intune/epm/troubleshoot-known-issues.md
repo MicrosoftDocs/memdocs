@@ -82,3 +82,9 @@ EPM checks the certificate expiry date to ensure it hasn't passed before allowin
 On devcies that run a Windows version earlier than 24H2 with the April 2025 update, the **Run with elevated access** option is not always successfully added to the file context menu after a successful installation of the EPM Agent. This issue is resolved for devices that run a later version of Windows.
 
 **Workaround:** To resolve this issue on a device that can't update to Windows version 24H2 with the Aril 2025 update or later, run the package *EpmShellExtension.msix* located in *C:\Program Files\Microsoft EPM Agent\EPMShellExtension* to manually install the EPM shell extension to the file context menu.
+
+### EPM roles do not support scope tags.
+
+The built-in role "Endpoint Privilege Manager" and the custom role "Endpoint Privilege Management Policy Authoring" do not support scope tags. 
+
+**Workaround:** To restrict an administrator's view permissions using scope tags, you must grant permissions that include "Read" for "Device configurations."

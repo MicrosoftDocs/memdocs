@@ -174,6 +174,10 @@ ________________________________________________________
 > [!div class="nextstepaction"]
 > [Next: Set up Microsoft Entra ID >](setup-entra-id.md)
 
+## Related content
+
+- [Choose the right targeting method in Microsoft Intune](../../../fundamentals/choose-targeting-method.md)
+
 <!-- Reference links in article -->
 
 [EDU-1]: /intune-education/create-groups
