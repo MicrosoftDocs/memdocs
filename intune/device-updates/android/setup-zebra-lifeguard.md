@@ -1,10 +1,12 @@
 ---
 title: Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 description: Use Microsoft Intune to manage firmware updates for supported Zebra devices.
-ms.date: 08/01/2024
+ms.date: 07/23/2026
 ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1017
 ---
 
 # Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
@@ -48,9 +50,9 @@ Intune manages the creation, management, and monitoring of these deployments thr
 :::column-end:::
 :::column span="3":::
 
->You must have access to all appropriate Zebra licenses and entitlements to use the LG OTA service. For more information, contact Zebra support or see the [Zebra LifeGuard FAQ](https://techdocs.zebra.com/lifeguard/faq/).
->
 >[!INCLUDE [additional-licensing-plan2](../../includes/licensing/additional-licensing-plan2.md)]
+>
+>You must have access to all appropriate Zebra licenses and entitlements to use the LG OTA service. For more information, contact Zebra support or see the [Zebra LifeGuard FAQ](https://techdocs.zebra.com/lifeguard/faq/).
 :::column-end:::
 :::row-end:::
 
@@ -60,9 +62,9 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 :::column-end:::
 :::column span="3":::
->Administrators must have all the required RBAC (role-based access control) permissions:
->  - Mobile Apps (to create and deploy app configuration profiles)
->  - Android FOTA (to manage firmware OTA updates)
+>Administrators need the following role-based access control (RBAC) permissions:
+>  - [Mobile apps] (to create and deploy app configuration profiles)
+>  - [Android FOTA] (to manage firmware OTA updates)
 :::column-end:::
 :::row-end:::
 
@@ -94,7 +96,7 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 The process for using LG OTA via Intune is as follows:
 
-1. [Set up Zebra connector](#step-1-set-up-zebra-connector).
+1. [Set up the Zebra connector](#step-1-set-up-zebra-connector).
 1. [Enroll devices with Zebra LG OTA service](#step-2-enroll-devices-with-zebra-lg-ota-service).
     - [Approve and deploy required apps for your tenant](#2a-approve-and-deploy-required-apps-for-your-tenant).
     - [Create app configuration policy](#2b-create-app-configuration-policy).
@@ -105,7 +107,9 @@ The process for using LG OTA via Intune is as follows:
 
 You must enroll devices separately with the Zebra LG OTA service before devices can be updated. We recommend that you identify the devices to use with LG OTA, and create a group containing only those devices, to make the enrollment process easier.
 
-## Step 1: Set up Zebra Connector
+<a name='step-1-set-up-zebra-connector'></a>
+
+## Step 1: Set up the Zebra connector
 
 In the Microsoft Intune admin center, you can link Intune and Zebra.
 
@@ -281,13 +285,9 @@ Reporting displays information for eligible devices only and is currently refres
 Each deployment displays details related to:
 
 - **Deployment status**: The status of the deployment. For more information, see the following table.
-
 - **Completed devices**: The number of eligible devices where the update is completed.
-
 - **Failed devices**: The number of devices where the update failed.
-
 - **Total devices**: The total number of eligible devices targeted.
-
 - **Release**: The associated firmware release.
 
 The status of a deployment is different from the status of individual devices in the deployment. For example, if you create a deployment that targets two devices and only one is successfully updated, the deployment is considered *Completed*. However, it shows one device as failed and one as successful.
@@ -316,11 +316,22 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
   - Code NOTAPPLICABLE: the device isn't enrolled with the LG OTA service, or not eligible for this update
   - Numeric error code. For example, 4009. Contact Zebra support for more details on next steps.
 
-## Disconnecting Zebra connector
+<a name='disconnecting-zebra-connector'></a>
 
-1. Go to **Tenant admin** > **Connectors and tokens** > **Firmware over-the-air**.
-2. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
+## Disconnect the Zebra connector
+
+To disconnect the Zebra connector:
+
+1. Sign in to the [Microsoft Intune admin center].
+1. Select **[Tenant administration]** > **[Connectors and tokens]** > **[Firmware over-the-air update]**.
+1. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra. Existing deployments aren't affected.
 
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Tenant administration]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/tenantStatus
+[Connectors and tokens]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/connectorsAndTokens
+[Firmware over-the-air update]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminConnectorsMenu/~/fotaUpdate
+
+[Android FOTA]: /intune/fundamentals/role-based-access-control/create-custom-role#android-fota
+[Mobile apps]: /intune/fundamentals/role-based-access-control/create-custom-role#mobile-apps
