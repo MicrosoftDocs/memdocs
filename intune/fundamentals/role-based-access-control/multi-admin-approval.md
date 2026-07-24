@@ -13,7 +13,7 @@ ms.collection:
 
 # Use access policies to require multi admin approval
 
-To help protect against a compromised administrative account, use Microsoft Intune *access policies* to require that a second administrative account approves a change before the change is applied. This capability is known as Multi Admin Approval.
+To help protect against a compromised administrative account, use Microsoft Intune Multi admin approval *access policies* to require that a second administrative account approves a change before the change is applied. This capability is known as Multi Admin Approval.
 
 By using Multi Admin Approval, you can configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts can approve changes to those resources.
 
