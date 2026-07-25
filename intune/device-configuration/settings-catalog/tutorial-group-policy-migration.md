@@ -1,7 +1,7 @@
 ---
 title: Walkthrough-Create a settings catalog policy
 description: This tutorial or walkthrough steps through creating and comparing an on-premises Administrative Templates (ADMX) Group Policy and Microsoft Intune cloud-based settings catalog policy. It shows similar settings in on-premises and the Intune settings catalog to create and manage policies for Office, Windows, and Microsoft Edge on Windows 10/11 client devices.
-ms.date: 05/19/2026
+ms.date: 06/10/2026
 ms.topic: tutorial
 ms.reviewer: mayurjadhav
 ms.collection:
@@ -173,6 +173,8 @@ In these next steps, you create security groups, and add users to these groups. 
 
   - [Understand and manage dynamic group processing in Microsoft Entra ID](/entra/identity/users/manage-dynamic-group)
   - [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership)
+  - [Create simpler and faster rules for dynamic membership groups](/entra/identity/users/groups-dynamic-rule-more-efficient)
+  - [Optimize rule efficiency](/entra/identity/users/manage-dynamic-group#optimize-rule-efficiency)
 
 - For Intune-only device targeting based on properties like OS type or manufacturer, consider using [assignment filters](../../fundamentals/filters/overview.md) instead of dynamic device groups. Filters evaluate at check-in without depending on group membership processing, and can simplify your targeting architecture. Dynamic groups remain necessary for cross-workload scenarios (Conditional Access, licensing) and user-based grouping. For more information, go to [Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments](../../fundamentals/filters/performance-recommendations.md).
 
@@ -360,6 +362,11 @@ When no longer needed, you can:
 
 ## Summary
 
+In this tutorial, you got more familiar with the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created settings catalog policies in Intune to configure different settings. You also compared using ADMX templates on-premises and in the cloud with Intune.
+
+## Related content
+
+- [Choose the right targeting method in Microsoft Intune](../../fundamentals/choose-targeting-method.md)
 In this tutorial, you got more familiar with the [Microsoft Intune admin center], used the query builder to create dynamic groups, and created settings catalog policies in Intune to configure different settings. You also compared using ADMX templates on-premises and in the cloud with Intune.
 
 <!--links-->

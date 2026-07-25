@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 Use this article to sync Apple mobile devices with Apple Business, manage your enrollment tokens, and distribute devices to users.
 
 > [!NOTE]
-> The steps in this article are the same whether you're using Apple Business or Apple School Manager. For brevity, this article refers to *Apple Business* only, except where clarification is necessary.  
+> The steps in this article are similar whether you're using Apple Business or Apple School Manager. For brevity, this article refers to *Apple Business* only, except where clarification is necessary.  
 
 This article applies to:  
 - iOS/iPadOS
@@ -22,8 +22,8 @@ This article applies to:
 
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. After creating a token, sync Intune with Apple to see your managed devices in the Microsoft Intune admin center.
 
-1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
-1. Select the **Apple mobile** tab.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select a token from the list.
 1. Select **Devices** > **Sync**.
@@ -54,15 +54,17 @@ Complete these steps to re-enroll a device that already went through automated d
 ## Renew your token
 
 1. Go to [Apple Business](http://business.apple.com) and sign in with an account that has an Administrator or Device Enrollment Manager role.
-1. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file you want to renew.
-1. Select **Download Token**.
+1. Select the **Devices** tab in Apple Business, or go to your account profile > **Preferences** in Apple School Manager.
+1. Go to **Management Services** in Apple Business, or go to **Your MDM servers** in Apple School Manager.
+1. Select the device management servivce in Apple Business, or MDM server in Apple School Manager associated with the token file you want to renew.
+1. Select **Download Token** (this is found under the ... Actions menu in the top right in Apple Business).
 
    > [!NOTE]
    > Don't select **Download Token** unless you intend to renew the token. Doing so invalidates the token currently in use by Intune. If you already downloaded the token, complete the remaining steps to finish the renewal.
 
 1. After downloading the token, go to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
-1. Select the **Apple mobile** tab.
+1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select the token you want to renew.
 1. Select **Renew token**. Enter the **Apple ID** used to create the original token.
@@ -88,8 +90,8 @@ You can delete an enrollment program token from Intune as long as:
 
 To delete an enrollment program token:
 
-1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
-1. Select the **Apple mobile** tab.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select the token, and then select **Devices**.
 1. Delete all devices assigned to the token.

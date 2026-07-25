@@ -60,6 +60,7 @@ For example, you might deploy an Intune compliance policy to the *all devices* g
 > Dynamic groups remain the right choice when you need cross-workload targeting (Conditional Access, licensing), Autopilot profile assignment, or user-based grouping.
 >
 > For more information, see:
+> - [Choose the right targeting method in Microsoft Intune](../choose-targeting-method.md)
 > - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../filters/overview.md)
 > - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](../filters/performance-recommendations.md)
 
@@ -106,7 +107,11 @@ To create groups in the Microsoft Intune admin center:
         > [!IMPORTANT]
         > To use Dynamic User groups, you must have a [Microsoft Entra ID P1 license for each user](/entra/identity/users/groups-dynamic-membership#license-requirements) that is a member of the dynamic group.
 
-      - **Dynamic Device** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, see [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
+      - **Dynamic Device** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, go to:
+
+        - [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership)
+        - [Create simpler and faster rules for dynamic membership groups](/entra/identity/users/groups-dynamic-rule-more-efficient)
+        - [Understand and manage dynamic group processing](/entra/identity/users/manage-dynamic-group#optimize-rule-efficiency)
 
         > [!TIP]
         > No specific Entra ID license is required for members of dynamic device groups.
@@ -144,6 +149,7 @@ Use the following steps to delete an existing group:
 
 ## Related content
 
+- [Choose the right targeting method in Microsoft Intune](../choose-targeting-method.md)
 - [Assign users licenses to Intune](../assign-licenses.md)
 - [Assign Microsoft Intune roles to groups of users for role-based access control](../role-based-access-control/assign-role.md)
 

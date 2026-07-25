@@ -1,10 +1,12 @@
 ---
 title: Manage Android FOTA updates with Microsoft Intune
 description: Use Microsoft Intune to manage firmware updates on Android devices. A FOTA update can include software and security patches, feature updates, and other changes to the device's firmware.
-ms.date: 05/12/2026
+ms.date: 07/23/2026
 ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1017
 ---
 
 # Manage Firmware Over-the-Air updates on Android
@@ -25,7 +27,7 @@ In the context of FOTA, a *deployment* is an update policy that includes instruc
 > FOTA updates are supported on Android Enterprise devices enrolled in Intune. This includes the following enrollment types:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
-> - Android Enterprise corporate-owned work profile (COPE)
+> - Android Enterprise corporate-owned with a work profile (COPE)
 :::column-end:::
 :::row-end:::
 
@@ -57,8 +59,8 @@ Manufacturer-specific FOTA support might offer more controls beyond what device 
 
 Intune supports FOTA update management for supported devices from the following manufacturers:
 
+- **Samsung**: For Samsung devices, see [Samsung Knox E-FOTA integration with Microsoft Intune](setup-samsung-knox.md).
 - **Zebra**: For Zebra devices, see [LifeGuard Over-the-Air Integration with Microsoft Intune](setup-zebra-lifeguard.md).
-- **Samsung**: For Samsung devices, see [E-FOTA Update Management with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552).
 
 ### Use device restrictions profiles to manage FOTA updates
 
