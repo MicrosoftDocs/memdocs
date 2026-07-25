@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Connect BlackBerry Protect Mobile MTD connector in Microsoft Intune
 
-Connect the BlackBerry Protect Mobile MTD connector to monitor and mitigate device risk levels on Intune-managed devices. BlackBerry Protect Mobile (powered by Cylance AI) works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about BlackBerry Protect Mobile, see [Key features of BlackBerry Protect Mobile](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/how-do-i/integrate-ces-with-mdm) (opens BlackBerry UES docs).
+Connect the BlackBerry Protect Mobile MTD connector to monitor and mitigate device risk levels on Intune-managed devices. BlackBerry Protect Mobile (powered by Cylance AI) works by reporting device risk levels to Microsoft Intune. Intune then uses that information to enforce the appropriate app configuration and risk assessment policies. For more information about BlackBerry Protect Mobile, see [Key features of BlackBerry Protect Mobile](https://www.blackberry.com/en/secure-communications/blackberry-uem) (opens BlackBerry UES docs).
 
 This article describes the requirements and steps to connect the MTD connector in your tenant.
 
@@ -55,7 +55,7 @@ For more information about consent and Microsoft Entra applications, see [Introd
 5. Select **Add**.
 6. For **Select the Mobile Threat Defense connector to setup,** choose **CylancePROTECT Mobile**.
 7. Select **Open the CylancePROTECT Mobile admin console**. Keep the Microsoft Intune admin center tab open for later.
-8. Sign in with your Microsoft Entra account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/setup/setup/Setting-up-BlackBerry-Protect/Integrating-EMM-to-respond-to-mobile-threats) (opens BlackBerry UES docs) to complete setup.
+8. Sign in with your Microsoft Entra account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://www.blackberry.com/en/secure-communications/blackberry-uem) (opens BlackBerry UES docs) to complete setup.
 9. After you finish setup in the UES management console, return to your tab in the Microsoft Intune admin center.
 10. Under **MDM Compliance Policy Settings**, turn on the following settings:
     - **Connect Android devices to BlackBerry Protect Mobile**

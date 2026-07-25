@@ -74,7 +74,7 @@ If you're deciding between assignment filters and dynamic groups for device targ
 - **Use assignment filters** when you're targeting Intune policies or apps based on device properties (OS, model, manufacturer, ownership, category). Filters evaluate at check-in with no further evaluation delay.
 - **Use dynamic groups** when you need cross-workload targeting (Conditional Access, licensing), Autopilot profile assignment, or user-based grouping.
 
-Many organizations use both: dynamic groups for cross-workload scenarios and assignment filters for Intune-specific device targeting.
+Many organizations use both: dynamic groups for cross-workload scenarios and assignment filters for Intune-specific device targeting. For guidance on all available targeting methods, go to [Choose the right targeting method in Microsoft Intune](../choose-targeting-method.md).
 
 > [!NOTE]
 > Because assignment filters don't require group membership processing, policy targeting isn't affected by group size, rule complexity, or membership evaluation timing. For performance recommendations when working with groups and filters, go to [Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments](./performance-recommendations.md).
@@ -282,6 +282,7 @@ After you create an assignment filter, you can change or update it.
 
 ## Related content
 
+- [Choose the right targeting method in Microsoft Intune](../choose-targeting-method.md)
 - [Device properties, operators, and rule editing when creating assignment filters](ref-device-properties.md)
 - [Supported workloads when creating assignment filters](ref-supported-workloads.md)
 - [Assignment filter performance recommendations](performance-recommendations.md)

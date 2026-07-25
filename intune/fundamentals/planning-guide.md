@@ -604,6 +604,7 @@ The community-based [Intune forum](https://social.technet.microsoft.com/Forums/h
 
 ## Related articles
 
+- [Choose the right targeting method in Microsoft Intune](choose-targeting-method.md)
 - [Migration guide: Set up or move to Microsoft Intune](setup-migration.md)
 - [Get started with your Microsoft Intune deployment](get-started.md)
 - [Protection and configuration levels](protection-configuration-levels.md)
