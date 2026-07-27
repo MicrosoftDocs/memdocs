@@ -1,9 +1,10 @@
 ---
 title: Device compliance policies in Microsoft Intune
 description: Overview of Microsoft Intune device compliance, including tenant-wide compliance policy settings and device compliance policies.
-ms.date: 05/14/2024
+ms.date: 07/02/2026
 ms.topic: concept-article
 ms.reviewer: ilwu
+ai-usage: ai-assisted
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
@@ -61,7 +62,7 @@ When using device compliance policies:
 
 - If you use Microsoft Entra Conditional Access, your Conditional Access policies can use the device compliance results to block access to resources from noncompliant devices.
 
-- Like other Intune policies, compliance policy evaluations for a device depend on when the device checks in with Intune, and [policy and profile refresh cycles](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
+- Like other Intune policies, compliance policy evaluations for a device depend on when the device checks in with Intune, and [policy and profile refresh cycles](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals). For Windows devices, Intune also supports [client-driven compliance evaluation](./create-policy.md#client-driven-compliance-evaluation-preview). With this capability, supported devices can proactively request compliance re-evaluation when local state changes are detected.
 
 
 The available settings you can specify in a device compliance policy depend on the platform type you select when you create a policy. Different device platforms support different settings, and each platform type requires a separate policy.
