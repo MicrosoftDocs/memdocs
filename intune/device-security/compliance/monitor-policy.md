@@ -1,9 +1,10 @@
 ---
 title: Monitor results of your device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to understand overall device compliance the per policy and per setting device compliance results.
-ms.date: 05/19/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: ilwu
+ai-usage: ai-assisted
 ---
 # Monitor results of your Intune device compliance policies
 
@@ -59,7 +60,7 @@ While compliance state is evaluated continuously, compliance policy reports in M
 
 When you review compliance policy reports in Microsoft Intune, be aware of the following reporting behaviors:  
 
-- Compliance policy reporting depends on when a device checks in. Reporting data is refreshed during device check-in and policy refresh cycles. If a device doesn't check in, the report might not immediately reflect recent policy assignments or targeting changes.
+- Compliance policy reporting depends on when a device checks in. Reporting data is refreshed during device check-in and policy refresh cycles and might not immediately reflect recent policy assignments or targeting changes if a device hasn't checked in. Windows devices that support [client-driven compliance evaluation](./create-policy.md#client-driven-compliance-evaluation-preview) can trigger a compliance re-evaluation in response to local state changes, which might affect how frequently reporting data is refreshed for those devices.
 
 - Compliance reports display the compliance state associated with the last user who checked in on the device. On shared or multi-user devices, this behavior can cause reports to reflect a previous user’s compliance state.  
 

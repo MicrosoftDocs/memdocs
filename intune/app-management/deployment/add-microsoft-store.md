@@ -1,8 +1,9 @@
 ---
 title: Add Microsoft Store Apps to Microsoft Intune
 description: Learn about adding Microsoft Store apps to Microsoft Intune.
-ms.date: 06/07/2024
+ms.date: 06/25/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ---
 
 # Add Microsoft Store Apps to Microsoft Intune
@@ -51,9 +52,11 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 
 1. Select **Search the Microsoft Store app** to display the search panel which features a search bar and includes the following columns:
 
-    - **Name** – The name of the app.
-    - **Publisher** – The publisher of the app.
-    - **Type** – The app package type: Win32 or Universal Windows Platform (UWP).
+    - **Name**: The name of the app.
+    - **Publisher**: The publisher of the app.
+    - **Type**: The app package type: Win32 or Universal Windows Platform (UWP).
+
+   By default, Intune searches the United States Microsoft Store catalog. To find apps published in another region, select that region from the drop-down list.
 
 2. In the search bar, type the name of the app that you want to find. You can also search by other app details, such as publisher, type, or store app ID.
    Once you search, a list of apps are displayed.
@@ -61,7 +64,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     > [!NOTE]
     > Specific Microsoft Store apps may not be displayed and available in Intune. Common reasons an app doesn't appear when searching within Intune include the following:
     >
-    > - The app is not available in US region.
+    > - The app is not available in the selected region.
     > - The app is a paid app, which is not supported.
     > - The app platform isn't supported in the Microsoft Store.
 
@@ -71,23 +74,22 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 
     The following table shows the fields that are supported:
 
-    |     Name   of the field    |     Description    |     Required    |
-    |---|---|---|
-    |     Name    | The name of the app is prepopulated from the store's metadata and you have the choice to edit the field. Enter the name of the app as it appears in the Company Portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.   |     Required    |
-    |     Description    | The description of the app is prepopulated from the store's metadata and you have the choice to edit the field. The description appears in the Company Portal.          |     Required       |
-    |     Publisher    |  The publisher of the app is prepopulated from the store's metadata and you have the choice to edit the field.           |     Required    |
-    |     Installer   Type    | The installer type of the application package is the UWP or Win32 installer types. For related information, see [Universal Windows Platform (UWP) apps](/windows/uwp/get-started/universal-application-platform-guide).                |     N/A   Prefilled    |
-    |     Package   Identifier     | The app's unique ID in the Microsoft Store. This value is read-only and is displayed before Installer Type in the UI.   |     N/A   Prefilled    |
-    |     Install   behavior    | The install behavior of the app. If the app to be installed has the option of either **System** or **User** install behaviors, you must ensure that the installation works on devices as expected. NOTE: If the option is greyed out, the specific store application only supports the selected install behavior.     |     Admin must select **System** or **User**     |
-    |     Category       | Optionally, select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the Company Portal.          |     Optional       |
-    |     Show   this as a featured app in the Company Portal    |  Display the app prominently on the main page of the company portal when users browse for apps.    |     Admin must select Yes or No    |
-    |     Information   URL     |     Optionally, enter the URL of a website that   contains information about this app. The URL appears in the company portal.          |     Optional    |
-    |     Privacy   URL     |     Optionally, enter the URL of a website that   contains privacy information for this app. The URL appears in the company   portal.          |     N/A   Prefilled    |
-    |     Developer    |     Optionally, enter the name of the app developer.          |     Optional    |
-    |     Owner     |     Optionally, enter a name for the owner of this app. An example is **HR department**.          |     Optional    |
-    |     Notes     |     Enter any notes that you want to associate   with this app.          |     Optional    |
-    |     Logo    |     Upload an icon that is associated with the   app. This icon is displayed with the app when users browse through the company   portal.          |     Optional       |
-
+    | Name of the field | Description | Required |
+    |--|--|--|
+    | Name | The name of the app is prepopulated from the store's metadata and you have the choice to edit the field. Enter the name of the app as it appears in the Company Portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal. | Required |
+    | Description | The description of the app is prepopulated from the store's metadata and you have the choice to edit the field. The description appears in the Company Portal. | Required |
+    | Publisher | The publisher of the app is prepopulated from the store's metadata and you have the choice to edit the field. | Required |
+    | Installer Type | The installer type of the application package is the UWP or Win32 installer types. For related information, see [Universal Windows Platform (UWP) apps](/windows/uwp/get-started/universal-application-platform-guide). | N/A Prefilled |
+    | Package Identifier | The app's unique ID in the Microsoft Store. This value is read-only and is displayed before Installer Type in the UI. | N/A Prefilled |
+    | Install behavior | The install behavior of the app. If the app to be installed has the option of either **System** or **User** install behaviors, you must ensure that the installation works on devices as expected. NOTE: If the option is greyed out, the specific store application only supports the selected install behavior. | Admin must select **System** or **User** |
+    | Category | Optionally, select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the Company Portal. | Optional |
+    | Show this as a featured app in the Company Portal | Display the app prominently on the main page of the company portal when users browse for apps. | Admin must select Yes or No |
+    | Information URL | Optionally, enter the URL of a website that contains information about this app. The URL appears in the company portal. | Optional |
+    | Privacy URL | Optionally, enter the URL of a website that contains privacy information for this app. The URL appears in the company portal. | N/A Prefilled |
+    | Developer | Optionally, enter the name of the app developer. | Optional |
+    | Owner | Optionally, enter a name for the owner of this app. An example is **HR department**. | Optional |
+    | Notes | Enter any notes that you want to associate with this app. | Optional |
+    | Logo | Upload an icon that is associated with the app. This icon is displayed with the app when users browse through the company portal. | Optional |
 4. Select **Next** after you have finished populating the fields.
 
 ### Step 3: Creating assignments
@@ -99,11 +101,11 @@ You can choose how you want to assign Microsoft Store apps to users and devices.
 
 The following table provides assignment type details:
 
-|     Assignment type    |     Assignment options    |     Description    |
-|---|---|---|
-|     Required       | Add group, Add all users, Add all devices    | The app is installed on devices in the selected groups.          |
-|     Available for enrolled devices    | Add group, Add all users    | Users install the app from the Company Portal app or the Company Portal website.          |
-|     Uninstall    | Add group, Add all users, Add all devices    | The app is uninstalled from devices in the selected groups.          |
+| Assignment type                | Assignment options                        | Description                                                                      |
+|--------------------------------|-------------------------------------------|----------------------------------------------------------------------------------|
+| Required                       | Add group, Add all users, Add all devices | The app is installed on devices in the selected groups.                          |
+| Available for enrolled devices | Add group, Add all users                  | Users install the app from the Company Portal app or the Company Portal website. |
+| Uninstall                      | Add group, Add all users, Add all devices | The app is uninstalled from devices in the selected groups.                      |
 
 1. Select **Add group** and assign the groups that use this app.
 2. On the **Select groups** pane, select groups to assign based on users or devices.
@@ -159,7 +161,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
 
-  | CSP | Intune | On-premises GPO |
+  | CSP | Intune | Group policy |
   | --- | --- | --- |
   | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | [Settings Catalog](../../device-configuration/settings-catalog/index.md) &#124; Microsoft App Store > Disable Store Originated Apps | Administrative Templates > Windows Components > Store |
 
@@ -167,7 +169,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   - Recommended values: **Not configured** or **Disabled**. To prevent end users from blocking or turning off this feature, set the value to **Disabled**.
 
-  | CSP | Intune | On-premises GPO |
+  | CSP | Intune | Group policy |
   | --- | --- | --- |
   | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | [Settings Catalog](../../device-configuration/settings-catalog/index.md) &#124; Microsoft App Store > Allow apps from the Microsoft app store to auto update | Administrative Templates > Windows Components > Store |
 
@@ -175,7 +177,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
 
-  | CSP | Intune | On-premises GPO |
+  | CSP | Intune | Group policy |
   | --- | --- | --- |
   | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; use a [custom configuration profile](../../device-configuration/templates/configure-custom-settings.md). | Administrative Templates > Windows Components > Desktop App Installer |
 
@@ -183,7 +185,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
 
-  | CSP | Intune | On-premises GPO |
+  | CSP | Intune | Group policy |
   | --- | --- | --- |
   | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; use a [custom configuration profile](../../device-configuration/templates/configure-custom-settings.md). | Administrative Templates > Windows Components > Desktop App Installer |
 
@@ -204,7 +206,7 @@ For more information on the Microsoft Store integration with Intune due to the M
   > [!NOTE]
   > The Windows Package Manager command-line tool `winget.exe` is not affected by this policy.
 
-  | CSP | Intune | On-premises GPO |
+  | CSP | Intune | Group policy |
   | --- | --- | --- |
   | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../../device-configuration/settings-catalog/index.md) | **Windows Components** > **Store** > **Turn off the Store Application** <br/> **Administrative Templates** > **Windows Components** > **Store**|
 
