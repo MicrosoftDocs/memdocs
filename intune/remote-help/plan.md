@@ -3,6 +3,7 @@ title: Plan for Remote Help with Microsoft Intune
 description: Learn about the requirements and capabilities of Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
 ms.date: 06/24/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: karawang
 ---
 
@@ -230,7 +231,9 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
-1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
+The following requirements ensure Remote Help can authenticate the user and recognize the device as enrolled:
+
+1. Configure the Microsoft Enterprise SSO plug-in. For more information, see [Use Enterprise SSO Plug-in on macOS](../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. Open and sign in to Company Portal. The user must open and sign in to Company Portal for Remote Help to recognize the device is enrolled.
 
 > [!NOTE]
