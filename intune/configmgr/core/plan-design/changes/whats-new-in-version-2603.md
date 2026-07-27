@@ -103,7 +103,7 @@ Ensure that the management point server can connect to Microsoft Entra authentic
 - `https://login.microsoftonline.com`
 - `https://sts.windows.net`
 
-If the management point server uses a proxy, configure the proxy at the system level. For more information, see [Management point proxy configuration](../network/proxy-server-support.md#management-point).
+If the management point server uses a proxy, you must configure the proxy in the system (Local System) context. The proxy set in the site system properties and a WinHTTP-only proxy (`netsh winhttp set proxy`) aren't used for this validation path in version 2603. For the required configuration steps, see [Management point proxy configuration](../network/proxy-server-support.md#management-point).
 
 For a full list of required endpoints, see [Management point internet access requirements](../network/internet-endpoints.md#management-point).
 
