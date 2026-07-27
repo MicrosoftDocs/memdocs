@@ -65,7 +65,7 @@ The following permissions are available when creating custom roles.
 | Android Enterprise | Update app sync | Manage or change the Managed Google Play configuration used to sync applications with the Managed Google Play store, or sync the apps you approved from the store with Intune. |
 | Android Enterprise | Update enrollment profiles | Manage or change Android Enterprise Device Owner enrollment profiles used to enroll devices. |
 | Android Enterprise | Update onboarding | Manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. |
-| Android Enterprise | Manage zero touch enrollment | Manage or change the configuration of zero-touch enrollment (ZTE). |
+| Android Enterprise | Manage zero touch enrollment | Manage or change the connection to Google's Zero-Touch Enrollment (ZTE) portal. |
 
 ### Android FOTA
 
