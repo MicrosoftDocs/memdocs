@@ -182,6 +182,10 @@ You can also use the following optional parameters:
 
 `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
 
+#### Example of connect with a proxy server and port
+
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com:8080 -proxyusername jqpublic`
+
 #### Example of connect to download only site version applicable updates
 
 `ServiceConnectionTool.exe -connect -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks`
