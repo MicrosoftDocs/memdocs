@@ -75,6 +75,24 @@ For more information from the Intune support team and the broader Intune communi
 
 For post-incident actions, Microsoft emails service administrators using the email address in your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more).
 
+## Intune service configurations and experimentation
+
+Intune uses Experimentation and Configuration Service (ECS) to request and receive service configuration payloads that help maintain service reliability, security, compliance, and customer experience. These payloads can include service configurations, controlled feature rollouts, and experimentation data.
+
+[!CAUTION] Disabling communication with required Microsoft cloud services can affect Microsoft's ability to deliver critical service updates, reliability improvements, security mitigations, and feature enablement for Intune-managed devices.
+
+### Configurations
+
+Configurations are payloads meant to ensure service health and reliability, security, and privacy compliance, and are intended to have the same value for all the users (based on platforms and channels). Configuration updates can be deployed rapidly to maintain service quality and respond to emerging issues
+
+### Controlled feature rollout
+
+Controlled feature rollout (CFR) is a procedure for slowly increasing the size of the user group that receives a feature. By distributing a new feature to a randomly selected subset of the user population, it's possible to compare user feedback to an equally sized control group without the feature to measure the impact of the feature. This approach helps reduce deploymnet risk, identify potential issues early, validate feature performance at scale and improve overall service quality. During a controlled rollout, some organizations might see a feature before others, even when they are running the same supported platform and service version
+
+### Experiments
+
+Currently, Intune doesn't do any experimental testing. Development is carried out via the controlled feature rollout process. If this changes, an announcement will be posted in the Message Center.
+
 ## Privacy and personal data in Intune
 
 You should understand how Intune collects, stores, retains, processes, secures, shares, audits, and exports personal data. Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.

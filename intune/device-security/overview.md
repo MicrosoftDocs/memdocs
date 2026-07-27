@@ -3,6 +3,7 @@ title: Protect data and devices with Microsoft Intune
 description: Learn about the Intune capabilities that can help you protect your devices and data against unauthorized access and other threats.
 ms.date: 02/17/2026
 ms.topic: overview
+ai-usage: ai-assisted
 ms.reviewer: davidra
 ms.collection:
 - M365-identity-device-management
@@ -143,7 +144,7 @@ Intune supports [Microsoft Defender for Endpoint](./microsoft-defender/overview.
 [Microsoft Defender for Endpoint deeply integrates with Intune](./microsoft-defender/overview.md) across Windows, macOS, Linux, Android, and iOS/iPadOS, creating a unified security platform that combines device management with advanced threat protection. This integration enables:
 
 - **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
-- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../device-configuration/endpoint-security/antivirus.md) settings, [EDR onboarding](../device-configuration/endpoint-security/deploy-edr.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
+- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../device-configuration/endpoint-security/antivirus.md) settings, [EDR onboarding](../device-configuration/endpoint-security/deploy-edr.md), Attack Surface Reduction rules, [controlled configuration](../device-configuration/endpoint-security/antivirus.md#controlled-configuration-for-microsoft-defender-settings-preview) (which also supports tamper protection), web protection, and device control
 - **Vulnerability management** - [Security tasks](./microsoft-defender/remediate-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
 - **[Microsoft Tunnel](./microsoft-tunnel/overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 
