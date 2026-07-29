@@ -4,6 +4,7 @@ description: Learn how to manage endpoint security in Microsoft Intune. Configur
 keywords: Intune security policies, endpoint protection Intune, configure endpoint security, device security Intune, Microsoft Defender Intune, security baselines, zero trust Intune, ransomware protection, endpoint security node, device compliance Intune, Endpoint Security Manager, attack surface reduction Intune
 ms.date: 05/26/2026
 ms.topic: overview
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -34,7 +35,7 @@ Use the Endpoint security node to address common security challenges:
 
 The Endpoint security dashboard provides a consolidated view of your security posture.
 
-To access the dashboard, sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Overview**.
+To access the dashboard, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Overview**.
 
 The dashboard helps you quickly assess device security status and identify areas requiring attention. It displays information from multiple endpoint security areas including *Antivirus*, *Endpoint detection and response*, and *Defender for Endpoint*:
 
@@ -117,7 +118,7 @@ Integration benefits include:
 - **Security tasks** - Collaborate between Defender and Intune teams to identify and remediate device vulnerabilities.
 - **Streamlined device onboarding** - Deploy EDR policies from Intune to onboard devices to Defender for Endpoint.
 - **Device risk signals** - Use Defender threat levels in compliance policies and app protection policies.
-- **Tamper protection** - Prevent attackers from disabling security features.
+- **Controlled configuration (preview)** - Enforce Defender security settings from Intune, superseding settings from other management channels. The [controlled configuration setting](../device-configuration/endpoint-security/antivirus.md#controlled-configuration-for-microsoft-defender-settings-preview) also supports the existing tamper protection behavior.
 
 For more information, see [Integrate Microsoft Defender for Endpoint with Intune for Device Compliance](./microsoft-defender/overview.md).
 
@@ -267,7 +268,3 @@ Configure:
 - [Compliance policies](./compliance/overview.md)
 - [Conditional Access integration](./conditional-access-integration/overview.md)
 - [Integration with Microsoft Defender for Endpoint](./microsoft-defender/overview.md)
-
-<!--links-->
-
-[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -118,7 +118,7 @@ The LTSB supports the following operating systems to run the Configuration Manag
 
 
 ## SQL Server versions supported for the site database and reporting point
-The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same configuration requirements and limitations that appear in [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md) for the current branch apply to the LTSB.  This support includes the use of a SQL Server Always On failover cluster instance or an availability group.
+The LTSB supports the following versions of SQL Server to host the site database and reporting point. For each supported version, the same [configuration requirements](../plan-design/configs/supported-configurations-for-sql-server.md) and [limitations](../plan-design/configs/support-for-sql-server-versions.md#limitations-to-support) for the current branch apply to the LTSB. This support includes the use of a SQL Server Always On failover cluster instance or an availability group.
 
 **Supported versions:**
 

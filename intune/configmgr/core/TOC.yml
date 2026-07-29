@@ -127,8 +127,10 @@ items:
       href: plan-design/configs/support-for-windows-adk.md
     - name: Supported operating systems for consoles
       href: plan-design/configs/supported-operating-systems-consoles.md
-    - name: Support for SQL Server versions
+    - name: Supported SQL Server versions
       href: plan-design/configs/support-for-sql-server-versions.md
+    - name: Supported configurations for SQL Server
+      href: plan-design/configs/supported-configurations-for-sql-server.md
     - name: Support for Active Directory domains
       href: plan-design/configs/support-for-active-directory-domains.md
     - name: Support for Windows features and networks

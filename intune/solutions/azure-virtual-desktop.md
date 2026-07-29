@@ -37,7 +37,7 @@ There are some limitations to keep in mind when managing Windows Enterprise remo
 
 ### Enrollment
 
-Cross-regional enrollments aren't supported, for example an Azure Virtual Desktop created in Asia can't be enrolled in a European tenant.
+Cross-cloud (public to sovereign) enrollments aren't supported, for example an Azure Virtual Desktop created in Azure China Cloud or Azure Government Cloud can't be enrolled in an Intune tenant in the Public Cloud.
 
 ### Configuration
 

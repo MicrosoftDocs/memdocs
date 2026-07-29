@@ -1,7 +1,7 @@
 ---
 title: Manage antivirus settings with endpoint security policies in Microsoft Intune
 description: Configure and deploy policies and use reports for devices you manage with endpoint security antivirus policy in Microsoft Intune.
-ms.date: 05/13/2026
+ms.date: 07/17/2026
 ms.topic: reference
 ai-usage: ai-assisted
 ms.reviewer: mattcall
@@ -14,7 +14,7 @@ Intune Endpoint security Antivirus policies help security admins focus on managi
 
 Antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender for Endpoint antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices.
 
-Find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Intune admin center].
+Find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 Antivirus policies include the same settings as found *endpoint protection* or *device restriction* templates for [device configuration](../create-device-profile.md) policy. However, those policy types include other categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus workload. Also, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
@@ -109,6 +109,69 @@ Prerequisites to support managing tamper protection with these profiles:
 
 - Platform: **Windows (ConfigMgr)**
   - Profile: **Windows Security experience (preview)**
+
+### Controlled configuration for Microsoft Defender settings (preview)
+
+Controlled configuration extends tamper protection by making Microsoft Intune the single authoritative source for Microsoft Defender security settings on a device. While tamper protection locks certain security settings to their secure defaults, controlled configuration goes further by locking *all* applicable settings to the values configured in Intune. Non-configured settings fall back to their secure platform defaults.
+
+Organizations deploying Microsoft Defender for Endpoint can face indeterminate device states when multiple management channels, including Group Policy, Configuration Manager, third-party tools, and local administrator scripts, override cloud-delivered settings. These conflicts make Defender configurations unpredictable and difficult to troubleshoot.
+
+Controlled configuration establishes a clear **precedence of authority**. When controlled configuration is enabled on a device, settings delivered by Intune or [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md) take exclusive precedence. Settings from all other channels, including Group Policy, Configuration Manager, and local changes, are overridden. Other channels can still deliver settings, but the Intune-configured values always take priority.
+
+This capability is useful in two common scenarios:
+
+- **Proof-of-concept deployments** — Organizations can quickly deploy and validate their Defender configuration without first needing to identify and remediate legacy GPO or third-party tool conflicts.
+- **Steady-state management** — Administrators can maintain deterministic, auditable Defender configurations without having to monitor or police every other management channel.
+
+#### Enable controlled configuration
+
+Controlled configuration is available as a dedicated setting in the **Windows Security experience** profile for Antivirus policy. Under the **Defender** section, the **Controlled Configuration (Device)** setting supports the following values:
+
+| Value | Description |
+|---|---|
+| **Not configured** | No change to the device's current state. |
+| **Off (Default)** | Turns off both controlled configuration and tamper protection. |
+| **Tamper Protection (On)** | Turns on tamper protection and enforces tamper-protected settings to their secure defaults. This is the existing tamper protection behavior. |
+| **Controlled Configuration (On)** | Turns on controlled configuration. Intune-delivered settings take exclusive precedence; non-configured settings use secure defaults. |
+
+To enable controlled configuration, create or edit an Antivirus policy that uses the **Windows Security experience** profile. Set **Controlled Configuration (Device)** to **Controlled Configuration (On)**, and then deploy the policy to the devices you want to protect.
+
+- **CSP**: [Defender CSP > Configuration/TamperProtection](/windows/client-management/mdm/defender-csp#configurationtamperprotection)
+
+> [!NOTE]
+> Controlled configuration has the same [prerequisites as tamper protection](#prerequisites-for-tamper-protection).
+
+> [!IMPORTANT]
+> Controlled configuration operates at the per-device level. You can opt individual devices in or out of the controlled state by changing the **Controlled Configuration (Device)** value in the policy that targets those devices. Switching from controlled configuration back to tamper protection (or off) takes effect on the next policy check-in.
+
+#### Scope and limitations
+
+During preview, controlled configuration enforces settings that are configured through the following endpoint security policy templates:
+
+- **Antivirus**
+- **Attack surface reduction (ASR)**
+
+When a device is in the controlled configuration state, the Defender settings delivered through these templates are authoritative. Settings for the same Defender components that are delivered through other channels are overridden.
+
+Settings that aren't explicitly configured in controlled configuration revert to their default values. Local users can still modify these settings because controlled configuration locks only the settings that its policy defines.
+
+Controlled configuration does *not* apply to:
+
+- Endpoint detection and response (EDR)
+- Firewall settings
+- Policies authored outside the Endpoint Security experience, such as Settings Catalog policies
+- Endpoint security policy types not used by Defender components, such as Account Protection
+
+#### Reporting with controlled configuration
+
+When a device is in the controlled configuration state, reporting behavior for that device changes:
+
+- For policies configured through a template that supports controlled configuration (Antivirus, ASR), per-setting status reports reflect the enforced configuration as expected.
+- For non-controlled configuration policies, such as Settings Catalog policies, that contain settings overlapping with a controlled configuration policy, the overlapping settings report as **Not applicable** on that device. The controlled configuration policy takes precedence for those settings, regardless of the configured value in the other policy.
+- In the **Unhealthy endpoints** (**Endpoint security** > **Antivirus** > **Unhealthy endpoints**) and **Antivirus agent status** (**Reports** > **Antivirus** > **Antivirus agent status**) reports, the **Tamper protection** column is renamed to **Controlled configuration**. The values reflect whether controlled configuration is enabled or disabled for MDM-enrolled devices. Defender-enrolled devices aren't included in these reports.
+- When a device receives conflicting Intune policies—one enabling controlled configuration and another disabling or enabling tamper protection—the controlled configuration policy takes precedence.
+
+For more information about tamper protection and how controlled configuration extends it, see [Protect security settings with tamper protection](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection).
 
 ## Antivirus profiles
 
@@ -215,7 +278,7 @@ The following settings support policy merge:
 
 Antivirus policy reports display status details about your endpoint security Antivirus policies and device status. These reports are available in the Endpoint security node of the Microsoft Intune admin center.
 
-To view the reports, in the [Microsoft Intune admin center], go to  Endpoint security and select **Antivirus**. Selecting Antivirus opens the Summary page. Additional report and status views are available as additional pages.
+To view the reports, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to  Endpoint security and select **Antivirus**. Selecting Antivirus opens the Summary page. Additional report and status views are available as additional pages.
 
 In addition to reports detailed in the following sections, additional reports for Microsoft Defender Antivirus are found in the Reports node of the Microsoft Intune admin center, as documented in the Intune Reports article:
 
@@ -254,7 +317,3 @@ View details for the Windows settings in the deprecated profiles for the depreca
 - [Antivirus policy settings](./ref-antivirus-defender-settings-windows.md)
 - [Antivirus exclusions](./ref-antivirus-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)
 - [Windows Security app settings](./ref-security-experience-settings-windows.md)
-
-<!--links-->
-
-[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,8 +1,9 @@
 ---
 title: Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune
 description: Learn how to use Intune policy to manage Microsoft Defender security settings on devices that aren't enrolled with Microsoft Intune.
-ms.date: 08/27/2025
+ms.date: 07/17/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: laarrizz
 ---
 
@@ -49,6 +50,7 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 The Defender for Endpoint security settings management scenario is supported in the following government tenants:
 
 - US Government Community Cloud (GCC)
+- US Government Community High (GCC High)
 - Department of Defense (DoD)
 
 For more information, see:
@@ -343,7 +345,7 @@ In the Microsoft Defender portal, as a security administrator:
 
 In the Microsoft Intune admin center, your account needs permissions equal to Endpoint Security Manager built-in Role based access control (RBAC) role.
 
-1. Sign in to the [Microsoft Intune admin center].
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
 
@@ -367,7 +369,7 @@ To support this, configure the *Manage Security settings using Configuration Man
 
 After devices onboard to Defender for Endpoint, you'll need to create device groups to support deployment of policy for Microsoft Defender for Endpoint. To identify devices that have enrolled with Microsoft Defender for Endpoint but aren't managed by Intune or Configuration Manager:
 
-1. Sign in to [Microsoft Intune admin center].
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices.
 
@@ -423,7 +425,7 @@ For the list of policy and profile combinations supported for security settings 
 >
 > Microsoft Intune supports deploying multiple instances of each endpoint security policy type to the same device, with each policy instance being received by the device separately. Therefore, a device might receive separate configurations for the same setting from different policies, which results in a conflict. Some settings (like Antivirus Exclusions) merge on the client and apply successfully.
 
-1. Sign in to the [Microsoft Intune admin center].
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Endpoint security**, select the type of policy you want to configure, and then select **Create Policy**.
 
@@ -497,9 +499,14 @@ You can manually sync a device on-demand from the [Microsoft Defender portal](ht
 
 The Policy sync button only appears for devices that are successfully managed by Microsoft Defender for Endpoint.
 
-### Devices protected by tamper protection
+### Devices protected by controlled configuration
 
-If a device has tamper protection turned on, it isn't possible to edit the values of [Tamper-protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
+The **Controlled Configuration (Device)** setting in the **Windows Security experience** profile for Antivirus policy supersedes the previous standalone tamper protection setting. This setting supports both tamper protection and the broader controlled configuration mode:
+
+- When set to **Tamper Protection (On)**, the behavior is identical to the previous tamper protection setting. Tamper-protected settings are locked to their secure defaults. It isn't possible to edit the values of [tamper-protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without changing this setting first.
+- When set to **Controlled Configuration (On)**, settings delivered by Intune take exclusive precedence over other management sources like Group Policy or Configuration Manager.
+
+Controlled configuration is also supported for devices managed through Microsoft Defender for Endpoint security settings management. For details on how to configure controlled configuration and its scope, see [Controlled configuration for Microsoft Defender settings](../../device-configuration/endpoint-security/antivirus.md#controlled-configuration-for-microsoft-defender-settings-preview).
 
 ### Assignment Filters and security settings management
 
@@ -509,7 +516,7 @@ Assignment filters aren't supported for devices communicating through the Micros
 
 You can delete devices that use this flow using one of two methods:
 
-- From within the [Microsoft Intune admin center] go to **Devices** > **All devices**, select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column, and then select **Delete**.
+- From within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **All devices**, select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column, and then select **Delete**.
 - You can also remove devices from the scope of Configuration Management in the Security Center.
 
 Once a device is removed from either location, that change propagates to the other service.
@@ -561,7 +568,3 @@ If you previously had a third-party security tool on the machine and are now man
 - [Monitor Defender for Endpoint in Intune](./monitor.md)
 
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
-
-<!--links-->
-
-[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
