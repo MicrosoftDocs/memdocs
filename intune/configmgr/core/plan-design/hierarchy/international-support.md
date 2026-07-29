@@ -25,6 +25,6 @@ The following sections provide technical details to help you make Configuration 
     -   Chinese_Simplified_Stroke_Order_100_CI_AI
 
     > [!NOTE]
-    >  These database collations are an exception to the requirements that are noted in [Support for SQL Server versions for Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).
+    >  These database collations are an exception to the requirements that are noted in [Supported configurations for SQL Server](../../../core/plan-design/configs/supported-configurations-for-sql-server.md).
 
 -   You must place a file with the name **GB18030.SMS** in the root folder of the system volume of each site server computer in the hierarchy. This file does not contain any data and can be an empty text file that is named to meet this requirement.
