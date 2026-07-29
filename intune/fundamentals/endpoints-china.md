@@ -59,7 +59,7 @@ Intune operated by 21Vianet depends on the following partner service endpoints:
 - Azure AD `Graph: https://graph.chinacloudapi.us`
 - MS Graph: `https://microsoftgraph.chinacloudapi.cn`
 - ADRS: `https://enterpriseregistration.partner.microsoftonline.cn`
-- Experimentation and Configuration Service (ECS): `*.ecs.gov.teams.microsoft.us`
+- Experimentation and Configuration Service (ECS): `https://mooncake.ecs.office.com`
 
 [!INCLUDE [Intune notices](./includes/windows-push-notification-services.md)]
 
