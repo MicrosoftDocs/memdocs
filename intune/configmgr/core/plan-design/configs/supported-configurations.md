@@ -37,7 +37,9 @@ Products and product versions that aren't listed in these articles aren't suppor
 
 - [Supported operating systems for the console](supported-operating-systems-consoles.md): Learn about which operating systems can host the Configuration Manager console.
 
-- [Support for SQL Server versions](support-for-sql-server-versions.md): Learn about which versions of SQL Server can host the site database and reporting database. It also includes required and optional configurations that you can use with SQL Server.
+- [Supported SQL Server versions](support-for-sql-server-versions.md): Learn which versions, editions, and compatibility levels of SQL Server can host the site database and reporting database.
+
+- [Supported configurations for SQL Server](supported-configurations-for-sql-server.md): Learn about required and optional SQL Server and database configurations.
 
 - [High-availability options](../../servers/deploy/configure/high-availability-options.md): Learn about the options you can implement when designing your environment to help maintain a high level of available service for Configuration Manager.
 
