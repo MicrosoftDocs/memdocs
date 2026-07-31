@@ -108,6 +108,73 @@ For the full list of policies, see the [Microsoft Edge policies reference](/depl
 >
 > - Windows
 
+#### New Windows App (Azure Virtual Desktop) settings in the Windows settings catalog<!-- 38140497 wndraft wnready -->
+
+ 
+There are new Windows App settings in the Windows settings catalog. To see and configure them in Intune, create a Windows settings catalog profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** > **Settings catalog**). The new settings are:
+- **Turn off automatic updates for Windows App** – controls whether Windows App automatically checks for and installs updates.
+- **Automatically log off users after inactive interval** – signs users out of Windows App after a set period of inactivity.
+- **Skip First Run Experience (FRE)** – skips the first-run experience so users go straight to their resources.
+- **Admin Release Ring Policy** – sets the update release ring (channel) that Windows App follows.
+- **Automatically create Windows App shortcuts to desktop** – creates desktop shortcuts for published Windows App resources.
+For more information, see [Configure updates for Windows App](/windows-app/configure-updates-windows).
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+ 
+#### New option for the Remove Default Microsoft Store packages setting<!-- 38140497 wndraft wnready-->
+
+ 
+The existing **Remove Default Microsoft Store packages** setting in the ApplicationManagement area has a new subsetting, **Specify additional package family names to remove**. It lets you provide a custom list of package family names (PFNs) to remove, in addition to the built-in default set of Microsoft Store packages.
+For more information, see the [ApplicationManagement policy CSP](/windows/client-management/mdm/policy-csp-applicationmanagement).
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+ 
+#### New setting to disable the Get Started app<!-- 38140497 wndraft wnready-->
+
+ 
+The new **Disable Get Started** setting prevents the Windows Get Started app from being available to users.
+For more information, see the [Experience policy CSP](/windows/client-management/mdm/policy-csp-experience).
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+ 
+#### New OneDrive settings in the Windows settings catalog<!-- 38140497 wndraft wnready-->
+
+ 
+There are new OneDrive settings in the Windows settings catalog:
+- **Set a custom name for the OneDrive folder** – sets a custom name for the synced OneDrive folder on the user's device.
+- **Enable OpenID Connect (OIDC) authentication for syncing content from an on-prem SharePoint Server using the OneDrive sync app** – lets the OneDrive sync app authenticate to an on-premises SharePoint Server using OpenID Connect when the server supports it.
+- **Specify the Application ID URI for your Entra application for OIDC** – specifies the Application ID URI for your Microsoft Entra application used for OIDC when it differs from your SharePoint Server URL.
+- **Prevent users at your organization from enabling offline mode in OneDrive on the web** – blocks users from turning on offline mode for OneDrive on the web.
+- **Prevent users at your organization from enabling offline mode in OneDrive on the web for libraries and folders that are shared from other organizations** – blocks offline mode for libraries and folders shared from other organizations.
+- **Hard-delete the contents of a folder shortcut when unmounted** – permanently deletes the contents of a folder shortcut when it is unmounted instead of moving them to the Recycle Bin.
+- **Hard-delete contents of a folder shortcut when a user loses permissions to the folder** – permanently deletes the contents of a folder shortcut when the user loses permissions to that folder.
+For more information, see [Use Group Policy to control OneDrive sync app settings](/sharepoint/use-group-policy).
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+ 
+#### Updated Visual Studio administrative templates in the Windows settings catalog<!-- 38140497 wndraft wnready-->
+
+ 
+The Visual Studio administrative templates were refreshed to version 1.0.184.40051, which adds the latest Visual Studio policy settings to the Windows settings catalog. The new setting is:
+- **[Disable Model Context Protocol (MCP)](/visualstudio/ide/visual-studio-github-copilot-admin#configure-copilot-group-policy)** (DisableMCP)
+For more information, see the [Visual Studio administrative templates documentation](/visualstudio/install/administrative-templates).
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 ### Device enrollment
 
 #### Skip Setup Assistant screens for tvOS and visionOS enrollment<!-- 37665726 -->
