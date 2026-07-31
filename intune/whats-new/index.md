@@ -1,8 +1,9 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/29/2026
+ms.date: 07/27/2026
 ms.topic: whats-new
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 ---
@@ -47,6 +48,151 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->  
+
+## Week of July 27, 2026 (Service release 2607)
+
+### Device configuration
+
+#### Samsung Knox E-FOTA firmware update management for Android Enterprise devices<!-- 6515233 -->
+
+Microsoft Intune now integrates with Samsung Knox E-FOTA (Firmware Over-The-Air), so you can manage firmware updates for corporate-owned Samsung devices directly in the Microsoft Intune admin center. Control which firmware version each device receives, deploy updates without user interaction, and schedule downloads and installations to reduce downtime.
+
+For more information, see [Samsung Knox E-FOTA integration with Microsoft Intune](../device-updates/android/setup-samsung-knox.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned with a work profile (COPE)
+
+#### New settings available in the Windows settings catalog<!-- 37759479 -->
+
+Microsoft Intune now includes new settings in the Windows settings catalog for Windows devices. You can configure options for camera behavior, Keyboard Filter controls (for Windows Insider devices), and Windows Subsystem for Linux (WSL). To find them, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** > **Settings catalog**.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 11
+> - Windows 10
+
+#### New Microsoft Edge settings in the Windows settings catalog<!-- 38140497 -->
+
+The Microsoft Edge administrative templates were refreshed to Microsoft Edge 149 (version 149.0.4022.21), which adds the latest Microsoft Edge 148 and 149 policy settings to the Windows settings catalog. The new settings are:
+
+- **[Allow Local Fonts permission on these sites](/deployedge/microsoft-edge-policies/localfontsallowedforurls)** (LocalFontsAllowedForUrls)
+- **[Allow M365 authentication popups in work profiles](/deployedge/microsoft-edge-policies/m365authpopupsinworkenabled)** (M365AuthPopupsInWorkEnabled)
+- **[Allow MAM enrollment when managed device has Purview DLP policy configured](/deployedge/microsoft-edge-policies/mamwithdevicedlpenabled)** (MAMWithDeviceDLP)
+- **[Automatically open Copilot side pane with contextual insights for links opened from Outlook](/deployedge/microsoft-edge-policies/m365linksautoopencopilotenabled)** (M365LinksAutoOpenCopilotEnabled)
+- **[Block Local Fonts permission on these sites](/deployedge/microsoft-edge-policies/localfontsblockedforurls)** (LocalFontsBlockedForUrls)
+- **[Browsing with Copilot Allowed URLs](/deployedge/microsoft-edge-policies/browsingwithcopilotallowlist)** (BrowsingWithCopilotAllowList)
+- **[Browsing with Copilot Blocked URLs](/deployedge/microsoft-edge-policies/browsingwithcopilotblocklist)** (BrowsingWithCopilotBlockList)
+- **[Configure whether the Discover or Work feed tabs are shown on the Copilot new tab page](/deployedge/microsoft-edge-policies/configurentpfeedtabvisibility)** (ConfigureNTPFeedTabVisibility)
+- **[Controls the availability of browsing with Copilot in Microsoft Edge](/deployedge/microsoft-edge-policies/allowbrowsingwithcopilot)** (AllowBrowsingWithCopilot)
+- **[Default Local Fonts permission setting](/deployedge/microsoft-edge-policies/defaultlocalfontssetting)** (DefaultLocalFontsSetting)
+- **[Enable Copilot address bar suggestions](/deployedge/microsoft-edge-policies/copilotaddressbarsuggestionsenabled)** (CopilotAddressBarSuggestionsEnabled)
+- **[Enable opaque origins for data URLs in Web Workers](/deployedge/microsoft-edge-policies/dataurlinwebworkeropaqueoriginenabled)** (DataUrlInWebWorkerOpaqueOriginEnabled)
+- **[Enable the Copilot new tab page](/deployedge/microsoft-edge-policies/copilotnewtabpageenabled)** (CopilotNewTabPageEnabled)
+- **[Enable the extended lifetime option for SharedWorkers](/deployedge/microsoft-edge-policies/sharedworkerextendedlifetimeenabled)** (SharedWorkerExtendedLifetimeEnabled)
+- **[Force foreground priority for specific URLs](/deployedge/microsoft-edge-policies/forceforegroundpriorityforurls)** (ForceForegroundPriorityForUrls)
+- **[List of URL patterns for which developer tools are allowed to be opened](/deployedge/microsoft-edge-policies/developertoolsavailabilityallowlist)** (DeveloperToolsAvailabilityAllowlist)
+- **[List of URL patterns for which developer tools are blocked](/deployedge/microsoft-edge-policies/developertoolsavailabilityblocklist)** (DeveloperToolsAvailabilityBlocklist)
+- **[Maximum number of concurrent connections to the proxy server for WebSocket requests](/deployedge/microsoft-edge-policies/maxconnectionsperproxyforwebsocket)** (MaxConnectionsPerProxyForWebSocket)
+- **[Override for the CPU performance tier](/deployedge/microsoft-edge-policies/cpuperformancetieroverride)** (CpuPerformanceTierOverride)
+- **[Set the default Copilot new tab page feed tab to Work or Discover](/deployedge/microsoft-edge-policies/setntpdefaultfeedtab)** (SetNTPDefaultFeedTab)
+
+For the full list of policies, see the [Microsoft Edge policies reference](/deployedge/microsoft-edge-policies).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Device enrollment
+
+#### Skip Setup Assistant screens for tvOS and visionOS enrollment<!-- 37665726 -->
+
+Microsoft Intune now supports hiding or showing new Setup Assistant screens during automated device enrollment (ADE) for tvOS and visionOS devices. When you configure an enrollment profile, you can choose which screens, such as **Apple ID**, **Diagnostics Data**, and **Location Services**, appear during setup. By default, these screens are shown.
+
+For more information, see [Set up ADE for tvOS](../device-enrollment/apple/setup-automated-tv-os.md) and [Set up ADE for visionOS](../device-enrollment/apple/setup-automated-vision-os.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - tvOS
+> - visionOS
+
+#### Dedicated RBAC permission for zero-touch enrollment<!-- 29694995 -->
+
+Microsoft Intune now provides a dedicated role-based access control (RBAC) permission for Google zero-touch enrollment portal access. Previously, the zero-touch enrollment iframe in the Microsoft Intune admin center required the **Update app sync** permission, which also grants rights to manage Managed Google Play app sync. With the dedicated permission, you can grant zero-touch enrollment portal access independently from app management permissions.
+
+For more information, see [Enroll by using Google Zero Touch](../device-enrollment/android/ref-corporate-methods.md#enroll-by-using-google-zero-touch).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+
+### Device management
+
+#### Collect Windows registry data with the properties catalog<!-- 33470861 -->
+
+Microsoft Intune now lets you collect Windows registry data through the properties catalog. When you create a device inventory policy, you can define specific registry keys and values to collect from enrolled Windows devices, including a single value, all values directly under a key, or the same value across subkeys under **HKEY_LOCAL_MACHINE**. This gives you richer device state visibility and advanced querying without custom scripts.
+
+For more information, see [Use the Intune properties catalog to get device hardware properties](../device-configuration/collect-device-properties.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### Improved on-demand device sync for Windows devices<!-- 37533252, 37595192 -->
+
+Microsoft Intune now supports a more comprehensive on-demand sync for Windows devices. When you select the **Sync** device action in the Microsoft Intune admin center, Intune initiates a full synchronization across key workloads, including configuration policies, apps, and scripts, so devices reflect your latest changes faster. This capability is especially useful during troubleshooting, incident response, and high-priority rollouts.
+
+For more information, see [Device action: sync](../device-management/actions/sync.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Device security
+
+#### Custom compliance settings for macOS<!-- 35392462 -->
+
+Microsoft Intune now supports custom compliance settings for macOS. As an admin, you can define compliance checks using scripts and JSON rules, similar to existing support for Windows and Linux. This capability lets you evaluate device configuration, security posture, and other custom attributes not covered by built-in settings. Results appear alongside standard compliance reporting in the Intune admin center.
+
+For more information, see [Custom compliance settings in Microsoft Intune](../device-security/compliance/custom-settings.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+#### Controlled Configuration for Microsoft Defender antivirus settings (preview)<!-- 26715847 -->
+
+In preview, Microsoft Intune now supports Controlled Configuration for Microsoft Defender antivirus settings. When you enable it, the Defender antivirus settings delivered by Intune or Microsoft Defender for Endpoint security settings management become authoritative and override configurations from other channels, such as Group Policy, Configuration Manager, and local scripts. Extending Tamper Protection, this capability locks settings to your defined values for consistent and predictable device states.
+
+For more information, see [Controlled configuration for Microsoft Defender settings](../device-configuration/endpoint-security/antivirus.md#controlled-configuration-for-microsoft-defender-settings-preview).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Intune apps
+
+#### Regional support for Microsoft Store apps<!-- 16544248 -->
+
+Microsoft Intune now supports regional selection for Microsoft Store apps. When you add a Microsoft Store app, you can choose the region (market) whose Store catalog to search and deploy from. Previously, Intune searched only the United States catalog. Now you can deploy apps published for specific markets, such as Japan or Spain, that aren't available in the US catalog.
+
+For more information, see [Add Microsoft Store apps to Microsoft Intune](../app-management/deployment/add-microsoft-store.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 ## Week of July 13, 2026
 
@@ -383,9 +529,9 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
-#### Improvements to the new Intune single device page (public preview) <!-- 38223856 -->
+#### Improvements to the new Intune single device page (preview) <!-- 38223856 -->
 
-In the Intune admin center, the **Devices** > **All Devices** > select a device page is redesigned and available for you to preview. This feature was available in the [2604 service release](#preview-the-new-device-page-in-the-intune-admin-center-public-preview).
+In the Intune admin center, the **Devices** > **All Devices** > select a device page is redesigned and available for you to preview. This feature was available in the [2604 service release](#preview-the-new-device-page-in-the-intune-admin-center-preview).
 
 After the initial 2604 release, we made the following improvements:
 
@@ -809,7 +955,7 @@ To learn more about wired networks, see [Add and use wired networks settings on 
 
 ### Device management
 
-#### Detect and block Shadow AI using the properties catalog, device query, and a security baseline (public preview)<!-- 37141378 -->
+#### Detect and block Shadow AI using the properties catalog, device query, and a security baseline (preview)<!-- 37141378 -->
 
 Using Intune, you can detect and block a Local AI Agent, like OpenClaw, on Windows devices enrolled in Intune. Specifically, you can:
 
@@ -817,7 +963,7 @@ Using Intune, you can detect and block a Local AI Agent, like OpenClaw, on Windo
 - Use [Device Query](../advanced-analytics/device-query-multiple-devices.md) to view devices with a Local AI Agent, like OpenClaw.
 - Use the [Local AI Agent Baseline - OpenClaw (Preview)](../device-security/security-baselines/ref-openclaw-settings.md) to block users from using OpenClaw.
 
-This feature is in [public preview](../fundamentals/public-preview.md).
+This feature is in [preview](../fundamentals/public-preview.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -873,11 +1019,11 @@ For more information, see [Mobile Threat Defense role](../device-security/mobile
 > - Android Enterprise corporate-owned fully managed
 > - Android Enterprise corporate-owned work profile
 
-#### Vulnerability Remediation Agent now uses Microsoft Entra agentic identity (public preview)<!-- 36632198 -->
+#### Vulnerability Remediation Agent now uses Microsoft Entra agentic identity (preview)<!-- 36632198 -->
 
 *This feature is rolling out to tenants gradually and may take several weeks to become available in your environment.*
 
-**The Vulnerability Remediation Agent is now available to all customers in public preview.** Previously, the agent was available only to a select group of customers in a limited preview.
+**The Vulnerability Remediation Agent is now available to all customers in preview.** Previously, the agent was available only to a select group of customers in a limited preview.
 
 The [Vulnerability Remediation Agent](../copilot/agents/vulnerability-remediation-agent.md) now uses [Microsoft Entra agentic identity](/entra/agent-id/) instead of a human user identity. When you set up a new agent instance, the setup process automatically provisions an agentic identity in your tenant's Entra directory. The agent runs under the permissions delegated to this agentic user, providing a more secure and scalable identity model.
 
@@ -1059,7 +1205,7 @@ For more information, see:
 
 Microsoft Intune now supports Ubuntu 26.04 LTS. Support for Ubuntu 22.04 LTS ends in August 2026. Devices already enrolled on Ubuntu 22.04 remain enrolled, but you should notify users to upgrade to a supported Ubuntu version. You can identify devices running Ubuntu 22.04 in the Intune admin center by going to **Devices** > **All devices**, filtering by **Linux**, and adding the **OS version** column. For more information, see [Enroll Linux desktop devices in Microsoft Intune](../device-enrollment/guide-linux.md).
 
-#### Preview the new device page in the Intune admin center (public preview)<!-- 16532161, 36646300 -->
+#### Preview the new device page in the Intune admin center (preview)<!-- 16532161, 36646300 -->
 
 In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you can see device-specific info, like device properties.
 
@@ -1180,7 +1326,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Tenant administration
 
-#### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
+#### Change Review Agent suggestions available inline in Multi Admin Approval (preview)<!-- 36876605 -->
 
 The [Change Review Agent](../copilot/agents/change-review-agent.md) now provides risk-based recommendations directly in the Multi Admin Approval experience for Windows PowerShell scripts. On the *My requests* and *All requests* tabs, a new **Agent Response** column displays when a suggestion is available. You can then select the suggestion to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
 
@@ -1512,15 +1658,15 @@ For more information, see [Device query for multiple devices](../advanced-analyt
 
 ### Role-based access control
 
-#### Scoped permissions for Role-based access control (public preview)<!-- 37134761 -->
+#### Scoped permissions for Role-based access control (preview)<!-- 37134761 -->
 
-Intune now includes an opt-in public preview to enable **Scoped permissions**, making your role-based access control (RBAC) configuration more precise. Enabling Scoped permissions is a one-time choice that can't be undone. In the future, this will become the default behavior for all tenants.
+Intune now includes an opt-in preview to enable **Scoped permissions**, making your role-based access control (RBAC) configuration more precise. Enabling Scoped permissions is a one-time choice that can't be undone. In the future, this will become the default behavior for all tenants.
 
 Previously, when an admin had multiple role assignments using different scope tags for the same permission category, Intune merged permissions across those assignments, which could unintentionally grant broader access than intended. With Scoped permissions enabled, each role assignment's permissions apply only within its own scope tag context, so admins receive exactly the access you intended.
 
 To help you prepare before enabling this change, Intune includes a new **Permissions Assessment Report**. The report details your tenant's current permissions and shows how they will change after enabling Scoped permissions. You can rerun the report as often as needed, adjust role assignments, and communicate any changes to affected admins before opting in.
 
-For more information about the current default behavior, the Scoped permissions opt-in public preview, and the new report, see [Permission behavior across role assignments](../fundamentals/role-based-access-control/scope-tags.md#permission-behavior-across-role-assignments).
+For more information about the current default behavior, the Scoped permissions opt-in preview, and the new report, see [Permission behavior across role assignments](../fundamentals/role-based-access-control/scope-tags.md#permission-behavior-across-role-assignments).
 
 ## Week of March 24, 2026
 
@@ -1671,9 +1817,9 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 ### Device enrollment  
 
-#### New setting controls MDM enrollment during account registration on Windows (public preview)<!-- 14724061 --> 
+#### New setting controls MDM enrollment during account registration on Windows (preview)<!-- 14724061 -->
 
-A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../device-enrollment/windows/enable-automatic-mdm.md).  
+A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in preview. For more information, see [Enable MDM automatic enrollment for Windows](../device-enrollment/windows/enable-automatic-mdm.md).
 
 ### Device management
 
@@ -1999,66 +2145,6 @@ Intune only shows tasks you have permission to manage. When you select a task, I
 To learn more, see:
 
 - [Admin tasks](../device-management/admin-tasks.md)
-
-## Week of January 12, 2026
-
-### App management
-
-#### PowerShell script installer for Win32 apps <!-- 34496511 -->
-
-When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
-
-For more information, see [Win32 app management in Microsoft Intune](../app-management/deployment/win32.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-## Week of December 8, 2025  
-
-### Device enrollment  
-
-#### ACME protocol support for iOS/iPadOS and macOS enrollment <!-- 25140355 -->
-
-As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. Now when new Apple devices enroll, the management profile from Intune receives an ACME certificate instead of a SCEP certificate. ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management. 
-
-Existing OS and hardware eligible devices do not get the ACME certificate unless they re-enroll. There is no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies. 
-
-ACME is supported for Apple Device Enrollment (BYOD), Apple Configurator enrollment, and automated device enrollment (ADE) methods. Eligible OS versions include:  
-
-* iOS 16.0 or later  
-
-* iPadOS 16.1 or later  
-
-* macOS 13.1 or later    
-
-#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
-
-You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 
-
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
-
-- **App Store** (iOS/iPadOS 14.3+)
- - **Camera button** (iOS/iPadOS 18+)
- - **Web content filtering** (iOS/iPadOS 18.2+)
- - **Safety and handling** (iOS/iPadOS 18.4+)
- - **Multitasking** (iOS/iPadOS 26+)
- - **OS Showcase** (iOS/iPadOS 26+)
-
-The screens you can skip during macOS enrollment include:
-
-- **App Store** (macOS 11.1+)
-   - **Get Started** (macOS 15+)
-   - **Software update** (macOS 15.4+)
-   - **Additional privacy settings** (macOS 26+)
-   - **OS Showcase** (macOS 26.1+)
-   - **Update completed** (macOS 26.1+)
-
-For more information about available Setup Assistant skipkeys, see:
-
-- [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)  
-- [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
 For previous months, see the [What's new archive](archive.md).
 
