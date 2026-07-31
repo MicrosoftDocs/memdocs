@@ -1,8 +1,9 @@
 ---
 title: What's new in previous months in the Microsoft Intune
 description: Review older announcements from the Intune what's new page
-ms.date: 06/02/2026
+ms.date: 07/27/2026
 ms.topic: whats-new
+ai-usage: ai-assisted
 
 ROBOTS: NOINDEX,NOFOLLOW
 ms.collection:
@@ -14,6 +15,66 @@ ms.collection:
 <!-- Maintenance plan:
 
      Maintain ~2 years of archived content -->
+
+## Week of January 12, 2026
+
+### App management
+
+#### PowerShell script installer for Win32 apps <!-- 34496511 -->
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
+
+For more information, see [Win32 app management in Microsoft Intune](../app-management/deployment/win32.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+## Week of December 8, 2025
+
+### Device enrollment
+
+#### ACME protocol support for iOS/iPadOS and macOS enrollment <!-- 25140355 -->
+
+As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. Now when new Apple devices enroll, the management profile from Intune receives an ACME certificate instead of a SCEP certificate. ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+Existing OS and hardware eligible devices do not get the ACME certificate unless they re-enroll. There is no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies.
+
+ACME is supported for Apple Device Enrollment (BYOD), Apple Configurator enrollment, and automated device enrollment (ADE) methods. Eligible OS versions include:
+
+* iOS 16.0 or later
+
+* iPadOS 16.1 or later
+
+* macOS 13.1 or later
+
+#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
+
+You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant.
+
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
+
+- **App Store** (iOS/iPadOS 14.3+)
+- **Camera button** (iOS/iPadOS 18+)
+- **Web content filtering** (iOS/iPadOS 18.2+)
+- **Safety and handling** (iOS/iPadOS 18.4+)
+- **Multitasking** (iOS/iPadOS 26+)
+- **OS Showcase** (iOS/iPadOS 26+)
+
+The screens you can skip during macOS enrollment include:
+
+- **App Store** (macOS 11.1+)
+- **Get Started** (macOS 15+)
+- **Software update** (macOS 15.4+)
+- **Additional privacy settings** (macOS 26+)
+- **OS Showcase** (macOS 26.1+)
+- **Update completed** (macOS 26.1+)
+
+For more information about available Setup Assistant skipkeys, see:
+
+- [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)
+- [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
 ## Week of December 1, 2025
 
