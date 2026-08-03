@@ -1,12 +1,12 @@
 ---
-title: Manually register devices with Windows Autopilot
-description: Learn how to manually add devices to Windows Autopilot.
+title: Manually Register Devices with Windows Autopilot
+description: Learn how to manually register Windows Autopilot devices. Gather hardware hashes, and import, edit, and delete device records in the Intune admin center.
 ms.date: 04/11/2025
 ms.topic: how-to
 ms.collection:
-  - M365-modern-desktop
-  - m365initiative-coredeploy
-  - essentials-manage
+ - M365-modern-desktop
+ - m365initiative-coredeploy
+ - essentials-manage
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
