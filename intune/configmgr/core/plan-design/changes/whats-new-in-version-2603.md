@@ -1,7 +1,7 @@
 ---
 title: What's new in version 2603
 description: Get details about changes and new capabilities introduced in version 2603 of Configuration Manager current branch.
-ms.date: 04/27/2026
+ms.date: 08/05/2026
 ms.subservice: core-infrastructure
 ms.topic: whats-new
 ms.collection: tier3
@@ -43,7 +43,7 @@ All Configuration Manager components and site roles are updated to remove the de
 
 ### SQL Server Management Objects updated
 
-The Microsoft SQL Server Management Objects and Microsoft System CLR Types for SQL Server are updated from the deprecated SQL Server 2014 versions to the SQL Server 2025 versions (SMO 17).
+The Microsoft SQL Server Management Objects and Microsoft System CLR Types for SQL Server are updated from the deprecated SQL Server 2014 versions to the SQL Server 2025 versions (SMO 17). The `SQLSysClrTypes.msi` and `SharedManagementObjects.msi` files are no longer included in the Configuration Manager redistributable files. After updating to version 2603, customers can safely uninstall these legacy MSI packages. The required package files are now included in the Configuration Manager installation package.
 
 ### PKI certificate support for site system-to-SQL Server communication
 
