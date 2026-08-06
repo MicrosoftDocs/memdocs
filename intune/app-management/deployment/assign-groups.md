@@ -1,7 +1,7 @@
 ---
 title: Assign Apps to Groups in Microsoft Intune
 description: Learn how to assign an Intune app to groups of users or devices using Microsoft Intune.
-ms.date: 12/03/2025
+ms.date: 08/06/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
@@ -12,8 +12,6 @@ ms.collection:
 
 After you [add an app](./index.md) to Microsoft Intune, you can assign the app to users and devices. You can deploy an app to a device whether or not the device is managed by Intune.
 
-> [!NOTE]
-> The **Available for enrolled devices** deployment intent is supported for **user groups** and **device groups**. This applies when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally enabled (COPE) devices.
 
 ## Options when assigning managed apps
 
@@ -36,7 +34,11 @@ The following table lists the various options when *assigning* apps to users and
 >
 > Device users with devices that aren’t enrolled in Intune must open their organization’s Company Portal and install app updates manually.
 > 
-> For almost all app types and platforms, *Available assignments* are only valid when assigning to user groups, not device groups. Win32 apps can be assigned to either user or device groups.
+> For almost all app types and platforms, *Available assignments* are only valid when assigning to user groups, not device groups.
+> 
+> The exceptions to this rule are:
+> 1. Win32 apps can be assigned to either user or device groups as *Available*.
+> 2. Apps targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally enabled (COPE) can be assigned to either user or device groups as *Available*.
 >
 > If managed Google Play preproduction track apps are assigned as required on Android Enterprise personally owned work profile devices, they don't install on the device. To work around this issue, create two identical user groups. Assign the preproduction track as "available" to one group and "required" to the other group. The result is that the preproduction track successfully deploys to the device.
 
