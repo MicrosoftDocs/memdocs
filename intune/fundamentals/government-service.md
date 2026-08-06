@@ -102,7 +102,7 @@ The following features aren't available and there's currently no planning to sup
 | [Microsoft Connected Cache for Enterprise and Education](/windows/deployment/do/mcc-ent-edu-overview) | n/a |
 | [Microsoft Store for Business](/windows/configuration/store/?tabs=intune) | n/a |
 | On-premises Exchange Connector | n/a |
-|[Remediations](../device-management/tools/deploy-remediations)|n/a|
+|[Remediations](../device-management/tools/deploy-remediations.md)|n/a|
 | [Reports for feature update policies](../device-updates/windows/monitor-feature-updates.md) | n/a |
 | [ServiceNow connector](../device-management/tools/setup-servicenow.md) | n/a |
 | [TeamViewer connector (legacy)](../device-management/tools/teamviewer-legacy.md) and [TeamViewer integration](../device-management/tools/setup-teamviewer.md) | n/a |
