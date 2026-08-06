@@ -132,8 +132,8 @@ This view provides:
 - An aggregate count of devices that have the firewall turned off.
 - A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
 
--   [!IMPORTANT]
-  >Per-setting reporting is available for most Endpoint Security policies. For Firewall Rules and Attack Surface Reduction (ASR) Rules policies managed through MDM, reporting is limited to policy-level status and doesn't include per-setting reporting statuses. To view per-setting status for Firewall Rules and ASR Rules policies, devices must be enrolled with [Defender for Endpoint security settings management]. (/intune/device-security/microsoft-defender/security-settings-management).
+>  [!IMPORTANT]
+> Per-setting reporting is available for most Endpoint Security policies. For Firewall Rules and Attack Surface Reduction (ASR) Rules policies managed through MDM, reporting is limited to policy-level status and doesn't include per-setting reporting statuses. To view per-setting status for Firewall Rules and ASR Rules policies, devices must be enrolled with [Defender for Endpoint security settings management](/intune/device-security/microsoft-defender/security-settings-management).
 
 
 ### MDM devices running Windows with firewall off
