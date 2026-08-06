@@ -89,6 +89,8 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
 1. On the **Configuration settings** tab, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:
 
     * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices. Enrolling without user affinity is also referred to as enrolling *userless*.
+   > [!IMPORTANT]
+   >  Do not target Platform SSO (PSSO) configuration profiles that enable PSSO registration during Setup Assistant to userless Automated Device Enrollment (ADE) devices. Doing so can cause unexpected enrollment behavior and results in the device losing expected affinity. See [Configure platform SSO during enrollment](/configure-platform-sso-during-enrollment)
     * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option. Enrolling with user affinity is also referred to as enrolling with a *user*.
 
       Option 2 requires more configurations. Users must authenticate themselves before enrollment to confirm their identity. Select one of the following authentication methods:
