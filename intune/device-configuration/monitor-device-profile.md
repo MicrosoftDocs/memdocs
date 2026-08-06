@@ -80,8 +80,8 @@ After you create your device configuration policy, Intune provides reporting dat
 
     This report shows the individual settings in the policy, and their status.
    
-   [!IMPORTANT]
-  >Per-setting reporting is available for most Endpoint Security policies. For Firewall Rules and Attack Surface Reduction (ASR) Rules policies managed through MDM, reporting is limited to policy-level status and doesn't include per-setting reporting statuses. To view per-setting status for Firewall Rules and ASR Rules policies, devices must be enrolled with [Defender for Endpoint security settings management]. (/intune/device-security/microsoft-defender/security-settings-management).
+> [!IMPORTANT]
+> Per-setting reporting is available for most Endpoint Security policies. For Firewall Rules and Attack Surface Reduction (ASR) Rules policies managed through MDM, reporting is limited to policy-level status and doesn't include per-setting reporting statuses. To view per-setting status for Firewall Rules and ASR Rules policies, devices must be enrolled with [Defender for Endpoint security settings management](/intune/device-security/microsoft-defender/security-settings-management).
 
 6. Go back to **Device and user check-in status** and select **View report**:
 
