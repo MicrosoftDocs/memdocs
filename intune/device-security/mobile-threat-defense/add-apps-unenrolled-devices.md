@@ -46,10 +46,10 @@ However, should you wish to make the app available to end users via the Intune C
 ### Making CylancePROTECT available to end users
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../../app-management/deployment/add-store-android.md). Use this [CylancePROTECT - Play Store URL](https://play.google.com/store/apps/details?id=com.blackberry.protect) when completing the **Configure app information** section.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../../app-management/deployment/add-store-android.md).
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md). Use this [CylancePROTECT - App Store URL](https://apps.apple.com/us/app/cylanceprotect/id1511209199) when completing the **Configure app information** section.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md).
 
 ### Making Check Point Harmony Mobile Protect available to end users
 

@@ -77,7 +77,7 @@ If there's an app you need but don't see in Company Portal, you can request it f
 
 ### View protected media files with Azure Information Protection app
 
-The Azure Information Protection (AIP) mobile apps let you view protected emails, PDFs, images, and text files that you can't open with your regular apps for these file types. The mobile viewer app is available for Android devices on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).
+The Azure Information Protection (AIP) mobile apps let you view protected emails, PDFs, images, and text files that you can't open with your regular apps for these file types.
 
 For more information about AIP, see [View protected files with Microsoft Purview Information Protection viewer](https://support.microsoft.com/topic/view-protected-files-with-microsoft-purview-information-protection-viewer-9fb56fae-7989-48b0-850f-f446e057cf73).
 
