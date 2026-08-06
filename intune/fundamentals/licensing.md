@@ -48,18 +48,31 @@ Intune offers a *device-only subscription* for managing devices that aren't affi
 Assign device licenses based on your estimated usage. Device licenses apply when a device is enrolled through any of the following methods:
 
 - [Windows Autopilot Self-Deploying mode](/autopilot/self-deploying)
+
 - [Apple Device Enrollment Program without user affinity](../device-enrollment/apple/setup-automated-ios.md)
+
 - [Apple School Manager without user affinity](../device-enrollment/apple/school-manager.md)
+
 - [Apple Configurator without user affinity](../device-enrollment/apple/setup-configurator-ios.md)
+
 - [Android Enterprise dedicated](../device-enrollment/android/setup-dedicated.md)
+
 - [Using a device enrollment manager account](../device-enrollment/setup-enrollment-manager.md)
+
+### Device-only management scenarios
+
+- Devices managed through a Microsoft Intune device-only subscription support device-targeted management scenarios for eligible enrollment methods, including shared-device and no-user-affinity scenarios.
+
+- A signed-in user without an Intune user license doesn't prevent device-targeted policies, applications, or management actions from being processed on a device managed through a device-only subscription.
 
 ### Device-only license limitations
 
 When a device is enrolled by using a device license, the following Intune functions aren't supported:
 
 - [Intune app protection policies](../app-management/protection/overview.md)
+
 - [Conditional Access](../device-security/conditional-access-integration/overview.md)
+
 - User-based management features, such as email and calendaring
 
 ## Unlicensed admin access
