@@ -176,7 +176,7 @@ Use the following steps to view the collected device inventory information:
 >Lets you collect selected Windows registry data through the properties catalog for configuration visibility and troubleshooting. Here are some important details about this feature:
 > - Supported collection methods include a single value, all values directly under a key (non-recursive), and the same value across immediate subkeys.
 > - Registry key inventory isn't intended to collect sensitive or confidential values and includes detection logic to help prevent potentially sensitive values from being ingested. If a value is flagged as potentially sensitive, it isn't collected.
-> - To view collected registry data, use Device Inventory.
+> - To view collected registry data, use Device Inventory. Registry key inventory is accessible through existing device inventory permissions and may expose missed sensitive device configuration information; this is an accepted risk, and organizations should review security and privacy implications before enabling broad access.
 > - Initial release limitations include HKLM-only collection and enforced value (6KB) and per-device (100 registry keys) collection limits.
 :::column-end:::
 :::row-end:::
