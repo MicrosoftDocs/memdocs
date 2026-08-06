@@ -56,7 +56,7 @@ Intune operated by 21Vianet depends on the following partner service endpoints:
 
 - Azure AD Sync service: `https://syncservice.partner.microsoftonline.cn/DirectoryService.svc`
 - Evo STS: `https://login.chinacloudapi.cn/`
-- Azure AD `Graph: https://graph.chinacloudapi.us`
+- Azure AD `Graph: https://graph.chinacloudapi.cn`
 - MS Graph: `https://microsoftgraph.chinacloudapi.cn`
 - ADRS: `https://enterpriseregistration.partner.microsoftonline.cn`
 - Experimentation and Configuration Service (ECS): `https://mooncake.ecs.office.com`
