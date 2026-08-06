@@ -59,14 +59,54 @@ The *collect diagnostics* action lets you collect and download managed device di
 :::column-end:::
 :::column span="3":::
 
-> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network:
+> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network. Refer to endpoint.microsoft.com, Tenant Administration | Tenant Status, to identify the geo and data center for your tenant:
 >
-> - Europe: `lgmsapeweu.blob.core.windows.net`
-> - Americas: `lgmsapewus2.blob.core.windows.net`
-> - East Asia: `lgmsapesea.blob.core.windows.net`
-> - Australia: `lgmsapeaus.blob.core.windows.net`
-> - India: `lgmsapeind.blob.core.windows.net`
-> - Switzerland: `lgmsapeswiss.blob.core.windows.net`
+> - Americas:
+>   - `https://amsua0101lmsas.blob.core.windows.net`
+>   - `https://amsua0102lmsas.blob.core.windows.net`
+>   - `https://amsua0201lmsas.blob.core.windows.net`
+>   - `https://amsua0202lmsas.blob.core.windows.net`
+>   - `https://amsua0401lmsas.blob.core.windows.net`
+>   - `https://amsua0402lmsas.blob.core.windows.net`
+>   - `https://amsua0501lmsas.blob.core.windows.net`
+>   - `https://amsua0502lmsas.blob.core.windows.net`
+>   - `https://amsua0601lmsas.blob.core.windows.net`
+>   - `https://amsua0602lmsas.blob.core.windows.net`
+>   - `https://amsua0701lmsas.blob.core.windows.net`
+>   - `https://amsua0702lmsas.blob.core.windows.net`
+>   - `https://amsua0801lmsas.blob.core.windows.net`
+>   - `https://amsua0901lmsas.blob.core.windows.net`
+>   - `https://amsua0902lmsas.blob.core.windows.net`
+>
+> - Europe:
+>   - `https://amsub0101lmsas.blob.core.windows.net`
+>   - `https://amsub0102lmsas.blob.core.windows.net`
+>   - `https://amsub0201lmsas.blob.core.windows.net`
+>   - `https://amsub0202lmsas.blob.core.windows.net`
+>   - `https://amsub0301lmsas.blob.core.windows.net`
+>   - `https://amsub0302lmsas.blob.core.windows.net`
+>   - `https://amsub0501lmsas.blob.core.windows.net`
+>   - `https://amsub0502lmsas.blob.core.windows.net`
+>   - `https://amsub0601lmsas.blob.core.windows.net`
+>   - `https://amsub0701lmsas.blob.core.windows.net`
+>   - `https://amsub0801lmsas.blob.core.windows.net`
+>   - `https://amsub0901lmsas.blob.core.windows.net`
+>
+> - Switzerland:
+>   - `https://amsub0901lmsas.blob.core.windows.net`
+>
+> - East Asia:
+>   - `https://amsuc0101lmsas.blob.core.windows.net`
+>   - `https://amsuc0201lmsas.blob.core.windows.net`
+>   - `https://amsuc0301lmsas.blob.core.windows.net`
+>   - `https://amsuc0501lmsas.blob.core.windows.net`
+>   - `https://amsuc0601lmsas.blob.core.windows.net`
+>
+> - India:
+>   - `https://amsuin01lmsas.blob.core.windows.net`
+>  
+> - Australia:
+>   - `https://amsud0101lmsas.blob.core.windows.net`
 > 
 > Devices must be online and able to communicate with the service during diagnostics.
 

@@ -163,7 +163,7 @@ In addition to configuring the network requirements listed in the following tabl
 | 165 | Windows Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` | **UDP:** 123 |
 | 169 | Windows Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 | 173 | Windows Autopilot - Third-party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443 |
-| 182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR>`lgmsapeswiss.blob.core.windows.net`<BR> | **TCP:** 443 |
+| 182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `amsua0101lmsas.blob.core.windows.net`<BR>`amsua0102lmsas.blob.core.windows.net`<BR>`amsua0201lmsas.blob.core.windows.net`<BR>`amsua0202lmsas.blob.core.windows.net`<BR>`amsua0401lmsas.blob.core.windows.net`<BR>`amsua0402lmsas.blob.core.windows.net`<BR>`amsua0501lmsas.blob.core.windows.net`<BR>`amsua0502lmsas.blob.core.windows.net`<BR>`amsua0601lmsas.blob.core.windows.net`<BR>`amsua0602lmsas.blob.core.windows.net`<BR>`amsua0701lmsas.blob.core.windows.net`<BR>`amsua0702lmsas.blob.core.windows.net`<BR>`amsua0801lmsas.blob.core.windows.net`<BR>`amsua0901lmsas.blob.core.windows.net`<BR>`amsua0902lmsas.blob.core.windows.net`<BR>`amsub0101lmsas.blob.core.windows.net`<BR>`amsub0102lmsas.blob.core.windows.net`<BR>`amsub0201lmsas.blob.core.windows.net`<BR>`amsub0202lmsas.blob.core.windows.net`<BR>`amsub0301lmsas.blob.core.windows.net`<BR>`amsub0302lmsas.blob.core.windows.net`<BR>`amsub0501lmsas.blob.core.windows.net`<BR>`amsub0502lmsas.blob.core.windows.net`<BR>`amsub0601lmsas.blob.core.windows.net`<BR>`amsub0701lmsas.blob.core.windows.net`<BR>`amsub0801lmsas.blob.core.windows.net`<BR>`amsub0901lmsas.blob.core.windows.net`<BR>`amsuc0101lmsas.blob.core.windows.net`<BR>`amsuc0201lmsas.blob.core.windows.net`<BR>`amsuc0301lmsas.blob.core.windows.net`<BR>`amsuc0501lmsas.blob.core.windows.net`<BR>`amsuc0601lmsas.blob.core.windows.net`<BR>`amsud0101lmsas.blob.core.windows.net`<BR>`amsuin01lmsas.blob.core.windows.net`<BR> | **TCP:** 443 |
 
 ## Endpoint analytics
 
@@ -477,13 +477,40 @@ intunemaape13.jpe.attest.azure.net
 intunemaape17.jpe.attest.azure.net
 intunemaape18.jpe.attest.azure.net
 intunemaape19.jpe.attest.azure.net
-lgmsapeaus.blob.core.windows.net
-lgmsapeind.blob.core.windows.net
-lgmsapesea.blob.core.windows.net
-lgmsapeswiss.blob.core.windows.net
-lgmsapeweu.blob.core.windows.net
-lgmsapeweu.blob.core.windows.net
-lgmsapewus2.blob.core.windows.net
+amsua0101lmsas.blob.core.windows.net
+amsua0102lmsas.blob.core.windows.net
+amsua0201lmsas.blob.core.windows.net
+amsua0202lmsas.blob.core.windows.net
+amsua0401lmsas.blob.core.windows.net
+amsua0402lmsas.blob.core.windows.net
+amsua0501lmsas.blob.core.windows.net
+amsua0502lmsas.blob.core.windows.net
+amsua0601lmsas.blob.core.windows.net
+amsua0602lmsas.blob.core.windows.net
+amsua0701lmsas.blob.core.windows.net
+amsua0702lmsas.blob.core.windows.net
+amsua0801lmsas.blob.core.windows.net
+amsua0901lmsas.blob.core.windows.net
+amsua0902lmsas.blob.core.windows.net
+amsub0101lmsas.blob.core.windows.net
+amsub0102lmsas.blob.core.windows.net
+amsub0201lmsas.blob.core.windows.net
+amsub0202lmsas.blob.core.windows.net
+amsub0301lmsas.blob.core.windows.net
+amsub0302lmsas.blob.core.windows.net
+amsub0501lmsas.blob.core.windows.net
+amsub0502lmsas.blob.core.windows.net
+amsub0601lmsas.blob.core.windows.net
+amsub0701lmsas.blob.core.windows.net
+amsub0801lmsas.blob.core.windows.net
+amsub0901lmsas.blob.core.windows.net
+amsuc0101lmsas.blob.core.windows.net
+amsuc0201lmsas.blob.core.windows.net
+amsuc0301lmsas.blob.core.windows.net
+amsuc0501lmsas.blob.core.windows.net
+amsuc0601lmsas.blob.core.windows.net
+amsud0101lmsas.blob.core.windows.net
+amsuin01lmsas.blob.core.windows.net
 licensing.mp.microsoft.com
 login.live.com
 login.microsoftonline.com

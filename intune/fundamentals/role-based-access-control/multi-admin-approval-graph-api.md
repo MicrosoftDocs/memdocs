@@ -1,7 +1,7 @@
 ---
 title: Use Multi Admin Approval with the Microsoft Graph API
 description: Learn how to update your automation scripts and applications to work with Multi Admin Approval enforcement on app-authenticated API calls in Microsoft Intune.
-ms.date: 06/15/2026
+ms.date: 08/06/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
@@ -23,7 +23,7 @@ This article explains how to update your automation to work with the MAA approva
 
 Previously, only interactive (delegated) admin actions were subject to MAA approval workflows. With this change, automated and scripted calls that use app-only tokens are also intercepted by MAA when the target resource is protected by an access policy.
 
-If your application makes API calls to MAA-protected resources using app-auth and doesn't include the required approval headers, the call returns an HTTP 403 error. The response body indicates that the operation requires Multi Admin Approval.
+If your application makes API calls to MAA-protected resources using app-auth and doesn't include the required approval headers, the call returns an HTTP 400 error. The response body indicates that the operation requires Multi Admin Approval.
 
 ### Affected resource types
 
@@ -73,20 +73,27 @@ Without the justification header, the request fails with an error indicating tha
 
 ## Step 2: Handle the approval response
 
-The request returns an HTTP 403 error with an `ApprovalRequired` error code. This 403 response is expected and doesn't indicate a permissions problem — it's how MAA signals that the request was received and is now waiting for approval. The response includes an `x-msft-approval-code` header that you need for the remaining steps.
+The request returns an HTTP 412 (`Precondition Failed`) with an outer Microsoft Graph error code of `BadRequest`. This response is expected and doesn't indicate a permissions problem — it's how MAA signals that the request was received and is now waiting for approval. The approval-required details are nested in the error message.
+
+The response includes an `x-msft-approval-code` header that you need for the remaining steps. Use the presence of this header together with HTTP 412 as the signal that MAA accepted the request and created an approval request.
 
 Example response:
 
 ```json
+HTTP/1.1 412 Precondition Failed
+x-msft-approval-code: aabb1234-5678-9012-abcd-ef0123456789
+Content-Type: application/json
+
 {
   "error": {
-    "code": "ApprovalRequired",
-    "message": "Approval Required. Request Approval using the request ID returned as part of the x-msft-approval-code response header. x-msft-approval-code: aabb1234-5678-9012-abcd-ef0123456789"
+    "code": "BadRequest",
+    "message": "{\r\n  \"_version\": 3,\r\n  \"Message\": \"Approval Required. Request Approval using the request ID returned as part of the x-msft-approval-code response header. x-msft-approval-code: aabb1234-5678-9012-abcd-ef0123456789 - Operation ID (for customer support): 00000000-0000-0000-0000-000000000000 - Activity ID: <activity-id> - Url: <service-url>\",\r\n  \"CustomApiErrorPhrase\": \"\",\r\n  \"RetryAfter\": null,\r\n  \"ErrorSourceService\": \"\",\r\n  \"HttpHeaders\": \"{\\\"x-msft-approval-code\\\":\\\"aabb1234-5678-9012-abcd-ef0123456789\\\"}\"\r\n}"
   }
 }
 ```
 
-Extract the `x-msft-approval-code` value from the response. You need it in Step 4 after the request is approved.
+Extract the `x-msft-approval-code` value from the response. Save the original HTTP method, URL, and request body with this value because you must resubmit the same request in Step 4 after approval.
+
 
 ## Step 3: Wait for approval
 
