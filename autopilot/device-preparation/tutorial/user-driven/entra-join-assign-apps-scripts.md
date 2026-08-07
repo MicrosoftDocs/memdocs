@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group.
-ms.date: 01/30/2026
+ms.date: 08/07/2026
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -21,7 +21,8 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 > - **Step 5: Assign applications and PowerShell scripts to device group**
 
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 7, option 1: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 7, option 2: [Associate devices](entra-join-device-association.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
@@ -45,7 +46,7 @@ For applications to install and PowerShell scripts work successfully during a Wi
 
 > [!NOTE]
 >
-> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/intune/app-management/deployment/index) and [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
+> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/intune/app-management/deployment/) and [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
 
 ### Applications
 
@@ -134,7 +135,7 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 ## Related content
 
-- [Add apps to Microsoft Intune](/intune/app-management/deployment/index).
+- [Add apps to Microsoft Intune](/intune/app-management/deployment/).
 - [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
 - [Assign apps to groups with Microsoft Intune](/intune/app-management/deployment/assign-groups).
 - [Win32 app management in Microsoft Intune](/intune/app-management/deployment/win32).

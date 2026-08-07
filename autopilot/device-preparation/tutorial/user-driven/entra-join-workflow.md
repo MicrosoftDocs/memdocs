@@ -1,7 +1,7 @@
 ---
 title: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune
 description: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune.
-ms.date: 03/27/2025
+ms.date: 08/07/2026
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -13,7 +13,7 @@ This step by step tutorial guides through using Intune to perform a Windows Auto
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation user-driven Microsoft Entra join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
-Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all requirements are met for joining devices to Microsoft Entra ID.
+Before beginning, refer to [Plan your Microsoft Entra device deployment](/entra/identity/devices/device-join-plan) to make sure all requirements are met for joining devices to Microsoft Entra ID.
 
 ## Windows Autopilot device preparation user-driven Microsoft Entra join overview
 
@@ -28,7 +28,7 @@ Windows Autopilot device preparation user-driven deployments can perform the fol
 
 - Joins the device to Microsoft Entra ID.
 - Enrolls the device in Intune.
-- Installs up to 10 essential applications.
+- Installs up to 25 essential applications.
 - Runs up to 10 essential PowerShell scripts.
 
 Once the Windows Autopilot device preparation user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the desktop.
@@ -63,7 +63,7 @@ During the out-of-box experience (OOBE), a user authenticates with their corpora
 
 ## Workflow
 
-The following steps are needed to configure and then perform a Windows Autopilot device preparation user-driven Microsoft Entra join in Intune:
+Steps 1–6 configure your environment and the Windows Autopilot device preparation policy. They're required for all deployments:
 
 > [!div class="checklist"]
 >
@@ -73,11 +73,19 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 4: [Create a user group](entra-join-user-group.md)
 > - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 > - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-> - Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
-> [!NOTE]
+### Step 7 (optional): Make sure only trusted devices are onboarded
+
+If you use Intune enrollment restrictions to block personal device enrollments, you must configure **either** corporate identifiers **or** device association for each device before deployment. You don't need both. If a device is associated, you don't need to upload a corporate identifier for it. If personal devices aren't blocked in your environment, you can skip this step and deploy the device.
+
+Choose one of the following options:
+
+> [!div class="checklist"]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment.
+> - Step 7, option 1: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+> - Step 7, option 2: [Associate devices](entra-join-device-association.md)
+
+Device association also unlocks additional device preparation policy settings—such as OOBE customization and device naming—that are only available to associated devices.
 
 ## Walkthrough
 
