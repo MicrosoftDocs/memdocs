@@ -756,6 +756,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.Chat | EdgeCopilotEnabled |
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 |com.microsoft.intune.mam.managedbrowser.CopilotMode	| CopilotMode |
+|com.microsoft.intune.mam.managedbrowser.ThemeAvailable	| EdgeThemeEnabled |
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
