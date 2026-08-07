@@ -569,6 +569,7 @@ For setup and validation guidance, see:
 Enrollment time grouping is now generally available for Apple automated device enrollment (ADE) on iOS/iPadOS and macOS. With enrollment time grouping, you can identify a device's Microsoft Entra security group during enrollment, so policies, apps, and settings can be applied earlier in the setup process.
 
 Enrollment time grouping is supported in new Apple ADE enrollment policies. For requirements and setup details, see [Set up enrollment time grouping](../device-enrollment/setup-time-grouping.md).  
+With the enrollment time grouping availability to iOS/iPadOS and macOS, we're also making the new Apple enrollment policies experience avaialble. Please check our previous blog post to learn more. (https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531)
 
 ### Device management
 
