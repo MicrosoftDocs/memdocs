@@ -1,7 +1,7 @@
 ---
-title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a Windows Autopilot device preparation policy
-description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a Windows Autopilot device preparation policy.
-ms.date: 06/11/2025
+title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 - Create a Windows Autopilot device preparation policy
+description: Create a Windows Autopilot device preparation policy for a user-driven Microsoft Entra join deployment.
+ms.date: 08/07/2026
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -21,7 +21,8 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 >
 > - **Step 6: Create Windows Autopilot device preparation policy**
 
-- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 7, option 1: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 7, option 2: [Associate devices](entra-join-device-association.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
@@ -103,6 +104,22 @@ In the **Configuration settings** page:
 
       If there's a deployment failure, setting this option to **Yes** displays a link at the deployment failure page allowing the end-user to retrieve diagnostic logs.
 
+   > [!IMPORTANT]
+   >
+   > The out-of-box experience settings that follow—**Language (Region)**, **Automatically configure keyboard**, **Hide Microsoft Software License Terms**, **Hide privacy settings**, **Hide change account options**, and **Apply device name template**—are **only available to associated devices**. They take effect only when the device is bound to your tenant using [device association](entra-join-device-association.md), and they have no effect on devices that aren't associated, such as devices onboarded with corporate identifiers only. This limitation doesn't apply to the **Apps** or **Scripts** sections, which apply to all Windows Autopilot device preparation deployments.
+
+   1. **Language (Region)** - Sets the language and region applied to the device during OOBE.
+
+   1. **Automatically configure keyboard** - Skips the keyboard selection page in OOBE.
+
+   1. **Hide Microsoft Software License Terms** - Hides the Microsoft Software License Terms (EULA) page in OOBE.
+
+   1. **Hide privacy settings** - Hides the privacy settings page in OOBE.
+
+   1. **Hide change account options** - Prevents change account options from appearing on the company sign-in and domain error pages. This setting requires company branding to be configured in Microsoft Entra ID.
+
+   1. **Apply device name template** - Renames the device before enrollment using a custom prefix combined with `%RAND:4%` (four random characters) or `%SERIAL%` (the device serial number).
+
 1. Expand the **Apps** section by selecting it:
 
    The **Apps** section allows selection of up to 25 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device.
@@ -157,20 +174,39 @@ In the **Configuration settings** page:
 
 > [!IMPORTANT]
 >
-> Make sure that the device that the Windows Autopilot device preparation deployment is run on isn't registered or added as a Windows Autopilot device. If the device is registered or added as a Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. In this scenario, the Windows Autopilot deployment runs instead of the Windows Autopilot device preparation deployment. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
+> If a device is registered as a Windows Autopilot device, whether the Windows Autopilot deployment or the Windows Autopilot device preparation deployment runs depends on the device's association state:
+>
+> - **The device isn't associated with your tenant.** Windows Autopilot registration takes precedence, and the Windows Autopilot deployment runs instead of the device preparation deployment.
+> - **The device is associated with your tenant.** Device association takes precedence, and the Windows Autopilot device preparation deployment runs.
+>
+> To run device preparation on a registered device without associating it, first remove the device's Windows Autopilot registration. For more information, see [Deregister a device](../../../registration-overview.md#deregister-a-device).
 
 ## Policy priority
 
 If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
-## Next step: Add Windows corporate identifier to device
+A device preparation policy can be assigned to a device or to a user. When a device has both a device-based assignment and a user-based assignment, the **device-based assignment takes precedence**. For example, if you assign a device preparation policy directly to a device when you [pre-associate the device](entra-join-device-association.md), that policy is used instead of any policy assigned to the user who signs in during enrollment.
+
+## Next step: Onboard trusted devices
+
+After you create the device preparation policy, choose **one** of the following methods to make sure only trusted devices are prepared. You don't need to use both:
+
+- **Corporate identifiers** (optional) - Upload device identifiers so only trusted devices can enroll when personal-device enrollment is blocked.
+- **Device association** (optional) - Bind devices to your tenant before enrollment. Associated devices are automatically treated as corporate-owned, so you **don't** need to upload corporate identifiers for them. Device association also enables the out-of-box experience settings that are only available to associated devices.
+
+To use corporate identifiers:
 
 > [!div class="nextstepaction"]
-> [Step 7: Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+> [Step 7, option 1: Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+
+To use device association instead:
+
+> [!div class="nextstepaction"]
+> [Step 7, option 2: Associate devices](entra-join-device-association.md)
 
 > [!NOTE]
 >
-> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.
+> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If enrollment restrictions aren't blocking personal devices and you aren't using device association, then the next step is to deploy the device.
 
 <!--links-->
 
