@@ -1,7 +1,7 @@
 ---
 title: Manually register Microsoft Entra apps
 description: Manually create the required apps in Microsoft Entra ID to integrate the Configuration Manager site to support the cloud management gateway (CMG).
-ms.date: 03/11/2022
+ms.date: 08/06/2026
 ms.subservice: core-infrastructure
 ms.topic: how-to
 ms.collection: tier3
@@ -106,14 +106,6 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
     1. Select **Add scope** to save.
 
-1. In the menu of the app properties, select **Manifest**. Set the **oauth2AllowIdTokenImplicitFlow** entry to **true**. For example:
-
-    ```json
-    "oauth2AllowIdTokenImplicitFlow": true,
-    ```
-
-    Select **Save**.
-
 The web (server) app for CMG is now registered in Microsoft Entra ID.
 
 
@@ -154,14 +146,6 @@ The web (server) app for CMG is now registered in Microsoft Entra ID.
     1. Switch to the **My APIs** tab, and select your web (server) app. For example, **CMG-ServerApp**. Select the **user_impersonation** permission, and then select **Add permissions** to save.
 
     1. On the API permissions pane, select **Grant admin consent for...**, and then select **Yes**.
-
-1. In the menu of the app properties, select **Manifest**. Set the **oauth2AllowIdTokenImplicitFlow** entry to **true**. For example:
-
-    ```json
-    "oauth2AllowIdTokenImplicitFlow": true,
-    ```
-
-    Select **Save**.
 
 The native (client) app for CMG is now registered in Microsoft Entra ID. This step also concludes the process in the Azure portal. The role of the Microsoft Entra Global Administrator is done.
 

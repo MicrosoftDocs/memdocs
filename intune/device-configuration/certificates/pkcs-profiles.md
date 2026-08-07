@@ -1,7 +1,7 @@
 ---
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
-ms.date: 11/19/2024
+ms.date: 08/06/2026
 ms.topic: how-to
 ---
 # Configure and use PKCS certificates with Intune
@@ -21,6 +21,9 @@ For information about using imported PKCS certificates, see [Imported PFX Certif
 
 > [!TIP]
 > *PKCS certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
+
+> [!NOTE]
+> Device configuration profiles including PKCS certificate profile aren't supported on Microsoft Teams devices running AOSP.
 
 ## Requirements
 
