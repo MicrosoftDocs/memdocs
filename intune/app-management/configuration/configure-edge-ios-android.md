@@ -195,6 +195,14 @@ Microsoft Edge for iOS and Android allows organizations to disable the New Tab P
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL |Specify a valid URL. If no URL is specified, the app uses the New Tab Page experience. Incorrect URLs are blocked as a security measure.<br>For example: `https://www.bing.com`|
 
+#### Theme and Wallpaper customization experience
+
+Microsoft Edge for iOS and Android allows organizations to control whether users can access and apply Theme and Wallpaper customization.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.ThemeAvailable |**true** (default) Edge Theme and Wallpaper customization is available <br>**false** Edge Theme and Wallpaper customization is not available|
+
 ### Bookmark experiences
 
 Microsoft Edge for iOS and Android offers organizations several options for managing bookmarks.
@@ -748,6 +756,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.Chat | EdgeCopilotEnabled |
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
 |com.microsoft.intune.mam.managedbrowser.CopilotMode	| CopilotMode |
+|com.microsoft.intune.mam.managedbrowser.ThemeAvailable	| EdgeThemeEnabled |
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
