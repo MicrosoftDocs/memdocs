@@ -110,11 +110,7 @@ Before deploying your script in production, test it in an isolated environment t
 1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add** > *(choose your platform)*.
 2. On **Basics**, provide a **Name**.
 3. On **Settings**, add your script to **Detection script**. Review your script carefully. Intune doesn’t validate the script for syntax or programmatic errors.
-4. ***For macOS*** - On **Settings**, configure the following behavior for the Bash script:
 
-   - **Run this script using the logged on credentials** – Set this value to **Yes** to run the script in the context of the logged-on user.
-   - **Enforce script signature check** – Set this value to **Yes** to require a valid signature on the script.
-   - **Hide script notifications on devices** – Set this value to **Yes** to hide notifications from the script on the device.
 
    ***For Windows only*** - On **Settings**, configure the following behavior for the PowerShell script:
 
@@ -125,7 +121,7 @@ Before deploying your script in production, test it in an isolated environment t
    - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&preserve-view=true) in the PowerShell documentation.
    - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to **Yes** to force the script to run using the 64-bit host instead.
 
-5. Complete the script creation process. The script appears in the **Scripts** pane and is available to select when configuring compliance policies.
+4. Complete the script creation process. The script appears in the **Scripts** pane and is available to select when configuring compliance policies.
 
 ## Next steps
 
