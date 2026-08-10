@@ -35,6 +35,11 @@ On the target web server, do the following actions:
 > [!NOTE]
 > Depending upon your site design, you may need to run the script multiple times. For example, run the script on the management point to install the administration and monitoring website. Then run it again on a standalone web server to install the self-service portal.
 
+> [!TIP]
+> If you are migrating from a standalone MBAM deployment to ConfigMgr, the existing MBAM groups can be reused. To retrieve these groups, run the PowerShell command below from the MBAM Application Server
+> ```PowerShell
+> Get-MbamWebApplication -AdministrationPortal
+
 1. Copy the following files from `SMSSETUP\BIN\X64` in the Configuration Manager installation folder on the site server to a local folder on the target server:
 
     - `MBAMWebSite.cab`
