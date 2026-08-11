@@ -75,6 +75,24 @@ You can track the progress of the sync action by selecting the **Device sync sta
 
 ::: zone-end
 
+::: zone pivot="ios"
+
+## Sync behavior on iOS/iPadOS
+
+After selecting **Sync**, Intune initiates an on-demand synchronization across multiple workloads to help ensure the device reflects the latest admin intent as quickly as possible. This process includes, but isn't limited to:
+
+- Configuration policy processing
+- App detection and deployment state updates
+- Script and remediation processing
+- Other device management signals required to align device state with current assignments
+
+You can track the progress of the sync action by selecting the **Device sync status** tab in the device overview pane.
+
+>[!NOTE]
+> The described sync behavior, including the **Device sync status** tab, applies only to iOS/iPadOS and Windows devices. To see the new device sync improvements, ensure that the 'Preview new device view' toggle is turned ON. This is at the top right of the Intune admin console screen.
+
+::: zone-end
+
 ::: zone pivot="ios,android"
 
 ## Retryable error codes
