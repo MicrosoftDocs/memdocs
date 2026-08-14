@@ -40,6 +40,24 @@ For example, you used MBAM to encrypt the drive with the AES-XTS 128 encryption 
 
 To work around this behavior, first disable BitLocker on the device. Then deploy a new policy with the new settings.
 
+## Reusing MBAM groups while migrating to ConfigMgr
+
+If you are migrating from a standalone MBAM deployment to ConfigMgr, the existing MBAM groups can be reused. To retrieve these groups, run the PowerShell command below from the MBAM Application Server.
+
+```PowerShell
+> Get-MbamWebApplication -AdministrationPortal | Select-Object AdvancedHelpdeskAccessGroup,HelpdeskAccessGroup,ReportsReadOnlyAccessGroup
+```
+ 
+ For more information about the fields returned by the cmdlet, see [Get-MbamWebApplication (MBAM)](/previous-versions/powershell/module/mbam/get-mbamwebapplication). Use the following portal-equivalent group mappings when configuring the migration script.
+
+ | MBAM Parameter | ConfigMgr Parameter |
+ | ---------------|---------------------|
+ | AdvancedHelpdeskAccessGroup | HelpdeskAdminsGroupName
+ | HelpdeskAccessGroup | HelpdeskUsersGroupName |
+ | ReportsReadOnlyAccessGroup | MbamReportUsersGroupName
+
+ For more information about mapping the fields while setting up Bitlocker portals via ConfigMgr, see [Set up BitLocker reports and portals](setup-websites.md)
+
 ## Next steps
 
 [About the BitLocker recovery service](recovery-service.md)
