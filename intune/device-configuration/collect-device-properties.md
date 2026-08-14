@@ -4,6 +4,7 @@ description: Use Microsoft Intune properties catalog to collect device propertie
 ms.date: 07/01/2026
 ms.topic: how-to
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1018
 ms.reviewer: abbystarr, madisoncooks
 ---
 
