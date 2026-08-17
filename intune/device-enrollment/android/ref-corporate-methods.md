@@ -53,30 +53,30 @@ Intune admins can scan the QR code directly from the enrollment profile to enrol
     > Browser zoom settings may prevent your device from scanning the QR code. Zoom in and try again if your device has difficulty scanning the code.
 
 ## Enroll by using Google Zero Touch
-
+ 
 >[!IMPORTANT]
 > Devices must be purchased from an authorized zero-touch reseller and support zero-touch enrollment. For more information, such as prerequisites, where to purchase devices, and how to associate a Google Account with your corporate email, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005) (opens Android Enterprise Help docs).
-
+ 
 This method utilizes zero-touch enrollment and the Google zero-touch enrollment portal to provision and enroll company-owned devices. Provisioning begins right out of the box when users turn their devices on. This section describes how to:
-
+ 
 * Create a zero-touch configuration with provisioning details in the Microsoft Intune admin center.
 * Create a zero-touch configuration with provisioning details in the zero-touch enrollment portal.
-
+ 
 ### Create zero-touch configuration in admin center
 The zero-touch iframe gives you access to the zero-touch enrollment portal and zero-touch configurations in the Microsoft Intune admin center.
-
-To enable the iframe, you must first add the *update app sync* permission and enable enrollment for corporate-owned, fully managed devices. Once you enable the iframe, you can:
-
+ 
+To enable the iframe, you must first add the *Manage zero touch enrollment* permission and enable enrollment for corporate-owned, fully managed devices. Once you enable the iframe, you can:
+ 
   * Link your zero-touch account to Intune
   * Add support information
   * Configure zero-touch enabled devices
   * Customize provisioning extras
-
+ 
 Complete the steps in this section to enable the iframe. To create configurations in the zero-touch enrollment portal instead, skip to [Create configuration in zero-touch enrollment portal](ref-corporate-methods.md#create-configuration-in-zero-touch-enrollment-portal).
-
+ 
 #### Step 1: Add required permission
-Add the *update app sync* permission.
-
+Add the *Manage zero touch enrollment* permission.
+ 
 1. Sign in to the [Microsoft Intune admin center]
 admin.
 2. Select **Tenant administration** > **Roles**.
@@ -84,7 +84,7 @@ admin.
 4. Select **Properties**.
 5. Go to **Permissions** and then select **Edit**.
 6. Select **Android Enterprise**.
-7. Next to **Update app sync**, select **Yes**.
+7. Next to **Manage zero touch enrollment**, select **Yes**.
 8. Select **Review + save** to review your changes.
 9. Select **Save**.
 
