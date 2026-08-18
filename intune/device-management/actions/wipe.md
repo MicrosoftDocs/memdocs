@@ -1,7 +1,7 @@
 ---
 title: "Device Action: Wipe"
 description: Learn how to wipe, or factory reset, devices with Microsoft Intune.
-ms.date: 11/14/2025
+ms.date: 08/06/2026
 ms.topic: how-to
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
@@ -11,6 +11,9 @@ zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 Use the *Wipe* action in Intune to factory reset a device, restoring it to its default settings. This action removes all personal and organizational data, apps, and configurations. It's commonly used when a device needs to be retired, repurposed, reset for troubleshooting, or securely erased if lost or stolen.
 
 Depending on the platform, you can customize the wipe behavior to meet your organization's needs.
+
+> [!IMPORTANT]
+> A tenant can submit up to 500 Wipe actions per day. This tenant-wide limit is cumulative across individual device actions, bulk device actions, and Microsoft Graph API requests. To request a limit change, [contact Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md). For all device action limits, see [Daily tenant limits](index.md#daily-tenant-limits).
 
 ## Prerequisites
 
