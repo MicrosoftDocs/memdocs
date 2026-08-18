@@ -1,7 +1,7 @@
 ---
 title: Device Actions - Wipe, Lock, Locate, and More
 description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, tvOS, visionOS, macOS, Windows, and ChromeOS devices. Learn about available device actions, prerequisites, and bulk actions for IT admins.
-ms.date: 07/10/2026
+ms.date: 08/06/2026
 ms.topic: overview
 ---
 
@@ -149,6 +149,18 @@ Every device action has its own steps, which the respective documentation detail
 > [!NOTE]
 > The **Retire**, **Wipe**, and **Delete** actions take precedence over all other actions. A device with multiple pending actions only carries out a Retire, Wipe, or Delete. The system ignores all other pending actions.
 
+## Daily tenant limits
+
+Intune limits the number of Wipe, Retire, and Delete device actions that can be submitted in a tenant each day.
+
+| Device action | Daily limit per tenant |
+| --- | ---: |
+| Wipe | 500 |
+| Retire | 1,000 |
+| Delete | 1,000 |
+
+The limit for each action is cumulative across all submission methods, including actions for individual devices, bulk device actions, and Microsoft Graph API requests. To request a change to one of these limits, [contact Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md).
+
 ## Check the status of the action
 
 To check the status of the action, select **Devices** > [**Device actions**].
@@ -159,6 +171,9 @@ To check the status of the action, select **Devices** > [**Device actions**].
 ## Bulk device actions
 
 Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk device actions, so IT admins can perform tasks on up to 100 devices at the same time. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
+
+> [!NOTE]
+> Bulk Wipe, Retire, and Delete requests count toward the [daily tenant limit](#daily-tenant-limits) for each action.
 
 For example, at the end of a school year, IT admins can use bulk wipe to securely reset student devices before reassigning them for the next term. This approach saves time and ensures that sensitive data is removed efficiently across all devices.
 
