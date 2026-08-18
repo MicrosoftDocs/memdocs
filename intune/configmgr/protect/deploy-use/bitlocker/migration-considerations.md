@@ -1,7 +1,7 @@
 ---
 title: Migrate from MBAM
 description: Understand the considerations when migrating from Microsoft BitLocker Administration and Monitoring (MBAM) to BitLocker management in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 18/08/2026
 ms.subservice: protect
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
@@ -40,23 +40,23 @@ For example, you used MBAM to encrypt the drive with the AES-XTS 128 encryption 
 
 To work around this behavior, first disable BitLocker on the device. Then deploy a new policy with the new settings.
 
-## Reusing MBAM groups while migrating to ConfigMgr
+## Reuse MBAM groups
 
-If you are migrating from a standalone MBAM deployment to ConfigMgr, the existing MBAM groups can be reused. To retrieve these groups, run the PowerShell command below from the MBAM Application Server.
+If you're migrating from a stand-alone MBAM deployment to Configuration Manager Bitlocker management, you can reuse your existing MBAM groups. To retrieve the groups, run the following PowerShell command on the MBAM application server:
 
 ```PowerShell
-> Get-MbamWebApplication -AdministrationPortal | Select-Object AdvancedHelpdeskAccessGroup,HelpdeskAccessGroup,ReportsReadOnlyAccessGroup
+Get-MbamWebApplication -AdministrationPortal | Select-Object AdvancedHelpdeskAccessGroup,HelpdeskAccessGroup,ReportsReadOnlyAccessGroup
 ```
  
- For more information about the fields returned by the cmdlet, see [Get-MbamWebApplication (MBAM)](/previous-versions/powershell/module/mbam/get-mbamwebapplication). Use the following portal-equivalent group mappings when configuring the migration script.
+ For more information about the properties returned by the cmdlet, see [Get-MbamWebApplication (MBAM)](/previous-versions/powershell/module/mbam/get-mbamwebapplication). 
+ 
+ When you [set up the BitLocker portals](setup-websites.md) in Configuration Manager, use the following portal-equivalent group mappings:
 
  | MBAM Parameter | ConfigMgr Parameter |
  | ---------------|---------------------|
  | AdvancedHelpdeskAccessGroup | HelpdeskAdminsGroupName
  | HelpdeskAccessGroup | HelpdeskUsersGroupName |
  | ReportsReadOnlyAccessGroup | MbamReportUsersGroupName
-
- For more information about mapping the fields while setting up Bitlocker portals via ConfigMgr, see [Set up BitLocker reports and portals](setup-websites.md)
 
 ## Next steps
 
