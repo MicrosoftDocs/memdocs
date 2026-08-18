@@ -1,7 +1,7 @@
 ---
 title: Migrate from MBAM
 description: Understand the considerations when migrating from Microsoft BitLocker Administration and Monitoring (MBAM) to BitLocker management in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 8/18/2026
 ms.subservice: protect
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
@@ -39,6 +39,24 @@ Configuration Manager doesn't re-encrypt drives that are already protected with 
 For example, you used MBAM to encrypt the drive with the AES-XTS 128 encryption algorithm, but the Configuration Manager policy requires AES-XTS 256. The drive is non-compliant with the policy, even though the drive is encrypted.
 
 To work around this behavior, first disable BitLocker on the device. Then deploy a new policy with the new settings.
+
+## Reuse MBAM groups
+
+If you're migrating from a stand-alone MBAM deployment to Configuration Manager Bitlocker management, you can reuse your existing MBAM groups. To retrieve the groups, run the following PowerShell command on the MBAM application server:
+
+```PowerShell
+Get-MbamWebApplication -AdministrationPortal | Select-Object AdvancedHelpdeskAccessGroup,HelpdeskAccessGroup,ReportsReadOnlyAccessGroup
+```
+ 
+ For more information about the properties returned by the cmdlet, see [Get-MbamWebApplication (MBAM)](/previous-versions/powershell/module/mbam/get-mbamwebapplication). 
+ 
+ When you [set up the BitLocker portals](setup-websites.md) in Configuration Manager, use the following portal-equivalent group mappings:
+
+ | MBAM Parameter | ConfigMgr Parameter |
+ | ---------------|---------------------|
+ | AdvancedHelpdeskAccessGroup | HelpdeskAdminsGroupName
+ | HelpdeskAccessGroup | HelpdeskUsersGroupName |
+ | ReportsReadOnlyAccessGroup | MbamReportUsersGroupName
 
 ## Next steps
 
