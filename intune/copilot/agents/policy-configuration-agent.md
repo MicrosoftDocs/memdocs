@@ -8,6 +8,8 @@ ms.reviewer: aanavath, jubaptis
 
 # Policy Configuration Agent in Microsoft Intune
 
+[!INCLUDE [agent-deprecation](includes/agent-deprecation.md)]
+
 The Intune Policy Configuration Agent uses the generative AI-powered features in Security Copilot. It helps IT admins translate complex requirements and industry standard documents into actionable Intune settings.
 
 Admins can quickly generate Intune [settings catalog](../../device-configuration/settings-catalog/index.md) policies that align with organizational or regulatory baselines, including any hardening initiatives.
