@@ -73,7 +73,8 @@ In addition to compliance settings that are built in to Intune, the following pl
 
 - Linux
     - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
-    - RedHat Enterprise Linux 9 or 10  
+    - RedHat Enterprise Linux 9 or 10
+- macOS
 - Windows
 
 Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
