@@ -3,7 +3,7 @@ title: Integrate Samsung Knox E-FOTA with Microsoft Intune
 description: Learn how to integrate Samsung Knox E-FOTA with Microsoft Intune to register Samsung devices, configure firmware updates, and monitor campaigns.
 ms.date: 08/24/2026
 ms.topic: how-to
-ms.reviewer: grwilso
+ms.reviewer: cchristenson
 ai-usage: ai-generated
 ms.custom: msecd-doc-authoring-1017
 ---
