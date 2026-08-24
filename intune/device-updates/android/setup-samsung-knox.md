@@ -1,7 +1,7 @@
 ---
 title: Integrate Samsung Knox E-FOTA with Microsoft Intune
 description: Learn how to integrate Samsung Knox E-FOTA with Microsoft Intune to register Samsung devices, configure firmware updates, and monitor campaigns.
-ms.date: 07/24/2026
+ms.date: 08/24/2026
 ms.topic: how-to
 ms.reviewer: grwilso
 ai-usage: ai-generated
@@ -126,6 +126,9 @@ In the Microsoft Intune admin center, link Intune and Samsung Knox E-FOTA by cre
 1. Select **Connect**, and then select **Connect** again to confirm. The Samsung Knox E-FOTA portal opens. Sign in with a Samsung Knox administrator account and authorize the connection.
 1. After the connection is established, you're redirected to the Intune admin center. The connector is listed as **Connected**.
 
+> [!NOTE]
+> If you use EMM group sync in Knox E-FOTA, connecting your Knox account to Intune doesn't retain the existing group sync configuration. In the Knox Admin Portal, connect Microsoft Intune again and select the device groups to sync. For instructions, see [Add device groups from Microsoft Intune].
+
 ### :::image type="icon" source="media/setup-samsung-knox/app.svg" border="false":::&nbsp;Deploy the required apps to the devices
 
 Samsung Knox requires the following apps on each device to enroll it in the E-FOTA service:
@@ -234,4 +237,5 @@ To disconnect the Samsung connector, follow these steps:
 [Devices Secured by Knox]: https://www.samsungknox.com/knox-platform/supported-devices
 [Samsung Knox E-FOTA]: https://docs.samsungknox.com/admin/knox-efota/
 [Samsung Knox firewall exceptions]: https://docs.samsungknox.com/admin/knox-admin-portal/get-started/samsung-knox-firewall-exceptions/#knox-e-fota
+[Add device groups from Microsoft Intune]: https://docs.samsungknox.com/admin/knox-efota/emm-integration/microsoft-intune/add-device-groups-from-microsoft-intune/
 [Manage admins]: https://docs.samsungknox.com/admin/knox-admin-portal/how-to-guides/admins-and-roles/manage-admins/
