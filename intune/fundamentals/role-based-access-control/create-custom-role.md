@@ -1,7 +1,7 @@
 ---
 title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
-ms.date: 03/24/2026
+ms.date: 08/21/2026
 ms.topic: article
 ---
 
@@ -459,7 +459,8 @@ The following permissions are available when creating custom roles.
 | --- | --- | --- |
 | Remote Help app | Elevation | For Windows devices, elevation allows the helper to enter UAC credentials when prompted on the sharer's device when remote help is enabled. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access. |
 | Remote Help app | Take full control | Take full control allows the helper to view and control the sharer's device when Remote Help is enabled for all platforms we support. |
-| Remote Help app | Unattended control | For Android devices, unattended control starts Remote Help as soon as the helper selects a new session, without a sharer having to grant access. |
+| Remote Help app | Android unattended control | Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a dedicated device. Assign this permission explicitly and scope it to the specific devices that can receive unattended support. |
+| Remote Help app | Windows unattended control remote sign-in | Allows the helper to start an unattended remote sign-in session to a targeted, physical, corporate-owned Windows device without requiring the sharer to accept the connection each time. Assign this permission explicitly and scope it to the specific devices that can receive unattended support. |
 | Remote Help app | View screen | View screen allows the helper to view the sharer's device when Remote Help is enabled for all platforms we support. |
 
 ### Remote tasks
