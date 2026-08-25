@@ -98,7 +98,7 @@ items:
 - name: Suspend managed home screen
   href: suspend-managed-home-screen.md
   displayName: remote action
-- name: Update cellular data plan
+- name: Manage eSIM cellular plans
   href: update-cellular-data-plan.md
   displayName: remote action
 - name: Wipe
