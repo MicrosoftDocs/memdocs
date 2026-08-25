@@ -1,12 +1,15 @@
 ---
 title: Deploy Remote Help with Microsoft Intune
 description: Follow the steps to deploy Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
-ms.date: 10/16/2025
+ms.date: 08/13/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 ms.reviewer: karawang
 ms.collection:
 - M365-identity-device-management
 - graph-interactive
+#customer intent: As an IT administrator, I want to configure and deploy Remote Help so that authorized users can provide support across supported platforms.
 ---
 
 # Deploying Remote Help with Microsoft Intune
@@ -56,15 +59,33 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 Remote Help uses Microsoft Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-The built-in **Help Desk Operator** role includes all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](plan.md#role-based-access-control-rbac).
+The built-in **Help Desk Operator** role includes most required permissions but doesn't include the **Remote Help app - Windows unattended control remote sign-in** permission. To grant unattended control on Windows devices, create a custom Intune role that includes this permission. You can assign the built-in Help Desk Operator role for standard Remote Help scenarios, or create custom roles to grant only the Remote Help and remote task permissions required for specific groups of users. For more information about the individual permissions required for Remote Help, see [Plan Remote Help](plan.md#role-based-access-control-rbac).
 
 ## Download Remote Help apps
 
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
+For Windows support, attended and unattended support use separate applications and workflows. This separation helps organizations distinguish between user-assisted and help desk-initiated support and provides greater control over how each type is managed, deployed, secured, and permitted.
+
+#### Attended support
+
+Attended support refers to sessions in which an end user participates and grants access to the helper. Attended sessions support view-only access, full control, and optional UAC elevation.
+
 Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).  
 
 The most recent version of Remote Help is **5.2.1037.0**.    
+
+#### Unattended support
+
+Unattended support refers to sessions that allow authorized helpers to access and control an Intune-managed device without an active participant in the session.
+
+The Azure Virtual Desktop agent and Azure Virtual Desktop agent bootloader must be installed. Install the agent first, and then install the bootloader. No further configuration is required after installation. Download the installers from the following links:
+
+- [Azure Virtual Desktop Agent](https://go.microsoft.com/fwlink/?linkid=2310011)
+- [Azure Virtual Desktop Agent Bootloader](https://go.microsoft.com/fwlink/?linkid=2311028)
+
+Follow the prompts. When the installer prompts for a registration token, it automatically populates the field with `INVALID_TOKEN`. Leave this value unchanged, select **Next**, and complete the installation.
+
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
@@ -82,9 +103,10 @@ The Remote Help app for Android is available on the Google Play store. For more 
 
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
-Remote Help is available as a download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. Remote Help's default behavior opts users into automatic updates and updates itself when an update is available.  
+Remote Help is available as a download from Microsoft and must be installed on each device before that device can participate in a Remote Help session. For Windows support, attended and unattended support use separate applications and workflows. This separation helps organizations distinguish between user-assisted and help desk-initiated support and provides greater control over how each type is managed, deployed, secured, and permitted.
 
-When a new version of Remote Help is required, the app prompts users to update. To install an updated version, you can use the same process you used before to download and install Remote Help. There's no need to uninstall the previous version before installing the updated version.
+#### Attended support
+Remote Help's default behavior opts users into automatic updates and updates itself when an update is available. When a new version of Remote Help is required, the app prompts users to update. To install an updated version, you can use the same process you used before to download and install Remote Help. There's no need to uninstall the previous version before installing the updated version.
 
 - As an Intune admin, you can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../app-management/deployment/deploy-windows.md#install-apps-on-windows-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
@@ -95,11 +117,11 @@ When a new version of Remote Help is required, the app prompts users to update. 
 > - On May 23, 2022, existing users of Remote Help will see a mandatory upgrade screen when they open the Remote Help app. They can't proceed until they upgrade to the latest version of Remote Help.
 > - Remote Help requires Microsoft Edge WebView2 Runtime. During the Remote Help installation process, if Microsoft Edge WebView2 Runtime isn't installed on the device, then Remote Help installs it. When Remote Help is uninstalled, Microsoft Edge WebView2 Runtime isn't uninstalled.
 
-#### Deploy Remote Help as an Enterprise App Catalog app
+##### Deploy Remote Help as an Enterprise App Catalog app
 
 The Enterprise App Catalog is a collection of prepackaged Win32 apps that are prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](../app-management/deployment/add-enterprise-catalog-app.md#add-a-windows-catalog-app-win32-to-intune).
 
-#### Deploy Remote Help as a Win32 app
+##### Deploy Remote Help as a Win32 app
 
 To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage `*remotehelpinstaller.exe*` as a `*.intunewin*` file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../app-management/deployment/create-win32-package.md).
 
@@ -146,6 +168,73 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 1. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
+
+#### Unattended support
+
+Unattended support refers to sessions that allow authorized helpers to access and control an Intune-managed device without an active participant in the session.
+
+Unattended control remote sign-in relies on the Azure Virtual Desktop agent and Azure Virtual Desktop agent bootloader. Install the agent first, and then install the bootloader because the bootloader depends on the agent.
+
+When the device is powered on and has internet access, the agent will update automatically. The Azure Virtual Desktop agent self-updates when newer versions are available. The update process can't be controlled or managed, and the agent remains current with the latest version available for the Azure Virtual Desktop service.
+
+##### Deploy Remote Help unattended support as a Win32 app
+
+For Windows devices that use unattended control, deploy the Azure Virtual Desktop agent before deploying the Azure Virtual Desktop agent bootloader. To ensure the apps install in the correct order, configure the bootloader app to depend on the agent app.
+
+First, prepare each installer as a separate Win32 app package:
+
+1. Download the following installers:
+
+   - [Azure Virtual Desktop Agent](https://go.microsoft.com/fwlink/?linkid=2310011)
+   - [Azure Virtual Desktop Agent Bootloader](https://go.microsoft.com/fwlink/?linkid=2311028)
+
+1. Create separate source and output folders for each installer.
+
+1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to package each MSI file as an *.intunewin* file. For more information, see [Prepare the Win32 app content for upload](../app-management/deployment/create-win32-package.md).
+
+After you prepare both packages, create the Azure Virtual Desktop agent app:
+
+1. Use the procedures in [Add a Win32 app](../app-management/deployment/add-win32.md) to add a **Windows app (Win32)**.
+
+1. On the App information page, select **Select app package file**, select the *Microsoft.RDInfra.RDAgent.Installer-x64-\<version\>.intunewin* file previously prepared, and then select **OK**.
+
+   For **Publisher**, specify **Microsoft**. Configure any other app information required by your organization, and then select **Next**.
+
+1. On the Program page, review the automatically populated install and uninstall commands. You don't need to modify them. Select **Next**.
+
+1. On the Requirements page, configure the following options, and then select **Next**:
+
+   - For **Minimum operating system**, select **Windows 10 1607** or a later version supported by your environment.
+
+1. On the Detection rules page, configure the following options:
+
+   - For **Rules format**, select **Manually configure detection rules**, and then select **Add**.
+   - For **Rule type**, select **MSI**.
+   - Confirm that the **MSI product code** is populated, select **OK**, and then select **Next**.
+
+1. On the Dependencies page, don't add a dependency. Select **Next**.
+
+1. On the Supersedence page, configure supersedence if required by your organization, and then select **Next**.
+
+1. On the Assignments page, add the device groups that should receive the app, and then select **Next**.
+
+1. Review the app configuration, and then select **Create**.
+
+After the Azure Virtual Desktop agent app is created, create the bootloader app:
+
+1. Repeat the preceding steps using the *Microsoft.RDInfra.RDAgentBootLoader.Installer-x64-\<version\>.intunewin* file that you prepared.
+
+1. On the Dependencies page, select **Add**, and then select the Azure Virtual Desktop agent app, **Remote Desktop Services Infrastructure Agent**, that you created.
+
+1. Keep **Automatically install** set to **Yes**, select the agent app, and then select **Next**.
+
+1. On the Assignments page, assign the bootloader app to the same device groups as the agent app.
+
+1. Review the app configuration, and then select **Create**.
+
+Intune installs the Azure Virtual Desktop agent first, and then installs the bootloader after detecting the agent dependency.
+
+
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 #### Install and update Remote Help native app
@@ -185,17 +274,54 @@ To set up Remote Help for Android, complete the following steps:
 
 ---
 
-## Configure Remote Help apps
+<a name='configure-remote-help-apps'></a>
+
+## Configure Remote Help
 
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
-#### Windows Firewall details
+#### Attended support
 
 Depending on which environment Remote Help is utilized in, it might be necessary to create firewall rules to allow Remote Help through the Windows Firewall. In situations when it's necessary, the following Remote Help executables should be allowed through the firewall:  
 
 - C:\Program Files\Remote help\RemoteHelp.exe  
 - C:\Program Files\Remote help\RHService.exe  
 - C:\Program Files\Remote help\RemoteHelpRDP.exe  
+
+#### Unattended support
+
+##### Enable Remote Desktop with a configuration profile
+
+To allow target devices to accept remote connections, use a Windows settings catalog configuration profile to enable Remote Desktop.
+
+Before you create the profile, ensure the firewall allows Remote Desktop Protocol (RDP) traffic.
+
+To create and assign the configuration profile:
+
+1. In the Microsoft Intune admin center, go to **Devices** > **Manage devices** > **Configuration**.
+
+1. Select **Create** > **New policy**, and then configure the following options:
+
+   - For **Platform**, select **Windows 10 and later**.
+   - For **Profile type**, select **Settings catalog**.
+
+   Select **Create**.
+
+1. On the Basics page, enter a name and optional description for the profile, and then select **Next**.
+
+1. On the Configuration settings page, select **Add settings**.
+
+1. In the settings picker, search for **Remote Desktop**, and then select **Allow users to connect remotely by using Remote Desktop Services**.
+
+1. Set **Allow users to connect remotely by using Remote Desktop Services** to **Enabled**, and then select **Next**.
+
+1. On the Assignments page, select the device groups that should receive the profile, and then select **Next**.
+
+1. Review the profile configuration, and then select **Create**.
+
+After you assign the profile and the targeted devices check in, Intune applies the Remote Desktop setting. To monitor deployment, go to **Devices** > **Manage devices** > **Configuration** > **Policies**, and then select the profile. Review **Device and user check-in status**, **Device assignment status**, or **Per setting status**.
+
+To verify the setting on a device, go to **Settings** > **System** > **Remote Desktop**, and confirm that Remote Desktop is enabled.
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
