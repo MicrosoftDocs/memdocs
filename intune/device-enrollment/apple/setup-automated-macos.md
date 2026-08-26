@@ -199,17 +199,18 @@ The following table describes the Setup Assistant screens shown during automated
 | **Screen Time** | Shows the macOS Screen Time setup pane, a feature users can enable to gain insight on screen-time, and app and website activity. For macOS 10.15 and later. |
 | **Privacy** | Shows the privacy setup pane to the user. For macOS 10.13.4 and later. |
 | **Accessibility** | Shows the accessibility setup screen to the user. If this screen is hidden, the user can't use the macOS Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have a serial number in Apple School Manager or Apple Business. |
-| **Auto unlock with Apple Watch**| Shows the macOS Unlock with Apple Watch pane, where users can configure their Apple Watch to unlock their Mac. For macOS 12.0 and later.
+| **Auto unlock with Apple Watch**| Shows the macOS Unlock with Apple Watch pane, where users can configure their Apple Watch to unlock their Mac. For macOS 12.0 and later.|
 | **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.|
 | **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane after devices complete a software upgrade. If you hide this screen, devices get the default macOS Sonoma wallpaper. For macOS 14.1 and later.|
 | **Lockdown mode**| Shows the lockdown mode setup pane to users who set up an Apple ID. For macOS 14.0 and later.|
-| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For macOS 15.0 and later.|  
+| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For macOS 15.0 and later.|
 | **App Store**| Shows the Apple App Store pane. For macOS 11.1 and later.  |
 | **Software update**| Shows the the mandatory software update screen. For macOS 15.4 and later.  |
 | **Additional privacy settings**| Shows the additional privacy settings pane. For macOS 26.0 and later.  |
 | **OS Showcase**| Shows the OS showcase pane. For macOS 26.1 and later.  |
 |**Update completed**| Shows the software update complete pane. For macOS 26.1 and later.  |
-|**Get started**| Shows the get started pane. For macOS 15.0 and later. |  
+|**Get started**| Shows the get started pane. For macOS 15.0 and later. |
+|**Liquid glass**|Shows the Liquid Glass pane. For macOS 27.0 and later.|
 
 ## Assign an enrollment policy to devices
 
