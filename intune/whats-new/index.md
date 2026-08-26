@@ -1,11 +1,13 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 08/24/2026
+ms.date: 08/26/2026
 ms.topic: whats-new
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 ms.collection:
 - M365-identity-device-management
+#customer intent: As an IT administrator, I want to learn what's new in Microsoft Intune so that I can evaluate and use new features.
 ---
 
 # What's new in Microsoft Intune
@@ -227,6 +229,9 @@ Microsoft Intune now supports Apple's Enhanced Logging device action on supporte
 >
 > - iOS/iPadOS
 > - macOS
+
+> [!NOTE]
+> The following eSIM features are rolling out and might not be available to all tenants yet.
 
 #### View expanded SIM inventory for corporate-owned Android devices<!-- 36971225 -->
 
