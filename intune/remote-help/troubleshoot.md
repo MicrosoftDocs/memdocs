@@ -1,9 +1,12 @@
 ---
 title: Troubleshoot and monitor Remote Help for Microsoft Intune.
 description: Use the troubleshooting and monitoring information for Remote Help with Microsoft Intune to ensure healthy and successful deployment.
-ms.date: 02/10/2026
+ms.date: 08/13/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 ms.reviewer: Karawang
+#customer intent: As an IT administrator, I want to monitor and troubleshoot Remote Help so that I can maintain reliable remote assistance.
 ---
 
 # Troubleshoot and Monitor Remote Help
@@ -16,17 +19,17 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
 
 2. On the Monitor tab, you can see a count of active sessions and historical data about past sessions.
 
-3. On the Remote Help sessions tab, you can see the records of past sessions, including:
+3. On the **Remote Help sessions** tab, you can see records of past sessions, including:
    - The helper (Provider ID) and sharer (Recipient ID) of each session.
    - The device that received assistance.
-   - The start and end time of the Remote Assistance session.
-   - The type of control session.
+   - The start and end times of the Remote Help session.
+   - The type of control session: view only, full control, or unattended.
 
 > [!NOTE]
-> - The Recipient ID and Recipient name display "--" for Android Enterprise Dedicated devices, as these devices don't have user affinity.
-> - The use of the Windows "elevation" capability isn't reported in the Remote Help sessions report.
+> - **Recipient ID** and **Recipient name** display `--` for Android Enterprise dedicated devices because these devices don't have user affinity.
+> - Use of the Windows elevation capability isn't reported in the Remote Help sessions report.
 
-These logs persist for 30 days on Microsoft's servers. The content of a session, like screen images or keystrokes, aren't recorded – only metadata is stored.
+These logs persist for 30 days on Microsoft servers. Session content, such as screen images or keystrokes, isn't recorded. Only metadata is stored.
 
 ## Log files
 
@@ -97,7 +100,7 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
   | Single sign-on is configured and active | If unenrolled devices support isn't enabled, the Entra Enterprise single sign-on extension must be configured and registered for Intune to be able to confirm the device is enrolled. See [Plan Remote Help](plan.md#prerequisites) for details. |
-  | The required operating system permissions for *Accessibility* and *Screen sharing* are allowed | See [Plan Remote Help](deploy.md?tabs=macos#configure-remote-help-apps) for details. |
+  | The required operating system permissions for *Accessibility* and *Screen sharing* are allowed | See [Configure Remote Help](deploy.md?tabs=macos#configure-remote-help) for details. |
   | Whether the sharer is using the native Remote Help app or the web app | The web app only allows view access, which might confuse helpers expecting control. |
 
 ### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
