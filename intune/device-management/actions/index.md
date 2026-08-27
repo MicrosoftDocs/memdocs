@@ -1,8 +1,12 @@
 ---
 title: Device Actions - Wipe, Lock, Locate, and More
 description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, tvOS, visionOS, macOS, Windows, and ChromeOS devices. Learn about available device actions, prerequisites, and bulk actions for IT admins.
-ms.date: 08/06/2026
+ms.date: 08/27/2026
 ms.topic: overview
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
+
+#customer intent: As an IT administrator, I want to understand available Intune device actions so that I can manage devices remotely.
 ---
 
 # Device actions
@@ -220,6 +224,7 @@ Select one of the following tabs to learn more about the available bulk device a
 
 | Bulk action | Description                                                                                |
 |-------------|--------------------------------------------------------------------------------------------|
+| [Activate eSIM] | Activates eSIMs on supported corporate-owned Android Enterprise devices.                |
 | [Delete]    | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename]    | Changes the device name in Intune.                                                         |
 | [Restart]   | Restarts a device.                                                                         |
@@ -252,6 +257,7 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 <!--actions links-->
 
 [Autopilot reset]: autopilot-reset.md
+[Activate eSIM]: update-cellular-data-plan.md#activate-esims-on-multiple-android-enterprise-devices
 [BitLocker key rotation]: rotate-bitlocker-keys.md
 [Collect diagnostics]: collect-diagnostics.md
 [Delete]: delete.md

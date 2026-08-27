@@ -1,7 +1,7 @@
 ---
 title: "Wipe devices with Microsoft Intune"
 description: Learn how to wipe managed devices with Microsoft Intune, choose platform-specific reset options, and prepare devices for retirement, reuse, or recovery.
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1023
@@ -158,6 +158,20 @@ For more information about wiping ChromeOS devices, see [Wipe ChromeOS device da
 
 ::: zone-end
 
+::: zone pivot="android"
+
+## Wipe multiple Android Enterprise devices
+
+Use a bulk device action to wipe up to 100 corporate-owned fully managed (COBO), corporate-owned dedicated (COSU), or corporate-owned work profile (COPE) devices. By default, the wipe preserves the devices' eSIM data plans.
+
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**] > [**Bulk device actions**].
+1. On the **Basics** page, select **Android** for the operating system and **Wipe** for the device action.
+1. To remove the eSIM data plans during the wipe, select the option to also remove the devices' data plans. If you don't select the option, the wipe preserves the data plans. Select **Next**.
+1. On the **Devices** page, select up to 100 supported corporate-owned Android Enterprise devices. Select **Next**.
+1. On the **Review + create** page, review the action, and then select **Create**.
+
+::: zone-end
+
 [!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
 
 ::: zone pivot="windows"
@@ -183,6 +197,7 @@ For more information about wiping ChromeOS devices, see [Wipe ChromeOS device da
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[**Bulk device actions**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade
 
 <!--Role links-->
 

@@ -1,7 +1,7 @@
 ---
 title: "Manage eSIM plans in Microsoft Intune"
 description: Activate and remove eSIM cellular plans on supported Apple and Android Enterprise devices with Microsoft Intune device actions.
-ms.date: 08/21/2026
+ms.date: 08/27/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1023
@@ -12,7 +12,7 @@ zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 
 # Manage eSIM cellular plans with Microsoft Intune device actions
 
-The *update cellular data plan* action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards. You can also activate eSIMs on supported Android Enterprise devices and remove an eSIM from a single supported Android Enterprise device.
+The *update cellular data plan* action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards. You can also activate eSIMs on one or more supported Android Enterprise devices and remove an eSIM from a single supported Android Enterprise device.
 
 ## Prerequisites
 
@@ -57,9 +57,10 @@ Android Enterprise eSIM actions support corporate-owned devices only. Personally
 | Action | Corporate-owned fully managed (COBO) | Corporate-owned dedicated (COSU) | Corporate-owned work profile (COPE) |
 | --- | --- | --- | --- |
 | Activate an eSIM on one device | Android 15 or later | Android 15 or later | Android 15 or later |
+| Activate eSIMs on multiple devices | Android 15 or later | Android 15 or later | Android 15 or later |
 | Remove an eSIM from one device | Android 15 or later | Android 15 or later | Android 17 or later |
 
-The devices must support eSIM. Get the activation code from your carrier before you activate an eSIM.
+The devices must support eSIM. Get the activation code or activation server URL from your carrier before you activate an eSIM.
 
 To remove an eSIM, its ICCID must be available in the [device hardware inventory](../inventory-and-status/device-details.md#hardware-device-details). Use the ICCID to identify the eSIM that you want to remove.
 
@@ -68,7 +69,7 @@ To use an eSIM device action, at a minimum, use an account that has one of the f
 - [Help Desk Operator]
 - [School Administrator]
 - [Custom role] that includes:
-  - **Remote tasks/Update cellular data plan** to activate eSIMs
+  - **Remote tasks/Update cellular data plan** to activate one or more eSIMs
   - **Remote tasks/Remove eSIM** to remove an eSIM
   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
@@ -101,6 +102,16 @@ The single-device action is available only in the new device view.
 
 Intune sends the activation request without first blocking it based on reported eSIM slot capacity. If Google can't complete the activation, Intune surfaces the error returned by Google.
 
+## Activate eSIMs on multiple Android Enterprise devices
+
+Use a bulk device action to activate eSIMs on up to 100 supported devices with the same carrier activation server URL.
+
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**] > [**Bulk device actions**].
+1. On the **Basics** page, select **Android** for the operating system and **Activate eSIM** for the device action.
+1. In **Enter carrier activation server URL**, enter the URL provided by your carrier. Select **Next**.
+1. On the **Devices** page, select up to 100 supported corporate-owned Android Enterprise devices. Select **Next**.
+1. On the **Review + create** page, review the action, and then select **Create**.
+
 ## Remove an eSIM from one Android Enterprise device
 
 Removal depends on the ICCID reported in device inventory, and the single-device action is available only in the new device view.
@@ -130,7 +141,7 @@ For more information about devices that support eSIM, see the Apple support arti
 
 ## User experience
 
-When you activate an eSIM on a supported corporate-owned Android Enterprise device, the eSIM is downloaded and activated automatically. When you remove an eSIM, the device removes the eSIM identified by the ICCID that you entered.
+When you activate an eSIM on a supported corporate-owned Android Enterprise device, the eSIM is downloaded and activated automatically. A bulk activation uses the same carrier activation server URL for all selected devices. When you remove an eSIM, the device removes the eSIM identified by the ICCID that you entered.
 
 ::: zone-end
 
@@ -141,6 +152,7 @@ When you activate an eSIM on a supported corporate-owned Android Enterprise devi
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[**Bulk device actions**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade
 
 [Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
 [School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
