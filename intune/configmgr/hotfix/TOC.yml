@@ -11,6 +11,8 @@ items:
     href: 2603/37942646.md
   - name: KB 38232642 Security update for Configuration Manager 2603, 2509, 2503
     href: 2603/38232642.md
+  - name: KB 38982839 Security update for the SMS Provider and administration service 2603, 2509, 2503
+    href: 2603/38982839.md
 - name: Version 2509
   items:
   - name: KB 35877153 Summary of changes in 2509
@@ -25,6 +27,8 @@ items:
     href: 2509/36949461.md
   - name: KB 37864969 Second update rollup for Configuration Manager version 2509
     href: 2509/37864969.md
+  - name: KB 38982839 Security update for the SMS Provider and administration service 2603, 2509, 2503
+    href: 2603/38982839.md
 - name: Version 2503
   items:
   - name: KB 31909343 Summary of changes in 2503
@@ -53,6 +57,8 @@ items:
     href: 2603/38232642.md
   - name: KB 37942646 CMG virtual machine scale set image update
     href: 2603/37942646.md
+  - name: KB 38982839 Security update for the SMS Provider and administration service 2603, 2509, 2503
+    href: 2603/38982839.md
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
