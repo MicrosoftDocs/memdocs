@@ -144,7 +144,7 @@ To enable automatic launch:
 
 1. Select **Endpoint security** > **Defender for Endpoint**.
 
-1. Turn on **Automatically launch Defender for Endpoint during setup on Android COBO and COPE devices**, and then save the connector settings.
+1. Turn on **Automatically launch Microsoft Defender for Endpoint during setup on Android fully managed and corporate owned with work profile devices**, and then save the connector settings.
 
 During enrollment, Intune opens Defender for Endpoint and waits for the app to report that its initial setup is complete. If a user returns to Intune before Defender setup is complete, the setup step remains incomplete. The user can select **Next** to open Defender again.
 
