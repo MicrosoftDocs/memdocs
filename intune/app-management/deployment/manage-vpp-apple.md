@@ -93,11 +93,16 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
    - **Apple Account** - Enter the Managed Apple Account of the account associated with the uploaded token.
    - **VPP token file** - If you haven't already, sign up for Apple Business Manager or Apple School Manager. After you sign up, download the Apple Business Manager location token (Apple VPP token) for your account and select it here.
 5. Select **Next** to display the **Settings** page.
-6. On the **Settings** page, specify the following information:
+1. On the **Settings** page, specify the following information:
    - **Take control of token from another MDM** - Setting this option to **yes** allows the token to be reassigned to Intune from another MDM solution.
    - **Country/Region** - Select the VPP country/region store. Intune synchronizes VPP apps for all locales from the specified VPP country/region store.
-
-        > [!WARNING]
+   
+   - **Management type** - Select MDM (default) or DDM to choose how the app is managed on the device. Declarative Device Management (DDM) uses Apple's policy-based management model for app deployment and configuration on devices running iOS/iPadOS 18 and later. DDM provides efficient app delivery, real-time app status reporting, and expanded app attribute options for per-app associated domains. For devices running earlier versions of iOS/iPadOS, select MDM.
+   
+     > [!NOTE]
+     > DDM doesn't yet support available app assignments, setting DDM as the management type will only allow for VPP apps to be assigned as Required or Uninstall. 
+     
+             > [!WARNING]
         > Changing the country/region updates the app metadata and App Store URL during the next sync with the Apple service for apps created with this token. The app doesn't update if it doesn't exist in the new country/region store.
 
    - **Type of VPP account** - Choose from **Business** or **Education**.
