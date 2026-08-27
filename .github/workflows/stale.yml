@@ -34,7 +34,7 @@ jobs:
            <br/>
            <br/>If you have a question, post on the MSEC Documentation Excellence Program [Ask an Admin](https://teams.microsoft.com/l/channel/19%3A0cdb9988d02e4f78bef37d571686ec5b%40thread.tacv2/Ask%20an%20Admin?groupId=8b6faa31-5d02-4e94-90eb-f1944d5c40fd&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47) Teams channel.      
         close-pr-message: >
-           <br/>This pull request has been inactive for 130 days. At this time we're closing the PR.
+           This pull request has been inactive for 130 days. At this time we're closing the PR.
            <br/>
            <br/>If you decide to continue working on your changes, you can reopen the PR and continue working. Thank you!
            <br/>
