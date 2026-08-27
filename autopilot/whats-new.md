@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 08/20/2026
+ms.date: 08/27/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: whats-new
@@ -26,7 +26,7 @@ appliesto:
 
 ## Windows Autopilot device association
 
-Date added: *August 20, 2026*
+Date added: *August 27, 2026*
 
 Windows Autopilot device preparation now supports device association, which binds a physical Windows 11 device to your organization before enrollment. Associated devices are automatically marked as corporate-owned and can receive device-targeted policy assignments, device naming, and additional out-of-box experience (OOBE) customizations.
 
