@@ -1,7 +1,7 @@
 ﻿---
 title: Overview of Windows Autopilot device preparation
 description: Windows Autopilot device preparation is used to set up and configure new devices, getting them ready for productive use.
-ms.date: 04/02/2025
+ms.date: 08/07/2026
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -35,7 +35,7 @@ This article explores the capabilities of the Windows Autopilot device preparati
 
 - Microsoft Entra ID - only Microsoft Entra join is supported.
 
-- Device shouldn't be registered or added as a Windows Autopilot device - if the device is registered or added as Windows Autopilot device, the Windows Autopilot profile takes precedence over the Windows Autopilot device preparation policy. If a device needs to be removed as a Windows Autopilot device, see [Deregister a device](../registration-overview.md#deregister-a-device).
+- If the device is registered as a Windows Autopilot device, which deployment runs depends on the device's association state. If the device isn't associated with the tenant, the Windows Autopilot profile takes precedence. If the device is associated, device association takes precedence and the Windows Autopilot device preparation deployment runs. To use Windows Autopilot device preparation on a registered device without associating it, first [deregister the device](../registration-overview.md#deregister-a-device).
 
 For additional detailed requirements, see [Windows Autopilot device preparation requirements](requirements.md).
 
@@ -138,6 +138,10 @@ Windows Autopilot device preparation only requires corporate identifiers for Win
 - [Identify devices as corporate-owned](/intune/intune-service/enrollment/corporate-identifiers-add).
 - [What are enrollment restrictions?](/intune/intune-service/enrollment/enrollment-restrictions-set).
 - [Create device platform restrictions](/intune/intune-service/enrollment/create-device-platform-restrictions).
+
+### Device association
+
+Windows Autopilot device preparation supports device association, which binds a physical Windows 11 device to your tenant before enrollment. Associated devices are automatically marked as corporate-owned and can receive device-targeted policy assignments and additional OOBE customizations. For more information, see [Overview of Windows Autopilot device association](device-association/overview.md).
 
 ## Tutorial
 
