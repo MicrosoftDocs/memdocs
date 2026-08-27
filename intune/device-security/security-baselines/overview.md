@@ -111,6 +111,9 @@ The following security baseline instances are available for use with Intune. Use
 - **Local AI Agent Baseline - OpenClaw (Preview)**:
   - [Version 1](./ref-openclaw-settings.md) - *May 2026*
 
+- **Windows 365 for Agents security baseline**:
+  - [Version 24H1](./ref-windows-365-agents-settings.md)
+
 - **Windows 365 Security Baseline**:
   - [Version 24H1](./ref-windows-365-settings.md?pivots=win365-24h1)
   - [November 2021](./ref-windows-365-settings.md?pivots=win365-nov21)
@@ -195,6 +198,7 @@ Within the Intune security baseline policy UI, Intune provides information text 
   - [Microsoft 365 Apps for Enterprise security baseline (Office)](./ref-v2-office-settings.md)
   - [Microsoft Edge security baseline](./ref-edge-settings.md)
   - [Local AI Agent Baseline - OpenClaw (Preview)](./ref-openclaw-settings.md)
+  - [Windows 365 for Agents security baseline](./ref-windows-365-agents-settings.md)
   - [Windows 365 Security Baseline](./ref-windows-365-settings.md)
 
 - [STIG audit baseline](./stig-audit-baseline.md) - Audit Windows devices against STIG recommendations (GCC High only)
