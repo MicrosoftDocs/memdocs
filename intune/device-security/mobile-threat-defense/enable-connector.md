@@ -1,9 +1,11 @@
 ---
 title: Enable Mobile Threat Defense connector in Microsoft Intune
 description: Enable the connector between your Mobile Threat Defense (MTD) partner and Microsoft Intune.
-ms.date: 05/26/2026
+ms.date: 08/27/2026
 ai-usage: ai-assisted
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1023
+#customer intent: As an Intune administrator, I want to enable a Mobile Threat Defense connector so that threat information can help protect managed devices and corporate resources.
 ---
 
 # Enable the Mobile Threat Defense connector in Microsoft Intune
@@ -122,10 +124,32 @@ For more information about using Mobile Threat Defense connectors for Intune App
 
   The Mobile Threat Defense role requires devices enrolled through the [Android Management API](https://developers.google.com/android/management). Personally-owned work profiles aren't currently supported.
 
-- **Automatically launch Defender for Endpoint during setup on Android COBO and COPE devices**: This toggle is available only for the Defender for Endpoint connector. When you turn on this option, the Defender for Endpoint app automatically launches during the device setup process on Android Enterprise COBO and COPE devices, allowing Defender for Endpoint to complete its initial configuration without requiring the user to manually open it.
+#### Automatically launch Defender for Endpoint during setup
 
-  > [!NOTE]
-  > This toggle requires that the **Grant MTD role permissions** toggle is also turned on for Defender for Endpoint.
+You can configure Microsoft Defender for Endpoint to open automatically during device setup so users can complete its initial configuration as part of Android Enterprise enrollment. This option is available only for the Defender for Endpoint connector and is off by default.
+
+> [!NOTE]
+> This option requires that the **Grant MTD role permissions** option is also turned on for Defender for Endpoint.
+
+Before you enable automatic launch, complete the following prerequisites:
+
+- Configure the Microsoft Defender for Endpoint connector.
+- Turn on **Grant MTD role permissions** for Defender for Endpoint.
+- Assign the Microsoft Defender for Endpoint app as required to the users or devices that you plan to enroll.
+- Use Android Enterprise corporate-owned fully managed (COBO) or corporate-owned devices with a work profile (COPE) enrollment.
+
+To enable automatic launch:
+
+1. Sign in to the [Microsoft Intune admin center].
+
+1. Select **Endpoint security** > **Defender for Endpoint**.
+
+1. Turn on **Automatically launch Defender for Endpoint during setup on Android COBO and COPE devices**, and then save the connector settings.
+
+During enrollment, Intune opens Defender for Endpoint and waits for the app to report that its initial setup is complete. If a user returns to Intune before Defender setup is complete, the setup step remains incomplete. The user can select **Next** to open Defender again.
+
+> [!IMPORTANT]
+> For Defender for Endpoint to be available during setup, assign the app to user groups or all devices before enrollment. Assignment processing for a specific device group might not complete early enough for the app to launch during device setup.
 
 ### Shared settings
 
