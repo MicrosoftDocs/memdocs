@@ -5,7 +5,7 @@ ms.date: 08/11/2020
 ms.subservice: sdk
 ms.topic: release-notes
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Administration service release notes
