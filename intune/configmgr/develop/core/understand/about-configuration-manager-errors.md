@@ -5,7 +5,7 @@ description: In Configuration Manager, when a Configuration Manager error occurs
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # About Configuration Manager Errors
