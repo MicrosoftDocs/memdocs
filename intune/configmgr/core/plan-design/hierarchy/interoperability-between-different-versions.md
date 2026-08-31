@@ -2,10 +2,10 @@
 title: Interoperability between versions
 description: Learn how to avoid conflicts between multiple Configuration Manager hierarchies on the same network.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Interoperability between different versions of Configuration Manager

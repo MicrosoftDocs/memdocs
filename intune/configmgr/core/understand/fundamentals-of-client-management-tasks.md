@@ -2,10 +2,10 @@
 title: Client management fundamentals
 description: Learn about tasks that you run to manage Configuration Manager clients.
 ms.date: 12/30/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Fundamentals of client management tasks for Configuration Manager
 

@@ -2,10 +2,10 @@
 title: Visualize content distribution status
 description: Monitor content distribution path and status in a graphical format, to help you more easily understand the status of your content package distribution.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Visualize content distribution status

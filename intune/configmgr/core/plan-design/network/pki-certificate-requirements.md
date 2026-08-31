@@ -2,10 +2,10 @@
 title: PKI certificate requirements
 description: Find requirements for PKI certificates that you might need for Configuration Manager.
 ms.date: 08/10/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # PKI certificate requirements for Configuration Manager

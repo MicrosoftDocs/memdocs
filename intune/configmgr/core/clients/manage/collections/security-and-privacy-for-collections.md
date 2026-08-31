@@ -2,10 +2,10 @@
 title: Collections security and privacy
 description: Recommendations for security and privacy with collections in Configuration Manager.
 ms.date: 05/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Security and privacy for collections in Configuration Manager

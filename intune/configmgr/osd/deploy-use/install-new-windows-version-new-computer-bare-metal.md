@@ -2,10 +2,10 @@
 title: Install Windows on a new computer
 description: Use Configuration Manager to install an operating system on a new computer (bare metal) by using PXE, OEM, or stand-alone media.
 ms.date: 01/23/2017
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Install a new version of Windows on a new computer (bare metal) with Configuration Manager

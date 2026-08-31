@@ -2,10 +2,10 @@
 title: Learn more about PowerShell script security
 description: Resources to help learn about PowerShell script security.
 ms.date: 10/01/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Learn more about PowerShell script security

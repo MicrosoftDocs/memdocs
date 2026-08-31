@@ -2,10 +2,10 @@
 title: Collection evaluation
 description: Learn about the collection evaluation process, types, and triggers. Understand the collection evaluation graph and hierarchy.
 ms.date: 06/05/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Collection evaluation in Configuration Manager

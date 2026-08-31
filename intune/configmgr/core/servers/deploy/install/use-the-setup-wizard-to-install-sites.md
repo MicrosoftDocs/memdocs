@@ -2,10 +2,10 @@
 title: Setup wizard
 description: Use the Configuration Manager setup wizard to install a new site.
 ms.date: 12/16/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites

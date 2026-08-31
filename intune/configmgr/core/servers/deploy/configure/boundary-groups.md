@@ -2,10 +2,10 @@
 title: About boundary groups
 description: Help clients find site systems by using boundary groups to logically organize related network locations.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # About boundary groups in Configuration Manager

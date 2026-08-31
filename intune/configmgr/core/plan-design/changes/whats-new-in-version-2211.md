@@ -2,10 +2,10 @@
 title: What's new in version 2211
 description: Get details about changes and new capabilities introduced in version 2211 of Configuration Manager current branch.
 ms.date: 12/05/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # What's new in version 2211 of Configuration Manager current branch

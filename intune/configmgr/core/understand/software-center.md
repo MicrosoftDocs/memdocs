@@ -3,10 +3,10 @@ title: Software Center User Guide
 description: Software Center helps you install apps, software updates, and Windows upgrades on your managed device. Learn about the setting you need to use Software Center.
 ms.date: 10/18/2024
 ms.topic: end-user-help
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Software Center user guide

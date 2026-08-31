@@ -2,10 +2,10 @@
 title: Procedures for boundary groups
 description: Configure boundary groups to logically organize related network locations called boundaries.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to configure boundary groups for Configuration Manager

@@ -2,10 +2,10 @@
 title: Management tasks for applications
 description: Manage Configuration Manager applications and deployment types.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Management tasks for Configuration Manager applications

@@ -2,10 +2,10 @@
 title: Supported configurations for SQL Server
 description: Learn about required and optional SQL Server and database configurations for Configuration Manager.
 ms.date: 07/28/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Supported configurations for SQL Server in Configuration Manager

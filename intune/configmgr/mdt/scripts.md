@@ -2,10 +2,10 @@
 title: Toolkit reference - Microsoft Deployment Toolkit (MDT) Scripts
 description: Reference details for Microsoft Deployment Toolkit (MDT) Scripts
 ms.date: 09/09/2016
-ms.subservice: microsoft-deployment-toolkit
+ms.subservice: mdt
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Scripts

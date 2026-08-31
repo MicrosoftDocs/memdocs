@@ -2,10 +2,10 @@
 title: Manage OS upgrade packages
 description: Learn how to manage OS upgrade packages in Configuration Manager.
 ms.date: 07/31/2025
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Manage OS upgrade packages with Configuration Manager

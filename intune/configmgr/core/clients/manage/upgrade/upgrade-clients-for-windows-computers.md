@@ -3,9 +3,9 @@ title: Upgrade clients on Windows
 description: Upgrade clients on Windows computers in Configuration Manager.
 ms.date: 04/12/2022
 ms.topic: how-to
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to upgrade clients for Windows computers in Configuration Manager

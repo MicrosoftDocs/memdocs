@@ -2,10 +2,10 @@
 title: Monitor database replication
 description: Learn how to monitor SQL Server replication in your Configuration Manager hierarchy.
 ms.date: 04/11/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Monitor database replication

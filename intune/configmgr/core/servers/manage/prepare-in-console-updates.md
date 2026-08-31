@@ -2,10 +2,10 @@
 title: Prepare for in-console updates
 description: Prepare to install updates to Configuration Manager from the Microsoft cloud
 ms.date: 12/04/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Prepare to install in-console updates for Configuration Manager

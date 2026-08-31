@@ -2,10 +2,10 @@
 title: MDT release notes
 description: Understand supported platforms, prerequisites, and limitations of the Microsoft Deployment Toolkit (MDT).
 ms.date: 08/12/2022
-ms.subservice: microsoft-deployment-toolkit
+ms.subservice: mdt
 ms.topic: release-notes
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Microsoft Deployment Toolkit release notes

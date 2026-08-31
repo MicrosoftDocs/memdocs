@@ -2,10 +2,10 @@
 title: Enable TLS 1.2 on servers
 description: Information about how to enable Transport Layer Security (TLS) 1.2 for Configuration Manager site servers and remote site systems.
 ms.date: 06/20/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to enable TLS 1.2 on the site servers and remote site systems

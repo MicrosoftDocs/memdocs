@@ -2,10 +2,10 @@
 title: Configure the client cache
 description: Configure the client content cache during or after client install.
 ms.date: 12/16/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configure the content cache for Configuration Manager clients
