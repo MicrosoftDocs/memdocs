@@ -2,10 +2,10 @@
 title: Fundamentals of sites and hierarchies
 description: Get basic information about Configuration Manager sites and hierarchies.
 ms.date: 12/30/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Fundamentals of sites and hierarchies for Configuration Manager
 

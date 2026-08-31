@@ -2,10 +2,10 @@
 title: Cloud attach overview
 description: Cloud attach for Configuration Manager overview
 ms.date: 12/01/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Cloud attach your Configuration Manager environment

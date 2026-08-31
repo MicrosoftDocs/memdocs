@@ -1,8 +1,8 @@
 ---
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: include
 ms.date: 05/28/2021
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 ### <a name="ki_ta"></a> Known issue with tenant attach onboarding

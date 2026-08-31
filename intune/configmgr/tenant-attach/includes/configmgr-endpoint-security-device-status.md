@@ -1,9 +1,9 @@
 ---
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: include
 ms.date: 09/29/2021
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 <!--This file is currently used by deploy-firewall-policy.md, deploy-asr-policy.md, deploy-antivirus-policy.md, and atp-onboard.md-->
 

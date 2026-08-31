@@ -2,10 +2,10 @@
 title: In-place upgrade recommendations
 description: Recommended steps for using the task sequence to upgrade Windows.
 ms.date: 10/01/2021
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # In-place upgrade recommendations

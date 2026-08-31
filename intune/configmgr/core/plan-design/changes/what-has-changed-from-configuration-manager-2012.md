@@ -2,10 +2,10 @@
 title: Changes from version 2012
 description: Identify the changes and new capabilities in Configuration Manger versus System Center 2012 Configuration Manager.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # What's changed from System Center 2012 Configuration Manager

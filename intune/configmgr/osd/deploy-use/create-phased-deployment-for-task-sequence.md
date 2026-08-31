@@ -2,10 +2,10 @@
 title: Create phased deployments
 description: Use phased deployments to automate the rollout of software to several collections.
 ms.date: 10/01/2021
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Create phased deployments with Configuration Manager

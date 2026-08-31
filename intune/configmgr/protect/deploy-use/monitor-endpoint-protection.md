@@ -5,7 +5,7 @@ ms.date: 03/13/2017
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # How to monitor Endpoint Protection status
 

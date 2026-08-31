@@ -2,10 +2,10 @@
 title: Boundary groups and distribution points
 description: Understand how clients and distribution points behave with boundary groups.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Boundary groups and distribution points

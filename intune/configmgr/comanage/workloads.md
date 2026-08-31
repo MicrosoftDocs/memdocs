@@ -5,7 +5,7 @@ ms.date: 05/12/2025
 ms.topic: article
 ms.subservice: co-management
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Co-management workloads

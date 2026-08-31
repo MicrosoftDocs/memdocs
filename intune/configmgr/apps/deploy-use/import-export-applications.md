@@ -2,10 +2,10 @@
 title: Import and export applications
 description: Learn how to import and export applications in Configuration Manager to share between separate hierarchies.
 ms.date: 11/30/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Import and export applications

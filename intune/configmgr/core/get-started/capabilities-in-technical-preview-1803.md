@@ -2,12 +2,12 @@
 title: Technical Preview 1803
 description: Learn about new features available in the Configuration Manager Technical Preview version 1803.
 ms.date: 03/27/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Capabilities in Technical Preview 1803 for Configuration Manager

@@ -2,11 +2,11 @@
 title: Diagnostic and usage data for 2006
 description: Learn about the specific data that Configuration Manager collects at each level in version 2006.
 ms.date: 10/06/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Diagnostic and usage data for version 2006

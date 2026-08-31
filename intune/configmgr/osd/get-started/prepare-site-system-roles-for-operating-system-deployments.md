@@ -2,10 +2,10 @@
 title: Prepare site system roles for OSD
 description: Configure the site system roles before you deploy operating systems in Configuration Manager.
 ms.date: 10/01/2021
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Prepare site system roles for OS deployments with Configuration Manager

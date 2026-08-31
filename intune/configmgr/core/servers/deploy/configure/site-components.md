@@ -2,10 +2,10 @@
 title: Site components
 description: Learn how to configure site components to modify the behavior of site system roles and site status reporting.
 ms.date: 03/28/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Site components for Configuration Manager
