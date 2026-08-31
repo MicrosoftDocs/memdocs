@@ -2,10 +2,10 @@
 title: Configure a remote content library
 description: Learn how to relocate the site server's content library to another storage location.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configure a remote content library for the site server

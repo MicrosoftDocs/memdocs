@@ -2,10 +2,10 @@
 title: Deploy App-V virtual applications
 description: See which considerations you must take into account when you create and deploy virtual applications.
 ms.date: 03/12/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Deploy App-V virtual applications with Configuration Manager
 

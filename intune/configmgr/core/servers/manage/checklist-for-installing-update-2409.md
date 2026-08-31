@@ -2,10 +2,10 @@
 title: Checklist for 2409
 description: Learn about actions to take before updating to Configuration Manager version 2409.
 ms.date: 12/03/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: checklist
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 2409 for Configuration Manager

@@ -2,10 +2,10 @@
 title: International support
 description: Configure Configuration Manager to comply with specific international requirements.
 ms.date: 10/06/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # International support in Configuration Manager
 

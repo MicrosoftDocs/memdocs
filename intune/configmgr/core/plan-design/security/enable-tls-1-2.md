@@ -2,10 +2,10 @@
 title: Enable Transport Layer Security (TLS) 1.2 overview
 description: Overview of how to enable TLS 1.2 for Configuration Manager.
 ms.date: 10/18/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to enable TLS 1.2

@@ -1,8 +1,8 @@
 ---
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: include
 ms.date: 10/20/2021
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 ### Community hub download button is always enabled

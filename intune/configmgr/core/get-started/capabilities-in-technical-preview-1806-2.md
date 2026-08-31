@@ -2,11 +2,11 @@
 title: Technical Preview 1806.2
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.2.
 ms.date: 06/27/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Capabilities in Technical Preview 1806.2 for Configuration Manager

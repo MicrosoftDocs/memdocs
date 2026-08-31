@@ -2,13 +2,13 @@
 title: Maintenance tasks
 description: Understand what maintenance tasks to perform for Configuration Manager sites and hierarchies and when to perform them.
 ms.date: 08/02/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection:
     - tier3
     - essentials-manage
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Maintenance tasks for Configuration Manager
 

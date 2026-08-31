@@ -2,10 +2,10 @@
 title: Setup command-line options
 description: Create automation scripts to install Configuration Manager from a command line.
 ms.date: 02/16/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Command-line options for Configuration Manager setup

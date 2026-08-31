@@ -2,10 +2,10 @@
 title: Plan the site database
 description: Consider the site database and the site database server role as you plan your Configuration Manager hierarchy.
 ms.date: 10/08/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Plan for the site database for Configuration Manager

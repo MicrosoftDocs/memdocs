@@ -2,10 +2,10 @@
 title: Remote control prerequisites
 description: Get the prerequisites for remote control in Configuration Manager.
 ms.date: 03/18/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Prerequisites for remote control in Configuration Manager

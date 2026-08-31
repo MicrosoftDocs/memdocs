@@ -2,10 +2,10 @@
 title: Deprecated for clients
 description: Learn about the client operating systems that Configuration Manager no longer supports.
 ms.date: 01/10/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Removed and deprecated items for Configuration Manager clients

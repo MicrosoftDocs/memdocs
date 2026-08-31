@@ -2,10 +2,10 @@
 title: Console extensions for Configuration Manager
 description: Learn about managing Configuration Manager console extensions
 ms.date: 12/21/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Manage Configuration Manager console extensions

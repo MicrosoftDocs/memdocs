@@ -2,10 +2,10 @@
 title: Configure client settings
 description: Learn how to configure client settings in Configuration Manager.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to configure client settings in Configuration Manager
