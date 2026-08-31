@@ -2,10 +2,10 @@
 title: Prerequisites for reporting
 description: Understand various dependencies that impact your use of reporting in Configuration Manager.
 ms.date: 04/01/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Prerequisites for reporting in Configuration Manager

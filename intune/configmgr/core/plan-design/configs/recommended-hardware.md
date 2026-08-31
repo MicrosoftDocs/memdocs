@@ -2,10 +2,10 @@
 title: Recommended hardware
 description: Get hardware recommendations to help you scale your Configuration Manager environment beyond a basic deployment.
 ms.date: 03/04/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Recommended hardware for Configuration Manager

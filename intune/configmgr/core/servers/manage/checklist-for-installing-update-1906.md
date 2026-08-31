@@ -2,11 +2,11 @@
 title: Checklist for 1906
 description: Learn about actions to take before updating to Configuration Manager version 1906.
 ms.date: 08/27/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 1906 for Configuration Manager

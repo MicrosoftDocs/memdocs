@@ -3,9 +3,9 @@ title: Troubleshooting resource explorer
 description: Troubleshooting resource explorer for Intune tenant attach
 ms.date: 01/25/2022
 ms.topic: troubleshooting
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Troubleshoot resource explorer for devices uploaded to the admin center

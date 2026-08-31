@@ -2,10 +2,10 @@
 title: Ports used for connections
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
 ms.date: 12/08/2025
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Ports used in Configuration Manager

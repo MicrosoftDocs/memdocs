@@ -1,10 +1,10 @@
 ---
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: include
 ms.date: 10/04/2019
 
 
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 ### <a name="ki_hinv"></a> Hardware inventory reports

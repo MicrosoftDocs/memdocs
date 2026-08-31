@@ -2,10 +2,10 @@
 title: Find site resources
 description: Learn how and when Configuration Manager clients use service location to find site resources.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How clients find site resources and services

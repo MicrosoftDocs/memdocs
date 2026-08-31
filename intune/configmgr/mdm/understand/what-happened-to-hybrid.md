@@ -5,7 +5,7 @@ ms.date: 12/30/2019
 ms.subservice: other
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # What happened to hybrid MDM?

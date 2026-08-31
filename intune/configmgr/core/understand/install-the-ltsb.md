@@ -2,10 +2,10 @@
 title: Install a site using the 1606 baseline media
 description: Install or upgrade to the LTSB for System Center Configuration Manager.
 ms.date: 09/06/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Install and upgrade with the version 1606 baseline media
 

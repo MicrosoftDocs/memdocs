@@ -2,12 +2,12 @@
 title: Capabilities in Technical Preview 1610
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1610.
 ms.date: 01/23/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Capabilities in Technical Preview 1610 for Configuration Manager
 

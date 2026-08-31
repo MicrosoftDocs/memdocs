@@ -2,10 +2,10 @@
 title: Site system roles for clients
 description: Determine site system roles for clients in Configuration Manager.
 ms.date: 01/04/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Determine the site system roles for Configuration Manager clients

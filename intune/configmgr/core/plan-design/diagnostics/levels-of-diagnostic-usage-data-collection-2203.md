@@ -2,10 +2,10 @@
 title: Diagnostic and usage data for 2203
 description: Learn about the specific data that Configuration Manager collects at each level in version 2203.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Diagnostic and usage data for version 2203

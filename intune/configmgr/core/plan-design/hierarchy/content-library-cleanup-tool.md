@@ -2,10 +2,10 @@
 title: Content library cleanup tool
 description: Use the content library cleanup tool to remove orphaned content no longer associated with a Configuration Manager deployment.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Content library cleanup tool

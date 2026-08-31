@@ -2,10 +2,10 @@
 title: Site prerequisites
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
 ms.date: 03/25/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Site and site system prerequisites for Configuration Manager

@@ -2,11 +2,11 @@
 title: Device restart notifications
 description: Restart notification behavior for various client settings in Configuration Manager.
 ms.date: 09/18/2023
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Device restart notifications in Configuration Manager
