@@ -2,11 +2,11 @@
 title: Toolkit reference - Microsoft Deployment Toolkit (MDT) UDI Reference
 description: Reference details for Microsoft Deployment Toolkit (MDT) UDI Reference
 ms.date: 09/09/2016
-ms.subservice: microsoft-deployment-toolkit
+ms.subservice: mdt
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # UDI Reference
