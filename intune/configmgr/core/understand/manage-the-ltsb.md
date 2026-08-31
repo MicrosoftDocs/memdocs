@@ -2,10 +2,10 @@
 title: Manage the LTSB
 description: Management differences for the LTSB of Configuration Manager.
 ms.date: 03/24/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Manage the long term servicing branch of Configuration Manager

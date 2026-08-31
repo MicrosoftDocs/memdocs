@@ -2,10 +2,10 @@
 title: Diagnostic and usage data for 2309
 description: Learn about the specific data that Configuration Manager collects at each level in version 2309.
 ms.date: 09/30/2023
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Diagnostic and usage data for version 2309

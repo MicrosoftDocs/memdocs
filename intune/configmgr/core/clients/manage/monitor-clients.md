@@ -2,10 +2,10 @@
 title: Monitor clients
 description: Learn how to monitor the health and activity of clients in Configuration Manager.
 ms.date: 11/15/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to monitor clients in Configuration Manager

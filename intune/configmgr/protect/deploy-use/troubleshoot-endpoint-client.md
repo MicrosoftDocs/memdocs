@@ -6,7 +6,7 @@ ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
 ms.topicc: troubleshooting-general
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Troubleshoot Windows Defender or Endpoint Protection client

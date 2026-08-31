@@ -2,10 +2,10 @@
 title: Customize operating system images
 description: Use capture-and-build task sequences, manual configuration, or a combination of both to customize an operating system image.
 ms.date: 07/31/2025
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Customize operating system images with Configuration Manager
 

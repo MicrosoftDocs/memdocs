@@ -2,11 +2,11 @@
 title: Technical preview 2101
 description: Learn about new features available in the Configuration Manager technical preview branch version 2101.
 ms.date: 01/29/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 2101

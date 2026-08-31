@@ -2,10 +2,10 @@
 title: File-based replication
 description: Learn how Configuration Manager uses file-based replication to transfer data between sites in your hierarchy
 ms.date: 08/09/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # File-based replication

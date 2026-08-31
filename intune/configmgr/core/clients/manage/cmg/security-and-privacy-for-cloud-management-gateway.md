@@ -3,9 +3,9 @@ title: CMG security and privacy
 description: Learn about guidance and recommendations for security and privacy with the cloud management gateway.
 ms.date: 04/08/2022
 ms.topic: article
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Security and privacy for the cloud management gateway

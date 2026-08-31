@@ -2,11 +2,11 @@
 title: Service Windows
 description: Use service windows to control when Configuration Manager sites install updates.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Service windows for site servers

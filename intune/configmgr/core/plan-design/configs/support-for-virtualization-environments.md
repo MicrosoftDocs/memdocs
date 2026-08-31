@@ -2,10 +2,10 @@
 title: Support for virtualization
 description: The requirements for installing Configuration Manager client and site system roles in a virtualization environment.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Support for virtualization environments with Configuration Manager

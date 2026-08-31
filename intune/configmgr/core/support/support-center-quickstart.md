@@ -2,10 +2,10 @@
 title: Support Center quickstart
 description: Quickly capture the state of a Configuration Manager client for troubleshooting.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: quickstart
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Support Center quickstart guide

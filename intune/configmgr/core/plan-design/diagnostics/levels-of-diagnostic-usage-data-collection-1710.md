@@ -2,11 +2,11 @@
 title: Diagnostic data for 1710 | Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1710 collects.
 ms.date: 11/20/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Levels of diagnostic usage data collection for version 1710 of Configuration Manager

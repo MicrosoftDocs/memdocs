@@ -2,11 +2,11 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
 ms.date: 05/31/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Microsoft Edge Management
