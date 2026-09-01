@@ -2,10 +2,10 @@
 title: Supported SQL Server versions
 description: Learn which SQL Server versions, editions, and compatibility levels Configuration Manager supports.
 ms.date: 07/28/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Supported SQL Server versions for Configuration Manager

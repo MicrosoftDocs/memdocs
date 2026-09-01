@@ -2,10 +2,10 @@
 title: Release notes
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
 ms.date: 04/24/2025
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: release-notes
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 

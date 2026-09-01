@@ -5,7 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: concept-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # About Configuration Manager Queries

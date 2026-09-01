@@ -2,10 +2,10 @@
 title: Software updates in the admin center
 description: Software updates for Configuration Manager devices from the admin center
 ms.date: 06/07/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Tenant attach: Software updates in the admin center
 <!--13035723-->

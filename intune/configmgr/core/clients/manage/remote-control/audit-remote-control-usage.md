@@ -2,10 +2,10 @@
 title: Audit remote control usage
 description: Audit remote control use in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # How to audit remote control usage in Configuration Manager
 

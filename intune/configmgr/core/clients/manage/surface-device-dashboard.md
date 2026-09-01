@@ -3,10 +3,10 @@ title: Surface Device Dashboard
 description: Review information about Surface devices using the dashboard.
 ms.date: 11/15/2021
 ms.topic: how-to
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Surface device dashboard in Configuration Manager

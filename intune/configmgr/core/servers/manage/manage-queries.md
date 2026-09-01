@@ -2,10 +2,10 @@
 title: Manage queries
 description: Learn how to manage your queries. Includes a table for detailed reference.
 ms.date: 04/29/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # How to manage queries in Configuration Manager
 

@@ -2,10 +2,10 @@
 title: Uninstall sites
 description: A guide for removing roles, and uninstalling sites and hierarchies
 ms.date: 02/16/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager

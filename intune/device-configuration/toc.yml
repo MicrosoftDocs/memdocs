@@ -259,6 +259,9 @@ items:
             href: ./templates/ref-wifi-settings-android.md
       - name: Apple
         items:
+          - name: Configure Apple app settings
+            displayName: apple, ios, ipados, macos, ddm, app settings
+            href: ./templates/apple-ddm-app-settings.md
           - name: Custom
             displayName: apple, ios, ipados, macos
             href: ./templates/configure-custom-settings-apple.md

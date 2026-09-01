@@ -2,7 +2,7 @@
 metadata:
   title: Windows Autopilot device preparation troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot device preparation issues
-  ms.date: 06/11/2025
+  ms.date: 08/28/2026
   ms.collection:
     - M365-modern-desktop
   ms.topic: faq
@@ -17,6 +17,15 @@ summary: |
 sections:
   - name: Windows Autopilot device preparation troubleshooting FAQ
     questions:
+
+      - question: |
+          Export device information fails with "Export of device link information timed out. Please try again."
+        answer: |
+          When exporting device information for [Windows Autopilot device association](tutorial/user-driven/entra-join-device-association.md#export-device-information-from-oobe) during the out-of-box experience (OOBE), the export might fail with the following message:
+
+          **`Export of device link information timed out. Please try again.`**
+
+          This issue can occur when the USB drive is formatted as FAT32 or contains both FAT32 and NTFS partitions. Use a separate USB drive that contains a single partition formatted with the NTFS file system, and then try the export again.
 
       - question: |
           Device isn't being added to the device group specified in the Windows Autopilot device preparation policy.

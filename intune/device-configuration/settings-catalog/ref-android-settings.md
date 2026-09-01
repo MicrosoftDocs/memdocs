@@ -1,14 +1,17 @@
 ---
-title: Android configuration list for Intune settings catalog
-description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
-ms.date: 05/26/2026
+title: Android settings catalog in Microsoft Intune
+description: Review Android settings available in the Microsoft Intune settings catalog, including supported enrollment types, values, defaults, and requirements.
+ms.date: 08/20/2026
 ms.topic: reference
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 params:
   siblings_only: true
 ms.reviewer: cchristenson
+#customer intent: As an Intune administrator, I want to review available Android settings so that I can configure settings catalog policies accurately.
 ---
 
-# Android Intune settings catalog settings list
+# Review Android settings catalog settings in Microsoft Intune
 
 This article lists and describes the Android Enterprise and AOSP settings you can configure in a settings catalog policy in Microsoft Intune. When you create the settings catalog profile, use the settings described in this article as a reference.
 
@@ -617,7 +620,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Location**: Contols the location services on the device. Your options:
+- **Location**: Controls the location services on the device. Your options:
 
   - **Device default** - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
   - **Location enabled** - Requires location services to be on and prevents end users from turning them off.
@@ -626,6 +629,20 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   Applies to:
 
   - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Number of days work profile is allowed to be switched off**: Enter the number of days the work profile can stay off. Enter `0` to disable this setting. For any other value, the minimum is `3` days. There's no documented upper limit.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+
+- **Remove all eSIMs during a device wipe**: Controls whether eSIMs are removed when a corporate-owned device is wiped while this policy applies. If **True**, all eSIMs are removed during the wipe. If **False** (default), this setting doesn't request that eSIMs be removed. The OS might still remove eSIMs when required. Supported on Android 15 and later. For information about the remote action, see [Wipe devices with Microsoft Intune](../../device-management/actions/wipe.md).
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -647,6 +664,25 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices at work profile level (COSU)
+
+#### Power
+
+- **Screen timeout**: Enter the amount of time, in seconds, before the screen turns off. The value must be greater than `0` and shouldn't be greater than the **Time to lock screen** setting.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level on Android 15 and later
+  - Android Enterprise corporate owned fully managed (COBO) on Android 9 and later
+  - Android Enterprise corporate owned dedicated devices (COSU) on Android 9 and later
+
+- **Screen on while device plugged in**: Select one or more battery charging modes where the screen stays on while the device is plugged in. Your options are **AC**, **USB**, and **Wireless**. If no modes are selected, Intune doesn't configure this setting, and the device uses its default screen timeout behavior.
+
+  **AC** and **USB** are supported on Android 6.0 and later. **Wireless** is supported on Android 8.1 and later.
+
+  Applies to:
+
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
 
 #### System Security
 
@@ -685,6 +721,8 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 #### Work profile password
 
 These settings require users to set a password that protects only the work profile on their device. It applies to corporate apps and data, and doesn't affect personal apps or settings. You can configure complexity requirements, like length and character types, and enforce password expiration.
+
+- **Block one lock for device and work profile**: Configure a work profile password requirement before using this setting. If **True**, users must use separate locks for the device and work profile. If **False** (default), users can use a common lock for the device and work profile. Supported on Android 9 and later.
 
 - **Number of days until password expires**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
 

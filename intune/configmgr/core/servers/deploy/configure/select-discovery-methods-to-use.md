@@ -2,10 +2,10 @@
 title: Select discovery methods
 description: Review considerations for which methods to use and at which sites to run them.
 ms.date: 10/06/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Select discovery methods to use for Configuration Manager
 

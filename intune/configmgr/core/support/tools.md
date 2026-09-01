@@ -2,12 +2,12 @@
 title: Configuration Manager Tools
 description: Learn about the tools to help you manage and troubleshoot your Configuration Manager infrastructure.
 ms.date: 12/04/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ms.collection:
     - tier3
     - essentials-manage
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configuration Manager Tools

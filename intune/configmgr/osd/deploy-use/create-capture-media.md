@@ -2,10 +2,10 @@
 title: Create capture media
 description: Use capture media in Configuration Manager to capture an OS image from a reference computer.
 ms.date: 05/02/2019
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Create capture media

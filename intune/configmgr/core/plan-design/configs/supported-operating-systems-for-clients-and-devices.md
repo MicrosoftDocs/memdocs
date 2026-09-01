@@ -2,10 +2,10 @@
 title: Supported clients and devices
 description: Learn which OS versions Configuration Manager supports for clients and devices.
 ms.date: 12/19/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager

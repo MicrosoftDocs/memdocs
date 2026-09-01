@@ -6,7 +6,7 @@ ms.subservice: protect
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # View BitLocker reports

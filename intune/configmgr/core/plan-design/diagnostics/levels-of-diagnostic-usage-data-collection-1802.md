@@ -2,11 +2,11 @@
 title: Diagnostic and usage data for 1802
 description: Learn about the levels of diagnostics and usage data collected in version 1802.
 ms.date: 05/13/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Levels of diagnostic usage data collection for version 1802 of Configuration Manager
 

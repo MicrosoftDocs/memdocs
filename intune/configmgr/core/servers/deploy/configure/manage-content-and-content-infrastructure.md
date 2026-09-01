@@ -2,10 +2,10 @@
 title: Content infrastructure
 description: Learn how to deploy and then manage your content management infrastructure for Configuration Manager.
 ms.date: 02/7/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Manage content and content infrastructure for Configuration Manager
 

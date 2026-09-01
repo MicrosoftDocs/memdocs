@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 3 of 7 - Create an assigned device group
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 3 of 7 - Create an assigned device group.
-ms.date: 04/04/2025
+ms.date: 08/07/2026
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -21,7 +21,8 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 - Step 4: [Create a user group](entra-join-user-group.md)
 - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 7, option 1: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
+- Step 7, option 2: [Associate devices](entra-join-device-association.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 

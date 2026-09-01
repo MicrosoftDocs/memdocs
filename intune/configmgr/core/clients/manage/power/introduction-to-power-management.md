@@ -2,10 +2,10 @@
 title: Introduction to power management
 description: Get an introduction to power management in Configuration Manager.
 ms.date: 10/06/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Introduction to power management in Configuration Manager
 

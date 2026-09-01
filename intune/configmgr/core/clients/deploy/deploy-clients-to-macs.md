@@ -2,10 +2,10 @@
 title: Deploy Mac clients
 description: Learn how to deploy clients to Mac computers in Configuration Manager.
 ms.date: 01/05/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to deploy clients to Macs
