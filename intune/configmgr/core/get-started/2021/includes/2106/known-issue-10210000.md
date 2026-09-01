@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 06/24/2021
+ms.service: configuration-manager
 ---
 
 ### Unable to create Compliance Settings Configuration Items in the wizard

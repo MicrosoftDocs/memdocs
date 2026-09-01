@@ -5,6 +5,7 @@ ms.date: 08/14/2018
 ms.subservice: mdm
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Manage devices and protect data with on-premises MDM in Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 07/25/2025
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to use maintenance windows in Configuration Manager

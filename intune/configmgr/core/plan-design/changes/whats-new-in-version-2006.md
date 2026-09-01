@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # What's new in version 2006 of Configuration Manager current branch

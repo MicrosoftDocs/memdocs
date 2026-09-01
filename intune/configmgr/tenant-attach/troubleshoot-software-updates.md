@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Troubleshoot software updates in the admin center

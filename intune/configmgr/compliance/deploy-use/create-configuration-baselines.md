@@ -6,6 +6,7 @@ ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 # Create configuration baselines in Configuration Manager
 

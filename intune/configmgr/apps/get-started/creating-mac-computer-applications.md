@@ -5,6 +5,7 @@ ms.date: 01/05/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Create Mac computer applications with Configuration Manager
 

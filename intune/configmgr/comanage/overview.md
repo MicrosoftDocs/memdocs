@@ -7,6 +7,7 @@ ms.subservice: co-management
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: configuration-manager
 ---
 
 # What is co-management?

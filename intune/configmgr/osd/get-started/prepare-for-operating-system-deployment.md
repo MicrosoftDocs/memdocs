@@ -5,6 +5,7 @@ ms.date: 02/22/2019
 ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Prepare for OS deployment in Configuration Manager

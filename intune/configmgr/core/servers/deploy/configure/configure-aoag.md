@@ -5,6 +5,7 @@ ms.date: 06/12/2025
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configure a SQL Server Always On availability group for Configuration Manager

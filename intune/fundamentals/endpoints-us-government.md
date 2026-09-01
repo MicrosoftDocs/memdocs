@@ -89,6 +89,7 @@ For more information, see the [Overview of Endpoint Privilege Management](../epm
 - Azure AD Graph: `https://directory.microsoftazure.us` and `https://graph.microsoftazure.us`
 - MS Graph: `https://graph.microsoft.us`
 - ADRS: `https://enterpriseregistration.microsoftonline.us`
+- Experimentation and Configuration Service (ECS): `*.ecs.gov.teams.microsoft.us`
 
 [!INCLUDE [Intune notices](./includes/windows-push-notification-services.md)]
 

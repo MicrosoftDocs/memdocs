@@ -5,6 +5,7 @@ ms.date: 03/05/2021
 ms.subservice: osd
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Install Software Updates

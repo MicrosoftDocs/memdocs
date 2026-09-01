@@ -5,6 +5,7 @@ ms.date: 12/29/2016
 ms.subservice: core-infra
 ms.topic: checklist
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Administrator checklists for migration planning in Configuration Manager
 

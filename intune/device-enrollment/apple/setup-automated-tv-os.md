@@ -100,11 +100,11 @@ Create a tvOS enrollment policy for userless automated device enrollment. A devi
 
 1. Under **Setup Assistant**, configure the following policy settings:
 
-    | Department setting | Description |
-    |---|---|
-    | **Department** | Appears when users tap **About Configuration** during activation. |
-    |    **Department Phone**     | Appears when users tap the **Need Help** button during activation. |  
-
+   | Department setting | Description |
+   |---|---|
+   | **Department** | Appears when users tap **About Configuration** during activation. |
+   | **Department Phone**     | Appears when users tap the **Need Help** button during activation. |
+   
 1. Select **Next**.  
 
 1. To save the policy, select **Create**.
@@ -120,6 +120,28 @@ You can use the policy name to define the [enrollmentProfileName parameter](/azu
 Before device setup, make sure the enrolling user is a member of a Microsoft Entra user group.
 
 If you assign dynamic groups to enrollment policies, there might be a delay in delivering applications and policies to devices after the enrollment.  
+
+### Setup Assistant screen reference
+
+The following table describes the Setup Assistant screens shown during automated device enrollment for tvOS. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see these Apple resources:
+
+- [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web)
+
+- [Apple Developer documentation: SkipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)
+
+| Setup Assistant screen | What happens when visible |
+|------------------------------------------|------------------------------------------|
+| **Apple ID** | Shows the Apple ID setup pane, which gives users the option to sign in with their Apple ID and use iCloud. For tvOS 10.2 and later. | 
+| **Diagnostics Data** | Shows the diagnostics pane where users can opt in to send diagnostic data to Apple. For tvOS 10.2 and later. | 
+| **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For tvOS 10.2 and later. | 
+| **Privacy** | Shows the privacy setup pane. For tvOS 11.3 and later. | 
+| **ScreenSaver** | Shows the tvOS screen about using aerial screensavers on an Apple TV. For tvOS 10.2 and later. | 
+| **Siri** | Shows the Siri setup pane to users. For tvOS 10.2 and later. | 
+| **Tap to set up** | Shows the Tap To Set Up option in Apple TV related to using an iOS device to set up your Apple TV. For tvOS 10.2 and later. | 
+| **Terms and Conditions** | Shows the Apple terms and conditions pane and requires users to accept them. For tvOS 10.2 and later. | 
+| **TV Home Screen layout sync** | Shows the TV Home Screen layout sync screen. For tvOS 11 and later. | 
+| **TV Provider sign in** | Shows the TV provider sign in screen. For tvOS 11 and later. | 
+| **TV Room** | Shows the “Where is this Apple TV?” screen. For tvOS 11.4 and later. | 
 
 ## Assign an enrollment policy to devices
 

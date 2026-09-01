@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: mdm
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # On-premises MDM in Configuration Manager

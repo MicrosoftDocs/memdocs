@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: sdk
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # What's new in the Configuration Manager SDK

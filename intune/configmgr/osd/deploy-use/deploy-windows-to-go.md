@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Deploy Windows To Go with Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 04/13/2021
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configure pre-cache content for task sequences

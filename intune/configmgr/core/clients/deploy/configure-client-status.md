@@ -5,6 +5,7 @@ ms.date: 07/13/2020
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to configure client status in Configuration Manager

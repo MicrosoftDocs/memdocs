@@ -5,6 +5,7 @@ ms.date: 04/30/2019
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About upgrade, update, and install for site and hierarchy infrastructure

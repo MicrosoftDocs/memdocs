@@ -5,6 +5,7 @@ ms.date: 04/13/2021
 ms.subservice: core-infra
 ms.topic: best-practice
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Best practices for collections in Configuration Manager

@@ -7,6 +7,7 @@ ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # What's new in version 1906 of Configuration Manager current branch

@@ -480,3 +480,7 @@ For more information on Windows Autopilot, go to:
 4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. 🡺 **High level planning guide** (*You are here*)
 6. [Known issues and important information](troubleshoot.md)
+
+## Related content
+
+- [Choose the right targeting method in Microsoft Intune](../../fundamentals/choose-targeting-method.md)

@@ -7,6 +7,7 @@ ms.topic: article
 ms.collection:
 - essentials-security
 - tier3
+ms.service: configuration-manager
 ---
 
 # Fundamentals of security for Configuration Manager

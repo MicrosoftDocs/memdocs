@@ -5,6 +5,7 @@ ms.date: 09/06/2017
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Install and upgrade with the version 1606 baseline media
 

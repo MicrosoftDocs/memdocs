@@ -7,6 +7,7 @@ ms.topic: article
 ms.collection: tier3
 
 
+ms.service: configuration-manager
 ---
 
 # Requirements of IDMIF files

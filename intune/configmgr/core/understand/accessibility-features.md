@@ -7,6 +7,7 @@ ms.topic: article
 ms.collection:
     - tier3
     - essentials-accessibility
+ms.service: configuration-manager
 ---
 
 # Accessibility features in Configuration Manager

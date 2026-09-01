@@ -5,6 +5,7 @@ ms.date: 05/02/2019
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create capture media

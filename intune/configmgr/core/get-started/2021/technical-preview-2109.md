@@ -5,6 +5,7 @@ ms.date: 09/27/2021
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 2109

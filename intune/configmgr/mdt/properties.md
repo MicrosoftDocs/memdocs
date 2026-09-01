@@ -6,6 +6,7 @@ ms.subservice: mdt
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
+ms.service: configuration-manager
 ---
 
 # Properties

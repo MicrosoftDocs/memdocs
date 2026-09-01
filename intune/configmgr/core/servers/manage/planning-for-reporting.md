@@ -5,6 +5,7 @@ ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Plan for reporting in Configuration Manager

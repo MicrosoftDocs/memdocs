@@ -5,6 +5,7 @@ ms.date: 04/23/2017
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Example scenario for deploying and managing Configuration Manager clients on Windows Embedded devices
 

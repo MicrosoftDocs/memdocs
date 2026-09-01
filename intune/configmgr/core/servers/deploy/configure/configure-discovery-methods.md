@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: configuration-manager
 ---
 
 # Configure discovery methods for Configuration Manager

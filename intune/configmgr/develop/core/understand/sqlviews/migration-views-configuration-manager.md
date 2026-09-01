@@ -7,6 +7,7 @@ ms.topic: reference
 
 
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Migration views in Configuration Manager

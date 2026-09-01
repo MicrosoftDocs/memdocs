@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 06/29/2020
+ms.service: configuration-manager
 ---
 
 ### <a name="ki_auth"></a> Microsoft Entra authentication doesn't work

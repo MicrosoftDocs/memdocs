@@ -5,6 +5,7 @@ ms.date: 01/03/2018
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # How to configure software inventory in Configuration Manager
 

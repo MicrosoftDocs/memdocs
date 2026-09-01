@@ -8,6 +8,7 @@ ms.collection: tier3
 ms.custom:
   - sfi-ga-nochange
   - sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # <a name="bkmk_attach"></a> Enable Microsoft Intune tenant attach: Device sync and device actions

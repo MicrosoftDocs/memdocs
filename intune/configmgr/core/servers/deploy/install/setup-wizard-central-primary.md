@@ -5,6 +5,7 @@ ms.date: 05/02/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use the setup wizard to install a central administration or primary site

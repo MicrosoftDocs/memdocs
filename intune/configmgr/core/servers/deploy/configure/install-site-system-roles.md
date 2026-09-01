@@ -5,6 +5,7 @@ ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Install site system roles for Configuration Manager

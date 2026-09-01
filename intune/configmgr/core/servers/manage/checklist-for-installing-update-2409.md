@@ -5,6 +5,7 @@ ms.date: 12/03/2024
 ms.subservice: core-infra
 ms.topic: checklist
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 2409 for Configuration Manager

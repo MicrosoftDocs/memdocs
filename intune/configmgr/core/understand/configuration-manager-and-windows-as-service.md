@@ -5,6 +5,7 @@ ms.date: 12/07/2021
 ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configuration Manager and Windows as a service

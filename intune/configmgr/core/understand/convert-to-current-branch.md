@@ -5,6 +5,7 @@ ms.date: 02/8/2017
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Upgrade the long-term servicing branch to the current branch

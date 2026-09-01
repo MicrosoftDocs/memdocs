@@ -5,6 +5,7 @@ ms.date: 10/11/2021
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Planning for client deployment to Windows Embedded devices in Configuration Manager
 

@@ -5,6 +5,7 @@ ms.date: 05/05/2026
 ms.subservice: core-infra
 ms.topic: checklist
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 2603 for Configuration Manager

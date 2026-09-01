@@ -5,6 +5,7 @@ ms.date: 06/22/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site

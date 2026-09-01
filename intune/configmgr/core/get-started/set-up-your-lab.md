@@ -5,6 +5,7 @@ ms.date: 09/26/2019
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Set up a Configuration Manager lab

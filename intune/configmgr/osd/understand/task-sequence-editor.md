@@ -5,6 +5,7 @@ ms.date: 11/29/2019
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use the task sequence editor

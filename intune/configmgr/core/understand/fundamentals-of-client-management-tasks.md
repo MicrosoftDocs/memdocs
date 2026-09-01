@@ -5,6 +5,7 @@ ms.date: 12/30/2016
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Fundamentals of client management tasks for Configuration Manager
 

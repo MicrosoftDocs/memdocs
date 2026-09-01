@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 
 
+ms.service: configuration-manager
 ---
 # How to Configure Hardware Inventory Settings
 You set the Hardware Inventory Client Agent settings, in Configuration Manager, by modifying the necessary site control file settings.  

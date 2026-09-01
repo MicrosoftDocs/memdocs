@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to extend hardware inventory in Configuration Manager

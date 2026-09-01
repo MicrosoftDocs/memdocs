@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Support for Configuration Manager current branch versions

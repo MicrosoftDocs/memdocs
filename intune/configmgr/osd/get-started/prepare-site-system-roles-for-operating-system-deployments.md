@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Prepare site system roles for OS deployments with Configuration Manager

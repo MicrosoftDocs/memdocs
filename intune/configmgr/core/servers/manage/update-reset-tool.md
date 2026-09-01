@@ -5,6 +5,7 @@ ms.date: 07/31/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Update reset tool
 

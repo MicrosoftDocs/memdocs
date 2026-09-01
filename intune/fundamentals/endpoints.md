@@ -2,7 +2,7 @@
 title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 ms.author: lanewsad
-ms.date: 03/24/2026
+ms.date: 08/21/2026
 ms.topic: reference
 ms.reviewer: angrobe
 ---
@@ -62,7 +62,7 @@ The data columns shown in the tables are:
 
 | ID | Desc | Category | ER | Addresses | Ports |
 |----|------|----------|----|-----------|-------|
-| 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`*.dm.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25`<br><br>`Azure Front Door Endpoints:`<br>` 13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/23, 150.171.97.0/24, 2620:1ec:40::/48, 2620:1ec:49::/48, 2620:1ec:4a::/47` | **TCP:** 80, 443 |
+| 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`*.dm.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25`<br><br>`Azure Front Door Endpoints:`<br>` 13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/23, 150.171.97.0/24, 150.171.109.0/24, 150.171.110.0/24, 2620:1ec:40::/48, 2620:1ec:49::/48, 2620:1ec:4a::/47` | **TCP:** 80, 443 |
 | 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 | 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft<.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<br>`swdin02-mscdn.manage.microsoft.com`<br>`aam-content-cdn.manage.microsoft.com`(this endpoint is only for Enterprise App Catalog apps) | **TCP:** 80, 443 |
 | 97 | Consumer Outlook.com, OneDrive, Device authentication, and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> | **TCP:** 443 |
@@ -154,6 +154,7 @@ In addition to configuring the network requirements listed in the following tabl
 181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
+N/A | Remote Help for Windows unattended access - Remote Sign-in dependencies | Default<BR>Required | N/A | See Notes | See Notes | Remote Sign-in requires the [Azure Virtual Desktop session host endpoints](/azure/virtual-desktop/required-fqdn-endpoint#session-host-virtual-machines). Commercial customers should use the **Azure cloud** endpoints. Government Community Cloud (GCC) customers should use the **Azure for US Government** endpoints. |
 
 ### Windows Autopilot dependencies
 
@@ -163,7 +164,7 @@ In addition to configuring the network requirements listed in the following tabl
 | 165 | Windows Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` | **UDP:** 123 |
 | 169 | Windows Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 | 173 | Windows Autopilot - Third-party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443 |
-| 182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR>`lgmsapeswiss.blob.core.windows.net`<BR> | **TCP:** 443 |
+| 182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `amsua0101lmsas.blob.core.windows.net`<BR>`amsua0102lmsas.blob.core.windows.net`<BR>`amsua0201lmsas.blob.core.windows.net`<BR>`amsua0202lmsas.blob.core.windows.net`<BR>`amsua0401lmsas.blob.core.windows.net`<BR>`amsua0402lmsas.blob.core.windows.net`<BR>`amsua0501lmsas.blob.core.windows.net`<BR>`amsua0502lmsas.blob.core.windows.net`<BR>`amsua0601lmsas.blob.core.windows.net`<BR>`amsua0602lmsas.blob.core.windows.net`<BR>`amsua0701lmsas.blob.core.windows.net`<BR>`amsua0702lmsas.blob.core.windows.net`<BR>`amsua0801lmsas.blob.core.windows.net`<BR>`amsua0901lmsas.blob.core.windows.net`<BR>`amsua0902lmsas.blob.core.windows.net`<BR>`amsub0101lmsas.blob.core.windows.net`<BR>`amsub0102lmsas.blob.core.windows.net`<BR>`amsub0201lmsas.blob.core.windows.net`<BR>`amsub0202lmsas.blob.core.windows.net`<BR>`amsub0301lmsas.blob.core.windows.net`<BR>`amsub0302lmsas.blob.core.windows.net`<BR>`amsub0501lmsas.blob.core.windows.net`<BR>`amsub0502lmsas.blob.core.windows.net`<BR>`amsub0601lmsas.blob.core.windows.net`<BR>`amsub0701lmsas.blob.core.windows.net`<BR>`amsub0801lmsas.blob.core.windows.net`<BR>`amsub0901lmsas.blob.core.windows.net`<BR>`amsuc0101lmsas.blob.core.windows.net`<BR>`amsuc0201lmsas.blob.core.windows.net`<BR>`amsuc0301lmsas.blob.core.windows.net`<BR>`amsuc0501lmsas.blob.core.windows.net`<BR>`amsuc0601lmsas.blob.core.windows.net`<BR>`amsud0101lmsas.blob.core.windows.net`<BR>`amsuin01lmsas.blob.core.windows.net`<BR> | **TCP:** 443 |
 
 ## Endpoint analytics
 
@@ -477,13 +478,40 @@ intunemaape13.jpe.attest.azure.net
 intunemaape17.jpe.attest.azure.net
 intunemaape18.jpe.attest.azure.net
 intunemaape19.jpe.attest.azure.net
-lgmsapeaus.blob.core.windows.net
-lgmsapeind.blob.core.windows.net
-lgmsapesea.blob.core.windows.net
-lgmsapeswiss.blob.core.windows.net
-lgmsapeweu.blob.core.windows.net
-lgmsapeweu.blob.core.windows.net
-lgmsapewus2.blob.core.windows.net
+amsua0101lmsas.blob.core.windows.net
+amsua0102lmsas.blob.core.windows.net
+amsua0201lmsas.blob.core.windows.net
+amsua0202lmsas.blob.core.windows.net
+amsua0401lmsas.blob.core.windows.net
+amsua0402lmsas.blob.core.windows.net
+amsua0501lmsas.blob.core.windows.net
+amsua0502lmsas.blob.core.windows.net
+amsua0601lmsas.blob.core.windows.net
+amsua0602lmsas.blob.core.windows.net
+amsua0701lmsas.blob.core.windows.net
+amsua0702lmsas.blob.core.windows.net
+amsua0801lmsas.blob.core.windows.net
+amsua0901lmsas.blob.core.windows.net
+amsua0902lmsas.blob.core.windows.net
+amsub0101lmsas.blob.core.windows.net
+amsub0102lmsas.blob.core.windows.net
+amsub0201lmsas.blob.core.windows.net
+amsub0202lmsas.blob.core.windows.net
+amsub0301lmsas.blob.core.windows.net
+amsub0302lmsas.blob.core.windows.net
+amsub0501lmsas.blob.core.windows.net
+amsub0502lmsas.blob.core.windows.net
+amsub0601lmsas.blob.core.windows.net
+amsub0701lmsas.blob.core.windows.net
+amsub0801lmsas.blob.core.windows.net
+amsub0901lmsas.blob.core.windows.net
+amsuc0101lmsas.blob.core.windows.net
+amsuc0201lmsas.blob.core.windows.net
+amsuc0301lmsas.blob.core.windows.net
+amsuc0501lmsas.blob.core.windows.net
+amsuc0601lmsas.blob.core.windows.net
+amsud0101lmsas.blob.core.windows.net
+amsuin01lmsas.blob.core.windows.net
 licensing.mp.microsoft.com
 login.live.com
 login.microsoftonline.com
@@ -589,6 +617,8 @@ IP Subnets
 13.107.227.0/24
 13.107.228.0/23
 150.171.97.0/24
+150.171.109.0/24
+150.171.110.0/24 
 2620:1ec:40::/48
 2620:1ec:49::/48
 2620:1ec:4a::/47

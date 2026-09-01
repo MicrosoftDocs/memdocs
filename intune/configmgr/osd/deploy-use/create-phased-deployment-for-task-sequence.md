@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create phased deployments with Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 10/15/2024
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Cryptographic controls technical reference

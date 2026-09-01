@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: configuration-manager
 ---
 
 # What's new in version 2409 of Configuration Manager current branch

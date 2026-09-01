@@ -5,6 +5,7 @@ ms.date: 01/09/2020
 ms.subservice: mdm
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Set up certificates for trusted communications with on-premises MDM

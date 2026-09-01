@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Tenant attach: Launch CMPivot from the admin center

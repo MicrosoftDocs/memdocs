@@ -5,6 +5,7 @@ ms.date: 11/30/2020
 ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Package Conversion Manager

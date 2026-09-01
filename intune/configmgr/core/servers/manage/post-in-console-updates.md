@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
 
+ms.service: configuration-manager
 ---
 
 # After the site updates

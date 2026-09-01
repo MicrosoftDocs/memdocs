@@ -5,6 +5,7 @@ ms.date: 09/18/2019
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Prepare to install Configuration Manager sites
 
@@ -59,7 +60,7 @@ For more information, see [Design a hierarchy of sites for Configuration Manager
 For more information, see [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md).
 
 - **Install and configure SQL Server to host the site database**
-For more information, see [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).
+For more information, see [supported SQL Server versions](../../../../core/plan-design/configs/support-for-sql-server-versions.md) and [supported configurations for SQL Server](../../../../core/plan-design/configs/supported-configurations-for-sql-server.md).
 
 - **Prepare your network environment to support Configuration Manager**
 For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](../../../../core/plan-design/network/configure-firewalls-ports-domains.md).

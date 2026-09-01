@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.topic: article
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Security and privacy for the cloud management gateway

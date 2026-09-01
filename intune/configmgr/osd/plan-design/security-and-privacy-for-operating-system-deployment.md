@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: osd
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Security and privacy for OS deployment in Configuration Manager

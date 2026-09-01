@@ -5,6 +5,7 @@ ms.date: 02/22/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Security and privacy for software inventory in Configuration Manager
 

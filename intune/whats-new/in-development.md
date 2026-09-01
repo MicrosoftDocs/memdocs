@@ -1,8 +1,9 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 07/02/2026
+ms.date: 08/21/2026
 ms.topic: whats-new
+ai-usage: ai-assisted
 ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management
@@ -54,17 +55,6 @@ We're fixing how scope tags work with Endpoint Privilege Management (EPM) report
 
 ## Device configuration
 
-### Manage Samsung firmware updates with Knox E-FOTA integration for Android Enterprise devices<!-- 6515233 -->
-
-Samsung Knox E-FOTA (Firmware Over-The-Air) lets you remotely deploy firmware updates to corporate-owned Samsung devices without user interaction. With the upcoming Knox E-FOTA integration, Intune will surface these capabilities directly in the Microsoft Intune admin center, so you'll be able to manage firmware for eligible Samsung devices without leaving the console. You'll be able to control which firmware version is deployed, target the right updates to the right devices, and schedule downloads and installs to minimize device downtime.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise corporate-owned dedicated (COSU)
-> - Android Enterprise corporate-owned fully managed (COBO)
-> - Android Enterprise corporate-owned with a work profile (COPE)
-
 ### Enforce Routes capability in iOS/iPadOS and macOS VPN profiles<!-- 28869584 -->
 
 Microsoft Intune will support Apple's **[Enforce Routes](https://developer.apple.com/documentation/networkextension/nevpnprotocol/enforceroutes)** feature in iOS/iPadOS and macOS VPN profiles.
@@ -106,39 +96,9 @@ For more information, see:
 
 ## Device management
 
-### Windows Registry data available in the properties catalog<!-- 33470861 -->
-
-The [properties catalog](../device-configuration/collect-device-properties.md) lets you create an Intune policy that collects and shows the hardware properties from your Windows devices enrolled in Intune.
-
-The Windows device inventory in Intune is expanding and will include Windows Registry data. Admins can define specific registry keys and values to collect from the device registries. This feature gives more state visibility and advanced querying without custom scripts.
-
-To help you collect data efficiently and reliably, we will support the following collection options for **HKEY_LOCAL_MACHINE** (HKLM) scenarios:
-
-- **Single Value**: Collect a specific value from a defined key path.
-- **All Values Under Key (Non-Recursive)**: Collect all values directly under a selected registry key. This option does not include any subkeys.
-- **Same Value Across Subkeys**: Collect a consistent value across all immediate subkeys under a given path.
-
-To learn more about the properties catalog, see [Use the Intune properties catalog to get device hardware properties](../device-configuration/collect-device-properties.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
 ### Device query for multiple devices for app inventory on Windows<!-- 25850932 -->
 
 Advanced Analytics will extend device query for multiple devices to cover app inventory data on Windows. Building on the existing multi-device query for hardware inventory, you'll be able to use Kusto Query Language (KQL) to investigate installed applications across your entire Windows fleet—identifying versions, surfacing outdated or unwanted software, and producing detailed reports without targeting devices one at a time. Multi-device app inventory queries will run against collected inventory data, so you get fleet-wide answers for compliance reviews, vulnerability triage, and license-tracking scenarios.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-### Improved on-demand sync for Windows devices<!-- 37533252, 37595192 -->
-
-The Sync device action for Windows devices will be enhanced to trigger a more comprehensive, on-demand synchronization from the Microsoft Intune admin center. Instead of waiting for scheduled check-ins, the sync action will initiate a full synchronization across key workloads—including compliance, configuration policies, apps, and scripts—so devices reflect the latest changes faster.
-
-This improvement will be especially useful during troubleshooting, incident response, or high-priority rollouts where you need faster confirmation that device state matches your intent.
 
 > [!div class="checklist"]
 > Applies to:
@@ -173,17 +133,6 @@ We're adding a new Microsoft Defender Updates template for Linux endpoint securi
 >
 > - Linux
 
-### Audit mode for the Microsoft Defender Antivirus template for Linux<!-- 37284585 -->
-
-We'll soon add a new **Audit** value to the **Enforcement level** setting in the Microsoft Defender Antivirus template for Linux, which is part of Intune's Endpoint Security Antivirus policy. When you set **Enforcement level** to **Audit**, the antivirus engine detects threats in real time but doesn't automatically remediate them. Malware detections are reported as alerts in the Microsoft Defender portal through real-time scanning, without quarantining the malicious files. This gives you visibility into the threat landscape before you turn on full protection.
-
-The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../device-configuration/endpoint-security/antivirus.md), and for devices managed only by Defender through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) scenario (MDE attach).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Linux  
-
 ### Mark Windows devices noncompliant when prohibited AI agents are discovered<!-- 37387056 -->
 
 Automatically mark Windows devices as noncompliant when prohibited local AI agents, such as OpenClaw, are discovered on the device. As an admin, you'll be able to configure a list of prohibited agents in a Windows compliance policy. When a prohibited agent is detected, the device reports as noncompliant and Conditional Access takes effect. The device returns to a compliant state once the agent is removed.
@@ -202,50 +151,9 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
-### Custom compliance settings for macOS<!-- 35392462 -->
-
-Microsoft Intune will support custom compliance settings for macOS. You'll be able to define compliance checks using scripts and JSON rules, similar to existing support for Windows and Linux. This capability will allow you to evaluate device configuration, security posture, and other custom attributes not covered by built-in settings. Results will appear alongside standard compliance reporting in the Intune admin center.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS
-
 ### Client-driven compliance evaluation for Windows devices<!-- 37554578 -->
 
 Microsoft Intune will introduce client-driven compliance evaluation for Windows devices to reduce delays in compliance reporting. Supported devices will detect important state changes locally and proactively request a compliance re-evaluation when it matters, instead of waiting for the next scheduled check-in. As an admin, you'll see faster updates for remediation, reporting, and access decisions. This capability will roll out in preview for Windows devices.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-### Controlled Configuration for Microsoft Defender antivirus settings<!-- 26715847 -->
-
-Microsoft Intune is bringing Controlled Configuration (CC) to public preview for Microsoft Defender antivirus settings. CC introduces a unified approach to endpoint security by making Intune and Microsoft 365 Defender the single source of truth for antivirus and related security settings.
-
-When you enable CC, all of the Defender antivirus settings that are delivered by Intune or Microsoft Defender for Endpoint security settings management will override configurations from all other channels, including Group Policy, Configuration Manager, and local changes or scripts. This single source of truth will help ensure consistent, predictable device states.
-
-CC extends Tamper Protection by letting you lock settings to admin-defined values, not just defaults. Your Defender antivirus policies set by Intune are reliably enforced across your endpoints, without being overridden by legacy on-premises policies or local per-device changes.
-
-Benefits of CC include:
-
-- **Authoritative policy enforcement**: Cloud-delivered antivirus settings always take precedence, eliminating conflicts from legacy tools.
-- **Improved security posture**: Prevents configuration drift and reduces risk from local changes.
-- **Simplified troubleshooting**: Clear, predictable configurations make auditing and support easier.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-<!-- *********************************************** -->
-
-## Intune apps
-
-### Regional support for Microsoft Store apps<!-- 16544248 -->
-
-When you add a Microsoft Store app to Intune, you'll be able to select the region (market) whose Store catalog you want to search and deploy from. Previously, Intune searched only the United States Store catalog, so apps published in other regions weren't available. With regional support, you'll be able to target apps published for specific markets, such as Japan or Spain, that aren't in the US catalog. This expands the set of Store apps available for deployment to your Windows devices.
 
 > [!div class="checklist"]
 > Applies to:

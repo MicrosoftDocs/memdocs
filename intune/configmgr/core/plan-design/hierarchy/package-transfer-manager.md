@@ -5,6 +5,7 @@ ms.date: 02/8/2017
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Package Transfer Manager in Configuration Manager
 

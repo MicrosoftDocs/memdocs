@@ -5,6 +5,7 @@ ms.date: 04/23/2019
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Plan how to wake up clients in Configuration Manager
 

@@ -5,6 +5,7 @@ ms.date: 02/16/2022
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Task sequence steps to manage BIOS to UEFI conversion

@@ -5,6 +5,7 @@ ms.date: 04/30/2024
 ms.subservice: osd
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Task sequence steps

@@ -6,6 +6,7 @@ ms.topic: how-to
 ai-usage: ai-assisted
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Tenant attach: Onboard Microsoft Configuration Manager clients to Microsoft Defender for Endpoint from the admin center

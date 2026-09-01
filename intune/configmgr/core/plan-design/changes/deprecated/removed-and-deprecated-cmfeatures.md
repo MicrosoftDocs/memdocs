@@ -5,6 +5,7 @@ ms.subservice: core-infra
 ms.topic: article
 ms.date: 12/04/2024
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Removed and deprecated features for Configuration Manager

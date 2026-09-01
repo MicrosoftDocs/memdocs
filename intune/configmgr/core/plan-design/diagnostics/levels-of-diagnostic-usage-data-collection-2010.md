@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Diagnostic and usage data for version 2010

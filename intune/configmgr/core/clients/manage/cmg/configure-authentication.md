@@ -5,6 +5,7 @@ ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configure client authentication for cloud management gateway

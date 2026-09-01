@@ -5,6 +5,7 @@ ms.date: 03/23/2022
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About discovery methods for Configuration Manager

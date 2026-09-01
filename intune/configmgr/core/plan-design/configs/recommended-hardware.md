@@ -5,6 +5,7 @@ ms.date: 03/04/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Recommended hardware for Configuration Manager

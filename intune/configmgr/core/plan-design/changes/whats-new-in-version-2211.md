@@ -5,6 +5,7 @@ ms.date: 12/05/2022
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # What's new in version 2211 of Configuration Manager current branch

@@ -5,6 +5,7 @@ ms.date: 09/18/2022
 ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Set up CMG for Configuration Manager

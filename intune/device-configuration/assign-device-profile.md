@@ -1,7 +1,7 @@
 ---
 title: Assign device profiles in Microsoft Intune
 description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
-ms.date: 05/19/2026
+ms.date: 06/10/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: gokarthi
@@ -177,6 +177,11 @@ When you assign your policies and policies, apply the following general principl
 
   > [!TIP]
   > If your dynamic device group rule targets properties like OS type, manufacturer, model, ownership, or device category, consider using an [assignment filter](../fundamentals/filters/overview.md) instead. Filters evaluate device properties directly at check-in without depending on group membership processing. For guidance, go to [Performance recommendations for grouping, targeting, and filtering](../fundamentals/filters/performance-recommendations.md).
+  >
+  > If you continue to use dynamic groups, optimize your rules for efficiency. For more information, go to:
+  >
+  > - [Create simpler and faster rules for dynamic membership groups](/entra/identity/users/groups-dynamic-rule-more-efficient)
+  > - [Understand and manage dynamic group processing](/entra/identity/users/manage-dynamic-group#optimize-rule-efficiency)
 
   For example, you want policies assigned to devices as soon as they enroll. In this latency-sensitive situation, create an [assignment filter](../fundamentals/filters/overview.md) to target the devices you want, and assign the policy with this assignment filter to user groups. Don't assign to device groups.
 
@@ -215,6 +220,8 @@ Use the following matrix to understand support for excluding groups:
 
 ## Related articles
 
+- [Choose the right targeting method in Microsoft Intune](../fundamentals/choose-targeting-method.md)
+- [Monitor device profiles](./monitor-device-profile.md) for guidance on monitoring your policies, and the devices running your policies.
 See [monitor device profiles](./monitor-device-profile.md) for guidance on monitoring your policies, and the devices running your policies.
 
 <!--links-->

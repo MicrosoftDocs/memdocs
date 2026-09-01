@@ -5,6 +5,7 @@ ms.date: 07/15/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use cloud services with Configuration Manager

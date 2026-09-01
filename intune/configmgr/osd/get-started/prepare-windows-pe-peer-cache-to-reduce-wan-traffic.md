@@ -5,6 +5,7 @@ ms.date: 06/18/2019
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Prepare Windows PE peer cache to reduce WAN traffic in Configuration Manager
 

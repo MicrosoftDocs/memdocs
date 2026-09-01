@@ -5,6 +5,7 @@ ms.date: 07/26/2019
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create a task sequence to install an OS

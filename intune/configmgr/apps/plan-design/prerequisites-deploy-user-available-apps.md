@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Prerequisites to deploy user-available apps

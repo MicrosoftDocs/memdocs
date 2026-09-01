@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # Configuration Manager console changes and tips

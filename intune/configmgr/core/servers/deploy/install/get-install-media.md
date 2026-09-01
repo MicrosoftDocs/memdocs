@@ -5,6 +5,7 @@ ms.date: 01/11/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Where to get installation media for Configuration Manager
 

@@ -5,6 +5,7 @@ ms.date: 09/04/2024
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Accounts used in Configuration Manager

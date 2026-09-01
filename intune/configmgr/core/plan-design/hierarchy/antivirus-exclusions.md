@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: article
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Recommended antivirus exclusions for Configuration Manager

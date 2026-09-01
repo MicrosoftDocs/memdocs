@@ -6,6 +6,7 @@ ms.subservice: other
 ms.topic: article
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # Community hub and GitHub

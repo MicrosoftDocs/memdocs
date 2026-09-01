@@ -5,6 +5,7 @@ ms.date: 01/13/2020
 ms.subservice: mdm
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How users enroll devices with on-premises MDM in Configuration Manager

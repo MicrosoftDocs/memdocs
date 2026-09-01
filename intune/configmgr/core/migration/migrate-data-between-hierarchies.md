@@ -5,6 +5,7 @@ ms.date: 11/05/2018
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Migrate data between hierarchies in Configuration Manager

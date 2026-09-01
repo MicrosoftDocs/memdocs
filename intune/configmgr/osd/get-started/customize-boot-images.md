@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Customize boot images with Configuration Manager

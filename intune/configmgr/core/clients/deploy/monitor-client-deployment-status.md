@@ -5,6 +5,7 @@ ms.date: 04/23/2017
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # How to monitor client deployment status in Configuration Manager
 

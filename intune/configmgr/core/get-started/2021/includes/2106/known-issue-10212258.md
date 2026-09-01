@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 06/24/2021
+ms.service: configuration-manager
 ---
 
 ### Using Cloud Attach Configuration Wizard during upgrade fails

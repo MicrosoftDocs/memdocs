@@ -5,6 +5,7 @@ metadata:
   ms.date: 12/01/2021
   ms.subservice: core-infra
   ms.topic: faq
+  ms.service: configuration-manager
 
 title: Frequently asked questions about diagnostics and usage data
 summary: |
@@ -52,7 +53,7 @@ sections:
       - question: |
           Can the data be used to form a network map?
         answer: |
-          No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](levels-overview.md#version-specific-details), and find more detail for the version you're using.
+          No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Diagnostic and usage data for supported versions](levels-of-diagnostic-usage-data-collection.md).
 
           The data does include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy.
 

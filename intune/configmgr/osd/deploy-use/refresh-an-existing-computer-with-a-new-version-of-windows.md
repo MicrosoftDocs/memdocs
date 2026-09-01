@@ -5,6 +5,7 @@ ms.date: 08/27/2019
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Refresh an existing computer with a new version of Windows

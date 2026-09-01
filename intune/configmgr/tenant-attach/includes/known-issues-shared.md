@@ -3,6 +3,7 @@ ms.subservice: core-infra
 ms.topic: include
 ms.date: 08/14/2020
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 <!--Don't apply H2 in this include file since they are context driven by article-->
 

@@ -5,6 +5,7 @@ ms.date: 12/14/2023
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create stand-alone media

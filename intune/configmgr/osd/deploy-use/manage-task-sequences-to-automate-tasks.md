@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: osd
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Manage task sequences

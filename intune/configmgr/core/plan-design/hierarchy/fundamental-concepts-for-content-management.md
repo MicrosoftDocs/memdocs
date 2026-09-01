@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Fundamental concepts for content management in Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 08/27/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # CMPivot for real-time data in Configuration Manager

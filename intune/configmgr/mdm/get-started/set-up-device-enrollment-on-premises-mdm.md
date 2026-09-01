@@ -5,6 +5,7 @@ ms.date: 01/09/2020
 ms.subservice: mdm
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Set up device enrollment for on-premises MDM in Configuration Manager

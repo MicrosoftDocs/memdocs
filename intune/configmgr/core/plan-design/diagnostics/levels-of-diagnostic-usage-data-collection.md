@@ -1,26 +1,31 @@
 ---
-title: Diagnostic and usage data for 2503
-description: Learn about the specific data that Configuration Manager collects at each level in version 2503.
-ms.date: 03/31/2025
+title: Diagnostic and usage data for supported current branch versions
+description: Learn about the data that supported current branch versions of Configuration Manager collect at each diagnostic usage level.
+ms.date: 08/18/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
-# Diagnostic and usage data for version 2503
+# Diagnostic and usage data for supported current branch versions
 
 *Applies to: Configuration Manager (current branch)*
 
-The following sections provide additional detail about data collected at each level. For more information on the levels and how to change them, see [Levels of diagnostic usage data](levels-overview.md).
+The following sections provide details about the data collected at each level for supported current branch versions of Configuration Manager. For a list of supported current branch versions, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).
 
-Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
+For more information on the levels and how to change them, see [Levels of diagnostic usage data](levels-overview.md).
 
 > [!IMPORTANT]
 > Configuration Manager doesn't collect IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
 
+## Version-specific notes
+
+The diagnostic and usage data described in this article is the same for all supported current branch versions. If a future release has minor differences, they're noted in this section.
+
 ## Level 1 - Basic
 
-For Configuration Manager version 2503, this level includes the following data:
+For supported current branch versions of Configuration Manager, this level includes the following data:
 
 ### Application management (Level 1)
 
@@ -192,7 +197,7 @@ For Configuration Manager version 2503, this level includes the following data:
 
 ## Level 2 - Enhanced
 
-For Configuration Manager version 2503, this level includes the following data:
+For supported current branch versions of Configuration Manager, this level includes the following data:
 
 ### Application management (Level 2)
 
@@ -684,7 +689,7 @@ For Configuration Manager version 2503, this level includes the following data:
 
 ## Level 3 - Full
 
-For Configuration Manager version 2503, this level includes the following data:
+For supported current branch versions of Configuration Manager, this level includes the following data:
 
 - Automatic deployment rule evaluation schedule information
 
@@ -735,4 +740,3 @@ For Configuration Manager version 2503, this level includes the following data:
 - Count of clients pushed with option to not allow fallback to NTLM
 
 - List of Configuration Manager console extensions
-

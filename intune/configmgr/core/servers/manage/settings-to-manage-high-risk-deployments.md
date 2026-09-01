@@ -5,6 +5,7 @@ ms.date: 03/10/2022
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Settings to manage high-risk deployments for Configuration Manager

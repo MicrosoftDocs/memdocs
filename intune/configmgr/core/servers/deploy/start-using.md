@@ -7,6 +7,7 @@ description: Links to articles to install Configuration Manager site servers and
 ms.collection:
     - tier3
     - essentials-get-started
+ms.service: configuration-manager
 ---
 
 # Deploy servers and roles

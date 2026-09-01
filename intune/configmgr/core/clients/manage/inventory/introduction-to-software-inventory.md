@@ -5,6 +5,7 @@ ms.date: 04/29/2019
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Introduction to software inventory in Configuration Manager
 

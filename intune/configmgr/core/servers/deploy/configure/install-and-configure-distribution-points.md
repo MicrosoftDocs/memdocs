@@ -5,6 +5,7 @@ ms.date: 07/17/2025
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Install and configure distribution points in Configuration Manager

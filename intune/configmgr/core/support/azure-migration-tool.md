@@ -5,6 +5,7 @@ ms.date: 01/27/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Extend and migrate an on-premises site to Microsoft Azure

@@ -1,7 +1,7 @@
 ---
 title: Assignment Filter Performance Tips for Intune
 description: Optimize Microsoft Intune performance with assignment filters. Learn to use virtual groups, reuse groups, and apply filters effectively. Improve policy deployment speed with incremental group changes, and use assignment filters to include and exclude.
-ms.date: 05/19/2026
+ms.date: 06/30/2026
 ms.topic: article
 ms.reviewer: mattcall
 ---
@@ -144,6 +144,19 @@ Consider migrating dynamic device groups to assignment filters when:
 > [!NOTE]
 > Dynamic groups remain necessary for Autopilot profile targeting, cross-workload scenarios (Conditional Access, licensing), and user-based grouping. For guidance on dynamic groups, go to [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-rule-more-efficient).
 
+### Avoid `memberOf` in dynamic group rules
+
+| DO | DON'T |
+| --- | --- |
+| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Use direct property comparisons (`-eq`, `-startsWith`, `-in`) in dynamic group rules. | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't use the `memberOf` operator in dynamic group rules for Intune targeting. |
+
+The `memberOf` operator triggers transitive group membership lookups, which adds significant processing complexity. In large environments, `memberOf`-based rules can cause long evaluation times and produce unexpected membership results due to the recursive nature of the lookup.
+
+If you need to target devices based on their membership in another group, evaluate whether the scenario can be redesigned using a direct device property or an assignment filter. For example, instead of `device.memberOf -any (group.objectId -in ['<groupId>'])`, consider whether the devices share a common attribute (like enrollment profile name, device category, or manufacturer) that can be used in a simpler rule or filter.
+
+> [!NOTE]
+> For more information on optimizing rules for dynamic groups, see [Optimize rule efficiency](/entra/identity/users/manage-dynamic-group#optimize-rule-efficiency).
+
 ## Summary
 
 When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups, and apply assignment filters to help refine the targeting scope. Keep the best practices in mind:
@@ -152,9 +165,14 @@ When creating and managing assignments in Intune, incorporate some of these reco
 - To optimize your targeting, reuse groups as much as possible.
 - Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change.
 - Intune doesn't support mixed group exclusions. So, use assignment filters to dynamically include and exclude devices in addition to group or virtual group assignments.
+- Use assignment filters instead of dynamic device groups when the group is only consumed by Intune.
+- Avoid `memberOf` in dynamic group rules. Use direct property comparisons instead.
+
+For guidance on choosing between targeting methods (virtual groups, static groups, dynamic groups, assignment filters, and enrollment time grouping), go to [Choose the right targeting method in Microsoft Intune](../choose-targeting-method.md).
 
 ## Related articles
 
+- [Choose the right targeting method in Microsoft Intune](../choose-targeting-method.md)
 - [Use filters when assigning your apps, policies, and profiles](overview.md)
 - [Supported device properties when creating filters](ref-device-properties.md)
 - [Supported workloads when creating filters](ref-supported-workloads.md)

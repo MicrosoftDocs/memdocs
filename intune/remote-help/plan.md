@@ -1,9 +1,12 @@
 ---
 title: Plan for Remote Help with Microsoft Intune
 description: Learn about the requirements and capabilities of Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
-ms.date: 06/24/2026
+ms.date: 08/13/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 ms.reviewer: karawang
+#customer intent: As an IT administrator, I want to understand Remote Help requirements, permissions, and limitations so that I can plan a secure deployment.
 ---
 
 # Planning for Remote Help with Microsoft Intune
@@ -34,10 +37,12 @@ Follow this checklist to streamline your planning process.
 Use these considerations to prepare your organization for Remote Help.    
 
 - Enforce least privilege: Only grant the minimum Remote Help permissions needed for each support role. Use custom Intune roles if necessary to limit who can take full control or perform unattended sessions. For example, level-1 support might get view-only rights, while tier-2 gets full control rights. This principle helps protect user privacy and device integrity.
+
+- Scope unattended control narrowly: Unattended control allows a helper to troubleshoot to a device without an end user present. Create a dedicated custom Intune role that includes the Windows unattended control remote sign-in and Android unattended control permissions, and assign it only to authorized support personnel, such as Tier 3 helpdesk staff or senior administrators. Scope the role to only the device groups that require unattended support.
+
+- Use Conditional Access for helpers: Since helpers have elevated access to user devices, add an extra layer of security. Requiring MFA or compliant device status for helper accounts through Conditional Access is highly recommended. These measures help prevent a compromised helper account from being used to access devices. Microsoft Entra Conditional Access policies for Remote Help are supported only on Windows and macOS.
   
-- Use Conditional Access for helpers: Since helpers have elevated access into user devices, add an extra layer of security. Requiring MFA or compliant device status for helper accounts via Conditional Access is highly recommended. These measures ensure that a compromised helper account can't easily be used maliciously to access devices. Entra ID Conditional Access policies for Remote Help are only supported on Windows and macOS.
-  
-- Enable unenrolled device support only if needed: Allowing Remote Help on unenrolled devices (Entra registered only) is convenient for supporting personal devices, but it comes with reduced oversight (no device compliance info or limited audit data). Enable that feature thoughtfully and consider limiting which support staff can help unenrolled devices (perhaps via separate roles).
+- Enable unenrolled device support only if needed: Allowing Remote Help on unenrolled devices (Microsoft Entra registered only) is convenient for supporting personal devices, but it comes with reduced oversight, such as no device compliance information or limited audit data. Enable this feature thoughtfully, and consider limiting which support staff can help unenrolled devices by using separate roles.
   
 - Network and firewall: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues. For more information, see [Network endpoints for Remote Help](../fundamentals/endpoints.md#remote-help).
   
@@ -48,11 +53,11 @@ Use these considerations to prepare your organization for Remote Help.
   > [!NOTE]
   > This can affect outsourced helpdesk scenarios where helpdesk admins are working across tenants. Consider a scenario where your user's (sharers) device belongs to tenant A, but the helper's device belongs to tenant B (in the case where they're using a device issued by their outsourcing organization). As a workaround, consider supplying devices joined to your tenant A to the helpdesk, or consider providing them with access to Windows 365 or AVD devices joined to tenant A.
   
-- Combine with Endpoint Analytics: Use the data from Remote Help sessions to identify common issues. For example, if many sessions show compliance warnings, perhaps improve your device compliance policies. Remote Help's audit logs combined with Intune's Endpoint Analytics might give insights into support trends (like frequently problematic apps or policies).
+- Combine with Endpoint Analytics: Use data from Remote Help sessions to identify common issues. For example, if many sessions show compliance warnings, consider improving your device compliance policies. Remote Help audit logs combined with Intune Endpoint Analytics might provide insights into support trends, such as frequently problematic apps or policies.
   
-- Keep the Remote Help apps up to date: New versions of Windows and Mac bring improvements and required fixes. Microsoft might enforce upgrades for older versions. Use autoupdate on both platforms (Windows Update, Mac via Microsoft AutoUpdate) or regularly push the latest package via Intune after testing. For Android, updates come through the Play Store automatically if you approved the app – monitor that devices are getting the latest version during your regular maintenance windows.
+- Keep the Remote Help apps up to date: New versions of Windows and macOS bring improvements and required fixes. Microsoft might enforce upgrades for older versions. Use automatic updates on both platforms, or regularly deploy the latest package through Intune after testing. For Android, updates are available through Google Play. Monitor devices during regular maintenance windows to ensure that they receive the latest version.
   
-- Plan for privacy and compliance: Remote Help can raise privacy questions. Assure stakeholders that Remote Help requires user consent or in the case of Android unattended Remote Help, clearly indicates a remote session is active. All sessions are consensual and visibly indicated on the user's screen. No session recordings are stored in the service. These points can be included in your internal IT policies or user guides to address concerns. Unattended access on Android should be used sparingly.
+- Plan for privacy and compliance: Remote Help may raise privacy concerns. To help address these concerns, communicate that Remote Help requires user consent for attended sessions. For unattended access on Windows and Android devices, users can't observe the actions performed by support personnel but they're notified when an unattended session is active. All Remote Help sessions are clearly indicated to users, and no session recordings are stored by the service. Consider documenting these behaviors in your organization's IT policies and user guidance. Because unattended access allows support without an active user present, use it only for appropriate administrative and support scenarios.
   
 - Rollout in phases: If possible, deploy Remote Help in a pilot phase. Start with IT or a small department to work out any issues. Gather feedback from both helpers and users. Once you are confident, expand to the whole organization. A phased approach can prevent overwhelming the helpdesk with unexpected technical issues.  
 
@@ -62,23 +67,28 @@ Remote Help clients support different modes based on the combination of the help
 
 These are the different modes: 
 
-- **View only**: Request view of the remote screen. To minimize effect on end user privacy, this option is recommended unless full control is necessary.
+- **Attended**: Support session in which an end user participates and grants access to the helper. Attended sessions support view-only access, full control, and optional UAC elevation.
+
+  **View only**: Request view of the remote screen. To minimize effect on end user privacy, this option is recommended unless full control is necessary.
   
-- **Request full control**: Request full control of the remote device.
+  **Request full control**: Request full control of the remote device.
   
-- **Elevation**: Allows helpers to enter User Account Control (UAC) credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
+  **Elevation**: Allows helpers to enter User Account Control (UAC) credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
   
-- **Unattended**: Full control of the device without the presence of an end user.  
+- **Unattended**: A support session that allows authorized helpers to access and control an Intune-managed device without an active participant in the session. This capability is supported on Windows and Android devices.
 
 This table shows the mode support by helper app and sharer app.  
 
 | |Helping from:</br>Windows native|Helping from:</br>Windows web|Helping from:</br>macOS web|
 |---|---|---|---|
-|**Sharing from:</br>Windows native**|✅ View only</br>✅ Full control</br>✅ Elevation|Unsupported|Unsupported|
+|**Sharing from:</br>Windows native**|✅ View only</br>✅ Full control</br>✅ Elevation|✅ Unattended|Unsupported|
 |**Sharing from:</br>macOS native**|Unsupported|✅ View only</br>✅ Full control|✅ View only</br>✅ Full control|
 |**Sharing from:</br>Android native**|Unsupported|✅ View only</br>✅ Full control</br>✅ Unattended|✅ View only</br>✅ Full control</br>✅ Unattended|
 |**Sharing from:</br>macOS webapp**|Unsupported|✅ View only|✅ View only</br>|
 |**Sharing from:</br>Windows webapp**|Unsupported|✅ View only|✅ View only</br>|
+
+> [!NOTE]
+> For Windows devices receiving support, attended and unattended sessions are provided through separate Remote Help applications. View only, full control, and elevation apply to the attended experience, while unattended control applies to the unattended experience.
 
 For information about deploying the Remote Help apps, see [Deploy Remote Help](deploy.md).
 
@@ -94,16 +104,17 @@ To use Remote Help, helpers must have the appropriate role based access control 
 
 |Permission|Description|
 |---|---|
-|Remote Help - View screen|Allows the helper to view the sharer's screen without taking control.|
-|Remote Help - Take full control|Allows the helper to take full control of the sharer's device.|
-|Remote Help - Elevation|Allows the helper to interact with the user account control prompts on Windows.|
-|Remote Help - Unattended| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a dedicated device.|
+|Remote Help app - View screen|Allows the helper to view the sharer's screen without taking control.|
+|Remote Help app - Take full control|Allows the helper to take full control of the sharer's device.|
+|Remote Help app - Elevation|Allows the helper to interact with the user account control prompts on Windows.|
+|Remote Help app - Android unattended control| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a dedicated device. Assign this permission explicitly and scope it to the specific devices that can receive unattended support.|
+|Remote Help app - Windows unattended control remote sign-in| Allows the helper to start an unattended remote sign-in session to a targeted, physical, corporate-owned Windows device without requiring the sharer to accept the connection each time. Assign this permission explicitly and scope it to the specific devices that can receive unattended support.|
 |Remote Tasks - Offer remote assistance| Allows the helper to offer remote assistance to users.|
 |Remote Assistance Connector - Read|Required to allow the user to see if Remote Help is configured for the tenant when starting a session.|
 
 The following Intune built-in roles include Remote Help permissions:
 
-- Help Desk Operator (View screen, take full control, elevation, unattended, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
+- Help Desk Operator (View screen, take full control, elevation, Android unattended control, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
 - School Administrator (View screen, take full control, elevation, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
 
 > [!NOTE]
@@ -143,19 +154,14 @@ Each platform has specific prerequisites and capabilities.
 
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
+For attended control, Remote Help supports:
 - Windows x86, x64, and ARM64
 - Windows 365
 - Azure Virtual Desktop (desktop and RemoteApp sessions)  
 
-There are optional Windows updates for higher notification reliability:
+For unattended control, additional requirements apply. The target device must be a physical, Intune-managed, corporate-owned Windows device running an x64-based operating system and be Microsoft Entra joined or Microsoft Entra hybrid joined. Virtual devices, including Windows 365 and Azure Virtual Desktop, as well as unenrolled and personally owned (BYOD) devices, aren't supported for unattended control. Devices that don't meet these requirements can still receive attended support.
 
-- Windows 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
-- Windows 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
-
- > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
-The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../device-management/tools/management-extension-windows.md).  
+To receive Remote Help notifications and unattended support requests, ensure that the target device has the Intune Management Extension (IME) installed. We also recommend keeping Windows and the Intune Management Extension up to date to ensure the most reliable experience. For more information, see [Intune management extension](../device-management/tools/management-extension-windows.md).
 
 We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [Provide help in Azure Virtual Desktop desktop and RemoteApp sessions](start-session.md#provide-help-in-azure-virtual-desktop-desktop-and-remoteapp-sessions). 
 
@@ -220,17 +226,29 @@ Both the helper and sharer must be able to reach specific endpoints over port 44
 
 Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remotehelp.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
-## Requirements if Remote Help is restricted to enrolled devices  
-
-If your organization restricts Remote Help to enrolled devices only, there are extra requirements.  
+## Requirements and prerequisites
 
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
-The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
+#### Attended control
+
+If your organization restricts Remote Help to enrolled devices only, the sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
+
+#### Unattended control
+
+Remote Help for unattended control is supported only on enrolled devices. The following requirements also apply to the target device:
+
+- The Azure Virtual Desktop agent and Azure Virtual Desktop agent bootloader must be installed. Install the agent first, and then install the bootloader. No further configuration is required after installation. You can deploy both as Win32 apps. For more information, see [Deploy Remote Help](deploy.md).
+- The Intune Management Extension must be installed. It's required to orchestrate the unattended session.
+- Remote Desktop must be enabled on the device. You can enable this setting through an Intune settings catalog configuration profile.
+- The device must be powered on and connected to the internet. Devices that are asleep, hibernating, or shut down can't receive unattended support.
+- The helper must be assigned the **Remote Help app - Windows unattended control remote sign-in** permission scoped to the target devices.
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
-1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
+If your organization restricts Remote Help to enrolled devices, the following requirements ensure Remote Help can authenticate the user and recognize the device as enrolled:
+
+1. Configure the Microsoft Enterprise SSO plug-in. For more information, see [Use Enterprise SSO Plug-in on macOS](../device-configuration/templates/configure-enterprise-sso-plugin-macos.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. Open and sign in to Company Portal. The user must open and sign in to Company Portal for Remote Help to recognize the device is enrolled.
 
 > [!NOTE]
@@ -238,7 +256,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 ### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
-Remote Help doesn't support unenrolled devices on Android.
+Remote Help only supports enrolled Android devices.
 
 ### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 

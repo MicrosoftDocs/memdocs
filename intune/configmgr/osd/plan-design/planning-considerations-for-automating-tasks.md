@@ -5,6 +5,7 @@ ms.date: 03/10/2022
 ms.subservice: osd
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Plan for automating tasks in Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Export and import task sequences

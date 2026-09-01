@@ -7,6 +7,7 @@ ms.topic: article
 ms.collection: tier3
 ms.topicc: troubleshooting-general
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # Troubleshooting dashboard

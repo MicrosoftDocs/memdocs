@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: reference
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Application installation common error codes reference

@@ -5,6 +5,7 @@ ms.date: 04/27/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Collection Evaluation Viewer

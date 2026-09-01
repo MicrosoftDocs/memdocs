@@ -5,6 +5,7 @@ ms.date: 04/11/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Monitor database replication

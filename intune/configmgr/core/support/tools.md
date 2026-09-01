@@ -7,6 +7,7 @@ ms.topic: overview
 ms.collection:
     - tier3
     - essentials-manage
+ms.service: configuration-manager
 ---
 
 # Configuration Manager Tools

@@ -5,6 +5,7 @@ ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager

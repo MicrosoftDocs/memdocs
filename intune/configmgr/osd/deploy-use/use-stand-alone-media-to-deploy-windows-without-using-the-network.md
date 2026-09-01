@@ -5,6 +5,7 @@ ms.date: 08/11/2020
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use standalone media to deploy Windows without using the network

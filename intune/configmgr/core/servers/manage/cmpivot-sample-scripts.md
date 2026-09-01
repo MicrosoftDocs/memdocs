@@ -5,6 +5,7 @@ ms.date: 07/12/2021
 ms.subservice: core-infra
 ms.topic: sample
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # CMPivot sample scripts

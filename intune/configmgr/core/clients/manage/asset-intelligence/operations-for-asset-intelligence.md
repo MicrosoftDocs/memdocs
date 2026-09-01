@@ -5,6 +5,7 @@ ms.date: 08/30/2017
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # How to use Asset Intelligence in Configuration Manager
 

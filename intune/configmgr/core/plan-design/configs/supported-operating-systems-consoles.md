@@ -5,6 +5,7 @@ ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Supported OS versions for Configuration Manager consoles

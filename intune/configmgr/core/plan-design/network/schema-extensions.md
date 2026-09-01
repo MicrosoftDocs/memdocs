@@ -5,6 +5,7 @@ ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About schema extensions for Configuration Manager

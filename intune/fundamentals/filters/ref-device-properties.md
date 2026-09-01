@@ -1,7 +1,7 @@
 ---
 title: Assignment filter properties and operators reference
 description: Reference guide for device and app properties, operators, and rule syntax when creating assignment filters in Microsoft Intune. Includes examples and supported values.
-ms.date: 02/24/2026
+ms.date: 08/21/2026
 ms.topic: reference
 ms.reviewer: mattcall
 ---
@@ -229,13 +229,10 @@ You can use the following device properties in your managed device filter rules:
   - macOS
   - Windows
 
-  > [!NOTE]
-  > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../public-preview.md).
-
 - **`osVersion` (OS Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   > [!TIP]
-  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new assignment filters using this property. Existing assignment filters that use `osVersion` continue to work.
+  > The `osVersion` property is deprecated. Use the `operatingSystemVersion` property instead. You can't create new assignment filters that use `osVersion`. Existing assignment filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -416,13 +413,10 @@ You can use the following app properties in your managed app filter rules:
   - iOS/iPadOS
   - Windows
 
-  > [!NOTE]
-  > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../public-preview.md).
-
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   > [!TIP]
-  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new assignment filters using this property. Existing assignment filters that use `osVersion` continue to work.
+  > The `osVersion` property is deprecated. Use the `operatingSystemVersion` property instead. You can't create new assignment filters that use `osVersion`. Existing assignment filters that use `osVersion` continue to work.
 
   Examples:
 

@@ -5,6 +5,7 @@ ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # What's changed from System Center 2012 Configuration Manager

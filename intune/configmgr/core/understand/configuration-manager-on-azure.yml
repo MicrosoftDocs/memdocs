@@ -5,6 +5,7 @@ metadata:
   ms.date: 07/23/2021
   ms.subservice: core-infra
   ms.topic: faq
+  ms.service: configuration-manager
 title: Configuration Manager on Azure FAQ
 summary: |
   *Applies to: Configuration Manager (current branch)*

@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 09/27/2021
+ms.service: configuration-manager
 ---
 
 ### Reports on SQL Server Reporting Services won't display

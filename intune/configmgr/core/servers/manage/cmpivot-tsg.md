@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
 ms.topicc: troubleshooting-general
+ms.service: configuration-manager
 ---
 
 # Troubleshoot CMPivot

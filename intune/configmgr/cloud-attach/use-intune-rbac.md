@@ -5,6 +5,7 @@ ms.date: 08/24/2022
 ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Intune role-based access control for tenant-attached clients

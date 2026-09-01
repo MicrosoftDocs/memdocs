@@ -5,6 +5,7 @@ ms.date: 07/31/2025
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Support for Windows 11 in Configuration Manager
