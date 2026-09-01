@@ -1,8 +1,11 @@
 ---
 title: Device Query for Multiple Devices
 description: Use device query for multiple devices in Microsoft Intune to run KQL queries, analyze inventory trends, and start querying your managed fleet now.
-ms.date: 03/24/2026
+ms.date: 09/01/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1026
+#customer intent: As an IT administrator, I want to query inventory data across multiple managed devices so that I can identify fleet-wide trends and take informed action.
 ---
 
 # Device query for multiple devices
@@ -53,11 +56,9 @@ Additional prerequisites for device query for multiple devices:
 
 :::column-end:::
 :::column span="3":::
-> To use device query for multiple devices, use an account with at least one of the following roles:
+> To use device query for multiple devices, use an account with at least one of these roles:
 > - [Help Desk Operator]
-> - [Custom role] that includes:
->   - The permission **Managed Devices/Query**
->   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+> - [Custom role] with permissions to view and access managed devices in Intune (for example, Organization/Read and Managed devices/Read)
 
 :::column-end:::
 :::row-end:::
