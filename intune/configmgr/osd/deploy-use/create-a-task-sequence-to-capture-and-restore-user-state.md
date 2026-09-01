@@ -2,10 +2,10 @@
 title: Capture and restore user state
 description: Use Configuration Manager task sequences to capture and restore the user state data in OS deployment scenarios.
 ms.date: 08/17/2018
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Create a task sequence to capture and restore user state in Configuration Manager

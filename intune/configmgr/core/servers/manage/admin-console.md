@@ -2,11 +2,11 @@
 title: Configuration Manager console
 description: Learn about navigating through the Configuration Manager console.
 ms.date: 12/04/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to use the Configuration Manager console

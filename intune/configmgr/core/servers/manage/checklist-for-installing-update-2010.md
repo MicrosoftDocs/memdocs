@@ -2,11 +2,11 @@
 title: Checklist for 2010
 description: Learn about actions to take before updating to Configuration Manager version 2010.
 ms.date: 12/11/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: checklist
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 2010 for Configuration Manager

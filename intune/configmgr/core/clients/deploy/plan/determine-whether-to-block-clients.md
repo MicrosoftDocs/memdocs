@@ -2,10 +2,10 @@
 title: Blocking clients
 description: Block client access for system security by using Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Determine whether to block clients in Configuration Manager
 

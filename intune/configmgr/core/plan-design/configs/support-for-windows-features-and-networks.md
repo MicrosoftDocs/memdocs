@@ -2,10 +2,10 @@
 title: Support for Windows features
 description: Learn which Windows and networking features Configuration Manager supports.
 ms.date: 07/15/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Support for Windows features and networks in Configuration Manager

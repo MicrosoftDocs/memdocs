@@ -2,10 +2,10 @@
 title: Support Center accessibility
 description: Learn about the accessibility features of Support Center in Configuration Manager.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Accessibility features in Support Center

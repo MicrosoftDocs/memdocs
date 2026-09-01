@@ -2,10 +2,10 @@
 title: On-premises MDM
 description: Learn about on-premises mobile device management (MDM) in Configuration Manager
 ms.date: 12/01/2021
-ms.subservice: mobile-device-management
+ms.subservice: mdm
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # On-premises MDM in Configuration Manager

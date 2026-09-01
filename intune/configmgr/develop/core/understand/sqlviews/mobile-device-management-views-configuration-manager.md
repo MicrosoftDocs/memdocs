@@ -7,7 +7,7 @@ ms.topic: reference
 
 
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Mobile device management views in Configuration Manager

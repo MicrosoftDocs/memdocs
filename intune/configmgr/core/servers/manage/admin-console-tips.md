@@ -2,11 +2,11 @@
 title: Console changes and tips
 description: Learn about changes to the Configuration Manager console and tips for using it.
 ms.date: 03/28/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configuration Manager console changes and tips

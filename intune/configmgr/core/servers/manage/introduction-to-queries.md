@@ -2,10 +2,10 @@
 title: Introduction to queries
 description: Create and run queries to locate objects in a Configuration Manager hierarchy that match your query criteria.
 ms.date: 05/08/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Introduction to queries in Configuration Manager
 

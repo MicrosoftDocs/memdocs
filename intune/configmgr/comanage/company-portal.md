@@ -6,7 +6,7 @@ ms.subservice: co-management
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Use the Company Portal app on co-managed devices

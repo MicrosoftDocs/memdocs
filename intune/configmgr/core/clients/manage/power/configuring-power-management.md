@@ -2,10 +2,10 @@
 title: Configure power management
 description: Set up power management in Configuration Manager.
 ms.date: 09/10/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configure power management in Configuration Manager

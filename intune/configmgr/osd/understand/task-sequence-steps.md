@@ -2,10 +2,10 @@
 title: Task sequence steps
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
 ms.date: 04/30/2024
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Task sequence steps

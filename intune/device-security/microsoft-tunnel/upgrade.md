@@ -1,9 +1,11 @@
 ---
 title: Upgrade the Microsoft Tunnel Gateway server software
 description: Understand how Microsoft Tunnel Gateway upgrades to new versions of the tunnel software for Microsoft Intune.
-ms.date: 06/11/2026
+ms.date: 08/27/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1025
 ai-usage: ai-assisted
+#customer intent: As an IT administrator, I want to understand and control Microsoft Tunnel server upgrades so that I can keep tunnel servers supported and minimize user disruption.
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
@@ -124,6 +126,20 @@ After an update releases, it rolls out to tenants over the following days. This 
 > [!IMPORTANT]
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
+
+### August 18, 2026
+
+Version Number: 20260818.1
+
+Image hash values:
+
+- **agentImageDigest**: sha256:912d945c1ed1a6ca5ad501daaa4ddb04cc07286c0c02a44d2625a2f2eb5321c2
+- **serverImageDigest**: sha256:19a40bb9965bcc7978a160ced8d54cab4bc6ba59cd94373ed24dd817be6a2297
+
+Changes in this release:
+
+- Minor bug fixes
+- Package and security updates
 
 ### July 27, 2026
 

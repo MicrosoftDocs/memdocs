@@ -2,13 +2,13 @@
 title: What is Configuration Manager?
 description: Learn the basics of Microsoft Configuration Manager.
 ms.date: 06/19/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.custom: intro-overview
 ms.topic: overview
 ms.collection:
     - tier3
     - essentials-overview
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # What is Configuration Manager?

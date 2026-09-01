@@ -2,10 +2,10 @@
 title: Create bootable media
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
 ms.date: 07/17/2025
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Create bootable media

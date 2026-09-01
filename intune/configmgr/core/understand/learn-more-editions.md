@@ -2,10 +2,10 @@
 title: Licensing and branches
 description: Learn about the licensing requirements for the installation options available with Configuration Manager
 ms.date: 06/04/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Licensing and branches for Configuration Manager

@@ -387,6 +387,7 @@ When using co-managed devices, you must switch the **Device configuration** work
   - [Microsoft Defender for Endpoint baseline](./ref-defender-settings.md)
   - [Microsoft 365 Apps for Enterprise (Office baseline)](./ref-v2-office-settings.md)
   - [Microsoft Edge (Version 112 and later)](./ref-v2-edge-settings.md)
+  - [Windows 365 for Agents security baseline](./ref-windows-365-agents-settings.md)
   - [Windows 365 Security Baseline](./ref-windows-365-settings.md)
 
 <!--links-->
