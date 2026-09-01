@@ -2,10 +2,10 @@
 title: Set up site server in passive mode
 description: A flowchart diagram for how the site server in passive mode is set up in Configuration Manager.
 ms.date: 07/30/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Flowchart - Set up a site server in passive mode

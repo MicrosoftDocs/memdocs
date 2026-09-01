@@ -2,11 +2,11 @@
 title: What's new in version 2309
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
 ms.date: 11/15/2023
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # What's new in version 2309 of Configuration Manager current branch

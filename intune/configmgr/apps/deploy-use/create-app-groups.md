@@ -2,10 +2,10 @@
 title: Create application groups
 description: Create a group of applications that you can send to a user or device collection as a single deployment in Configuration Manager.
 ms.date: 03/11/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Create application groups

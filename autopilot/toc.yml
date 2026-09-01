@@ -22,6 +22,19 @@ items:
   - name: Known issues
     href: device-preparation/known-issues.md
 
+  - name: Device association
+    items:
+    - name: Overview
+      href: device-preparation/device-association/overview.md
+    - name: Requirements
+      href: device-preparation/device-association/requirements.md
+    - name: Lifecycle management
+      href: device-preparation/device-association/lifecycle-management.md
+    - name: Remove association
+      href: device-preparation/device-association/remove-association.md
+    - name: FAQ
+      href: device-preparation/device-association/faq.md
+
   - name: Tutorial
     items:
 
@@ -42,8 +55,10 @@ items:
           href: device-preparation/tutorial/user-driven/entra-join-assign-apps-scripts.md
         - name: Step 6 - Create Windows Autopilot device preparation policy
           href: device-preparation/tutorial/user-driven/entra-join-autopilot-policy.md
-        - name: Step 7 - Add Windows corporate identifier to device
+        - name: Step 7, option 1 - Add Windows corporate identifier to device
           href: device-preparation/tutorial/user-driven/entra-join-corporate-identifier.md
+        - name: Step 7, option 2 - Associate devices
+          href: device-preparation/tutorial/user-driven/entra-join-device-association.md
 
 
       - name: Windows Autopilot device preparation automatic mode for Windows 365

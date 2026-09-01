@@ -2,10 +2,10 @@
 title: Installation scenarios
 description: Learn techniques for installing a new Configuration Manager hierarchy when you update or upgrade a site.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Scenarios to streamline your installation of Configuration Manager

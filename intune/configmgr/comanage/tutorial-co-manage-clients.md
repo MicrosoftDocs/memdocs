@@ -6,7 +6,7 @@ ms.subservice: co-management
 ms.topic: tutorial
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients

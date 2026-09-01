@@ -2,10 +2,10 @@
 title: Configuration Manager console notifications
 description: Learn about notifications from the Configuration Manager console.
 ms.date: 12/01/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configuration Manager console notifications

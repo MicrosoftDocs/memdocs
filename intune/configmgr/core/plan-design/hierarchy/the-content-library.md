@@ -2,10 +2,10 @@
 title: The content library
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # The content library in Configuration Manager

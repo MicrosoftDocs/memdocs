@@ -2,10 +2,10 @@
 title: Example PKI certificate deployment
 description: Follow a step-by-step example to learn how to create and deploy PKI certificates that Configuration Manager uses.
 ms.date: 02/14/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Step-by-step example deployment of the PKI certificates for Configuration Manager: Windows Server 2008 certification authority
