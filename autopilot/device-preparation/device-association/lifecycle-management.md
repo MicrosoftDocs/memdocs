@@ -1,7 +1,7 @@
 ---
 title: Device association lifecycle management
 description: Manage the Windows Autopilot device association lifecycle, including resetting devices, uploading updated device information, working with registered Windows Autopilot devices, stale records, and decommissioning.
-ms.date: 08/07/2026
+ms.date: 09/01/2026
 ms.topic: concept-article
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -14,10 +14,6 @@ This article describes how to manage common events throughout the device associa
 ## Resetting an associated device
 
 The tenant affinity created by device association is stored in the device's UEFI firmware, so it persists across a device reset, a Windows reinstall, and enrollment removal. Resetting the device alone doesn't remove the association.
-
-> [!NOTE]
->
-> After a device is reset and re-enrolled, its Microsoft Entra ID and Intune device records aren't reused—new records are created for the device. We recommend that you clean up the stale Microsoft Entra ID and Intune device records.
 
 To fully remove the association, clear the tenant affinity on the device itself by clearing the association information—for example, by running a PowerShell script to remove association. This requires physical access to the device. For instructions, see [Remove association from a device](remove-association.md).
 
