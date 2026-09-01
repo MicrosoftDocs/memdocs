@@ -104,11 +104,19 @@ When you configure the assignment of a script package, you can define how often 
 
 - **Daily** – Execute the remediation daily at a specified time.
 
-Execution behavior:
+#### Execution behavior:
 
 - Remediations run based on the device's local time, by default. To schedule by Coordinated Universal Time, select **Use UTC**.
 - If a scheduled run is missed, the remediation runs when the device is online, and as soon as possible.
 - For nonurgent or resource-heavy scripts, use less frequent schedules (such as every seven days) to reduce performance effects on the device.
+
+### Performance recommendations
+
+To reduce the effect of Remediations on device performance:
+
+- Assign only the script packages that each device requires. Every script runs in PowerShell and consumes CPU and battery resources.
+- Avoid resource-intensive scripts and frequent schedules. For nonurgent or resource-intensive scripts, use a less frequent schedule, such as every 7 days.
+- Configure detection scripts to return stable, actionable results. Avoid values that change with every run, such as timestamps.
 
 ## Create and deploy custom script packages
 
