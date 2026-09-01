@@ -256,7 +256,9 @@ If your organization restricts Remote Help to enrolled devices, the following re
 
 ### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
-Remote Help only supports enrolled Android devices.
+- Remote Help only supports enrolled Android devices.
+
+- Supported Zebra and Samsung devices in Android Dedicated Device (COSU) mode do not require a Sharer license because no user is signed in. Only the Helper requires a Remote Help license.
 
 ### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
