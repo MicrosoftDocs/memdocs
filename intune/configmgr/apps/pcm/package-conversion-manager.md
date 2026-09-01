@@ -2,10 +2,10 @@
 title: Package Conversion Manager
 description: Learn about Package Conversion Manager to convert packages to applications in Configuration Manager.
 ms.date: 11/30/2020
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Package Conversion Manager

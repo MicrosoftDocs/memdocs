@@ -2,10 +2,10 @@
 title: Prepare to deploy the client to Macs
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
 ms.date: 01/05/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Prepare to deploy client software to Macs

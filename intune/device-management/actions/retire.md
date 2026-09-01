@@ -1,7 +1,7 @@
 ---
 title: "Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
-ms.date: 10/27/2025
+ms.date: 08/06/2026
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
@@ -11,6 +11,9 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 The *retire* action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
 
 Unlike the **Wipe** action, which resets the device to factory settings, **Retire** keeps user content intact. The action is triggered the next time the device checks in with Intune. Until then, the device might still appear in the admin center. If you need to remove a device immediately, consider using the [delete device action](delete.md) instead.
+
+> [!IMPORTANT]
+> A tenant can submit up to 1,000 Retire actions per day. This tenant-wide limit is cumulative across individual device actions, bulk device actions, and Microsoft Graph API requests. To request a limit change, [contact Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md). For all device action limits, see [Daily tenant limits](index.md#daily-tenant-limits).
 
 ::: zone pivot="windows"
 

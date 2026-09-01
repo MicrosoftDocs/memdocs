@@ -115,6 +115,8 @@ For devices already enrolled in Intune, use the Android Management API device co
 
 9. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
+10. Monitor progress at **Personal Devices on Android Management API** report under Devices -> Monitor. Note that reporting will not appear under the policy itself -> "device assignment status" or the device view -> device configuration tab. 
+
 When you assign the policy, devices start moving to Android Management API. If you unassign or delete this policy, devices that already moved keep using Android Management API. Targeted devices that haven't received the policy won't be moved to Android Management API.
 
 ### What happens to devices during migration

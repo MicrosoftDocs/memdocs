@@ -234,11 +234,11 @@ Each set of logs that Intune collects and uploads is identified as a separate se
 - A *start* and *end* time of the log collection
 - When the upload was generated
 - The log sets *verbosity level*
-- An *Incident ID* that can be used to identify that specific log set
+- The log collection *status* (completed, failed, or in progress)
 
 :::image type="content" source="./media/monitor/send-server-logs-tab.png" alt-text="Screen capture that shows the Send verbose server logs interface.":::
 
-After capturing an issue while running verbose log collection, you can provide the *Incident id* of that log set to Microsoft to help with investigation.
+After you reproduce an issue during verbose log collection phase, Microsoft can use the collected logs to investigate it.
 
 ### About log collection
 

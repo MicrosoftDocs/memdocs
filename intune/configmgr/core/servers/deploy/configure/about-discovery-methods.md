@@ -2,10 +2,10 @@
 title: Discovery methods
 description: Learn about the available discovery methods to find devices on your network, from Active Directory, or Microsoft Entra ID.
 ms.date: 03/23/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # About discovery methods for Configuration Manager

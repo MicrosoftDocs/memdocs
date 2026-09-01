@@ -2,11 +2,11 @@
 title: How to view collection evaluation
 description: View collection evaluation queues and evaluation-related information.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # <a name="bkmk_colleval"></a> How to view collection evaluation

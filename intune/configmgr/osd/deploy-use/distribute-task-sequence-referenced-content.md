@@ -2,10 +2,10 @@
 title: Distribute referenced content
 description: Before clients run a task sequence that references content, distribute that content to distribution points.
 ms.date: 04/08/2022
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Distribute referenced content

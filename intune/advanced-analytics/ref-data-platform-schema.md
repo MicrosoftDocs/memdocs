@@ -21,6 +21,7 @@ For entities that include Android data, the following platforms are supported:
 - Android Enterprise corporate owned dedicated devices (COSU)
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned work profile (COPE)
+- Android Enterprise personally owned devices with a work profile (BYOD) using Android Management API (AM API)
 
 ## `AppleAutoSetupAdminAccounts`
 
@@ -107,6 +108,9 @@ For entities that include Android data, the following platforms are supported:
 | `SoftwareElementState` | String | State of the BIOS instance. | Android, iOS, iPadOS, macOS, Windows multi-device query |
 | `TargetOperatingSystem` | String | Target operating system of the owning software element. | Android, iOS, iPadOS, macOS, Windows multi-device query |
 
+> [!NOTE]
+> `BiosInfo` isn't supported for Android Enterprise personally owned devices with a work profile (BYOD).
+
 
 
 ## `Bluetooth`
@@ -182,7 +186,7 @@ For entities that include Android data, the following platforms are supported:
 
 > **Description**: Provides basic information about device storage.\
 > **Supported platforms**: Android, iOS, iPadOS, macOS\
-> **Supported for**: Device query for multiple devices.
+> **Supported for**: Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
@@ -323,6 +327,9 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 > [!NOTE]
 > Inventory only reports up to 20 network adapters per device.
 
+> [!NOTE]
+> On Android Enterprise personally owned devices with a work profile (BYOD), only `Identifier`, `Type`, and `IpAddressV4` are supported.
+
 ## `OsVersion`
 
 > **Description**: A single record containing the operating system name and version of the device.\
@@ -417,6 +424,9 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `PhoneNumber` | String | Phone Number associated with the SIM. |Android, iOS, iPadOS|
 | `SubscriberCarrierNetwork` | String | Name of the home carrier network. |Android, iOS, iPadOS|
 
+> [!NOTE]
+> `SimInfo` isn't supported for Android Enterprise personally owned devices with a work profile (BYOD).
+
 ## `SystemEnclosure`
 
 > **Description**: Displays information pertaining to the chassis and its security status.\
@@ -445,7 +455,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 ## `SystemInfo`
 
 > **Description**: System information of the device.\
-> **Supported platforms**: Windows\
+> **Supported platforms**: Android, Windows\
 > **Supported for**: single device query on-demand, Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -455,8 +465,9 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `ComputerName` | string (max 256 characters) | Friendly computer name (optional) |Windows single device query |
 | `PhysicalProcessorCount` | Long | Number of physical processors |Windows single device query |
 | `ProcessorArchitecture` | string(40 characters) | CPU type |Windows single device query |
-| `HardwareManufacturer` | string (max 256 characters) | Hardware vendor |Windows single device query |
-| `HardwareModel` | string (max 256 characters) | Hardware model |Windows single device query |
+| `HardwareManufacturer` | string (max 256 characters) | Hardware vendor |Android, Windows single device query |
+| `HardwareModel` | string (max 256 characters) | Hardware model |Android, Windows single device query |
+| `HardwareSerialNumber` | string (max 256 characters) | Hardware serial number |Android |
 
 
 

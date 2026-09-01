@@ -2,10 +2,10 @@
 title: Resource Explorer default inventory classes
 description: Shows the classes that appear in Resource Explorer.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Resource Explorer default inventory classes
 

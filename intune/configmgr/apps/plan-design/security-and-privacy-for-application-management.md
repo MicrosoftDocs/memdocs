@@ -2,10 +2,10 @@
 title: Security and privacy for apps
 description: Guidance and recommendations for security and privacy when managing applications in Configuration Manager.
 ms.date: 08/10/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Security and privacy for application management in Configuration Manager

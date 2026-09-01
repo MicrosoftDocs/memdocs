@@ -2,10 +2,10 @@
 title: Disable and delete app deployments
 description: If you want to stop the deployment of an application, you can either disable it temporarily or delete it entirely.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Disable and delete application deployments

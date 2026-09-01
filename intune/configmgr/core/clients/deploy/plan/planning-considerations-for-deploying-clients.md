@@ -2,10 +2,10 @@
 title: Client deployment planning
 description: Plan to deploy clients and prepare the infrastructure in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Planning considerations for deploying clients in Configuration Manager
 

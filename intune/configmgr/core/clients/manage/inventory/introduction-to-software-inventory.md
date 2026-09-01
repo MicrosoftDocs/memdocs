@@ -2,10 +2,10 @@
 title: Software inventory
 description: Get an introduction to software inventory in Configuration Manager.
 ms.date: 04/29/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Introduction to software inventory in Configuration Manager
 

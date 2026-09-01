@@ -2,11 +2,11 @@
 title: Test client upgrades
 description: Test client upgrades in a pre-production collection in Configuration Manager.
 ms.date: 04/12/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to test client upgrades in a pre-production collection

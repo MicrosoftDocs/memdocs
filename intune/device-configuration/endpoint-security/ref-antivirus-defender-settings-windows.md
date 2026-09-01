@@ -1,10 +1,12 @@
 ---
 title: Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune
 description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune.
-ms.date: 03/27/2025
+ms.date: 08/20/2026
 ms.topic: reference
 ms.reviewer: laarrizz
-
+ms.custom: msecd-doc-authoring-1015
+ai-usage: ai-assisted
+#customer intent: As an Intune administrator, I want to understand Microsoft Defender Antivirus policy settings so that I can configure the intended protection behavior on Windows devices.
 ---
 
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
@@ -253,20 +255,20 @@ Learn more
 - **Disable catch-up full scan**  
   CSP: [DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#disablecatchupfullscan)
 
-  Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+  Configure whether Defender runs a catch-up full scan after a device misses scheduled full scans. Because the setting name begins with *Disable*, **Yes** disables catch-up full scans, and **No** enables them.
 
-  - **Not configured** (*default*) - The setting is returned to client default, which is to disable catch-up scans for full scans.
-  - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
+  - **Not configured** (*default*) - The setting uses the client default, which disables catch-up full scans.
+  - **No** - The **Disable catch-up full scan** setting is disabled, so catch-up full scans are enabled. If a device misses two consecutive scheduled full scans, a catch-up scan starts the next time someone signs in. Catch-up scans require a configured scheduled scan. Device users can't change this setting.
+  - **Yes** - The **Disable catch-up full scan** setting is enabled, so catch-up full scans are disabled. Device users can't change this setting.
 
 - **Disable catchup quick scan**  
   CSP: [DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#disablecatchupquickscan)
 
-  Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
+  Configure whether Defender runs a catch-up quick scan after a device misses scheduled quick scans. Because the setting name begins with *Disable*, **Yes** disables catch-up quick scans, and **No** enables them.
 
-  - **Not configured** (*default*) - The setting is returned to client default, which is to disable catch-up scans for full scans.
-  - **No** - The setting is disabled. Device users can't change this setting.
-  - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
+  - **Not configured** (*default*) - The setting uses the client default, which enables catch-up quick scans.
+  - **No** - The **Disable catch-up quick scan** setting is disabled, so catch-up quick scans are enabled. If a device misses two consecutive scheduled quick scans, a catch-up scan starts the next time the device powers on or resumes from sleep or hibernation. Catch-up scans require a configured scheduled scan. Device users can't change this setting.
+  - **Yes** - The **Disable catch-up quick scan** setting is enabled, so catch-up quick scans are disabled. Device users can't change this setting.
 
 - **CPU usage limit per scan**  
   CSP: [AvgCPULoadFactor](/windows/client-management/mdm/policy-csp-defender#avgcpuloadfactor)

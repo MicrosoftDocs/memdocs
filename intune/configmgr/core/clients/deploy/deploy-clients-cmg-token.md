@@ -2,10 +2,10 @@
 title: Token-based authentication for CMG
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
 ms.date: 12/08/2025
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Token-based authentication for cloud management gateway

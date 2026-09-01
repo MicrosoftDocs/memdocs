@@ -2,10 +2,10 @@
 title: Configure Asset Intelligence
 description: Set up Asset Intelligence in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Configure Asset Intelligence in Configuration Manager
 
