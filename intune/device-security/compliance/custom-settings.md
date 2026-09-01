@@ -1,28 +1,20 @@
 ---
-title: Use custom compliance settings for Linux and Windows devices in Microsoft Intune
-description: Manage custom compliance settings for Linux and Windows devices by using JSON files and discovery scripts in Intune.
+title: Use custom compliance settings in Microsoft Intune
+description: Manage custom compliance settings on managed devices by using JSON files and discovery scripts in Microsoft Intune.
 ms.date: 05/15/2024
 ms.topic: concept-article
 ms.reviewer: ilwu
 ---
 
-# Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune
+# Custom compliance settings in Microsoft Intune
 
-To expand on Intune’s built-in device compliance options, use policies for custom compliance settings for managed Linux and Windows devices. Custom settings give you the flexibility to base compliance on the settings that are available on a device without waiting for Intune to add these settings to the built-in policy templates.
-
-This feature applies to:
-
-- Windows (excluding Windows Home)
-- Linux
-  - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
-  - RedHat Enterprise Linux 9
-  - RedHat Enterprise Linux 10
+To expand on Intune’s built-in device compliance options, you can use policies for custom compliance settings on managed devices. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings to the built-in policy templates.  
 
 Before you can add custom settings to a policy, you must prepare a JSON file and a discovery script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can discover multiple settings:
 
 - The JSON file defines the custom settings and the values that you consider to be compliant. You can also configure messages for users to tell them how to restore compliance for each setting. Add your JSON file when you create a compliance policy, just after you select a discovery script for that policy.
 
-- Discovery scripts are specific to the different platforms and are delivered to devices as part of the compliance policy. When a device evaluates its policy, the script detects (discovers) the settings from the JSON file, and then reports the results to Intune. Windows devices use a PowerShell script and Linux devices use a POSIX-compliant shell script.
+- Discovery scripts are specific to the different platforms and are delivered to devices as part of the compliance policy. When a device evaluates its policy, the script detects (discovers) the settings from the JSON file, and then reports the results to Intune. Windows devices use a PowerShell script. Linux and macOS devices use a POSIX-compliant shell script.
 
   You must upload the scripts to the Microsoft Intune admin center before you create a compliance policy. Select the script when you’re configuring a policy to support custom settings.
 
@@ -38,6 +30,7 @@ After you deploy custom compliance settings and devices report back, you can vie
 :::column span="3":::
 
 > - Windows (excluding Windows Home)
+> - macOS  
 > - Linux
 >   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
 >   - RedHat Enterprise Linux 9
@@ -50,25 +43,7 @@ After you deploy custom compliance settings and devices report back, you can vie
 :::column span="1":::
 [!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
-:::column-end:::
-:::column span="3":::
-
-> - Microsoft Entra joined devices, including Microsoft Entra hybrid joined devices.
->
->   Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/entra/identity/devices/hybrid-join-plan).  
->
-> - Microsoft Entra registered/Workplace joined (WPJ)
->
->   For information about devices registered in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are bring-your-own-devices (BYOD) that have a work or school account added via **Settings** > **Accounts** > **Access work or school**.  
->
->   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored.
-
-:::column-end:::
-:::row-end:::
-
-You also need to create a:  
-
-- **Discovery script** - A PowerShell script for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Intune admin center before you create a compliance policy and then select the script you want to use when creating a policy.
+- **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux or macOS that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Intune admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
   To create a custom compliance script, see [Custom compliance discovery scripts for Microsoft Intune](./create-custom-script.md).
 
@@ -96,7 +71,7 @@ When ready, use the normal procedure to [create a compliance policy](./create-po
 
 Use the following methods to view details about a device’s compliance status.
 
-- For both Linux and Windows devices, you can view per-setting device compliance details for custom compliance settings in the Microsoft Intune admin center.
+- For Linux, macOS, and Windows devices, you can view per-setting device compliance details for custom compliance settings in the Microsoft Intune admin center.
 
   In the admin center, go to **Reports** > **Device compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
 
@@ -143,7 +118,9 @@ It can take up to eight hours before a noncompliant status shows as compliant af
 
 - On Linux, a user can open the *Microsoft Intune app* and select **Refresh** on either the device details page or the compliance issues page to start a new check-in with Intune.
 
-### Why aren't more operators and operands supported?
+- On macOS, a user can open the Company Portal app, select **Devices**, select their device, and then select **Check Status**.
+
+### Why aren’t more operators and operands supported?
 
 Contact your account manager to request the addition of specific operators and operands. They can then be considered for a future update.
 

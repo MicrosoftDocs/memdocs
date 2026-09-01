@@ -5,6 +5,7 @@ ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Optional features in Configuration Manager

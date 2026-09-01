@@ -5,6 +5,7 @@ ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Site components for Configuration Manager

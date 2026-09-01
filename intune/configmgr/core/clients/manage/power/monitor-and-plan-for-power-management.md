@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # How to monitor and plan for power management in Configuration Manager
 

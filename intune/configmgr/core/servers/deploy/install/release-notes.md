@@ -5,6 +5,7 @@ ms.date: 04/24/2025
 ms.subservice: core-infra
 ms.topic: release-notes
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 

@@ -5,6 +5,7 @@ ms.date: 06/22/2026
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Microsoft Connected Cache with Configuration Manager

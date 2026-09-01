@@ -5,6 +5,7 @@ ms.date: 04/05/2021
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Deploy a task sequence

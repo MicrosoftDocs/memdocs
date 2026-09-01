@@ -5,6 +5,7 @@ ms.date: 02/22/2017
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Configure Asset Intelligence in Configuration Manager
 

@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 05/13/2021
+ms.service: configuration-manager
 ---
 
 ### Configuration Manager console settings aren't saved

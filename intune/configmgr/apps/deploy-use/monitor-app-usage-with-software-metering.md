@@ -5,6 +5,7 @@ ms.date: 09/20/2017
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Software metering in Configuration Manager

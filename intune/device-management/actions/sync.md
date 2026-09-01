@@ -1,8 +1,9 @@
 ---
 title: "Device Action: Sync"
 description: Learn how to use the device sync action in Intune to apply policy, app, and configuration updates to managed devices.
-ms.date: 10/27/2025
+ms.date: 08/06/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
@@ -49,18 +50,54 @@ For more information about the standard Intune policy check-in frequencies, see 
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
-## How to sync a device from the Intune admin center
+## Sync a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Sync**.
 1. To confirm, select **Yes**.
 
+::: zone pivot="windows"
+
+## Sync behavior on Windows
+
+After selecting **Sync**, Intune initiates an on-demand synchronization across multiple workloads to help ensure the device reflects the latest admin intent as quickly as possible. This process includes, but isn't limited to:
+
+- Configuration policy processing
+- App detection and deployment state updates
+- Script and remediation processing
+- Other device management signals required to align device state with current assignments
+
+You can track the progress of the sync action by selecting the **Device sync status** tab in the device overview pane.
+
+>[!NOTE]
+> The described sync behavior, including the **Device sync status** tab, applies only to Windows and iOS/iPadOS devices. To see the new device sync improvements, ensure that the 'Preview new device view' toggle is turned ON. This is at the top right of the Intune admin console screen.
+
+::: zone-end
+
+::: zone pivot="ios"
+
+## Sync behavior on iOS/iPadOS
+
+After selecting **Sync**, Intune initiates an on-demand synchronization across multiple workloads to help ensure the device reflects the latest admin intent as quickly as possible. This process includes, but isn't limited to:
+
+- Configuration policy processing
+- App detection and deployment state updates
+- Script and remediation processing
+- Other device management signals required to align device state with current assignments
+
+You can track the progress of the sync action by selecting the **Device sync status** tab in the device overview pane.
+
+>[!NOTE]
+> The described sync behavior, including the **Device sync status** tab, applies only to iOS/iPadOS and Windows devices. To see the new device sync improvements, ensure that the 'Preview new device view' toggle is turned ON. This is at the top right of the Intune admin console screen.
+
+::: zone-end
+
 ::: zone pivot="ios,android"
 
 ## Retryable error codes
 
-When you execute the **Sync** action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
+When you run the **Sync** action, apps that fail and raise a retryable error code remain available to the device. Apps that raise a nonretryable error code must wait seven days before they're available to the device.
 
 | Error code  | Suggested description | Retryable |
 |---|---|---|

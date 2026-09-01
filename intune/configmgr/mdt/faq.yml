@@ -6,6 +6,7 @@ metadata:
   ms.subservice: mdt
   ms.topic: faq
   ms.collection: openauth
+  ms.service: configuration-manager
 title: Microsoft Deployment Toolkit frequently asked questions (FAQ)
 summary: This article provides frequently asked questions (FAQ) about the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
 

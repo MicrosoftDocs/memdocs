@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 05/04/2021
+ms.service: configuration-manager
 ---
 
 <!--1357013-->

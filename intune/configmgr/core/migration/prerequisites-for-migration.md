@@ -5,6 +5,7 @@ ms.date: 05/7/2018
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Prerequisites for migration in Configuration Manager

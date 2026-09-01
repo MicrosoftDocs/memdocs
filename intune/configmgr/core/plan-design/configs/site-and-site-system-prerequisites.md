@@ -5,6 +5,7 @@ ms.date: 03/25/2024
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Site and site system prerequisites for Configuration Manager

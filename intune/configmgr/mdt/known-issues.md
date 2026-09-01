@@ -5,6 +5,7 @@ ms.date: 03/08/2022
 ms.subservice: mdt
 ms.topic: troubleshooting-known-issue
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Microsoft Deployment Toolkit known issues

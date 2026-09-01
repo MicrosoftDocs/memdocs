@@ -9,6 +9,7 @@ metadata:
     - highpri
     - essentials-navigation
    ms.custom: intro-overview
+   ms.service: configuration-manager
 
 highlightedContent:
   items:

@@ -5,6 +5,7 @@ ms.date: 09/20/2016
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Verifying the Application Management Extension
 ## Server

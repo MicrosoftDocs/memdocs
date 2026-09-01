@@ -5,6 +5,7 @@ ms.date: 10/08/2020
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to remotely administer a Windows client computer by using Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 01/10/2022
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Removed and deprecated items for Configuration Manager clients

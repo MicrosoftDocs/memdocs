@@ -5,6 +5,7 @@ ms.date: 03/21/2022
 ms.topic: get-started
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # <a name="bkmk_atp"></a> Get started: Create and deploy endpoint security policies from the admin center

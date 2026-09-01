@@ -6,6 +6,7 @@ ms.subservice: mdt
 ms.topic: quickstart
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
+ms.service: configuration-manager
 ---
 
 # Quick Start Guide for User-Driven Installation

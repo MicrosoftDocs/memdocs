@@ -5,6 +5,7 @@ ms.date: 01/14/2020
 ms.subservice: mdm
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create configuration items for Windows devices with on-premises MDM in Configuration Manager

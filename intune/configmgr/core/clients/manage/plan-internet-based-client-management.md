@@ -5,6 +5,7 @@ ms.date: 03/29/2022
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Plan for internet-based client management in Configuration Manager

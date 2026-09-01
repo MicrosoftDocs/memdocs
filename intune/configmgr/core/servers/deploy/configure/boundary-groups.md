@@ -5,6 +5,7 @@ ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About boundary groups in Configuration Manager

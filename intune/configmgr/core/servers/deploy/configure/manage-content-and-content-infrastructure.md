@@ -5,6 +5,7 @@ ms.date: 02/7/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Manage content and content infrastructure for Configuration Manager
 

@@ -5,6 +5,7 @@ ms.date: 07/17/2025
 ms.subservice: osd
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Task sequence variables

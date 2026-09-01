@@ -5,6 +5,7 @@ ms.date: 05/23/2022
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 2205

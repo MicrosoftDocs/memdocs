@@ -5,6 +5,7 @@ ms.date: 06/08/2026
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Proxy server support in Configuration Manager
@@ -65,32 +66,52 @@ This site system role connects to an Exchange Server. It uses a proxy server con
 
 ### Management point
 
-<!--Starting in version 2603-->Starting in version 2603, the management point uses Microsoft Identity Service Essentials (MISE) for Microsoft Entra token validation. In environments that support Microsoft Entra joined users and devices, the management point server requires internet access to connect to Microsoft Entra authentication endpoints.
+<!--Starting in version 2603-->Starting in version 2603, the management point uses Microsoft Identity Service Essentials (MISE) for Microsoft Entra token validation. In environments that support Microsoft Entra joined users and devices, the management point server requires internet access to connect to Microsoft Entra authentication endpoints. For the list of endpoints to allow, see [Management point internet access requirements](internet-endpoints.md#management-point).
+
+Microsoft Entra token validation runs in the **system (Local System) context** using the .NET Framework HTTP stack. As a result, if the management point reaches the internet through a proxy, the proxy must be available to the Local System account through its **WinINET (Windows Internet, or Internet Options) settings**.
 
 > [!IMPORTANT]
-> The proxy configured in the [site system properties](#configure-the-proxy-for-a-site-system-server) doesn't apply to MISE token validation. You must configure the proxy at the system level on the management point server.
+> In version 2603, the following proxy configurations are **not** used for MISE token validation:
+>
+> - The proxy configured in the [site system properties](#configure-the-proxy-for-a-site-system-server).
+> - A machine-wide WinHTTP proxy set with `netsh winhttp set proxy`.
+>
+> You must configure the proxy in the **Local System account's WinINET settings** on the management point server, as described in this section.
 
-To configure the proxy, run the following command at an elevated command prompt on the management point server:
+#### Configure the system-context WinINET proxy
 
-```cmd
-netsh winhttp set proxy <proxyservername>:<portnumber>
+Use one of the following methods to set the proxy for the Local System account on the management point server:
+
+- **Registry**: Set the following values under `HKEY_USERS\S-1-5-18\Software\Microsoft\Windows\CurrentVersion\Internet Settings`:
+
+    - `ProxyEnable` (DWORD) = `1`
+    - `ProxyServer` (String) = `<proxyservername>:<portnumber>`, for example `proxy.domain.example.com:80`
+    - `ProxyOverride` (String) = optional proxy bypass list, for example `<local>`
+
+- **Internet Options in the system context**: Open Internet Options as the Local System account and configure the LAN proxy. For example, use [PsExec](/sysinternals/downloads/psexec) to launch the browser as the system account:
+
+    ```cmd
+    PsExec.exe -i -s "C:\Program Files\Internet Explorer\iexplore.exe"
+    ```
+
+    Then go to **Internet Options** > **Connections** > **LAN settings** and configure the proxy server.
+
+After you change the proxy, restart the `SMS_EXECUTIVE` service on the management point for the new setting to take effect.
+
+#### Verify and troubleshoot
+
+If the management point can't reach the Microsoft Entra endpoints, the `CCM_STS_ManagedBase.log` on the management point logs a `MISE12034` error with an underlying `SocketException` or `HttpRequestException`. Microsoft Entra joined clients then fail to get a token and log a transient error such as `0x87d00231` in `ClientIDManagerStartup`.
+
+To confirm connectivity from the management point in the system context, run the following command as the Local System account (for example, using `PsExec.exe -i -s cmd`):
+
+```powershell
+Invoke-WebRequest "https://login.microsoftonline.com/<TenantID>/.well-known/openid-configuration" -UseBasicParsing
 ```
 
-Replace `<proxyservername>` with the fully qualified domain name of the proxy server. Replace `<portnumber>` with the port number for the proxy server. For example, `proxy.domain.example.com:80`.
+> [!NOTE]
+> This system-context proxy requirement is specific to version 2603. A future update is planned to let MISE token validation use the proxy configured in the site system properties.
 
-To verify the current proxy configuration:
-
-```cmd
-netsh winhttp show proxy
-```
-
-To remove the proxy configuration and configure direct access to the internet:
-
-```cmd
-netsh winhttp reset proxy
-```
-
-For more information about this requirement and troubleshooting, see [Management point requires internet access for Microsoft Entra token validation](../changes/whats-new-in-version-2603.md#management-point-requires-internet-access-for-microsoft-entra-token-validation).
+For more information about this requirement, see [Management point requires internet access for Microsoft Entra token validation](../changes/whats-new-in-version-2603.md#management-point-requires-internet-access-for-microsoft-entra-token-validation).
 
 ### Service connection point
 

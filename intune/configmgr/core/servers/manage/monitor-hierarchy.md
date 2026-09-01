@@ -5,6 +5,7 @@ ms.date: 06/06/2019
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Monitor the hierarchy

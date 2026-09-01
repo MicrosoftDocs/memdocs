@@ -101,7 +101,13 @@ On a Windows device with the IME installed, open **Company Portal**, select **Se
 Alternatively, open **Task Manager**, find the service **IntuneManagementExtension**, right-click, and select **Restart**. The `IntuneManagementExtension` service restarts immediately, initiating a check-in with Intune.
 
 > [!NOTE]
-> The **Sync** actions from either the **Settings** app or **Devices** in Microsoft Intune admin center initiate an MDM check-in but don't force an IME check-in.
+> The **Sync** actions from either the **Settings** app or **Devices** in Microsoft Intune admin center initiate an MDM check-in as well as an IME check-in. After selecting Sync, Intune initiates an on-demand synchronization across multiple workloads to help ensure the device reflects the latest admin intent as quickly as possible. This process includes, but isn't limited to:
+>- Configuration policy processing
+>- App detection and deployment state updates
+>- Script and remediation processing
+>- Other device management signals required to align device state with current assignments
+>  
+>You can track the progress of the sync action by selecting the **Device sync status** tab in the device overview pane.
 
 ### Intune management extension removal
 

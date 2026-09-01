@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: reference
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Levels of diagnostic usage data collection for version 1702 of Configuration Manager

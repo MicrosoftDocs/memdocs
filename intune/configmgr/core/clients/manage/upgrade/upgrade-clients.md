@@ -5,6 +5,7 @@ ms.date: 07/23/2021
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Upgrade clients in Configuration Manager

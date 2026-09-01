@@ -5,6 +5,7 @@ ms.date: 12/31/2019
 ms.subservice: mdm
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Device management with Exchange and Configuration Manager

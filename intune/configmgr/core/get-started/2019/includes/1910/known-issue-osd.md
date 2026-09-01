@@ -4,6 +4,7 @@ ms.topic: include
 ms.date: 10/17/2019
 
 
+ms.service: configuration-manager
 ---
 
 ### <a name="ki_osd"></a> Task sequences aren't available to PXE or media

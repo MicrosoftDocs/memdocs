@@ -5,6 +5,7 @@ ms.date: 03/28/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to synchronize device collection members to Microsoft Entra groups

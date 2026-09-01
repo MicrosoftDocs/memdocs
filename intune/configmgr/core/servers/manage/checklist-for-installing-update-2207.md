@@ -5,6 +5,7 @@ ms.date: 08/12/2022
 ms.subservice: core-infra
 ms.topic: checklist
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 2207 for Configuration Manager

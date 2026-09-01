@@ -5,6 +5,7 @@ ms.date: 04/05/2024
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Security and privacy for site administration in Configuration Manager

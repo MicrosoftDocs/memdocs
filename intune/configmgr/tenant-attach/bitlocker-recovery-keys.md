@@ -5,6 +5,7 @@ ms.date: 01/25/2022
 ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Tenant attach: BitLocker recovery keys

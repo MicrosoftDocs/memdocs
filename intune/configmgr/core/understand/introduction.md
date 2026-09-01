@@ -8,6 +8,7 @@ ms.topic: overview
 ms.collection:
     - tier3
     - essentials-overview
+ms.service: configuration-manager
 ---
 
 # What is Configuration Manager?

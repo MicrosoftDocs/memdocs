@@ -7,6 +7,7 @@ ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 # Capabilities in Technical Preview 1610 for Configuration Manager
 

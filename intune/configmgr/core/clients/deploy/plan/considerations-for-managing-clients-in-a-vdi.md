@@ -5,6 +5,7 @@ ms.date: 08/11/2020
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)

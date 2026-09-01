@@ -5,6 +5,7 @@ ms.date: 07/31/2025
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Manage OS images with Configuration Manager

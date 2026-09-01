@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Design a hierarchy of sites for Configuration Manager

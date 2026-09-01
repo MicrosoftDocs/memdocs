@@ -8,6 +8,7 @@ ms.collection:
     - tier3
     - essentials-manage
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 # Maintenance tasks for Configuration Manager
 

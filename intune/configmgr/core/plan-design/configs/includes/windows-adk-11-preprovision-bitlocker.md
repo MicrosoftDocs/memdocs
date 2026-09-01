@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 11/15/2021
+ms.service: configuration-manager
 ---
 
 ### Pre-provisioning BitLocker during task sequence doesn't own TPM

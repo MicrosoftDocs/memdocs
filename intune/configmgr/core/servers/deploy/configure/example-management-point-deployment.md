@@ -5,6 +5,7 @@ ms.date: 05/13/2026
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Step-by-step example deployment of a management point in an untrusted Active Directory domain

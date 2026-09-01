@@ -8,6 +8,7 @@ ms.collection: tier3
 ms.custom:
   - sfi-ga-nochange
   - sfi-ropc-nochange
+ms.service: configuration-manager
 ---
 
 # Approve applications in Configuration Manager

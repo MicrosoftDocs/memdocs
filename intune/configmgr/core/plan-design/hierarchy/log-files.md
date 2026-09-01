@@ -5,6 +5,7 @@ ms.date: 08/11/2025
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Log file reference

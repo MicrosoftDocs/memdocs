@@ -5,6 +5,7 @@ ms.date: 04/27/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Database replicas for management points for Configuration Manager
@@ -37,7 +38,7 @@ This configuration can help reduce the CPU processing requirements on the site d
 
 ### SQL Server requirements
 
-- The SQL Server that hosts the database replica has the same requirements as the site database server. The replica server doesn't need to run the same version or edition of SQL Server as the site database server, as long as it runs a supported version and edition of SQL Server. For more information, see [Support for SQL Server versions](../../../../core/plan-design/configs/support-for-sql-server-versions.md).
+- The SQL Server that hosts the database replica has the same requirements as the site database server. The replica server doesn't need to run the same version or edition of SQL Server as the site database server, as long as it runs a supported version and edition of SQL Server. For more information, see [supported SQL Server versions](../../../../core/plan-design/configs/support-for-sql-server-versions.md) and [supported configurations for SQL Server](../../../../core/plan-design/configs/supported-configurations-for-sql-server.md).
 
 - The SQL Server service on the computer that hosts the replica database must run as the **System** account.
 

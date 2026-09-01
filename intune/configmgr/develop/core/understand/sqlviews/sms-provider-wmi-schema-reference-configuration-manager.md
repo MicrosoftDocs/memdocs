@@ -7,6 +7,7 @@ ms.topic: reference
 
 
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # SMS provider WMI schema reference in Configuration Manager

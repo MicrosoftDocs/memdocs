@@ -5,6 +5,7 @@ ms.date: 05/08/2019
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Security and privacy for queries in Configuration Manager
 

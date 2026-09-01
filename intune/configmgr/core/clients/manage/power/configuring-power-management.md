@@ -5,6 +5,7 @@ ms.date: 09/10/2019
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configure power management in Configuration Manager

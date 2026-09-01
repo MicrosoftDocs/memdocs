@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # <a name="bkmk_hinv"></a> Tenant attach: Resource explorer in the admin center

@@ -3,6 +3,7 @@ ms.subservice: core-infra
 ms.topic: include
 ms.date: 07/17/2022
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 <!---This include file is shared by atp-onboard.md, deploy-antivirus-policy.md, deploy-firewall-policy.md,endpoint-security-get-started.md. -->

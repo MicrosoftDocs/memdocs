@@ -5,6 +5,7 @@ ms.date: 12/08/2025
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About client settings in Configuration Manager

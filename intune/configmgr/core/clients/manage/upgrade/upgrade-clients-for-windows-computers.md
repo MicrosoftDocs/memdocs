@@ -5,6 +5,7 @@ ms.date: 04/12/2022
 ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to upgrade clients for Windows computers in Configuration Manager

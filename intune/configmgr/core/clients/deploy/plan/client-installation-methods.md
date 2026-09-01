@@ -5,6 +5,7 @@ ms.date: 10/18/2024
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Client installation methods in Configuration Manager

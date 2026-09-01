@@ -1,7 +1,7 @@
 ---
 title: "Device Action: Delete"
 description: Learn how to delete devices with Microsoft Intune.
-ms.date: 10/27/2025
+ms.date: 08/06/2026
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
@@ -9,6 +9,9 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 # Device action: delete
 
 Use the *delete* action in Intune to permanently remove devices that are no longer needed, being repurposed, or missing. This action helps cleanup your device inventory and ensures that unmanaged or obsolete devices no longer appear in the admin center.
+
+> [!IMPORTANT]
+> A tenant can submit up to 1,000 Delete actions per day. This tenant-wide limit is cumulative across individual device actions, bulk device actions, and Microsoft Graph API requests. The Delete limit applies to Delete requests even when deleting a device triggers a Retire or Wipe command. To request a limit change, [contact Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md). For all device action limits, see [Daily tenant limits](index.md#daily-tenant-limits).
 
 ### Delete action behavior by platform
 
@@ -99,6 +102,13 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ::: zone pivot="android"
 ::: zone-end
+
+## Delete action status
+
+After you issue a **Delete** action, the device is removed from Intune management and is immediately hidden from the admin center. In the [Device actions report](../reports/overview.md#device-actions-report), the Delete action is reported with an **Action Status** of **Completed**.
+
+> [!NOTE]
+> For **MDM devices**, deleting a device immediately hides it from the admin center and initiates a **Retire**. A status of **Completed** on a delete action means the process is complete on the server side; it doesn't confirm that the client device finished the **Retire**.
 
 ## Reference links
 

@@ -5,6 +5,7 @@ ms.date: 01/11/2022
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # State messages in Configuration Manager

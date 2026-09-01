@@ -5,6 +5,7 @@ ms.date: 10/08/2020
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Plan for the site database for Configuration Manager
@@ -33,7 +34,7 @@ The following SQL Server configurations can be used to host the site database:
 
 - A SQL Server Always On availability group
 
-To host the site database, the SQL Server must meet the requirements detailed in [Support for SQL Server versions for Configuration Manager](../../../core/plan-design/configs/support-for-sql-server-versions.md).
+To host the site database, SQL Server must meet the [supported version](../../../core/plan-design/configs/support-for-sql-server-versions.md) and [configuration](../../../core/plan-design/configs/supported-configurations-for-sql-server.md) requirements.
 
 ## Remote database server location considerations
 

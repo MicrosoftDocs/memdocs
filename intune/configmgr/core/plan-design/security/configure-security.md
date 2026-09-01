@@ -5,6 +5,7 @@ ms.date: 12/21/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configure security in Configuration Manager

@@ -1,9 +1,10 @@
 ---
 title: Create device compliance policies in Microsoft Intune
 description: Create device compliance policies for Microsoft Intune.
-ms.date: 12/13/2024
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: ilwu
+ai-usage: ai-assisted
 ---
 
 # Create a compliance policy in Microsoft Intune
@@ -125,6 +126,7 @@ For more information about using custom compliance settings, including supported
    > - Linux
    >   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
    >   - RedHat Enterprise Linux 9 or 10
+   > - macOS  
    > - Windows 
    > Before you can add custom settings to a policy, upload a detection script to Intune, and have a JSON file that defines the settings you want to use for compliance. For more information, see [Custom compliance settings](./custom-settings.md).
 
@@ -135,12 +137,12 @@ For more information about using custom compliance settings, including supported
    1. For *Select your discovery script*, select **Click to select**, and then enter the name of a script that you previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy. Choose **Select** to continue to the next step.
    1. For *Upload and validate the JSON file with your custom compliance settings*, select the folder icon, and then find and add the JSON file for Windows that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](./create-custom-json.md).
 
-   **For Linux**:
+   **For Linux and macOS**:
    1. On the *Compliance settings* page, select **Add settings** to open the **Settings picker**.
    1. Select **Custom Compliance**. Then close the settings picker.
    1. Switch **Require Custom Compliance** to **True**.
-   1. For **Select your discovery script**, select **Select a script**. Then select a script that you previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy.
-   1. For **Select your rules file**, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](./create-custom-json.md).
+   1. For **Select your discovery script**, select **Select a script**. Then select a script that’s been previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy.
+   1. For **Select your rules file**, select the folder icon and then locate and add the JSON file that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](./create-custom-json.md).
 
    Wait while Intune validates the JSON. Problems that need to be fixed appear onscreen. After validation of the JSON contents, the rules from the JSON appear in table format.
 
@@ -171,6 +173,12 @@ For more information about using custom compliance settings, including supported
 Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals) lists the estimated refresh times.
 
 At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
+
+### Client-driven compliance evaluation (preview)
+
+For supported Windows devices, Intune supports client-driven compliance evaluation. With this capability, a device can detect certain local state changes and proactively request a compliance re-evaluation, rather than waiting for the next scheduled check-in cycle.
+
+State changes that can trigger a client-driven compliance evaluation include changes to device configuration, security posture, and other settings that affect a device's compliance state.
 
 ### Assign an InGracePeriod status
 

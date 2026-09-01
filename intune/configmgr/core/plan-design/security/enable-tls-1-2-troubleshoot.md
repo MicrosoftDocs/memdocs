@@ -5,6 +5,7 @@ ms.date: 05/04/2021
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Common issues when enabling TLS 1.2

@@ -5,6 +5,7 @@ ms.date: 08/15/2022
 ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Enable cloud attach for Configuration Manager

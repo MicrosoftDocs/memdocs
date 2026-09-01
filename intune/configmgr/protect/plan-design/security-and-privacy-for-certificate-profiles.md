@@ -5,6 +5,7 @@ ms.date: 03/29/2022
 ms.subservice: protect
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Security and privacy for certificate profiles in Configuration Manager

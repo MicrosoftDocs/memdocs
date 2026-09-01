@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Define network locations as boundaries for Configuration Manager

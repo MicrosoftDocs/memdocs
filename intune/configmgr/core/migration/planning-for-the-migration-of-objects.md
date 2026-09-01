@@ -5,6 +5,7 @@ ms.date: 01/12/2017
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Plan for the migration of Configuration Manager objects to Configuration Manager current branch
 

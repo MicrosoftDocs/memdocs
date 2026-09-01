@@ -5,6 +5,7 @@ ms.date: 07/17/2025
 ms.subservice: osd
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Associate users with a destination computer in Configuration Manager

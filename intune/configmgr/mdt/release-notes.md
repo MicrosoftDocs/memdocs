@@ -5,6 +5,7 @@ ms.date: 08/12/2022
 ms.subservice: mdt
 ms.topic: release-notes
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Microsoft Deployment Toolkit release notes

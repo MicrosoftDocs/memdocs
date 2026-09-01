@@ -5,6 +5,7 @@ ms.date: 04/29/2019
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # How to manage queries in Configuration Manager
 

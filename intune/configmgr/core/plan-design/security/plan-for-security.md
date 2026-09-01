@@ -7,6 +7,7 @@ ms.topic: article
 ms.collection:
     - tier3
     - essentials-security
+ms.service: configuration-manager
 ---
 
 # Plan for security in Configuration Manager

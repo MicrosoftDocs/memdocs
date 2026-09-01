@@ -5,6 +5,7 @@ ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # List of prerequisite checks for Configuration Manager
@@ -487,7 +488,7 @@ When using an availability group, replicas are in a healthy state.
 
 *Applies to: Site database server*
 
-The SQL Server meets the minimum requirements for site upgrade. For more information, see required [SQL Server](../../../plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLConfig) and [Database](../../../plan-design/configs/support-for-sql-server-versions.md#bkmk_DBConfig) configurations.
+The SQL Server meets the minimum requirements for site upgrade. For more information, see required [SQL Server](../../../plan-design/configs/supported-configurations-for-sql-server.md#bkmk_SQLConfig) and [database](../../../plan-design/configs/supported-configurations-for-sql-server.md#bkmk_DBConfig) configurations.
 
 ### SQL Server edition
 

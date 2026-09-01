@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 02/13/2020
+ms.service: configuration-manager
 ---
 
 ### <a name="ki_coll"></a> Can't delete collections

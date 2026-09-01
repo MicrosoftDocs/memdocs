@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Capabilities in Technical Preview 1712 for Configuration Manager
 

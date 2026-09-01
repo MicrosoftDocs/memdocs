@@ -5,6 +5,7 @@ ms.date: 08/21/2020
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Manage and monitor phased deployments

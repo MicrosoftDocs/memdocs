@@ -5,6 +5,7 @@ ms.date: 08/11/2020
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create an image for an OEM in factory or a local depot with Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 03/30/2023
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Choose a device management solution

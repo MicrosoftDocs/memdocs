@@ -5,6 +5,7 @@ ms.date: 10/08/2020
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Custom locations for Configuration Manager site database files

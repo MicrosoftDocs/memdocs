@@ -5,6 +5,7 @@ ms.date: 02/28/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Evaluate Configuration Manager by building your own lab environment
 

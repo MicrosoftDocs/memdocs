@@ -3,6 +3,7 @@ title: How to Configure the Intune Company Portal Apps, Company Portal Website, 
 description: Learn how you can configure the Intune Company Portal apps, Company Portal website, and Intune app.
 ms.date: 10/02/2025
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: abstarr
 ms.collection:
 - M365-identity-device-management
@@ -17,6 +18,8 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. The Company Portal displays Configuration Manager deployed apps for all co-managed customers. This support helps administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 >
 > The minimum supported version of the iOS Company Portal app is v5.2311.1. If users are running an older version, they're prompted for an update at sign in.
+
+[!INCLUDE [android-intune-app-version-support](../../intune-service/includes/android-intune-app-version-support.md)]
 
 ## Customizing the user experience
 

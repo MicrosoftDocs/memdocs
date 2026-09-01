@@ -5,6 +5,7 @@ ms.date: 10/22/2019
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Support for Active Directory domains in Configuration Manager

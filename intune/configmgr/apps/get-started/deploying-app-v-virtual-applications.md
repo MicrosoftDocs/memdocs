@@ -5,6 +5,7 @@ ms.date: 03/12/2018
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Deploy App-V virtual applications with Configuration Manager
 

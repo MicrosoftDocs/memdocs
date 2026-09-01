@@ -5,6 +5,7 @@ ms.date: 06/08/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Internet access requirements
@@ -138,6 +139,8 @@ Allow the management point server to access the following endpoints:
 
 - `https://login.microsoftonline.us`
 - `https://sts.windows.net`
+
+If the management point connects to the internet through a proxy, you must configure the proxy in the system (Local System) context. A proxy set in the site system properties or a WinHTTP-only proxy isn't used for this validation path in version 2603. For the required steps, see [Proxy server support for the management point](proxy-server-support.md#management-point).
 
 For more information, see [Management point requires internet access for Microsoft Entra token validation](../changes/whats-new-in-version-2603.md#management-point-requires-internet-access-for-microsoft-entra-token-validation).
 

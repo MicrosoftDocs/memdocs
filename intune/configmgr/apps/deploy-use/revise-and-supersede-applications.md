@@ -5,6 +5,7 @@ ms.date: 12/16/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Revise and supersede applications in Configuration Manager

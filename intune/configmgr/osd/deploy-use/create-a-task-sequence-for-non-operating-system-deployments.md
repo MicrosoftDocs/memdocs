@@ -5,6 +5,7 @@ ms.date: 11/30/2020
 ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create a task sequence for non-OS deployments

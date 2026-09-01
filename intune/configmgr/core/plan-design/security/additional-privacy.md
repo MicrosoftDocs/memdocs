@@ -7,6 +7,7 @@ ms.topic: article
 ms.collection:
     - tier3
     - essentials-privacy
+ms.service: configuration-manager
 ---
 
 # Additional information about privacy for Configuration Manager

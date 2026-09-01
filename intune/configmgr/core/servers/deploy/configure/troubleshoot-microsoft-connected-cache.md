@@ -5,6 +5,7 @@ ms.date: 11/23/2021
 ms.subservice: core-infra
 ms.topic: troubleshooting
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Troubleshoot Microsoft Connected Cache with Configuration Manager

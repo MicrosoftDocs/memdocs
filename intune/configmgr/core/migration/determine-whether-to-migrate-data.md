@@ -5,6 +5,7 @@ ms.date: 12/29/2016
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Determine whether to migrate data to Configuration Manager current branch
 

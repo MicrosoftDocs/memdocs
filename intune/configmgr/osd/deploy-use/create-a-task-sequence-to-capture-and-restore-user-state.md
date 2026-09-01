@@ -5,6 +5,7 @@ ms.date: 08/17/2018
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create a task sequence to capture and restore user state in Configuration Manager

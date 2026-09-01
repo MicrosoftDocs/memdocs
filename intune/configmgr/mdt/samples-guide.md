@@ -6,6 +6,7 @@ ms.subservice: mdt
 ms.topic: install-set-up-deploy
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
+ms.service: configuration-manager
 ---
 
 # Microsoft Deployment Toolkit Samples Guide

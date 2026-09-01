@@ -5,6 +5,7 @@ ms.date: 09/18/2023
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # External notifications

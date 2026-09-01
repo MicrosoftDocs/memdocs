@@ -5,6 +5,7 @@ ms.date: 04/01/2020
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Create a custom task sequence with Configuration Manager

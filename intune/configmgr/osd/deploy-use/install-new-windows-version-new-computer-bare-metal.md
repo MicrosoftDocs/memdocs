@@ -5,6 +5,7 @@ ms.date: 01/23/2017
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Install a new version of Windows on a new computer (bare metal) with Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center

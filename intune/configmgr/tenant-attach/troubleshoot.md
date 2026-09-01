@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Troubleshooting tenant attach and device actions

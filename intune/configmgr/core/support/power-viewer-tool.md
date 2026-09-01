@@ -5,6 +5,7 @@ ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Power Viewer Tool

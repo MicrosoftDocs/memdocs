@@ -2,6 +2,7 @@
 ms.subservice: core-infra
 ms.topic: include
 ms.date: 11/30/2020
+ms.service: configuration-manager
 ---
 
 On the computer where you run the console, allow it to access the following internet endpoints to send diagnostic data to Microsoft:

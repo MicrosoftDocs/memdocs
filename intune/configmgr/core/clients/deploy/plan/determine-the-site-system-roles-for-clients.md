@@ -5,6 +5,7 @@ ms.date: 01/04/2022
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Determine the site system roles for Configuration Manager clients

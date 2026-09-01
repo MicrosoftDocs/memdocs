@@ -5,6 +5,7 @@ ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Diagnostic and usage data for version 2103

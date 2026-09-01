@@ -1,10 +1,11 @@
 ---
 title: What's new in version 2603
 description: Get details about changes and new capabilities introduced in version 2603 of Configuration Manager current branch.
-ms.date: 04/27/2026
+ms.date: 08/05/2026
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # What's new in version 2603 of Configuration Manager current branch
@@ -42,7 +43,7 @@ All Configuration Manager components and site roles are updated to remove the de
 
 ### SQL Server Management Objects updated
 
-The Microsoft SQL Server Management Objects and Microsoft System CLR Types for SQL Server are updated from the deprecated SQL Server 2014 versions to the SQL Server 2025 versions (SMO 17).
+The Microsoft SQL Server Management Objects and Microsoft System CLR Types for SQL Server are updated from the deprecated SQL Server 2014 versions to the SQL Server 2025 versions (SMO 17). The `SQLSysClrTypes.msi` and `SharedManagementObjects.msi` files are no longer included in the Configuration Manager redistributable files. After updating to version 2603, customers can safely uninstall these legacy MSI packages. The required files are now included in the Configuration Manager installation package.
 
 ### PKI certificate support for site system-to-SQL Server communication
 
@@ -102,7 +103,7 @@ Ensure that the management point server can connect to Microsoft Entra authentic
 - `https://login.microsoftonline.com`
 - `https://sts.windows.net`
 
-If the management point server uses a proxy, configure the proxy at the system level. For more information, see [Management point proxy configuration](../network/proxy-server-support.md#management-point).
+If the management point server uses a proxy, you must configure the proxy in the system (Local System) context. The proxy set in the site system properties and a WinHTTP-only proxy (`netsh winhttp set proxy`) aren't used for this validation path in version 2603. For the required configuration steps, see [Management point proxy configuration](../network/proxy-server-support.md#management-point).
 
 For a full list of required endpoints, see [Management point internet access requirements](../network/internet-endpoints.md#management-point).
 

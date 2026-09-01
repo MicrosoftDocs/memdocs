@@ -5,6 +5,7 @@ ms.date: 03/10/2025
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use the service connection tool for Configuration Manager
@@ -177,9 +178,9 @@ You can also use the following optional parameters:
 
 `ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks`
 
-#### Example of connect with a proxy server
+#### Example of connect with a proxy server and port
 
-`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com -proxyusername jqpublic`
+`ServiceConnectionTool.exe -connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itproxy.contoso.com:8080 -proxyusername jqpublic`
 
 #### Example of connect to download only site version applicable updates
 

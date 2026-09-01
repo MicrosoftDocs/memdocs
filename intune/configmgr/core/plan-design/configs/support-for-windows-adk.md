@@ -5,6 +5,7 @@ ms.date: 12/06/2024
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Support for the Windows ADK in Configuration Manager

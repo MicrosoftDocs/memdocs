@@ -5,6 +5,7 @@ ms.date: 04/05/2022
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About client installation parameters and properties in Configuration Manager

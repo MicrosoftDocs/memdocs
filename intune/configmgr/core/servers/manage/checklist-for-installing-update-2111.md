@@ -5,6 +5,7 @@ ms.date: 12/15/2021
 ms.subservice: core-infra
 ms.topic: checklist
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Checklist for installing update 2111 for Configuration Manager

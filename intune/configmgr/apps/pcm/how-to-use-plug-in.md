@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: how-to
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to use the Package Conversion Manager plug-in

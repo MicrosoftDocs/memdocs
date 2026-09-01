@@ -5,6 +5,7 @@ ms.date: 10/12/2020
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to create and apply power plans in Configuration Manager

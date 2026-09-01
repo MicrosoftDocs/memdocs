@@ -5,6 +5,7 @@ ms.date: 03/24/2022
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Tenant attach data collection

@@ -5,6 +5,7 @@ ms.date: 02/8/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Run discovery for Configuration Manager
 

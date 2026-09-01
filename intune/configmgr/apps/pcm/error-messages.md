@@ -5,6 +5,7 @@ ms.date: 08/24/2018
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Technical reference for Package Conversion Manager error messages

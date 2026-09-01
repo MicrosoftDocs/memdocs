@@ -5,6 +5,7 @@ ms.date: 01/31/2020
 ms.topic: integration
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager

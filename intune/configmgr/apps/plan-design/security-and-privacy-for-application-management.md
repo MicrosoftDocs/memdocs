@@ -5,6 +5,7 @@ ms.date: 08/10/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Security and privacy for application management in Configuration Manager

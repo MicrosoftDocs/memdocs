@@ -5,6 +5,7 @@ ms.date: 03/31/2025
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # What's new in Configuration Manager incremental versions

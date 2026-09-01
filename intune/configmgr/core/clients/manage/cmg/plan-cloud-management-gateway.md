@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: configuration-manager
 ---
 
 # Plan for the CMG in Configuration Manager

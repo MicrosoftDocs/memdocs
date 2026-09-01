@@ -5,6 +5,7 @@ ms.date: 07/15/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use the Hotfix Installer to install updates for Configuration Manager

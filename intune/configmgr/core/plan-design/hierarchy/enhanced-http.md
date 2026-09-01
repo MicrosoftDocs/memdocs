@@ -5,6 +5,7 @@ ms.date: 12/20/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Enhanced HTTP

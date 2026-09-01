@@ -9,6 +9,7 @@ metadata:
   ms.subservice: core-infra
   ms.topic: landing-page
   ms.date: 12/09/2021
+  ms.service: configuration-manager
 
 landingContent:
   - title: Configuration Manager 2603
@@ -23,6 +24,8 @@ landingContent:
             url: 2603/37942646.md
           - text: KB 38232642 Security update for Configuration Manager
             url: 2603/38232642.md
+          - text: KB 38982839 Security update for the SMS Provider and administration service
+            url: 2603/38982839.md
   - title: Configuration Manager 2509
     linkLists:
       - linkListType: overview
@@ -37,6 +40,8 @@ landingContent:
             url: 2509/36949461.md
           - text: KB 37864969 Second update rollup for Microsoft Configuration Manager version 2509
             url: 2509/37864969.md
+          - text: KB 38982839 Security update for the SMS Provider and administration service
+            url: 2603/38982839.md
   - title: Configuration Manager 2503
     linkLists:
       - linkListType: overview
@@ -57,6 +62,8 @@ landingContent:
             url: 2603/38232642.md
           - text: KB 37942646 CMG virtual machine scale set image update
             url: 2603/37942646.md
+          - text: KB 38982839 Security update for the SMS Provider and administration service
+            url: 2603/38982839.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview

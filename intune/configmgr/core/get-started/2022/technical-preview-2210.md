@@ -4,6 +4,7 @@ description: Learn about new features available in the Configuration Manager tec
 ms.date: 10/12/2022
 ms.subservice: core-infra
 ms.topic: whats-new
+ms.service: configuration-manager
 ---
 
 # Features in Configuration Manager technical preview version 2210

@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Security and privacy for migration to Configuration Manager current branch
 

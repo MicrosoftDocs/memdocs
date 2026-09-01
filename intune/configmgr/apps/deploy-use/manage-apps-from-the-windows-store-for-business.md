@@ -5,6 +5,7 @@ ms.date: 12/01/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager

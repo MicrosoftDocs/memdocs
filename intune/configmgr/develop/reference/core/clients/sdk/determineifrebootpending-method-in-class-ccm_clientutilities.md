@@ -5,6 +5,7 @@ ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
 description: Learn how DetermineIfRebootPending is simplified from Managed Object Format code and defines the method.
+ms.service: configuration-manager
 ---
 
 # DetermineIfRebootPending Method in Class CCM_ClientUtilities

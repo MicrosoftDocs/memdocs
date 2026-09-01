@@ -5,6 +5,7 @@ ms.date: 12/16/2024
 ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites

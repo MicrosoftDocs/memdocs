@@ -5,6 +5,7 @@ ms.date: 08/11/2020
 ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # OS deployment methods with Configuration Manager

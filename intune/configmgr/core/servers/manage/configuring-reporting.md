@@ -5,6 +5,7 @@ ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Configure reporting in Configuration Manager

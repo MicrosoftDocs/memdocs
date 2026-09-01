@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Create Windows Embedded applications with Configuration Manager
 

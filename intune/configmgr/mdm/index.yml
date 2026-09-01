@@ -9,6 +9,7 @@ metadata:
   ms.subservice: mdm
   ms.topic: landing-page
   ms.date: 09/23/2021
+  ms.service: configuration-manager
 
 landingContent:
   - title: About on-premises MDM

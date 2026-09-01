@@ -5,6 +5,7 @@ ms.date: 01/05/2022
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to upgrade clients on Mac computers in Configuration Manager

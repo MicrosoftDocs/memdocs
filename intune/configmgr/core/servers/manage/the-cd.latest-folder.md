@@ -5,6 +5,7 @@ ms.date: 03/24/2022
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # The `CD.Latest` folder for Configuration Manager

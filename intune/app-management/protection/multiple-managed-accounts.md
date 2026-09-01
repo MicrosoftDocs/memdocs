@@ -33,14 +33,13 @@ The following account configurations are supported with MMA:
 
 ### Currently supported apps
 
-Currently we support Multiple Managed Accounts in Microsoft Teams on iOS/iPadOS (v8.10.0 or later). Support for additional apps and platforms is coming soon.
+Support for additional apps and platforms is coming soon.
 
-<!--
+
 | App | Platform | Minimum version |
 |-----|----------|-----------------|
-| Microsoft Teams | iOS/iPadOS | |
-| Microsoft Teams | | |
--->
+| Microsoft Teams | iOS/iPadOS | v8.10.0 or later |
+| Microsoft Outlook | iOS/iPadOS | v5.2626.0 or later |
 
 ## Segmented views and mixed views
 

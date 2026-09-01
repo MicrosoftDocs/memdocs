@@ -5,6 +5,7 @@ ms.date: 01/3/2017
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Plan a source hierarchy strategy in Configuration Manager
 

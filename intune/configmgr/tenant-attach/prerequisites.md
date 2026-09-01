@@ -6,6 +6,7 @@ ms.topic: article
 ms.subservice: core-infra
 ms.collection: tier3
 ms.custom: sfi-ga-nochange
+ms.service: configuration-manager
 ---
 
 # Microsoft Intune tenant attach: Prerequisites

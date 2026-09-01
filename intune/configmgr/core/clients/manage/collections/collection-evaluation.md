@@ -5,6 +5,7 @@ ms.date: 06/05/2020
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Collection evaluation in Configuration Manager

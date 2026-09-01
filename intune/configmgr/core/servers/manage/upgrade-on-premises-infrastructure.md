@@ -5,6 +5,7 @@ ms.date: 12/08/2025
 ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager

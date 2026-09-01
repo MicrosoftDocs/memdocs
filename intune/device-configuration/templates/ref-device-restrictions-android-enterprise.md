@@ -106,7 +106,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../../device-management/actions/wipe.md) |
   | --- | --- | --- | --- |
-  | **Corporate-owned devices with work profile** (COPE) | ![check-icon] factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
+  | **Corporate-owned devices with work profile** (COPE) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
   | **Fully managed** (COBO) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
   | **Dedicate** (COSU) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
 

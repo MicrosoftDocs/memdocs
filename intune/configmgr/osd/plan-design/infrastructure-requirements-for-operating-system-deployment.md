@@ -5,6 +5,7 @@ ms.date: 09/08/2021
 ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager

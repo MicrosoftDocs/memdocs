@@ -4,6 +4,7 @@ description: Learn about actions to take before updating to Configuration Manage
 ms.date: 11/01/2023
 ms.subservice: core-infra
 ms.topic: checklist
+ms.service: configuration-manager
 ---
 # Checklist for installing update 2309 for Configuration Manager
 

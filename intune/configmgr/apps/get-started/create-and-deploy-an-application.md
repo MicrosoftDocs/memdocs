@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 # Create and deploy an application with Configuration Manager
 

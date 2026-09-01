@@ -1,8 +1,11 @@
 ---
 title: Prerequisites the Microsoft Tunnel VPN for Microsoft Intune
 description: Review the prerequisites for installation and use of the Microsoft Tunnel Gateway. These include Linux servers, network, and firewall configurations.
-ms.date: 06/24/2026
+ms.date: 08/27/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1025
+ai-usage: ai-assisted
+#customer intent: As an IT administrator, I want to review and configure Microsoft Tunnel prerequisites so that I can prepare my environment for a successful deployment.
 ---
 
 # Prerequisites for the Microsoft Tunnel in Intune
@@ -63,9 +66,11 @@ Set up a Linux based virtual machine or a physical server on which to install th
   | Red Hat (RHEL) 9.5  | Podman 5.2.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
    | Red Hat (RHEL) 9.6  | Podman 5.4.0 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
   | Red Hat (RHEL) 9.7  | Podman 5.8.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
+  | Red Hat (RHEL) 9.8  | Podman 5.8.2+ *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
    | Red Hat (RHEL) 10.0  | Podman 5.4.0 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
-  | Ubuntu 22.04           | Docker CE               |                    |
+   | Red Hat (RHEL) 10.1  | Podman 5.8.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. </br></br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) aren't usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel. |
   | Ubuntu 24.04           | Docker CE               |                    |
+  | Ubuntu 26.04           | Docker CE               |                    |
 
   > [!IMPORTANT]
   > In April of 2023, Ubuntu will end support for Ubuntu 18.04. With the end of support by Ubuntu, Intune will also end support for Ubuntu 18.04 for use with Microsoft Tunnel. For more information, see [https://wiki.ubuntu.com/Releases](https://wiki.ubuntu.com/Releases).
@@ -285,7 +290,6 @@ To access the security token service and Azure storage for logs, provide access 
 - Microsoft authentication: `login.microsoftonline.com`
 - Microsoft Graph: `graph.microsoft.com`
 - Configure firewall rules to support the configurations detailed in [Microsoft Artifact Registry (MAR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/main/docs/client-firewall-rules.md).
-- Diagnostic Endpoint: `powerlift-frontdesk.acompli.net`
 
 ## Proxy
 

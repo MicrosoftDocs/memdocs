@@ -5,6 +5,7 @@ ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Prerequisites for deploying clients to Windows computers

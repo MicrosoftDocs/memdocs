@@ -5,6 +5,7 @@ ms.date: 03/23/2023
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Plan for PKI certificates in Configuration Manager

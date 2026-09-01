@@ -5,6 +5,7 @@ ms.date: 09/02/2025
 ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Use PXE to deploy Windows over the network with Configuration Manager

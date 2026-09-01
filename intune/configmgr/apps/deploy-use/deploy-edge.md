@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # Microsoft Edge Management

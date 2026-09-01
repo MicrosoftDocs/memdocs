@@ -4,6 +4,7 @@ ms.topic: include
 ms.date: 10/04/2019
 
 
+ms.service: configuration-manager
 ---
 
 ### <a name="ki_hinv"></a> Hardware inventory reports

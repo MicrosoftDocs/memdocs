@@ -79,8 +79,11 @@ After you create your device configuration policy, Intune provides reporting dat
     :::image type="content" source="./media/monitor-device-profile/per-setting-status.png" alt-text="Screenshot that shows the per setting status report in Microsoft Intune and Intune admin center.":::
 
     This report shows the individual settings in the policy, and their status.
+   
+> [!IMPORTANT]
+> Per-setting reporting is available for most Endpoint Security policies. For Firewall Rules and Attack Surface Reduction (ASR) Rules policies managed through MDM, reporting is limited to policy-level status and doesn't include per-setting reporting statuses. To view per-setting status for Firewall Rules and ASR Rules policies, devices must be enrolled with [Defender for Endpoint security settings management](/intune/device-security/microsoft-defender/security-settings-management).
 
-5. Go back to **Device and user check-in status** and select **View report**:
+6. Go back to **Device and user check-in status** and select **View report**:
 
     :::image type="content" source="./media/monitor-device-profile/device-user-check-in-status-view-report.png" alt-text="Screenshot that shows to select view report on a device configuration policy to get the device and user check-in status in Microsoft Intune and Intune admin center.":::
 
@@ -92,7 +95,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
     You can also select a specific device to get more details and use the filter column to see the assignment filter options.
 
-6. Back in **Device and user check-in status**, the following property information for the specific policy is available for you to view and edit:
+7. Back in **Device and user check-in status**, the following property information for the specific policy is available for you to view and edit:
 
     - **Basics**: See the policy name and description.
     - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters/overview.md) in the policy.

@@ -5,6 +5,7 @@ ms.date: 04/30/2021
 ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Resources for installing Configuration Manager sites

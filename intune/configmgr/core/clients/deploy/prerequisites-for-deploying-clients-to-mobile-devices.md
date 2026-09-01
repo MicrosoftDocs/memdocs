@@ -5,6 +5,7 @@ ms.date: 01/05/2022
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Prerequisites for deploying clients to mobile devices in Configuration Manager

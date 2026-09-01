@@ -195,6 +195,10 @@ items:
         displayName: android, ios, ipados, macos, windows
         href: ./policy-sets.md
 
+      - name: Choose the right targeting method
+        displayName: assignment filter, dynamic group, static group, virtual group, enrollment time grouping, targeting
+        href: ./choose-targeting-method.md
+
       - name: Use assignment filters
         href: ./filters/toc.yml
 

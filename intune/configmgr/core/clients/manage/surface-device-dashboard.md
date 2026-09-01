@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.subservice: core-infra
 ms.collection: tier3
 ms.custom: sfi-image-nochange
+ms.service: configuration-manager
 ---
 
 # Surface device dashboard in Configuration Manager

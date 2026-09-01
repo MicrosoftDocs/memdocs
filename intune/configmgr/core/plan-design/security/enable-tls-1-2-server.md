@@ -5,6 +5,7 @@ ms.date: 06/20/2024
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # How to enable TLS 1.2 on the site servers and remote site systems

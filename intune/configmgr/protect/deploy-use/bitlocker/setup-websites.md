@@ -5,6 +5,7 @@ ms.date: 09/15/2020
 ms.subservice: protect
 ms.topic: how-to
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Set up BitLocker portals

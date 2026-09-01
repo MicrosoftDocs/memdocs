@@ -7,6 +7,7 @@ ms.topic: reference
 
 
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Power management views in Configuration Manager

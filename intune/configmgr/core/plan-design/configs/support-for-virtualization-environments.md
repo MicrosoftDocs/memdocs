@@ -5,6 +5,7 @@ ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Support for virtualization environments with Configuration Manager

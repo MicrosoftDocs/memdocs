@@ -5,6 +5,7 @@ ms.date: 12/19/2024
 ms.subservice: osd
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Upgrade Windows to the latest version with Configuration Manager

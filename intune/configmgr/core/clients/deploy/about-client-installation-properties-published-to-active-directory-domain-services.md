@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.topic: concept-article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # About client installation properties published to Active Directory Domain Services

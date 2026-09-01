@@ -5,6 +5,7 @@ ms.date: 10/06/2016
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 # Get ready for Configuration Manager
 

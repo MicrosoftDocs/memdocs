@@ -70,19 +70,7 @@ Before you enable web-based enrollment:
 - Test in a test tenant before enabling it in production.
 - Walk through the enrollment experience and update your internal helpdesk documentation.
 
-To enable web-based enrollment:
-
-1. In the Microsoft Intune admin center, go to **Devices**.  
-
-1. Select the **Android** tab.  
-
-1. Expand **Device onboarding** and select **Enrollment**.  
-
-1. Under **Enrollment Profiles**, select **Personally owned devices with a work profile**.  
-
-1. Select **Use web enrollment for all users enrolling into Android personally owned work profile management**.  
-
-1. Select **Ok** to save your changes. This change can't be reversed.  
+For the steps to enable web-based enrollment, see [Create an enrollment profile](setup-personal-work-profile.md#create-an-enrollment-profile). Enabling web-based enrollment applies at the tenant level and can't be reversed.
 
 ## Create a device configuration profile for existing devices
 
@@ -126,6 +114,8 @@ For devices already enrolled in Intune, use the Android Management API device co
     Select **Next**.
 
 9. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+10. Monitor progress at **Personal Devices on Android Management API** report under Devices -> Monitor. Note that reporting will not appear under the policy itself -> "device assignment status" or the device view -> device configuration tab. 
 
 When you assign the policy, devices start moving to Android Management API. If you unassign or delete this policy, devices that already moved keep using Android Management API. Targeted devices that haven't received the policy won't be moved to Android Management API.
 

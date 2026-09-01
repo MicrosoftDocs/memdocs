@@ -21,9 +21,12 @@ items:
   - name: Firmware Over-the-Air updates
     href: android/manage-fota.md
     displayName: fota updates firmware android
+  - name: Samsung Knox E-FOTA integration
+    href: android/setup-samsung-knox.md
+    displayName: fota, updates, android, samsung, knox, e-fota, over the air
   - name: Zebra LifeGuard OTA integration
     href: android/setup-zebra-lifeguard.md
-    displayName: ota updates android
+    displayName: ota, updates, android, fota, over the air
 
 - name: Apple updates
   items:

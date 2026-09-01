@@ -5,6 +5,7 @@ ms.date: 06/04/2019
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # Licensing and branches for Configuration Manager

@@ -5,6 +5,7 @@ ms.date: 09/27/2021
 ms.topic: install-set-up-deploy
 ms.subservice: core-infra
 ms.collection: tier3
+ms.service: configuration-manager
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy firewall policies from the admin center
