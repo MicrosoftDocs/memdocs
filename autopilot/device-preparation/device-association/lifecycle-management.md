@@ -15,10 +15,6 @@ This article describes how to manage common events throughout the device associa
 
 The tenant affinity created by device association is stored in the device's UEFI firmware, so it persists across a device reset, a Windows reinstall, and enrollment removal. Resetting the device alone doesn't remove the association.
 
-> [!NOTE]
->
-> After a device is reset and re-enrolled, its Microsoft Entra ID and Intune device records aren't reused—new records are created for the device. We recommend that you clean up the stale Microsoft Entra ID and Intune device records.
-
 To fully remove the association, clear the tenant affinity on the device itself by clearing the association information—for example, by running a PowerShell script to remove association. This requires physical access to the device. For instructions, see [Remove association from a device](remove-association.md).
 
 > [!IMPORTANT]
