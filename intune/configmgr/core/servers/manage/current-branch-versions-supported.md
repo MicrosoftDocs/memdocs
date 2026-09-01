@@ -2,10 +2,10 @@
 title: Current branch versions
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Support for Configuration Manager current branch versions

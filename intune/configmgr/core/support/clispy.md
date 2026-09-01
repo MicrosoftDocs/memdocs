@@ -2,10 +2,10 @@
 title: Client Spy
 description: Use Client Spy to troubleshoot software distribution, inventory, and software metering on Configuration Manager clients.
 ms.date: 07/30/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Client Spy

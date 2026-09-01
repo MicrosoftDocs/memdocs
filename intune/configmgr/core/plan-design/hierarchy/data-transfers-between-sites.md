@@ -2,10 +2,10 @@
 title: Data transfers between sites
 description: Learn how Configuration Manager moves data between sites, and how you can manage the transfer of the data across your network.
 ms.date: 08/09/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Data transfers between sites

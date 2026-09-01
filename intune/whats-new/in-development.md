@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 07/27/2026
+ms.date: 08/21/2026
 ms.topic: whats-new
 ai-usage: ai-assisted
 ms.reviewer: intuner
@@ -132,17 +132,6 @@ We're adding a new Microsoft Defender Updates template for Linux endpoint securi
 > Applies to:
 >
 > - Linux
-
-### Audit mode for the Microsoft Defender Antivirus template for Linux<!-- 37284585 -->
-
-We'll soon add a new **Audit** value to the **Enforcement level** setting in the Microsoft Defender Antivirus template for Linux, which is part of Intune's Endpoint Security Antivirus policy. When you set **Enforcement level** to **Audit**, the antivirus engine detects threats in real time but doesn't automatically remediate them. Malware detections are reported as alerts in the Microsoft Defender portal through real-time scanning, without quarantining the malicious files. This gives you visibility into the threat landscape before you turn on full protection.
-
-The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../device-configuration/endpoint-security/antivirus.md), and for devices managed only by Defender through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) scenario (MDE attach).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Linux  
 
 ### Mark Windows devices noncompliant when prohibited AI agents are discovered<!-- 37387056 -->
 

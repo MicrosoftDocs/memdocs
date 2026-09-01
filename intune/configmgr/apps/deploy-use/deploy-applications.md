@@ -2,10 +2,10 @@
 title: Deploy applications
 description: Create or simulate a deployment of an application to a device or user collection
 ms.date: 12/16/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Deploy applications with Configuration Manager

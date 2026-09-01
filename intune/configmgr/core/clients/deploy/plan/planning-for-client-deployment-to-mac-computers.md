@@ -2,10 +2,10 @@
 title: Planning client deployment to Mac computers
 description: Plan for client deployment to Mac computers in Configuration Manager.
 ms.date: 01/05/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Planning for client deployment to Mac computers in Configuration Manager
 

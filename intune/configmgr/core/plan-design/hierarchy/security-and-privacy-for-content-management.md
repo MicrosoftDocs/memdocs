@@ -2,10 +2,10 @@
 title: Content management security and privacy
 description: Optimize security and privacy for content management in Configuration Manager.
 ms.date: 07/15/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Security and privacy for content management in Configuration Manager

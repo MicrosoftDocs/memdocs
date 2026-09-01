@@ -164,6 +164,16 @@
       "source_path_from_root": "/intune/configmgr/tenant-attach/technical-reference.md",
       "redirect_url": "/intune/configmgr/tenant-attach/troubleshoot",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2503.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2509.md",
+      "redirect_url": "/intune/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection",
+      "redirect_document_id": false
     }
   ]
 }

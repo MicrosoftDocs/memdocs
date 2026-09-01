@@ -1,11 +1,11 @@
 ---
 title: Levels of diagnostic usage data
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
-ms.date: 12/04/2024
-ms.subservice: core-infrastructure
+ms.date: 08/18/2026
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Levels of diagnostic usage data
@@ -51,15 +51,11 @@ To change the data collection level, you need **Modify** permissions on the **Si
 
 1. Switch to the **Diagnostic and Usage Data** tab, then choose the data level.
 
-## Version-specific details
+## Data collected for supported current branch versions
 
-The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
+The diagnostic and usage data collected at each level is consistent across supported current branch versions. For the complete list, see [Diagnostic and usage data for supported current branch versions](levels-of-diagnostic-usage-data-collection.md).
 
-- [Diagnostic and usage data for 2509](levels-of-diagnostic-usage-data-collection-2509.md)
-- [Diagnostic and usage data for 2503](levels-of-diagnostic-usage-data-collection-2503.md)
-- [Diagnostic and usage data for 2409](levels-of-diagnostic-usage-data-collection-2409.md)
-
-With version 2509, no further version-specific changes are planned to the collection of diagnostic usage data. 
+For a list of the currently supported releases, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).
 
 ## Next steps
 

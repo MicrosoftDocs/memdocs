@@ -2,10 +2,10 @@
 title: Hardware inventory
 description: Understand the basics of hardware inventory in Configuration Manager.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Introduction to hardware inventory

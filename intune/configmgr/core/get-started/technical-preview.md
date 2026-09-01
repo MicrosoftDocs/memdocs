@@ -2,10 +2,10 @@
 title: Technical preview releases
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
 ms.date: 11/29/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Technical preview for Configuration Manager

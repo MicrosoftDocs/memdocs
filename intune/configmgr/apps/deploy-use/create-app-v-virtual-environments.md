@@ -2,10 +2,10 @@
 title: Create App-V virtual environments
 description: Create virtual environments with Microsoft Application Virtualization so apps can share data with each other.
 ms.date: 10/06/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Create App-V virtual environments in Configuration Manager
 

@@ -2,10 +2,10 @@
 title: OS deployment methods
 description: Learn about the methods that you can use to deploy operating systems in your Configuration Manager environment.
 ms.date: 08/11/2020
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # OS deployment methods with Configuration Manager

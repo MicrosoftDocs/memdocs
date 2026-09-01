@@ -2,10 +2,10 @@
 title: Plan for migration
 description: Learn about sites and hierarchies before you migrate data to a Configuration Manager current branch destination hierarchy.
 ms.date: 01/12/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Plan for migration to Configuration Manager current branch
 

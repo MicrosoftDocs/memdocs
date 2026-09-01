@@ -2,11 +2,11 @@
 title: Use the MDT
 description: Learn how to use the Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
-ms.subservice: microsoft-deployment-toolkit
+ms.subservice: mdt
 ms.topic: install-set-up-deploy
 ms.collection: tier3
 ms.custom: sfi-ropc-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Using the Microsoft Deployment Toolkit
