@@ -2,10 +2,10 @@
 title: Migration prerequisites
 description: Understand the supported versions of Configuration Manager, supported source-site languages, and required configurations for migration.
 ms.date: 05/7/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Prerequisites for migration in Configuration Manager

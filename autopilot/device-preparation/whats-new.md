@@ -1,7 +1,7 @@
 ﻿---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 04/10/2026
+ms.date: 08/27/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: whats-new
@@ -22,6 +22,14 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
+
+## Windows Autopilot device association
+
+Date added: *August 27, 2026*
+
+Windows Autopilot device preparation now supports device association, which binds a physical Windows 11 device to your organization before enrollment. Associated devices are automatically marked as corporate-owned and can receive device-targeted policy assignments, device naming, and additional out-of-box experience (OOBE) customizations.
+
+For requirements, lifecycle information, and setup guidance, see [Overview of Windows Autopilot device association](device-association/overview.md).
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 general availability<!-- 30057449 -->  
 

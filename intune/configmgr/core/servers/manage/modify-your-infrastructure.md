@@ -2,10 +2,10 @@
 title: Modify infrastructure
 description: Make changes or take actions that affect your Configuration Manager infrastructure.
 ms.date: 07/14/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Modify your Configuration Manager infrastructure

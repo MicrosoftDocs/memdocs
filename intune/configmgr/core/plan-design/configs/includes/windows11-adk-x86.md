@@ -1,9 +1,9 @@
 ---
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: include
 ms.date: 05/29/2024
 # the same text of this include is also used in customize-boot-images.md
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 - The last supported version of 32-bit WinPE is available in the **WinPE add-on for Windows 10, version 2004** (10.1.19041). Versions of the WinPE add-on for the ADK after the **ADK for Windows 10, version 2004**

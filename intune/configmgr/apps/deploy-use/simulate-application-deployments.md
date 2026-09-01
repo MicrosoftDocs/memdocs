@@ -2,10 +2,10 @@
 title: Simulate application deployments
 description: Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application.
 ms.date: 10/06/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # Simulate application deployments with Configuration Manager
 

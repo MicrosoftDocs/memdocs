@@ -2,10 +2,10 @@
 title: Task sequence variable reference
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
 ms.date: 07/17/2025
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: reference
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Task sequence variables

@@ -2,10 +2,10 @@
 title: Create collections
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
 ms.date: 12/01/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to create collections in Configuration Manager

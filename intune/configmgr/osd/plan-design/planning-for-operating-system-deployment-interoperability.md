@@ -2,10 +2,10 @@
 title: OS deployment interoperability
 description: Understand interoperability issues when different Configuration Manager sites in a single hierarchy use different versions.
 ms.date: 10/01/2021
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Plan for OS deployment interoperability

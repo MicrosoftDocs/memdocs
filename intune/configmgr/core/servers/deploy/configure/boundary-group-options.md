@@ -2,10 +2,10 @@
 title: Boundary group options
 description: Configure boundary group options to control policy and content distribution.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Boundary group options

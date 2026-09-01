@@ -2,10 +2,10 @@
 title: Install console
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
 ms.date: 12/04/2024
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Install the Configuration Manager console

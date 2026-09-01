@@ -2,12 +2,12 @@
 title: New version 1610
 description: Get details about changes and new capabilities introduced in version 1610 of Configuration Manager.
 ms.date: 11/23/2016
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 # What&#39;s new in version 1610 of Configuration Manager
 

@@ -2,10 +2,10 @@
 title: Extend and Migrate an on-premises site to Microsoft Azure
 description: Learn about how to use the migration tool to programmatically create Azure virtual machines for Configuration Manager.
 ms.date: 01/27/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Extend and migrate an on-premises site to Microsoft Azure

@@ -2,10 +2,10 @@
 title: Use PXE for OSD over the network
 description: Use PXE-initiated OS deployments to refresh a computer's operating system or to install a new version of Windows on a new computer.
 ms.date: 09/02/2025
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Use PXE to deploy Windows over the network with Configuration Manager
