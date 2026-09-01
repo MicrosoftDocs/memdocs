@@ -2,10 +2,10 @@
 title: Packages and programs
 description: Support deployments that use legacy packages and programs with Configuration Manager.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Packages and programs in Configuration Manager

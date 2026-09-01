@@ -5,7 +5,7 @@ ms.date: 04/30/2019
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Evaluation of the All collections report in Configuration Manager

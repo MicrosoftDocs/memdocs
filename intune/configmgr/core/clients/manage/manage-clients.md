@@ -2,10 +2,10 @@
 title: Manage clients
 description: Learn how to manage clients in Configuration Manager.
 ms.date: 02/16/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to manage clients in Configuration Manager

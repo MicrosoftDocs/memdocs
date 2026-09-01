@@ -2,10 +2,10 @@
 title: Provisioning mode
 description: Learn about client provisioning mode during the Configuration Manager task sequence.
 ms.date: 10/01/2021
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: troubleshooting
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Provisioning mode

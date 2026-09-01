@@ -2,10 +2,10 @@
 title: Manage network bandwidth for content
 description: Configure scheduling, throttling, and prestaged content for Configuration Manager.
 ms.date: 02/6/2017
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Manage network bandwidth for content

@@ -2,10 +2,10 @@
 title: Network infrastructure
 description: Set up firewalls, ports, and domains to prepare for Configuration Manager communications.
 ms.date: 06/19/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Network infrastructure considerations for Configuration Manager

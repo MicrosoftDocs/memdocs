@@ -2,10 +2,10 @@
 title: Create an OS upgrade task sequence
 description: Use a task sequence to automatically upgrade Windows to a later version
 ms.date: 10/01/2021
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Create a task sequence to upgrade an OS in Configuration Manager

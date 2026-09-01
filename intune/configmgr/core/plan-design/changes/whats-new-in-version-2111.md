@@ -2,11 +2,11 @@
 title: What's new in version 2111
 description: Get details about changes and new capabilities introduced in version 2111 of Configuration Manager current branch.
 ms.date: 12/15/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
 ms.custom: sfi-image-nochange
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # What's new in version 2111 of Configuration Manager current branch

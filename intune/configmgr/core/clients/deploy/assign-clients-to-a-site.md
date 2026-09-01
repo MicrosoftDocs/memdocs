@@ -2,10 +2,10 @@
 title: Assign clients to a site
 description: Before you can manage a client, it needs to assign to a primary site.
 ms.date: 04/05/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to assign clients to a site in Configuration Manager

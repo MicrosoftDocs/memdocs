@@ -1,12 +1,15 @@
 ---
 title: View device details with Microsoft Intune
-description: View your device details, including operating systems, storage space, manufacturer, and model. Get a list of installed apps, check compliance policies, and set up TeamViewer with Microsoft Intune in Azure. Similar to viewing inventory of the devices you manage.
-ms.date: 01/14/2025
+description: Learn how to view hardware, app, compliance, and configuration details for devices managed with Microsoft Intune to monitor status and troubleshoot issues.
+ms.date: 08/20/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 ms.reviewer: davguy
+#customer intent: As an Intune administrator, I want to view managed device details so that I can monitor hardware, apps, and device status.
 ---
 
-# See device details in Intune
+# See device details in Microsoft Intune
 
 The **Devices** feature provides more details about the devices you manage, including their hardware and the apps installed.
 
@@ -58,17 +61,19 @@ Depending on the carrier used by the devices, not all details might be collected
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
 | Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 | Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
-|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune might not be able to display IMEI for personally owned work profile devices running Android 12 and newer due to platform limitations.|
+|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> On Android Enterprise fully managed, dedicated, and corporate-owned work profile devices, Intune reports all IMEI numbers for the device (usually one or two).|
 |MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune might not be able to display MEID for personally owned work profile devices running Android 12 and newer due to platform limitations.|
 |Manufacturer|The manufacturer of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, macOS, iOS/iPadOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Reporting for phone number isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards won't write the data and therefore the phone number isn't reported in such cases.|
-|Subscriber carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android  <br/><br/> NOTE: Reporting for subscriber carrier isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for subscriber carrier is supported; however, certain SIM cards don't write the data and therefore the subscriber carrier isn't reported in such cases.|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> On Android Enterprise corporate-owned fully managed (COBO) and corporate-owned dedicated (COSU) devices running Android 15 and later, expanded SIM inventory reports the phone number associated with each SIM. Reporting isn't supported for corporate-owned work profile (COPE) devices. Some SIM cards don't provide the phone number, so the value might not be reported.|
+|Subscriber carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android <br/><br/> On Android Enterprise corporate-owned fully managed (COBO) and corporate-owned dedicated (COSU) devices running Android 15 and later, expanded SIM inventory reports the carrier name for each eSIM. Reporting isn't supported for corporate-owned work profile (COPE) devices. Some SIM cards don't provide the carrier name, so the value might not be reported.|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, macOS, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally owned work profile devices and devices managed with device administrator running Android 9 and later. |
 |Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device reports the Wi-Fi MAC address.|macOS|
-|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android BYOD, Android Enterprise Dedicated, Android Fully Managed <br/><br/>**Note**: Reporting for ICCID isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for ICCID is supported; however, certain SIM cards won't write the data and therefore the ICCID isn't reported in such cases.|
-|EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS|
+|ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android Enterprise corporate-owned fully managed (COBO), corporate-owned dedicated (COSU), and corporate-owned work profile (COPE) devices <br/><br/> On corporate-owned devices running Android 15 and later, Intune reports all ICCIDs for all physical SIMs and eSIM profiles. On earlier Android versions, COBO and COSU devices report a single ICCID when the SIM provides the value. Full multi-ICCID inventory lets you identify the correct ICCID for a [**Remove eSIM** action](../actions/update-cellular-data-plan.md#remove-an-esim-from-one-android-enterprise-device).|
+|EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS, Android Enterprise COBO, COSU, and COPE devices running Android 13 and later. On supported corporate-owned Android devices, Intune reports all EIDs.|
+|Activation state|The activation state of each deployed eSIM.|Android Enterprise COBO, COSU, and COPE devices running Android 15 and later.|
+|SIM origin|Indicates whether an eSIM was added by an admin or locally on the device, or whether the SIM is physical.|Android Enterprise COBO, COSU, and COPE devices running Android 15 and later.|
 |Wi-Fi IPv4 address|The device's IPv4 address.|Windows, Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in Intune admin center from the time that network changes on device.|
 |Wi-Fi subnet ID|The device's subnet ID.|Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in Intune admin center from the time that network changes on device.|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, macOS, iOS/iPadOS, Android|
@@ -88,7 +93,6 @@ Depending on the carrier used by the devices, not all details might be collected
  > [!NOTE]
  >
  > - For Windows devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Windows Autopilot instead of the time when they were enrolled.
- > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
  > - For multi-SIM iOS/iPadOS devices, Intune has no control over which SIM data is assigned to the Service Subscription slots on the device for the ICCID, IMEI, MEID, and Phone number values. Intune only reports the first available values received from the device in the following order:
    > - CT Subscription Slot One
      > - CT Subscription Slot Two

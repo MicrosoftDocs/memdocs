@@ -2,10 +2,10 @@
 title: About log files
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # About log files in Configuration Manager
