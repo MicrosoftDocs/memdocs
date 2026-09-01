@@ -91,7 +91,7 @@ The agent installs at `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs` 
 ### Intune management extension functionality
 
 - The IME silently authenticates with Intune services before checking in to receive assigned installations for the Windows device.
-- The IME checks for new or updated installations with Intune services every 8 hours. This check-in process is independent of the MDM check-in.
+- The IME checks for new or updated scripts with Intune services usually every 8 hours. This check-in process is independent of the MDM check-in.
 - The IME might periodically perform health checks to validate connectivity to Intune services.
 
 ### Manually initiate an Intune management IME check-in from a Windows device
