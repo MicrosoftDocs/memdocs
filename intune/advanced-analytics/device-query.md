@@ -1,8 +1,11 @@
 ---
 title: Device Query
 description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
-ms.date: 03/24/2026
+ms.date: 09/01/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1026
+#customer intent: As an IT administrator, I want to query a managed Windows device in real time so that I can investigate security, support, and business issues.
 ---
 
 # Device query
@@ -41,9 +44,7 @@ Additional prerequisites for device query:
 
 :::column-end:::
 :::column span="3":::
-> To use device query, use an account with at least one of the following roles:
-> - [Help Desk Operator]
-> - [Custom role] that includes:
+> To use device query, use an account assigned a [custom role] that includes:
 >   - The permission **Managed Devices/Query**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
