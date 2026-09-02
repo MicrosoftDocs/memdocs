@@ -81,7 +81,7 @@ items:
   - name: Manage Surface drivers
     href: deploy-use/surface-drivers.md   
   - name: Integration with Windows Update client policies
-    href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    href: deploy-use/integrate-windows-update-client-policies.md
   - name: Third-party software updates
     href: deploy-use/third-party-software-updates.md
   - name: Third-party update catalogs
