@@ -1,16 +1,22 @@
 ---
-title: "Device Action: Wipe"
-description: Learn how to wipe, or factory reset, devices with Microsoft Intune.
-ms.date: 11/14/2025
+title: "Wipe devices with Microsoft Intune"
+description: Learn how to wipe managed devices with Microsoft Intune, choose platform-specific reset options, and prepare devices for retirement, reuse, or recovery.
+ms.date: 08/21/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1023
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
+#customer intent: As an Intune administrator, I want to wipe managed devices so that I can securely reset, retire, or repurpose them.
 ---
 
-# Device action: wipe
+# Wipe devices with Microsoft Intune
 
 Use the *Wipe* action in Intune to factory reset a device, restoring it to its default settings. This action removes all personal and organizational data, apps, and configurations. It's commonly used when a device needs to be retired, repurposed, reset for troubleshooting, or securely erased if lost or stolen.
 
 Depending on the platform, you can customize the wipe behavior to meet your organization's needs.
+
+> [!IMPORTANT]
+> A tenant can submit up to 500 Wipe actions per day. This tenant-wide limit is cumulative across individual device actions, bulk device actions, and Microsoft Graph API requests. To request a limit change, [contact Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md). For all device action limits, see [Daily tenant limits](index.md#daily-tenant-limits).
 
 ## Prerequisites
 
@@ -88,9 +94,20 @@ To factory reset a Zebra Android device, use one of the following methods:
 
 ## How to wipe a device from the Intune admin center
 
+::: zone pivot="android"
+> [!IMPORTANT]
+> To choose whether to remove eSIMs during a single-device wipe, use the new device view. In the [Microsoft Intune admin center], go to [**Devices**] > [**All devices**], set **Preview new device view** to **On**, and then select the device.
+::: zone-end
+
 1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Wipe**.
+
+::: zone pivot="android"
+4. For Android Enterprise corporate-owned fully managed (COBO), corporate-owned dedicated (COSU), and corporate-owned work profile (COPE) devices, eSIMs are preserved by default. To remove the eSIMs during the wipe, select the option to remove eSIMs.
+5. Select **Wipe**.
+
+::: zone-end
 
 ::: zone pivot="macos"
 4. Enter a 6-digit **Recovery PIN**. This PIN is required to reinstall the operating system on devices that don't have the T2 security chip—typically models from 2018 or earlier, or devices running macOS 10.14 or earlier. Make sure to record the PIN and share it with the device owner. The PIN won't be visible after the wipe completes.

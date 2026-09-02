@@ -2,10 +2,10 @@
 title: Pull-distribution point
 description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager.
 ms.date: 07/15/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Use a pull-distribution point with Configuration Manager

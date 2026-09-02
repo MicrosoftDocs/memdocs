@@ -2,10 +2,10 @@
 title: Plan site system roles
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
 ms.date: 03/29/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Plan for site system servers and site system roles in Configuration Manager

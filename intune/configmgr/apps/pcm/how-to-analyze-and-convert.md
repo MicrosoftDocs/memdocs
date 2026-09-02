@@ -2,10 +2,10 @@
 title: How to analyze and convert packages
 description: Learn how to analyze and convert packages with Package Conversion Manager in Configuration Manager.
 ms.date: 08/24/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # How to analyze and convert packages with Package Conversion Manager

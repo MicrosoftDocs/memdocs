@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 06/18/2026
+ms.date: 09/01/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: troubleshooting
@@ -31,6 +31,18 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/intune/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues  
+
+### Pre-provisioning fails for Microsoft Entra hybrid join when policy conflict resolution requires domain controller connectivity
+
+Date added: *September 1, 2026*
+
+During Windows Autopilot pre-provisioning for Microsoft Entra hybrid join, the technician flow might fail when an assigned policy requires the client device management (DM) stack to resolve a policy conflict by contacting an Active Directory domain controller. The event log contains an error similar to the following example:
+
+`MDM PolicyManager: Merge string, Area: (UserRights), Policy: (DenyLocalLogOn), Result:(0x800706FD) The trust relationship between this workstation and the primary domain failed.`
+
+This behavior is expected when the device doesn't have line-of-sight to a domain controller during pre-provisioning. In off-premises scenarios that use a bring-your-own (BYO) VPN, the VPN connection isn't available during the technician flow, so the device can't resolve the policy state.
+
+This scenario is a known limitation of using pre-provisioning with Microsoft Entra hybrid join when assigned policies require conflict resolution in the client DM stack. To avoid the failure, don't assign policies that require domain controller connectivity during the technician flow, or pre-provision the device on a network that has line-of-sight to a domain controller.
 
 ### ODJ Connector configuration fails with a SeLogonAsServicePrivilege error when using your own gMSA   
 

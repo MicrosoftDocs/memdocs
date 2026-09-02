@@ -79,7 +79,8 @@ For post-incident actions, Microsoft emails service administrators using the ema
 
 Intune uses Experimentation and Configuration Service (ECS) to request and receive service configuration payloads that help maintain service reliability, security, compliance, and customer experience. These payloads can include service configurations, controlled feature rollouts, and experimentation data.
 
-[!CAUTION] Disabling communication with required Microsoft cloud services can affect Microsoft's ability to deliver critical service updates, reliability improvements, security mitigations, and feature enablement for Intune-managed devices.
+> [!IMPORTANT]
+> Disabling communication with required Microsoft cloud services can affect Microsoft's ability to deliver critical service updates, reliability improvements, security mitigations, and feature enablement for Intune-managed devices.
 
 ### Configurations
 

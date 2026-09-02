@@ -2,10 +2,10 @@
 title: Microsoft Connected Cache
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization.
 ms.date: 06/22/2026
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Microsoft Connected Cache with Configuration Manager

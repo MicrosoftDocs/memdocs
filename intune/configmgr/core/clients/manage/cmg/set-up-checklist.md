@@ -2,10 +2,10 @@
 title: Set up checklist for CMG
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
 ms.date: 04/08/2022
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: overview
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Set up checklist for CMG

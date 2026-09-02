@@ -11,7 +11,6 @@ You can control mobile device access to corporate resources using Conditional Ac
 
 You can configure Conditional Access policies based on a BlackBerry Protect risk assessment, enabled through Intune device compliance policies for enrolled devices. You can set up your policies to allow or block noncompliant devices from accessing corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
-For more information about how to integrate BlackBerry UES with Microsoft Intune, see the [BlackBerry UES documentation](https://www.blackberry.com/en/secure-communications/blackberry-uem).
 
 ## Supported platforms
 

@@ -2,10 +2,10 @@
 title: Configure alerts
 description: Configure alerts to understand the state of your Configuration Manager environment.
 ms.date: 08/02/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configure alerts in Configuration Manager

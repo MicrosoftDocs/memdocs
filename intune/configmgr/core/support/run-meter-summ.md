@@ -2,10 +2,10 @@
 title: Run Meter Summarization Tool
 description: Use the Run Meter Summarization Tool to trigger the software metering summarization tasks in Configuration Manager.
 ms.date: 07/30/2018
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Run Meter Summarization Tool

@@ -2,10 +2,10 @@
 title: Configure security
 description: How to configure security-related options for Configuration Manager.
 ms.date: 12/21/2021
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Configure security in Configuration Manager

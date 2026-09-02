@@ -2,10 +2,10 @@
 title: Set up your lab
 description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
 ms.date: 09/26/2019
-ms.subservice: core-infrastructure
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Set up a Configuration Manager lab

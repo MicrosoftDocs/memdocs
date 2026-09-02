@@ -2,10 +2,10 @@
 title: Export and import task sequences
 description: Export and import task sequences with or without their related objects.
 ms.date: 04/08/2022
-ms.subservice: operating-system-deployment
+ms.subservice: osd
 ms.topic: how-to
 ms.collection: tier3
-ms.service: microsoft-endpoint-configuration-manager
+ms.service: configuration-manager
 ---
 
 # Export and import task sequences
