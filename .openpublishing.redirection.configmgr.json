@@ -174,6 +174,11 @@
       "source_path_from_root": "/intune/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2509.md",
       "redirect_url": "/intune/configmgr/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10.md",
+      "redirect_url": "/intune/configmgr/sum/deploy-use/integrate-windows-update-client-policies",
+      "redirect_document_id": true
     }
   ]
 }
